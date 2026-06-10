@@ -19,6 +19,20 @@
           "label": "The MAD Podcast: Why Every AI Agent Needs Its Own Computer",
           "url": "https://www.youtube.com/watch?v=kMXJrzAa5fM"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-09-managed-agents-launch",
+          "note": "Anthropic 的同品类沙箱基建"
+        },
+        {
+          "slug": "2026-04-17-codex-computer-use",
+          "note": "操作传统应用的同向实践"
+        },
+        {
+          "slug": "2026-05-08-zico-kolter-agent-security",
+          "note": "权限隔离呼应其安全清单"
+        }
       ]
     },
     {
@@ -37,6 +51,20 @@
         {
           "label": "原推",
           "url": "https://x.com/levie/status/2055143231625818554"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-10-levie-experts-higher-demand",
+          "note": "他 5 日前已主张专家更值钱"
+        },
+        {
+          "slug": "2026-04-20-roles-grow-complexity",
+          "note": "他 4 月已称岗位定义会失效"
+        },
+        {
+          "slug": "2026-04-12-zara-no-collaboration",
+          "note": "与一人端到端主张相对立"
         }
       ]
     },
@@ -57,6 +85,16 @@
           "label": "The MAD Podcast: Why Every AI Agent Needs Its Own Computer",
           "url": "https://www.youtube.com/watch?v=kMXJrzAa5fM"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-02-baseten-inference-crunch",
+          "note": "算力紧缺的同向判断"
+        },
+        {
+          "slug": "2026-05-07-dario-80x-compute",
+          "note": "需求侧算力暴涨的佐证"
+        }
       ]
     },
     {
@@ -75,6 +113,12 @@
         {
           "label": "The MAD Podcast: Why Every AI Agent Needs Its Own Computer",
           "url": "https://www.youtube.com/watch?v=kMXJrzAa5fM"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-05-nikunj-momentum-not-a-moat-retention",
+          "note": "与势头非护城河说相对照"
         }
       ]
     }

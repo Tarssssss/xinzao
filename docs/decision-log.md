@@ -72,3 +72,19 @@ tars-writing 9:3 胜 baseline（4 素材 × 3 评委：扫描/编辑/事实核�
 | 27 | story 阅读 | **推翻决策 #6**：详情页改为列表行内展开（点标题原地展开正文），`/story/:slug` 路由保留，深链打开自动展开并定位该条 | Tars 反馈：正文很快消费完，跳新页太重、返回主页高频卡手。可分享 URL 的诉求靠保留路由满足，不再需要独立页面容器 |
 | 28 | 原文链接 | 收起态 meta 行显示首链「原文」，展开态在 meta 行显示全部 sourceLinks（用各自 label），删掉底部孤立的「原文」区块 | Tars 反馈：底部链接像 orphan，应归入 metadata 行 |
 | 29 | 移动端 | tab/翻期/行距加大点击高度，story 行列宽收窄，横滑手势本身即移动端主交互 | Tars 反馈五条之一；用 preview 在 375px 宽验证过 |
+
+### 2026-06-10 LLM wiki（调研 Karpathy llm-wiki 后定型）
+
+| # | 决策 | 选择 | 理由 |
+|---|------|------|------|
+| 30 | wiki 形态 | 按 [Karpathy llm-wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 三层：issues JSON 为 raw（只读）、`wiki/`（builders 实体页 + threads 线索页 + index + log）为 LLM 自有层、`wiki/WIKI-GUIDE.md` 为 schema | 核心洞见是「编译一次、持续维护」而非每次检索原始素材：日更时只读 index + 2-5 页 wiki 就能做联想，不用扫 284 条 story；规模 <100k token 时纯 markdown + index 胜过 RAG，零基础设施 |
+| 31 | 面向读者的产物 | story 加 `related` 字段（0-3 条、只指向更早、note ≤20 字、宁缺毋滥），展开态渲染「相关回顾」 | wiki 是 LLM 工作内存不直接发布；读者只看到联想结果。slug 是 wiki↔成稿唯一外键，validate 校验存在性与方向 |
+| 32 | 日更链路 | daily-run 加第 6 步 ingest：写完稿→读 wiki→补 related→更新 builder/thread 页 | 知识随每期复利，新开 thread 设门槛（≥3 期、≥2 builder）防止页面碎片化 |
+| 33 | 存量回填 | workflow 分相: builders 并行编译（按 creator 分组）→ threads 并行编译（先全局识别）→ 62 期并行联想 related → index/lint 收尾 | Karpathy 的 ingest 本质串行，但对存量可用「先编译实体/线索、再做联想」改写成可并行，62 个串行 agent 不可接受 |
+
+### 2026-06-10 往期 gallery + 翻期位置（Tars 反馈）
+
+| # | 决策 | 选择 | 理由 |
+|---|------|------|------|
+| 34 | 往期形态 | 列表改卡片 gallery：桌面 2 列、移动 1 列，每卡 No./日期/条数 + 前 3 条标题（2 行截断）+「还有 N 条」 | Tars 反馈：单行列表信息量不够，强依赖点进去才知道内容 |
+| 35 | 翻期位置 | pager 提到 issue-head 行（顶部常驻，窄屏只留箭头）+ 桌面键盘 ←/→；底部翻期保留 | Tars 反馈：只放底部强依赖读完全文才能翻；顶部解决「扫一眼就走」，底部服务「读完顺势翻」 |

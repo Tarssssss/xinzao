@@ -20,6 +20,20 @@
           "label": "Unsupervised Learning Ep 89(YouTube)",
           "url": "https://www.youtube.com/watch?v=N1geOimmdDo"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-20-karpathy-joins-anthropic",
+          "note": "他评的正是这条 RSI 传闻"
+        },
+        {
+          "slug": "2026-05-16-lecun-ami-world-models",
+          "note": "LeCun 更激进押注后 LLM 路线"
+        },
+        {
+          "slug": "2026-05-08-zico-kolter-rl-self-training-architecture",
+          "note": "Kolter 持相反看法：架构不重要"
+        }
       ]
     },
     {
@@ -40,6 +54,20 @@
           "label": "Unsupervised Learning Ep 89(YouTube)",
           "url": "https://www.youtube.com/watch?v=N1geOimmdDo"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-22-yann-dubois-progress-step-function",
+          "note": "Dubois 同样把阶跃归为多因叠加"
+        },
+        {
+          "slug": "2026-05-23-vinyals-memory-filesystem-continual-learning",
+          "note": "文件式记忆 hack 的同款判断"
+        },
+        {
+          "slug": "2026-05-27-zara-zhang-codex-vs-claude-code",
+          "note": "同题：Codex 与 Claude Code 取舍"
+        }
       ]
     },
     {
@@ -59,6 +87,12 @@
         {
           "label": "Unsupervised Learning Ep 89(YouTube)",
           "url": "https://www.youtube.com/watch?v=N1geOimmdDo"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-02-mallaby-concentrated-vs-diversified-bets",
+          "note": "Mallaby 用同一框架解释 Google 落后"
         }
       ]
     },
@@ -84,6 +118,20 @@
           "label": "Madhu Guru 原推",
           "url": "https://x.com/realmadhuguru/status/2063342268472574268"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-03-aaron-levie-model-routing-applied-ai",
+          "note": "Levie 四天前首次提出此判断"
+        },
+        {
+          "slug": "2026-05-22-levie-inference-cost-stratification",
+          "note": "成本按任务分层是路由前提"
+        },
+        {
+          "slug": "2026-05-29-levie-tokenmaxxing-enterprise-economics",
+          "note": "token 成本线索的前篇"
+        }
       ]
     },
     {
@@ -103,6 +151,16 @@
         {
           "label": "Unsupervised Learning Ep 89(YouTube)",
           "url": "https://www.youtube.com/watch?v=N1geOimmdDo"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+          "note": "Karpathy 把可验证性当核心杠杆"
+        },
+        {
+          "slug": "2026-04-25-sap-cto-no-priors",
+          "note": "SAP CTO 视验证数据为关键约束"
         }
       ]
     },

@@ -20,7 +20,13 @@
           "url": "https://x.com/rauchg/status/2045995362499076169"
         }
       ],
-      "engagement": "5.5K likes"
+      "engagement": "5.5K likes",
+      "related": [
+        {
+          "slug": "2026-04-13-anthropic-security-guide",
+          "note": "一周前预警 AI 将加速攻击"
+        }
+      ]
     },
     {
       "slug": "2026-04-20-openclaw-gpt-agentic",
@@ -44,7 +50,13 @@
           "url": "https://x.com/petergyang/status/2045980068921684151"
         }
       ],
-      "engagement": "70 likes"
+      "engagement": "70 likes",
+      "related": [
+        {
+          "slug": "2026-04-12-openclaw-strict-mode-codex-harness",
+          "note": "OpenClaw 早已针对 GPT 偷懒加固"
+        }
+      ]
     },
     {
       "slug": "2026-04-20-external-communication",
@@ -64,7 +76,17 @@
           "url": "https://x.com/zarazhangrui/status/2045810170245386713"
         }
       ],
-      "engagement": "146 likes"
+      "engagement": "146 likes",
+      "related": [
+        {
+          "slug": "2026-04-12-zara-no-collaboration",
+          "note": "她上周主张一人端到端不协作"
+        },
+        {
+          "slug": "2026-04-11-felix-rieseberg-cowork",
+          "note": "同判断：瓶颈转向想清楚建什么"
+        }
+      ]
     },
     {
       "slug": "2026-04-20-roles-grow-complexity",
@@ -84,7 +106,21 @@
           "url": "https://x.com/levie/status/2046067263326028108"
         }
       ],
-      "engagement": "278 likes"
+      "engagement": "278 likes",
+      "related": [
+        {
+          "slug": "2026-04-19-levie-engineering-jobs-expand",
+          "note": "前一天谈工程师岗位升级"
+        },
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "同线：效率提升反而推高需求"
+        },
+        {
+          "slug": "2026-04-16-levie-job-bottlenecks",
+          "note": "同线：瓶颈转移创造就业"
+        }
+      ]
     },
     {
       "slug": "2026-04-20-cybersecurity-thesis",
@@ -103,7 +139,17 @@
           "url": "https://x.com/nikunj/status/2046007615512256624"
         }
       ],
-      "engagement": "79 likes"
+      "engagement": "79 likes",
+      "related": [
+        {
+          "slug": "2026-04-13-anthropic-security-guide",
+          "note": "呼应 AI 加速攻击的预警"
+        },
+        {
+          "slug": "2026-04-13-levie-security-jevons",
+          "note": "同看多安全行业需求"
+        }
+      ]
     }
   ],
   "quickTakes": [

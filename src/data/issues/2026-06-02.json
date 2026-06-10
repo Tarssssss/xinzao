@@ -16,7 +16,20 @@
       "role": "Product at Roblox / AI tutorials",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 ↗", "url": "https://x.com/petergyang/status/2061452068792287622" }
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/petergyang/status/2061452068792287622"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-25-ryan-carson-solo-founder-agents",
+          "note": "同线索:solo 创始人拿 agent 当团队"
+        },
+        {
+          "slug": "2026-04-28-tibo-solo-playbook",
+          "note": "Peter Yang 同系列 solo 打法提炼"
+        }
       ]
     },
     {
@@ -32,7 +45,24 @@
       "role": "CEO @ Box",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 ↗", "url": "https://x.com/levie/status/2061662386680127688" }
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/levie/status/2061662386680127688"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-08-levie-ai-commoditization-differentiation",
+          "note": "他 5 月初同一差异化论点的前身"
+        },
+        {
+          "slug": "2026-05-19-levie-agent-data-strategy",
+          "note": "数据战略卡点论的延续"
+        },
+        {
+          "slug": "2026-06-01-levie-enterprise-agent-context-problem",
+          "note": "前一日 context 头号问题的姊妹篇"
+        }
       ]
     },
     {
@@ -48,7 +78,20 @@
       "role": "Author, The Infinity Machine",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Unsupervised Learning Ep 88 ↗", "url": "https://www.youtube.com/@RedpointAI" }
+        {
+          "label": "Unsupervised Learning Ep 88 ↗",
+          "url": "https://www.youtube.com/@RedpointAI"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-20-karpathy-joins-anthropic",
+          "note": "研究者流向集中押注处的实例"
+        },
+        {
+          "slug": "2026-05-01-karpathy-sequoia-fireside",
+          "note": "营收决定实验室押注的同类解释"
+        }
       ]
     }
   ],

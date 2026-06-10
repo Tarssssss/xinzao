@@ -28,7 +28,13 @@
           "url": "https://x.com/trq212/status/2042673325139427724"
         }
       ],
-      "engagement": "7.5K likes"
+      "engagement": "7.5K likes",
+      "related": [
+        {
+          "slug": "2026-04-10-thariq-prompting-leverage",
+          "note": "他前日刚谈经由 harness 与 agent 对话"
+        }
+      ]
     },
     {
       "slug": "2026-04-11-felix-rieseberg-cowork",
@@ -52,6 +58,20 @@
           "label": "原推 @mattturck（含时间轴）",
           "url": "https://x.com/mattturck/status/2042638661389328413"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-08-mythos-preview",
+          "note": "访谈详谈的 Mythos 即此次发布"
+        },
+        {
+          "slug": "2026-04-09-managed-agents-launch",
+          "note": "他劝别自建的正是这套托管服务"
+        },
+        {
+          "slug": "2026-04-07-cowork-exfiltration-vuln",
+          "note": "Cowork 此前被曝外泄漏洞"
+        }
       ]
     },
     {
@@ -70,6 +90,12 @@
         {
           "label": "Anthropic Engineering",
           "url": "https://www.anthropic.com/engineering/claude-code-auto-mode"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-07-cowork-exfiltration-vuln",
+          "note": "防注入设计呼应此前外泄漏洞"
         }
       ]
     },
@@ -109,6 +135,16 @@
           "label": "Claude Blog",
           "url": "https://claude.com/blog/harnessing-claudes-intelligence"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-09-managed-agents-architecture",
+          "note": "同一判断：harness 假设随升级过时"
+        },
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "harness 工程实践的早前详解"
+        }
       ]
     },
     {
@@ -128,7 +164,17 @@
           "url": "https://x.com/levie/status/2042759653281456218"
         }
       ],
-      "engagement": "242 likes"
+      "engagement": "242 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-levie-automation-demand",
+          "note": "续他 agent 放大软件需求的判断"
+        },
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "他此前主张产品按模型变强设计"
+        }
+      ]
     },
     {
       "slug": "2026-04-11-china-ai-work-culture",
@@ -174,7 +220,13 @@
           "url": "https://x.com/zarazhangrui/status/2042660162574467580"
         }
       ],
-      "engagement": "556 likes"
+      "engagement": "556 likes",
+      "related": [
+        {
+          "slug": "2026-04-09-spc-everyone-codes",
+          "note": "呼应亲手写代码才能理解 AI"
+        }
+      ]
     },
     {
       "slug": "2026-04-11-nikunj-vc-lessons",
@@ -197,7 +249,13 @@
           "url": "https://x.com/nikunj/status/2042723383599861817"
         }
       ],
-      "engagement": "161 likes"
+      "engagement": "161 likes",
+      "related": [
+        {
+          "slug": "2026-04-08-changelog-check",
+          "note": "他此前的尽调方法论一则"
+        }
+      ]
     }
   ],
   "quickTakes": [

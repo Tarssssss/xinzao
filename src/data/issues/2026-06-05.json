@@ -15,7 +15,22 @@
       "role": "Research @ Anthropic",
       "sourceType": "x",
       "engagement": "2.3K likes",
-      "sourceLinks": [{ "label": "原推 ↗", "url": "https://x.com/alexalbert__/status/2062580571214389510" }]
+      "sourceLinks": [
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/alexalbert__/status/2062580571214389510"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-07-boris-cherny-sequoia",
+          "note": "5月已称CC代码100%由模型写"
+        },
+        {
+          "slug": "2026-05-19-alex-albert-building-next-claude",
+          "note": "同作者5月谈造下一代Claude"
+        }
+      ]
     },
     {
       "slug": "2026-06-05-levie-bottleneck-spotting-org-skill",
@@ -30,7 +45,22 @@
       "role": "CEO @ Box",
       "sourceType": "x",
       "engagement": "195 likes",
-      "sourceLinks": [{ "label": "原推 ↗", "url": "https://x.com/levie/status/2062728257359790292" }]
+      "sourceLinks": [
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/levie/status/2062728257359790292"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-16-levie-job-bottlenecks",
+          "note": "他4月已提瓶颈转移到人的环节"
+        },
+        {
+          "slug": "2026-05-03-brockman-attention-bottleneck",
+          "note": "与「注意力是瓶颈」直接呼应"
+        }
+      ]
     },
     {
       "slug": "2026-06-05-dan-roberts-rl-is-the-cake",
@@ -47,8 +77,24 @@
       "sourceType": "podcast",
       "engagement": "63 likes",
       "sourceLinks": [
-        { "label": "MAD Podcast (YouTube) ↗", "url": "https://www.youtube.com/watch?v=oWOz2htozfI" },
-        { "label": "Matt Turck 预告推 ↗", "url": "https://x.com/mattturck/status/2062587000201580808" }
+        {
+          "label": "MAD Podcast (YouTube) ↗",
+          "url": "https://www.youtube.com/watch?v=oWOz2htozfI"
+        },
+        {
+          "label": "Matt Turck 预告推 ↗",
+          "url": "https://x.com/mattturck/status/2062587000201580808"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+          "note": "可验证性边界的同题判断"
+        },
+        {
+          "slug": "2026-05-23-vinyals-rl-narrow-domains-generalize",
+          "note": "窄域RL泛化论的呼应"
+        }
       ]
     },
     {
@@ -64,7 +110,22 @@
       "role": "@ Cognition",
       "sourceType": "x",
       "engagement": "179 likes",
-      "sourceLinks": [{ "label": "原推 ↗", "url": "https://x.com/swyx/status/2062611218196771017" }]
+      "sourceLinks": [
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/swyx/status/2062611218196771017"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-04-satya-nadella-private-evals-harness-moat",
+          "note": "前一天的私有eval护城河论"
+        },
+        {
+          "slug": "2026-04-11-eval-infra-noise",
+          "note": "agentic评测噪声的早期方法论"
+        }
+      ]
     },
     {
       "slug": "2026-06-05-peter-yang-codex-system-setup",
@@ -80,8 +141,28 @@
       "sourceType": "x",
       "engagement": "98 likes",
       "sourceLinks": [
-        { "label": "工作流三步法原推 ↗", "url": "https://x.com/petergyang/status/2062740262338929110" },
-        { "label": "Codex 前端短板原推 ↗", "url": "https://x.com/petergyang/status/2062743491365544361" }
+        {
+          "label": "工作流三步法原推 ↗",
+          "url": "https://x.com/petergyang/status/2062740262338929110"
+        },
+        {
+          "label": "Codex 前端短板原推 ↗",
+          "url": "https://x.com/petergyang/status/2062743491365544361"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-26-ryan-carson-systems-first-reversal",
+          "note": "「先搭系统」论的延续"
+        },
+        {
+          "slug": "2026-04-20-openclaw-gpt-agentic",
+          "note": "他4月曾批GPT agent跑不通"
+        },
+        {
+          "slug": "2026-05-27-zara-zhang-codex-vs-claude-code",
+          "note": "同样按任务在两家间分流"
+        }
       ]
     },
     {
@@ -97,7 +178,12 @@
       "role": "Partner @ FPV Ventures",
       "sourceType": "x",
       "engagement": "60 likes",
-      "sourceLinks": [{ "label": "原推 ↗", "url": "https://x.com/nikunj/status/2062659649732825549" }]
+      "sourceLinks": [
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/nikunj/status/2062659649732825549"
+        }
+      ]
     },
     {
       "slug": "2026-06-05-spiral-4-stylometry-writing-agent",
@@ -112,7 +198,22 @@
       "role": "CEO @ Every",
       "sourceType": "x",
       "engagement": "222 likes",
-      "sourceLinks": [{ "label": "原推 ↗", "url": "https://x.com/danshipper/status/2062628079869005876" }]
+      "sourceLinks": [
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/danshipper/status/2062628079869005876"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-28-dan-shipper-writing-workflow-claude-codex",
+          "note": "他上周公开的AI写作流前作"
+        },
+        {
+          "slug": "2026-04-29-codex-native-apps",
+          "note": "「给agent用的产品」论延续"
+        }
+      ]
     }
   ],
   "quickTakes": [

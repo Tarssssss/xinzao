@@ -24,7 +24,21 @@
           "url": "https://x.com/levie/status/2045355693050655048"
         }
       ],
-      "engagement": "1,576 likes"
+      "engagement": "1,576 likes",
+      "related": [
+        {
+          "slug": "2026-04-11-levie-headless-software",
+          "note": "一周前同论点：无好 API 即被弃"
+        },
+        {
+          "slug": "2026-04-13-levie-enterprise-agents",
+          "note": "IT 调研版：不可被调用即出局"
+        },
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "token 需求低估呼应 100 倍用量"
+        }
+      ]
     },
     {
       "slug": "2026-04-18-mcdermott-saaspocalypse",
@@ -43,6 +57,16 @@
         {
           "label": "No Priors",
           "url": "https://www.youtube.com/@NoPriorsPodcast"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-16-rauch-design-factory",
+          "note": "对立观点：自建已比买 SaaS 易"
+        },
+        {
+          "slug": "2026-04-13-levie-enterprise-agents",
+          "note": "呼应风险分层：不可调用即被弃"
         }
       ]
     },
@@ -84,7 +108,13 @@
           "url": "https://x.com/mattturck/status/2045211226272129274"
         }
       ],
-      "engagement": "7,816 likes"
+      "engagement": "7,816 likes",
+      "related": [
+        {
+          "slug": "2026-04-17-opus-47-launch",
+          "note": "前日 4.7 上线，黑客松为其重启"
+        }
+      ]
     },
     {
       "slug": "2026-04-18-google-flow-music",
@@ -107,7 +137,13 @@
           "url": "https://x.com/joshwoodward/status/2045305262362530043"
         }
       ],
-      "engagement": "1,204 likes"
+      "engagement": "1,204 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-lyria-3-music",
+          "note": "Google 音乐线前篇：Lyria 3 放开"
+        }
+      ]
     }
   ],
   "quickTakes": [

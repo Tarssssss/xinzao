@@ -20,7 +20,17 @@
           "url": "https://x.com/rauchg/status/2045553025188835806"
         }
       ],
-      "engagement": "1,049 likes"
+      "engagement": "1,049 likes",
+      "related": [
+        {
+          "slug": "2026-04-16-rauch-design-factory",
+          "note": "他此前软件工厂论的延伸"
+        },
+        {
+          "slug": "2026-04-18-anthropic-product-day",
+          "note": "争论背景：Claude 设计系统生成"
+        }
+      ]
     },
     {
       "slug": "2026-04-19-levie-agent-architecture-churn",
@@ -40,7 +50,21 @@
           "url": "https://x.com/levie/status/2045680043607941548"
         }
       ],
-      "engagement": "335 likes"
+      "engagement": "335 likes",
+      "related": [
+        {
+          "slug": "2026-04-09-managed-agents-architecture",
+          "note": "Anthropic 同判断：能力假设会过时"
+        },
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "同呼应：升级后清点 harness 死重"
+        },
+        {
+          "slug": "2026-04-17-notion-harness-rebuilds",
+          "note": "Notion 五次重写是现成实例"
+        }
+      ]
     },
     {
       "slug": "2026-04-19-levie-engineering-jobs-expand",
@@ -60,7 +84,21 @@
           "url": "https://x.com/levie/status/2045616837787070695"
         }
       ],
-      "engagement": "266 likes"
+      "engagement": "266 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-levie-automation-demand",
+          "note": "同论点：未立项自动化变可行"
+        },
+        {
+          "slug": "2026-04-14-agent-deployer-role",
+          "note": "他预言的新角色今有招聘实证"
+        },
+        {
+          "slug": "2026-04-16-levie-job-bottlenecks",
+          "note": "同线：AI 创造就业的机制"
+        }
+      ]
     }
   ],
   "quickTakes": [

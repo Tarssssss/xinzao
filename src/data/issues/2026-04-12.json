@@ -28,7 +28,17 @@
           "url": "https://x.com/steipete/status/2043136624469619050"
         }
       ],
-      "engagement": "1,009 likes"
+      "engagement": "1,009 likes",
+      "related": [
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "同指 harness 会过时、应可替换"
+        },
+        {
+          "slug": "2026-04-09-managed-agents-architecture",
+          "note": "同判 harness 能力假设会过时"
+        }
+      ]
     },
     {
       "slug": "2026-04-12-thin-harness-fat-skills",
@@ -52,7 +62,21 @@
           "url": "https://x.com/garrytan/status/2043198780800197025"
         }
       ],
-      "engagement": "119 likes"
+      "engagement": "119 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-garry-tan-gbrain",
+          "note": "立论依据即他开源的 GBrain"
+        },
+        {
+          "slug": "2026-04-11-zara-new-world-formats",
+          "note": "markdown 当通用格式的呼应"
+        },
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "同主张 harness 做薄防死重"
+        }
+      ]
     },
     {
       "slug": "2026-04-12-allaire-agentic-economy",
@@ -96,7 +120,17 @@
           "url": "https://x.com/levie/status/2043192337111924930"
         }
       ],
-      "engagement": "366 likes"
+      "engagement": "366 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-levie-automation-demand",
+          "note": "两天前同判需求被普遍低估"
+        },
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "同预判 coding 模式扩散知识工作"
+        }
+      ]
     },
     {
       "slug": "2026-04-12-zara-no-collaboration",
@@ -120,7 +154,17 @@
           "url": "https://x.com/zarazhangrui/status/2043202553538925031"
         }
       ],
-      "engagement": "140 likes"
+      "engagement": "140 likes",
+      "related": [
+        {
+          "slug": "2026-04-07-shipper-hierarchy-context-rot",
+          "note": "Shipper 持相反判断：分工仍必要"
+        },
+        {
+          "slug": "2026-04-09-every-agent-org",
+          "note": "人手一 agent 的组织实验先例"
+        }
+      ]
     },
     {
       "slug": "2026-04-12-nikunj-vc-backchannel",
@@ -139,7 +183,17 @@
           "url": "https://x.com/nikunj/status/2043092455550259341"
         }
       ],
-      "engagement": "151 likes"
+      "engagement": "151 likes",
+      "related": [
+        {
+          "slug": "2026-04-11-nikunj-vc-lessons",
+          "note": "前一天 11 条 VC 心得的延续"
+        },
+        {
+          "slug": "2026-04-08-changelog-check",
+          "note": "尽调方向倒转：上回查公司这回查 VC"
+        }
+      ]
     }
   ],
   "quickTakes": [

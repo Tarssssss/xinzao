@@ -20,6 +20,20 @@
           "label": "Training Data",
           "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-11-felix-rieseberg-cowork",
+          "note": "执行变便宜瓶颈转移，同一判断"
+        },
+        {
+          "slug": "2026-04-11-claude-code-auto-mode",
+          "note": "分险级代替逐条审批已有实现"
+        },
+        {
+          "slug": "2026-04-23-ai-sandwich",
+          "note": "人守工作流首尾，观点呼应"
+        }
       ]
     },
     {
@@ -41,7 +55,21 @@
           "url": "https://x.com/levie/status/2050684160151617603"
         }
       ],
-      "engagement": "301 likes"
+      "engagement": "301 likes",
+      "related": [
+        {
+          "slug": "2026-04-19-levie-engineering-jobs-expand",
+          "note": "他 4 月已论证工程岗扩张"
+        },
+        {
+          "slug": "2026-04-10-levie-automation-demand",
+          "note": "未被满足需求的论据同源"
+        },
+        {
+          "slug": "2026-04-25-levie-jevons",
+          "note": "产能升招聘升的延续"
+        }
+      ]
     },
     {
       "slug": "2026-05-03-vibe-kanban-shutdown",
@@ -60,7 +88,17 @@
           "url": "https://x.com/swyx/status/2050753293601935777"
         }
       ],
-      "engagement": "56 likes"
+      "engagement": "56 likes",
+      "related": [
+        {
+          "slug": "2026-04-29-micropayments-for-git-push",
+          "note": "免费难持续的观点呼应"
+        },
+        {
+          "slug": "2026-04-24-nikunj-ma-wave",
+          "note": "清算潮预判的现实注脚"
+        }
+      ]
     },
     {
       "slug": "2026-05-03-steipete-crabbox-openclaw",
@@ -84,7 +122,13 @@
           "url": "https://x.com/steipete/status/2050735979477008412"
         }
       ],
-      "engagement": "580 likes"
+      "engagement": "580 likes",
+      "related": [
+        {
+          "slug": "2026-04-22-openclaw-release",
+          "note": "插件机制问题的延续"
+        }
+      ]
     },
     {
       "slug": "2026-05-03-peter-yang-file-cleanup",
@@ -103,7 +147,13 @@
           "url": "https://x.com/petergyang/status/2050623358488997917"
         }
       ],
-      "engagement": "222 likes"
+      "engagement": "222 likes",
+      "related": [
+        {
+          "slug": "2026-04-07-peter-yang-agent-first-work",
+          "note": "他 4 月初已转向 agent 优先"
+        }
+      ]
     },
     {
       "slug": "2026-05-03-nikunj-downside-capping",
@@ -123,7 +173,17 @@
           "url": "https://x.com/nikunj/status/2050779734116856137"
         }
       ],
-      "engagement": "54 likes"
+      "engagement": "54 likes",
+      "related": [
+        {
+          "slug": "2026-04-24-nikunj-ma-wave",
+          "note": "他 4 月底已预判并购潮"
+        },
+        {
+          "slug": "2026-04-12-nikunj-vc-backchannel",
+          "note": "同样批评 VC 激励错位"
+        }
+      ]
     }
   ],
   "quickTakes": [

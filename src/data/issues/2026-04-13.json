@@ -19,6 +19,16 @@
           "label": "Latent Space",
           "url": "https://www.youtube.com/@LatentSpacePod"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-12-thin-harness-fat-skills",
+          "note": "同主张 agent 本体在文件里"
+        },
+        {
+          "slug": "2026-04-09-managed-agents-architecture",
+          "note": "Anthropic 同样主张与模型解耦"
+        }
       ]
     },
     {
@@ -40,7 +50,17 @@
           "url": "https://x.com/levie/status/2043426157367095397"
         }
       ],
-      "engagement": "2,981 likes"
+      "engagement": "2,981 likes",
+      "related": [
+        {
+          "slug": "2026-04-11-levie-headless-software",
+          "note": "同一轮 IT 负责人调研前篇"
+        },
+        {
+          "slug": "2026-04-10-levie-automation-demand",
+          "note": "未立项自动化判断获企业印证"
+        }
+      ]
     },
     {
       "slug": "2026-04-13-anthropic-security-guide",
@@ -58,6 +78,12 @@
         {
           "label": "Claude Blog",
           "url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-08-mythos-preview",
+          "note": "文中 Mythos/Glasswing 的出处"
         }
       ]
     },
@@ -79,7 +105,13 @@
           "url": "https://x.com/levie/status/2043318118169354302"
         }
       ],
-      "engagement": "307 likes"
+      "engagement": "307 likes",
+      "related": [
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "前日同一 Jevons 逻辑论律师"
+        }
+      ]
     },
     {
       "slug": "2026-04-13-zara-newtab-vibecode",

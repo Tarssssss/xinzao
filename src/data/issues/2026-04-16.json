@@ -28,7 +28,17 @@
           "url": "https://x.com/trq212/status/2044654705780179011"
         }
       ],
-      "engagement": "375 likes"
+      "engagement": "375 likes",
+      "related": [
+        {
+          "slug": "2026-04-07-shipper-hierarchy-context-rot",
+          "note": "context rot 论点呼应"
+        },
+        {
+          "slug": "2026-04-10-thariq-prompting-leverage",
+          "note": "他此前谈 harness 使用杠杆"
+        }
+      ]
     },
     {
       "slug": "2026-04-16-openclaw-security-hardening",
@@ -56,7 +66,21 @@
           "url": "https://x.com/garrytan/status/2044512730087072000"
         }
       ],
-      "engagement": "1420 likes"
+      "engagement": "1420 likes",
+      "related": [
+        {
+          "slug": "2026-04-12-openclaw-strict-mode-codex-harness",
+          "note": "OpenClaw 加固迭代的前作"
+        },
+        {
+          "slug": "2026-04-13-anthropic-security-guide",
+          "note": "AI 自动挖漏洞警告呼应"
+        },
+        {
+          "slug": "2026-04-07-cowork-exfiltration-vuln",
+          "note": "Garry Tan 曾示警 harness 漏洞"
+        }
+      ]
     },
     {
       "slug": "2026-04-16-rauch-design-factory",
@@ -80,7 +104,17 @@
           "url": "https://x.com/rauchg/status/2044419655306215492"
         }
       ],
-      "engagement": "1705 likes"
+      "engagement": "1705 likes",
+      "related": [
+        {
+          "slug": "2026-04-14-vercel-open-agents",
+          "note": "软件工厂叙事的前篇"
+        },
+        {
+          "slug": "2026-04-10-levie-automation-demand",
+          "note": "未立项自动化变可行呼应"
+        }
+      ]
     },
     {
       "slug": "2026-04-16-ebm-logical-intelligence",
@@ -98,6 +132,12 @@
         {
           "label": "AI & I by Every",
           "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-07-mistral-voxtral-leanstral",
+          "note": "同样押注形式化验证市场"
         }
       ]
     },
@@ -137,7 +177,21 @@
           "url": "https://x.com/levie/status/2044621545348481285"
         }
       ],
-      "engagement": "156 likes"
+      "engagement": "156 likes",
+      "related": [
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "他「律师更多」论的延续"
+        },
+        {
+          "slug": "2026-04-13-levie-security-jevons",
+          "note": "安全人才 Jevons 论先例"
+        },
+        {
+          "slug": "2026-04-11-felix-rieseberg-cowork",
+          "note": "瓶颈转移判断相呼应"
+        }
+      ]
     },
     {
       "slug": "2026-04-16-amjad-oss-security-metric",
@@ -156,7 +210,17 @@
           "url": "https://x.com/amasad/status/2044437437141909609"
         }
       ],
-      "engagement": "410 likes"
+      "engagement": "410 likes",
+      "related": [
+        {
+          "slug": "2026-04-13-anthropic-security-guide",
+          "note": "AI 挖漏洞预警是其前提"
+        },
+        {
+          "slug": "2026-04-13-levie-security-jevons",
+          "note": "安全投入经济学呼应"
+        }
+      ]
     }
   ],
   "quickTakes": [

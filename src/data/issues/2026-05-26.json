@@ -20,6 +20,16 @@
           "label": "原推",
           "url": "https://x.com/garrytan/status/2059148823403082154"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-19-garrytan-gbrain-open-evals",
+          "note": "一周前他刚开源 GBrain evals"
+        },
+        {
+          "slug": "2026-04-23-fewer-fatter-skills",
+          "note": "他此前的 skill 合并调优经验"
+        }
       ]
     },
     {
@@ -39,6 +49,16 @@
         {
           "label": "原推",
           "url": "https://x.com/petergyang/status/2059029752858775581"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-25-ryan-carson-solo-founder-agents",
+          "note": "前一天他刚谈拿钱不招人用 agent"
+        },
+        {
+          "slug": "2026-04-13-andreessen-agent-unix",
+          "note": "呼应 agent=文件+cron 公式"
         }
       ]
     },
@@ -60,6 +80,20 @@
           "label": "原推",
           "url": "https://x.com/levie/status/2059025559896883489"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-24-levie-tasks-vs-jobs",
+          "note": "两天前同一论题：任务≠岗位"
+        },
+        {
+          "slug": "2026-05-10-levie-experts-higher-demand",
+          "note": "同一「预期抬高」机制的早期版本"
+        },
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "他 4 月已用律师例子讲需求扩张"
+        }
       ]
     },
     {
@@ -78,6 +112,16 @@
         {
           "label": "原推",
           "url": "https://x.com/steipete/status/2058917897590673525"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-16-steipete-tokens-dont-matter",
+          "note": "与他此前「token 管够」论对照"
+        },
+        {
+          "slug": "2026-04-23-fewer-fatter-skills",
+          "note": "Garry Tan 同为省 context 整理 skill"
         }
       ]
     }

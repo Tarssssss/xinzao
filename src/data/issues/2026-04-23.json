@@ -23,6 +23,16 @@
           "label": "原推 @danshipper",
           "url": "https://x.com/danshipper/status/2047027507397005367"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-07-levie-work-abstraction",
+          "note": "Levie 同判断：人移向规划与审查"
+        },
+        {
+          "slug": "2026-04-09-every-agent-org",
+          "note": "Every 全员 agent 实践的前篇"
+        }
       ]
     },
     {
@@ -48,7 +58,17 @@
           "url": "https://x.com/petergyang/status/2047124883071816189"
         }
       ],
-      "engagement": "1.1K likes"
+      "engagement": "1.1K likes",
+      "related": [
+        {
+          "slug": "2026-04-15-zara-tab-out-cutting-features",
+          "note": "她 80% 时间在砍 AI 做过头的功能"
+        },
+        {
+          "slug": "2026-04-11-felix-rieseberg-cowork",
+          "note": "执行免费后瓶颈在品味，同一判断"
+        }
+      ]
     },
     {
       "slug": "2026-04-23-vercel-security-update",
@@ -68,7 +88,17 @@
           "url": "https://x.com/rauchg/status/2047150411170320808"
         }
       ],
-      "engagement": "762 likes"
+      "engagement": "762 likes",
+      "related": [
+        {
+          "slug": "2026-04-20-vercel-incident-update",
+          "note": "同一事件的首次通报"
+        },
+        {
+          "slug": "2026-04-21-vercel-security-rotation",
+          "note": "同一事件的密钥轮换提醒"
+        }
+      ]
     },
     {
       "slug": "2026-04-23-chatgpt-agents-headless",
@@ -92,7 +122,21 @@
           "url": "https://x.com/sama/status/2047017964105597009"
         }
       ],
-      "engagement": "987 likes"
+      "engagement": "987 likes",
+      "related": [
+        {
+          "slug": "2026-04-18-levie-headless-software",
+          "note": "他 headless 计费论的前篇"
+        },
+        {
+          "slug": "2026-04-11-levie-headless-software",
+          "note": "他曾调查：无好 API 供应商被弃"
+        },
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "知识工作 agent 判断的起点"
+        }
+      ]
     },
     {
       "slug": "2026-04-23-image-agent-framing",
@@ -136,7 +180,13 @@
           "url": "https://x.com/garrytan/status/2047184243164651648"
         }
       ],
-      "engagement": "158 likes"
+      "engagement": "158 likes",
+      "related": [
+        {
+          "slug": "2026-04-12-thin-harness-fat-skills",
+          "note": "他 fat skills 主张的直接延续"
+        }
+      ]
     }
   ],
   "quickTakes": [

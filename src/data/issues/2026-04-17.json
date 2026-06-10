@@ -28,7 +28,21 @@
           "url": "https://x.com/claudeai/status/2044785264313221470"
         }
       ],
-      "engagement": "3.0K likes"
+      "engagement": "3.0K likes",
+      "related": [
+        {
+          "slug": "2026-04-11-ultraplan",
+          "note": "/ultraplan 同系命令前作"
+        },
+        {
+          "slug": "2026-04-11-claude-code-auto-mode",
+          "note": "auto mode 首发与漏报率"
+        },
+        {
+          "slug": "2026-04-08-mythos-preview",
+          "note": "上次模型发布 Mythos 预览"
+        }
+      ]
     },
     {
       "slug": "2026-04-17-codex-computer-use",
@@ -59,7 +73,17 @@
           "url": "https://x.com/levie/status/2044855448722100720"
         }
       ],
-      "engagement": "7.7K likes"
+      "engagement": "7.7K likes",
+      "related": [
+        {
+          "slug": "2026-04-08-codex-3m-reset",
+          "note": "Codex 上次节点：周活 300 万"
+        },
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "他此前的知识工作外溢判断"
+        }
+      ]
     },
     {
       "slug": "2026-04-17-notion-harness-rebuilds",
@@ -77,6 +101,20 @@
         {
           "label": "Latent Space",
           "url": "https://www.youtube.com/@LatentSpacePod"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "同节目另一份 harness 复盘"
+        },
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "呼应：模型升级后清死重"
+        },
+        {
+          "slug": "2026-04-11-eval-infra-noise",
+          "note": "评测噪声的另一例实测"
         }
       ]
     },
@@ -102,7 +140,17 @@
           "url": "https://x.com/kevinweil/status/2044862785201565840"
         }
       ],
-      "engagement": "772 likes"
+      "engagement": "772 likes",
+      "related": [
+        {
+          "slug": "2026-04-08-prism-paper-review",
+          "note": "Weil 此前科研产品 Prism"
+        },
+        {
+          "slug": "2026-04-14-periodic-labs-fedus",
+          "note": "对照：壁垒在实验闭环"
+        }
+      ]
     },
     {
       "slug": "2026-04-17-workflow-sdk",
@@ -122,7 +170,17 @@
           "url": "https://x.com/rauchg/status/2044858872842826102"
         }
       ],
-      "engagement": "405 likes"
+      "engagement": "405 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-rauchg-agentic-infrastructure",
+          "note": "他上周的 Agentic Infra 论述"
+        },
+        {
+          "slug": "2026-04-14-vercel-open-agents",
+          "note": "三天前开源 Open Agents"
+        }
+      ]
     }
   ],
   "quickTakes": [

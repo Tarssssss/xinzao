@@ -21,6 +21,20 @@
           "label": "Training Data:Andrej Karpathy: From Vibe Coding to Agentic Engineering",
           "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "「代码成死重」的更早同款判断"
+        },
+        {
+          "slug": "2026-04-10-rauchg-agentic-infrastructure",
+          "note": "agent-native 基建的平台侧呼应"
+        },
+        {
+          "slug": "2026-04-29-vercel-labs-agent-tools",
+          "note": "工具受众从人转向 agent 的呼应"
+        }
       ]
     },
     {
@@ -42,6 +56,20 @@
           "label": "Training Data:Andrej Karpathy: From Vibe Coding to Agentic Engineering",
           "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-01-karpathy-sequoia-fireside",
+          "note": "三天前他刚谈锯齿的经济学成因"
+        },
+        {
+          "slug": "2026-04-10-karpathy-capability-gap",
+          "note": "可验证论他 4 月的更早版本"
+        },
+        {
+          "slug": "2026-04-10-openai-chief-scientist-rl-harness",
+          "note": "对「砸 RL」给出相反建议"
+        }
       ]
     },
     {
@@ -61,6 +89,20 @@
         {
           "label": "原推 ↗",
           "url": "https://x.com/levie/status/2051057677984469277"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-22-levie-enterprise-agents",
+          "note": "落地瓶颈清单的早期版本"
+        },
+        {
+          "slug": "2026-04-30-levie-agent-engineering-roles",
+          "note": "他已为此开招 agent 工程师"
+        },
+        {
+          "slug": "2026-04-28-valley-enterprise-gap",
+          "note": "Turck 数据印证落地之难"
         }
       ]
     }

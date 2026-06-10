@@ -16,7 +16,20 @@
       "engagement": "4865 likes",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2058582370253701432" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2058582370253701432"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-27-levie-ai-jobs-overwork",
+          "note": "他 4 月已谈最后一公里盲区"
+        },
+        {
+          "slug": "2026-05-04-levie-agent-implementation-opportunity",
+          "note": "同主张落地复杂度被低估"
+        }
       ]
     },
     {
@@ -32,7 +45,16 @@
       "engagement": "23 likes",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/realmadhuguru/status/2058591611245011157" }
+        {
+          "label": "原推",
+          "url": "https://x.com/realmadhuguru/status/2058591611245011157"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-28-valley-enterprise-gap",
+          "note": "Turck 同样观察到两年空转"
+        }
       ]
     },
     {
@@ -49,8 +71,24 @@
       "engagement": "164 likes",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/petergyang/status/2058555226479866312" },
-        { "label": "Ryan 谈 onboarding agent", "url": "https://x.com/petergyang/status/2058609058714968194" }
+        {
+          "label": "原推",
+          "url": "https://x.com/petergyang/status/2058555226479866312"
+        },
+        {
+          "label": "Ryan 谈 onboarding agent",
+          "url": "https://x.com/petergyang/status/2058609058714968194"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-28-tibo-solo-playbook",
+          "note": "此前另一 solo 创始人打法"
+        },
+        {
+          "slug": "2026-05-16-steipete-tokens-dont-matter",
+          "note": "一人指挥百个 agent 的先例"
+        }
       ]
     },
     {
@@ -67,7 +105,20 @@
       "engagement": "57 likes",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/nikunj/status/2058783316753686558" }
+        {
+          "label": "原推",
+          "url": "https://x.com/nikunj/status/2058783316753686558"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-18-levie-headless-software",
+          "note": "Levie 早有 headless 化判断"
+        },
+        {
+          "slug": "2026-04-12-allaire-agentic-economy",
+          "note": "agent 付费议题的先声"
+        }
       ]
     },
     {
@@ -83,8 +134,24 @@
       "engagement": "1413 likes",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/trq212/status/2058576195000660319" },
-        { "label": "补充:模型还没到位", "url": "https://x.com/trq212/status/2058576196481200223" }
+        {
+          "label": "原推",
+          "url": "https://x.com/trq212/status/2058576195000660319"
+        },
+        {
+          "label": "补充:模型还没到位",
+          "url": "https://x.com/trq212/status/2058576196481200223"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+          "note": "可验证性杠杆的同一判断"
+        },
+        {
+          "slug": "2026-04-25-sap-cto-no-priors",
+          "note": "结果可验证是同一前提"
+        }
       ]
     }
   ],

@@ -148,6 +148,30 @@
   color: var(--ink-faint);
 }
 
+/* 顶部翻期：不用读完整期才能翻 */
+.issue-pager {
+  display: flex;
+  gap: 14px;
+  margin-left: 2px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  white-space: nowrap;
+}
+
+.issue-pager a {
+  padding: 4px 0;
+  color: var(--ink-faint);
+}
+
+.issue-pager a:hover {
+  color: var(--accent);
+}
+
+.issue-pager .pager-off {
+  padding: 4px 0;
+  color: var(--rule);
+}
+
 .editor-note {
   margin: 8px 0 0;
   font-size: 12.5px;
@@ -275,6 +299,54 @@
   margin-bottom: 4px;
 }
 
+/* 相关回顾：wiki 联想出的更早 story */
+.story-related {
+  margin: 16px 0 6px;
+  padding: 10px 12px 11px;
+  border-left: 3px solid var(--rule-strong);
+  background: var(--paper-deep);
+}
+
+.story-related .sr-head {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 2px;
+  color: var(--ink-faint);
+}
+
+.story-related ul {
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.story-related li {
+  margin-top: 7px;
+  line-height: 1.6;
+}
+
+.story-related li a {
+  font-family: var(--font-serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: underline transparent 1.5px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+
+.story-related li a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--accent);
+}
+
+.story-related .sr-meta {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--ink-faint);
+}
+
 .story-meta {
   display: flex;
   flex-wrap: wrap;
@@ -339,56 +411,82 @@
   color: var(--ink-faint);
 }
 
-.archive-list {
-  margin: 0;
+/* gallery：一期一张卡，标题直接可扫，不用点进去才知道有什么 */
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 16px 0 0;
   padding: 0;
   list-style: none;
 }
 
-.archive-row {
-  border-bottom: 1px solid var(--rule);
+.archive-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: 13px 15px 12px;
+  border: 1px solid var(--rule);
+  background: rgba(255, 255, 255, 0.25);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.archive-row a {
-  display: grid;
-  grid-template-columns: 58px 112px 1fr 44px;
+.archive-card:hover {
+  border-color: var(--rule-strong);
+  box-shadow: 3px 3px 0 rgba(28, 25, 20, 0.08);
+}
+
+.ac-head {
+  display: flex;
   align-items: baseline;
   gap: 10px;
-  padding: 9px 2px;
-  transition: background 0.12s ease;
-}
-
-.archive-row a:hover {
-  background: var(--paper-deep);
-}
-
-.archive-row .no {
-  font-family: var(--font-mono);
-  font-size: 11.5px;
-  color: var(--accent);
-}
-
-.archive-row .date {
-  font-family: var(--font-mono);
-  font-size: 11.5px;
-  color: var(--ink-faint);
-}
-
-.archive-row .headline {
-  font-family: var(--font-serif);
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--ink-soft);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.archive-row .count {
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--ink-faint);
-  text-align: right;
+}
+
+.ac-head .no {
+  color: var(--accent);
+  font-size: 11.5px;
+}
+
+.ac-head .count {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.ac-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ac-title {
+  font-family: var(--font-serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.archive-card:hover .ac-title:first-child {
+  color: var(--ink);
+}
+
+.ac-more {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--ink-faint);
+}
+
+.archive-card:hover .ac-more {
+  color: var(--accent);
 }
 
 /* ============ 翻期 ============ */
@@ -649,13 +747,19 @@
     font-size: 14px;
   }
 
-  .archive-row a {
-    grid-template-columns: 50px 86px 1fr;
-    padding: 12px 2px;
+  .archive-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
-  .archive-row .count {
+  /* 窄屏 pager 只留箭头，加大点击区 */
+  .issue-pager .pager-text {
     display: none;
+  }
+
+  .issue-pager a,
+  .issue-pager .pager-off {
+    padding: 6px 6px;
   }
 
   .issue-nav a {

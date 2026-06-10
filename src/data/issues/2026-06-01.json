@@ -16,7 +16,20 @@
       "sourceType": "x",
       "engagement": "137 likes",
       "sourceLinks": [
-        { "label": "原推 ↗", "url": "https://x.com/swyx/status/2061256096719970337" }
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/swyx/status/2061256096719970337"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-01-swyx-agents-containment",
+          "note": "他 5 月已断言 coding agent 破圈"
+        },
+        {
+          "slug": "2026-04-30-agent-reality-check",
+          "note": "对立：当时判断离消费级还很远"
+        }
       ]
     },
     {
@@ -33,7 +46,24 @@
       "sourceType": "x",
       "engagement": "479 likes",
       "sourceLinks": [
-        { "label": "原推 ↗", "url": "https://x.com/levie/status/2061247380897579500" }
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/levie/status/2061247380897579500"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-22-levie-enterprise-agents",
+          "note": "他 4 月已点出遗留系统瓶颈"
+        },
+        {
+          "slug": "2026-05-19-levie-agent-data-strategy",
+          "note": "数据战略卡点论的延续"
+        },
+        {
+          "slug": "2026-05-29-levie-diffusion-bottleneck-internal-fde",
+          "note": "内部 FDE 判断的前篇"
+        }
       ]
     },
     {
@@ -50,8 +80,28 @@
       "sourceType": "x",
       "engagement": "1423 likes",
       "sourceLinks": [
-        { "label": "原推(memory)↗", "url": "https://x.com/garrytan/status/2061174413513678941" },
-        { "label": "原推(平台开放)↗", "url": "https://x.com/garrytan/status/2061176075288453333" }
+        {
+          "label": "原推(memory)↗",
+          "url": "https://x.com/garrytan/status/2061174413513678941"
+        },
+        {
+          "label": "原推(平台开放)↗",
+          "url": "https://x.com/garrytan/status/2061176075288453333"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-12-thin-harness-fat-skills",
+          "note": "他早主张 harness 不拥有记忆"
+        },
+        {
+          "slug": "2026-05-17-garry-tan-gbrain-agent-memory",
+          "note": "自托管记忆的具体实践"
+        },
+        {
+          "slug": "2026-04-24-managed-agents-memory",
+          "note": "平台侧记忆可导出的呼应"
+        }
       ]
     },
     {
@@ -68,7 +118,20 @@
       "sourceType": "x",
       "engagement": "1226 likes",
       "sourceLinks": [
-        { "label": "原推 ↗", "url": "https://x.com/rauchg/status/2061135404942974982" }
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/rauchg/status/2061135404942974982"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-09-spc-everyone-codes",
+          "note": "全员写代码的早期信号"
+        },
+        {
+          "slug": "2026-04-28-valley-enterprise-gap",
+          "note": "对立：企业端没见到生产力"
+        }
       ]
     },
     {
@@ -85,7 +148,20 @@
       "sourceType": "x",
       "engagement": "1008 likes",
       "sourceLinks": [
-        { "label": "原推 ↗", "url": "https://x.com/steipete/status/2061208638027395490" }
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/steipete/status/2061208638027395490"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-29-codex-on-every-commit",
+          "note": "每 commit 自动修复线的延续"
+        },
+        {
+          "slug": "2026-05-11-steipete-build-your-own-tools",
+          "note": "此前已让 codex 跑 e2e"
+        }
       ]
     }
   ],

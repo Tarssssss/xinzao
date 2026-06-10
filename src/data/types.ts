@@ -5,6 +5,14 @@ export interface SourceLink {
   url: string
 }
 
+/** 相关回顾：指向更早一期的 story。由 wiki 联想产生，规范见 wiki/WIKI-GUIDE.md */
+export interface RelatedRef {
+  /** 更早 story 的 slug */
+  slug: string
+  /** ≤20 字，说明关联点（如「他 5 月曾给出相反判断」） */
+  note?: string
+}
+
 export interface Story {
   /** 全局唯一，建议 `${date}-${短slug}`，同时作为详情页路由 */
   slug: string
@@ -21,6 +29,8 @@ export interface Story {
   sourceLinks: SourceLink[]
   /** 注意力信号，如 "20.4K likes" */
   engagement?: string
+  /** 相关回顾，0-3 条，只指向更早的 story，宁缺毋滥 */
+  related?: RelatedRef[]
 }
 
 /**

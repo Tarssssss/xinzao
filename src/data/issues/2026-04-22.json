@@ -20,7 +20,21 @@
           "url": "https://x.com/levie/status/2046805326784319663"
         }
       ],
-      "engagement": "1,173 likes"
+      "engagement": "1,173 likes",
+      "related": [
+        {
+          "slug": "2026-04-15-levie-forward-deployed-engineers",
+          "note": "一周前同一 FDE 判断的前作"
+        },
+        {
+          "slug": "2026-04-13-levie-enterprise-agents",
+          "note": "访谈 20 余位 IT 负责人的实地依据"
+        },
+        {
+          "slug": "2026-04-21-levie-agent-ops-roles",
+          "note": "前一日提出 agent 专职岗位清单"
+        }
+      ]
     },
     {
       "slug": "2026-04-22-openclaw-release",
@@ -48,7 +62,17 @@
           "url": "https://x.com/steipete/status/2046787353906167992"
         }
       ],
-      "engagement": "492 likes"
+      "engagement": "492 likes",
+      "related": [
+        {
+          "slug": "2026-04-16-openclaw-security-hardening",
+          "note": "此前回应 OpenClaw 安全质疑"
+        },
+        {
+          "slug": "2026-04-12-openclaw-strict-mode-codex-harness",
+          "note": "OpenClaw 上一个功能版本"
+        }
+      ]
     },
     {
       "slug": "2026-04-22-claude-code-context-viz",
@@ -67,7 +91,17 @@
           "url": "https://x.com/zarazhangrui/status/2046758723998425433"
         }
       ],
-      "engagement": "204 likes"
+      "engagement": "204 likes",
+      "related": [
+        {
+          "slug": "2026-04-16-claude-code-1m-context",
+          "note": "官方指南同样强调上下文管理"
+        },
+        {
+          "slug": "2026-04-11-zara-new-world-formats",
+          "note": "她此前主张 HTML 是新工作格式"
+        }
+      ]
     }
   ],
   "quickTakes": [

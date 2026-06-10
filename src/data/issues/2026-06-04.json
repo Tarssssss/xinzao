@@ -16,7 +16,24 @@
       "role": "Chairman & CEO, Microsoft",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "No Priors 播客", "url": "https://www.youtube.com/@NoPriorsPodcast" }
+        {
+          "label": "No Priors 播客",
+          "url": "https://www.youtube.com/@NoPriorsPodcast"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-09-anthropic-platform-harness-model-pairing",
+          "note": "对立：harness 须与模型绑定"
+        },
+        {
+          "slug": "2026-05-22-yann-dubois-harness-last-mile",
+          "note": "对立：别押注通用 harness"
+        },
+        {
+          "slug": "2026-06-02-levie-agent-era-moat",
+          "note": "同题异解：护城河在数据流程"
+        }
       ]
     },
     {
@@ -32,8 +49,28 @@
       "role": "CEO, Box",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "就业判断原推", "url": "https://x.com/levie/status/2062335852379066698" },
-        { "label": "token 开支原推", "url": "https://x.com/levie/status/2062280745889222937" }
+        {
+          "label": "就业判断原推",
+          "url": "https://x.com/levie/status/2062335852379066698"
+        },
+        {
+          "label": "token 开支原推",
+          "url": "https://x.com/levie/status/2062280745889222937"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-19-levie-engineering-jobs-expand",
+          "note": "他 4 月即持同一就业判断"
+        },
+        {
+          "slug": "2026-05-29-levie-tokenmaxxing-enterprise-economics",
+          "note": "token 开支线索的延续"
+        },
+        {
+          "slug": "2026-04-21-turck-ai-tam",
+          "note": "对立：Turck 质疑 TAM 推算"
+        }
       ]
     },
     {
@@ -49,7 +86,24 @@
       "role": "CEO, Every",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推(含时间轴)", "url": "https://x.com/danshipper/status/2062202908306030915" }
+        {
+          "label": "原推(含时间轴)",
+          "url": "https://x.com/danshipper/status/2062202908306030915"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-18-mcdermott-saaspocalypse",
+          "note": "同样反驳 SaaS 末日论"
+        },
+        {
+          "slug": "2026-04-16-rauch-design-factory",
+          "note": "对立：生成已胜过采购 SaaS"
+        },
+        {
+          "slug": "2026-06-03-peter-yang-narrow-saas-harder-to-monetize",
+          "note": "前日呼应：窄 SaaS 难变现"
+        }
       ]
     }
   ],

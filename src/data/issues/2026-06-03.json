@@ -15,7 +15,20 @@
       "creator": "Alfred Wahlforss",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Training Data 播客", "url": "https://www.youtube.com/watch?v=Rumft-rsEu4" }
+        {
+          "label": "Training Data 播客",
+          "url": "https://www.youtube.com/watch?v=Rumft-rsEu4"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-20-serval-jake-stauch-ai-native-itsm",
+          "note": "同谈垂直应用层护城河来源"
+        },
+        {
+          "slug": "2026-06-02-levie-agent-era-moat",
+          "note": "前一日同主张独有数据是护城河"
+        }
       ]
     },
     {
@@ -31,7 +44,24 @@
       "sourceType": "x",
       "engagement": "299 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2061974298760495132" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2061974298760495132"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-29-levie-tokenmaxxing-enterprise-economics",
+          "note": "token 成本难题的延续"
+        },
+        {
+          "slug": "2026-05-22-levie-inference-cost-stratification",
+          "note": "成本分层判断是路由论前提"
+        },
+        {
+          "slug": "2026-05-20-levie-token-cost-enterprise-cio",
+          "note": "他 5 月称此题尚无人有解法"
+        }
       ]
     },
     {
@@ -47,7 +77,24 @@
       "sourceType": "x",
       "engagement": "39 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/petergyang/status/2061846283263103274" }
+        {
+          "label": "原推",
+          "url": "https://x.com/petergyang/status/2061846283263103274"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-07-peter-yang-agent-first-work",
+          "note": "他 4 月已称不再打开任务型应用"
+        },
+        {
+          "slug": "2026-04-18-mcdermott-saaspocalypse",
+          "note": "同判单一职能软件最危险"
+        },
+        {
+          "slug": "2026-05-03-vibe-kanban-shutdown",
+          "note": "窄工具变现难的实例"
+        }
       ]
     },
     {
@@ -62,7 +109,24 @@
       "sourceType": "x",
       "engagement": "462 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/rauchg/status/2061934154732974376" }
+        {
+          "label": "原推",
+          "url": "https://x.com/rauchg/status/2061934154732974376"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-14-vercel-open-agents",
+          "note": "他 4 月已称代码本身不再是护城河"
+        },
+        {
+          "slug": "2026-04-16-rauch-design-factory",
+          "note": "彼时已主张生成软件胜过采购"
+        },
+        {
+          "slug": "2026-05-29-rauchg-vercel-cli-agent-interface",
+          "note": "「给 agent 的云」定位的延续"
+        }
       ]
     },
     {
@@ -77,7 +141,20 @@
       "sourceType": "x",
       "engagement": "50 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/nikunj/status/2062033620773306763" }
+        {
+          "label": "原推",
+          "url": "https://x.com/nikunj/status/2062033620773306763"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-24-nikunj-ma-wave",
+          "note": "seed-A 断层论据的早期版本"
+        },
+        {
+          "slug": "2026-05-05-nikunj-momentum-not-a-moat-retention",
+          "note": "同样反对单一要素撑起公司"
+        }
       ]
     }
   ],

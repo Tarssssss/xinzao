@@ -20,6 +20,20 @@
           "label": "Unsupervised Learning Ep 86(LeCun 专访)",
           "url": "https://www.youtube.com/@RedpointAI"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-16-ebm-logical-intelligence",
+          "note": "同押非生成式可验证架构"
+        },
+        {
+          "slug": "2026-05-08-zico-kolter-rl-self-training-architecture",
+          "note": "对立:Kolter 称架构不重要"
+        },
+        {
+          "slug": "2026-05-08-zico-kolter-robustness-doesnt-scale",
+          "note": "同判安全不能靠等新模型"
+        }
       ]
     },
     {
@@ -44,6 +58,20 @@
           "label": "clawpatch 0.1.0 发布",
           "url": "https://x.com/steipete/status/2055364630709448970"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-29-codex-on-every-commit",
+          "note": "这套流水线的起点"
+        },
+        {
+          "slug": "2026-05-07-boris-cherny-sequoia",
+          "note": "呼应:他每晚跑几千个 agent"
+        },
+        {
+          "slug": "2026-05-05-rauchg-deepsec-security-agent-orchestrator",
+          "note": "他正在用的 deepsec 出处"
+        }
       ]
     },
     {
@@ -64,6 +92,20 @@
           "label": "原推",
           "url": "https://x.com/levie/status/2055501840419328286"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-15-levie-forward-deployed-engineers",
+          "note": "他 4 月首提 FDE 不会消失"
+        },
+        {
+          "slug": "2026-04-22-levie-enterprise-agents",
+          "note": "同判 FDE 模式长期存在"
+        },
+        {
+          "slug": "2026-04-30-levie-agent-engineering-roles",
+          "note": "延伸:招对内版 FDE"
+        }
       ]
     },
     {
@@ -83,6 +125,16 @@
         {
           "label": "原推",
           "url": "https://x.com/danshipper/status/2055347527457886336"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-09-every-agent-org",
+          "note": "Every 曾试人手一个 agent"
+        },
+        {
+          "slug": "2026-04-30-agent-reality-check",
+          "note": "呼应:agent 离好用还远"
         }
       ]
     }

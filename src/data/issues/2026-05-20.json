@@ -15,7 +15,20 @@
       "role": "前 Tesla AI 总监、OpenAI 创始团队成员",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "Karpathy 原推", "url": "https://x.com/karpathy/status/2056753169888334312" }
+        {
+          "label": "Karpathy 原推",
+          "url": "https://x.com/karpathy/status/2056753169888334312"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-01-karpathy-sequoia-fireside",
+          "note": "入职前还在场外拆解实验室经济学"
+        },
+        {
+          "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+          "note": "他此前对前沿走向的判断底稿"
+        }
       ]
     },
     {
@@ -32,7 +45,20 @@
       "role": "Serval 创始人兼 CEO（嘉宾，Sequoia《Training Data》播客）",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Training Data 播客", "url": "https://www.youtube.com/watch?v=j7ypvRUFY7M" }
+        {
+          "label": "Training Data 播客",
+          "url": "https://www.youtube.com/watch?v=j7ypvRUFY7M"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-18-mcdermott-saaspocalypse",
+          "note": "其对标公司 CEO 曾反驳颠覆论"
+        },
+        {
+          "slug": "2026-05-08-levie-ai-commoditization-differentiation",
+          "note": "差异化被挤到别处，同一判断"
+        }
       ]
     },
     {
@@ -48,9 +74,32 @@
       "role": "Anthropic 官方博客（产品发布）",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Claude Blog 公告", "url": "https://claude.com/blog/claude-managed-agents-updates" },
-        { "label": "Vercel CEO Rauch 转发", "url": "https://x.com/rauchg/status/2056735989830471977" },
-        { "label": "Claude 官方账号", "url": "https://x.com/claudeai/status/2056645493493575681" }
+        {
+          "label": "Claude Blog 公告",
+          "url": "https://claude.com/blog/claude-managed-agents-updates"
+        },
+        {
+          "label": "Vercel CEO Rauch 转发",
+          "url": "https://x.com/rauchg/status/2056735989830471977"
+        },
+        {
+          "label": "Claude 官方账号",
+          "url": "https://x.com/claudeai/status/2056645493493575681"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-09-managed-agents-launch",
+          "note": "该产品线起点"
+        },
+        {
+          "slug": "2026-04-09-managed-agents-architecture",
+          "note": "大脑与手解耦的设计源头"
+        },
+        {
+          "slug": "2026-05-15-daytona-agent-needs-computer",
+          "note": "本次列名沙箱商的立论"
+        }
       ]
     },
     {
@@ -66,9 +115,32 @@
       "role": "OpenAI CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "折扣 token 承诺", "url": "https://x.com/sama/status/2056827105401614656" },
-        { "label": "额度与容量说明", "url": "https://x.com/sama/status/2056834734915977382" },
-        { "label": "YC 每家投 200 万 token", "url": "https://x.com/sama/status/2056933166875857290" }
+        {
+          "label": "折扣 token 承诺",
+          "url": "https://x.com/sama/status/2056827105401614656"
+        },
+        {
+          "label": "额度与容量说明",
+          "url": "https://x.com/sama/status/2056834734915977382"
+        },
+        {
+          "label": "YC 每家投 200 万 token",
+          "url": "https://x.com/sama/status/2056933166875857290"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-02-baseten-inference-crunch",
+          "note": "供给侧同样判断算力紧缺"
+        },
+        {
+          "slug": "2026-05-07-dario-80x-compute",
+          "note": "对手同期也在抢算力"
+        },
+        {
+          "slug": "2026-05-09-levie-token-budgeting-enterprise",
+          "note": "买方侧的算力确定性焦虑"
+        }
       ]
     },
     {
@@ -84,7 +156,20 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "Levie 原推", "url": "https://x.com/levie/status/2056965292753146019" }
+        {
+          "label": "Levie 原推",
+          "url": "https://x.com/levie/status/2056965292753146019"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-09-levie-token-budgeting-enterprise",
+          "note": "他十一天前已点出此议题"
+        },
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "他早判断 token 需求被低估"
+        }
       ]
     },
     {
@@ -100,7 +185,16 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "Levie 原推", "url": "https://x.com/levie/status/2056804573449474527" }
+        {
+          "label": "Levie 原推",
+          "url": "https://x.com/levie/status/2056804573449474527"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-24-levie-gpt55-box-evals",
+          "note": "同一套 Box 评测的上次读数"
+        }
       ]
     }
   ],

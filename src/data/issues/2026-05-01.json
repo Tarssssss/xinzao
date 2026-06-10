@@ -21,7 +21,13 @@
           "url": "https://x.com/karpathy/status/2049903821095354523"
         }
       ],
-      "engagement": "3.4K likes"
+      "engagement": "3.4K likes",
+      "related": [
+        {
+          "slug": "2026-04-10-karpathy-capability-gap",
+          "note": "他此前把参差归因于可验证性"
+        }
+      ]
     },
     {
       "slug": "2026-05-01-hassabis-training-data",
@@ -39,6 +45,12 @@
         {
           "label": "Training Data",
           "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-14-periodic-labs-fedus",
+          "note": "Fedus 反向判断：壁垒在实验闭环"
         }
       ]
     },
@@ -61,7 +73,21 @@
           "url": "https://x.com/levie/status/2050051426446152159"
         }
       ],
-      "engagement": "357 likes"
+      "engagement": "357 likes",
+      "related": [
+        {
+          "slug": "2026-04-18-levie-headless-software",
+          "note": "席位加用量定价的早期版本"
+        },
+        {
+          "slug": "2026-04-11-levie-headless-software",
+          "note": "headless 论最早的调研依据"
+        },
+        {
+          "slug": "2026-04-23-chatgpt-agents-headless",
+          "note": "他视 ChatGPT agents 为趋势佐证"
+        }
+      ]
     },
     {
       "slug": "2026-05-01-claude-security-beta",
@@ -89,7 +115,13 @@
           "url": "https://x.com/claudeai/status/2049898743772696745"
         }
       ],
-      "engagement": "292 likes"
+      "engagement": "292 likes",
+      "related": [
+        {
+          "slug": "2026-04-13-anthropic-security-guide",
+          "note": "此前预判 AI 将批量找漏洞"
+        }
+      ]
     },
     {
       "slug": "2026-05-01-swyx-agents-containment",
@@ -116,6 +148,16 @@
           "label": "原推 @sama",
           "url": "https://x.com/sama/status/2049946120441520624"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-24-swyx-coding-agents-containment",
+          "note": "该判断首次提出于此播客"
+        },
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "Levie 早有同向判断"
+        }
       ]
     },
     {
@@ -136,7 +178,17 @@
           "url": "https://x.com/ryolu_/status/2049866003287576978"
         }
       ],
-      "engagement": "186 likes"
+      "engagement": "186 likes",
+      "related": [
+        {
+          "slug": "2026-04-23-overcooking",
+          "note": "延续其反堆积的设计观"
+        },
+        {
+          "slug": "2026-04-25-nanyu-design-intent",
+          "note": "与设计即意图的主张呼应"
+        }
+      ]
     }
   ],
   "quickTakes": [

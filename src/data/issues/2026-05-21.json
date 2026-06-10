@@ -14,7 +14,24 @@
       "creator": "Aaron Levie",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 ↗", "url": "https://x.com/levie/status/2057315272156135501" }
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/levie/status/2057315272156135501"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-16-levie-fde-core-competency",
+          "note": "五天前他刚论证 FDE 不可省"
+        },
+        {
+          "slug": "2026-04-22-levie-enterprise-agents",
+          "note": "早把变更管理列为落地瓶颈"
+        },
+        {
+          "slug": "2026-04-19-levie-agent-architecture-churn",
+          "note": "「脚手架随模型报废」早期版本"
+        }
       ]
     },
     {
@@ -30,8 +47,24 @@
       "creator": "Alex Rattray / Dan Shipper",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "AI & I 播客 ↗", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" },
-        { "label": "Dan Shipper 介绍推 ↗", "url": "https://x.com/danshipper/status/2057122805657821240" }
+        {
+          "label": "AI & I 播客 ↗",
+          "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL"
+        },
+        {
+          "label": "Dan Shipper 介绍推 ↗",
+          "url": "https://x.com/danshipper/status/2057122805657821240"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-23-fewer-fatter-skills",
+          "note": "同样在省工具定义烧的 context"
+        },
+        {
+          "slug": "2026-05-04-karpathy-software-3-paradigm",
+          "note": "与「造工具只剩写 prompt」呼应"
+        }
       ]
     }
   ],

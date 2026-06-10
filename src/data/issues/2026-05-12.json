@@ -21,6 +21,20 @@
           "label": "No Priors 播客",
           "url": "https://www.youtube.com/watch?v=g5TWnUjbeFM"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-22-levie-enterprise-agents",
+          "note": "Levie 同样点名变更管理瓶颈"
+        },
+        {
+          "slug": "2026-05-04-levie-agent-implementation-opportunity",
+          "note": "实施类机会判断的极端实践版"
+        },
+        {
+          "slug": "2026-04-28-valley-enterprise-gap",
+          "note": "印证企业端 AI 渗透极低"
+        }
       ]
     },
     {
@@ -40,6 +54,20 @@
         {
           "label": "原推",
           "url": "https://x.com/karpathy/status/2053872850101285137"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-09-rauch-web-thesis",
+          "note": "生成式 UI 终局判断相呼应"
+        },
+        {
+          "slug": "2026-04-11-zara-new-world-formats",
+          "note": "她早判 HTML 成新工作格式"
+        },
+        {
+          "slug": "2026-04-22-claude-code-context-viz",
+          "note": "同款 HTML 可视化实践"
         }
       ]
     }

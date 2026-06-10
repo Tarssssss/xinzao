@@ -16,7 +16,20 @@
       "role": "Founder, Alethic",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "AI & I by Every: Claude Code Can Be Your Second Brain", "url": "https://www.youtube.com/watch?v=in7i-EVDDlk" }
+        {
+          "label": "AI & I by Every: Claude Code Can Be Your Second Brain",
+          "url": "https://www.youtube.com/watch?v=in7i-EVDDlk"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-17-garry-tan-gbrain-agent-memory",
+          "note": "同把 agent 架在个人 markdown 库上"
+        },
+        {
+          "slug": "2026-04-09-llmwiki",
+          "note": "用个人数据建知识库的早期同类"
+        }
       ]
     },
     {
@@ -34,8 +47,28 @@
       "sourceType": "x",
       "engagement": "425 likes / 275 likes",
       "sourceLinks": [
-        { "label": "Levie：别放弃打深功底", "url": "https://x.com/levie/status/2056051851439857933" },
-        { "label": "Levie：AI 让技术人才需求扩张", "url": "https://x.com/levie/status/2056219645796090197" }
+        {
+          "label": "Levie：别放弃打深功底",
+          "url": "https://x.com/levie/status/2056051851439857933"
+        },
+        {
+          "label": "Levie：AI 让技术人才需求扩张",
+          "url": "https://x.com/levie/status/2056219645796090197"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-10-levie-experts-higher-demand",
+          "note": "一周前同主张：专家需求反升"
+        },
+        {
+          "slug": "2026-05-15-levie-ai-enhances-specialization",
+          "note": "他主张 AI 强化而非消解专业分工"
+        },
+        {
+          "slug": "2026-05-03-levie-engineer-thought-experiment",
+          "note": "企业多雇工程师的一手信号"
+        }
       ]
     },
     {
@@ -52,7 +85,20 @@
       "sourceType": "x",
       "engagement": "123 likes",
       "sourceLinks": [
-        { "label": "Kothari：独角兽股权的三重打击", "url": "https://x.com/nikunj/status/2056125669466333672" }
+        {
+          "label": "Kothari：独角兽股权的三重打击",
+          "url": "https://x.com/nikunj/status/2056125669466333672"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-08-changelog-check",
+          "note": "他的尽调方法论：先翻 changelog"
+        },
+        {
+          "slug": "2026-04-24-nikunj-ma-wave",
+          "note": "他早判 zombiecorn 终被清算"
+        }
       ]
     }
   ],

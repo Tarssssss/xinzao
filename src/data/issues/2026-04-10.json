@@ -43,6 +43,16 @@
           "label": "Unsupervised Learning Ep 84",
           "url": "https://www.youtube.com/@RedpointAI"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-09-managed-agents-architecture",
+          "note": "同判 harness 假设随模型过时"
+        },
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "自家团队正重注 harness，成对照"
+        }
       ]
     },
     {
@@ -100,7 +110,17 @@
           "url": "https://x.com/levie/status/2042392664943870443"
         }
       ],
-      "engagement": "165 likes"
+      "engagement": "165 likes",
+      "related": [
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "续前日外溢知识工作的判断"
+        },
+        {
+          "slug": "2026-04-07-levie-work-abstraction",
+          "note": "他三天前拆解 agent 工作六环节"
+        }
+      ]
     },
     {
       "slug": "2026-04-10-thariq-prompting-leverage",
@@ -128,7 +148,17 @@
           "url": "https://x.com/levie/status/2042460500785602648"
         }
       ],
-      "engagement": "2.1K likes"
+      "engagement": "2.1K likes",
+      "related": [
+        {
+          "slug": "2026-04-07-levie-work-abstraction",
+          "note": "Levie 六环节里先讲指令与上下文"
+        },
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "印证：纪律写成 agent 可读文本"
+        }
+      ]
     },
     {
       "slug": "2026-04-10-rauchg-agentic-infrastructure",
@@ -152,7 +182,17 @@
           "url": "https://x.com/rauchg/status/2042294997278736552"
         }
       ],
-      "engagement": "252 likes"
+      "engagement": "252 likes",
+      "related": [
+        {
+          "slug": "2026-04-09-rauch-web-thesis",
+          "note": "前日他刚给出看多 web 论证"
+        },
+        {
+          "slug": "2026-04-09-managed-agents-launch",
+          "note": "Anthropic 前日发同类托管 infra"
+        }
+      ]
     },
     {
       "slug": "2026-04-10-garry-tan-gbrain",
@@ -179,7 +219,13 @@
           "url": "https://x.com/garrytan/status/2042493525934424114"
         }
       ],
-      "engagement": "48 likes"
+      "engagement": "48 likes",
+      "related": [
+        {
+          "slug": "2026-04-09-llmwiki",
+          "note": "前日 Nikunj 同开源个人知识层"
+        }
+      ]
     },
     {
       "slug": "2026-04-10-lyria-3-music",
@@ -198,7 +244,13 @@
           "url": "https://x.com/joshwoodward/status/2042318148851188151"
         }
       ],
-      "engagement": "378 likes"
+      "engagement": "378 likes",
+      "related": [
+        {
+          "slug": "2026-04-09-gemini-notebooks",
+          "note": "他前日刚把 Notebooks 并入 Gemini"
+        }
+      ]
     }
   ],
   "quickTakes": [

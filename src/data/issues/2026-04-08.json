@@ -47,6 +47,12 @@
           "label": "Latent Space",
           "url": "https://www.youtube.com/@LatentSpacePod"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-07-levie-work-abstraction",
+          "note": "呼应前日 Levie：人只剩规划与审查"
+        }
       ]
     },
     {
@@ -117,7 +123,13 @@
           "url": "https://x.com/levie/status/2041512156693201176"
         }
       ],
-      "engagement": "125 likes"
+      "engagement": "125 likes",
+      "related": [
+        {
+          "slug": "2026-04-07-levie-work-abstraction",
+          "note": "他前一天论 agent 上移工作抽象层"
+        }
+      ]
     },
     {
       "slug": "2026-04-08-changelog-check",

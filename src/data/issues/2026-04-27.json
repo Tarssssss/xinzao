@@ -25,7 +25,21 @@
           "url": "https://x.com/garrytan/status/2048667055424249864"
         }
       ],
-      "engagement": "62 likes"
+      "engagement": "62 likes",
+      "related": [
+        {
+          "slug": "2026-04-12-thin-harness-fat-skills",
+          "note": "他此前主张配置全放 markdown"
+        },
+        {
+          "slug": "2026-04-23-fewer-fatter-skills",
+          "note": "同一套个人配置的 skills 层"
+        },
+        {
+          "slug": "2026-04-10-garry-tan-gbrain",
+          "note": "USER.md 建模呼应他的记忆方案"
+        }
+      ]
     },
     {
       "slug": "2026-04-27-levie-ai-jobs-overwork",
@@ -50,7 +64,21 @@
           "url": "https://x.com/levie/status/2048537503972684252"
         }
       ],
-      "engagement": "713 likes"
+      "engagement": "713 likes",
+      "related": [
+        {
+          "slug": "2026-04-24-levie-ai-more-work",
+          "note": "「启动变容易」论点的延续"
+        },
+        {
+          "slug": "2026-04-16-levie-job-bottlenecks",
+          "note": "最后一公里论的前身版本"
+        },
+        {
+          "slug": "2026-04-25-levie-jevons",
+          "note": "岗位创造判断的又一表述"
+        }
+      ]
     },
     {
       "slug": "2026-04-27-rauch-coding-agents",
@@ -70,7 +98,17 @@
           "url": "https://x.com/rauchg/status/2048523195305902341"
         }
       ],
-      "engagement": "427 likes"
+      "engagement": "427 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-rauchg-agentic-infrastructure",
+          "note": "他 agent 中心论的早期版本"
+        },
+        {
+          "slug": "2026-04-13-andreessen-agent-unix",
+          "note": "agent 即 shell 加文件的同向判断"
+        }
+      ]
     },
     {
       "slug": "2026-04-27-steipete-birdclaw-wacrawl",
@@ -99,7 +137,21 @@
           "url": "https://x.com/steipete/status/2048630704972443918"
         }
       ],
-      "engagement": "727 likes"
+      "engagement": "727 likes",
+      "related": [
+        {
+          "slug": "2026-04-21-steipete-wacli-gog",
+          "note": "他 WhatsApp 工具线的前作"
+        },
+        {
+          "slug": "2026-04-25-discrawl-discord-dm",
+          "note": "同一条数据收回本地路线"
+        },
+        {
+          "slug": "2026-04-09-llmwiki",
+          "note": "推文书签建个人库的先例"
+        }
+      ]
     }
   ],
   "quickTakes": [

@@ -16,7 +16,16 @@
       "role": "美国国务院主管经济事务副国务卿",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "No Priors: Pax Silica", "url": "https://www.youtube.com/watch?v=xjlYpGaxIPA" }
+        {
+          "label": "No Priors: Pax Silica",
+          "url": "https://www.youtube.com/watch?v=xjlYpGaxIPA"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-25-turck-cohere-aleph",
+          "note": "他国抵触依赖美国 AI 的对立观察"
+        }
       ]
     },
     {
@@ -33,8 +42,28 @@
       "sourceType": "x",
       "engagement": "1231 likes",
       "sourceLinks": [
-        { "label": "GBrain 是什么", "url": "https://x.com/garrytan/status/2055670533451366479" },
-        { "label": "GBrain 开源 / MIT", "url": "https://x.com/garrytan/status/2055670797596012657" }
+        {
+          "label": "GBrain 是什么",
+          "url": "https://x.com/garrytan/status/2055670533451366479"
+        },
+        {
+          "label": "GBrain 开源 / MIT",
+          "url": "https://x.com/garrytan/status/2055670797596012657"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-10-garry-tan-gbrain",
+          "note": "一个月前同项目首次开源"
+        },
+        {
+          "slug": "2026-04-14-gbrain-v093",
+          "note": "同项目 4 月中的版本迭代"
+        },
+        {
+          "slug": "2026-04-12-thin-harness-fat-skills",
+          "note": "他此前主张记忆放文件而非 harness"
+        }
       ]
     }
   ],

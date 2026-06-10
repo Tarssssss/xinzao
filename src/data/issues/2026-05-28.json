@@ -19,6 +19,16 @@
           "label": "AI & I by Every（YouTube）",
           "url": "https://www.youtube.com/watch?v=dCmOTURRf1Y"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-10-levie-experts-higher-demand",
+          "note": "Levie 5 月中同款判断"
+        },
+        {
+          "slug": "2026-04-09-every-agent-org",
+          "note": "Every 内部 agent 化前情"
+        }
       ]
     },
     {
@@ -37,6 +47,12 @@
         {
           "label": "AI & I by Every（YouTube）",
           "url": "https://www.youtube.com/watch?v=dCmOTURRf1Y"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+          "note": "Karpathy 同判：可框定即被接管"
         }
       ]
     },
@@ -57,6 +73,16 @@
           "label": "AI & I by Every（YouTube）",
           "url": "https://www.youtube.com/watch?v=dCmOTURRf1Y"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-25-levie-ceo-ai-psychosis",
+          "note": "CEO 离一线太远，同款怀疑"
+        },
+        {
+          "slug": "2026-05-27-levie-agents-automate-tasks-not-jobs",
+          "note": "前日 Levie 同结论：任务非岗位"
+        }
       ]
     },
     {
@@ -75,6 +101,16 @@
         {
           "label": "AI & I by Every（YouTube）",
           "url": "https://www.youtube.com/watch?v=dCmOTURRf1Y"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-27-zara-zhang-codex-vs-claude-code",
+          "note": "Zara 前日也按任务分流两家"
+        },
+        {
+          "slug": "2026-04-26-zara-writing-thinking",
+          "note": "写作即思考的同向观察"
         }
       ]
     }

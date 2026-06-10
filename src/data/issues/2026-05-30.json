@@ -28,7 +28,17 @@
           "url": "https://x.com/bcherny/status/2060390855383400729"
         }
       ],
-      "engagement": "2.8K likes"
+      "engagement": "2.8K likes",
+      "related": [
+        {
+          "slug": "2026-05-07-boris-cherny-sequoia",
+          "note": "他月初已谈全模型写码的规模实践"
+        },
+        {
+          "slug": "2026-05-24-feldman-speed-reorganizes-business",
+          "note": "同判断：价值在重组而非提速"
+        }
+      ]
     },
     {
       "slug": "2026-05-30-onyx-security-maxim-agent-oversight",
@@ -47,6 +57,16 @@
         {
           "label": "No Priors：Building an AI Guardian for Enterprise",
           "url": "https://www.youtube.com/watch?v=QDsbFLEt9ro"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-11-claude-code-auto-mode",
+          "note": "同机制：分类器代替逐条审批"
+        },
+        {
+          "slug": "2026-05-08-zico-kolter-robustness-doesnt-scale",
+          "note": "呼应：安全要专门加监控层"
         }
       ]
     }

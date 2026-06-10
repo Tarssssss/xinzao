@@ -20,7 +20,17 @@
           "url": "https://x.com/levie/status/2048223146063609965"
         }
       ],
-      "engagement": "396 likes"
+      "engagement": "396 likes",
+      "related": [
+        {
+          "slug": "2026-04-20-roles-grow-complexity",
+          "note": "他上周称旧岗位定义将失效"
+        },
+        {
+          "slug": "2026-04-14-agent-deployer-role",
+          "note": "他曾为 AI 新关键角色拟 JD"
+        }
+      ]
     },
     {
       "slug": "2026-04-26-gstack-browser",
@@ -47,7 +57,17 @@
           "url": "https://x.com/garrytan/status/2048290087318773807"
         }
       ],
-      "engagement": "111 likes"
+      "engagement": "111 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-garry-tan-gbrain",
+          "note": "GBrain 开源首发"
+        },
+        {
+          "slug": "2026-04-14-gbrain-v093",
+          "note": "GBrain 前次版本更新"
+        }
+      ]
     },
     {
       "slug": "2026-04-26-steipete-releases",
@@ -70,7 +90,13 @@
           "url": "https://x.com/steipete/status/2048252455817785357"
         }
       ],
-      "engagement": "214 likes"
+      "engagement": "214 likes",
+      "related": [
+        {
+          "slug": "2026-04-21-steipete-wacli-gog",
+          "note": "上周他同样同日双发工具"
+        }
+      ]
     },
     {
       "slug": "2026-04-26-zara-writing-thinking",
@@ -90,7 +116,17 @@
           "url": "https://x.com/zarazhangrui/status/2048101948826751429"
         }
       ],
-      "engagement": "75 likes"
+      "engagement": "75 likes",
+      "related": [
+        {
+          "slug": "2026-04-25-nanyu-design-intent",
+          "note": "无意图的产出即幻觉，同向"
+        },
+        {
+          "slug": "2026-04-11-felix-rieseberg-cowork",
+          "note": "执行免费后瓶颈在思考，呼应"
+        }
+      ]
     },
     {
       "slug": "2026-04-26-amasad-cybersecurity",
@@ -109,7 +145,21 @@
           "url": "https://x.com/amasad/status/2048265772775162078"
         }
       ],
-      "engagement": "369 likes"
+      "engagement": "369 likes",
+      "related": [
+        {
+          "slug": "2026-04-16-amjad-oss-security-metric",
+          "note": "他 10 天前已提开源安全指标"
+        },
+        {
+          "slug": "2026-04-20-cybersecurity-thesis",
+          "note": "Nikunj 同判断：安全更值钱"
+        },
+        {
+          "slug": "2026-04-13-levie-security-jevons",
+          "note": "Levie 称安全业临 Jevons 时刻"
+        }
+      ]
     },
     {
       "slug": "2026-04-26-nikunj-clear-writing",

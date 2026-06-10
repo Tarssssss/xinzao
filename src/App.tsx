@@ -5,6 +5,7 @@ import {
   useRef,
   useState,
   type CSSProperties,
+  type ReactNode,
   type TouchEvent,
 } from 'react'
 import {
@@ -154,9 +155,20 @@ function StoryRow({
   const links = open ? story.sourceLinks : story.sourceLinks.slice(0, 1)
   const bodyId = `${story.slug}-body`
 
+  // 同一期内点「相关回顾」跳到另一条 story 时组件不重挂载，靠这里展开
+  useEffect(() => {
+    if (defaultOpen) {
+      setOpen(true)
+    }
+  }, [defaultOpen])
+
   function toggle() {
     setOpen((value) => !value)
   }
+
+  const related = (story.related ?? [])
+    .map((ref) => ({ ref, found: findStory(ref.slug) }))
+    .filter((entry) => entry.found)
 
   return (
     <li
@@ -206,6 +218,22 @@ function StoryRow({
             {story.content.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
+            {related.length > 0 && (
+              <div className="story-related">
+                <span className="sr-head">相关回顾</span>
+                <ul>
+                  {related.map(({ ref, found }) => (
+                    <li key={ref.slug}>
+                      <Link to={`/story/${ref.slug}`}>{found!.story.title}</Link>
+                      <span className="sr-meta">
+                        {found!.issue.date}
+                        {ref.note && ` · ${ref.note}`}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -250,10 +278,12 @@ function IssueSection({
   issue,
   headingPrefix,
   expandedSlug,
+  pager,
 }: {
   issue: NumberedIssue
   headingPrefix?: string
   expandedSlug?: string
+  pager?: ReactNode
 }) {
   return (
     <section>
@@ -264,6 +294,7 @@ function IssueSection({
         <span className="issue-meta">
           {issueNo(issue)} · {issue.stories.length} 条
         </span>
+        {pager}
       </div>
       {issue.editorNote && <p className="editor-note">{issue.editorNote}</p>}
       <ol className="story-list">
@@ -319,25 +350,51 @@ function IssueView({
   const older = index >= 0 ? issues[index + 1] : undefined
   const isLatest = issue.date === latestIssue?.date
 
+  const olderHref = older ? `/issue/${older.date}` : undefined
+  const newerIsLatest = newer?.date === latestIssue?.date
+  const newerHref = isLatest
+    ? undefined
+    : newerIsLatest
+      ? '/'
+      : newer
+        ? `/issue/${newer.date}`
+        : undefined
+  const olderLabel = older
+    ? `上一期 No.${String(older.number).padStart(2, '0')}`
+    : undefined
+  const newerLabel = newerIsLatest
+    ? '今日'
+    : newer
+      ? `下一期 No.${String(newer.number).padStart(2, '0')}`
+      : undefined
+
   const swipe = useSwipe({
     onLeft: () => {
       if (isLatest) {
         navigate('/archive')
-      } else if (older) {
-        navigate(`/issue/${older.date}`)
+      } else if (olderHref) {
+        navigate(olderHref)
       }
     },
     onRight: () => {
-      if (isLatest) {
-        return
-      }
-      if (newer && newer.date !== latestIssue?.date) {
-        navigate(`/issue/${newer.date}`)
-      } else {
-        navigate('/')
+      if (newerHref) {
+        navigate(newerHref)
       }
     },
   })
+
+  // 桌面端没有横滑，← / → 翻期
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (event.key === 'ArrowLeft' && olderHref) {
+        navigate(olderHref)
+      } else if (event.key === 'ArrowRight' && newerHref) {
+        navigate(newerHref)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [navigate, olderHref, newerHref])
 
   useEffect(() => {
     if (expandedSlug) {
@@ -351,6 +408,25 @@ function IssueView({
     headingPrefix = issue.date === todayKey() ? '今日' : '最新'
   }
 
+  const pager = (
+    <nav className="issue-pager" aria-label="翻期">
+      {olderHref ? (
+        <Link to={olderHref} title={olderLabel}>
+          ←<span className="pager-text"> 上一期</span>
+        </Link>
+      ) : (
+        <span className="pager-off">←</span>
+      )}
+      {newerHref ? (
+        <Link to={newerHref} title={newerLabel}>
+          <span className="pager-text">{newerIsLatest ? '今日' : '下一期'} </span>→
+        </Link>
+      ) : (
+        <span className="pager-off">→</span>
+      )}
+    </nav>
+  )
+
   return (
     <main className="shell" {...swipe}>
       <Masthead issue={issue} tab={isLatest ? 'today' : 'archive'} />
@@ -358,23 +434,11 @@ function IssueView({
         issue={issue}
         headingPrefix={headingPrefix}
         expandedSlug={expandedSlug}
+        pager={pager}
       />
       <nav className="issue-nav" aria-label="翻期">
-        {older ? (
-          <Link to={`/issue/${older.date}`}>
-            ← 上一期 No.{String(older.number).padStart(2, '0')}
-          </Link>
-        ) : (
-          <span />
-        )}
-        {!isLatest &&
-          (newer && newer.date !== latestIssue?.date ? (
-            <Link to={`/issue/${newer.date}`}>
-              下一期 No.{String(newer.number).padStart(2, '0')} →
-            </Link>
-          ) : (
-            <Link to="/">今日 →</Link>
-          ))}
+        {olderHref ? <Link to={olderHref}>← {olderLabel}</Link> : <span />}
+        {newerHref && <Link to={newerHref}>{newerLabel} →</Link>}
       </nav>
       <SiteFooter />
     </main>
@@ -411,19 +475,39 @@ function ArchivePage() {
         {archived.length === 0 ? (
           <p className="empty-state">还没有往期。</p>
         ) : (
-          <ul className="archive-list">
-            {archived.map((issue) => (
-              <li className="archive-row" key={issue.date}>
-                <Link to={`/issue/${issue.date}`}>
-                  <span className="no">
-                    No.{String(issue.number).padStart(2, '0')}
-                  </span>
-                  <span className="date">{issue.date}</span>
-                  <span className="headline">{issue.stories[0]?.title}</span>
-                  <span className="count">{issue.stories.length} 条</span>
-                </Link>
-              </li>
-            ))}
+          <ul className="archive-grid">
+            {archived.map((issue) => {
+              const extra = issue.stories.length - 3
+              const quick = issue.quickTakes?.length ?? 0
+              return (
+                <li key={issue.date}>
+                  <Link className="archive-card" to={`/issue/${issue.date}`}>
+                    <span className="ac-head">
+                      <span className="no">
+                        No.{String(issue.number).padStart(2, '0')}
+                      </span>
+                      <span className="date">
+                        {issue.date} {weekdayCN(issue.date)}
+                      </span>
+                      <span className="count">
+                        {issue.stories.length} 条
+                        {quick > 0 && ` · 速览 ${quick}`}
+                      </span>
+                    </span>
+                    <span className="ac-titles">
+                      {issue.stories.slice(0, 3).map((story) => (
+                        <span className="ac-title" key={story.slug}>
+                          {story.title}
+                        </span>
+                      ))}
+                    </span>
+                    {extra > 0 && (
+                      <span className="ac-more">还有 {extra} 条 →</span>
+                    )}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         )}
       </section>

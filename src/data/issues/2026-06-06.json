@@ -20,6 +20,20 @@
           "label": "AI & I by Every:The SaaS Apocalypse Is a Goldmine With Figma's Matt Colyer",
           "url": "https://www.youtube.com/watch?v=kYKebKB3-d0"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-04-dan-shipper-saaspocalypse-backwards-chat-wrong-for-design",
+          "note": "同一场对谈的先发拆解"
+        },
+        {
+          "slug": "2026-05-03-brockman-attention-bottleneck",
+          "note": "Brockman 先提注意力瓶颈"
+        },
+        {
+          "slug": "2026-06-01-levie-enterprise-agent-context-problem",
+          "note": "context 头号问题相呼应"
+        }
       ]
     },
     {
@@ -40,6 +54,20 @@
           "label": "原推",
           "url": "https://x.com/levie/status/2063055332545540096"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-29-levie-diffusion-bottleneck-internal-fde",
+          "note": "他此前论编码外扩散更慢"
+        },
+        {
+          "slug": "2026-04-25-sap-cto-no-priors",
+          "note": "可验证性论点一致"
+        },
+        {
+          "slug": "2026-04-10-karpathy-capability-gap",
+          "note": "跃升集中可验证领域同判"
+        }
       ]
     },
     {
@@ -58,6 +86,20 @@
           "label": "原推",
           "url": "https://x.com/realmadhuguru/status/2063024953721827329"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-25-madhu-guru-vague-ai-mandates",
+          "note": "他上月谈企业 AI 另一类错"
+        },
+        {
+          "slug": "2026-04-19-levie-agent-architecture-churn",
+          "note": "脚手架定期作废的同判"
+        },
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "模型升级后清死重同思路"
+        }
       ]
     },
     {
@@ -75,6 +117,20 @@
         {
           "label": "原推",
           "url": "https://x.com/petergyang/status/2062899832965255443"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-26-garry-tan-skill-file-evals",
+          "note": "skill 配 evals 同路数"
+        },
+        {
+          "slug": "2026-05-10-peter-yang-slop-compounding",
+          "note": "自清理回应他的 slop 担忧"
+        },
+        {
+          "slug": "2026-05-26-steipete-token-efficient-skills",
+          "note": "skill 需持续精简的呼应"
         }
       ]
     }

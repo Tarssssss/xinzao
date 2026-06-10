@@ -20,7 +20,17 @@
           "url": "https://x.com/rauchg/status/2043869656931529034"
         }
       ],
-      "engagement": "2.1K likes"
+      "engagement": "2.1K likes",
+      "related": [
+        {
+          "slug": "2026-04-10-rauchg-agentic-infrastructure",
+          "note": "四天前的 agent 基建论落地成产品"
+        },
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "「软件工厂」论的一线工程实例"
+        }
+      ]
     },
     {
       "slug": "2026-04-14-agent-deployer-role",
@@ -40,7 +50,21 @@
           "url": "https://x.com/levie/status/2043883641366032638"
         }
       ],
-      "engagement": "1.3K likes"
+      "engagement": "1.3K likes",
+      "related": [
+        {
+          "slug": "2026-04-13-levie-enterprise-agents",
+          "note": "前一天同批企业访谈的延续"
+        },
+        {
+          "slug": "2026-04-10-levie-automation-demand",
+          "note": "100 倍标准呼应未立项自动化论"
+        },
+        {
+          "slug": "2026-04-07-levie-work-abstraction",
+          "note": "JD 职责对应他说的规划审查上移"
+        }
+      ]
     },
     {
       "slug": "2026-04-14-periodic-labs-fedus",
@@ -58,6 +82,12 @@
         {
           "label": "No Priors",
           "url": "https://www.youtube.com/@NoPriorsPodcast"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-10-karpathy-capability-gap",
+          "note": "能力尖刺论与 Karpathy 互证"
         }
       ]
     },
@@ -82,7 +112,17 @@
           "url": "https://x.com/garrytan/status/2043948971568312473"
         }
       ],
-      "engagement": "33 likes"
+      "engagement": "33 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-garry-tan-gbrain",
+          "note": "GBrain 开源首发，本条是迭代"
+        },
+        {
+          "slug": "2026-04-12-thin-harness-fat-skills",
+          "note": "GBrain 践行其 thin harness 主张"
+        }
+      ]
     }
   ],
   "quickTakes": [

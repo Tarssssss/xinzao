@@ -15,7 +15,24 @@
       "creator": "Angela & Caitlin(Anthropic Claude 平台团队)/ Dan Shipper",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "AI & I by Every:The Secrets of Claude's Platform From the Team Who Built It", "url": "https://www.youtube.com/watch?v=lLypHkIVLqc" }
+        {
+          "label": "AI & I by Every:The Secrets of Claude's Platform From the Team Who Built It",
+          "url": "https://www.youtube.com/watch?v=lLypHkIVLqc"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-09-managed-agents-architecture",
+          "note": "同团队 4 月曾主张脑手解耦"
+        },
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "同团队谈模型升级致 harness 死重"
+        },
+        {
+          "slug": "2026-04-17-notion-harness-rebuilds",
+          "note": "Notion 五次重写得出同一结论"
+        }
       ]
     },
     {
@@ -30,7 +47,20 @@
       "creator": "Aaron Levie(@levie)",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 ↗", "url": "https://x.com/levie/status/2052903105256382679" }
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/levie/status/2052903105256382679"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "他 4 月称 token 需求被低估百倍"
+        },
+        {
+          "slug": "2026-05-01-levie-headless-pricing",
+          "note": "延续他的 agent 消费计费推演"
+        }
       ]
     }
   ],

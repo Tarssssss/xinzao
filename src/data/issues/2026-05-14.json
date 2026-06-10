@@ -16,7 +16,24 @@
       "role": "Suno 创始人兼 CEO",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Training Data 播客：Suno's Mikey Shulman", "url": "https://www.youtube.com/watch?v=Jq3BIGz4vXQ" }
+        {
+          "label": "Training Data 播客：Suno's Mikey Shulman",
+          "url": "https://www.youtube.com/watch?v=Jq3BIGz4vXQ"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-10-lyria-3-music",
+          "note": "他点名的 Google 音乐攻势实例"
+        },
+        {
+          "slug": "2026-04-18-google-flow-music",
+          "note": "Google 音乐线独立成站再进一步"
+        },
+        {
+          "slug": "2026-05-10-elevenlabs-audio-jagged-trust",
+          "note": "同样判断音频模型无基准、能力锯齿"
+        }
       ]
     },
     {
@@ -32,7 +49,24 @@
       "role": "Anthropic 官方博客",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "New in Claude Managed Agents", "url": "https://claude.com/blog/new-in-claude-managed-agents" }
+        {
+          "label": "New in Claude Managed Agents",
+          "url": "https://claude.com/blog/new-in-claude-managed-agents"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-07-claude-dreaming-outcomes",
+          "note": "一周前两功能首发"
+        },
+        {
+          "slug": "2026-04-09-managed-agents-launch",
+          "note": "Managed Agents 最初发布"
+        },
+        {
+          "slug": "2026-04-24-managed-agents-memory",
+          "note": "文件式记忆公测是 dreaming 基础"
+        }
       ]
     }
   ],

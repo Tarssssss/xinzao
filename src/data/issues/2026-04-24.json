@@ -19,6 +19,16 @@
           "label": "Anthropic Engineering",
           "url": "https://www.anthropic.com/engineering/april-23-postmortem"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-17-opus-47-launch",
+          "note": "出事的长度限制为压 4.7 啰嗦"
+        },
+        {
+          "slug": "2026-04-11-eval-infra-noise",
+          "note": "评测噪音呼应复现不出退化"
+        }
       ]
     },
     {
@@ -37,6 +47,20 @@
         {
           "label": "Unsupervised Learning",
           "url": "https://www.youtube.com/@RedpointAI"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "零人工 review 的实例先行"
+        },
+        {
+          "slug": "2026-04-10-rauchg-agentic-infrastructure",
+          "note": "agent 成基建主要客户同源"
+        },
+        {
+          "slug": "2026-04-12-thin-harness-fat-skills",
+          "note": "skills 收敛判断的呼应"
         }
       ]
     },
@@ -61,7 +85,21 @@
           "url": "https://x.com/claudeai/status/2047421844311949513"
         }
       ],
-      "engagement": "6.4K likes"
+      "engagement": "6.4K likes",
+      "related": [
+        {
+          "slug": "2026-04-09-managed-agents-launch",
+          "note": "同一产品线的发布起点"
+        },
+        {
+          "slug": "2026-04-12-thin-harness-fat-skills",
+          "note": "记忆放文件层的同一主张"
+        },
+        {
+          "slug": "2026-04-10-garry-tan-gbrain",
+          "note": "开源记忆方案可对照"
+        }
+      ]
     },
     {
       "slug": "2026-04-24-levie-gpt55-box-evals",
@@ -81,7 +119,13 @@
           "url": "https://x.com/levie/status/2047387742951313910"
         }
       ],
-      "engagement": "255 likes"
+      "engagement": "255 likes",
+      "related": [
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "他主张按模型变强设计产品"
+        }
+      ]
     },
     {
       "slug": "2026-04-24-levie-ai-more-work",
@@ -101,7 +145,21 @@
           "url": "https://x.com/levie/status/2047540230694350958"
         }
       ],
-      "engagement": "300 likes"
+      "engagement": "300 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-levie-automation-demand",
+          "note": "从未立项的事变可行同一论"
+        },
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "效率推高需求的早期版本"
+        },
+        {
+          "slug": "2026-04-16-levie-job-bottlenecks",
+          "note": "瓶颈转移论呼应收尾仍靠人"
+        }
+      ]
     },
     {
       "slug": "2026-04-24-nikunj-ma-wave",
@@ -143,7 +201,17 @@
           "url": "https://x.com/claudeai/status/2047383767984038093"
         }
       ],
-      "engagement": "414 likes"
+      "engagement": "414 likes",
+      "related": [
+        {
+          "slug": "2026-04-23-chatgpt-agents-headless",
+          "note": "前日对家的 headless 化动作"
+        },
+        {
+          "slug": "2026-04-15-profound-agent-led-growth",
+          "note": "agent 渠道获客的先声"
+        }
+      ]
     }
   ],
   "quickTakes": [

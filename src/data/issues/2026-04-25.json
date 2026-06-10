@@ -24,7 +24,17 @@
           "url": "https://x.com/ryolu_/status/2047766831105220799"
         }
       ],
-      "engagement": "629 likes"
+      "engagement": "629 likes",
+      "related": [
+        {
+          "slug": "2026-04-24-levie-gpt55-box-evals",
+          "note": "前日 Box 实测佐证 GPT-5.5 变强"
+        },
+        {
+          "slug": "2026-04-20-openclaw-gpt-agentic",
+          "note": "此前切 GPT 跑不通任务的反例"
+        }
+      ]
     },
     {
       "slug": "2026-04-25-sap-cto-no-priors",
@@ -42,6 +52,16 @@
         {
           "label": "No Priors",
           "url": "https://www.youtube.com/watch?v=5u7AjPardvo"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-10-karpathy-capability-gap",
+          "note": "可验证领域跃升的同一判断"
+        },
+        {
+          "slug": "2026-04-22-levie-enterprise-agents",
+          "note": "企业 agent 落地瓶颈互为补充"
         }
       ]
     },
@@ -63,7 +83,21 @@
           "url": "https://x.com/levie/status/2047747142308274645"
         }
       ],
-      "engagement": "476 likes"
+      "engagement": "476 likes",
+      "related": [
+        {
+          "slug": "2026-04-13-levie-security-jevons",
+          "note": "他曾用 Jevons 论安全行业"
+        },
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "效率推高需求的同一论证"
+        },
+        {
+          "slug": "2026-04-16-levie-job-bottlenecks",
+          "note": "瓶颈转移创造就业，同一机制"
+        }
+      ]
     },
     {
       "slug": "2026-04-25-discrawl-discord-dm",
@@ -82,7 +116,17 @@
           "url": "https://x.com/steipete/status/2047797210427859450"
         }
       ],
-      "engagement": "229 likes"
+      "engagement": "229 likes",
+      "related": [
+        {
+          "slug": "2026-04-22-openclaw-release",
+          "note": "discrawl 0.3.0 当时随附发布"
+        },
+        {
+          "slug": "2026-04-21-steipete-wacli-gog",
+          "note": "同期消息接入工具链发布"
+        }
+      ]
     },
     {
       "slug": "2026-04-25-nanyu-design-intent",
@@ -106,7 +150,17 @@
           "url": "https://x.com/thenanyu/status/2047758400948408831"
         }
       ],
-      "engagement": "146 likes"
+      "engagement": "146 likes",
+      "related": [
+        {
+          "slug": "2026-04-11-felix-rieseberg-cowork",
+          "note": "执行免费后瓶颈在品味，呼应"
+        },
+        {
+          "slug": "2026-04-19-rauch-autonomous-design",
+          "note": "设计自主化的对照立场"
+        }
+      ]
     },
     {
       "slug": "2026-04-25-turck-cohere-aleph",
@@ -125,7 +179,13 @@
           "url": "https://x.com/mattturck/status/2047721904438493482"
         }
       ],
-      "engagement": "39 likes"
+      "engagement": "39 likes",
+      "related": [
+        {
+          "slug": "2026-04-11-china-ai-work-culture",
+          "note": "中国从业者反而翻墙用美国工具"
+        }
+      ]
     }
   ],
   "quickTakes": [

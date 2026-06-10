@@ -17,7 +17,24 @@
       "sourceType": "x",
       "engagement": "631 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/swyx/status/2064081945567580323" }
+        {
+          "label": "原推",
+          "url": "https://x.com/swyx/status/2064081945567580323"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-05-cognition-100hr-enterprise-evals",
+          "note": "Cognition×METR 评测线前作"
+        },
+        {
+          "slug": "2026-06-07-kaiser-coding-agents-christmas-jump",
+          "note": "Kaiser 称圣诞跃迁原因不明，此处给量化"
+        },
+        {
+          "slug": "2026-06-08-boris-cherny-opus-autonomous-five-tips",
+          "note": "文中自主长跑做法的出处之一"
+        }
       ]
     },
     {
@@ -34,7 +51,20 @@
       "sourceType": "x",
       "engagement": "216 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2064186766907887941" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2064186766907887941"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-01-levie-enterprise-agent-context-problem",
+          "note": "一周前同一 context 论点"
+        },
+        {
+          "slug": "2026-06-02-levie-agent-era-moat",
+          "note": "专有数据护城河说法的延续"
+        }
       ]
     },
     {
@@ -50,7 +80,20 @@
       "role": "Anthropic 官方博客",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Claude 博客原文", "url": "https://claude.com/blog/claude-for-foundation-models" }
+        {
+          "label": "Claude 博客原文",
+          "url": "https://claude.com/blog/claude-for-foundation-models"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-08-aaron-levie-model-stratification-routing-layer",
+          "note": "前一日路由层判断的实例"
+        },
+        {
+          "slug": "2026-04-10-claude-opus-advisor-tool",
+          "note": "同为遇难题交接更强模型"
+        }
       ]
     }
   ],

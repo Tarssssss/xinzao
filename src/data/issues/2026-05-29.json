@@ -16,7 +16,24 @@
       "sourceType": "podcast",
       "engagement": "",
       "sourceLinks": [
-        { "label": "The MAD Podcast：State of Enterprise AI 2026", "url": "https://www.youtube.com/watch?v=Gs2styCcwro" }
+        {
+          "label": "The MAD Podcast：State of Enterprise AI 2026",
+          "url": "https://www.youtube.com/watch?v=Gs2styCcwro"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-20-levie-token-cost-enterprise-cio",
+          "note": "5/20 他称此题还没人有解法"
+        },
+        {
+          "slug": "2026-05-22-levie-inference-cost-stratification",
+          "note": "成本按任务分层判断的延续"
+        },
+        {
+          "slug": "2026-05-20-sam-altman-discounted-token-commits",
+          "note": "他建议的对冲正是这一方案"
+        }
       ]
     },
     {
@@ -34,7 +51,24 @@
       "sourceType": "podcast",
       "engagement": "",
       "sourceLinks": [
-        { "label": "The MAD Podcast：State of Enterprise AI 2026", "url": "https://www.youtube.com/watch?v=Gs2styCcwro" }
+        {
+          "label": "The MAD Podcast：State of Enterprise AI 2026",
+          "url": "https://www.youtube.com/watch?v=Gs2styCcwro"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-30-levie-agent-engineering-roles",
+          "note": "「内部 FDE」岗位最早提出"
+        },
+        {
+          "slug": "2026-05-21-levie-fde-agent-job-durable",
+          "note": "FDE 岗位长期论的延续"
+        },
+        {
+          "slug": "2026-04-19-levie-agent-architecture-churn",
+          "note": "新突破作废旧架构的早期表述"
+        }
       ]
     },
     {
@@ -50,8 +84,24 @@
       "sourceType": "x",
       "engagement": "160 likes",
       "sourceLinks": [
-        { "label": "原推：Vercel CLI 作为零依赖自更新二进制", "url": "https://x.com/rauchg/status/2060105470460010993" },
-        { "label": "同日：Docker 已可在 Vercel Sandbox 内运行", "url": "https://x.com/rauchg/status/2060443982342357032" }
+        {
+          "label": "原推：Vercel CLI 作为零依赖自更新二进制",
+          "url": "https://x.com/rauchg/status/2060105470460010993"
+        },
+        {
+          "label": "同日：Docker 已可在 Vercel Sandbox 内运行",
+          "url": "https://x.com/rauchg/status/2060443982342357032"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-10-rauchg-agentic-infrastructure",
+          "note": "Agentic Infrastructure 论的落地"
+        },
+        {
+          "slug": "2026-04-29-vercel-labs-agent-tools",
+          "note": "「给 agent 做工具」转向的延续"
+        }
       ]
     }
   ],

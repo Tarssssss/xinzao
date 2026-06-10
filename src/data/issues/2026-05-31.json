@@ -16,8 +16,28 @@
       "sourceType": "x",
       "engagement": "2.9K likes",
       "sourceLinks": [
-        { "label": "原推：yielding agents is a skill", "url": "https://x.com/steipete/status/2060678430031597696" },
-        { "label": "原推：codex review 循环", "url": "https://x.com/steipete/status/2060672154727825718" }
+        {
+          "label": "原推：yielding agents is a skill",
+          "url": "https://x.com/steipete/status/2060678430031597696"
+        },
+        {
+          "label": "原推：codex review 循环",
+          "url": "https://x.com/steipete/status/2060672154727825718"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-03-steipete-crabbox-openclaw",
+          "note": "文中 crabbox 此前的发布"
+        },
+        {
+          "slug": "2026-04-29-codex-on-every-commit",
+          "note": "codex 自动审查链路的前身"
+        },
+        {
+          "slug": "2026-05-11-steipete-build-your-own-tools",
+          "note": "同一「自建工具提效」主张"
+        }
       ]
     },
     {
@@ -34,7 +54,24 @@
       "sourceType": "x",
       "engagement": "154 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2060923684295221390" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2060923684295221390"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-26-levie-goldman-ceo-ai-jobs",
+          "note": "数日前已引同一高盛 CEO 论点"
+        },
+        {
+          "slug": "2026-05-27-levie-agents-automate-tasks-not-jobs",
+          "note": "「省下的钱投回扩招」同一判断"
+        },
+        {
+          "slug": "2026-05-03-levie-engineer-thought-experiment",
+          "note": "5 月初称聊到的企业都在多雇人"
+        }
       ]
     }
   ],

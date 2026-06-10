@@ -28,7 +28,13 @@
           "url": "https://x.com/claudeai/status/2049143442601546054"
         }
       ],
-      "engagement": "34.3K likes"
+      "engagement": "34.3K likes",
+      "related": [
+        {
+          "slug": "2026-04-24-claude-lifestyle-connectors",
+          "note": "connector 扩张线的上一步"
+        }
+      ]
     },
     {
       "slug": "2026-04-29-codex-on-every-commit",
@@ -51,7 +57,17 @@
           "url": "https://x.com/steipete/status/2049290741013262522"
         }
       ],
-      "engagement": "269 likes"
+      "engagement": "269 likes",
+      "related": [
+        {
+          "slug": "2026-04-24-swyx-coding-agents-containment",
+          "note": "零人工 review 预判的实践版"
+        },
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "同样把人工 review 后移"
+        }
+      ]
     },
     {
       "slug": "2026-04-29-codex-native-apps",
@@ -75,7 +91,17 @@
           "url": "https://x.com/danshipper/status/2049223933766041688"
         }
       ],
-      "engagement": "184 likes"
+      "engagement": "184 likes",
+      "related": [
+        {
+          "slug": "2026-04-28-gstack-pair-agent",
+          "note": "agent 内置浏览器的实作先例"
+        },
+        {
+          "slug": "2026-04-26-gstack-browser",
+          "note": "浏览器装进 agent 的同类尝试"
+        }
+      ]
     },
     {
       "slug": "2026-04-29-levie-100x-software",
@@ -100,7 +126,17 @@
           "url": "https://x.com/levie/status/2049163935182733396"
         }
       ],
-      "engagement": "419 likes"
+      "engagement": "419 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-levie-automation-demand",
+          "note": "他早论自动化需求被低估"
+        },
+        {
+          "slug": "2026-04-19-levie-engineering-jobs-expand",
+          "note": "技术人编排 agent 判断的前篇"
+        }
+      ]
     },
     {
       "slug": "2026-04-29-claude-code-white-whales",
@@ -128,7 +164,13 @@
           "url": "https://x.com/trq212/status/2049252080892973563"
         }
       ],
-      "engagement": "1,038 likes"
+      "engagement": "1,038 likes",
+      "related": [
+        {
+          "slug": "2026-04-24-claude-code-postmortem",
+          "note": "上周刚复盘质量下滑"
+        }
+      ]
     },
     {
       "slug": "2026-04-29-micropayments-for-git-push",
@@ -148,7 +190,17 @@
           "url": "https://x.com/amasad/status/2049242460078100638"
         }
       ],
-      "engagement": "1,159 likes"
+      "engagement": "1,159 likes",
+      "related": [
+        {
+          "slug": "2026-04-12-allaire-agentic-economy",
+          "note": "同提 agent 微支付结算层"
+        },
+        {
+          "slug": "2026-04-18-levie-headless-software",
+          "note": "agent 用量倒逼收费重算"
+        }
+      ]
     },
     {
       "slug": "2026-04-29-vercel-labs-agent-tools",
@@ -167,7 +219,17 @@
           "url": "https://x.com/rauchg/status/2049216048831025232"
         }
       ],
-      "engagement": "1,025 likes"
+      "engagement": "1,025 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-rauchg-agentic-infrastructure",
+          "note": "他 4 月初的同方向宣言"
+        },
+        {
+          "slug": "2026-04-14-vercel-open-agents",
+          "note": "Labs 此前的 agent 平台动作"
+        }
+      ]
     }
   ],
   "quickTakes": [

@@ -24,6 +24,20 @@
           "label": "原推 @zarazhangrui",
           "url": "https://x.com/zarazhangrui/status/2052277868319916402"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "零人工写百万行的先例"
+        },
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "Anthropic 早提 harness 死重"
+        },
+        {
+          "slug": "2026-04-24-swyx-coding-agents-containment",
+          "note": "零人工 review 预测先声"
+        }
       ]
     },
     {
@@ -48,7 +62,21 @@
           "url": "https://x.com/claudeai/status/2052067403228455419"
         }
       ],
-      "engagement": "1,124 likes（Dreaming 一条）"
+      "engagement": "1,124 likes（Dreaming 一条）",
+      "related": [
+        {
+          "slug": "2026-04-24-managed-agents-memory",
+          "note": "记忆产品线的上一步"
+        },
+        {
+          "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+          "note": "可验证性杠杆的产品化"
+        },
+        {
+          "slug": "2026-04-10-garry-tan-gbrain",
+          "note": "或被替代的手工记忆方案"
+        }
+      ]
     },
     {
       "slug": "2026-05-07-dario-80x-compute",
@@ -76,7 +104,21 @@
           "url": "https://x.com/trq212/status/2052250816720056604"
         }
       ],
-      "engagement": "1,319 likes（@trq212 一条）"
+      "engagement": "1,319 likes（@trq212 一条）",
+      "related": [
+        {
+          "slug": "2026-05-02-baseten-inference-crunch",
+          "note": "算力紧缺的第三方印证"
+        },
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "同调：按模型变强做产品"
+        },
+        {
+          "slug": "2026-04-28-valley-enterprise-gap",
+          "note": "企业侧对立面：增长未兑现"
+        }
+      ]
     }
   ]
 }

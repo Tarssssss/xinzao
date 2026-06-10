@@ -36,7 +36,17 @@
           "url": "https://x.com/petergyang/status/2044234654241436066"
         }
       ],
-      "engagement": "31.2K likes"
+      "engagement": "31.2K likes",
+      "related": [
+        {
+          "slug": "2026-04-11-ultraplan",
+          "note": "同产品线四天前发布云端规划"
+        },
+        {
+          "slug": "2026-04-07-levie-work-abstraction",
+          "note": "「人坐编排位」呼应其抽象层判断"
+        }
+      ]
     },
     {
       "slug": "2026-04-15-profound-agent-led-growth",
@@ -54,6 +64,16 @@
         {
           "label": "Training Data",
           "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-09-rauch-web-thesis",
+          "note": "与其死互联网判断直接对立"
+        },
+        {
+          "slug": "2026-04-11-levie-headless-software",
+          "note": "同判断：软件买方换成 agent"
         }
       ]
     },
@@ -75,7 +95,17 @@
           "url": "https://x.com/levie/status/2044225408972009842"
         }
       ],
-      "engagement": "525 likes"
+      "engagement": "525 likes",
+      "related": [
+        {
+          "slug": "2026-04-14-agent-deployer-role",
+          "note": "前一天他刚为该角色写 JD"
+        },
+        {
+          "slug": "2026-04-13-levie-enterprise-agents",
+          "note": "延续他见 20 位 IT 负责人的观察"
+        }
+      ]
     },
     {
       "slug": "2026-04-15-zara-tab-out-cutting-features",
@@ -103,7 +133,13 @@
           "url": "https://x.com/zarazhangrui/status/2044114225287836048"
         }
       ],
-      "engagement": "191 likes"
+      "engagement": "191 likes",
+      "related": [
+        {
+          "slug": "2026-04-13-zara-newtab-vibecode",
+          "note": "同一项目两天前的首发"
+        }
+      ]
     },
     {
       "slug": "2026-04-15-nikunj-vibe-code-lessons",
@@ -126,7 +162,13 @@
           "url": "https://x.com/swyx/status/2044294227887304731"
         }
       ],
-      "engagement": "153 likes"
+      "engagement": "153 likes",
+      "related": [
+        {
+          "slug": "2026-04-11-felix-rieseberg-cowork",
+          "note": "呼应：执行免费后瓶颈是品味"
+        }
+      ]
     }
   ],
   "quickTakes": [

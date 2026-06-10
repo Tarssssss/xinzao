@@ -15,7 +15,22 @@
       "role": "Claude Code @ Anthropic",
       "sourceType": "x",
       "engagement": "8061 likes",
-      "sourceLinks": [{ "label": "原推", "url": "https://x.com/bcherny/status/2064431111154053187" }]
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/bcherny/status/2064431111154053187"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-08-boris-cherny-opus-autonomous-five-tips",
+          "note": "两天前还需五条人工技巧"
+        },
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "印证 harness 死重论"
+        }
+      ]
     },
     {
       "slug": "2026-06-10-karpathy-fable5-major-version-bump",
@@ -29,7 +44,22 @@
       "creator": "Andrej Karpathy",
       "sourceType": "x",
       "engagement": "20439 likes",
-      "sourceLinks": [{ "label": "原推", "url": "https://x.com/karpathy/status/2064409694761054332" }]
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/karpathy/status/2064409694761054332"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-20-karpathy-joins-anthropic",
+          "note": "他 5 月刚加入 Anthropic"
+        },
+        {
+          "slug": "2026-04-24-swyx-coding-agents-containment",
+          "note": "与零人工 review 主张对立"
+        }
+      ]
     },
     {
       "slug": "2026-06-10-alex-albert-fable5-four-tips",
@@ -45,8 +75,24 @@
       "sourceType": "x",
       "engagement": "2346 likes",
       "sourceLinks": [
-        { "label": "四条建议", "url": "https://x.com/alexalbert__/status/2064467657483829441" },
-        { "label": "step-change 序列", "url": "https://x.com/alexalbert__/status/2064394410004304003" }
+        {
+          "label": "四条建议",
+          "url": "https://x.com/alexalbert__/status/2064467657483829441"
+        },
+        {
+          "label": "step-change 序列",
+          "url": "https://x.com/alexalbert__/status/2064394410004304003"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-19-alex-albert-building-next-claude",
+          "note": "他 5 月预告下一代 Claude 思路"
+        },
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "重写旧配置呼应死重论"
+        }
       ]
     },
     {
@@ -62,7 +108,26 @@
       "role": "CEO @ Box",
       "sourceType": "x",
       "engagement": "278 likes",
-      "sourceLinks": [{ "label": "原推", "url": "https://x.com/levie/status/2064569513023328268" }]
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2064569513023328268"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-02-levie-agent-era-moat",
+          "note": "一周前同一护城河判断"
+        },
+        {
+          "slug": "2026-06-09-levie-context-still-needed",
+          "note": "前一日 context 论的延续"
+        },
+        {
+          "slug": "2026-05-16-levie-fde-core-competency",
+          "note": "FDE 论的早期版本"
+        }
+      ]
     }
   ],
   "quickTakes": [

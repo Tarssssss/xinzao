@@ -15,7 +15,24 @@
       "role": "OpenAI 后训练 Frontiers 团队负责人",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "MAD Podcast 原集（YouTube）", "url": "https://www.youtube.com/watch?v=DhD1zZ8w8Mw" }
+        {
+          "label": "MAD Podcast 原集（YouTube）",
+          "url": "https://www.youtube.com/watch?v=DhD1zZ8w8Mw"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-09-anthropic-platform-harness-model-pairing",
+          "note": "Anthropic 平台团队同向判断"
+        },
+        {
+          "slug": "2026-04-09-managed-agents-architecture",
+          "note": "harness 假设随模型过时"
+        },
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "模型升级后 harness 成死重"
+        }
       ]
     },
     {
@@ -31,7 +48,20 @@
       "role": "OpenAI 后训练 Frontiers 团队负责人",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "MAD Podcast 原集（YouTube）", "url": "https://www.youtube.com/watch?v=DhD1zZ8w8Mw" }
+        {
+          "label": "MAD Podcast 原集（YouTube）",
+          "url": "https://www.youtube.com/watch?v=DhD1zZ8w8Mw"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-10-karpathy-capability-gap",
+          "note": "也用可验证性解释体感分化"
+        },
+        {
+          "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+          "note": "可验证性杠杆判断呼应"
+        }
       ]
     },
     {
@@ -47,7 +77,20 @@
       "role": "OpenAI 后训练 Frontiers 团队负责人",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "MAD Podcast 原集（YouTube）", "url": "https://www.youtube.com/watch?v=DhD1zZ8w8Mw" }
+        {
+          "label": "MAD Podcast 原集（YouTube）",
+          "url": "https://www.youtube.com/watch?v=DhD1zZ8w8Mw"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-17-garry-tan-gbrain-agent-memory",
+          "note": "外部记忆补位的代表方案"
+        },
+        {
+          "slug": "2026-05-19-alex-albert-building-next-claude",
+          "note": "模型侧记忆的最新尝试"
+        }
       ]
     },
     {
@@ -63,9 +106,26 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2057663408376516703" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2057663408376516703"
+        }
       ],
-      "engagement": "474 likes"
+      "engagement": "474 likes",
+      "related": [
+        {
+          "slug": "2026-05-20-levie-token-cost-enterprise-cio",
+          "note": "他两天前称尚无对的解法"
+        },
+        {
+          "slug": "2026-05-09-levie-token-budgeting-enterprise",
+          "note": "token 预算线索的起点"
+        },
+        {
+          "slug": "2026-04-21-turck-ai-tam",
+          "note": "对立：价格终落边际成本"
+        }
+      ]
     },
     {
       "slug": "2026-05-22-zara-zhang-claude-code-lark-bridge",
@@ -79,9 +139,18 @@
       "role": "Builder（@zarazhangrui）",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/zarazhangrui/status/2057710284920520906" }
+        {
+          "label": "原推",
+          "url": "https://x.com/zarazhangrui/status/2057710284920520906"
+        }
       ],
-      "engagement": "28 likes"
+      "engagement": "28 likes",
+      "related": [
+        {
+          "slug": "2026-05-18-noah-breyer-claude-code-second-brain",
+          "note": "同把 CC 挪出终端的玩法"
+        }
+      ]
     },
     {
       "slug": "2026-05-22-aditya-agarwal-early-stage-hiring",
@@ -95,9 +164,18 @@
       "role": "South Park Commons GP，前 Dropbox CTO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/adityaag/status/2057502381038846306" }
+        {
+          "label": "原推",
+          "url": "https://x.com/adityaag/status/2057502381038846306"
+        }
       ],
-      "engagement": "403 likes"
+      "engagement": "403 likes",
+      "related": [
+        {
+          "slug": "2026-05-18-nikunj-kothari-unicorn-equity-triple-whammy",
+          "note": "创业公司薪酬账的另一面"
+        }
+      ]
     }
   ],
   "quickTakes": [

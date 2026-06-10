@@ -31,7 +31,17 @@
           "url": "https://x.com/levie/status/2041975669928702370"
         }
       ],
-      "engagement": "902 likes"
+      "engagement": "902 likes",
+      "related": [
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "前日自建 harness 路线的对照"
+        },
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "Levie 前日谈 agent 生产力扩散"
+        }
+      ]
     },
     {
       "slug": "2026-04-09-managed-agents-architecture",
@@ -49,6 +59,12 @@
         {
           "label": "Anthropic Engineering",
           "url": "https://www.anthropic.com/engineering/managed-agents"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "前日 harness 工程实践可对读"
         }
       ]
     },
@@ -75,7 +91,13 @@
           "url": "https://x.com/danshipper/status/2041903948873777629"
         }
       ],
-      "engagement": "255 likes"
+      "engagement": "255 likes",
+      "related": [
+        {
+          "slug": "2026-04-07-shipper-hierarchy-context-rot",
+          "note": "他两天前谈层级分工必要性"
+        }
+      ]
     },
     {
       "slug": "2026-04-09-rauch-web-thesis",
@@ -132,7 +154,13 @@
           "url": "https://x.com/adityaag/status/2041985720706122070"
         }
       ],
-      "engagement": "49 likes"
+      "engagement": "49 likes",
+      "related": [
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "印证 Levie 前日扩散判断"
+        }
+      ]
     },
     {
       "slug": "2026-04-09-llmwiki",

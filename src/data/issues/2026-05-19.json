@@ -15,8 +15,24 @@
       "role": "Claude Code, Anthropic",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推（完整提示词）", "url": "https://x.com/trq212/status/2056418157305454805" },
-        { "label": "补充：为什么需要这个出口", "url": "https://x.com/trq212/status/2056415974568710421" }
+        {
+          "label": "原推（完整提示词）",
+          "url": "https://x.com/trq212/status/2056418157305454805"
+        },
+        {
+          "label": "补充：为什么需要这个出口",
+          "url": "https://x.com/trq212/status/2056415974568710421"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-10-thariq-prompting-leverage",
+          "note": "他 4 月论证 prompting 是高杠杆"
+        },
+        {
+          "slug": "2026-04-08-harness-engineering",
+          "note": "同样在挪人工 review 的位置"
+        }
       ]
     },
     {
@@ -32,7 +48,20 @@
       "role": "Product, Roblox（转述 Alex Albert，Anthropic）",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/petergyang/status/2056381822733595090" }
+        {
+          "label": "原推",
+          "url": "https://x.com/petergyang/status/2056381822733595090"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-09-anthropic-platform-harness-model-pairing",
+          "note": "平台团队 5 月初已下耦合判断"
+        },
+        {
+          "slug": "2026-05-07-claude-dreaming-outcomes",
+          "note": "「做梦」对应的 Dreaming 功能首发"
+        }
       ]
     },
     {
@@ -48,7 +77,20 @@
       "role": "CEO, Box",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2056574979236409521" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2056574979236409521"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-22-levie-enterprise-agents",
+          "note": "他 4 月已把瓶颈指向数据碎片"
+        },
+        {
+          "slug": "2026-04-28-valley-enterprise-gap",
+          "note": "Turck 描述的落差，这条给根因"
+        }
       ]
     },
     {
@@ -63,8 +105,28 @@
       "role": "CEO, Y Combinator",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推（eval 报告与 fixtures 开源）", "url": "https://x.com/garrytan/status/2056571771965538501" },
-        { "label": "补充：一波修复合 22 PR + 14 issue", "url": "https://x.com/garrytan/status/2056584641654751308" }
+        {
+          "label": "原推（eval 报告与 fixtures 开源）",
+          "url": "https://x.com/garrytan/status/2056571771965538501"
+        },
+        {
+          "label": "补充：一波修复合 22 PR + 14 issue",
+          "url": "https://x.com/garrytan/status/2056584641654751308"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-17-garry-tan-gbrain-agent-memory",
+          "note": "两天前的 8 层记忆系统发布"
+        },
+        {
+          "slug": "2026-04-10-garry-tan-gbrain",
+          "note": "GBrain 线索起点"
+        },
+        {
+          "slug": "2026-04-11-eval-infra-noise",
+          "note": "横向比分需防评测基建噪声"
+        }
       ]
     },
     {
@@ -79,8 +141,20 @@
       "role": "CEO, Vercel",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推（全部免费）", "url": "https://x.com/rauchg/status/2056549825018310707" },
-        { "label": "补充：~300ms 全球传播", "url": "https://x.com/rauchg/status/2056423973123183028" }
+        {
+          "label": "原推（全部免费）",
+          "url": "https://x.com/rauchg/status/2056549825018310707"
+        },
+        {
+          "label": "补充：~300ms 全球传播",
+          "url": "https://x.com/rauchg/status/2056423973123183028"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-20-vercel-incident-update",
+          "note": "4 月入侵事件后的安全续动作"
+        }
       ]
     }
   ],

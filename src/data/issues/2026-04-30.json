@@ -24,6 +24,20 @@
           "label": "原推 @danshipper",
           "url": "https://x.com/danshipper/status/2049512129846530086"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-12-allaire-agentic-economy",
+          "note": "4 月曾提 agent 经济需新结算层"
+        },
+        {
+          "slug": "2026-04-18-levie-headless-software",
+          "note": "席位与用量计费分流的早期预判"
+        },
+        {
+          "slug": "2026-04-29-micropayments-for-git-push",
+          "note": "bot 滥用免费服务的同题判断"
+        }
       ]
     },
     {
@@ -44,7 +58,21 @@
           "url": "https://x.com/adityaag/status/2049530878083379427"
         }
       ],
-      "engagement": "361 likes"
+      "engagement": "361 likes",
+      "related": [
+        {
+          "slug": "2026-04-09-spc-everyone-codes",
+          "note": "同人 4 月曾报 SPC 全员写代码"
+        },
+        {
+          "slug": "2026-04-13-andreessen-agent-unix",
+          "note": "agent 拆成基本件的同款判断"
+        },
+        {
+          "slug": "2026-04-09-rauch-web-thesis",
+          "note": "生成式 UI 是终态的呼应"
+        }
+      ]
     },
     {
       "slug": "2026-04-30-levie-agent-engineering-roles",
@@ -68,7 +96,21 @@
           "url": "https://x.com/zarazhangrui/status/2049599305825341518"
         }
       ],
-      "engagement": "226 likes"
+      "engagement": "226 likes",
+      "related": [
+        {
+          "slug": "2026-04-14-agent-deployer-role",
+          "note": "他 4 月中已草拟该角色 JD"
+        },
+        {
+          "slug": "2026-04-21-levie-agent-ops-roles",
+          "note": "同一角色的职责清单前篇"
+        },
+        {
+          "slug": "2026-04-15-levie-forward-deployed-engineers",
+          "note": "他曾断言 FDE 角色不会消失"
+        }
+      ]
     }
   ],
   "quickTakes": [

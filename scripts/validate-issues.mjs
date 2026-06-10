@@ -11,6 +11,7 @@ const SOURCE_TYPES = new Set(['x', 'podcast', 'blog'])
 const errors = []
 const warnings = []
 const slugs = new Map()
+const relatedChecks = []
 const files = (await readdir(issuesDir)).filter((file) => file.endsWith('.json'))
 
 let storyTotal = 0
@@ -85,6 +86,30 @@ for (const file of files.sort()) {
     if (summaryLength > 180) {
       warnings.push(`${where}: summary ${summaryLength} 字，长到像正文缩写，考虑收紧或下沉到 content`)
     }
+
+    // 相关回顾（规范见 wiki/WIKI-GUIDE.md）：≤3 条、只指向更早日期、slug 必须存在
+    if (story.related !== undefined) {
+      if (!Array.isArray(story.related)) {
+        errors.push(`${where}: related 不是数组`)
+      } else {
+        if (story.related.length > 3) {
+          errors.push(`${where}: related ${story.related.length} 条，超过 3 条上限`)
+        }
+        for (const ref of story.related) {
+          if (!ref.slug || typeof ref.slug !== 'string') {
+            errors.push(`${where}: related 含空 slug`)
+            continue
+          }
+          if (ref.slug.slice(0, 10) >= date) {
+            errors.push(`${where}: related ${ref.slug} 不是更早日期的 story`)
+          }
+          relatedChecks.push({ where, slug: ref.slug })
+          if (ref.note && ref.note.length > 20) {
+            warnings.push(`${where}: related note ${ref.note.length} 字（>20）：${ref.note}`)
+          }
+        }
+      }
+    }
   }
 
   if (issue.quickTakes !== undefined) {
@@ -109,7 +134,13 @@ for (const file of files.sort()) {
   }
 }
 
-console.log(`检查 ${files.length} 期 / ${storyTotal} 条 story / ${quickTotal} 条速览`)
+for (const check of relatedChecks) {
+  if (!slugs.has(check.slug)) {
+    errors.push(`${check.where}: related 指向不存在的 slug ${check.slug}`)
+  }
+}
+
+console.log(`检查 ${files.length} 期 / ${storyTotal} 条 story / ${quickTotal} 条速览 / ${relatedChecks.length} 条相关回顾`)
 
 if (warnings.length > 0) {
   console.warn(`\n${warnings.length} 个警告（不阻塞 build，留待修稿）：`)

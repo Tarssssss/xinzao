@@ -57,7 +57,21 @@
           "url": "https://x.com/mattturck/status/2048896617424527499"
         }
       ],
-      "engagement": "398 likes"
+      "engagement": "398 likes",
+      "related": [
+        {
+          "slug": "2026-04-10-karpathy-capability-gap",
+          "note": "认知分化、coding 独受认可与此呼应"
+        },
+        {
+          "slug": "2026-04-21-turck-ai-tam",
+          "note": "他上周刚反驳 AI TAM 叙事"
+        },
+        {
+          "slug": "2026-04-22-levie-enterprise-agents",
+          "note": "企业侧瓶颈观察与买方抱怨互证"
+        }
+      ]
     },
     {
       "slug": "2026-04-28-gstack-pair-agent",
@@ -76,7 +90,17 @@
           "url": "https://x.com/garrytan/status/2049035231903301771"
         }
       ],
-      "engagement": "27 likes"
+      "engagement": "27 likes",
+      "related": [
+        {
+          "slug": "2026-04-26-gstack-browser",
+          "note": "GStack 浏览器两天前首发"
+        },
+        {
+          "slug": "2026-04-07-cowork-exfiltration-vuln",
+          "note": "他月初曾警告 agent 外泄风险"
+        }
+      ]
     },
     {
       "slug": "2026-04-28-dawn-exfounder-community",
@@ -99,7 +123,13 @@
           "url": "https://x.com/nikunj/status/2048908803437908393"
         }
       ],
-      "engagement": "135 likes"
+      "engagement": "135 likes",
+      "related": [
+        {
+          "slug": "2026-04-24-nikunj-ma-wave",
+          "note": "他刚预判清算潮催生 ex-founder"
+        }
+      ]
     }
   ],
   "quickTakes": [

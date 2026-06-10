@@ -19,6 +19,20 @@
           "label": "Training Data 播客",
           "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-30-levie-agent-engineering-roles",
+          "note": "Levie 已在招同类内部角色"
+        },
+        {
+          "slug": "2026-04-14-agent-deployer-role",
+          "note": "Levie 更早为该角色拟过 JD"
+        },
+        {
+          "slug": "2026-04-09-spc-everyone-codes",
+          "note": "非技术全员写代码的前例"
+        }
       ]
     },
     {
@@ -37,6 +51,16 @@
         {
           "label": "Training Data 播客",
           "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-01-karpathy-sequoia-fireside",
+          "note": "Mati 被问及此说但未认领"
+        },
+        {
+          "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+          "note": "锯齿状能力框架的音频版"
         }
       ]
     },
@@ -57,6 +81,16 @@
         {
           "label": "原推",
           "url": "https://x.com/levie/status/2053267097493573921"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "他 4 月已用律师例推需求上抬"
+        },
+        {
+          "slug": "2026-04-25-levie-jevons",
+          "note": "同一 Jevons 需求扩张线"
         }
       ]
     },
@@ -81,6 +115,16 @@
           "label": "相关推（10% slop / 懒得手改）",
           "url": "https://x.com/petergyang/status/2053196581139321300"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-03-peter-yang-file-cleanup",
+          "note": "一周前他已在清文件堆积"
+        },
+        {
+          "slug": "2026-04-24-swyx-coding-agents-containment",
+          "note": "与零人工 review 主张对立"
+        }
       ]
     },
     {
@@ -99,6 +143,12 @@
         {
           "label": "原推",
           "url": "https://x.com/nikunj/status/2053159569015328953"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-09-levie-token-budgeting-enterprise",
+          "note": "都把工作量换成模型单位计"
         }
       ]
     }

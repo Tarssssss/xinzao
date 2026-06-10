@@ -46,8 +46,12 @@
    ```
 
    期号不用管（按日期自动派生）；stories 按重要性排序。`quickTakes` 可选、可为空数组；至少要有 1 条完整 story 才落盘（纯速览的一天不发刊）。
-6. **验证**：`npm run build` 必须通过。失败先修 JSON，修不好就不要 push。
-7. **提交**：`git add src/data/issues data/raw && git commit -m "Issue YYYY-MM-DD" && git push`。Vercel 会自动部署。
+6. **wiki ingest + 相关回顾**（规范见 `wiki/WIKI-GUIDE.md`，先读一遍）：
+   - 读 `wiki/index.md`，找到今天涉及的 builder 页 / thread 页并读取（通常 2-5 页；不够用时 `node scripts/build-story-index.mjs` 看全量索引）
+   - 给每条新 story 补 `related` 字段：0-3 条、只指向更早 story、note ≤20 字，**宁缺毋滥**，没有真关联就不加
+   - 更新涉及的 builder 页时间线/立场，话题延续已有 thread 就更新 thread 页；新开页登记进 `index.md`，`log.md` 追加一行
+7. **验证**：`npm run build` 必须通过。失败先修 JSON，修不好就不要 push。
+8. **提交**：`git add src/data/issues data/raw wiki && git commit -m "Issue YYYY-MM-DD" && git push`。Vercel 会自动部署。
 
 ## 硬规则
 

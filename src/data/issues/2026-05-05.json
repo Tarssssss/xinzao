@@ -15,7 +15,16 @@
       "creator": "Dmitri Dolgov (Waymo) / Training Data 播客",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Training Data: Waymo's Dmitri Dolgov", "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8" }
+        {
+          "label": "Training Data: Waymo's Dmitri Dolgov",
+          "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+          "note": "呼应前日 Karpathy 可验证性杠杆论"
+        }
       ]
     },
     {
@@ -31,7 +40,24 @@
       "sourceType": "x",
       "engagement": "1229 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/rauchg/status/2051386798899888539" }
+        {
+          "label": "原推",
+          "url": "https://x.com/rauchg/status/2051386798899888539"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-20-vercel-incident-update",
+          "note": "Vercel 4 月遭入侵的直接背景"
+        },
+        {
+          "slug": "2026-04-13-anthropic-security-guide",
+          "note": "AI 挖沉睡漏洞预言的落地"
+        },
+        {
+          "slug": "2026-05-01-claude-security-beta",
+          "note": "Anthropic 四天前发同类产品"
+        }
       ]
     },
     {
@@ -47,7 +73,24 @@
       "sourceType": "x",
       "engagement": "836 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2051344780328858040" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2051344780328858040"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-04-levie-agent-implementation-opportunity",
+          "note": "前一天同主题判断的延续"
+        },
+        {
+          "slug": "2026-04-22-levie-enterprise-agents",
+          "note": "他 4 月列过同一份瓶颈清单"
+        },
+        {
+          "slug": "2026-04-08-levie-knowledge-agents",
+          "note": "coding 外知识工作论的起点"
+        }
       ]
     },
     {
@@ -62,7 +105,20 @@
       "sourceType": "x",
       "engagement": "262 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/nikunj/status/2051349526171287930" }
+        {
+          "label": "原推",
+          "url": "https://x.com/nikunj/status/2051349526171287930"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-24-nikunj-ma-wave",
+          "note": "他 4 月已预言并购潮和 A 轮断层"
+        },
+        {
+          "slug": "2026-04-08-changelog-check",
+          "note": "高调发布无真实进展的前篇"
+        }
       ]
     }
   ],

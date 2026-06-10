@@ -16,7 +16,24 @@
       "role": "Anthropic 工程团队",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "How we contain Claude across products", "url": "https://www.anthropic.com/engineering/how-we-contain-claude" }
+        {
+          "label": "How we contain Claude across products",
+          "url": "https://www.anthropic.com/engineering/how-we-contain-claude"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-07-cowork-exfiltration-vuln",
+          "note": "4 月已预警 Cowork 外泄风险"
+        },
+        {
+          "slug": "2026-04-11-claude-code-auto-mode",
+          "note": "弹窗监督失效正是其动因"
+        },
+        {
+          "slug": "2026-05-08-zico-kolter-agent-security",
+          "note": "同讲能力与权限设硬边界"
+        }
       ]
     },
     {
@@ -33,7 +50,24 @@
       "role": "Cursor Composer 2 研究负责人 / Fireworks 工程师",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Training Data:How Cursor Trained Composer on Fireworks", "url": "https://www.youtube.com/watch?v=UDTr9yUnLUI" }
+        {
+          "label": "Training Data:How Cursor Trained Composer on Fireworks",
+          "url": "https://www.youtube.com/watch?v=UDTr9yUnLUI"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-25-ryolu-cursor-switch",
+          "note": "Composer 2 使用侧早期信号"
+        },
+        {
+          "slug": "2026-04-10-openai-chief-scientist-rl-harness",
+          "note": "OpenAI 曾质疑自做 RL 管线"
+        },
+        {
+          "slug": "2026-05-09-anthropic-platform-harness-model-pairing",
+          "note": "上下文管理并入模型同判断"
+        }
       ]
     },
     {
@@ -49,9 +83,32 @@
       "sourceType": "x",
       "engagement": "2.2K likes",
       "sourceLinks": [
-        { "label": "原推:基本套路", "url": "https://x.com/trq212/status/2059363113963540788" },
-        { "label": "按任务类型的映射", "url": "https://x.com/trq212/status/2059363115146395965" },
-        { "label": "补充:别低估文件里的上下文", "url": "https://x.com/trq212/status/2059363116316598739" }
+        {
+          "label": "原推:基本套路",
+          "url": "https://x.com/trq212/status/2059363113963540788"
+        },
+        {
+          "label": "按任务类型的映射",
+          "url": "https://x.com/trq212/status/2059363115146395965"
+        },
+        {
+          "label": "补充:别低估文件里的上下文",
+          "url": "https://x.com/trq212/status/2059363116316598739"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-19-thariq-implementation-notes-html",
+          "note": "他此前已让 agent 写 HTML"
+        },
+        {
+          "slug": "2026-05-12-karpathy-vision-as-ai-output-html",
+          "note": "Karpathy 同主张 HTML 输出"
+        },
+        {
+          "slug": "2026-05-18-noah-breyer-claude-code-second-brain",
+          "note": "本地文件当上下文同一路数"
+        }
       ]
     },
     {
@@ -67,7 +124,24 @@
       "sourceType": "x",
       "engagement": "173 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2059482349977653619" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2059482349977653619"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-24-levie-tasks-vs-jobs",
+          "note": "三天前首提任务岗位之分"
+        },
+        {
+          "slug": "2026-05-26-levie-goldman-ceo-ai-jobs",
+          "note": "前一日借高盛 CEO 续讲"
+        },
+        {
+          "slug": "2026-04-25-levie-jevons",
+          "note": "扩招机制的 Jevons 版本"
+        }
       ]
     },
     {
@@ -82,7 +156,20 @@
       "sourceType": "x",
       "engagement": "180 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/zarazhangrui/status/2059354487823978586" }
+        {
+          "label": "原推",
+          "url": "https://x.com/zarazhangrui/status/2059354487823978586"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-22-zara-zhang-claude-code-lark-bridge",
+          "note": "五天前还重度围绕 CC 开发"
+        },
+        {
+          "slug": "2026-04-15-claude-code-desktop-redesign",
+          "note": "弃终端转桌面端的产品背景"
+        }
       ]
     },
     {
@@ -97,7 +184,16 @@
       "sourceType": "x",
       "engagement": "630 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/garrytan/status/2059521656532721964" }
+        {
+          "label": "原推",
+          "url": "https://x.com/garrytan/status/2059521656532721964"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-23-garrytan-bar-is-zero-skip-the-chasm",
+          "note": "同属他 AI 改写规则系列"
+        }
       ]
     }
   ],

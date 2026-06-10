@@ -16,7 +16,24 @@
       "sourceType": "x",
       "engagement": "298 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2053672965125140915" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2053672965125140915"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-30-levie-agent-engineering-roles",
+          "note": "4 月底他已宣布开招此岗"
+        },
+        {
+          "slug": "2026-04-14-agent-deployer-role",
+          "note": "他 4 月曾起草该岗 JD"
+        },
+        {
+          "slug": "2026-05-10-elevenlabs-embedded-engineers",
+          "note": "前日 ElevenLabs 同款嵌入岗"
+        }
       ]
     },
     {
@@ -33,9 +50,28 @@
       "sourceType": "x",
       "engagement": "160 likes",
       "sourceLinks": [
-        { "label": "codex e2e + /side", "url": "https://x.com/steipete/status/2053744332675408151" },
-        { "label": "Birdclaw 推特归档检索", "url": "https://x.com/steipete/status/2053737275268177980" },
-        { "label": "RepoBar 内置浏览器", "url": "https://x.com/steipete/status/2053717468623872230" }
+        {
+          "label": "codex e2e + /side",
+          "url": "https://x.com/steipete/status/2053744332675408151"
+        },
+        {
+          "label": "Birdclaw 推特归档检索",
+          "url": "https://x.com/steipete/status/2053737275268177980"
+        },
+        {
+          "label": "RepoBar 内置浏览器",
+          "url": "https://x.com/steipete/status/2053717468623872230"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-27-steipete-birdclaw-wacrawl",
+          "note": "本期演示的 Birdclaw 源于此"
+        },
+        {
+          "slug": "2026-04-29-codex-on-every-commit",
+          "note": "同一自建 codex 工作流路线"
+        }
       ]
     }
   ],

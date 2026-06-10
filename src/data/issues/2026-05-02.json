@@ -20,6 +20,16 @@
           "label": "No Priors",
           "url": "https://www.youtube.com/watch?v=XAbKflCncDo"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-10-openai-chief-scientist-rl-harness",
+          "note": "都不建议过早自建后训练"
+        },
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "他曾称 token 需求被低估百倍"
+        }
       ]
     },
     {
@@ -44,7 +54,21 @@
           "url": "https://x.com/levie/status/2050240083325030404"
         }
       ],
-      "engagement": "430 likes"
+      "engagement": "430 likes",
+      "related": [
+        {
+          "slug": "2026-04-18-levie-headless-software",
+          "note": "4 月已提 agent 百倍用量论"
+        },
+        {
+          "slug": "2026-04-29-levie-100x-software",
+          "note": "百倍软件量是同一判断前篇"
+        },
+        {
+          "slug": "2026-04-25-levie-jevons",
+          "note": "增产压过降本的 Jevons 逻辑"
+        }
+      ]
     },
     {
       "slug": "2026-05-02-nikunj-paid-side-project",
@@ -71,7 +95,17 @@
           "url": "https://x.com/nikunj/status/2050355231486316818"
         }
       ],
-      "engagement": "179 likes"
+      "engagement": "179 likes",
+      "related": [
+        {
+          "slug": "2026-04-09-llmwiki",
+          "note": "上月他还在做免费开源项目"
+        },
+        {
+          "slug": "2026-04-15-nikunj-vibe-code-lessons",
+          "note": "此前谈过 vibe code 的边界"
+        }
+      ]
     }
   ],
   "quickTakes": [

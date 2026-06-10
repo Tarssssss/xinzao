@@ -19,6 +19,16 @@
           "label": "No Priors 播客",
           "url": "https://www.youtube.com/watch?v=jeop9wfb9jU"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-07-boris-cherny-sequoia",
+          "note": "每晚几千 agent，100x 工作方式样本"
+        },
+        {
+          "slug": "2026-04-28-valley-enterprise-gap",
+          "note": "企业投入未普涨的对照面"
+        }
       ]
     },
     {
@@ -37,6 +47,12 @@
         {
           "label": "No Priors 播客",
           "url": "https://www.youtube.com/watch?v=jeop9wfb9jU"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-13-levie-enterprise-agents",
+          "note": "同样主张价值在以前做不了的事"
         }
       ]
     },
@@ -58,7 +74,21 @@
           "url": "https://x.com/levie/status/2058223867815227756"
         }
       ],
-      "engagement": "627 likes"
+      "engagement": "627 likes",
+      "related": [
+        {
+          "slug": "2026-04-20-roles-grow-complexity",
+          "note": "他 4 月已提岗位定义会失效"
+        },
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "效率推高需求的同线推演"
+        },
+        {
+          "slug": "2026-04-16-levie-job-bottlenecks",
+          "note": "瓶颈转移创造就业的机制前篇"
+        }
+      ]
     }
   ],
   "quickTakes": [

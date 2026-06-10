@@ -14,7 +14,24 @@
       "creator": "Oriol Vinyals (Unsupervised Learning Ep 87)",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Unsupervised Learning Ep 87", "url": "https://www.youtube.com/watch?v=NQczevdpxq0" }
+        {
+          "label": "Unsupervised Learning Ep 87",
+          "url": "https://www.youtube.com/watch?v=NQczevdpxq0"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-22-yann-dubois-continual-learning",
+          "note": "前日 Dubois 称其为未解瓶颈"
+        },
+        {
+          "slug": "2026-04-24-managed-agents-memory",
+          "note": "记忆即文件已是产品实践"
+        },
+        {
+          "slug": "2026-05-19-alex-albert-building-next-claude",
+          "note": "Claude 做梦正是跨会话巩固"
+        }
       ]
     },
     {
@@ -29,7 +46,20 @@
       "creator": "Oriol Vinyals (Unsupervised Learning Ep 87)",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Unsupervised Learning Ep 87", "url": "https://www.youtube.com/watch?v=NQczevdpxq0" }
+        {
+          "label": "Unsupervised Learning Ep 87",
+          "url": "https://www.youtube.com/watch?v=NQczevdpxq0"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+          "note": "验证器难写呼应可验证性杠杆论"
+        },
+        {
+          "slug": "2026-04-10-karpathy-capability-gap",
+          "note": "窄域泛化与跃升集中论对照"
+        }
       ]
     },
     {
@@ -44,7 +74,16 @@
       "sourceType": "x",
       "engagement": "77 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/garrytan/status/2058043367704195271" }
+        {
+          "label": "原推",
+          "url": "https://x.com/garrytan/status/2058043367704195271"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-13-levie-enterprise-agents",
+          "note": "企业用例同样替代方案为零"
+        }
       ]
     },
     {
@@ -59,7 +98,24 @@
       "sourceType": "x",
       "engagement": "237 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2058006473620463985" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2058006473620463985"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-13-levie-security-jevons",
+          "note": "他 4 月已提安全 Jevons 时刻"
+        },
+        {
+          "slug": "2026-04-16-levie-job-bottlenecks",
+          "note": "瓶颈转移机制是同一论断"
+        },
+        {
+          "slug": "2026-04-13-anthropic-security-guide",
+          "note": "AI 批量挖洞前提的出处"
+        }
       ]
     },
     {
@@ -74,7 +130,20 @@
       "sourceType": "x",
       "engagement": "125 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/petergyang/status/2057830781352034322" }
+        {
+          "label": "原推",
+          "url": "https://x.com/petergyang/status/2057830781352034322"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-10-levie-experts-higher-demand",
+          "note": "专家溢价判断相呼应"
+        },
+        {
+          "slug": "2026-04-28-tibo-solo-playbook",
+          "note": "他此前已力挺一人创业"
+        }
       ]
     }
   ],

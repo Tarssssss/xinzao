@@ -16,7 +16,20 @@
       "sourceType": "x",
       "engagement": "1865 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/bcherny/status/2063792263067754658" }
+        {
+          "label": "原推",
+          "url": "https://x.com/bcherny/status/2063792263067754658"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-07-boris-cherny-sequoia",
+          "note": "他 5 月称每晚跑几千个 agent"
+        },
+        {
+          "slug": "2026-05-31-steipete-yielding-agents-skill",
+          "note": "同样用 /goal 拉长单任务时长"
+        }
       ]
     },
     {
@@ -33,7 +46,20 @@
       "sourceType": "x",
       "engagement": "378 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2063756386572681606" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2063756386572681606"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-08-levie-ai-commoditization-differentiation",
+          "note": "他 5 月已论差异化被挤到别处"
+        },
+        {
+          "slug": "2026-04-18-mcdermott-saaspocalypse",
+          "note": "同样反驳 SaaS 末日论"
+        }
       ]
     },
     {
@@ -49,7 +75,24 @@
       "sourceType": "x",
       "engagement": "141 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/levie/status/2063835799096090749" }
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2063835799096090749"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-07-model-routing-applied-layer-differentiation",
+          "note": "前一天路由论点的直接延续"
+        },
+        {
+          "slug": "2026-06-03-aaron-levie-model-routing-applied-ai",
+          "note": "他 5 天前首提路由是差异化点"
+        },
+        {
+          "slug": "2026-05-22-levie-inference-cost-stratification",
+          "note": "成本按任务分层判断的源头"
+        }
       ]
     },
     {
@@ -66,7 +109,24 @@
       "sourceType": "x",
       "engagement": "60 likes",
       "sourceLinks": [
-        { "label": "原推", "url": "https://x.com/realmadhuguru/status/2063704354910347520" }
+        {
+          "label": "原推",
+          "url": "https://x.com/realmadhuguru/status/2063704354910347520"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-25-sap-cto-no-priors",
+          "note": "同样归因企业流程缺验证数据"
+        },
+        {
+          "slug": "2026-05-01-karpathy-sequoia-fireside",
+          "note": "营收决定训练分布，同一机制"
+        },
+        {
+          "slug": "2026-06-07-kaiser-verifiability-is-a-spectrum",
+          "note": "Kaiser 前一天持相反判断"
+        }
       ]
     }
   ],

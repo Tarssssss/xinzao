@@ -19,6 +19,20 @@
           "label": "The MAD Podcast: Zico Kolter on the Real Risks of Frontier AI",
           "url": "https://www.youtube.com/watch?v=DvyZcCfepeI"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-07-cowork-exfiltration-vuln",
+          "note": "注入外发风险的真实案例"
+        },
+        {
+          "slug": "2026-04-13-anthropic-security-guide",
+          "note": "同类防御清单可对照"
+        },
+        {
+          "slug": "2026-04-11-claude-code-auto-mode",
+          "note": "分类器护栏的实测漏报率"
+        }
       ]
     },
     {
@@ -36,6 +50,16 @@
         {
           "label": "原推 ↗",
           "url": "https://x.com/levie/status/2052566788236509254"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-16-levie-job-bottlenecks",
+          "note": "他 4 月已谈瓶颈转移机制"
+        },
+        {
+          "slug": "2026-04-11-felix-rieseberg-cowork",
+          "note": "执行免费后拼品味，观点呼应"
         }
       ]
     },
@@ -55,6 +79,12 @@
           "label": "The MAD Podcast: Zico Kolter on the Real Risks of Frontier AI",
           "url": "https://www.youtube.com/watch?v=DvyZcCfepeI"
         }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "能力随升级白拿，正反对照"
+        }
       ]
     },
     {
@@ -72,6 +102,16 @@
         {
           "label": "The MAD Podcast: Zico Kolter on the Real Risks of Frontier AI",
           "url": "https://www.youtube.com/watch?v=DvyZcCfepeI"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-04-16-ebm-logical-intelligence",
+          "note": "押注新架构，与他观点对立"
+        },
+        {
+          "slug": "2026-04-10-openai-chief-scientist-rl-harness",
+          "note": "RL 管线价值的另一视角"
         }
       ]
     }

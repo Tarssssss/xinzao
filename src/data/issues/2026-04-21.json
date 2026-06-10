@@ -28,7 +28,17 @@
           "url": "https://x.com/claudeai/status/2046328622869344429"
         }
       ],
-      "engagement": "13K likes"
+      "engagement": "13K likes",
+      "related": [
+        {
+          "slug": "2026-04-07-cowork-exfiltration-vuln",
+          "note": "Cowork 此前曝数据外泄漏洞"
+        },
+        {
+          "slug": "2026-04-16-rauch-design-factory",
+          "note": "呼应生成软件取代 SaaS 论"
+        }
+      ]
     },
     {
       "slug": "2026-04-21-levie-agent-ops-roles",
@@ -48,7 +58,21 @@
           "url": "https://x.com/levie/status/2046397816755634340"
         }
       ],
-      "engagement": "499 likes"
+      "engagement": "499 likes",
+      "related": [
+        {
+          "slug": "2026-04-14-agent-deployer-role",
+          "note": "一周前已为该岗位拟 JD"
+        },
+        {
+          "slug": "2026-04-19-levie-engineering-jobs-expand",
+          "note": "工程师指挥 agent 论的延续"
+        },
+        {
+          "slug": "2026-04-20-roles-grow-complexity",
+          "note": "前日刚论岗位定义失效"
+        }
+      ]
     },
     {
       "slug": "2026-04-21-vercel-security-rotation",
@@ -72,7 +96,13 @@
           "url": "https://x.com/rauchg/status/2046406894269747668"
         }
       ],
-      "engagement": "647 likes"
+      "engagement": "647 likes",
+      "related": [
+        {
+          "slug": "2026-04-20-vercel-incident-update",
+          "note": "前日事件通报的后续处置"
+        }
+      ]
     },
     {
       "slug": "2026-04-21-turck-ai-tam",
@@ -91,7 +121,13 @@
           "url": "https://x.com/mattturck/status/2046284478151086178"
         }
       ],
-      "engagement": "16 likes"
+      "engagement": "16 likes",
+      "related": [
+        {
+          "slug": "2026-04-12-levie-demand-expansion",
+          "note": "与 Levie 需求被低估论对立"
+        }
+      ]
     },
     {
       "slug": "2026-04-21-steipete-wacli-gog",
@@ -115,7 +151,13 @@
           "url": "https://x.com/steipete/status/2046356596683411924"
         }
       ],
-      "engagement": "702 likes"
+      "engagement": "702 likes",
+      "related": [
+        {
+          "slug": "2026-04-16-openclaw-security-hardening",
+          "note": "其安全加固路线的延续"
+        }
+      ]
     }
   ],
   "quickTakes": [
