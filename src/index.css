@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap');
+
+:root {
+  --paper-bg: #fdfbf7;
+  --page-bg: #f4f1e8;
+  --ink: #1b1a18;
+  --muted: #6c655d;
+  --border: #e5dfd4;
+  --border-strong: #d4ccc0;
+  --grain: rgba(28, 24, 18, 0.028);
+
+  font-family: 'Newsreader', serif;
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0)),
+    var(--page-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, var(--grain) 1px, transparent 0);
+  background-size: 18px 18px;
+  opacity: 0.4;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+time {
+  margin: 0;
+  font-family: 'Newsreader', serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
