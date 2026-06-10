@@ -1,10 +1,19 @@
-import { lazy, Suspense, useEffect, type CSSProperties } from 'react'
+import {
+  lazy,
+  Suspense,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+  type TouchEvent,
+} from 'react'
 import {
   BrowserRouter,
   Link,
   Route,
   Routes,
   useLocation,
+  useNavigate,
   useParams,
 } from 'react-router-dom'
 import { findStory, issues, latestIssue } from './data/issues'
@@ -51,7 +60,61 @@ function ScrollToTop() {
   return null
 }
 
-function Masthead({ issue }: { issue?: NumberedIssue }) {
+/** 横滑手势：水平位移够大且明显大于垂直位移才算，避免和上下滚动打架 */
+function useSwipe(handlers: { onLeft?: () => void; onRight?: () => void }) {
+  const start = useRef<{ x: number; y: number } | null>(null)
+
+  function onTouchStart(event: TouchEvent) {
+    const touch = event.touches[0]
+    start.current = { x: touch.clientX, y: touch.clientY }
+  }
+
+  function onTouchEnd(event: TouchEvent) {
+    if (!start.current) {
+      return
+    }
+    const touch = event.changedTouches[0]
+    const dx = touch.clientX - start.current.x
+    const dy = touch.clientY - start.current.y
+    start.current = null
+    if (Math.abs(dx) < 64 || Math.abs(dx) < Math.abs(dy) * 1.6) {
+      return
+    }
+    if (dx < 0) {
+      handlers.onLeft?.()
+    } else {
+      handlers.onRight?.()
+    }
+  }
+
+  return { onTouchStart, onTouchEnd }
+}
+
+type TabKey = 'today' | 'archive' | 'guide'
+
+function TabNav({ active }: { active: TabKey }) {
+  return (
+    <nav className="tab-nav" aria-label="栏目">
+      <Link to="/" className={`tab${active === 'today' ? ' active' : ''}`}>
+        今日
+      </Link>
+      <Link
+        to="/archive"
+        className={`tab${active === 'archive' ? ' active' : ''}`}
+      >
+        往期
+      </Link>
+      <Link
+        to="/guide"
+        className={`tab tab-aside${active === 'guide' ? ' active' : ''}`}
+      >
+        规范
+      </Link>
+    </nav>
+  )
+}
+
+function Masthead({ issue, tab }: { issue?: NumberedIssue; tab: TabKey }) {
   return (
     <header>
       <div className="masthead">
@@ -73,44 +136,78 @@ function Masthead({ issue }: { issue?: NumberedIssue }) {
         )}
       </div>
       <hr className="double-rule" />
-      <div className="masthead-note">
-        <span>AI builder 言论日刊 · 摘要只为帮你判断要不要点开原文</span>
-        <Link to="/guide" className="masthead-nav-link">
-          写作规范 ↗
-        </Link>
-      </div>
+      <TabNav active={tab} />
     </header>
   )
 }
 
-function StoryRow({ story, rank }: { story: Story; rank: number }) {
-  const origin = story.sourceLinks[0]
+function StoryRow({
+  story,
+  rank,
+  defaultOpen = false,
+}: {
+  story: Story
+  rank: number
+  defaultOpen?: boolean
+}) {
+  const [open, setOpen] = useState(defaultOpen)
+  const links = open ? story.sourceLinks : story.sourceLinks.slice(0, 1)
+  const bodyId = `${story.slug}-body`
+
+  function toggle() {
+    setOpen((value) => !value)
+  }
 
   return (
-    <li className="story-row" style={{ '--i': rank - 1 } as CSSProperties}>
+    <li
+      className={`story-row${open ? ' open' : ''}`}
+      id={story.slug}
+      style={{ '--i': rank - 1 } as CSSProperties}
+    >
       <span className="story-rank" aria-hidden="true">
         {rank}.
       </span>
-      <div>
+      <div className="story-cell">
         <h3 className="story-title">
-          <Link to={`/story/${story.slug}`}>{story.title}</Link>
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-controls={bodyId}
+            onClick={toggle}
+          >
+            {story.title}
+            <span className="story-caret" aria-hidden="true">
+              ▾
+            </span>
+          </button>
         </h3>
-        <p className="story-summary">{story.summary}</p>
+        <p className="story-summary" onClick={toggle}>
+          {story.summary}
+        </p>
         <p className="story-meta">
           <span className="creator">{story.creator}</span>
+          {open && story.role && <span>{story.role}</span>}
           <span>{sourceLabel(story.sourceType)}</span>
           {story.engagement && <span>{story.engagement}</span>}
-          {origin && (
+          {links.map((link) => (
             <a
+              key={link.url}
               className="origin-link"
-              href={origin.url}
+              href={link.url}
               target="_blank"
               rel="noreferrer"
             >
-              原文 <span className="arrow">↗</span>
+              {open ? link.label : '原文'} <span className="arrow">↗</span>
             </a>
-          )}
+          ))}
         </p>
+        <div className="story-body" id={bodyId}>
+          <div className="story-body-inner">
+            {story.content.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
       </div>
     </li>
   )
@@ -152,9 +249,11 @@ function QuickTakes({ items }: { items: QuickTake[] }) {
 function IssueSection({
   issue,
   headingPrefix,
+  expandedSlug,
 }: {
   issue: NumberedIssue
   headingPrefix?: string
+  expandedSlug?: string
 }) {
   return (
     <section>
@@ -169,7 +268,12 @@ function IssueSection({
       {issue.editorNote && <p className="editor-note">{issue.editorNote}</p>}
       <ol className="story-list">
         {issue.stories.map((story, index) => (
-          <StoryRow key={story.slug} story={story} rank={index + 1} />
+          <StoryRow
+            key={story.slug}
+            story={story}
+            rank={index + 1}
+            defaultOpen={story.slug === expandedSlug}
+          />
         ))}
       </ol>
       {issue.quickTakes && issue.quickTakes.length > 0 && (
@@ -179,39 +283,10 @@ function IssueSection({
   )
 }
 
-function ArchiveIndex({ skip }: { skip?: string }) {
-  const archived = issues.filter((issue) => issue.date !== skip)
-
-  if (archived.length === 0) {
-    return null
-  }
-
-  return (
-    <section className="archive">
-      <div className="archive-head">
-        <h2>往期</h2>
-        <span>{archived.length} 期</span>
-      </div>
-      <ul className="archive-list">
-        {archived.map((issue) => (
-          <li className="archive-row" key={issue.date}>
-            <Link to={`/issue/${issue.date}`}>
-              <span className="no">No.{String(issue.number).padStart(2, '0')}</span>
-              <span className="date">{issue.date}</span>
-              <span className="headline">{issue.stories[0]?.title}</span>
-              <span className="count">{issue.stories.length} 条</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </section>
-  )
-}
-
 function SiteFooter() {
   return (
     <footer className="site-footer">
-      <span>信噪 · 每天 09:00 更新</span>
+      <span>信噪 · 每天 09:00 更新 · 摘要只为帮你判断要不要点开原文</span>
       <a
         href="https://github.com/zarazhangrui/follow-builders"
         target="_blank"
@@ -231,21 +306,127 @@ function todayKey() {
   return `${now.getFullYear()}-${month}-${day}`
 }
 
-function HomePage() {
+function IssueView({
+  issue,
+  expandedSlug,
+}: {
+  issue: NumberedIssue
+  expandedSlug?: string
+}) {
+  const navigate = useNavigate()
+  const index = issues.findIndex((entry) => entry.date === issue.date)
+  const newer = index > 0 ? issues[index - 1] : undefined
+  const older = index >= 0 ? issues[index + 1] : undefined
+  const isLatest = issue.date === latestIssue?.date
+
+  const swipe = useSwipe({
+    onLeft: () => {
+      if (isLatest) {
+        navigate('/archive')
+      } else if (older) {
+        navigate(`/issue/${older.date}`)
+      }
+    },
+    onRight: () => {
+      if (isLatest) {
+        return
+      }
+      if (newer && newer.date !== latestIssue?.date) {
+        navigate(`/issue/${newer.date}`)
+      } else {
+        navigate('/')
+      }
+    },
+  })
+
+  useEffect(() => {
+    if (expandedSlug) {
+      // ScrollToTop 的 effect 先跑（fiber 顺序），这里直接滚到目标条目即可
+      document.getElementById(expandedSlug)?.scrollIntoView()
+    }
+  }, [expandedSlug])
+
+  let headingPrefix: string | undefined
+  if (isLatest) {
+    headingPrefix = issue.date === todayKey() ? '今日' : '最新'
+  }
+
   return (
-    <main className="shell">
-      <Masthead issue={latestIssue} />
-      {latestIssue ? (
-        <>
-          <IssueSection
-            issue={latestIssue}
-            headingPrefix={latestIssue.date === todayKey() ? '今日' : '最新'}
-          />
-          <ArchiveIndex skip={latestIssue.date} />
-        </>
-      ) : (
+    <main className="shell" {...swipe}>
+      <Masthead issue={issue} tab={isLatest ? 'today' : 'archive'} />
+      <IssueSection
+        issue={issue}
+        headingPrefix={headingPrefix}
+        expandedSlug={expandedSlug}
+      />
+      <nav className="issue-nav" aria-label="翻期">
+        {older ? (
+          <Link to={`/issue/${older.date}`}>
+            ← 上一期 No.{String(older.number).padStart(2, '0')}
+          </Link>
+        ) : (
+          <span />
+        )}
+        {!isLatest &&
+          (newer && newer.date !== latestIssue?.date ? (
+            <Link to={`/issue/${newer.date}`}>
+              下一期 No.{String(newer.number).padStart(2, '0')} →
+            </Link>
+          ) : (
+            <Link to="/">今日 →</Link>
+          ))}
+      </nav>
+      <SiteFooter />
+    </main>
+  )
+}
+
+function HomePage() {
+  if (!latestIssue) {
+    return (
+      <main className="shell">
+        <Masthead tab="today" />
         <p className="empty-state">第一期正在整理中。</p>
-      )}
+        <SiteFooter />
+      </main>
+    )
+  }
+
+  return <IssueView issue={latestIssue} />
+}
+
+function ArchivePage() {
+  const navigate = useNavigate()
+  const swipe = useSwipe({ onRight: () => navigate('/') })
+  const archived = issues.filter((issue) => issue.date !== latestIssue?.date)
+
+  return (
+    <main className="shell" {...swipe}>
+      <Masthead issue={latestIssue} tab="archive" />
+      <section className="archive">
+        <div className="archive-head">
+          <h2>往期</h2>
+          <span>{archived.length} 期</span>
+        </div>
+        {archived.length === 0 ? (
+          <p className="empty-state">还没有往期。</p>
+        ) : (
+          <ul className="archive-list">
+            {archived.map((issue) => (
+              <li className="archive-row" key={issue.date}>
+                <Link to={`/issue/${issue.date}`}>
+                  <span className="no">
+                    No.{String(issue.number).padStart(2, '0')}
+                  </span>
+                  <span className="date">{issue.date}</span>
+                  <span className="headline">{issue.stories[0]?.title}</span>
+                  <span className="count">{issue.stories.length} 条</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
       <SiteFooter />
     </main>
   )
@@ -259,14 +440,7 @@ function IssuePage() {
     return <NotFound />
   }
 
-  return (
-    <main className="shell">
-      <Masthead issue={issue} />
-      <IssueSection issue={issue} />
-      <ArchiveIndex skip={issue.date} />
-      <SiteFooter />
-    </main>
-  )
+  return <IssueView issue={issue} />
 }
 
 function StoryPage() {
@@ -277,49 +451,13 @@ function StoryPage() {
     return <NotFound />
   }
 
-  const { story, issue } = found
-
-  return (
-    <main className="shell">
-      <Masthead issue={issue} />
-      <Link className="back-link" to={`/issue/${issue.date}`}>
-        ← {issueNo(issue)} · {issue.date}
-      </Link>
-      <article className="article">
-        <h1>{story.title}</h1>
-        <p className="article-meta">
-          <span className="creator">{story.creator}</span>
-          {story.role && <> · {story.role}</>} · {sourceLabel(story.sourceType)}
-          {story.engagement && <> · {story.engagement}</>}
-        </p>
-        <p className="article-lead">{story.summary}</p>
-        <div className="article-body">
-          {story.content.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-        <section className="sources">
-          <h2>原文</h2>
-          <ul>
-            {story.sourceLinks.map((link) => (
-              <li key={link.url}>
-                <a href={link.url} target="_blank" rel="noreferrer">
-                  {link.label} ↗
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </article>
-      <SiteFooter />
-    </main>
-  )
+  return <IssueView issue={found.issue} expandedSlug={found.story.slug} />
 }
 
 function NotFound() {
   return (
     <main className="shell">
-      <Masthead issue={latestIssue} />
+      <Masthead issue={latestIssue} tab="today" />
       <p className="empty-state">
         这条内容不存在，可能链接有误或已被更完整的版本替换。
         <br />
@@ -336,10 +474,7 @@ function NotFound() {
 function GuidePage() {
   return (
     <main className="shell">
-      <Masthead issue={latestIssue} />
-      <Link className="back-link" to="/">
-        ← 回到今日刊
-      </Link>
+      <Masthead issue={latestIssue} tab="guide" />
       <Suspense fallback={<p className="empty-state">规范载入中…</p>}>
         <GuideBody />
       </Suspense>
@@ -354,6 +489,7 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/archive" element={<ArchivePage />} />
         <Route path="/issue/:date" element={<IssuePage />} />
         <Route path="/story/:slug" element={<StoryPage />} />
         <Route path="/guide" element={<GuidePage />} />
