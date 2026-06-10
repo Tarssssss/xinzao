@@ -1,0 +1,153 @@
+{
+  "date": "2026-05-02",
+  "generatedAt": "2026-05-02T07:40:30.488Z",
+  "stories": [
+    {
+      "slug": "2026-05-02-baseten-inference-crunch",
+      "title": "Baseten CEO 称算力紧缺远超外界认知，平台 95% 的 token 来自客户定制模型",
+      "summary": "一年增长 30 倍的推理云一手行情：95% 的 token 是客户定制模型，利用率多数在 95% 左右，B200 大单要签三到五年合同加两到三成预付。采购算力或看开源路线的人值得听。",
+      "content": [
+        "Baseten 过去一年增长了 30 倍，主持人在开场称其今年收入预期超过 10 亿美元。Tuhin Srivastava 给出的最有信息量的数字是：平台上约 95% 的 token 跑在客户定制模型上，几乎没有人直接用原版开源权重——客户既会拿自己的数据做后训练，也会为性能做编译层面的定制。他对应用公司的建议是“没有 PMF 之前别做 post-training”：先用最好的现成模型证明价值，再去优化成本。",
+        "算力方面，他认为外界对紧缺程度的认识仍然不足。Baseten 在 18 家云上运行 90 个集群，多数时间利用率在 95% 左右，公司每天下午四点有一个固定会议专门调配容量。供给侧还有质量问题：他估计像样的云只有十来家，够金牌标准的就三四家。采购条件也在变硬——现在从靠谱的云拿 1024 张 B200，至少签三到五年合同，外加合同总额 20% 到 30% 的预付款。他说资金成本因此成了竞争变量，也会让公司更早考虑上市。",
+        "两个判断值得单独记。一是应用层能否在大模型公司的挤压下存活，他的答案押在用户信号上：像 Abridge 那样沉淀在临床工作流里的医生修改和后续动作，前沿模型公司很难拿到，应用公司可以拿来做后训练。二是中国开源模型，他说除了一些很早期、很快被人发现的例子，没见过内置立场的真实证据；按三个月前的水平，跑 DeepSeek 的成本大约只有闭源模型的 20%，他同时认为美国必须有自己的开源模型。",
+        "这些话出自一个卖推理服务的人，“推理是最后一个市场”“降价只会带来更多用量”都和他的生意利益一致；400% 的 NDR、前 30 大客户零流失也是他单方面的口径。可核验的部分是行情本身：正在采购算力的团队，可以拿三到五年合同加两到三成预付这个条款，对照自己手里的报价。"
+      ],
+      "creator": "Tuhin Srivastava",
+      "role": "Baseten CEO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "No Priors",
+          "url": "https://www.youtube.com/watch?v=XAbKflCncDo"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-02-levie-agents-software",
+      "title": "Aaron Levie：agent 数量百倍于人之后，受益的是承接 agent 工作的底层记录系统",
+      "summary": "判断软件走向的启发式：agent 让代码、合同、发票的量上涨，管理这些工作的记录系统和合规护栏跟着涨。另一条指出硅谷外的企业用 AI 主要为增产，降本省的钱会被竞争卷回去。",
+      "content": [
+        "起点是 Atlassian 财报超出华尔街预期，Levie 认为这不该让人意外。他的启发式：当 agent 数量是人的 100 倍，问哪些软件会因为 agent 干的活挂在它上面而增长——世界会生成更多代码、更多销售线索、审更多合同、处理更多发票、做更多设计和支付，管理这些工作的底层系统就是答案。大量可信和不可信的 agent 还需要护栏、安全、合规、工作流和数据存储，他判断这部分记录系统生态只会向上走。",
+        "同一天的另一条补充了需求侧：他和硅谷之外的企业聊 AI，多数用例是增产提速而非裁员——公司普遍不满意自己的产出量，总被某个瓶颈卡住。过去科技岗位集中在硅谷，普通企业和中小企业建不起自动化，AI 第一次让他们做得到。降本的部分通常是为了给增长腾钱，或者只是暂时的：当竞争对手用 AI 把客户服务得更好，省下来的成本很快会被卷回去。",
+        "Box 本身就是卖内容记录系统的企业软件公司，“记录系统受益”这套论证正好落在自家生意上，读的时候要带着这层立场。顺着这个逻辑，在选 toB 方向的人可以把“agent 的产出最终挂在哪个系统上”当成一个筛选问题来用。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @levie（agent 与记录系统）",
+          "url": "https://x.com/levie/status/2050295657836277764"
+        },
+        {
+          "label": "原推 @levie（企业用例观察）",
+          "url": "https://x.com/levie/status/2050240083325030404"
+        }
+      ],
+      "engagement": "430 likes"
+    },
+    {
+      "slug": "2026-05-02-shipper-humans-learn-faster",
+      "title": "Dan Shipper：模型懂得比任何一个人都多，但任何一个人都学得比模型快",
+      "summary": "他在转发认同一条讨论时给出理由：知识存量上模型早已超过任何个人，但个人学新东西的速度仍快于模型。一句话的框架，可以用来判断哪些工作短期内还会留在人手里。",
+      "content": [
+        "他转发认同一条帖子，给出的理由只有两句：模型知道的比任何单个人都多，但任何单个人都比模型学得快。他认为这个判断成立，且原因就这么简单。",
+        "顺着这个逻辑，个人相对模型的优势集中在更新速度上——模型的知识要等下一轮训练才会变，人在具体岗位上每天都在吸收新信息。如果这个判断成立，评估一项工作会不会被模型接走时，它依赖存量知识的程度是关键变量：越靠当下情境里持续学到的东西，越难被替代。这一段是编辑引申，原推只有上面那两句。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @danshipper",
+          "url": "https://x.com/danshipper/status/2050304359024759242"
+        }
+      ],
+      "engagement": "93 likes"
+    },
+    {
+      "slug": "2026-05-02-zara-agent-cofounder",
+      "title": "Zara Zhang 把 coding agent 当 cofounder 用：先摆问题和处境，再问它的意见",
+      "summary": "她观察到多数人把 coding agent 当员工使唤，自己当 cofounder 用：不只下命令，会摆出问题、描述处境、问模型意见。很短的方法论，重度用户可以直接拿来试。",
+      "content": [
+        "她的观察是很多人把 coding agent 当员工，她自己把它当 cofounder。具体做法照她原话：不只是下命令，而是把问题摆出来，描述当前的处境，然后问模型的意见。",
+        "这套用法的重点在让模型参与定义问题：上下文给足之后，模型提出的方案可能超出你预设的任务拆解。可以在下一个没想清楚怎么做的任务上试一遍——先不写具体指令，把处境和约束讲完整，让它先给意见。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @zarazhangrui",
+          "url": "https://x.com/zarazhangrui/status/2050326543797469415"
+        }
+      ],
+      "engagement": "74 likes"
+    },
+    {
+      "slug": "2026-05-02-nikunj-paid-side-project",
+      "title": "投资人 Nikunj Kothari 上线第一个付费 side project：购房报告工具，基本按成本价卖",
+      "summary": "他用 Claude 和 Railway 等搭了购房报告工具，单份成本 8 至 9 美元、基本按成本卖，看房的人给反馈可拿半价码。想给 side project 收钱的人值得看这个最小样本。",
+      "content": [
+        "Nikunj Kothari 上线了他的第一个收钱项目：给正在看房的人生成报告，用 Railway、Conductor 和 Claude 搭建，Stripe 收款。每份报告的成本在 8 到 9 美元，他说基本是按成本在卖；正在看房的用户私信他可以拿半价码，条件是给产品反馈。他同时放出了一份示例报告和正式网站的链接。",
+        "几小时后他发了一句“Look Ma, I'm at $36,500 in ARR 💀”，配的骷髅表情说明这个数字带着自嘲成分。这条的参考价值在路径本身：一个全职投资人用现成的 agent 工具链把想法做成了能收钱的产品，定价贴着单份成本走。对想验证付费意愿的 builder，按成本价销售加用半价码换反馈，是一个起步成本很低的打法。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @nikunj（ARR）",
+          "url": "https://x.com/nikunj/status/2050407946438467878"
+        },
+        {
+          "label": "原推 @nikunj（技术栈与定价）",
+          "url": "https://x.com/nikunj/status/2050353986742698400"
+        },
+        {
+          "label": "原推 @nikunj（半价换反馈）",
+          "url": "https://x.com/nikunj/status/2050355231486316818"
+        }
+      ],
+      "engagement": "179 likes"
+    },
+    {
+      "slug": "2026-05-02-code-with-claude",
+      "title": "Code with Claude 开发者大会下周回归，直播注册已开放",
+      "summary": "官方宣布 Code with Claude 开发者大会下周举行，议程覆盖从刚上手到深度使用 Claude Code 的人群，直播已开放注册。日常用户可以排进日程，具体日期见注册页。",
+      "content": [
+        "官方账号宣布 Code with Claude 下周回归，措辞是 returns，即并非首届。官方的说法是无论刚开始用 Claude Code 还是已经用了一段时间，都有对应的 session，并放出了直播注册链接。",
+        "推文里没有具体日期和完整议程，确切安排要看注册页。从惯例推断，这类官方开发者大会常伴随功能或产品发布，但官方没有预告任何发布内容，这一句只是编辑猜测。"
+      ],
+      "creator": "Claude",
+      "role": "Anthropic 官方账号",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @claudeai",
+          "url": "https://x.com/claudeai/status/2050252933866930339"
+        }
+      ],
+      "engagement": "7,562 likes"
+    },
+    {
+      "slug": "2026-05-02-replit-10th-free-day",
+      "title": "Replit 十周年，从太平洋时间早上五点起免费开放 24 小时",
+      "summary": "Amjad Masad 宣布 Replit 十周年，当天太平洋时间早 5 点起全部免费 24 小时，附十年回顾视频。没付费但想试的人可以趁这个窗口；免费覆盖范围推文没细说。",
+      "content": [
+        "Replit 十岁了。Amjad Masad 宣布从当天太平洋时间早上 5 点开始全部免费 24 小时作为庆祝；他说让所有人都能编程这件事从 2011 年就开始做，已帮助数百万人学习和发布作品，推文附了十年历程的回顾视频。",
+        "推文没有说明免费具体覆盖哪些功能和额度，以官方页面为准。没有付费订阅但想完整试一遍 Replit 的人，可以利用这个 24 小时窗口。"
+      ],
+      "creator": "Amjad Masad",
+      "role": "Replit CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @amasad",
+          "url": "https://x.com/amasad/status/2050479551537619413"
+        }
+      ],
+      "engagement": "22 likes"
+    }
+  ]
+}

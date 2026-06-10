@@ -1,0 +1,174 @@
+{
+  "date": "2026-04-08",
+  "generatedAt": "2026-04-08T07:15:24.357Z",
+  "stories": [
+    {
+      "slug": "2026-04-08-mythos-preview",
+      "title": "Anthropic 公布新模型 Claude Mythos Preview：距 Opus 4.6 仅两个月，先向 Glasswing 合作方开放",
+      "summary": "距 Opus 4.6 仅两个月，Anthropic 公布新模型 Claude Mythos Preview，目前只向 Project Glasswing 启动伙伴开放。Alex Albert 称 Glasswing 可能是他三年来近距离见过的最重要行业事件。公告推文本身没给能力数据。",
+      "content": [
+        "Alex Albert 宣布新模型 Claude Mythos Preview，并点出节奏：两个月前 Anthropic 才发布 Claude Opus 4.6。Mythos Preview 目前只向 Project Glasswing 的启动合作伙伴开放，模型与项目的说明放在配套链接里，公告推文本身没有给出 benchmark 或能力细节。",
+        "他对 Glasswing 的定性是「可能是我加入 Anthropic 近三年来近距离见过的最重要的行业事件」，并说感觉像站在历史的转折点上。「可能」是他自己的措辞；这句更多是内部人的情绪信号，可核验的能力信息要等说明页和第三方测试。",
+        "立场上注意这组推文全部来自 Anthropic 内部，关注度很高（主推 1.6 万赞）但信息密度低。同一天 Box CEO Aaron Levie 转评称关键 benchmark 有两位数提升（本期另收一条），那是他的转述，官方推文里没有这个数字。模型尚未对普通用户开放，目前能做的只有读官方说明页、等开放范围扩大。"
+      ],
+      "creator": "Alex Albert",
+      "role": "Anthropic 研究团队",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @alexalbert__（发布）", "url": "https://x.com/alexalbert__/status/2041579938537775160" },
+        { "label": "原推 @alexalbert__（开放范围）", "url": "https://x.com/alexalbert__/status/2041579950332113155" },
+        { "label": "原推 @alexalbert__（Glasswing 定性）", "url": "https://x.com/alexalbert__/status/2041578743769280811" }
+      ],
+      "engagement": "16.4K likes"
+    },
+    {
+      "slug": "2026-04-08-harness-engineering",
+      "title": "Ryan Lopopolo 详解 harness engineering：五个月零人工代码写出百万行产品，人工 review 移到 merge 之后",
+      "summary": "OpenAI Frontier 团队五个月零人工代码写出百万行产品，人工 review 已移到 merge 之后。方法核心是把工程纪律全部转成 agent 可读的文本，再用 Symphony 编排把人移出循环。认真做 agent 工程的人值得听全篇。",
+      "content": [
+        "Ryan Lopopolo 在 OpenAI Frontier 做新产品探索，给自己定的约束是一行代码都不写。五个月下来，起步三人的团队做出超过一百万行代码的 Electron 应用，节目介绍给的量级是约 1,500 个 PR、每天十亿 token。人工 code review 基本移到 merge 之后。他的类比是给 500 人组织当 group tech lead：不进每个 PR，只抽样读代码，用来推断团队卡在哪。",
+        "整套方法围绕一个判断：模型可以无限并行，唯一稀缺的是人的同步注意力。所以他反复问三件事——agent 在哪出错、我的时间花在哪、怎么让这部分时间以后不用花。具体做法是把所有工程纪律变成可注入给 agent 的文本：写进文档、在报错信息里带上链接、被 page 时直接在 Slack 里叫 Codex 修掉问题并顺手更新可靠性文档。模型换代时代码库要跟着改：GPT-5.3 加入后台 shell 后模型变得「更没耐心、更不愿阻塞」，他们一周内把整个构建系统改到一分钟内跑完。整个代码库只有六个 skill，新流程优先并入现有 skill；仓库切成约 500 个 npm 包，按一万人规模的架构组织——七个人本不需要，但他算的账是每个人实际相当于 10 到 50 个工程师。",
+        "Symphony 的起因是产能反过来压垮了人：GPT-5.2 之后人均 PR 从每天 3.5 个涨到 5 到 10 个，人被 tmux 窗格之间的上下文切换拖垮。这个用 Elixir 写的编排服务把人的角色压缩成每天打开 Linear 点几次是或否；review 不通过的 PR 不修补，连 worktree 一起丢弃重做。按他自己的说法，Symphony 之后生产力又提了五倍。对外分发只发一份 spec，让对方的 coding agent 在本地重新组装出整套系统——Twitter 上有人称之为 ghost libraries。他说有人直接把他的 harness 文章链接丢给 Codex 说「把我的 repo 改成这样」，效果出乎意料地好。",
+        "边界他自己说得很清楚：这一切发生在全新仓库里，不应默认适用于有历史包袱的代码库；模型现在仍不擅长从零到一的新产品原型和最难的重构。他对 MCP 偏空，理由是工具定义强行占用上下文、干扰自动 compaction，他们用本地 daemon 加一个小 CLI shim 替掉了 Playwright MCP。最容易搬走的两个做法：把团队所有 agent session 日志汇总，每天跑一轮 agent 复盘找改进点；给 CLI 加输出裁剪，让 agent 只看到失败的部分。"
+      ],
+      "creator": "Latent Space",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Latent Space", "url": "https://www.youtube.com/@LatentSpacePod" }
+      ]
+    },
+    {
+      "slug": "2026-04-08-codex-3m-reset",
+      "title": "Codex 周活用户到 300 万，OpenAI 重置用量额度，每增长一百万用户再重置一次直到一千万",
+      "summary": "Sam Altman 宣布 Codex 周活用户达 300 万，为庆祝重置所有用户的用量额度，并承诺此后每增长一百万用户重置一次，直到一千万。重度 Codex 用户的额度刚清零重计，攒着的大任务可以现在跑。",
+      "content": [
+        "Sam Altman 宣布 Codex 周活用户达到 300 万，为庆祝重置全部用户的用量额度，并承诺此后每增长一百万用户重置一次，直到一千万。",
+        "同一天发布的 Latent Space 节目里，OpenAI 的 Ryan Lopopolo 提到 Codex app 周活刚过 200 万、周增 25%。两个数字口径可能不同（Codex 整体与 Codex app），但放在一起大致能看出增长节奏。对用户的直接含义只有一条：额度已经重置，攒着的大任务可以趁这次跑掉。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2041658719839383945" }
+      ],
+      "engagement": "18.3K likes"
+    },
+    {
+      "slug": "2026-04-08-verification-tokens",
+      "title": "Claude Code 团队 Thariq：开放式验证很容易烧掉大量 token，输出却没有变好",
+      "summary": "他打了约 10 通电话、翻了一批 transcript 后给出最大的一条发现：在开放式验证上花大量 token 很常见，但这些 token 往往不会让输出变好。他说会试着再写怎么高效验证。在 agent 流程里加自动验证的人值得记下这条。",
+      "content": [
+        "Thariq 说目前打了大约 10 通这类电话、又看了一批 transcript，学到很多，其中最大的一条：在开放式验证上花掉大量 token 非常容易，而这些 token 往往不会让最终输出变好。他说会试着再写一篇讲怎么高效地做验证。",
+        "这是 Claude Code 团队成员从一手使用数据里得出的观察。对在 agent 流程里加自动验证的人，可以对照检查一遍：验证步骤有没有明确判据和停止条件——没有判据的「再检查一遍」，很可能就是他说的那类无效 token。这层检查清单是编辑引申，他的原推只给了现象，方法要等他后续的文章。"
+      ],
+      "creator": "Thariq",
+      "role": "Claude Code 团队 @ Anthropic",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @trq212", "url": "https://x.com/trq212/status/2041722125510377705" }
+      ],
+      "engagement": "588 likes"
+    },
+    {
+      "slug": "2026-04-08-prism-paper-review",
+      "title": "OpenAI Prism 推出 Paper Review：按技术审稿人标准查论文，整个功能是几小时搭出来的一个 skill",
+      "summary": "Paper Review 按技术审稿人标准查论文：数学、推导、记号、单位，以及结论是否真被结果支撑，输出可编辑的 LaTeX 审稿文件。更值得注意的细节：Prism 底层是 Codex，这个功能是几小时写出的一个 skill。",
+      "content": [
+        "Kevin Weil 介绍 Prism 的新功能 Paper Review，定位是技术审稿人：检查数学、推导、记号、单位、结构，以及论文结论是否真的被结果支撑，还会跨章节、图表、说明文字和附录找不一致，顺带标出表述不清、引用问题和校对错误。它在 Prism 里以结构化 workflow 运行，输出一份可编辑的 LaTeX 审稿文件，直接放进论文所在的项目。",
+        "实现细节比功能本身信息量大：他补充说这个功能是 @hemal 用几小时做出来的一个 skill，因为 Prism 底层由 Codex 驱动。顺着这个逻辑，产品建在 coding harness 上之后，新功能的增量成本可能低到一个 skill——这是编辑引申，但和他「More to come」的说法方向一致。",
+        "写论文的研究者可以直接试用，入口在推文里；团队同时在为 Prism 招首席设计师。"
+      ],
+      "creator": "Kevin Weil",
+      "role": "OpenAI VP Science",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @kevinweil（功能说明）", "url": "https://x.com/kevinweil/status/2041573802212303053" },
+        { "label": "原推 @kevinweil（实现细节与招聘）", "url": "https://x.com/kevinweil/status/2041592093718749659" },
+        { "label": "原推 @kevinweil（试用入口）", "url": "https://x.com/kevinweil/status/2041573804145799346" }
+      ],
+      "engagement": "85 likes"
+    },
+    {
+      "slug": "2026-04-08-levie-knowledge-agents",
+      "title": "Aaron Levie：coding agent 的生产力提升正在搬进其他知识工作，产品要按模型继续变强来设计",
+      "summary": "Levie 把 Mythos 发布读成模型能力没有撞墙的证据，称关键 benchmark 有两位数提升，并配套展示 Box Agent 自动填 RFP。他的建议：做能吃到后续模型改进的产品。Box CEO 立场，数字出自他的转述。",
+      "content": [
+        "他对 Mythos 发布的解读：模型能力进步没有墙，他称关键 benchmark 有「有意义的两位数提升」——这是他的转述，Anthropic 当天的公告推文里没有给数字。他的传导逻辑是 coding 和工具使用走到哪，agentic 工作流就跟到哪：大部分知识自动化卡在模型能否推理复杂任务、用对工具、拿到上下文、用 skill 和代码处理并验证数据，这条斜率会持续解锁金融、医疗、法律、咨询、供应链等场景。",
+        "具体例子是 Box Agent 填 RFP：给它问题清单，它自己规划、抽取问题、读知识库里的源材料、生成一份新的 Word 文档，全程不占用人的注意力。架构关键是让 agent 在后台用人类同款工具：搜文档、读全文、跑脚本、现写代码处理没见过的任务，之后还会通过 Box MCP 和 CLI 接进任意 agentic 系统。他说这种复杂度六个月前还做不到，当时模型始终跟不住长任务，现在靠 GPT-5.4、Opus 4.6、Gemini 3 这代模型才成立。",
+        "他的收尾带着明确的策略指向：要做能吃到后续模型改进的产品，否则战略上会很被动。立场提示：Box CEO 在用自家产品演示这个论点，传导逻辑可以参考，Box Agent 的实际表现和 benchmark 数字都需要自己核验。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie（Mythos 与能力斜率）", "url": "https://x.com/levie/status/2041732610179703100" },
+        { "label": "原推 @levie（Box Agent 填 RFP）", "url": "https://x.com/levie/status/2041512156693201176" }
+      ],
+      "engagement": "125 likes"
+    },
+    {
+      "slug": "2026-04-08-claude-code-bash-write",
+      "title": "Garry Tan：Claude Code 限制 Write 工具写出 workspace，bash 的 cat >> 却似乎能写任意文件",
+      "summary": "他观察到 Claude Code 权限模型的一个口子：Write 工具被限制在 workspace 内，但 agent 似乎能用 bash 里的 cat >> 写文件系统任意位置。原话带「似乎」，没有确证。依赖 workspace 隔离跑 agent 的人值得自己验证一遍。",
+      "content": [
+        "原话的语气是反讽：他「喜欢」Claude Code 允许 bash 这件事——agent 不能用 Write File 工具写 workspace 之外的文件，但似乎可以用 cat >> 写到文件系统里的任何位置。他保留了「似乎」，这是一条观察，推文里没有复现细节。",
+        "对把 agent 接进真实文件系统的人，这条的含义直接：只在工具层做写入边界，挡不住 shell 这条旁路——bash 一开，cat、重定向都是等价的写入通道。依赖 Claude Code workspace 隔离的用户可以花几分钟自己复现一遍，确认当前版本的实际行为，再决定要不要在系统层补这道边界。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator 总裁兼 CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2041654662764609735" }
+      ],
+      "engagement": "49 likes"
+    },
+    {
+      "slug": "2026-04-08-designers-pm",
+      "title": "Nan Yu：设计师和工程师抽象想产品问题时表现很好，工具一到手就直接开做；更多设计师该转 PM",
+      "summary": "他的管理观察：很多设计师和工程师在抽象讨论产品问题时表现很好，但只要手边有 IDE 或 Figma，就会直接动手做被要求的东西，跳过该想清的部分。他由此建议更多设计师转 PM。带产品团队的人可以参考。",
+      "content": [
+        "他的观察分两半：让设计师和工程师在抽象层面想产品问题，很多人想得很好；但工具在手边时，他们倾向于直接跳进去，把「被要求的那个东西」原样做出来。结论是更多设计师应该去做 PM，他认为他们会做得不错。",
+        "顺着这个观察，带产品团队的人有一个可以直接试的做法：产品定义阶段把讨论从 IDE 和 Figma 里挪出来，先把问题想完再开工具。这一步是编辑引申，他的原推只给了观察和转岗建议。"
+      ],
+      "creator": "Nan Yu",
+      "role": "Linear 产品负责人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @thenanyu", "url": "https://x.com/thenanyu/status/2041495924682244275" }
+      ],
+      "engagement": "191 likes"
+    },
+    {
+      "slug": "2026-04-08-changelog-check",
+      "title": "Nikunj Kothari：尽调先翻 changelog，不少高调发布的公司连续数周几乎没有产品更新",
+      "summary": "他给出一个具体的尽调动作：看完高调发布后去翻公司的 changelog 和案例研究，经常发现连续几周几乎没有更新。他的判断是创始人把精力错配到了传播和融资上。做早期产品的人值得知道 changelog 正在被这样读。",
+      "content": [
+        "他的方法很具体：对外表光鲜的公司，先看 changelog 或功能发布记录，有案例研究就读案例研究。他的观察是这类公司经常连续数周几乎没有变化——而持续发布本来对它们自己的市场营销有利，顺着他的逻辑，没有更新更可能是没有东西可写。他把根源归为早期创始人转去优化曝光和融资，而把产品和留存放到了次位。",
+        "他的建议是把打磨爆款发布视频的精力换到愿意付费的客户身上，原话收尾是「相信我，VC 会跟着来」。这是投资人视角的提醒；对做早期产品的人，这条的另一面同样可操作——changelog 会被人当尽调材料读，持续记录发布本身就有信号价值。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2041757065354293760" }
+      ],
+      "engagement": "43 likes"
+    },
+    {
+      "slug": "2026-04-08-personalized-podcast",
+      "title": "Zara Zhang 发布 Personalized Podcast skill：把任意内容变成双 AI 主持的播客，经 RSS 进播客客户端",
+      "summary": "这个 skill 把任意材料转成两个 AI 主持的播客，发布成 RSS feed，可在任何播客 app 订阅收听。她自己的用法是把会议 transcript 重混成 AI 点评她本人的节目，并称这是「content for one」的时代。找 skill 玩法的人可以直接装。",
+      "content": [
+        "功能本身一句话能说完：输入任意内容，生成由两个 AI 主持的播客节目，发布成 RSS feed，在常用的播客 app 里订阅、通勤路上听。skill 链接在配套推文里。",
+        "她自己的用法更有信息量：把会议 transcript 重混成播客，让两个 AI 像旁听了她的对话一样，点评对她本人的印象。她把这类产物归为「content for one」——只为一个听众生成的内容。对在找 skill 玩法的人，这条展示了把个人数据流转成可消费内容的一种做法，可以直接装来试。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui（介绍）", "url": "https://x.com/zarazhangrui/status/2041736869998948528" },
+        { "label": "原推 @zarazhangrui（skill 链接）", "url": "https://x.com/zarazhangrui/status/2041736976630739000" }
+      ],
+      "engagement": "155 likes"
+    }
+  ]
+}

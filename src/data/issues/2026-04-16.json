@@ -1,0 +1,159 @@
+{
+  "date": "2026-04-16",
+  "generatedAt": "2026-04-16T07:28:48.878Z",
+  "stories": [
+    {
+      "slug": "2026-04-16-claude-code-1m-context",
+      "title": "Claude Code 团队发布 1M 上下文使用指南：session 管不好，更大窗口会放大上下文污染",
+      "summary": "指南之外最实用的一条：autocompact 阈值可以用环境变量自己设，等于主动调小窗口，他认为 400k 是任务容量和上下文卫生之间不错的折中。他还专门改了文章开头，把“双刃剑”的判断提前。重度长 session 用户值得照着自查。",
+      "content": [
+        "Thariq 给 Claude Code 的 1M 上下文窗口写了一篇 session 管理指南，发出后又专门改了开头，因为他觉得第一版把重点埋住了。要前置的判断是：1M 窗口是双刃剑，能让 Claude 接更复杂的任务，但 session 管理不好时，上下文污染也会跟着窗口一起放大。指南同步发在了 Claude Blog。",
+        "配套有一个具体开关：autocompact 阈值可以自己设，等于主动把上下文窗口调小。他给的参考是启动时加 CLAUDE_CODE_AUTO_COMPACT_WINDOW=400000，在任务容量和上下文卫生之间取折中，他认为 400k 是个不错的值。",
+        "这是 Claude Code 团队成员对自家新功能的一手提醒，把副作用讲在了前面，可核验的部分是这个环境变量和配套文档。已经在 1M 窗口上跑长 session 的用户，可以拿 400k 阈值对比跑一段，看长任务的输出质量有没有差别。"
+      ],
+      "creator": "Thariq",
+      "role": "Claude Code 团队（Anthropic）",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @trq212（指南）", "url": "https://x.com/trq212/status/2044653083817660431" },
+        { "label": "原推 @trq212（autocompact 设置）", "url": "https://x.com/trq212/status/2044653085415604473" },
+        { "label": "原推 @trq212（Claude Blog 版）", "url": "https://x.com/trq212/status/2044654705780179011" }
+      ],
+      "engagement": "375 likes"
+    },
+    {
+      "slug": "2026-04-16-openclaw-security-hardening",
+      "title": "Steipete 回应 OpenClaw 安全质疑：四个月加固后方案完整，更该警惕不发安全公告的开源项目",
+      "summary": "他先认账：12 月确实不安全；现在有 Docker 或 OpenShell 沙箱、allow-list、按次 exec 确认，数百名安全研究员渗透测试过。另一条提醒 GPT 5.4-Cyber 已能逆向闭源软件，闭源不等于安全。Garry Tan 转发站台称“不安全”阶段已结束。",
+      "content": [
+        "Steipete 回应对 OpenClaw 安全性的质疑时先认了账：12 月时确实如此。四个月、数千工时之后，现在的方案是：可以全 yolo 跑，也可以用 Docker 或 OpenShell 沙箱，配 allow-list 和按次允许或拒绝 exec 的确认；他说已有数百名安全研究员对它做过渗透测试。",
+        "另一条针对的是“闭源更安全”的想法。他的说法是，看看 GPT 5.4-Cyber 的闭源逆向能力就知道这条路靠不住；OpenClaw 一直有数百个团队在试图攻破，他的应对是快速迭代加代码加固，过程中确实引入过回归、也挨了用户的骂，但他认为这是唯一的走法。他同时警告：对不做这类对抗、也不发布安全公告的开源项目和 harness 要非常小心。",
+        "Garry Tan 转发站台，给出自己的配置——Docker 沙箱、带日志的 mitmproxy 防火墙加 Clawvisor——认为“OpenClaw 不安全”的说法可以翻篇了。两人的表态都来自利益相关方：一个为项目负责，一个公开支持。可核验的部分是这些安全机制是否存在、advisory 是否持续公开。在选 agent harness 的人，可以把“是否发布安全公告”加进自己的评估清单。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw 维护者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete（闭源逆向）", "url": "https://x.com/steipete/status/2044423791405924562" },
+        { "label": "原推 @steipete（安全方案）", "url": "https://x.com/steipete/status/2044482797449150520" },
+        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2044512730087072000" }
+      ],
+      "engagement": "1420 likes"
+    },
+    {
+      "slug": "2026-04-16-rauch-design-factory",
+      "title": "Guillermo Rauch：用现成构件生成软件，已经比寻找和采购合适的 SaaS 更容易",
+      "summary": "判断的由头是 basement.studio 用 Claude Code、three.js、Next.js 自建的 Shader Lab：每次合作 Rauch 都能看到他们一批自己部署的内部工具。他把这归成趋势：每个团队都能建自己的“设计工厂”。在纠结内部工具自建还是采购的团队值得对照算账。",
+      "content": [
+        "basement.studio 用 Claude Code、three.js、Next.js 和 Vercel 给自己搭了一个叫 Shader Lab 的工具，完全按工作室自己的需求、愿景和规格来。Rauch 说每次和这家工作室合作项目，都能看到一批他们自己部署的内部工具，有的专为单个项目而建，有的偏通用。",
+        "他的判断落在单个工具之外：全世界每个团队现在都有能力建自己的“设计工厂”；用强大的现成构件重组生成软件，已经比搜寻和采购一款合适的 SaaS 更容易。同日他还翻出自己多年前的旧推“软件工厂就是产品”，把这次的观察接进他一直在讲的叙事。",
+        "立场上，Shader Lab 跑在 Vercel 自家技术栈上，这条判断同时也在给自家生态背书。即便打个折扣，对内部工具决策的含义仍然值得过一遍：如果生成确实已经比采购省事，过去默认“买 SaaS”的需求可以重新评估，尤其是高度定制、本来就找不到现成产品的那类场景。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg（Shader Lab）", "url": "https://x.com/rauchg/status/2044445445636972578" },
+        { "label": "原推 @rauchg（软件工厂）", "url": "https://x.com/rauchg/status/2044419655306215492" }
+      ],
+      "engagement": "1705 likes"
+    },
+    {
+      "slug": "2026-04-16-ebm-logical-intelligence",
+      "title": "Logical Intelligence 创始人 Eve：LLM 架构缺内部验证器，无 token 的能量基模型适合做可验证 AI",
+      "summary": "Dan Shipper 访谈 Eve：EBM 把数据映射成能量地形，能在处理中自我对齐、随时检视，目标是形式化验证的代码生成和关键系统；她称接触的关键行业里数据分析 LLM 占比为零。整场是创始人立场，Dan 当场质疑了“LLM 见顶”的判断。",
+      "content": [
+        "嘉宾 Eve 是 Logical Intelligence 创始人兼 CEO，公司自研 LLM 和能量基模型（EBM）两条线，产品方向是软件和硬件的正确性。她对 LLM 的批评集中在架构上：自回归模型逐 token 往前走，没有内部验证器，对使用者是黑箱；输出端可以接 Lean4 这类外部验证器，但架构本身在玩“猜谜游戏”，token 让验证又贵又慢。她的比喻是在地图上导航：LLM 一次只能选一个方向，看见路上的坑也退不回去，幻觉就是这么掉进去的；EBM 全程有鸟瞰视角，能换路线。",
+        "EBM 的机制是把数据直接映射成能量地形：高点对应低概率状态，低点对应高概率状态，推理就是在地形上导航。没有 token 序列，处理过程中可以自我对齐，训练中随时能打开检视，外部验证器照样能接，等于内外两层验证。模型正式名称是带潜变量的能量基推理模型，内部代号 Kona；潜变量存的是模型对数据规则的理解，本身也是一个能量地形，对稀疏数据比较友好。",
+        "落到产品上，她要做形式化验证的代码生成：从 vibe coding 走向她说的 vibe code specifications，在编译层输出机器可验证的证书，逻辑不兼容时用自然语言指出问题和修法。更大的论点是约束——EBM 可以被强制遵守人为设定的约束，LLM 会幻觉、约束不住，所以车、飞机、电网这类关键系统不该交给 LLM。她还给了一个来自一线接触的观察：银行、交易、药物发现这些行业的数据分析，目前由 LLM 承担的比例是零。",
+        "立场校准：整场是创始人在推销自家路线。“LLM 进展在放缓、不会再有相变级突破”和“一些大厂内部已经有 EBM 模型”都是她的单方说法，Dan Shipper 当场反驳了前者，他的体感是每隔一两个月就有明显更强的模型。对从业者更可用的部分是她拆验证成本的框架：内部验证器、外部验证器、行为规格三层分开看，评估 AI 进关键系统的方案时可以照这个框架逐层问。"
+      ],
+      "creator": "AI & I by Every",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "AI & I by Every", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" }
+      ]
+    },
+    {
+      "slug": "2026-04-16-gemini-on-mac",
+      "title": "Google 发布 Mac 原生 Gemini 客户端：小团队不到 100 天做出 100 多个功能",
+      "summary": "Josh Woodward 给的发布数字：听了用户反馈后新招一支小团队，不到 100 天、100 多个功能、100% 原生 Swift，主打快。产品之外，这组交付节奏是他主动挑出来讲的信息；Mac 用户可以直接装来试，他在公开收反馈。",
+      "content": [
+        "Josh Woodward 公布 Gemini 的 Mac 原生客户端，给的背景是：听了用户反馈，新招了一支小团队，不到 100 天做了 100 多个功能，100% 原生 Swift，他强调的体验点是快。",
+        "这条发布推的信息量主要在交付方式：小团队、百天周期、原生实现，是他主动挑出来讲的三件事。Mac 用户可以直接下载试用，他也在公开收反馈。"
+      ],
+      "creator": "Josh Woodward",
+      "role": "Google 副总裁（Google Labs、Gemini App、AI Studio）",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2044452201947627709" },
+        { "label": "原推 @joshwoodward（下载链接）", "url": "https://x.com/joshwoodward/status/2044452203596071052" }
+      ],
+      "engagement": "5901 likes"
+    },
+    {
+      "slug": "2026-04-16-swyx-meta-turn",
+      "title": "Swyx：Meta AI 从 Llama 4 翻车走到回转，上线接近 Opus 级模型并收购 Dreamer 和 Manus",
+      "summary": "他列的回转证据还有两条：2025 年那轮挖人混战后招聘不减反增；Zuck 搬去和 Alexandr、Nat 同住、亲自写代码。收购 Dreamer 和 Manus 的目标是 AI OS 的 prosumer 层。“接近 Opus 级”是他的评级，模型无 API、不开源，暂无法外部核验。",
+      "content": [
+        "Swyx 给 Meta x AI 的大叙事标了拐点：翻车的部分是 Llama 4，回转的证据有四条——自 2025 年那轮 “soup wars”（按上下文应指当时的挖人混战）之后招聘反而更多；Zuck 搬去和 Alexandr、Nat 同住，重新开始写代码；终于正式上线了他称为“接近 Opus 级”的模型，虽然没有 API、也不开源；收购了 @dps 的 Dreamer 和 @peakji 的 Manus，目标是 AI OS 的 prosumer 层。",
+        "他的收束是 MSL 这条“河”接下来会相当精彩。需要提醒的是，“接近 Opus 级”是他的个人评级，模型没有 API、不开源，外部暂时无法独立核验。跟踪大厂格局的人可以把这四件事当一组记：招聘、组织、模型补课、收购；其中收购那条线明确对着 prosumer 入口去。"
+      ],
+      "creator": "Swyx",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2044598788065731017" }
+      ],
+      "engagement": "70 likes"
+    },
+    {
+      "slug": "2026-04-16-levie-job-bottlenecks",
+      "title": "Aaron Levie：AI 在一处提速后瓶颈转移到仍需要人的环节，这是 AI 创造就业的机制",
+      "summary": "例子：法律咨询变多最终找上更多律师，代码变多需要更多安全研究员，自动化转诊卡在医生不够。他同时承认部分领域就是纯降本，但认为这种价值有上限，因为对手也在用 AI 抬高竞争。在评估 AI 对自己行业就业影响的人值得读原文。",
+      "content": [
+        "Levie 的论证是一个机制：用 AI 加速一个环节的产出之后，流程迟早会在别处撞上新的瓶颈，而那个瓶颈仍然需要人。他引 FT 的例子：更多人向 AI agent 咨询法律问题，下游最终意味着更多律师被这些问题找上。其他推力还有 AI 加速新公司成立、专利申请、科研产出，最后也都落到律师和监管职能头上。",
+        "同样的结构他又列了几个：代码变多带来更多安全风险，需要更多安全研究员；医疗里自动化转诊，瓶颈变成医生不够用；AI 做更多客户触达，带来更多销售对话。",
+        "他也承认有些领域 AI 就是单纯降本，自动化之后支出会减少。但这种价值会见顶，因为世界不是静态的：对手会用 AI 做更好的产品、见更多客户、跑更好的广告，你最终要么跟上要么出局。把这条和裁员叙事对照着看，他给就业增量找的来源很具体：瓶颈转移，加上竞争被 AI 抬高。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2044621545348481285" }
+      ],
+      "engagement": "156 likes"
+    },
+    {
+      "slug": "2026-04-16-swyx-subagents-spaces",
+      "title": "Swyx：subagents 是优化问题，让 agent 组合并指挥其他 agent 是能力问题",
+      "summary": "背景是 Cognition 当天发布 Spaces，Swyx 称三个月前以顾问身份参与设计了这个概念，这次发布只是开始。注意他的利益相关；值得记的是那个区分——往下拆是调度优化，往上让 agent 组合、互相管理和查询要靠模型能力。",
+      "content": [
+        "Swyx 此前的说法是“今年是 subagents 之年”，这次他补了一个区分：把任务往下拆给 subagents，大体上是个优化问题；反过来的问题——让 agent 能互相组合、由 boss agent 去管理和查询其他 agent——是个能力问题。",
+        "背景是 Cognition 当天发布 Spaces。Swyx 说自己以顾问身份在三个月前参与了这个概念的设计，并称这次发布只是后续一系列东西的开始。他是 Cognition 的顾问，对这次发布的评价立场偏向；区分本身比站台更值得记：往下拆考验调度和编排，往上组织考验模型能力，两边要解的问题类型不同。"
+      ],
+      "creator": "Swyx",
+      "role": "Cognition 顾问",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2044542494420214217" }
+      ],
+      "engagement": "49 likes"
+    },
+    {
+      "slug": "2026-04-16-amjad-oss-security-metric",
+      "title": "Amjad Masad 提议 GitHub 加安全指标：展示每个开源包投入多少算力做加固",
+      "summary": "前提是前沿模型把找安全漏洞完全自动化。他的示意是在 linus/linux 旁边，除了 20 万 star 再挂一个 2.39 亿美元的加固算力数，并称这是开源软件能被信任的唯一办法。做供应链安全、挑开源依赖的人可以顺着这个思路想。",
+      "content": [
+        "Amjad 的提议带一个前提：如果用 Mythos 这类前沿模型找安全漏洞被完全自动化，GitHub 就应该加一个类似 star 的指标，展示每个开源包被投入了多少算力做安全加固。他给的示意是在 linus/linux 旁边，除了 20 万 star，再挂一个 2.39 亿美元的加固算力数。他的结论：这是开源软件能被信任的唯一办法。",
+        "顺着这个逻辑，挑开源依赖时，“被投入过多少自动化安全审计”可能会变成和 star 数并列的参考维度。这条可以和同日 Steipete 关于安全公告的提醒放在一起看，两条都在把安全投入推向公开、可比的信号。"
+      ],
+      "creator": "Amjad Masad",
+      "role": "Replit CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @amasad", "url": "https://x.com/amasad/status/2044437437141909609" }
+      ],
+      "engagement": "410 likes"
+    }
+  ]
+}

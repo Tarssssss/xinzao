@@ -1,0 +1,122 @@
+{
+  "date": "2026-04-30",
+  "generatedAt": "2026-04-30T08:17:51.251Z",
+  "stories": [
+    {
+      "slug": "2026-04-30-stripe-agent-economy",
+      "title": "Stripe 一手数据：平台上做到 3000 万美元 ARR 的 AI 公司大约只用十八个月，欺诈正从盗卡转向偷算力",
+      "summary": "Stripe 经手全球约 2% 的 GDP。这期最硬的数据：平台头部 AI 公司做到 3000 万美元 ARR 大约十八个月，三倍于 2018 年的头部 SaaS；免费试用欺诈半年涨 4 倍。做 AI 定价、增长和风控的人值得听全集。",
+      "content": [
+        "Every 的 AI & I 这期请来 Stripe 数据与 AI 负责人 Emily Glassberg Sands。Stripe 经手约全球 2% 的 GDP，她给了一组一手数据：Stripe 上前 100 的 AI 公司里，做到 3000 万美元 ARR 的大约用十八个月，比 2018 年那批头部 SaaS 快三倍；到目前为止这些增长基本是净新增支出，还没有明显吃掉传统 SaaS 预算，但她预计接下来会开始替代，对象包括传统 SaaS、人力成本，以及同类 AI 产品之间的互相替代。留存数据也值得记：按品类看（比如 AI 编码工具），B2C 和 B2B 留存都比当年 SaaS 高，按单一产品看反而略低——用户不离开品类，但会在产品之间跳。",
+        "欺诈是她讲得最具体的部分。攻击对象正在从盗刷卡变成偷算力：Stripe 上的 AI 公司中约 7% 的注册是多账号滥用者；免费试用滥用过去六个月涨了 4 倍，Stripe 正为一家大客户每周拦截 25 万个欺诈性免费试用。她还算了一家公司的账：免费试用转化率只有 4%，每个试用烧 25 美元的 LLM 成本，等于每个付费用户背后先烧掉 625 美元，细查后发现这批试用者绝大多数从一开始就没打算付费。她的概括是免费算力成了新的获客成本，欺诈从交易环节的问题变成了覆盖注册、付款、超额、退款争议的全漏斗问题。",
+        "定价上她的判断分两层：模型提供方按 token 计费会继续；垂直 AI 产品最终会走向按结果计费（Intercom 的 Fin 已经按解决的工单收费），因为客户会要求它们对 ROI 负责。最激进的一句是企业 seat 计费：她说如果半年后 seat 授权还剩今天的一半，她会非常惊讶；消费者端则继续是固定月费加超额。另一个信号：访问 Stripe 文档的 LLM 流量一年涨了 10 倍，人类流量持平略升——机器已经成了开发者基础设施的用户。",
+        "agent 电商这块她反而降温：消费端的 agent 购买量还很小，集中在万圣节服装这类标准化、低价的商品，和早年网购从标品起步是同一条轨迹；基础设施在先行，和 OpenAI 共同设计的 agentic commerce 协议已被 Microsoft Copilot 和 Meta 的广告内购物采用，商户接一次 Stripe 就能接入多个 agent 入口并保留 merchant of record。立场上要打折——她整场也在推销 Radar、Billing 和 Link，所有数字都只是 Stripe 网络内的样本。可直接拿走的是两件事：照她说的四个节点检查自己的欺诈暴露；做 freemium 的 AI 产品先算一遍每个付费用户背后烧掉的试用成本。"
+      ],
+      "creator": "Emily Glassberg Sands",
+      "role": "Stripe 数据与 AI 负责人",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "AI & I by Every", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" },
+        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2049512129846530086" }
+      ]
+    },
+    {
+      "slug": "2026-04-30-gpt-5-5-cyber",
+      "title": "OpenAI 数日内向关键网络防御方推送 GPT-5.5-Cyber，受信访问机制将与生态和政府共同敲定",
+      "summary": "OpenAI 未来几天开始向关键网络防御方推送网络安全模型 GPT-5.5-Cyber，访问按“受信访问”设计，规则将与整个生态和政府一起定。推文没给能力细节与申请渠道，安全团队和基础设施运营方值得盯后续。",
+      "content": [
+        "Sam Altman 宣布未来几天开始向关键网络防御方（critical cyber defenders）推送 GPT-5.5-Cyber，定位是 frontier 级网络安全模型。访问方式还没定型：OpenAI 会和整个生态及政府一起设计网络安全场景的“受信访问”（trusted access），目标是快速帮企业和基础设施加固安全。",
+        "推文一共两句话，没有能力说明、没有评测、也没有申请渠道。比模型本身更值得记的是发布形态：先按防御方身份放行，公开访问目前没有任何说法。顺着这个逻辑，如果受信访问模式跑通，高敏感能力的模型今后可能都走这条路——这是编辑推断，原文没说。安全团队和关键基础设施运营方可以先盯 OpenAI 后续公布的接入方式。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2049712078836170843" }
+      ],
+      "engagement": "5.6K likes"
+    },
+    {
+      "slug": "2026-04-30-agent-reality-check",
+      "title": "Aditya Agarwal 大量上手 OpenClaw 后的观察：agent 本质是代码生成加工具调用的包装，离消费级还很远",
+      "summary": "大量安装、调试 OpenClaw、Hermes 后的一手观察，最重的两条：agent 干活靠迭代式工具调用，理解这点后一次性 chat 更像搜索；agent 今天还是开发者产品，离消费级很远。做 agent 产品的人值得读原帖。",
+      "content": [
+        "Aditya Agarwal 说这些观察来自大量安装、使用、调试 OpenClaw、Hermes 等 agent 并拿它们搭东西的时间。最核心的一条：agent 本质是对代码生成和工具调用的包装，大部分“工作”是靠迭代式的 tool calling 完成的，和“生成式 AI”这个标签关系不大。他认为理解了这个核心循环之后，老式的一次性 chat 就说不通了：一个 always-on、能适应、能学习、能维持状态的 agent 比一次性的 chat prompt 有吸引力得多，后者更像一次搜索查询。",
+        "产品成熟度上他不客气：多数对 OpenClaw、HermesAgent 赞不绝口的人其实没真用过；agent 今天是开发者产品，在愉悦感、简洁性、可靠性上离消费级还有很远。他点了一个具体方向——希望 agent 少给 chat、多生成动态界面，交互式的应用和网页，并猜测这会是下一个大的创新方向。",
+        "体验痛点集中在环境搭建：今天折腾 agent 的大量时间花在让它能用浏览器和电脑上，限制非常多；安装运行 OpenClaw 像 2000 年代初装 Linux，大量时间在编译驱动、调配置，拼好之后很有成就感，但到真正有用为止是大量的工作。这份清单来自第一手折腾，比多数转述可信；做 agent 产品的人可以把“动态界面”和“装机体验”这两条当成现成的机会清单。"
+      ],
+      "creator": "Aditya Agarwal",
+      "role": "South Park Commons 普通合伙人，前 Dropbox CTO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @adityaag", "url": "https://x.com/adityaag/status/2049530878083379427" }
+      ],
+      "engagement": "361 likes"
+    },
+    {
+      "slug": "2026-04-30-levie-agent-engineering-roles",
+      "title": "Aaron Levie 开始招内部 agent 工程师：像对内的 FDE，把自动化带给流程而不是岗位",
+      "summary": "Box 在招和转训的新角色像对内的 FDE：打通 Salesforce、Workday 等内部系统，搭安全、有治理的 agent，把工作流沉淀成 skills；业务侧可能再长出 agent PM。在企业里推 agent 落地的人可以直接对照这份角色描述。",
+      "content": [
+        "Aaron Levie 说 Box 正在为内部职能招聘和转训一类新角色：agent 工程师，专门让更强的 agent 在关键业务流程上真正跑起来。他的描述像一个对内的 FDE：技术上要非常强，负责接通内部业务系统（Box、Salesforce、Workday 这类），搭建安全、有治理的内部工作流 agent，并把工作流沉淀成 skills。多数情况下这个人会以嵌入方式直接和业务一起干活。",
+        "他预计这会连带在业务侧催生另一个新角色，类似面向内部流程的 agent 产品经理。关键是要有能横跨多个团队和职能的“技术 + 流程”复合型人才，照他的原话，“重点不是把自动化带给某个岗位，而是把自动化带给某个流程”。他判断这类角色在 Box 和其他公司会越来越重要。同一天 Zara Zhang 给了一个相邻的说法：该把 IT 和内部工具团队当成“agent 的 HR”来看。两条放在一起，指向的都是 agent 落地正在变成组织设计问题——这层归纳是编辑的。",
+        "立场上，Levie 是 Box CEO，企业内部 agent 化的叙事对他的生意直接有利。但角色描述本身足够具体：在企业里推 agent 落地的人可以拿“内部 FDE 加业务侧 agent PM”这个组合，对照自己团队现在缺哪一半。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2049714403050918067" },
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2049599305825341518" }
+      ],
+      "engagement": "226 likes"
+    },
+    {
+      "slug": "2026-04-30-gemini-file-export",
+      "title": "Gemini 上线文件生成与导出，覆盖 Docs、Excel、PDF、Slides、LaTeX 等格式，全平台全球可用",
+      "summary": "告诉 Gemini 要什么内容、什么格式，直接产出 Google Docs、Word、PDF、Excel、CSV、Slides、Markdown、LaTeX 等文件并导出，所有平台全球上线。聊天助手开始直接交付文件，做文档和办公工具的人值得跑一遍格式覆盖。",
+      "content": [
+        "Josh Woodward 宣布 Gemini 上线文件生成与导出：告诉 Gemini 想要什么内容、什么格式，它直接把文件做出来。支持的格式包括 Google Docs、Word（.docx）、PDF、Google Sheets、Excel（.xlsx）、CSV、Google Slides，以及 Markdown、LaTeX、TXT、RTF，所有平台全球可用。",
+        "这类功能改的是交付物：聊天助手的输出从“复制出去自己排版”变成直接拿到能用的文件。发布帖本身只列了格式清单，质量没法从帖子判断——做文档和办公工具的人值得自己跑一遍格式覆盖和导出质量，再估自家产品和通用助手之间还剩多少差距。"
+      ],
+      "creator": "Josh Woodward",
+      "role": "Google Labs 与 Gemini App VP",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2049524400131838436" }
+      ],
+      "engagement": "2.4K likes"
+    },
+    {
+      "slug": "2026-04-30-clawsweeper-codex-review",
+      "title": "Peter Steinberger 把 codex review 接进 clawsweeper：循环审到找不出新问题，自动合并",
+      "summary": "clawsweeper 集成了 codex review：作者称系统 prompt 和官方 /review 很接近、能拿到相同效果，外加自动合并、循环跑到无新发现为止。想把 code review 做成自动收敛流程的人可以直接参考这套组合。",
+      "content": [
+        "Peter Steinberger 把 codex review 集成进了 clawsweeper。按他的说法，用的系统 prompt 和官方 /review 非常接近，所以能拿到和 /review 相同的审查效果；clawsweeper 在此之上有自动合并，并且会循环跑审查，直到再也找不出新问题为止。",
+        "这套组合把 code review 从一次性的检查变成自动收敛的循环：审、修、再审，停在零新发现。“效果等同 /review”是作者自己的说法，没有对比数据；在用 codex /review 的人可以拿一个真实 PR 跑一遍这条流水线再下结论。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw 作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2049518771023360010" }
+      ],
+      "engagement": "288 likes"
+    },
+    {
+      "slug": "2026-04-30-kevinweil-radiologist",
+      "title": "Kevin Weil：放射科医生的工作是治好病人，AI 加快读片意味着能多接诊",
+      "summary": "一句话论点：读 X 光片是手段，治好病人才是工作，AI 加快读片，医生就能看更多、治更多人。没有数据支撑，属 OpenAI 高管表态，可当作“AI 与岗位”话题的口径样本，够不上对放射科就业的预测。",
+      "content": [
+        "Kevin Weil 在一条转推上给出自己的论点：“放射科医生的工作不是读 X 光片，是治好病人。”如果 AI 能加快理解 X 光片的过程，放射科医生就能接诊、治愈更多人。",
+        "论证方式是把岗位拆成手段和目的：读片是手段，治病是目的，AI 提速的只是手段。这是一句话表态，没有数据支撑，发言人是 OpenAI 的 VP Science，立场上偏向 AI 扩散的叙事。可以当作 AI 公司高管谈“AI 与岗位”时的口径样本来读，它本身够不上对放射科就业的实际预测。"
+      ],
+      "creator": "Kevin Weil",
+      "role": "OpenAI VP Science",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @kevinweil", "url": "https://x.com/kevinweil/status/2049584046213378229" }
+      ],
+      "engagement": "259 likes"
+    }
+  ]
+}

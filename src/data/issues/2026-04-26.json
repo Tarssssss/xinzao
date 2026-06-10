@@ -1,0 +1,139 @@
+{
+  "date": "2026-04-26",
+  "generatedAt": "2026-04-26T07:25:34.134Z",
+  "stories": [
+    {
+      "slug": "2026-04-26-sama-frontend-iq",
+      "title": "Sam Altman：OpenAI 模型前端观感还会被压一点，智力已经碾压，前端短板会修",
+      "summary": "OpenAI CEO 自评当前模型：前端观感还会被对手压一点，智力上已经碾压，并紧接着补了句前端会修。没点名对手、没给数据，属于竞争姿态的信号；在意前端生成质量的人可以自己对比验证。",
+      "content": [
+        "原话是「we still get looksmaxxed on frontend a little but we IQmog hard now」：前端观感上还会被别家压一点，但智力上现在已经碾压（mog 是网络俚语，指全面压制）。紧接着他补了一条「(and we will fix the former)」，明确说前端这个短板会修。",
+        "这是 OpenAI 负责人评自家模型，没点名对比对象，也没有任何数据，更接近竞争姿态的表态。可核验的有两处：前端生成质量的差距是否真在缩小，以及「会修」是否兑现到后续版本——都可以在自己的工作流里持续对比。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2048160404376105179" },
+        { "label": "补充 @sama", "url": "https://x.com/sama/status/2048160448340767038" }
+      ],
+      "engagement": "14.3K likes"
+    },
+    {
+      "slug": "2026-04-26-levie-ai-leverage",
+      "title": "Aaron Levie：AI 的杠杆让野心加基本功可以越过资历门槛，公司应把这批人放进关键位置",
+      "summary": "Box CEO 的判断：AI 在几乎所有领域给出过去没有的杠杆，野心加基本功就能越过按资历设的门槛，新人尤其受益，抓住的人会大幅领先；公司应该把这批人找出来放进关键位置。这是对一篇文章的转评，原文不在素材里。",
+      "content": [
+        "核心论点：AI 在几乎所有领域都提供了过去拿不到的杠杆，眼下是一个独特的时间点——只要野心和该领域的基本功足够，就能越过很多按经验年限设下的角色门槛。这对资深和新人都成立，但对新人格外有利：和几年前相比，新员工能做成的事多得多。抓住这个窗口的人会大幅领先。",
+        "给公司侧的建议是，不管在内部还是外部，找到这批人并放进关键位置，尽量放大他们的产出。直接引语：「这些人会显得有点怪、像是来自未来，但他们会帮你弄清楚方向。」",
+        "这是对一篇文章的转评，他只说了一句「Great read」，原文不在素材里，以上是他自己的归纳。对正在重估招聘门槛的公司，和资历不够但杠杆用得好的个人，这条算一个来自企业软件大公司 CEO 的明确表态。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2048223146063609965" }
+      ],
+      "engagement": "396 likes"
+    },
+    {
+      "slug": "2026-04-26-gstack-browser",
+      "title": "Garry Tan 发布 GStack Browser，在 Claude Code 里并排控制浏览器，GBrain 同日更新 v0.22",
+      "summary": "YC CEO 发布 GStack Browser：在 Claude Code 里输入 Install GStack 免费安装，用 /open-gstack-browser 把浏览器和 Claude Code 并排协同。同日 GBrain 更新 v0.22，修搜索检索、新增 eval 系统并拆出独立 evals repo。Claude Code 用户可以直接试。",
+      "content": [
+        "GStack Browser 针对的场景是在 Claude Code 旁边并排控制一个浏览器。安装和使用都在 Claude Code 内完成：输入 Install GStack 免费安装，再用 /open-gstack-browser 技能打开浏览器，与 Claude Code 并排协同。",
+        "同一天 GBrain 更新到 v0.22：一批搜索与检索的修复，新增一套 eval 系统，并把 gbrain-evals 拆成独立 repo，避免主仓库 checkout 体积膨胀。evals 拆库这个做法对自己维护 agent 项目的人有参考价值——eval 数据很容易把仓库拖大。两个项目都出自他个人，发布信息之外没有更多细节，是否好用得装上试。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator 总裁兼 CEO，GStack 与 GBrain 作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan（GStack Browser）", "url": "https://x.com/garrytan/status/2048278995121094868" },
+        { "label": "原推 @garrytan（安装方式）", "url": "https://x.com/garrytan/status/2048279121034101147" },
+        { "label": "原推 @garrytan（GBrain v0.22）", "url": "https://x.com/garrytan/status/2048290087318773807" }
+      ],
+      "engagement": "111 likes"
+    },
+    {
+      "slug": "2026-04-26-steipete-releases",
+      "title": "Peter Steinberger 同日更新 Summarize 0.14.0 与 CodexBar 0.23，新增 GPT-5.5 Fast 模式和 Mistral 支持",
+      "summary": "Summarize 0.14.0 新增 --fast 调 GPT-5.5 Fast 模式、浏览器扩展抽取 Reddit 串、本地 PDF --extract；CodexBar 0.23 加 Mistral 支持、GPT-5.5 价格和 Claude、Cursor 多项用量显示。在用这两个工具的人值得点开看完整更新项。",
+      "content": [
+        "Summarize 0.14.0：新增 --fast 参数调用 GPT-5.5 Fast 模式，浏览器扩展支持抽取 Reddit 讨论串，本地 PDF 支持 --extract，另修了自动模型配置和 Meta 系站点的兼容问题。",
+        "CodexBar 0.23：新增 Mistral 支持和 GPT-5.5 价格，用量显示加入 Claude Designs、Daily Routines 和 Cursor Extra，widget 和菜单做了清理，外加一批可靠性修复。从更新项能看出，多模型并用（GPT-5.5、Claude、Mistral、Cursor）已经是他预设的默认工作方式；在用这两个工具的人直接升级即可。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw 作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete（Summarize 0.14.0）", "url": "https://x.com/steipete/status/2048275589224628677" },
+        { "label": "原推 @steipete（CodexBar 0.23）", "url": "https://x.com/steipete/status/2048252455817785357" }
+      ],
+      "engagement": "214 likes"
+    },
+    {
+      "slug": "2026-04-26-nanyu-adoption-sweet-spot",
+      "title": "Nan Yu：技术采用的甜蜜点是比最前沿晚几步，挑已经熬过淘汰的新东西",
+      "summary": "Linear 产品负责人的采用节奏判断：站在最前沿，行业每学到一课你就得重改一次做法；更好的位置是晚几步，挑相对新、但已经熬过淘汰的东西。纠结何时引入新 AI 工具或工作流的团队可以直接套这个框架。",
+      "content": [
+        "他的判断：站在采用曲线最前沿（the very bleeding edge）的问题是，整个行业还在学习，每学到一课你就得跟着改一次自己的做事方式，这个成本会持续发生。更好的位置是晚几步——挑那些相对新、但已经在各轮变动里存活下来的东西。",
+        "推文没有限定领域。顺着这个逻辑放到 AI 工具链上，每月翻新的 agent 框架、skill 体系大多还在淘汰期，按他的标准，值得投入的是已经稳定存活一段时间的实践——具体哪些算「存活」，他没有给名单，这一步是编辑引申。"
+      ],
+      "creator": "Nan Yu",
+      "role": "Linear 产品负责人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @thenanyu", "url": "https://x.com/thenanyu/status/2048172709075402787" }
+      ],
+      "engagement": "55 likes"
+    },
+    {
+      "slug": "2026-04-26-zara-writing-thinking",
+      "title": "Zara Zhang：打字只是写作的最后一步，80% 在头脑里已经完成",
+      "summary": "核心说法：开始打字时 80% 的写作已经在头脑里完成，打字是最后一步；并列出四个否定——写作 ≠ 生成文本、做产品 ≠ 写 PRD、设计 ≠ 画 mockup、工程 ≠ 写代码。对把生成产物当完成工作的人，这条把思考和产物划开了界限。",
+      "content": [
+        "她的说法：坐到电脑前开始打字时，写作已经完成了 80%，那部分发生在头脑里，打字只是最后一步。随后是四个并列的否定：写作 ≠ 生成文本，做产品 ≠ 写 PRD，设计 ≠ 画 mockup，工程 ≠ 写代码。",
+        "四组对照里，右边都是产物，左边都是思考；她强调的是产物只是思考的固化。这是对另一条推文的转评（被转内容不在素材里），但表述自成一体。",
+        "原推没有提 AI。顺着她的逻辑引申一步：AI 把「生成产物」这最后一步压得非常便宜，如果大部分工作确实发生在动手之前，那瓶颈和价值都会留在前面那段思考里。这条引申是编辑补充。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2048101948826751429" }
+      ],
+      "engagement": "75 likes"
+    },
+    {
+      "slug": "2026-04-26-amasad-cybersecurity",
+      "title": "Amjad Masad：2025 年起每家公司都是网络安全公司",
+      "summary": "Replit CEO 的断代式判断：2000s 每家公司是互联网公司，2010s 是软件公司，2020s 是 AI 公司，2025 往后每家公司都是网络安全公司。一句话推文，没给论据，可当作 AI 进入生产后安全权重上升的一个方向信号。",
+      "content": [
+        "推文全文是四行断代：2000s 每家公司都是互联网公司，2010s 都是软件公司，2020s 都是 AI 公司，2025 往后，每家公司都是网络安全公司。",
+        "他没有解释原因。一个说得通的读法是：AI 代码和 agent 大规模进入生产，攻击面跟着变大，安全从专门职能变成所有产品的默认要求——这是编辑引申，原推没给论据。判断本身无法当下核验，可以先当作一个来自 Replit CEO 的方向信号记下。"
+      ],
+      "creator": "Amjad Masad",
+      "role": "Replit CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @amasad", "url": "https://x.com/amasad/status/2048265772775162078" }
+      ],
+      "engagement": "369 likes"
+    },
+    {
+      "slug": "2026-04-26-nikunj-clear-writing",
+      "title": "Nikunj Kothari：多数写作缺的是简洁和清晰，好写作把问题关键干净地讲出来",
+      "summary": "FPV Ventures 合伙人谈写作：多数写作缺简洁与清晰，他自己会因为不想把混乱思路丢给读者而几周不公开写作；好写作要干净传达问题关键，再留一条在发酵、未展开的线。经常公开输出的人可以对照这个标准。",
+      "content": [
+        "他的观察：多数写作缺的是简洁和清晰。他自己会因为不想把混乱的思路丢给读者，几周不公开写东西。他对好写作的标准有两条：把问题的关键干净地传达出来，再留一条已经在发酵、但还没完全展开的线。",
+        "他也给了一个对照：写作仍是更容易的一侧，因为可以随时编辑和重构；他自认还做不到在任何话题上当场把话讲清楚，对能做到的人表示佩服。给经常公开写东西的人一个现成的自查标准：读者拿到的是问题的关键，还是你的未完成思考。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2048056524845482131" }
+      ],
+      "engagement": "84 likes"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "date": "2026-04-22",
+  "generatedAt": "2026-04-22T07:43:19.253Z",
+  "stories": [
+    {
+      "slug": "2026-04-22-levie-enterprise-agents",
+      "title": "Aaron Levie：企业落地 agent 的瓶颈在遗留系统、数据碎片和变更管理，FDE 模式会长期存在",
+      "summary": "Levie 列出企业落地 agent 的现实障碍：遗留技术栈、数据碎片化、知识未数字化、变更管理，还得边经营边做。他由此判断垂直领域的部署服务是大机会，FDE 模式会长期存在。做企业 agent 生意的人可以当需求清单用。",
+      "content": [
+        "Levie 的核心论点是企业要把 agent 真正用起来需要大量外部帮助：遗留技术栈要现代化，数据散落在大量碎片化工具里，组织知识没有被记录和数字化，落地还需要变更管理。和创业公司不同，这一切都要在日常业务照常运转的前提下完成。",
+        "由此他看好两类机会：在特定领域和工作流里替企业部署 agent 的公司，软件和服务都算；以及新一代咨询公司——他认为每一波新技术都会催生一批能交付这波技术的咨询公司。FDE 模式也因此会长期存在，因为企业会希望供应商直接帮自己推动变更管理和落地。他的结尾是：人不会消失，远远不会。",
+        "立场上，Box 卖的就是企业内容平台，Levie 是「企业落地需要外部帮助」这个叙事的直接受益方。这条是转评，被转的原帖讲什么他没有复述，但判断框架本身独立成立。做企业 agent 产品或服务的人，可以把那四个障碍当成销售对话和实施方案的检查清单来用。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2046805326784319663" }
+      ],
+      "engagement": "1,173 likes"
+    },
+    {
+      "slug": "2026-04-22-sama-chatgpt-images-2",
+      "title": "Sam Altman 晒出 ChatGPT Images 2.0 生成的漫画，OpenClaw 同日宣布接入 OpenAI Image 2",
+      "summary": "Sam Altman 晒出用 ChatGPT Images 2.0 做的漫画，内容是他和 Gabe 找更多 GPU，除模型名外没给任何发布细节。同日 OpenClaw 新版本提到 backport 了 OpenAI Image 2 支持。跟踪 OpenAI 图像模型的人可以从样张看一眼生成质量。",
+      "content": [
+        "推文只有一句话：这是 ChatGPT Images 2.0 做的、画他和 Gabe（@gabeeegoooh）找更多 GPU 的漫画。模型名是这条里唯一的硬信息，发布时间、能力说明、可用范围都没有提。",
+        "同一天有一个旁证：Peter Steinberger 的 OpenClaw 2026.4.21 版本说明里写了 backport OpenAI Image 2 支持。两边叫法不同（ChatGPT Images 2.0 和 OpenAI Image 2），按命名看大概率是同一代模型；如果是，说明已经有第三方工具在接入。想评估这代模型生成质量的人，目前能做的就是看这条推文里的漫画样张。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2046672912833458597" }
+      ],
+      "engagement": "3,603 likes"
+    },
+    {
+      "slug": "2026-04-22-openclaw-release",
+      "title": "OpenClaw 2026.4.21 修复升级后插件失效的问题，discrawl 0.3.0 同日发布",
+      "summary": "OpenClaw 这个小版本修了一个要紧问题：npm 升级会损坏捆绑插件的运行时依赖，导致 Telegram、Discord、Slack 集成在升级后失效，新版自动修复并加了 Docker E2E 测试，还 backport 了 OpenAI Image 2 支持。被升级弄断过消息通道的用户应该直接升。",
+      "content": [
+        "他自己的定位是「小版本，重要修复」：此前通过 npm 升级 OpenClaw 会损坏捆绑插件的运行时依赖，Telegram、Discord、Slack 这些通道会在升级后失效；新版让 npm 更新自动修复这些依赖，并加上 Docker E2E 测试覆盖防止回归。这个版本还 backport 了 OpenAI Image 2 的支持。升级命令照旧：npm i -g openclaw@latest。",
+        "同日 discrawl 发了 0.3.0，核心是 Git 仓库归档同步：Discord 归档可以发布到一个私有 repo，其他人本地查询时不再需要人手一份 bot 凭证。另有自动刷新、活动报告、field notes 和更快的导入。",
+        "他还提到把项目 CI 时间从 8 分钟压到 2 分钟，方法是并行化，跑在 Blacksmith 赞助的机器上。三条都是作者自述；修复是否彻底，受插件失效困扰的用户升级后自己就能验证。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw 作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete（OpenClaw 2026.4.21）", "url": "https://x.com/steipete/status/2046803162590335240" },
+        { "label": "原推 @steipete（discrawl 0.3.0）", "url": "https://x.com/steipete/status/2046748122928263345" },
+        { "label": "原推 @steipete（CI 提速）", "url": "https://x.com/steipete/status/2046787353906167992" }
+      ],
+      "engagement": "492 likes"
+    },
+    {
+      "slug": "2026-04-22-claude-code-context-viz",
+      "title": "Zara Zhang：让 Claude Code 把自己当前的 context window 画成 HTML，直观理解上下文如何运作",
+      "summary": "做法只有一步：在 session 里让 Claude Code 生成一个 HTML，把它当前的 context window 可视化出来。她说用这种方式学 context window 的运作让人大开眼界。想搞清楚自己 session 里上下文状况的 Claude Code 用户，花一两分钟就能试。",
+      "content": [
+        "具体做法是在用过一段时间的 session 里，直接让 Claude Code 生成一个 HTML 页面，把它此刻的 context window 可视化出来。这个做法的巧处在于模型本来就能看到自己上下文里有什么，画出来的就是你眼前这个会话的真实构成，省去了教程式示意图和实际体验之间的那层隔阂。",
+        "顺着这个逻辑，system prompt、工具输出、历史消息各占多少这类平时只能靠猜的问题，也可以用同一招看个大概——前提是模型如实汇报，生成的图本身可能有误差，适合当学习工具，不适合当精确监控。她的推文只给了 context window 这一个例子，这里的推广是编辑引申。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2046758723998425433" }
+      ],
+      "engagement": "204 likes"
+    },
+    {
+      "slug": "2026-04-22-monologue-notes",
+      "title": "Dan Shipper 上线 Monologue Notes，卖点是 agent 可以从任何地方访问你随手录的笔记",
+      "summary": "Monologue Notes 上线：散步、开会、半夜随时录一条笔记，定位是 agent native——你的 agent 可以从任何地方访问这些笔记。把笔记明确当成 agent 的输入源来设计，是这条发布里最值得注意的点。在搭个人 agent 工作流的人可以看下接入方式。",
+      "content": [
+        "Dan Shipper 宣布 Monologue Notes 上线，使用场景是随时随地录笔记：散步时、会议中、半夜。发布文案里最实质的一句是 built to be agent native——你的 agent 可以从任何地方访问你的笔记。",
+        "这等于把笔记的读者从「未来的自己」扩展到「你的 agent」：笔记除了给自己回看，还成为个人 agent 的长期上下文来源。具体通过什么方式接入（协议、权限、范围）这条推文没有说，真要接进自己工作流的人需要去产品里确认。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2046643173766697214" }
+      ],
+      "engagement": "59 likes"
+    },
+    {
+      "slug": "2026-04-22-google-labs-designmd",
+      "title": "Josh Woodward 点名 Stitch 的 DESIGN.md，并宣布 Labs 实验产品 Pomelli 开放欧洲",
+      "summary": "Google Labs VP 一天提了两个实验：他说 DESIGN.md 是 Stitch 在做的事里他最喜欢的之一，但只留一句「懂的自然懂」；面向 SMB 的 Pomelli 开放欧洲。前者从命名看像 CLAUDE.md 一类的文件约定，做 AI 设计工具的人值得留意。",
+      "content": [
+        "信息量更大的是 DESIGN.md 这条：他说这是 Stitch 在做的事里他最喜欢的之一，原话只有「if you know, you know」，没有任何展开。从命名看，这可能是和 CLAUDE.md、AGENTS.md 同一类的做法——把约定写成 markdown 文件让工具读取，放到设计工具里就是把设计规范变成机器可读的上下文。这一段是从文件名出发的编辑推断，具体机制只能进 Stitch 验证。",
+        "另一条是 Pomelli 进入欧洲。这是 Labs 较新的实验之一，面向 SMB，他说 SMB 们正用它跑起来。推文里没有更多产品细节。"
+      ],
+      "creator": "Josh Woodward",
+      "role": "Google Labs VP",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @joshwoodward（DESIGN.md）", "url": "https://x.com/joshwoodward/status/2046754179499356594" },
+        { "label": "原推 @joshwoodward（Pomelli）", "url": "https://x.com/joshwoodward/status/2046763674199794061" }
+      ],
+      "engagement": "207 likes"
+    },
+    {
+      "slug": "2026-04-22-gbrain-minions",
+      "title": "Garry Tan 升级自建的 agent 任务服务器 GBrain Minions，称调教 OpenClaw/Hermes 费功夫但值得",
+      "summary": "YC CEO 在亲手迭代自己的 agent 工具：他给 agent 写的 job server GBrain Minions 发了能力升级；他还说让 GBrain 指挥 OpenClaw/Hermes 做对事要花不少功夫，但值得。细节都没给，信号在于 YC 掌门人在深度自用 agent 工具链。",
+      "content": [
+        "GBrain Minions 是他给 agent 写的 job server，这次他称之为能力上的一次大升级，推文没有列具体改了什么。配合他同天的另一条：让 GBrain 去指挥 OpenClaw/Hermes 把事情做对要下不少功夫，但值得做。",
+        "这两条几乎没有功能细节，价值是行为信号：YC 的掌门人在亲手搭 agent 编排层，并且把「让一个系统正确指挥另一个系统」的胶水工作当成值得投入的事。在做 agent 编排工具的人可以把这当作一个需求存在的旁证。"
+      ],
+      "creator": "Garry Tan",
+      "role": "YC 总裁兼 CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan（Minions 升级）", "url": "https://x.com/garrytan/status/2046804979160334433" },
+        { "label": "原推 @garrytan（调教 OpenClaw/Hermes）", "url": "https://x.com/garrytan/status/2046846939535495238" }
+      ],
+      "engagement": "12 likes"
+    },
+    {
+      "slug": "2026-04-22-blind-intro",
+      "title": "Nikunj Kothari 推荐给 10-15 个信任的人完全的盲介绍权限，以最大化 serendipity",
+      "summary": "具体做法：不止步于 double opt-in，挑 10-15 个你信任的人，授权他们不必事先征得你同意就直接做介绍。他说这是最大化 serendipity 最快的方式，也是他在结识有意思的人这件事上做过最有效的一件事。一条可以直接照做的人脉方法论。",
+      "content": [
+        "他的立场很明确：double opt-in（介绍前先问双方意愿）没问题，但他强烈推荐的做法是选 10-15 个信任的人，给他们完全的盲介绍权限——对方可以不经你确认直接把你介绍给任何人。他认为这是最大化 serendipity 最快的方式，也是他在结识最有意思的一批人上做过的最好的一件事。",
+        "这等于把「保护你的时间」这个默认设置，对一小圈你信任的人反转成「信任他们的判断」。代价是会收到一些错配的介绍，这一点他没有谈；照做之前可以先想清楚名单标准，这一步他也只给了「信任」一个词。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2046821454143250636" }
+      ],
+      "engagement": "56 likes"
+    }
+  ]
+}

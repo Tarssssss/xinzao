@@ -1,0 +1,181 @@
+{
+  "date": "2026-04-10",
+  "generatedAt": "2026-04-10T07:24:47.831Z",
+  "stories": [
+    {
+      "slug": "2026-04-10-karpathy-capability-gap",
+      "title": "Karpathy 解释 AI 能力认知的分化：跃升集中在可验证、B2B 价值高的技术领域，两群用户在各说各话",
+      "summary": "认知分化的机制有二：可验证奖励让编程、数学最适合 RL；这些领域 B2B 价值高，公司优先爬坡。搜索、写作等日常场景两头不占，进步有限。向圈外人解释当下 AI 能力分布时，这套框架可以直接引用。",
+      "content": [
+        "起因是他观察到时间线上对 AI 能力的理解差距在扩大。他把人分成两群：一群人去年试过免费档 ChatGPT，让那次体验过度定型了自己对 AI 的看法，至今还在笑旧模型的幻觉和翻车视频；另一群人付费使用最新的 agentic 模型（OpenAI Codex、Claude Code），并且在编程、数学、研究这类技术领域专业使用。后一群人承受着他所谓最高浓度的「AI Psychosis」——今年这些领域的提升在他看来是惊人的：给模型一个终端，能看着它解掉原本预期要几天、几周工作量的编程问题。",
+        "他给的机制有两个。这些领域有显式、可验证的奖励信号（单元测试过没过是明确的，写作就很难显式评判），最适合 RL 训练；同时它们在 B2B 里更值钱，公司把最大比例的团队压在上面爬坡。所以两件事同时为真：免费的 Advanced Voice Mode 会答错最蠢的问题，而顶配 Codex 能连跑一小时、连贯地重构整个代码库，或在计算机系统里找漏洞并利用。日常的搜索、写作、建议类查询恰好两头都不占，进步远没有那么大。",
+        "同日另一条推文记录了一个相关解释：有人向他提出，OpenClaw 时刻之所以这么大，是因为这是第一次有一大群非技术用户（此前 AI 对他们就等于 ChatGPT 这个网站）接触到最新一代 agentic 模型。顺着这个框架，下次再遇到「AI 到底行不行」的争论，先问对方用的是哪一档模型、什么场景，多半能解释分歧的来源。"
+      ],
+      "creator": "Andrej Karpathy",
+      "role": "前 Tesla AI 总监、OpenAI 创始团队成员",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @karpathy（能力认知差距）", "url": "https://x.com/karpathy/status/2042334451611693415" },
+        { "label": "原推 @karpathy（OpenClaw 时刻）", "url": "https://x.com/karpathy/status/2042341482531864741" }
+      ],
+      "engagement": "12.9K likes"
+    },
+    {
+      "slug": "2026-04-10-openai-chief-scientist-rl-harness",
+      "title": "OpenAI 首席科学家：复制现有 RL 管线未必是正路，把评测和示例喂进上下文相当可能更划算",
+      "summary": "给 builder 的三个判断：与其照搬实验室 RL 管线，把评测和示例喂进上下文相当可能更划算；harness 实现长期不是瓶颈；模型离自主工作几天不远。此前 9 月研究实习生级系统的目标，他说仍在按计划推进。",
+      "content": [
+        "主持人 Jacob Efron 先核对时间线：四个月前 OpenAI 提过「9 月做到研究实习生级能力、2028 年 3 月做到更完整的自动化 AI 研究员」。他说有信号表明这事在轨道上：OpenAI 内部大部分实际编码已经用 Codex 完成，数学研究能力和物理等领域也有进展，团队仍按这个目标规划。但他明确说今年不会有「直接吩咐它去解决对齐问题」级别的系统；对于具体的技术想法（比如某个改进模型的点子、换种方式跑评测），他认为拼图大多已经有了，主要是组装。",
+        "对企业最有决策价值的是 RL 那段。他的看法：RL 确实是数据效率很高的改进方式，但已知最数据高效的学习是 in-context learning，而且他预期这种能力会变得更强；照搬实验室当前的 RL 管线，他「不确定是正确的路」。主持人归纳成「功课还是要做——找出关键评测、收集数据和示例——但未来可能直接喂进上下文更划算」，他认可这相当有可能。harness 同理：他说 harness 的实现在很长时间内都不该成为限制，会出现更通用的 harness，「Codex 用在编码以外的事情上其实已经不错」；长期看 AI 应该到用户所在的地方去（比如直接出现在 Slack 里），而非要求用户迁就它的限制。",
+        "能力预期上他给了一个具体说法：离能自主工作几天的模型不远了，可能需要比现在多不少的算力，并能独立产出质量高得多的成果。对最近的 continual learning 热潮（新实验室扎堆、有人离开 OpenAI 专攻这个方向），他说自己有点困惑：从 GPT-3 论文起，这类模型的卖点就是在上下文中学习，continual learning 一直是主线在做的事，并且很多改进会直接来自规模，谈不上被忽视。",
+        "安全部分他解释了为什么 o1-preview 当年隐藏思维链：思维链没有被直接监督训练，所以还能反映模型真实的推理过程；一旦在产品里展示，最终就不得不去训练它，这个解释窗口就关上了。这套思维链监控支撑了跨机构合作的模型 scheming 研究。他的整体姿态：对「存在一条能解决价值对齐的研究路径」信心上升，但到非常强模型的时间预期在缩短，行业要准备好视情况做权衡甚至放慢。这是 OpenAI 内部视角，时间线判断自然偏乐观；可以直接拿去验证的是那两条建议——先把评测和示例喂进上下文而不是急着自建 RL，先试通用 harness 跑非编码任务。"
+      ],
+      "creator": "Unsupervised Learning",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Unsupervised Learning Ep 84", "url": "https://www.youtube.com/@RedpointAI" }
+      ]
+    },
+    {
+      "slug": "2026-04-10-claude-opus-advisor-tool",
+      "title": "Anthropic 上线 advisor 工具 beta：Sonnet agent 遇到难决策时可中途咨询 Opus",
+      "summary": "官方评测里，Sonnet 加 Opus advisor 在 SWE-bench Multilingual 上比单跑 Sonnet 高 2.7 个百分点，单任务成本还降了 11.9%——省的是在复杂任务上空耗的 token。在 Messages API 上加工具即可用。数字是自家口径，值得拿自己的任务先验一遍。",
+      "content": [
+        "advisor 工具已在 Claude Platform 开 beta。用法是在 Messages API 调用里加上 advisor 工具：Sonnet 或 Haiku agent 在运行中途遇到难决策时咨询 Opus，拿到一个方案后继续执行，全程在单次 API 请求内完成。",
+        "官方评测数字：Sonnet 配 Opus advisor 在 SWE-bench Multilingual 上比 Sonnet 单跑高 2.7 个百分点，单任务成本反而低 11.9%。Anthropic 研究员 Alex Albert 解释了为什么提分还省钱：允许 Sonnet「打电话求助」，减少了它在更复杂任务上反复尝试消耗的 token。",
+        "对跑 agent 的团队，这等于在「全程 Opus 太贵」和「全程 Sonnet 不够稳」之间加了一个按决策点付费的中间档。顺着这个逻辑，如果现有 Sonnet agent 的失败集中在少数关键决策上，这个工具值得优先试。数字来自 Anthropic 自家评测，公开口径目前只有 SWE-bench Multilingual 一项，上生产前用自己的任务集验证一遍。"
+      ],
+      "creator": "Claude（Anthropic 官方）",
+      "role": "Anthropic 官方账号",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @claudeai（beta 上线）", "url": "https://x.com/claudeai/status/2042308629940855048" },
+        { "label": "原推 @claudeai（评测数据）", "url": "https://x.com/claudeai/status/2042308627478773808" },
+        { "label": "原推 @claudeai（用法）", "url": "https://x.com/claudeai/status/2042308625989882054" },
+        { "label": "原推 @alexalbert__", "url": "https://x.com/alexalbert__/status/2042329150086922574" }
+      ],
+      "engagement": "1.5K likes"
+    },
+    {
+      "slug": "2026-04-10-sama-100-dollar-pro-tier",
+      "title": "Sam Altman 宣布将推出 100 美元档 ChatGPT Pro，触发点是 Codex 的需求",
+      "summary": "原推只有一句：很高兴看到 Codex 这么受欢迎，应大量需求推出 100 美元档 ChatGPT Pro。档位包含什么、何时上线都没说。如果新档下放 Codex 类配额，能接触前沿 agentic 能力的人群会扩大一截——这是推断，待官方细节。",
+      "content": [
+        "原推只有两句话：很高兴看到 Codex 获得这么多喜爱；应非常多的需求，将推出 100 美元档 ChatGPT Pro。没有给出档位包含的内容和上线时间。",
+        "Karpathy 同日的帖子正好提供了背景：最前沿 agentic 模型的体验目前集中在每月付 200 美元的重度用户那里。顺着这两条信息推断，如果 100 美元档把 Codex 类能力的配额下放，能接触到最新能力的人群会明显扩大；但档位实际包含什么，要等官方细节再判断。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2042342572958630332" }
+      ],
+      "engagement": "7.9K likes"
+    },
+    {
+      "slug": "2026-04-10-levie-automation-demand",
+      "title": "Aaron Levie：软件和自动化的总需求被普遍低估，agent 把大量从未立项的自动化变得可行",
+      "summary": "他的论点：科技公司之外工程师是配给资源，多数自动化项目排不上队，沾非结构化数据的环节过去做不了；agent 降低成本后这些项目会被点亮，唱衰技术岗位的论证会错。另一条点出落地卡点：合规、安全和给 agent 喂对上下文。",
+      "content": [
+        "他说的对象是整天替公司自动执行流程的软件，而非手机上再多一个 App。科技公司和大银行之外，工程师是配给资源，公司必须高度选择性地立项，大多数自动化需求从来排不上队；另一类项目则是技术上根本做不了——凡是沾到非结构化数据、或要在变动很大的系统之间对接数据流的环节，在 AI 之前无法自动化。",
+        "agent 把执行成本打下来之后，他预计这些项目会被点亮：CPG 和零售对接营销栈，药企因为能自动化更多测试和模拟而研究量暴涨，银行和投资机构把每个场景的分析量放大十倍，医疗服务把自动化带进流程的每一步。他的结论是对能执行这类工作的技术人才需求会持续，「AI 消灭岗位」的论证会错。",
+        "同日另一条讲落地差距：多数用户还停在 chat 工具，有用但生产力增益有上限；另一端是跑长任务的 agent，他估计起步就是 100% 到 200% 的提升、没有内在上限。这部分用户此前主要是 coding agent 用户，通用 agent 正在把它扩展到更多知识工作。卡点是合规、安全、组织变革和给 agent 喂对上下文——他从 Box 客户那里看到，多数企业还有 legacy 数据环境和没有文档化的工作流。",
+        "立场上需要注意：Box 卖的正是企业非结构化数据这一层，这套判断与他的生意方向一致。他点名的两个机会——帮企业升级传统工作流的 agentic 平台、组织内推动落地的新角色——可以当方向参考，需求判断部分则可以拿自己接触的非科技行业客户验证。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie（自动化需求）", "url": "https://x.com/levie/status/2042469771275329594" },
+        { "label": "原推 @levie（落地差距）", "url": "https://x.com/levie/status/2042392664943870443" }
+      ],
+      "engagement": "165 likes"
+    },
+    {
+      "slug": "2026-04-10-thariq-prompting-leverage",
+      "title": "Claude Code 团队 Thariq：prompting 会一直是高杠杆技能，本质是经由 harness 与 agent 对话",
+      "summary": "他认为 prompting 会像写作、公开演讲一样长期高杠杆，是「与 agent 对话的技能，经由 harness 中介」。配套例子：Monitor Tool 很强但要显式提示才会用。Box CEO Levie 同日呼应：prompting 应涵盖把任务所需的一切给到 agent。",
+      "content": [
+        "他的原话框架：prompting 会继续是一项杠杆极高的技能，就像写作或公开演讲；它是与 agent 对话的技能，经由 harness 中介。他说自己的主要目标是扩大人和 agent 之间的带宽，让双方更好地相互理解。",
+        "他同日发的 Monitor Tool 提示可以当这个论点的注脚：这个工具很强，但 Claude Code 不会主动用，需要显式提示，比如「启动我的 dev server，用 MonitorTool 观察报错」。能力已经在 harness 里，把它调出来靠的还是会表达的人。",
+        "Box CEO Aaron Levie 同日表达了同一立场：说 prompting 会没用，等于说给刚入职的新同事下清晰指令没用；prompting 应该涵盖「把 agent 完成任务所需的一切交给它」这整件事。两人的说法指向同一个方向：模型变强没有降低清楚表达任务的价值，反而抬高了它的杠杆。"
+      ],
+      "creator": "Thariq",
+      "role": "Anthropic Claude Code 团队",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @trq212（prompting）", "url": "https://x.com/trq212/status/2042318547519762678" },
+        { "label": "原推 @trq212（Monitor Tool）", "url": "https://x.com/trq212/status/2042335178388103559" },
+        { "label": "原推 @levie（prompting）", "url": "https://x.com/levie/status/2042460500785602648" }
+      ],
+      "engagement": "2.1K likes"
+    },
+    {
+      "slug": "2026-04-10-rauchg-agentic-infrastructure",
+      "title": "Guillermo Rauch 阐述 Agentic Infrastructure：服务 coding agent、部署 agent、平台自身也是 agent",
+      "summary": "三层含义：coding agent 需要对 agent 顺手的 infra；长时计算、sandbox、token 分发是部署 agent 的积木；平台自身要自愈合、自优化。另一条给了规模数据：每秒一次 npx shadcn init。Vercel CEO 讲自家叙事，做 infra 选型的人可当路线图信号读。",
+      "content": [
+        "他判断 Agentic Infrastructure 是云的未来，给了三层含义。第一层服务 coding agent：用 Claude Code、Codex、Cursor 的人需要对 agent「一点就通」的 infra，而不只是对人类开发者友好。第二层是部署 agent：长时运行计算、sandbox、token 分发网络是这类新软件的积木，他概括为从 Pages 到 Agents。第三层是平台自身 agent 化：Vercel 原本的卖点是自配置（serverless），再加上自愈合、自优化、自加固——值班拿 pager 的是 agent。",
+        "另一条他转引的数据给了需求侧的量级：每秒就有一次 npx shadcn init，他说这能让人感受到新软件创造的规模。把两条放在一起看，软件创造在加速，正是第一层需求的来源——这一句是编辑归纳。",
+        "立场上这是 Vercel CEO 讲自家叙事，三层框架与其产品路线一致。可核验的部分是 shadcn 的安装频率和 Vercel 后续实际发布的 agent 相关产品；做 infra 选型的人可以把这条当 Vercel 的路线图信号读，而非中立的行业判断。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg（Agentic Infrastructure）", "url": "https://x.com/rauchg/status/2042358253510963384" },
+        { "label": "原推 @rauchg（shadcn 数据）", "url": "https://x.com/rauchg/status/2042294997278736552" }
+      ],
+      "engagement": "252 likes"
+    },
+    {
+      "slug": "2026-04-10-garry-tan-gbrain",
+      "title": "Garry Tan 开源自己的 agent 记忆方案 GBrain，支持 OpenClaw 和 Hermes Agent",
+      "summary": "GBrain 是他本人在用的配置，MIT 协议开源：让 agent 对上万个 markdown 文件保持完全召回；Hermes Agent 上粘贴同一个安装脚本即可，他自己跑在 Railway 上。正在给个人 agent 搭记忆层的人可以直接参考这套设置。",
+      "content": [
+        "GBrain 是 Garry Tan 自己在用的 OpenClaw/Hermes Agent 记忆配置，现以 MIT 协议开源。解决的问题：让 agent 对一万多个 markdown 文件保持他所说的「完全召回」。Hermes Agent 上粘贴同一个安装脚本即可使用；他自己部署在 Railway 上。",
+        "他对这套东西的定位是「希望帮你搭自己的 mini-AGI」。可以读出的一个信号是，个人 agent 的记忆层目前可能还没有公认方案——YC 总裁也是自己拼配置再开源。正在搭这一层的人可以直接参考或照抄这套设置，再按自己的文件规模验证召回效果。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator 总裁兼 CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan（开源发布）", "url": "https://x.com/garrytan/status/2042497872114090069" },
+        { "label": "原推 @garrytan（Hermes 支持）", "url": "https://x.com/garrytan/status/2042495930948338048" },
+        { "label": "原推 @garrytan（部署方式）", "url": "https://x.com/garrytan/status/2042493525934424114" }
+      ],
+      "engagement": "48 likes"
+    },
+    {
+      "slug": "2026-04-10-zara-ai-writing",
+      "title": "Zara Zhang：AI 对她最有用的是舒适区外的事，写作这类自己擅长的事用 AI 反而更慢",
+      "summary": "她的理由有二：写作是她享受且容易的事；她对文字标准高，用 AI 几乎总要反复迭代，总耗时超过自己动笔。顺着这个逻辑，给自己的工作流排 AI 优先级时，可以先看任务离自己的专长多远。",
+      "content": [
+        "她几乎不用 AI 写作，理由有二：写作本身是她享受、且做起来容易的事；她对文字标准高，用 AI 写几乎总要反复迭代，总耗时反而超过自己动笔。对她个人，AI 最有用的位置在舒适区之外（比如编程），而非舒适区之内（比如写作）。",
+        "顺着她的逻辑，这给了一个判断 AI 净收益的简单标尺：任务离自己的专长越近，验收标准越高，AI 产出过审的成本越高；离专长越远，AI 的杠杆越大。给自己的工作流排 AI 优先级时，可以先从舒适区外的环节下手。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2042379962339246105" }
+      ],
+      "engagement": "104 likes"
+    },
+    {
+      "slug": "2026-04-10-lyria-3-music",
+      "title": "Google 放开音乐模型 Lyria 3：Gemini 上线音乐生成不到 50 天产出破亿，免费档每天 5 首完整曲目",
+      "summary": "数据点：上线不到 50 天，Gemini 平台生成歌曲超 1 亿首。即日起免费用户每天可生成 5 首约 3 分钟的完整曲目，超限后可继续生成 30 秒片段或付费升级。做生成媒体产品的人可把它当消费侧需求的量级参考——口径是平台总生成量。",
+      "content": [
+        "Gemini 上线音乐生成不到 50 天，平台生成的歌曲超过 1 亿首。Google 借此放开 Lyria 3 的完整能力：免费用户每天可生成 5 首完整曲目（每首约 3 分钟），超出限额后可以继续生成 30 秒片段，或付费升级拿更多额度。",
+        "Josh Woodward 的表述把音乐补进了 Gemini 的生成媒体矩阵：图像、视频之后是音乐。对做创作工具或内容产品的人，1 亿首 / 50 天是消费侧需求的一个量级参考；注意口径是平台总生成量，不代表活跃创作者数或留存。"
+      ],
+      "creator": "Josh Woodward",
+      "role": "Google Labs / Gemini App 副总裁",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2042318148851188151" }
+      ],
+      "engagement": "378 likes"
+    }
+  ]
+}

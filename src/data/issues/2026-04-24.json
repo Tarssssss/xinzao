@@ -1,0 +1,188 @@
+{
+  "date": "2026-04-24",
+  "generatedAt": "2026-04-24T08:00:08.232Z",
+  "stories": [
+    {
+      "slug": "2026-04-24-claude-code-postmortem",
+      "title": "Anthropic 复盘 Claude Code 质量下滑：三个独立改动叠加，全部修复并重置订阅额度",
+      "summary": "“Claude 变笨”的反馈被追溯到三个独立改动：默认 effort 降档、清思考历史的缓存 bug、压输出长度的系统提示词。已全部修复并重置所有订阅额度，三四月遇到健忘或额度异常的用户值得对照时间线。",
+      "content": [
+        "过去一个月不断有用户反馈 Claude 的回答质量下降，Anthropic 把这些报告追溯到三个互不相关的改动，影响范围是 Claude Code、Claude Agent SDK 和 Claude Cowork，API 和推理层不受影响。三个问题已在 4 月 20 日（v2.1.116）全部修复，并从 4 月 23 日起重置所有订阅用户的用量额度。",
+        "三个改动分别是：3 月 4 日把 Claude Code 默认 reasoning effort 从 high 降到 medium，为的是解决 high 模式下偶发超长思考让界面像死机，用户反馈变笨后于 4 月 7 日回滚，现在 Opus 4.7 默认 xhigh、其他模型默认 high；3 月 26 日上线的缓存优化本该在 session 闲置超过一小时后清一次旧的思考历史，bug 让它在之后每一轮都清，模型逐渐忘掉自己为什么做这些操作，表现为健忘、重复和奇怪的工具选择，连带的持续 cache miss 被他们认为是额度消耗过快报告的来源，4 月 10 日修复；4 月 16 日为压制 Opus 4.7 的啰嗦在系统提示词里加了一条长度限制（工具调用之间不超过 25 词、最终回复不超过 100 词），逐行 ablation 发现这一条让 4.6 和 4.7 在一项评测上掉了 3%，4 月 20 日回滚。",
+        "这次排查难在三个改动影响不同的流量切片、时间表也不同，聚合起来像一次大范围且不一致的退化，内部使用和评测起初都复现不出来。复盘里有个值得注意的细节：他们拿出问题的 PR 回测 Code Review，给足仓库上下文时 Opus 4.7 能找出那个缓存 bug，Opus 4.6 找不出。",
+        "后续措施包括让更多内部员工使用和公众完全一致的版本、每次系统提示词改动都跑逐行 ablation 和按模型分开的评测、对可能牺牲智能的改动加观察期和灰度发布。对用户的直接含义：如果三四月遇到过健忘、重复或额度消耗异常，可以对照这份时间线核对自己的体验；额度已重置，适合借这次重置重新校准对模型表现的判断。"
+      ],
+      "creator": "Anthropic Engineering",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Anthropic Engineering", "url": "https://www.anthropic.com/engineering/april-23-postmortem" }
+      ]
+    },
+    {
+      "slug": "2026-04-24-swyx-coding-agents-containment",
+      "title": "Swyx 判断 2026 是 coding agent 破圈之年，下一个激进前沿是零人工 review",
+      "summary": "Swyx 的主线判断：2025 属于 coding agent，2026 是它破圈去做其他所有事；下一个激进前沿是零人工 review 的“黑暗工厂”。他还自陈去年看空开放权重模型看错了，份额在涨。引用的 ARR 数字多为转述，需自行核实。",
+      "content": [
+        "Redpoint 的 Unsupervised Learning 和 Latent Space 的年度串台，Jacob Efron 对谈 Swyx。Swyx 的主线判断：2025 是 coding agent 之年，2026 是 coding agent 破圈去做其他所有事——coding agent 继续赢，因为它们生产软件，而软件吞噬世界。基础设施层面他认为 harness 有了趋稳的理由：集成方式收敛到了 skills，一个 markdown 文件加几个脚本，他认为已经简到没法更简；但他也提醒不必把声誉押在“这次稳定了”的论断上，变了就跟着变。",
+        "关于 coding 战局，他给的数字都带转述性质：Claude Code 约 25 亿美元 ARR（他特意说计入方式有争议）、OpenAI 估计 20 亿、Cursor 传闻 20 亿。市场结构他押现状延续——两大玩家加一小撮长尾，除非微软这类巨头认真下场或经济结构生变。打法差异明显：Anthropic 做高价限量，Codex 和 Gemini 在重补贴期，他建议趁补贴还在多做能力探索。",
+        "两个值得单独记的判断。一是“dark factory”：零人工写代码五个月前还显得激进、现在已经正常，下一个同样激进的前沿是零人工 review——不看代码直接合入。他说 OpenAI 在探索这条路，并认为这是唯一可规模化的方式，前提是把软件开发流程翻过来重做，补足测试和自动验证；量产便宜到一定程度后，反而能靠数量在质量上创新。二是 agent 正在成为基础设施的主要客户：他引 Vercel CTO 的数据，Vercel 管理界面流量的 60% 是 bot，结论是“不能被 agent 通过 API 使用的东西等于不存在”。",
+        "他也自陈改了主意：去年看空开放权重模型，现在认为份额在涨——按头部 20% 公司的实际行为看，fine-tuning as a service 这次会成立；配合走向多轮的 RL（他点名 Dr. GRPO 和合成 rubric 两个检索词），模型定制会走向完全的领域专用。立场提示：他在 Cognition 任职、办 AI Engineer 大会，天然站在 coding agent 生态一边；营收数字是转述和传闻，引用前需另行核实。"
+      ],
+      "creator": "Unsupervised Learning",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Unsupervised Learning", "url": "https://www.youtube.com/@RedpointAI" }
+      ]
+    },
+    {
+      "slug": "2026-04-24-managed-agents-memory",
+      "title": "Claude Managed Agents 内置记忆开放公测：记忆是文件，可导出、可审计、可回滚",
+      "summary": "记忆按文件存储并挂载到 agent 的文件系统，可经 API 导出、审计、回滚，支持多 agent 按不同权限共享。官方案例称 Rakuten 首轮错误降 97%，属厂商口径。在 Managed Agents 上跑长期 agent 的团队值得细读。",
+      "content": [
+        "Managed Agents 的内置记忆进入公测。设计上的核心选择是记忆即文件：记忆直接挂载到文件系统上，agent 用它本来就在用的 bash 和代码执行能力去读写。官方称在这种结构下，最新的模型存的记忆更完整、组织更好，也更挑剔该记什么。",
+        "企业侧功能是这次发布的重点：存储可以跨多个 agent 共享并配不同权限（比如全组织只读、按用户可读写），多个 agent 可以并发写同一存储；全部变更带审计日志，能定位每条记忆来自哪个 agent 哪个 session，支持回滚和从历史中删除内容；记忆文件可经 API 导出和独立管理。",
+        "客户数字来自官方案例，是厂商口径：Rakuten 称长期任务 agent 的首轮错误降了 97%，Wisedocs 称文档验证提速 30%，Netflix 和 Ando 也在列。对在 Managed Agents 上跑长期 agent 的团队，可核验的部分是文件化记忆的导出和管理能力——被锁定的程度可以自己测。"
+      ],
+      "creator": "Claude Blog",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Claude Blog", "url": "https://claude.com/blog/claude-managed-agents-memory" },
+        { "label": "原推 @claudeai", "url": "https://x.com/claudeai/status/2047421844311949513" }
+      ],
+      "engagement": "6.4K likes"
+    },
+    {
+      "slug": "2026-04-24-levie-gpt55-box-evals",
+      "title": "Aaron Levie：GPT-5.5 在 Box 企业内容评测上比 5.4 平均高 10 个百分点",
+      "summary": "Box 用自家企业知识工作评测测了几周 GPT-5.5：准确率比 5.4 平均高 10 个百分点，金融 83% 对 64%、医疗 78% 对 61%。自测自报、方法未公开，但分行业的提升幅度可作量级参考。",
+      "content": [
+        "GPT-5.5 上线当天，Levie 公布了 Box 过去几周的内测结果：在模拟真实企业知识工作的内部评测上，准确率比 GPT-5.4 平均高 10 个百分点。分行业数字：金融服务 83% 对 64%，医疗 78% 对 61%，公共部门 72% 对 59%，媒体娱乐 70% 对 57%。",
+        "测试材料是财报、临床记录、政策文件和创意内容这类真实工作场景。他的归纳是模型在复杂推理、数据分析和复杂上下文处理上明显变好，对企业知识工作 agent 是一次大升级。模型已上线 Box AI Studio，客户今天就能用它搭 agent。",
+        "立场校准：这是 Box 自测自报，评测方法没有公开，发布末尾也在推广自家平台。可参考的部分是分行业的相对提升幅度——四个行业一致提升约 13 到 19 个百分点，这个量级比单一总分更有信息量。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2047387742951313910" }
+      ],
+      "engagement": "255 likes"
+    },
+    {
+      "slug": "2026-04-24-amjad-deepseek-v4",
+      "title": "Amjad Masad 借 DeepSeek v4 发布反驳“中国蒸馏”叙事：公开的研究突破与数据无关，所有人受益",
+      "summary": "DeepSeek v4 发布当天，他的评论指向叙事本身：美国政客在渲染“中国蒸馏”，中国研究者却在公开分享真实突破；这类进展与数据无关，所有人受益，包括美国小实验室。技术细节需看他转引的原帖。",
+      "content": [
+        "Amjad 连发两条：先转发 DeepSeek v4 发布，随后评论说，在美国政客和说客渲染“中国蒸馏”的同时，中国科学家在公开分享真实的 AI 突破；他认为这类进展和数据无关，对所有人都有利，包括美国的小型实验室——他补了一句，可能也包括大型实验室。",
+        "素材里没有他转引帖子的具体内容，DeepSeek v4 的技术细节需要看原帖。这条的增量是立场本身：一位主流美国 AI 公司的 CEO 公开把“蒸馏窃取”叙事和“公开研究贡献”对立起来，把中国实验室定位成开放研究的贡献方。"
+      ],
+      "creator": "Amjad Masad",
+      "role": "Replit CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @amasad（评论）", "url": "https://x.com/amasad/status/2047547275682214384" },
+        { "label": "原推 @amasad（DeepSeek v4）", "url": "https://x.com/amasad/status/2047519635063631914" }
+      ],
+      "engagement": "875 likes"
+    },
+    {
+      "slug": "2026-04-24-levie-ai-more-work",
+      "title": "Aaron Levie：AI 暂时不会让人少干活，启动变容易后你会做更多以前不做的事",
+      "summary": "他的论点是工作总量不是静态的：agent 把启动成本压低后，你会去做以前嫌费时而根本不开始的事，小事经常滚成三小时。更反直觉的一条：AI 把某类任务做到够好后，反而值得专门雇人长期做。",
+      "content": [
+        "Levie 不认同“AI 会让人少干活”的预期，至少现阶段不会：agent 把探索的启动成本压得很低，于是你开始做的事远比以前多。他的日常版本是，看似很小的事经常很快滚成三个小时——agent 让开头变容易，但项目收尾的工作还是你的。",
+        "这些事大多以前根本不会交给任何人做，纯粹因为全手工做太费时而一直被搁置。更反直觉的一条：当 AI 把某类任务做到够好，反而会变得值得专门雇人配着 agent 长期做这件事——在能低成本试做之前，你根本不会发现它值得做。",
+        "他的结论是工作不是静态的：多数公司能做的事远多于现在在做的事，过去只是被时间和人力供给卡住。顺着这个逻辑，团队里那些一直想做但排不上优先级的事，现在可以重新过一遍——哪些已经便宜到值得开个头。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2047540230694350958" }
+      ],
+      "engagement": "300 likes"
+    },
+    {
+      "slug": "2026-04-24-nikunj-ma-wave",
+      "title": "Nikunj Kothari 判断并购热度照此下去会盖过融资公告：seed 到 A 的断层与 zombiecorn 清算是主因",
+      "summary": "五个原因：seed 到 A 断层恶化、2021 年 zombiecorn 进入清算、大公司吸走人才、公开市场情绪疲软、扁平组织催生更多创业者。结尾一句：创始人很多，企业家很少。考虑退出或融资节奏的创始人值得一读。",
+      "content": [
+        "Nikunj 观察到并购在加速，照这个势头很快会盖过融资公告。他列的原因：seed 到 A 轮的断层持续恶化——起步融资从未这么容易，规模化从未这么难；2021 年的 zombiecorn 到了清算期，预计会有大批创始人离开，或以低于清算优先权的价格卖掉公司；大“token 工厂”在吞人才，人才也想去；除了预期中的约 4 个大 IPO，公开市场情绪持续疲软，与其硬扛市场不如加入估值不断被抬高（或被收购）的 breakout 公司；组织扁平化会让更多人离职或被裁后去创业，进一步加剧 seed 到 A 的断层。",
+        "他引了一句自己也记不清出处的话收尾：创始人很多，企业家很少——不要为了当创始人而创业，要创业是因为你实在干不了别的。这是 VC 视角的市场判断，对正在选择融资节奏或考虑被收购的创始人来说，是一份来自交易对手盘的参考坐标。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2047336067972624870" }
+      ],
+      "engagement": "52 likes"
+    },
+    {
+      "slug": "2026-04-24-peter-yang-fzero-test",
+      "title": "Peter Yang 的固定测试：GPT-5.5 加 Codex 是至今唯一做出可玩 F-Zero 游戏的组合",
+      "summary": "他每逢新模型发布都做同一个测试：做一个 F-Zero 赛车游戏。GPT-5.5 加 Codex 是至今唯一交出能玩成品的组合，还顺带造了陪跑 bot。单一样本，但同题纵向对比有参考价值，另附完整视频测评。",
+      "content": [
+        "Peter Yang 有个保留测试：每逢新模型发布，就让它做一个 F-Zero 赛车游戏。这次的结果是 GPT-5.5 加 Codex 成为至今唯一做出能跑的成品的组合，他还让模型顺带造了一批陪跑的赛车 bot。",
+        "单一题目、单一样本，不构成系统评测，但因为他每代模型都跑同一道题，纵向对比有参考价值。他同时发了 GPT-5.5 和 ChatGPT Images 2 的完整视频测评，链接在第二条原推里。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品，AI 教程作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang（F-Zero 测试）", "url": "https://x.com/petergyang/status/2047502885710410159" },
+        { "label": "原推 @petergyang（视频测评）", "url": "https://x.com/petergyang/status/2047502897412468770" }
+      ],
+      "engagement": "150 likes"
+    },
+    {
+      "slug": "2026-04-24-shipper-gpt55-vibe-check",
+      "title": "Dan Shipper 评 GPT-5.5：很多模型写得出好计划但不敢执行，5.5 直接把事做完",
+      "summary": "一句话结论：很多模型写得出好计划，然后“被自己的计划吓住”；GPT-5.5 的区别是直接执行。论据在他链接的 Every 完整 vibe check 里，素材只含结论。在挑编码主力模型的人可顺链接看全文。",
+      "content": [
+        "Shipper 对 GPT-5.5 的判断浓缩成一句话：很多模型能写出很好的计划，然后“被自己的计划吓住”；GPT-5.5 的区别是直接把事做掉。",
+        "素材里只有结论本身，论据和测试过程在他链接的完整 vibe check 里。和同一天 Levie 的企业评测、Peter Yang 的游戏测试放在一起看，这是 GPT-5.5 发布后第一批基本一致的正面初步反馈。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2047388883823087633" },
+        { "label": "原推 @danshipper（vibe check 链接）", "url": "https://x.com/danshipper/status/2047388895562842162" }
+      ],
+      "engagement": "24 likes"
+    },
+    {
+      "slug": "2026-04-24-sama-nvidia-codex",
+      "title": "Sam Altman：OpenAI 与 NVIDIA 试点整公司铺开 Codex，向其他公司开放同样合作",
+      "summary": "OpenAI 和 NVIDIA 试了在整家公司统一铺开 Codex，Altman 称效果很好并公开邀请其他公司报名。推文无任何细节和数据，增量在 OpenAI 把整司级部署当成可复制的对外产品动作来推。",
+      "content": [
+        "Altman 说 OpenAI 和 NVIDIA 试了一种新做法：在整家公司范围统一铺开 Codex，他对结果的评价是“看到它跑起来很棒”，并公开邀请其他公司报名同样的合作。",
+        "推文没有给出部署规模、流程或任何效果数据，增量在动作本身：OpenAI 把整司级 Codex 部署当成可对外复制的服务在推。对照同一天播客里 Swyx 对两家打法的概括——Anthropic 高价限量、Codex 补贴换渗透——这条可以看作渗透打法落到企业侧的一个具体动作。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2047395562501411058" }
+      ],
+      "engagement": "6.6K likes"
+    },
+    {
+      "slug": "2026-04-24-claude-lifestyle-connectors",
+      "title": "Claude connectors 扩展到生活类应用，改为在对话中动态推荐，并重申无付费排位",
+      "summary": "新增 AllTrails、Uber、Spotify、TurboTax 等 15 个生活类 connector，且改为按对话内容动态推荐；官方重申无广告、无付费排位。做 C 端工具的人可以把这个 200 多个应用的目录当新分发入口评估。",
+      "content": [
+        "Claude 的 connector 目录新增 15 个生活类应用：AllTrails、Audible、Booking.com、Instacart、Resy、Spotify、StubHub、TripAdvisor、Uber、Uber Eats、TurboTax 等，所有套餐可用，移动端 beta。交互方式也改了：connector 不再只是被动挂载，Claude 会按对话内容和用户偏好动态推荐合适的应用；多个应用都能回答时全部展示，由用户选。",
+        "官方同时重申分发立场：Claude 无广告、无付费排位、无赞助答案，多个 connector 可用时按对用户的有用程度排序；连接的数据不用于训练模型，应用看不到用户的其他对话，代订代购前设计为先向用户确认。",
+        "对做产品的人，这个自 2025 年 7 月以来累积超过 200 个 connector 的目录是一个还在扩张的分发入口，官方开放提交。值得把“在对话里被动态推荐”当作一种新的获客面去评估。"
+      ],
+      "creator": "Claude Blog",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Claude Blog", "url": "https://claude.com/blog/connectors-for-everyday-life" },
+        { "label": "原推 @claudeai", "url": "https://x.com/claudeai/status/2047383767984038093" }
+      ],
+      "engagement": "414 likes"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "date": "2026-04-07",
+  "generatedAt": "2026-04-07T07:13:10.911Z",
+  "stories": [
+    {
+      "slug": "2026-04-07-cowork-exfiltration-vuln",
+      "title": "Garry Tan 提示 Cowork 存在未修复漏洞，攻击者可借 Claude 编码环境外泄用户文件",
+      "summary": "披露称 Claude 编码环境里一个已知漏洞延伸到了 Cowork，攻击者可借它外泄用户文件；漏洞由 Johann Rehberger 在 Cowork 出现前发现并披露，Anthropic 承认但未修复。在 Cowork 里处理敏感文件的用户需要留意。",
+      "content": [
+        "Garry Tan 转发的安全披露称，Claude 编码环境中存在一个未修复的漏洞，这个环境如今延伸到了 Cowork，攻击者可以利用它从 Cowork 外泄用户文件。",
+        "按披露的说法，漏洞最早由安全研究者 Johann Rehberger 在 Cowork 出现之前的 Claude 聊天产品里发现并披露，Anthropic 当时承认了问题，但没有修复。攻击面随着 Cowork 的发布扩展到了新产品上。",
+        "素材里只有这条转述，没有 Anthropic 的回应，漏洞的触发条件和影响范围要以 Rehberger 的原始披露为准。在 Cowork 里处理敏感文件的用户可以先读原始报告，确认自己的用法是否落在受影响范围内。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator 总裁兼 CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2041388847930712399" }
+      ],
+      "engagement": "108 likes"
+    },
+    {
+      "slug": "2026-04-07-mistral-voxtral-leanstral",
+      "title": "Mistral 首席科学家在 Latent Space 拆解 Voxtral TTS，预判 coding agent 会把形式化验证变成大市场",
+      "summary": "Voxtral TTS 发布之外，更值得听的是两个判断：音频生成还没有公认的架构配方，Mistral 用 flow matching 头把每帧推理压到 4 或 16 步；Lample 认为形式化验证市场小只是因为太难，coding agent 会把它做大。做语音 agent 或 RL 基建的人值得听。",
+      "content": [
+        "Voxtral TTS 是 Mistral 第一个语音生成模型，支持九种语言，基于此前发布的 Ministral 小模型，权重开放下载。首席科学家 Guillaume Lample 和音频研究负责人 Pavan Kumar Reddy 在 Latent Space 拆了架构：自研的神经音频 codec 把音频压成 12.5 Hz 的 latent，每帧一个语义 token 加一组声学 token；输出端不走常见的 depth transformer（每帧要做 K 步自回归，延迟高），改用 flow matching 头，推理 4 步或 16 步就能出一帧。选自回归路线就是为了实时流式生成，首要场景是语音 agent。",
+        "Pavan 的行业观察是音频生成不像文本，还没有收敛出公认的最佳配方，所以架构上仍有很大探索空间——他们内部把离散 token 和连续两条路都试了，flow matching 效果更好。产品策略上 Mistral 继续押小而专：转录这类任务用 1B 或 3B 模型，性能和大模型基本一样，成本低得多；另一边把原本各团队分头做的编码、推理、视觉能力合并进 Mistral Small，一个 6B 激活、256K 上下文的 MoE。配套的 Forge 平台把内部同一套数据处理和训练基础设施开放给企业客户，主打用自有数据微调加本地部署。Lample 还预告 Mistral 4 的预训练相比之前所有版本会是一次大的跨越，这是内部预期，留待发布验证。",
+        "Leanstral 是这期信息密度最高的部分。押注形式化证明的理由是奖励完全可验证：Lean 证明编译通过即正确，不需要 LLM judge 打分，也就没有 reward hacking 的空间；复杂定理还能拆成多个 lemma 交给子 agent 并行去证，失败也能拿部分奖励。Lample 的判断是，软件形式化验证今天是个极小的行业，原因只是做起来太难，coding agent 普及之后这个市场会明显变大。RL 方面他给了一个具体的工程判断：任务轨迹一旦长到几个小时才出一个 reward，GRPO 这类算法就不够用了，Mistral 正在为大约六个月后的这类场景提前搭新的基础设施和算法。",
+        "整场是 Mistral 自己人讲自家产品，开源最强 TTS、成本只有竞品零头这类说法都是自家口径。可核验的部分是架构和延迟：权重已经放出，技术报告也在路上，做语音 agent 的人可以拿权重实测流式延迟，再决定要不要排进备选。"
+      ],
+      "creator": "Latent Space",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Latent Space", "url": "https://www.youtube.com/@LatentSpacePod" }
+      ]
+    },
+    {
+      "slug": "2026-04-07-levie-work-abstraction",
+      "title": "Aaron Levie 认为 agent 把工作上移了一层抽象，任务越长规划和审查占比越大",
+      "summary": "他把交给 agent 的工作拆成六个环节：定任务、写指令、喂上下文、纠偏、审查、整合，任何一环出错产出就作废；任务越长，规划和审查占比越大。结论是工作没有消失，品味和手艺仍然值钱。",
+      "content": [
+        "Levie 的核心论点是有了替你干活的 agent，工作整体上移了一层抽象。他把现在的工作拆成六个环节——决定让 agent 做什么、把指令写清楚、把需要的上下文喂给它、跑偏时介入、审查最终产出、把结果整合进下一步——任何一个环节出错，拿到的就是废品。",
+        "他特别强调这些环节不会随模型变强而消失：agent 能完成的任务周期越长，规划和审查两端占的比重反而越大。原话是「你现在是编辑、经理、制片人」，品味、对手艺的理解和技能仍然重要。结论落在 AI 会自动化掉工作里烦人的部分、留下更有乐趣的部分，但工作本身还在，只是换了形态。",
+        "Levie 是 Box CEO，立场上长期看多企业 AI，「工作不会消失」也符合他的叙事利益。这条更实用的拿法是把六个环节当检查清单：自己交给 agent 的任务最常在哪一环出废品，就先补哪一环。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2041347596342460439" }
+      ],
+      "engagement": "112 likes"
+    },
+    {
+      "slug": "2026-04-07-claude-code-usage-calls",
+      "title": "Claude Code 团队征集额度异常提前用完的 MAX 用户连线排查，想改进 /usage",
+      "summary": "Thariq 征集 MAX 20x 额度意外提前用完的用户，愿意屏幕共享跑 prompt 的可以在评论区报名，目的是搞清 /usage 还该补什么信息。团队 4 月 7 日中午还有直播，会演示一个未发布的新功能。",
+      "content": [
+        "Thariq 在征集 MAX 20x 套餐额度意外提前用完的用户：愿意屏幕共享、现场跑几个 prompt 的可以在评论区报名，他想借这些一对一连线搞清楚 /usage 还应该展示哪些信息。此前已经连线过一批用户，这次想再约几个；这条推下已有三百多条回复。",
+        "另一条预告了 4 月 7 日中午 12 点（太平洋时间）的直播，Adam 会演示一个尚未发布的新功能。遇到额度异常的重度用户可以直接在征集推下报名，把用量问题当面讲给开发团队；关注新功能的可以等直播。"
+      ],
+      "creator": "Thariq",
+      "role": "Anthropic Claude Code 团队成员",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @trq212（用量征集）", "url": "https://x.com/trq212/status/2041252127943877068" },
+        { "label": "原推 @trq212（直播预告）", "url": "https://x.com/trq212/status/2041380183295590471" }
+      ],
+      "engagement": "1.4K likes"
+    },
+    {
+      "slug": "2026-04-07-peter-yang-agent-first-work",
+      "title": "Peter Yang 给出 agent 优先时代的五条判断，他自己已经基本不打开任务型应用",
+      "summary": "关键两条来自他自己的用法：知识工作的前 80% 已交给 coding agent 起稿，人只做最后 20% 打磨；把常用服务 API 接进个人 agent 后，任务型应用几乎不再打开，X 却还每天刷——由此判断娱乐应用比工具应用活得久。",
+      "content": [
+        "这五条来自他和 a16z 合伙人 Anish（@illscience）的对谈。第一条带着他自己的工作流：写文档、做 slides、拉数据这类知识工作，前 80% 先让 coding agent 出稿，人只做最后 20% 的打磨，他已经不再从零开始做任何东西。第二条是组织预测：2-3 人的产品团队带一群 agent 会取代人浮于事的大组织，这一代创业者会刻意保持小团队。",
+        "信息量最大的是第三条，因为有一手行为数据：自从把 Google Workspace、Mercury 这些服务的 API 接进他的 OpenClaw，他几乎不再打开那些应用，但 X 还是每天刷。由此推出帮你完成任务的应用会萎缩，给你娱乐的应用活得更久。第四条关于个人 agent，他举了散步时 OpenClaw 主动提醒他的例子：「你一直在聊事业和生意。记住你的孩子一个 7 岁一个 4 岁，他们很快就长大了——把时间优化给他们。」",
+        "第五条他说得克制：经济的形状在变，没有在缩小；他希望在大厂持续裁员的背景下出现更多一人公司和小团队——原文用的是 hopefully，是期望而非预测。这条推本身是访谈预告，完整论证在视频里。如果第三条的判断成立，做效率工具的人受到的冲击会排在做娱乐产品的人前面。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品，AI 教程作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2041331383344443795" }
+      ],
+      "engagement": "74 likes"
+    },
+    {
+      "slug": "2026-04-07-shipper-hierarchy-context-rot",
+      "title": "Dan Shipper 反对「AI 让组织不再需要层级」，依据是 context rot 决定了专业化分工仍然必要",
+      "summary": "他认为这个说法很蠢，依据全部来自用 agent 的实际体验：中层管理可以减层，但专业化极有价值，层级随之必要；机制是 context rot，只要上下文还会腐坏就需要分工。在设计组织或多 agent 架构的人值得对照。",
+      "content": [
+        "Shipper 直接反对「AI 让组织不再需要层级」的说法，他认为这很蠢。他承认中层管理有减层的空间，但他用 agent 的全部经验都指向同一个结论：专业化极有价值，而专业化必然带来层级。",
+        "机制在另一条推里：只要 context rot 还存在，就需要专业化，否则不会有好结果。顺着这个逻辑，这条理由对人类组织和多 agent 系统可能是同一条——上下文不能无限堆，所以要按职能切分，切分之后就需要协调层。在设计多 agent 架构或者讨论组织扁平化的人，可以把 context rot 当成一个具体的判断变量。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @danshipper（层级）", "url": "https://x.com/danshipper/status/2041302485315248595" },
+        { "label": "原推 @danshipper（context rot）", "url": "https://x.com/danshipper/status/2041305658054574561" }
+      ],
+      "engagement": "77 likes"
+    },
+    {
+      "slug": "2026-04-07-zara-cut-features",
+      "title": "Zara Zhang 提醒 AI 产品发布前最重要的一步是想清楚能砍掉哪些功能",
+      "summary": "用 AI 做完产品后，发布前最重要的一步是想能砍掉什么功能。顺着这个逻辑，AI 把加功能的成本压得很低，做减法的判断反而稀缺。用 AI 快速出货的人可以当成发布前的固定检查项。",
+      "content": [
+        "她的原话：在发布一个用 AI 做出来的产品之前，最重要的一步是想你能砍掉什么功能，不是想你还能加什么。",
+        "顺着这个逻辑，AI 把加功能的边际成本压得很低，功能膨胀会成为默认趋势，发布前的减法可能比以前更值得固定成一个步骤。她的简介自称 Builder，这条是一句话的经验之谈，没有展开例子，当成发布前检查清单里的一项收着即可。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2041196551113179296" }
+      ],
+      "engagement": "96 likes"
+    },
+    {
+      "slug": "2026-04-07-anthropic-revenue-runrate",
+      "title": "Nikunj Kothari 贴出 Anthropic 收入数据，最近一个月新增 110 亿美元年化收入",
+      "summary": "按他贴出的图，Anthropic 过去三个月增加了 210 亿美元，仅最近一个月新增的年化收入就有 110 亿美元。推文没给数据出处，210 亿的统计口径也没说明，引用前需要自行核验，但量级本身值得记一笔。",
+      "content": [
+        "他贴出的数据：Anthropic 过去三个月增加了 210 亿美元，仅最近一个月新增的年化收入就有 110 亿美元。其中 110 亿明确是年化 run rate 口径，210 亿的口径推文没有说明。",
+        "数字来自他附的图，推文没有注明原始出处，他本人是 FPV Ventures 合伙人，立场偏看多。想引用这组数字的人需要先找到一手来源；如果数字属实，这个增速可以作为判断模型层收入增长的一个直接参照。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2041291304387444991" }
+      ],
+      "engagement": "50 likes"
+    },
+    {
+      "slug": "2026-04-07-spiral-headline-tracker",
+      "title": "Every 把实时 AI 头条追踪器的主笔换成 Spiral，每 30 分钟自动选题写稿",
+      "summary": "Dan Shipper 宣布旗下实时头条追踪器改由 Spiral 担任主笔，每 30 分钟找出并写出当下最重要的新闻。这是 AI 模型在生产环境里当 lead writer 的一个实例，做 AI 内容产品的人可以直接观察它的实际产出质量。",
+      "content": [
+        "Every 把旗下的实时 AI 头条追踪器升级了：Spiral 现在担任主笔，每 30 分钟找出并写出当下最值得关注的新闻，让读者知道该把注意力放在哪。",
+        "这是 AI 模型在生产环境里当 lead writer 的一个公开实例，选题和写作都交给模型、按固定节奏出稿。Spiral 是 Every 自家的产品，这条带推广性质；做 AI 内容产品的人可以直接去链接里看实际产出，判断全自动选题加写稿的质量。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2041273698452136210" }
+      ],
+      "engagement": "27 likes"
+    }
+  ]
+}

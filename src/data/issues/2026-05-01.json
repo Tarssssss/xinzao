@@ -1,0 +1,147 @@
+{
+  "date": "2026-05-01",
+  "generatedAt": "2026-05-01T08:08:57.346Z",
+  "stories": [
+    {
+      "slug": "2026-05-01-karpathy-sequoia-fireside",
+      "title": "Karpathy 补充 LLM 能力参差的经济学解释：营收决定实验室把什么装进 RL 训练分布",
+      "summary": "最有增量的是给 LLM 能力参差补了经济学解释：营收和 TAM 决定实验室把什么装进 RL 训练分布，分布内外表现天差地别，他自称对此还不完全满意。另两个主题：LLM 解锁旧范式做不到的功能、agent-native 经济。",
+      "content": [
+        "这是他对一周前 Sequoia Ascent 炉边谈话的自我总结，共三个主题。第一个主题反对把 LLM 只当成加速既有工作（比如写代码）的工具，举了三类新方向：menugen 这种完全由 LLM 承担、不需要经典代码的应用（输入图片、输出图片，模型原生完成中间所有事）；用 .md skills 替代 .sh 安装脚本——LLM 是英语的高级解释器，能按你的环境智能安装、在线调试；以及 LLM 知识库——对来源和格式都任意的非结构化数据做计算，这是经典代码根本做不到的。他的归纳是：每次范式转移，最先被看到的都是加速旧事物，但这批例子要么让旧的实现方式不再有存在必要，要么是以前根本不可能的功能。",
+        "第二个主题是 LLM 的「参差」（jaggedness）：同一个模型既能连贯地重构十万行代码库，又会建议你走路去洗车房洗车。他此前把原因归到领域的可验证性，这次补了一层经济学：营收和 TAM 决定前沿实验室在 RL 阶段把什么打包进训练数据分布——用他的比喻，在分布内是在 RL 轨道上飞，分布外是拿砍刀在丛林里开路。他明确说对这个解释还不百分之百满意，仍在持续修正这套能力模型。",
+        "第三个主题是 agent-native 经济：产品和服务拆解成传感器、执行器和逻辑三类部件，分布在 1.0/2.0/3.0 三代计算范式上；怎么让信息对 LLM 最大限度可读；正在成形的 agentic engineering 技能栈和对应的招聘实践。他自己标注，全神经计算搭配经典 CPU 协处理器的部分带着「暗示和梦想」的成分。",
+        "顺着他的分布逻辑，评估一个 agent 应用方向时可以先问两个问题：这个领域可验证吗，实验室有没有经济动机把它装进 RL 分布。两个都不占的场景，短期内大概率还是「丛林开路」的体验。"
+      ],
+      "creator": "Andrej Karpathy",
+      "role": "前 Tesla AI 总监、OpenAI 创始团队成员",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @karpathy", "url": "https://x.com/karpathy/status/2049903821095354523" }
+      ],
+      "engagement": "3.4K likes"
+    },
+    {
+      "slug": "2026-05-01-hassabis-training-data",
+      "title": "Demis Hassabis：药物发现有望几年内从平均十年压到几个月，湿实验只留验证一步",
+      "summary": "Training Data 对谈里的几个具体判断：目标是把药物发现 99% 的探索放进计算机、几年内做到，周期可能从平均十年压到几个月甚至更短；AI 模拟可能把经济学这类无法重复实验的领域变成可采样的科学；AGI 口径维持 2030。",
+      "content": [
+        "药物发现是这场对谈最具体的部分。AlphaFold 解决的是蛋白质三维结构，他强调这只是药物发现流程的一环；Isomorphic Labs 在做相邻技术——自动设计化合物，让它牢固结合到目标蛋白的正确位置、又尽量不结合别处（后者是毒副作用的来源）。他的目标是把占 99% 工作量和时间的探索全部放进计算机，湿实验只留最后的验证一步。他认为这几年内可以做到；做到之后，药物发现周期可能从平均十年压到几个月，甚至几周、几天，届时「所有疾病都可能进入射程」，基于基础药物做个性化变体也会变得可行。",
+        "他更兴奋的方向是 AI 模拟可能催生新科学。经济学这类学科今天不像物理那样「硬」，原因是没法做重复的受控实验——加息半个百分点只能在真实世界做一次。如果模拟器足够准确，就可以严格地反复采样。已有的例子是 WeatherNext 天气模拟器和正在做的「虚拟细胞」。他的提法是：机器学习之于生物学，相当于数学之于物理——生物这类涌现系统里全是弱信号、弱相关和远超人脑处理量的数据，数学的表达力不够，机器学习正好适合做它的描述语言。他还提到，学出模拟器之后也许能反向提取出显式方程。",
+        "几个更理论的判断：信息可能比能量和物质更基本，如果成立，AI 的意义比现在的认知更深；AlphaFold 证明经典图灵机（今天的神经网络）能逼近此前被认为需要量子系统才能建模的问题（蛋白质折叠），这类问题可能比想象中多。AGI 路径上他主张先把 AI 做成精确、有用的工具，自主性和意识的问题留作第二步，并用第一步的工具帮忙回答。快问快答里他维持了 2030 的 AGI 时间口径，并说 2010 年设定的二十年使命「作为一个领域基本完全在轨」。",
+        "给创业者的两条：领先时代五年而不是五十年——他在 Elixir Studios 时做过模拟整个国家的游戏 Republic，要在 90 年代末的家用奔腾机上跑百万人口的模拟，他自己承认过于超前并因此出了问题；以及早年 DeepMind 像「守着一个秘密」——深度学习加强化学习加 GPU 加神经科学原理的组合，当时学界普遍翻白眼，他的心态是即使失败也会「以一种原创的方式失败」。立场提示：药物发现时间表来自 Isomorphic 负责人本人，属于对自家路线的乐观估计，可核验的是后续公开的研发进展。"
+      ],
+      "creator": "Demis Hassabis",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Training Data", "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8" }
+      ]
+    },
+    {
+      "slug": "2026-05-01-levie-headless-pricing",
+      "title": "Aaron Levie 推演 headless 软件的定价：人类席位捆绑 API 额度，agent 走消费计费",
+      "summary": "Box CEO 的三段推演：人类席位不消失但必须附带 agent 可用的 API 额度，不做的软件必死；有状态 agent 像另一个用户、没法按人头定价；超额部分走消费计费，可能出现按一次完成的工作计价的新型 API。做 B2B 定价的人值得对照。",
+      "content": [
+        "前提是 agent 将成为软件的最大用户：agent 不会用你的 UI，只和你的 API 对话，所有软件都得能 headless 使用。他说这套推演基于 Box 自己在做的事，加上与其他平台的交流。",
+        "第一条：面向人的席位不会消失，它仍是客户可预期付费的有效方式，但关键变化是席位必须附带一份 API 用量，让用户通过任何 agent（他点名 ChatGPT、Codex、Claude、Gemini、Cursor、Copilot、Perplexity、Factory 等）操作自己的数据。他的判断下得很硬：不做这件事的软件 DOA（出生即死）。",
+        "第二条：当 agent 做有状态的工作——有自己的工作区、自己的数据、和用户不同的权限、长期存在——它看起来就像系统里另一个「用户」，他举 OpenClaw 式 agent 为例。但照人类席位定价几乎不可行：一家客户可能把所有工作塞进 1 个 agent，另一家拆成 1000 个。第三条：超出席位额度、或 agent 完全自主行动时，主导模式会是消费计费；部分场景可能需要新型 API——一次调用对应 agent 一口气完成的一件事，更接近按结果计价。",
+        "他对总量的判断是这类用量「实际上无上限」，因为 agent 对数据的操作会远超人类今天的用法；有些平台会先抵制，但平台外的 agent 永远多于平台内的人，headless 化不可避免。立场提示：Box 是内容平台，这套叙事对它有利，但三条定价结构的推演本身不依赖 Box 的立场，做 B2B 软件的人可以拿它对照自家的 API 和打包策略。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2050051426446152159" }
+      ],
+      "engagement": "357 likes"
+    },
+    {
+      "slug": "2026-05-01-claude-security-beta",
+      "title": "Claude Security 进入公测：不自建工具也能让模型扫代码安全问题，限 Enterprise 客户",
+      "summary": "公测版内置在 Claude Code on the web：指向一个 repo 得到经过验证的漏洞发现并就地修复，现阶段仅对 Claude Enterprise 客户开放。官方称 2 月研究预览以来数百家组织在生产代码上抓到现有扫描器漏掉的问题，属厂商口径。",
+      "content": [
+        "产品形态：内置在 Claude Code on the web，把它指向一个 repo，得到经过验证的漏洞发现，然后在写代码的同一个地方修复。官方给它的定位是回应安全团队的一类需求——不想接 API 也不想自建 agent，照样让 Opus 4.7 跑在自己的代码上。现阶段公测只对 Claude Enterprise 客户开放。",
+        "从 2 月研究预览到这次公测的迭代：官方称已有数百家组织在生产代码上使用，抓到了现有扫描器漏掉的问题；根据早期反馈新增了定时扫描、目录级定向、CSV 和 Markdown 导出、新发现的 webhook 通知，以及跨扫描保留的忽略标记（dismissals）。",
+        "「抓到现有扫描器漏掉的问题」这一战绩出自 Anthropic 官方账号和团队成员，没有第三方数据佐证；可核验的部分是功能清单和准入范围。Enterprise 客户的安全团队拿一个真实 repo 跑一轮是成本最低的验证方式；非 Enterprise 用户暂时不在开放范围内。"
+      ],
+      "creator": "Cat Wu",
+      "role": "Anthropic Claude Code 团队",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @_catwu", "url": "https://x.com/_catwu/status/2049964403177689130" },
+        { "label": "原推 @claudeai（定位）", "url": "https://x.com/claudeai/status/2049898741772021991" },
+        { "label": "原推 @claudeai（功能更新）", "url": "https://x.com/claudeai/status/2049898743772696745" }
+      ],
+      "engagement": "292 likes"
+    },
+    {
+      "slug": "2026-05-01-swyx-agents-containment",
+      "title": "Swyx：coding agent 破圈是今年主题，AI Engineer 用 agent 以小团队服务月均约百万开发者",
+      "summary": "一手运营案例：AI Engineer 团队把 agent 用在从 CMS 到租充气龙虾的所有杂务上，以极小团队免费服务每月约 100 万独立开发者。他的判断：今年所有知识工作者都会被 coding agent 改变认知，多数人用 agent 的强度远远不够。",
+      "content": [
+        "他重申自己在 Jacob Effron 播客上说过的判断：「coding agents breaking containment」（编码 agent 突破圈层）是今年的爆发主题——今年是所有知识工作者、而不只是程序员，被 AGI 转变认知（AGI-pilled）的一年。",
+        "支撑判断的是一手案例：在 AIE EU 的闭幕演讲里，他讲了团队怎么用 agent 把 AI Engineer 当 Tiny Team 来跑——每月免费服务全球约 100 万独立开发者，agent 负责的事务从 CMS 一直到租借充气龙虾。工具上他个人用 OpenClaw，团队用 Cognition 的 Devin 和 town，但他强调这件事和具体哪家 agent 无关；他的原话指向读者：你大概率还没有足够努力地把 agent 用在日常知识工作上。",
+        "这条推文转的是 Altman 同日的发布——「codex 今天大升级，试试用它做非编码的电脑工作」（素材里该推 7.8K 赞）。两条放在一起看，厂商和重度用户在同一个方向上发力：把 agent 的场景从写代码推向通用知识工作。他另发了一条更完整的 writeup 链接，想找 agent 生产力用法的团队可以从那里开始。"
+      ],
+      "creator": "Swyx",
+      "role": "AI Engineer 大会团队、Latent Space 播客",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2050068468498842058" },
+        { "label": "writeup 链接 @swyx", "url": "https://x.com/swyx/status/2050076322781860144" },
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2049946120441520624" }
+      ]
+    },
+    {
+      "slug": "2026-05-01-ryo-lu-opinionated-design",
+      "title": "Ryo Lu：「无观点」本身是强观点，通用性来自把概念削减到本质后再延展",
+      "summary": "Cursor 设计师的方法论长文：决定系统里存在哪些概念、什么可见什么隐藏，本身就是表达世界观；纯客户导向只会收敛到局部最优——用户反馈指出摩擦在哪，很少指出系统该是什么。做产品架构和平台设计的人值得读原文。",
+      "content": [
+        "出发点是反对把 opinionated 和通用（general purpose）当对立面。你决定系统里存在哪些概念、什么可见、什么可组合、什么可扩展、什么被隐藏，就已经表达了一种世界观；「无观点」本身就是一个很强的观点。在他看来，面向通用性意味着一组具体主张：核心概念要少、耐久、灵活，用户不该被困在僵硬的工作流里，抽象比表面的专门化更重要。",
+        "他对纯客户导向的批评：用户反馈告诉你摩擦在哪里，但很少告诉你底层系统应该是什么；只跟着直接需求走会收敛到局部最优——碎片化的功能、窄工具、围绕现有习惯而非耐久概念塑形的产品。他把这个落差定义为设计的栖身处：把现实简化到「一眼可见」的层次之下。",
+        "方法论部分：伟大的系统先把概念削减到本质、直到 primitives 清晰，再为每个概念修出延展、组合、折叠进彼此的路径——包装可以变，本质不变。这套结构让系统能同时服务新手和专家、服务一个领域而不被它困住。在他的定义里，灵活性是一组凝聚的强观点的产物——关于哪些概念是根本的、哪些抽象应该耐久、哪些自由度重要。收尾两句值得直接引：「核心处简单，边缘处开放。这是终极的观点。」"
+      ],
+      "creator": "Ryo Lu",
+      "role": "Cursor 设计师，早期 Notion、Stripe 成员",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @ryolu_", "url": "https://x.com/ryolu_/status/2049866003287576978" }
+      ],
+      "engagement": "186 likes"
+    },
+    {
+      "slug": "2026-05-01-steipete-openclaw-groupchat",
+      "title": "Steipete：OpenClaw 群聊的 agent 对话方式已重写，之前效果不稳的值得重试",
+      "summary": "两条可直接操作的更新：他改写了 agent 在群聊里的说话方式，此前在群聊拿到参差结果的用户应该再试；用 GPT 性能不佳的切到 codex harness，两个一起启用。作者自评没有对比数据，已部署 OpenClaw 的用户重跑一遍即可验证。",
+      "content": [
+        "两个具体动作：一是群聊场景——他说自己改变了 agent 在群聊里的对话方式，给此前结果参差的用户的建议是「一定要再试一次」；二是模型搭配——用 GPT 拿到次优表现的话，切换到 codex harness，并把两者都启用。",
+        "这是作者对自家改动的自评（原文「IT IS SO GOOD NOW」的语气接近营销），没有给对比数据；验证方式就是在自己的群聊场景重跑一遍。同日他还转发了与 NVIDIA、OpenAI、Microsoft、GitHub、腾讯混元等合作加固 OpenClaw 安全的进展，重度用户可以一并关注。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw 作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2049988836160074022" },
+        { "label": "原推 @steipete（安全合作）", "url": "https://x.com/steipete/status/2049976855617314991" }
+      ],
+      "engagement": "1.2K likes"
+    },
+    {
+      "slug": "2026-05-01-garry-tan-gbrain",
+      "title": "Garry Tan 给 GBrain 划品类：不做完美检索，专门服务 OpenClaw、Hermes 的个人 AI 场景",
+      "summary": "连发两条给自家开源项目定位：三周前 GBrain 和 Mempalace 还相似，现在他认为 GBrain 是独立品类——不追求完美的大海捞针式检索，面向 OpenClaw、Hermes 的个人 AI 场景；MIT 开源，建议装在 Karpathy 式知识 wiki 上。",
+      "content": [
+        "定位声明：三周前 GBrain 和 Mempalace 看起来还有些相似；三周后他的判断是 GBrain 已经是自己的品类——不去把「大海捞针」式的精确检索做到完美，目标场景是 OpenClaw、Hermes 这类个人 AI。",
+        "用法建议：Hermes Agent 或 OpenClaw 用户把 GBrain 装在自己的 Karpathy 式知识 wiki 之上，他的说法是会带来「巨大回报」。项目 MIT 协议开源。",
+        "这是作者本人推广自家项目（他的 bio 写着 GBrain 创作者），「巨大回报」没有附数据；可核验的是开源代码本身和与 Mempalace 的实际差异。已经在维护个人知识库并跑 OpenClaw 的用户，试装成本不高。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator CEO、GBrain 作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan（品类定位）", "url": "https://x.com/garrytan/status/2050095919157350644" },
+        { "label": "原推 @garrytan（用法建议）", "url": "https://x.com/garrytan/status/2050096324100682097" }
+      ],
+      "engagement": "66 likes"
+    }
+  ]
+}

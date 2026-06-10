@@ -1,0 +1,145 @@
+{
+  "date": "2026-04-12",
+  "generatedAt": "2026-04-12T07:10:52.880Z",
+  "stories": [
+    {
+      "slug": "2026-04-12-openclaw-strict-mode-codex-harness",
+      "title": "Peter Steinberger 给 OpenClaw 加 strict mode 和原生 Codex harness，针对 GPT 偷懒问题",
+      "summary": "OpenClaw 下个版本两个实验都冲着 GPT 偷懒：strict mode 用执行契约要求模型持续读码改码或上报真实阻塞，不许停在计划阶段；harness 插件化后可整体换成 Codex。他预判后者会削弱人格但更撑长任务。自托管 agent 的人值得跟进。",
+      "content": [
+        "下个版本的 OpenClaw 带两个实验，都针对「GPT is lazy」的问题。第一个是 strict mode：把 agents.defaults.embeddedPi.executionContract 设为 strict-agentic，要求 GPT-5.x 持续工作——多读代码、调用工具、做出修改，或者返回一个真实的 blocker，而不是停在「这是我的计划」就收工。这个模式目前只对 GPT 开启，因为还没在其他模型上测试过；用 hackable install 的人可以自己改掉这个限制。",
+        "第二个是把原生 Codex 当 OpenClaw 的 harness：开启 codex 插件后，threads、resume、compaction 和 app-server 执行全部由 Codex 接管。背后的结构变化是 harness 本身成了插件，默认的 Pi harness 可以换成 Anthropic 的 SDK 或任何自定义实现。他特别说明这不会让 Claude 订阅突然可用，价值在于可以对比不同 harness 实现。",
+        "他对 Codex harness 的预判保留了不确定性：大概率会削弱 agent 的人格，但应该能加强 agentic 程度，让 agent 在更长线的任务上持续工作。harness 插件化这一步，等于把「模型怎么选」和「harness 怎么搭」拆成两个可以分别试验的层。自托管 OpenClaw 的人可以等下个版本直接试 strict mode；想在其他模型上开 strict mode 的，需要用 hackable install 自己放开限制。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw 开发者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete（strict mode）", "url": "https://x.com/steipete/status/2043136615640694797" },
+        { "label": "原推 @steipete（Codex harness）", "url": "https://x.com/steipete/status/2043136620006961384" },
+        { "label": "原推 @steipete（harness 插件化）", "url": "https://x.com/steipete/status/2043136624469619050" }
+      ],
+      "engagement": "1,009 likes"
+    },
+    {
+      "slug": "2026-04-12-thin-harness-fat-skills",
+      "title": "Garry Tan 主张 thin harness、fat skills：记忆和技能放在 markdown 和 git 里，harness 只读不拥有",
+      "summary": "判据一句话：harness 死掉时记忆也跟着死，就是 harness 建得太厚。做法是 memory 和 skills 全用 markdown、大脑是一个 git 仓库，harness 只读文件不拥有文件。他说依据是开源三个月、每天数万 agentic 工程师在用。自建 agent 框架的人值得对照。",
+      "content": [
+        "这是他对另一条推文给出的反驳（被引的原帖不在今天素材里），立论资格他自己给了：发布开源项目三个月，每天有数万 agentic 工程师在用。主张本身是 thin harness、fat skills——harness 做薄，能力沉在 skills 里。",
+        "具体架构：memory 是 markdown，skills 是 markdown，大脑是一个 git 仓库；harness 是薄薄一层指挥者，读这些文件，但不拥有它们。判据是他的原话：「如果 harness 死掉时你的记忆也跟着死，那你把 harness 建得太厚了。」",
+        "同一天 Peter Steinberger 把 OpenClaw 的 harness 改成了可整体替换的插件，两件事指向同一个方向：harness 越可替换，长期资产（记忆、技能）越应该放在 harness 外面、用最通用的格式存。顺着这个逻辑，在自建 agent 的人可以做一个检查：把 harness 整个换掉之后，agent 还剩下什么。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator 总裁兼 CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan（thin harness, fat skills）", "url": "https://x.com/garrytan/status/2043198783006355747" },
+        { "label": "原推 @garrytan（记忆与 harness）", "url": "https://x.com/garrytan/status/2043198780800197025" }
+      ],
+      "engagement": "119 likes"
+    },
+    {
+      "slug": "2026-04-12-allaire-agentic-economy",
+      "title": "Circle CEO Jeremy Allaire：agent 之间互相付费已经开始出现，agent 经济需要能跑微支付的新结算层",
+      "summary": "agent 之间付几十美分的交易已开始出现，现有金融基础设施撑不住全球即时、可编程的数十亿笔微支付——答案是 ARC：USDC 做原生代币、已知验证人、数百毫秒结算。全程 CEO 推自家方案，做 agent 计费结算的人值得听。",
+      "content": [
+        "他在 No Priors 上的核心论点：真实经济里越来越多工作（尤其白领经济）将由 agent 执行，agent 之间协作、互相消费服务、为彼此的输出付费——这种几美分到几十美分量级的 agent 间支付，按他的说法已经开始出现。由此推出 agent 经济的基础设施需求清单：全球、即时、可被任意软件编程、agent 能自己动态开设金融端点、规模撑到数十亿乃至数万亿笔交易、单笔小到几美分。他的判断是现有金融基础设施一条都满足不了。",
+        "Circle 给出的答案是 ARC，他称之为「经济操作系统」：USDC 直接做原生代币（没有价格波动的 gas token）、验证人是已知集合（由大型金融基础设施公司运营，名单尚未公布）、数百毫秒内确定性结算、第一天就带隐私原语。他说 ARC 上单笔交易成本可以低到一美分的百万分之一，USDC 是目前交易量最大的数字货币——这些量级说法都出自他本人。",
+        "更远的判断：合同和公司的实体本身会变成软件机器，链上组织会混合人类与 agent 行动者，社会契约会经历一轮重新谈判。他认为 2030 年代出现两位数 GDP 增长「不算不现实」，同时点名风险——GDP 增长可能变成资本以人为代价捕获更多。",
+        "立场校准：整场是 Circle CEO 讲自家 USDC 和 ARC，验证人名单未公布，「最大交易量」「最低成本」均不可在本期素材内核验。可用的部分是他列的需求清单：在给 agent 设计计费和结算的人，可以拿微支付、即时结算、软件可编程这几条去衡量自己现有方案的差距。"
+      ],
+      "creator": "Jeremy Allaire",
+      "role": "Circle 联合创始人兼 CEO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "No Priors", "url": "https://www.youtube.com/@NoPriorsPodcast" }
+      ]
+    },
+    {
+      "slug": "2026-04-12-levie-demand-expansion",
+      "title": "Aaron Levie：把职业变得更高效往往推高需求，未来律师更多；agent 的 token 需求可能被低估几百倍",
+      "summary": "两条推同一个判断：效率提升推高总需求。律师侧给了三个机制并引 ABA 数字——执业律师从 1975 年约 40 万涨到 2025 年约 137.5 万；算力侧他估 agent 的 token 需求可能比当前认知高几百倍。判断职业类 AI 产品方向的人值得看。",
+      "content": [
+        "律师论证给了三个机制：AI 让更多人提出法律问题，验证和执行最终仍要找真律师；AI 会催生大量新奇法律条款，律师要花更多时间审 redline 和新案例；AI 自身在各行业的应用带来 IP、隐私、合规的新法域。历史先例他引 ABA 的数字：在 PC 和互联网这两项让法律行业更高效的技术之间，美国执业律师从 1975 年约 40 万涨到 2025 年约 137.5 万。结论是他的原话：「当我们把一个职业变得更高效、更自动化时，对它的需求往往上升而非下降。」",
+        "同一个判断用在算力上：目前多数 AI 使用集中在 token 效率相对高的 chat 工具，coding agent 的 token 消耗高出几个数量级但用户还少。他认为同样的消费模式即将扩散到其余知识工作，agent 的 token 处理需求「可能比我们现在意识到的高几百倍」，并预期数据中心 capex 曲线继续垂直上行——他转发的图表口径是 Amazon 近三年 capex 超过其历史总和。",
+        "立场和可核验部分：Box 卖企业内容平台加 AI，看多 AI 消费量符合他的立场；ABA 的律师数量是可查证的公开数字，token 需求的「几百倍」是他的估计而非测算。在「AI 替代职业」和「AI 放大职业需求」两种产品叙事里，他明确押后者。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie（律师与需求）", "url": "https://x.com/levie/status/2043051227387433144" },
+        { "label": "原推 @levie（agent token 需求）", "url": "https://x.com/levie/status/2043192337111924930" }
+      ],
+      "engagement": "366 likes"
+    },
+    {
+      "slug": "2026-04-12-zara-no-collaboration",
+      "title": "Zara Zhang：人类协作最高效的方式是不协作，一个人端到端负责并和 agent 一起工作",
+      "summary": "她给人际沟通只留三类：决定做什么和「好」是什么样、陪伴防孤独、创意脑暴；同步、汇报、交接不再需要人对人。配套主张：一个人端到端拥有一件事、和 agent 协作。无数据支撑，可当组织分工的极端基准。",
+      "content": [
+        "主张是她的原话：「人类协作最高效的方式：不协作。」一个人应该端到端拥有一件事，然后和 agent 一起工作。",
+        "配套判断是人和人的沟通将留给三类事——决定做什么、「好」长什么样；彼此陪伴、防止孤独、建立同伴情谊；创意头脑风暴、互相激发想法。项目同步、状态更新、工作交接这类协调性沟通，在她的版本里都不再由人对人完成。",
+        "两条推文都没有给运营数据或案例，是个人判断。同步会和交接文档确实是 agent 最容易先接手的协调开销，她等于把这个趋势直接推到了组织设计的极限。正在重新分工的小团队可以拿这个极端版本当基准，反推自己还剩哪些必须人对人的环节。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui（不协作）", "url": "https://x.com/zarazhangrui/status/2043187721989149146" },
+        { "label": "原推 @zarazhangrui（人类沟通的用途）", "url": "https://x.com/zarazhangrui/status/2043202553538925031" }
+      ],
+      "engagement": "140 likes"
+    },
+    {
+      "slug": "2026-04-12-agent-long-horizon-memory",
+      "title": "Aditya Agarwal：真 agent 和 LLM 循环的差别在长程记忆管理，Claude Code 的三层记忆架构最值得看",
+      "summary": "他的分界线：LLM 跑在循环里或挂事件触发还称不上 agent，差别在有没有智能的长程记忆管理；并点名 Claude Code 的三层记忆架构最有意思。推文未展开三层细节。自建 agent 的人多一个审视自己系统的维度。",
+      "content": [
+        "他的判断：真正的「agent」和单纯把 LLM 跑在循环里（或者挂一个事件触发器）之间，最大的差别是怎么做智能的长程记忆管理。他点名 Claude Code 架构里最有意思的部分是三层记忆架构，程度词给得很重——by far 最有意思。",
+        "推文本身没有展开三层记忆分别是什么，想跟进的人需要自己去看 Claude Code 架构的相关拆解。把这条和同一天 Garry Tan 的「记忆放 markdown、harness 只读不拥有」放在一起看，两人都把记忆当成 agent 的本体资产，一个给的是判断标准、一个给的是存储形态。他是前 Dropbox CTO、Facebook 早期工程师，现在在 South Park Commons 做投资，这条没有在推自家产品。"
+      ],
+      "creator": "Aditya Agarwal",
+      "role": "South Park Commons 普通合伙人，前 Dropbox CTO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @adityaag", "url": "https://x.com/adityaag/status/2043144970060939487" }
+      ],
+      "engagement": "96 likes"
+    },
+    {
+      "slug": "2026-04-12-vercel-sandbox-fastest-claim",
+      "title": "Guillermo Rauch 称 Vercel Sandbox 已是最快的 microVM sandbox，并定位为 agent 计算的基础层",
+      "summary": "他的说法：Vercel Sandbox 现在是最快的基于 microVM 的 sandbox，迁移客户反馈真实环境的性能与可靠性同样领先；定位是 claw 类 agent、coding agent 与并行计算的基础层。CEO 自评且本条未附数据，给 agent 选沙箱的团队需要自己复测。",
+      "content": [
+        "两个说法：Vercel Sandbox 现在是最快的基于 microVM 的 sandbox；除了实验室 benchmark，迁移过来的客户反馈真实环境的性能和可靠性也无出其右——后一条是他转述的客户说法。",
+        "定位上他放得很大：无论是 claw 类 agent、coding agent 还是单纯的并行计算，「我们认为这是新世界的基础」。原话带着 we think，是公司判断。",
+        "立场校准：Vercel CEO 评自家产品，「最快」的依据没有在这条推文里展开，本条也没给数字。正在为 agent 选执行沙箱的团队，可以把这条当成去要 benchmark 口径、做自己复测的由头，而不是结论。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2043020059896091016" }
+      ],
+      "engagement": "355 likes"
+    },
+    {
+      "slug": "2026-04-12-nikunj-vc-backchannel",
+      "title": "Nikunj Kothari 提醒创始人避开只追 markup 的 VC，背调每个要进 cap table 的人",
+      "summary": "同一个 VC 半年内从「接受低估值、我的 conviction 值这个价」变成「估值越高越好、方便给 LP 看 marks」，公司不顺时引荐和善意一起消失。建议：要传教士不要雇佣兵；背调将进 cap table 的那个人。融资中的创始人适用。",
+      "content": [
+        "他描述的模式：投资时说「请接受这个低估值，因为是我在投你，我的 conviction 值这个价，我做长期陪伴」；六个月后同一个 VC 变成「拿最高估值吧，管他什么合伙人和基金名字，稀释少、钱多，还能帮我给 LP 看 marks」。他提醒，这类只在乎 deal 拿 markup 的投资人，在公司不顺的时候引荐和善意会一起消失。",
+        "两条可执行建议：选传教士而非雇佣兵；以及他连说三个 please 的那条——backchannel 即将进入你 cap table 的那个具体的人。他自己是 FPV Ventures 合伙人，这条算从业者自曝行规，正在融资的创始人可以直接拿来用。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2043092455550259341" }
+      ],
+      "engagement": "151 likes"
+    }
+  ]
+}

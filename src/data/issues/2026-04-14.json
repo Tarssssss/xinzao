@@ -1,0 +1,170 @@
+{
+  "date": "2026-04-14",
+  "generatedAt": "2026-04-14T07:27:54.046Z",
+  "stories": [
+    {
+      "slug": "2026-04-14-vercel-open-agents",
+      "title": "Vercel 开源云端 coding agent 参考平台 Open Agents，Rauch 称护城河正从代码本身转向代码的生产体系",
+      "summary": "比发布更有信息量的是动机：现成 coding agent 应付不了巨型 monorepo，也缺企业内部知识，Stripe、Ramp、Spotify 等都在自建；Rauch 进一步判断护城河会落在代码的生产体系上。要自建 agent 编码平台的团队可直接参考。",
+      "content": [
+        "Vercel 把 Open Agents 开源，定位是云端 coding agent 的参考平台，跑在自家四块基础设施上：Fluid 跑 agent 的推理主体，Workflow 管长时任务的持久性，Sandbox 负责代码的安全执行，AI Gateway 提供多模型接入。Rauch 说由于项目聚焦开放 SDK 和运行时，即使不部署在 Vercel 上，这套代码也值得一读。",
+        "他给的发布理由分两层。技术层面，现成的 coding agent 在巨型 monorepo 上表现不好，也没有企业的内部知识、集成和定制工作流，所以 Stripe（Minions）、Ramp（Inspect）、Spotify（Honk）、Block（Goose）这些公司都在自建“AI 软件工厂”。商业层面是他的核心判断：软件公司的护城河会从“写出来的代码”转移到“生产这些代码的体系”，原话是 the alpha is in your factory。",
+        "立场上这同时是一份 Vercel 基础设施的导购，Open Agents 的默认部署目标就是自家产品。可以核验的部分是大公司自建 coding agent 平台这个趋势——他点名的四家都有公开项目名。正在评估内部 agent 编码平台的团队，可以把这个 repo 当架构参考，再单独决定要不要绑定 Vercel 的运行时。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2043869656931529034" }
+      ],
+      "engagement": "2.1K likes"
+    },
+    {
+      "slug": "2026-04-14-agent-deployer-role",
+      "title": "Aaron Levie 判断每个团队都会需要专职部署和运营 agent 的人，并写了一份这个新角色的 JD 草稿",
+      "summary": "他和企业聊得越多越确信会出现这个角色：找出能用 agent 把任务做快或做多 100 倍的工作流，打通系统、设计人介入节点、模型一变就跑 eval、长期管 KPI，每个团队都需要。他点名适合技术向新人和担心前景的工程师。",
+      "content": [
+        "Levie 说接触的企业越多，越清楚一个新角色会普遍出现：团队里的 agent 部署者和运营者。判断哪里值得上 agent 的标准很直接——把算力砸到一个任务上，要么执行快 100 倍，要么执行次数多 100 倍。他举的例子包括处理多几个数量级的销售线索并带上客户信号交给销售、自动化合同审查和接收流程、精简客户 onboarding、搭全公司共用的知识库。",
+        "这份 JD 里麻烦的部分在工程之外：梳理结构化和非结构化数据的流向、设计未来态的工作流、给 agent 接上干活所需的上下文、确定人在哪些步骤介入；模型或数据有大变动后要管理 eval 和复核，还要长期运营 agent 并跟踪 KPI。人选要相对技术化（用得惯 skills、MCP、CLI），同时操作和业务能力都要强，公司也得放心给他打通业务系统的权限。",
+        "他预计这不会是集中化职位，每个团队都需要一个以上，可能向 IT 或 AI 团队汇报，也可能直接长在业务部门里；可以由现有员工转岗，也可以全新招聘。他还点名两类人适合：押注 AI 的技术向新一代员工，以及担心未来的工程师。立场上 Box 卖的就是企业内容加 AI，他有动机看多企业 agent 化，但这份职责清单本身可以直接拿来对照自家团队缺什么。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2043883641366032638" }
+      ],
+      "engagement": "1.3K likes"
+    },
+    {
+      "slug": "2026-04-14-periodic-labs-fedus",
+      "title": "Liam Fedus 谈 Periodic Labs：文献里同一材料属性能差出几个数量级，AI 做科学的壁垒在实验闭环",
+      "summary": "ChatGPT 共同创造者的新公司方法论：文献值能差几个数量级，只能当先验，壁垒在实验闭环；LLM 只做编排层，调用专用原子模型。他还判断软件工程的 AI 自我改进差不多正在发生。做 AI for science 的人值得听全集。",
+      "content": [
+        "Fedus 是 ChatGPT 的共同创造者、前 OpenAI 后训练 VP，更早在 Google Brain 做稀疏化架构。Periodic Labs 想做“原子层面的 AI foundation lab”，瞄准材料科学和化学。他说 2022 年的技术撑不起这家公司：要等推理和测试时计算带来可靠的纠错与工具调用、coding agent 跑通之后，把 AI 接到物理世界才有了地基。",
+        "数据是整场访谈最具体的部分。团队工程师查一项材料属性的文献报告值，发现横跨多个数量级——拿这种数据训练，模型最多学会拟合这个分布，离真值并没有更近。实验数据提供的才是 grounding，而且关键在闭环：拿到实验数据后找异常、找规律、和模拟及文献对照，再驱动下一轮实验，单纯堆一池数据没有这个效果。内部经验也支持这一点，数据最充裕的方向加速最快；量子力学层面存在一定泛化，但跨到流体力学这类另一个抽象层就帮不上忙。",
+        "架构上 LLM 只当编排层，既做科学家的助手也指挥实验，真正算原子体系的是一批针对对称性专门设计的低延迟神经网络，被当作工具和 reward function 调用。商业上 Periodic 把自己定位成制造类企业的智能层、实验的 system of record 和控制面，先按软件生意做，也不排除生物技术那种押注高价值发现的模式。机器人对他们的闭环并非必需，但他认为可靠的通用机器人会是巨大的加速器，目前用的还是简单的现成自动化加人工。另一个细节：Periodic 完全不碰 coding 模型，直接用 Codex 和 Claude Code 当加速器。",
+        "他对自我改进的看法带明确的领域限定：把智能当标量看是个谬误，这些系统的能力呈尖刺状，在某个数学领域达到世界级的系统，换种问法成绩就会明显下滑。软件工程因为验证环境便宜、AI 研究者和工程师之间没有领域知识差距，自我改进在他看来差不多正在发生；AI 研究是更慢的外环，要消耗 GPU 验证 scaling 性质；物理科学还要再等实验闭环建起来，这正是 Periodic 的前提。对做垂直领域 AI 的人，他这套“闭环优先于数据池”的框架可以拿来检验自己领域的路径。"
+      ],
+      "creator": "No Priors",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "No Priors", "url": "https://www.youtube.com/@NoPriorsPodcast" }
+      ]
+    },
+    {
+      "slug": "2026-04-14-pirate-architect",
+      "title": "Dan Shipper：2026 年的软件工程需要海盗和架构师两个角色，一个尽快试出价值，一个把粗糙产出工程化",
+      "summary": "Every CEO 给 AI 时代的工程分工起了一对名字：海盗用最快速度写代码摸清什么有价值，架构师把这堆潦草产物改造成运转良好的机器。素材只含框架，完整论证在他链出的内容里。在重排团队分工的工程负责人可以点开。",
+      "content": [
+        "他的提法是软件工程在 2026 年需要两个角色：海盗（pirate）尽可能快地写代码，目的只有一个——搞清楚什么有价值；架构师（architect）接手这堆潦草的产物，把它变成运转良好的机器。推文本身只给了框架，how 和 why 在他链出的内容里。",
+        "这个提法把不少团队已经在做的事正式化了：探索性的快糙猛编码和生产化收尾是两种不同的工作，顺着他的逻辑，可能也该由两种不同的人来做——这一步是编辑引申，原文只主张需要这两个角色。Every 长期产出 AI 工作方法论内容，这条更接近一篇长文的开头，框架是否站得住要看完整论证。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2043819933675450455" }
+      ],
+      "engagement": "327 likes"
+    },
+    {
+      "slug": "2026-04-14-openclaw-openai-crisis",
+      "title": "Peter Yang：GPT 在 OpenClaw 里的集成若不尽快改善，对 OpenAI 像一场小型危机",
+      "summary": "他划的线很具体：GPT 在 OpenClaw 里要做到至少和 Opus 一样好。OpenClaw 并不隶属 OpenAI，但他认为第三方 agent 入口里的模型表现已经重要到这个程度。回复区有 130 条讨论，关注模型分发的人可以翻。",
+      "content": [
+        "他先声明 OpenClaw 和 OpenAI 没有隶属关系，然后给出判断：如果 GPT 的集成不尽快改善，这对 OpenAI 像一场小型危机。他设的标准是 GPT 在 OpenClaw 里要和 Opus 一样好，甚至更好。",
+        "顺着这个逻辑，头部 agent harness 正在变成模型的分发渠道，模型在里面的默认体验会直接影响 lab 的真实份额——这层是编辑引申，他的原文只说到集成质量这一步。这条在他当天的推文里讨论量最大（130 条回复），不同意见可以直接去回复区看。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品，AI 教程作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2043732939817791979" }
+      ],
+      "engagement": "279 likes"
+    },
+    {
+      "slug": "2026-04-14-claude-code-renderer",
+      "title": "Claude Code 新渲染器开放试用，设 CLAUDE_CODE_NO_FLICKER=1 启动即可启用",
+      "summary": "Claude Code 团队的 Thariq 在征集新终端渲染器的反馈，启用方式是带 CLAUDE_CODE_NO_FLICKER=1 启动，完整文档已同步发布。从环境变量名看主要解决闪烁。重度 Claude Code 用户一分钟就能切过去试。",
+      "content": [
+        "启用方式是一行命令：CLAUDE_CODE_NO_FLICKER=1 claude。Thariq 同时发了完整文档的链接，并向已经用上的人征集体验反馈。素材里没有功能清单，从环境变量的命名看，重点是消除终端渲染的闪烁。",
+        "主推文下有 239 条回复，想知道新渲染器有什么坑，可以先翻一遍回复区，再决定要不要在日常工作里打开。"
+      ],
+      "creator": "Thariq",
+      "role": "Anthropic Claude Code 团队",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @trq212", "url": "https://x.com/trq212/status/2043814646600348046" },
+        { "label": "文档推文 @trq212", "url": "https://x.com/trq212/status/2043814648315818242" }
+      ],
+      "engagement": "1K likes"
+    },
+    {
+      "slug": "2026-04-14-cognition-usage-doubled",
+      "title": "Swyx 称 Cognition 用量自最近两次发布以来约翻倍，归因于 agent 可组合、可主动运行后冒出的新用法",
+      "summary": "一手用量信号：Cognition 全球用量自最近两次发布后约翻倍，Swyx 的解释是 agent 能组合、能主动运行之后冒出各种新用法。注意他 bio 把 Cognition 列为关联方，数字没有口径也没有第三方来源，当方向性信号看。",
+      "content": [
+        "他说自己刚得知 Cognition 的全球用量自最近两次发布以来约翻倍，并把原因归到一点：当用户可以把 agent 组合起来、让它们主动运行时，会冒出各种意想不到的用法。他给这个方向的半开玩笑式总结是 agent recursion is all you need。",
+        "两个折扣项：他在 bio 里把 Cognition 列为关联方，立场不中立；“约翻倍”没有口径，是用户数、session 数还是 token 量并不清楚。可参考的是方向本身——把 agent 的可组合性和主动触发当作增长来源，做 harness 的团队可以对照自己的 roadmap。"
+      ],
+      "creator": "Swyx",
+      "role": "Cognition、Latent Space、AI Engineer 等项目关联方",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2043770029024653798" }
+      ],
+      "engagement": "78 likes"
+    },
+    {
+      "slug": "2026-04-14-setup-optimization-trap",
+      "title": "Peter Yang 提醒：折腾 OpenClaw 和 Claude Code 的配置容易当成进步，过了某个点就不再有产出",
+      "summary": "一条对重度 agent 用户的自检：要常问自己是在搭工作流交付真实工作，还是只是在优化 OpenClaw 和 Claude Code 的配置。后者有进步感也有趣，但超过某个程度就不再有实际产出。回复区有 65 条讨论。",
+      "content": [
+        "他说自己要不断提醒自己这件事：用 OpenClaw、Claude Code 这类工具时，分清是在搭建能交付真实工作的工作流，还是只是在优化配置本身。后者很容易一直做下去，因为它带来进步的感觉、而且有趣，但超过某个程度之后并没有多少实际产出。",
+        "可以拿它当周期性自查：回看最近一周花在 agent 上的时间，改配置和写 skill 的占比有多高，交付了多少真实任务。这层操作化是编辑引申，他的原文停在提醒本身。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品，AI 教程作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2043848480423325757" }
+      ],
+      "engagement": "199 likes"
+    },
+    {
+      "slug": "2026-04-14-gbrain-v093",
+      "title": "Garry Tan 发布 GBrain v0.9.3：搜索调优、CJK 查询和多个安全热修复，这套配置就是他本人的 agent 设置",
+      "summary": "YC CEO 在迭代自己的 agent 配置包：v0.9.3 带搜索调优、搜索 evals、CJK 查询，外加他说的大量安全热修复；skillpack 里有基于 OpenAI Realtime 的语音 agent，即将换到 Gemini Live。在用的人让 agent 自行升级即可。",
+      "content": [
+        "GBrain v0.9.3 的更新项：搜索调优、搜索 evals、CJK 查询支持、更好的健康检查，外加大量安全热修复。升级方式照他的说法很省事——让你的 claw 或 hermes 自己去升。",
+        "他同时解释了 GBrain 是什么：一套带主张的配置，内容就是他本人的 OpenClaw/Hermes agent 设置；除了搜索之外还有成组的 skillpack，其中一个是基于 OpenAI Realtime 的语音 agent，让 Claw 能直接和人对话，他说马上会换到 Gemini Live。这版含多个安全修复，在用的人值得尽快升级；没用过的人可以把它当一份 YC CEO 的 agent 配置参考来读。"
+      ],
+      "creator": "Garry Tan",
+      "role": "YC 总裁兼 CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan（发布）", "url": "https://x.com/garrytan/status/2043948627291451625" },
+        { "label": "原推 @garrytan（GBrain 介绍）", "url": "https://x.com/garrytan/status/2043948971568312473" }
+      ],
+      "engagement": "33 likes"
+    },
+    {
+      "slug": "2026-04-14-token-retention-perk",
+      "title": "Nikunj Kothari 讲的真实案例：员工受不了 token 限额，从 agentic 创业公司回流 frontier lab",
+      "summary": "一个人才市场的小样本：有人从 frontier lab 跳去高增长 agentic 创业公司，先发现有 token 限额，又得用开源模型省成本，最后回了原实验室。他调侃无限 token 是实验室最强留人福利。和 lab 抢人的创业公司值得留意这个变量。",
+      "content": [
+        "他讲的链条是：某人加入一家快速增长的 agentic 创业公司，发现公司有 token 限额，接着发现要用开源模型来平衡成本，最后决定回到原来的 frontier lab。他由此调侃，frontier lab 最强的留人福利大概是真正不限量的 token。",
+        "单一案例，当 anecdote 看。对创业公司的含义是招聘竞争里多了一个此前不太被列出来的变量：推理预算直接决定习惯了无限算力的人的日常工作体验——这层是编辑引申，他的原文只讲了故事本身。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2043808491807396059" }
+      ],
+      "engagement": "50 likes"
+    }
+  ]
+}

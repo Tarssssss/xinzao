@@ -1,0 +1,108 @@
+{
+  "date": "2026-04-20",
+  "generatedAt": "2026-04-20T08:03:08.870Z",
+  "stories": [
+    {
+      "slug": "2026-04-20-vercel-incident-update",
+      "title": "Guillermo Rauch 通报 Vercel 入侵事件：攻击者从被攻破的员工账号层层深入，他强烈怀疑攻击被 AI 显著加速",
+      "summary": "攻击者从一名员工被攻破的 Google Workspace 账号一路进入 Vercel 环境，枚举到标为「非敏感」的环境变量。Rauch 强烈怀疑攻击被 AI 显著加速，称受影响客户数量相当有限。Vercel 用户该先轮换密钥、跟进安全公告。",
+      "content": [
+        "Rauch 给出的攻击链：一名 Vercel 员工使用的某个 AI 平台（同时是 Vercel 的客户）被攻破，员工随之失守，攻击者从他被攻破的 Vercel Google Workspace 账号出发，经过一系列操作进一步进入 Vercel 环境。客户环境变量全部加密存储，但 Vercel 提供把环境变量标记为「非敏感」的功能，攻击者通过枚举这类变量拿到了更多访问权限。细节仍在全面调查中。",
+        "他对攻击者的判断：团伙高度老练，行动速度和对 Vercel 的理解深度都令人意外，他用的措辞是「强烈怀疑」攻击被 AI 显著加速。影响面上，Vercel 目前认为受安全影响的客户数量相当有限，已优先联系有顾虑的客户；供应链检查后，他们称 Next.js、Turbopack 等开源项目安全。外部协作包括安全公司、同行和执法部门，Google Mandiant 在积极参与，Vercel 也已联系 Context 协助评估事件的完整规模（从行文看，Context 应即那个被攻破的 AI 平台）。",
+        "给 Vercel 用户的可操作清单来自他的原文：轮换 secret、监控对 Vercel 环境及关联服务的访问、用好敏感环境变量功能、持续跟进官方 Security Bulletin。配套地，dashboard 已上线环境变量总览页和新的敏感变量创建管理界面。立场提示：这是当事公司 CEO 的单方通报，调查尚未结束，「受影响客户有限」是 Vercel 自己的判断；用户能做的部分不依赖这个判断，按上面的清单把自己的项目过一遍即可。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2045995362499076169" }
+      ],
+      "engagement": "5.5K likes"
+    },
+    {
+      "slug": "2026-04-20-openclaw-gpt-agentic",
+      "title": "Peter Yang 把 OpenClaw 切到 GPT 后，连 Opus 轻松完成的周报邮件任务都没跑通",
+      "summary": "他让 GPT 在 OpenClaw 里做一个 Opus 轻松完成的周报邮件任务，折腾一个多小时没成，模板反复被改坏。他说这个模型似乎跟不下来 agentic 任务，自留了用法问题的余地，但所在的 builder 群反馈类似。给 OpenClaw 选模型的人可参考。",
+      "content": [
+        "任务本身很小：发一封每周统计回顾邮件，Opus 此前做这件事没遇到任何困难。把 OpenClaw 切到 GPT 之后，他折腾了一个多小时，对话记录一路下行：「你把之前的模板完全搞坏了」「唉，你弄得一团糟，要不你把邮件模板打开我手动改」，最后一句是「说实话你彻底搞砸了，咱们把模型换成 sonnet」。",
+        "他的结论留了余地：这个模型看起来就是没法把 agentic 任务（甚至简单的 cron 任务）跟到底；可能是他自己的用法问题，但他所在的几个 AI builder 群说法类似。他同时强调自己仍是 OpenClaw 和 Codex 的忠实用户，并希望 Spud／GPT 5.5 能解决这个问题。",
+        "单人样本，群聊佐证也只是转述。可复现是这条的价值：拿一个旧模型能稳定完成的定时任务，换模型跑一遍就能自己验证。正在给 OpenClaw 或同类 agent 选主力模型的人值得记下这个数据点。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品经理",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2046036593199497615" },
+        { "label": "早前推 @petergyang", "url": "https://x.com/petergyang/status/2045980068921684151" }
+      ],
+      "engagement": "70 likes"
+    },
+    {
+      "slug": "2026-04-20-external-communication",
+      "title": "Zara Zhang：AI 越能干，产品团队越该把时间从内部协调挪到对外沟通",
+      "summary": "理由有三：搞清楚「建什么」会比建出来重要得多，灵感来自和外部人交谈；agent 重度团队的内部会议和协调工作已大幅减少；最极端的版本是她的独立创业者朋友整天访谈客户，把录音丢给 agent 决定做什么并执行。",
+      "content": [
+        "核心判断：AI 足够能干之后，搞清楚「建什么」会比把它建出来重要得多。实现交给 AI，人应该把精力放在理解问题上，而她认为这类灵感来自和外部人交谈，尤其是和自己差异很大的人。",
+        "另外两条关于团队形态：团队会小得多，内部沟通开销随之大幅下降，重度使用 agent 的团队已经看到内部会议和协调工作明显减少；更极端的版本来自她的独立创业者朋友，整天和客户聊，然后把录音直接丢给 agent，让 agent 决定做什么并负责执行。",
+        "三条里最有分量的是第三条，它是正在发生的具体做法，前两条更接近推演。产品团队可以拿自己的日历做一次对照，看对外沟通和对内协调的时间配比有没有跟上工具的变化。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2045810170245386713" }
+      ],
+      "engagement": "146 likes"
+    },
+    {
+      "slug": "2026-04-20-roles-grow-complexity",
+      "title": "Aaron Levie：AI 普及后多数岗位会变得更复杂，旧的岗位定义会失效",
+      "summary": "他认为「今天的工作会被 AI 取代」是把市场当成静态的谬误：所有人都拿到同样的工具后，产出标准整体抬高，写个轻量 app、审一份合同不再是岗位本身。懂行且持续长技能的人反而拉开差距。",
+      "content": [
+        "论证链条：岗位的复杂度大体上由工具的上限决定，工具变强，岗位会跟着变复杂。「今天的工作会被 AI 取代」在他看来是谬误，因为它假设市场静态；实际是所有人拿到同样的增强工具后，产出水平被整体抬高，旧的岗位定义随之失效。",
+        "例子给了一串：会用 AI 的工程师造软件仍远胜过不懂工程的人；写个轻量 app 不再算软件开发的及格线，审一份合同不再定义律师助理，剪个视频不再定义视频剪辑师，基础财务研究不再是金融分析师的本职。能做的事变多，人就会去碰更大更难的问题，把这些问题完整做完依然需要专业能力。",
+        "结论：多数岗位会因为 AI 长出更多复杂度。对个人的含义他说得直接：懂自己的领域并持续长技能的人，会继续和其他人拉开差距。立场上打个折：Box 的生意建立在企业继续雇人、用 AI 提效之上，「岗位会升级、不会消失」的叙事对他有利。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2046067263326028108" }
+      ],
+      "engagement": "278 likes"
+    },
+    {
+      "slug": "2026-04-20-gstack-make-pdf",
+      "title": "Garry Tan 发布 GStack v1.4：日常缺什么工具就让 Claude Code 现做，做完开源",
+      "summary": "新版本加了 /make-pdf skill，可在 Claude Code 和 OpenClaw/Hermes 里用。更值得看的是他的生产方式：日常用到什么缺口，直接让 Claude Code 做出来再开源。想给自己的 agent 攒工具的人可以照搬这个流程。",
+      "content": [
+        "GStack v1.4 加了一个 /make-pdf skill，开源。按他的说法，它在 OpenClaw/Hermes 里当工具用效果很好，在它本来的设计场景 Claude Code 里也一样。",
+        "比版本号更值得看的是他的生产方式：在 OpenClaw 或日常使用里遇到需求，就让 Claude Code 把工具做出来，自己先用，再开源发布。想给自己的 agent 配工具的人可以直接照搬这个流程，缺什么现做什么，不必等现成的。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator 总裁兼 CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2046097059057651941" },
+        { "label": "补充推 @garrytan", "url": "https://x.com/garrytan/status/2046097200292511968" }
+      ],
+      "engagement": "90 likes"
+    },
+    {
+      "slug": "2026-04-20-cybersecurity-thesis",
+      "title": "Nikunj Kothari：攻击节奏会随模型能力提升加快，人仍是首要攻击向量，网络安全公司会更值钱",
+      "summary": "发在 Vercel 通报入侵后不到一小时。三点判断：攻击节奏随模型能力提升只会加快、人仍是首要攻击向量、现在看到的还远不是全部。属 VC 的赛道观点，没有数据支撑，可与 Rauch 怀疑攻击被 AI 加速对照看。",
+      "content": [
+        "三点判断：攻击节奏只会随模型能力提升而加快；人会继续是首要的攻击向量；以及他认为现在看到的远不是全部。结论落在网络安全公司会非常值钱。",
+        "这条发在 Guillermo Rauch 通报 Vercel 入侵事件后不到一小时，结尾那句「向所有 infra 提供商致以 hugops」应是有所指。Vercel 这次事件的起点正是人（一名被攻破的员工），Rauch 也强烈怀疑攻击被 AI 加速，两条对照着读是同一件事的攻防两个视角。立场提示：这是 VC 看多自己赛道的观点帖，没有数据支撑。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2046007615512256624" }
+      ],
+      "engagement": "79 likes"
+    }
+  ]
+}

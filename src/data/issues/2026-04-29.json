@@ -1,0 +1,163 @@
+{
+  "date": "2026-04-29",
+  "generatedAt": "2026-04-29T08:13:04.657Z",
+  "stories": [
+    {
+      "slug": "2026-04-29-claude-creative-connectors",
+      "title": "Claude 上线 Blender、Autodesk Fusion 等一批创意工具 connector，并加入 Blender 开发基金",
+      "summary": "Claude 新增一批创意工具 connector：Blender 可直接调试场景、批量改对象，Autodesk Fusion 支持对话式改 3D 模型，另有 Adobe、Ableton、Splice 等；Anthropic 同时以赞助者身份加入 Blender 开发基金。把 AI 接进设计、3D、音频工作流的人值得过一遍清单。",
+      "content": [
+        "这批 connector 面向专业创作软件。Blender connector 可以直接从 Claude 里调试场景、构建新工具、对场景里的每个对象批量应用修改；Autodesk Fusion connector 让设计师和工程师通过对话创建和修改 3D 模型。",
+        "同日上线的还有 Adobe Creative Cloud、Ableton、Splice、Canva Affinity、SketchUp 和 Resolume。产品之外，Anthropic 宣布以赞助者（patron）身份加入 Blender Development Fund，支持这款开源软件的开发——这个动作意味着 Blender 这条线大概率会持续投入。",
+        "这是官方发布，演示和实际可用性之间通常有距离，能不能进生产流程要拿自己的工程文件验证。工作流里有 Blender 或 Fusion 的人，可以先在非关键项目上试一轮批量修改这类操作；其余几个 connector 也值得对照自己的工具清单过一遍。"
+      ],
+      "creator": "Claude",
+      "role": "Anthropic 官方账号",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @claudeai（Blender connector）", "url": "https://x.com/claudeai/status/2049143438281445811" },
+        { "label": "原推 @claudeai（Autodesk Fusion）", "url": "https://x.com/claudeai/status/2049143440508616863" },
+        { "label": "原推 @claudeai（更多 connector 与 Blender 基金）", "url": "https://x.com/claudeai/status/2049143442601546054" }
+      ],
+      "engagement": "34.3K likes"
+    },
+    {
+      "slug": "2026-04-29-codex-on-every-commit",
+      "title": "Peter Steinberger 给主干上每个 commit 接了一条 codex 审查加自动修复的流水线",
+      "summary": "Steipete 给每个落到 main 的 commit 都起一个 codex 实例找回归和安全问题，发现问题由新实例提修复 PR，再由审查 agent 复核，最多循环五轮；上线十分钟就抓到他自己的一个 bug。想把 commit 级审查交给 agent 的人可以照搬这个结构。",
+      "content": [
+        "流程是：每个 commit 落到 main，就起一个 codex 实例做审查，找回归和安全问题；发现问题且确认仍然相关后，新的 codex 实例会提一个修复 PR；修复之后再起一个审查 agent 复核，如果又发现问题，再起 agent 来修，循环上限五轮。",
+        "效果他给了一个一手数据点：这套流水线上线十分钟，就发现了一个他自己引入的问题。",
+        "这套结构不依赖特殊基础设施，本质是把审查、修复、复核拆成串联的 agent 角色，再加一个轮次上限避免 agent 之间无限接力。在 agent 成本可接受的前提下，有 CI 的仓库都可以搭一个类似的；照搬时五轮上限这类细节值得保留。"
+      ],
+      "creator": "Peter Steinberger",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete（流水线全貌）", "url": "https://x.com/steipete/status/2049356949523730699" },
+        { "label": "原推 @steipete（十分钟抓到 bug）", "url": "https://x.com/steipete/status/2049290741013262522" }
+      ],
+      "engagement": "269 likes"
+    },
+    {
+      "slug": "2026-04-29-codex-native-apps",
+      "title": "Dan Shipper 提出 codex-native 应用：跑在 agent 内置浏览器里，人和 agent 共享全部上下文",
+      "summary": "他在 codex 里直接用 PostHog：codex 能写查询、看结果，还能派 agent 提 PR 或查生产库来验证发现。由此他提出 codex-native、Cursor-native——为 agent 内置浏览器设计的应用，人和 agent 共享上下文、互相看得到操作；他认为这里有很大的造软件机会。",
+      "content": [
+        "起点是一手体验：他在 codex 里直接浏览 PostHog，codex 可以自己写查询、看到结果，还能从这里派出 agent 写 PR，或跑生产数据库请求来佐证它发现的结论。他的总结是一句比较：桌面编排工具里内置一个浏览器，好过浏览器里塞一个 agent。",
+        "顺着这个体验，他提出可能需要造一批新词——codex-native、Cowork-native、Cursor-native：为“你所用 agent 的内置浏览器”设计的应用，agent 能用、你也能用，完整上下文共享，双方都看得到对方在做什么。他判断这里有很大的造软件机会。",
+        "编辑引申一步：如果 agent 内置浏览器真的成为高频入口，“应用对 agent 好不好用”会变成一个独立的设计维度；他原话给出的只是方向判断。同日 Guillermo Rauch 在 Vercel Labs 招聘帖里说的“从给人做工具转向给 agent 做工具”指向同一个方向，两条可以对照看。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @danshipper（在 codex 里用 PostHog）", "url": "https://x.com/danshipper/status/2049236793761976357" },
+        { "label": "原推 @danshipper（codex-native 概念）", "url": "https://x.com/danshipper/status/2049223933766041688" }
+      ],
+      "engagement": "184 likes"
+    },
+    {
+      "slug": "2026-04-29-levie-100x-software",
+      "title": "Aaron Levie：agent 会带来 100 倍的软件量，但不等于人人都自己造软件",
+      "summary": "他反驳“软件已建完、agent 只是分存量蛋糕”的预设：遗留系统上云、小企业开发缺口、待修安全问题都是增量，软件总量会到 100 倍。但维护和安全跟进是多数知识工作者交不起的税，不会人人自己造软件；每个 agent 都需要技术的人启动和编排。",
+      "content": [
+        "论点分两层。第一层反驳一个流行预设——世界上的软件已经基本造完，agent 只会从存量里减少工作。他的判断相反：接下来软件总量会比现在多 100 倍。",
+        "增量从哪来，他列得很具体：你常用但需要变好的应用、要重新平台化上云的遗留 on-prem 系统、从来雇不起开发者的小企业、即将被挖出来需要修补的安全问题、IT 组织以前自动化不了的流程、等着被处理和打通的数据。他说这些就是 agent 们将要干的活。",
+        "第二层是边界。agentic coding 对想多交付的开发者、做内部定制系统的 IT、想自动化流程的领域专家、想入门编程的人都是利好；不适合的是随手造一个复杂软件然后自己长期维护、承担全部风险——升级、维护、跟进安全问题这些税，多数知识工作者既不熟悉也没准备好交。所以 100 倍的软件和多得多的开发者，不等于人人都自己造。",
+        "他还有一个判断：每个 agent 都需要有人启动它、管理它的工作、编排多个 agent、把产出整理成可用的形态，这个人一般需要是技术的，或者能很快变成技术的；对技术人来说，现在可能是有史以来最好的时代。Box CEO 的立场天然偏乐观，但“维护税”这段对正在鼓励业务同事自己 vibe code 内部工具的人，是个有用的提醒。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie（100 倍软件与技术杠杆）", "url": "https://x.com/levie/status/2049333853777764495" },
+        { "label": "原推 @levie（维护税与边界）", "url": "https://x.com/levie/status/2049163935182733396" }
+      ],
+      "engagement": "419 likes"
+    },
+    {
+      "slug": "2026-04-29-claude-code-white-whales",
+      "title": "Claude Code 团队在集中清最烦人的老 bug，无闪烁渲染器准备设为默认",
+      "summary": "Claude Code 的 Thariq 公开征集用户的“白鲸级”顽固 bug，团队正在集中清这类问题。两个进展：他追了很久的大文件写入假死，他认为已找到原因；无闪烁渲染器在打磨到能设为默认。被老 bug 困扰的重度用户现在是反馈的好窗口。",
+      "content": [
+        "Thariq 说团队正在加大力度追 Claude Code 里最烦人的一批 bug，并公开征集：你有什么追了很久没逮住的“白鲸”，直接回帖告诉他。",
+        "他给了两个进展。一是他自己的白鲸——CC 写大文件时偶尔看起来像挂住——他认为已经找到了原因。二是这轮工作的很大一部分，是把无闪烁渲染器打磨到足够好、能作为默认渲染器发布，后续还有更多 papercut 修复。",
+        "两点都是团队成员的一手陈述，但“找到了原因”是他自己的判断，原话带 I think，修复落地要等版本更新。受这两个问题困扰的用户可以关注后续 changelog；有别的顽固 bug，现在是反馈的好窗口，团队明确在收。"
+      ],
+      "creator": "Thariq",
+      "role": "Anthropic Claude Code 团队",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @trq212（征集白鲸 bug）", "url": "https://x.com/trq212/status/2049234228290961690" },
+        { "label": "原推 @trq212（无闪烁渲染器）", "url": "https://x.com/trq212/status/2049234229926695188" },
+        { "label": "原推 @trq212（大文件写入假死）", "url": "https://x.com/trq212/status/2049252080892973563" }
+      ],
+      "engagement": "1,038 likes"
+    },
+    {
+      "slug": "2026-04-29-micropayments-for-git-push",
+      "title": "Amjad Masad：bot 达到人类水平后免费服务难以为继，值得探索按 git push 收微支付",
+      "summary": "就 GitHub 的负载增长，他重提几年前的预测：bot 达到人类水平后，免费服务会难以为继。他的提议停在“值得探索”：微支付，每次 git push 收几美分可能就足以减少垃圾请求、让服务可持续；结算或许可以用比特币，保持开放、避免对用户做 KYC。",
+      "content": [
+        "他转评一条关于 GitHub 增长的帖子，说以这种增长，GitHub 能把服务一直撑住本身就不容易。然后重提自己几年前的预测：human-level bot 出现后，免费服务会变得难以为继。",
+        "解法上他的措辞停在“值得探索”：微支付——哪怕每次 git push 只收几美分——可能就足以减少垃圾请求、让服务可持续；结算或许可以用比特币，好处是保持开放和可访问，不用对用户做 KYC。",
+        "对运营开发者基础设施的人，这个问题不抽象：agent 的请求量在改变免费层的成本结构，定价模型可能要重新算。Replit 自己就是开发者平台，他对 bot 流量的成本应该有直接体感；微支付和比特币结算目前只是他抛出的方向，不是 Replit 的产品动作。"
+      ],
+      "creator": "Amjad Masad",
+      "role": "Replit CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @amasad", "url": "https://x.com/amasad/status/2049242460078100638" }
+      ],
+      "engagement": "1,159 likes"
+    },
+    {
+      "slug": "2026-04-29-vercel-labs-agent-tools",
+      "title": "Guillermo Rauch 扩编 Vercel Labs，定位从给人做工具转向给 agent 做工具",
+      "summary": "招聘帖，但定位句有信息量：Vercel Labs 的使命是做 AI 时代的 devtools——过去给人做工具，现在给 agent 做。团队已发布 agent-browser、portless、skills、just-bash 等，累计下载 22.8M+。想做 agent 工具的人可以投，观察 Vercel 方向的人值得记一笔。",
+      "content": [
+        "Rauch 宣布扩编 Vercel Labs，使命是“做 AI 时代的 devtools”，并把转向说得很直白：过去给人做工具，现在给 agent 做。@ctatedev 和团队已经发布了 agent-browser、portless、skills、chat、just-bash、json-render 等工具，累计下载 22.8M+，DM 开放收人。",
+        "下载数是官方口径，这类开源工具的下载量和实际使用深度之间有距离。更值得记的是定位本身：工具的第一用户正在从人变成 agent。同日 Dan Shipper 提的 codex-native 应用是同一个判断的应用层版本，做 devtools 的人可以把两条放在一起看。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2049216048831025232" }
+      ],
+      "engagement": "1,025 likes"
+    },
+    {
+      "slug": "2026-04-29-svg-over-images",
+      "title": "Zara Zhang：HTML 幻灯片的插图让 AI 生成 SVG，比位图更容易融入整体设计",
+      "summary": "做 HTML 幻灯片配图，与其让 AI 生成位图，不如让它生成 SVG 矢量插图——矢量图能无缝融入页面的设计风格。她的具体用法是在 AnyGen 的 Frontend Slides 里调 Quiver 的 API。用 AI 做幻灯片或网页排版的人可以直接试这个组合。",
+      "content": [
+        "她的建议是：HTML 幻灯片的插图不要让 AI 生成位图，改成生成 SVG 矢量插图——矢量图能无缝融入页面的整体设计风格，她称之为 HTML 幻灯片的理想补充。",
+        "她的具体配置是在 AnyGen 的 Frontend Slides 功能里调用 Quiver 的 API。顺着这个思路解释一层：SVG 以代码形式生成，配色、线条理论上能和页面共用同一套设计语言，这可能就是“融入感”的来源——这层解释是编辑推断，原帖只给了结论和效果图。做 AI 幻灯片的人可以直接试这个组合。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2049258231042805806" }
+      ],
+      "engagement": "120 likes"
+    },
+    {
+      "slug": "2026-04-29-share-repos-not-apps",
+      "title": "Zara Zhang 不再做带界面的 web 应用，改成分享仓库让用户的 agent 自己定制 UI",
+      "summary": "她描述自己分发方式的变化：以前做带 GUI 的 web 应用，现在直接分享 GitHub 仓库，拿到的人让自己的 agent 按需定制 UI。她类比 Karpathy 的“idea file”——写下想法，别人的 agent 替他们实现。做小工具的独立开发者可以重新考虑分发形态。",
+      "content": [
+        "这是她转评一条相关讨论时的自述：以前做带 GUI 的 web 应用，现在直接分享带代码的 GitHub 仓库，拿到的人想要什么界面，让自己的 agent 去定制。她类比 Karpathy 的“idea file”——把想法写下来，别人的 agent 就能以定制化的方式替他们实现。",
+        "顺着这个逻辑，当目标用户人手一个 coding agent 时，产品的最小分发形态可以是一个结构清晰的仓库加说明文档，UI 退到用户侧。边界也明显：这只适用于用户自己在跑 agent 的圈子，面向普通消费者的产品不在此列——这条边界是编辑补充。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2049186121314415054" }
+      ],
+      "engagement": "94 likes"
+    }
+  ]
+}

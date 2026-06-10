@@ -1,0 +1,146 @@
+{
+  "date": "2026-04-18",
+  "generatedAt": "2026-04-18T07:04:16.549Z",
+  "stories": [
+    {
+      "slug": "2026-04-18-levie-headless-software",
+      "title": "Aaron Levie：agent 对软件的用量会是人的 100 倍，收费走向人付席位、agent 付用量",
+      "summary": "Levie 论证软件 headless 化：软件价值一直被席位数封顶，agent 全天候并行没有这个上限，API 和 agent 用量会成为重要收入来源，「人付席位，agent 付用量」。Box 是受益方，做企业软件的人值得对照自己的计费结构。",
+      "content": [
+        "Levie 在两条长帖里展开同一个论点：在 agent 对软件用量达到人的 100 倍的世界里，软件走向 headless 不可避免，平台必须能和任何 agent 协作，不管这个 agent 在不在自己平台上；不这么做的平台，用他的原话说是 DOA。他强调这件事对软件平台并非零和，agent 反而会创造出比 AI 出现之前更多的 use case。",
+        "机制在商业模式那一层：企业软件传统上按部门席位数收费，用量被人一天能做的事封死，软件实际能做的远多于客户真正用到的。agent 没有这个限制，全天候跑、并行跑、跨系统串联工作。他给的例子是合同审查从一份一份审变成全部都审，营销数据搬运从手工操作变成多跑 10 倍的 campaign，客户 onboarding 不再被人工环节卡住速度。",
+        "他自己加了两个限定：商业上要先设计得有吸引力；各个软件市场里人和 agent 的正和空间大小不一。但他认为相当一部分 system of record 的用量远低于潜力，Salesforce 里的数据、企业文档都可以被 agent 多用很多倍。收入端他的判断是「人付席位，agent 付用量」，API 和 agent 消耗会逐渐成为收入的重要组成。立场上要记一笔：Levie 是 Box CEO，内容平台正是这个论点的受益方。做企业软件的可以照这个框架过一遍自己的 agent 接入和计费方式。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2045137708620906573" },
+        { "label": "追加长帖 @levie", "url": "https://x.com/levie/status/2045355693050655048" }
+      ],
+      "engagement": "1,576 likes"
+    },
+    {
+      "slug": "2026-04-18-mcdermott-saaspocalypse",
+      "title": "ServiceNow CEO 回应 SaaS 末日论：用 LLM 复刻平台应用成本要高 10 倍，最危险的是单一职能软件",
+      "summary": "McDermott 拿自家测算回应 SaaS 末日论：用 LLM 复刻平台上的简单应用，总成本要贵 10 倍；真正危险的是单一职能的部门级软件。一手数字是 ServiceNow 90% 的客服 case 已由 agent 处理。评估 SaaS 受冲击程度的人值得听。",
+      "content": [
+        "McDermott 称 ServiceNow 算过这笔账：用 LLM 复刻平台上一个简单应用，把重建成本、被占用的人力、GPU 和 token 开销加在一起，总成本是用平台的 10 倍。他的另一个反驳更直接，原话是「经营企业的人理解人会犯错，但他们永远不会原谅软件犯错」——LLM 输出不是确定性的，自建之后出了问题也没有人可以打电话去修。",
+        "他对 LLM 和企业平台的分工描述是：LLM 能在毫秒级给出一个薪酬纠纷该走的一二三步，但不会结案；真正关掉一个 case 要跨 HR、财务、法务、合规多个部门的数据和流程，这是工作流平台做的事，他的说法是「AI 思考，workflow 行动」。照这个框架他给出风险分层：跨部门、难以复制的 system of record 是安全的；只服务单一职能、价值不高、进不了 CEO 优先级清单的部门级软件，脆弱性上升得最快。",
+        "访谈里有几个一手数字：ServiceNow 90% 的客服 case 现在由 agent 处理，只有 10% 需要人介入；大客户能在 30 天内上线；他预计公司净新增招聘会大幅减少，还预测未来几年会有 22 亿个 agent 进入劳动力市场。采用进度上他给的参照是，前一晚见到的巴西企业里只有 11% 走过了实验阶段。他还提到一个少有人谈的背景：2020 到 2024 年很多公司在 COVID 期间隔着 Zoom 招了太多人，现在借 AI 把组织变瘦。",
+        "立场校准：他是 SaaS 末日论直接指向的公司的 CEO，10 倍成本是自家测算，口径没有公开，没法核验；可以对照检验的是风险分层框架和 90% 客服这类运营数字。做「用 AI 替代 SaaS」方向的人，可以把这期当成对手盘里最完整的一版论述来读。"
+      ],
+      "creator": "Bill McDermott",
+      "role": "ServiceNow CEO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "No Priors", "url": "https://www.youtube.com/@NoPriorsPodcast" }
+      ]
+    },
+    {
+      "slug": "2026-04-18-anthropic-product-day",
+      "title": "Anthropic 一天三连发：Claude for Word 进 Pro/Max，设计系统自动生成，Opus 4.7 黑客松重启",
+      "summary": "Claude for Word 对 Pro 和 Max 用户开放；Claude 能读代码库和设计文件生成团队设计系统并自动应用；Claude Code 黑客松为 Opus 4.7 重启，奖池 10 万美元 API 额度，周日截止申请。想报名的人注意时间窗口。",
+      "content": [
+        "一天里三个动作：Claude for Word 向 Pro 和 Max 订阅开放，配合 Opus 4.7 使用；官方同日介绍了设计系统能力——Claude 读你的代码库和设计文件，生成团队的设计系统并自动应用，让每个项目保持品牌一致；Claude Code 黑客松为 Opus 4.7 重启，为期一周，Claude Code 团队全程在场，奖池 10 万美元 API 额度，周日截止申请。",
+        "外围反应集中在设计这条线上。Anthropic 研究员 Alex Albert 的判断是「现在每个有明确想法的人都能产出非常高质量的设计（Claude 搭把手）」。Peter Yang 发了一条 demo 视频，用 Claude Design 过了五个场景：视频、slides、网站、移动 app 和设计系统。FirstMark 的 Matt Turck 称 Anthropic Labs 处在 generational run（一代人一遇的状态），一口气列了 Claude Code、Skills、Claude Cowork、Claude Design 四个产品。",
+        "可操作的两件事：想参赛的注意周日这个申请截止时间；Pro/Max 用户可以直接在 Word 里试。需要说明的是，这一条里的评价目前以官方和 Anthropic 内部声音为主，第三方还停留在 demo 和一句话点评的级别，设计系统功能的实际效果要等更多外部使用反馈。"
+      ],
+      "creator": "Claude",
+      "role": "Anthropic 官方账号",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "Claude for Word @claudeai", "url": "https://x.com/claudeai/status/2045222254699511855" },
+        { "label": "设计系统 @claudeai", "url": "https://x.com/claudeai/status/2045156271251218897" },
+        { "label": "黑客松 @claudeai", "url": "https://x.com/claudeai/status/2045248224659644654" },
+        { "label": "原推 @alexalbert__", "url": "https://x.com/alexalbert__/status/2045165630421364853" },
+        { "label": "demo 视频 @petergyang", "url": "https://x.com/petergyang/status/2045307149740609591" },
+        { "label": "原推 @mattturck", "url": "https://x.com/mattturck/status/2045211226272129274" }
+      ],
+      "engagement": "7,816 likes"
+    },
+    {
+      "slug": "2026-04-18-kevin-weil-leaves-openai",
+      "title": "Kevin Weil 离开 OpenAI，OpenAI for Science 被打散并入各研究团队",
+      "summary": "Weil 称当天是他在 OpenAI 的最后一天，OpenAI for Science 正被去中心化、并入其他研究团队。他两年里从 CPO 转研究再创办这个项目，推文没有解释重组原因。跟踪 OpenAI 组织变化的人值得记一笔。",
+      "content": [
+        "Weil 的说法是：OpenAI for Science 正在被去中心化、并入其他研究团队，他也随之离开 OpenAI。两年轨迹是从 Chief Product Officer 转入研究团队，再创办 OpenAI for Science。告别语保持正面，他称加速科学会是 AGI 推进中最惊人的正面成果之一，并表示支持 Altman、Mark Chen 和整个团队。",
+        "推文本身没有解释重组原因，是科学方向降级还是常规整合，从这条判断不了。能确定的是 OpenAI for Science 不再作为独立团队存在，而它的创办者选择了离开。Weil 此前做过 Instagram 和 Twitter 的产品负责人，下一步去向推文里没提。"
+      ],
+      "creator": "Kevin Weil",
+      "role": "OpenAI 科学副总裁（离任），前 Instagram、Twitter 产品负责人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @kevinweil", "url": "https://x.com/kevinweil/status/2045230426210648348" }
+      ],
+      "engagement": "3,558 likes"
+    },
+    {
+      "slug": "2026-04-18-every-opus-47-vibe-check",
+      "title": "Every 发布 Opus 4.7 vibe check，Alex Albert 解释每代 Claude 对该帮多少忙的理解差异",
+      "summary": "Every 把 Opus 4.7 过了一遍编码、写作、电子表格等场景；配套访谈里 Anthropic 的 Alex Albert 解释为什么每个 Claude 模型对「该帮用户多少」理解不同。Albert 同日称首日的很多 bug 已修复。评估 Opus 4.7 的人可当第三方参考。",
+      "content": [
+        "Dan Shipper 发布了 Every 对 Opus 4.7 的完整 vibe check，覆盖编码、写作、电子表格等场景，另配一支访谈视频：Anthropic 的 Alex Albert 解释为什么每个 Claude 模型对「该帮用户多少忙」都有自己的理解，以及对 Opus 4.7 应该期待什么。推文只给了框架，具体结论要点开视频和文章看。",
+        "同一天 Alex Albert 表示，前一天首批试用 Opus 4.7 的用户遇到的很多 bug 现在已经修复。两条放在一起的参考价值在于：发布次日的模型体验和首日可能差别不小，如果首日的试用结论是负面的，值得重测一轮再下判断。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "vibe check @danshipper", "url": "https://x.com/danshipper/status/2045241699992047638" },
+        { "label": "Alex Albert 访谈 @danshipper", "url": "https://x.com/danshipper/status/2045246160202580192" },
+        { "label": "bug 修复 @alexalbert__", "url": "https://x.com/alexalbert__/status/2045159041283064095" }
+      ],
+      "engagement": "93 likes"
+    },
+    {
+      "slug": "2026-04-18-google-flow-music",
+      "title": "ProducerAI 更名 Google Flow Music：独立站点，用自然语言生成完整制作的曲目",
+      "summary": "Google 把 ProducerAI 更名为 Flow Music 并入 Flow 品牌：Flow 管图像视频，Flow Music 管歌曲歌单，独立站点，自然语言 prompt 生成完整曲目。Josh Woodward 称使命不变，主推新的 remix 功能。做音乐生成的人值得看下定位。",
+      "content": [
+        "Google Labs 宣布 Flow 产品族扩张：ProducerAI 更名为 Google Flow Music，作为独立站点上线，定位是创作、分享和 remix 原创音乐，用自然语言 prompt 生成完整制作的曲目。官方给的分工是 Flow 负责图像和视频，Flow Music 负责歌曲和歌单。",
+        "Google Labs 负责人 Josh Woodward 补充的信息是使命没变——推动创作边界、给人更多对自己曲目的控制——并点名让大家试新的 remix 功能。顺着这次命名整合看，Flow 可能正在变成 Google 生成式媒体产品的统一品牌，这半句是从更名动作读出的推断，Google 没有官方说法。"
+      ],
+      "creator": "Google Labs",
+      "role": "Google AI 实验产品团队",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @GoogleLabs", "url": "https://x.com/GoogleLabs/status/2045250788864495874" },
+        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2045305262362530043" }
+      ],
+      "engagement": "1,204 likes"
+    },
+    {
+      "slug": "2026-04-18-garry-tan-openclaw-config",
+      "title": "Garry Tan：OpenClaw 给自己改配置把自己改挂，损失的时间按小时计",
+      "summary": "YC CEO 的一手使用反馈：OpenClaw 会自己决定修改自身配置，一次编辑把自己改挂，他为此损失的时间能按小时数出来。只是单条吐槽，但描述的失败模式很具体。做 agent 自我修改类功能的人可以当失败样本看。",
+      "content": [
+        "Garry Tan 描述的现象：OpenClaw 自己决定给自己「做脑部手术」，最后死于它对自身配置的一次编辑，他为此损失的时间能按小时数出来。这是一个重度用户对具体故障路径的描述——agent 有权限改自己的运行配置，改坏之后直接瘫痪。",
+        "对做 agent 框架的人，含义可能是：自我修改类能力如果没有改前校验和回滚机制，失败形态就是这种自我瘫痪，耗掉的还是用户按小时计的排障时间。这一步是编辑推断，他本人只给了现象描述，没有提产品建议。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator 总裁兼 CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2045373889044472259" }
+      ],
+      "engagement": "211 likes"
+    },
+    {
+      "slug": "2026-04-18-zara-html-design",
+      "title": "Zara Zhang：很多场景下用代码做设计好过图像生成模型，她的配图大多改用 HTML 做",
+      "summary": "她的工作流变化：大部分配图已经从 Nano Banana 换成直接写 HTML，理由是发现很多 use case 里用代码做设计效果更好。注意限定是「很多场景」，没有推广到全部。经常出配图、信息图的人可以试一轮这条路线。",
+      "content": [
+        "Zara Zhang 说她现在大部分配图用 HTML 写，已经基本替代 Nano Banana 这类图像生成模型，原因是她发现在很多 use case 里，用代码做设计的效果更好。她的说法限定在「很多 use case」，没有推广到所有设计场景。",
+        "顺着这个思路，代码出图的优势可能在可控和可改：改文案、改布局、改配色都是改几行代码的事，图像模型则要整张重新生成。这一步是编辑推断，她本人没有展开理由。经常出配图和信息图的人，可以拿手头的图试一轮 HTML 路线，对比一下迭代成本。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2045374512691360177" }
+      ],
+      "engagement": "38 likes"
+    }
+  ]
+}

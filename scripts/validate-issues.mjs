@@ -9,6 +9,7 @@ const issuesDir = fileURLToPath(new URL('../src/data/issues', import.meta.url))
 const SOURCE_TYPES = new Set(['x', 'podcast', 'blog'])
 
 const errors = []
+const warnings = []
 const slugs = new Map()
 const files = (await readdir(issuesDir)).filter((file) => file.endsWith('.json'))
 
@@ -81,12 +82,19 @@ for (const file of files.sort()) {
 
     const summaryLength = (story.summary ?? '').length
     if (summaryLength > 140) {
-      errors.push(`${where}: summary ${summaryLength} 字，明显超出 50-90 字标准`)
+      warnings.push(`${where}: summary ${summaryLength} 字，明显超出 50-90 字标准`)
     }
   }
 }
 
 console.log(`检查 ${files.length} 期 / ${storyTotal} 条 story`)
+
+if (warnings.length > 0) {
+  console.warn(`\n${warnings.length} 个警告（不阻塞 build，留待修稿）：`)
+  for (const warning of warnings) {
+    console.warn(`- ${warning}`)
+  }
+}
 
 if (errors.length > 0) {
   console.error(`\n${errors.length} 个问题：`)

@@ -1,0 +1,82 @@
+{
+  "date": "2026-05-07",
+  "generatedAt": "2026-05-07T08:48:12.972Z",
+  "stories": [
+    {
+      "slug": "2026-05-07-boris-cherny-sequoia",
+      "title": "Boris Cherny：Claude Code 代码已 100% 由模型写，他每晚有几千个 agent 在跑",
+      "summary": "Claude Code 作者的一手运营数据：代码 100% 由模型写、单日最多 150 个 PR、每晚几千个 agent 在跑、几十个 loop 自动看护 CI 和 PR。他判断 AI 会让切换成本和流程类护城河贬值。想升级 agent 工作流的人值得听全场。",
+      "content": [
+        "Sequoia 的播客 Training Data 放出了 Boris Cherny 的一场现场问答。他给的个人数据：从去年十、十一月起，Claude Code 代码库 100% 由模型写成，他本人每天交几十个 PR，纪录是一天 150 个，那天他刻意在测上限。大部分工作在手机上的 Claude app 里完成：常开 5 到 10 个 session，同时跑几百个 agent，每晚有几千个 agent 做更深的任务。管理方式靠 /loop——让 Claude 用 cron 给自己排重复任务。他跑着几十个 loop：一个看护 PR（修 CI、自动 rebase），一个保持 CI 健康（处理 flaky test），一个每三十分钟抓一轮 Twitter 反馈并聚类。routines 是 loop 的服务端版本，合上笔记本也继续跑。",
+        "Claude Code 的来路他讲得很直白：项目出自 Anthropic Labs 孵化器，头六个月基本不能用，他自己也只用它写约 10% 的代码；首发后也不算成功，指数增长从 Opus 4 开始，之后 4.5、4.6、4.7 每代发布都再抬一截。团队从立项起就知道是在为下一个模型做产品，接受半年没有 PMF。半年到一年前他还把 Claude Code 的成功一半归模型、一半归产品，现在的看法是模型越强，harness 越不重要。顺着这条曲线他给了一个预测：一年内模型对齐会好到让 prompt injection 防护、命令静态校验、permission 模式、human in the loop 这些机制都变得不那么必要——他自己也强调这只是预测。",
+        "对团队形态的预测是跨职能通才变多：Claude Code 团队里从工程经理、设计师到财务和用研，每个人都写代码。对护城河，他借 7 Powers 的框架判断切换成本和流程优势会贬值：模型能帮用户从一个产品迁到另一个，而 Opus 4.7 给定目标就能一直迭代到做完——他认为这是第一个能这样爬坡的模型——流程类壁垒随之变薄；网络效应、规模经济、独占资源不受影响。他还预计未来十年颠覆型创业公司会比过去十年多 10 倍：大公司换流程要对抗内部阻力，新公司可以从零按 AI 原生方式搭。他认为最贴切的历史类比是印刷机：印刷机出现后五十年，欧洲的出版量超过此前一千年，书价降了约百倍，识字率后来升到七成左右。软件会以快得多的速度走完同一条路，写记账软件最合适的人会是真正懂行的会计——难的部分是懂业务，写代码是容易的部分，这件事在他看来可能今天就已经成立。",
+        "立场校准：这是 Claude Code 作者讲自家产品，150 个 PR、几千个 agent 这些数字都是自述；他说 Anthropic 内部已没有手写代码、所有 SQL 都由模型生成、他的 Claude 会在 loop 里通过 Slack 和同事的 Claude 对话，这些同样只能当内部人陈述听。他说模型层面内外基本没有差距（内部会试一点 Mythos，某个后代版本以后会开放，写代码主力是公开的 Opus 4.7），真正的差距在组织流程上。可照搬验证的是工作流本身：用 /loop 看护 PR、修 flaky CI、定时聚类反馈，任何 Claude Code 用户都能搭一版试。他点名会随下一代模型明显变好的方向——loop 和 batch 的大规模并行、computer use——外加一句未来几周 Claude Code 会有新东西落地，可以当作排期参考。"
+      ],
+      "creator": "Boris Cherny",
+      "role": "Claude Code 作者，Anthropic",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "Training Data",
+          "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        },
+        {
+          "label": "原推 @zarazhangrui",
+          "url": "https://x.com/zarazhangrui/status/2052277868319916402"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-07-claude-dreaming-outcomes",
+      "title": "Claude 发布 Outcomes 和 Dreaming：agent 按 rubric 迭代到达标，复盘 session 沉淀记忆",
+      "summary": "两个能力合起来是在减少人盯 agent 的环节：Dreaming 复盘历史 session、提炼模式沉淀成记忆，让 agent 随时间学习，需申请访问；Outcomes 让你写 rubric、由独立 grader 评分，agent 迭代到过线，webhook 通知完成。跑长期 agent 的人可以先排队。",
+      "content": [
+        "Outcomes 解决验收：你写一份 rubric 定质量线，由独立的 grader 检查输出，agent 反复迭代直到过线，订阅 webhook 就能在做完时收到通知。Dreaming 解决积累：回看 agent 的历史 session，提取模式，整理成记忆，让 agent 随时间学习。Dreaming 目前是申请制；Outcomes 的公告没有提开放范围。",
+        "这和 Boris Cherny 在 Sequoia 访谈里对 Opus 4.7 的描述对得上：给定目标、让它迭代到做完，它就会自己做完。Outcomes 等于把这种用法产品化，目标写成 rubric、验收交给独立 grader，人只在 webhook 响的时候回来。这层关联是编辑推断，官方公告本身各只有一段话，没有给实现细节和定价。",
+        "如果 Dreaming 的模式提炼质量可靠，它替代的是现在靠手工维护 CLAUDE.md 和 memory 文件来积累 agent 经验的做法，这是 agent 工作流里目前最依赖人工的环节之一。在跑长期 agent 的人可以先去排队申请；rubric 加独立验收的思路不用等产品，在自己的 harness 里就能先搭一版。"
+      ],
+      "creator": "Claude",
+      "role": "Anthropic 官方账号",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @claudeai（Dreaming）",
+          "url": "https://x.com/claudeai/status/2052067400690851842"
+        },
+        {
+          "label": "原推 @claudeai（Outcomes）",
+          "url": "https://x.com/claudeai/status/2052067403228455419"
+        }
+      ],
+      "engagement": "1,124 likes（Dreaming 一条）"
+    },
+    {
+      "slug": "2026-05-07-dario-80x-compute",
+      "title": "Dario：今年早些时候用量和收入增长 80 倍，会继续尽可能收购算力",
+      "summary": "Peter Yang 现场听写 Dario 和 Daniela 的对话：用量和收入 80 倍增长，所以继续尽量买算力；给 builder 的主线是 build for the exponential——当前模型跑不通的产品可能在下一代成立，内部实验因此有溢价。引语为听写，非官方文字稿。",
+      "content": [
+        "Peter Yang 记下了 Dario 和 Daniela 同场对谈的几段引语。最硬的数字是 Dario 的：「今年早些时候我们看到用量和收入有 80 倍的增长」，所以「会继续尽可能多地收购算力」。Claude Code 团队的 Thariq 转了同场视频里的另一句：「我们每天都在设法拿到更多算力转给你们，如果要等一段时间很抱歉，但我们会尽量多买。」",
+        "给 builder 的几条按信息量排：最值得记的是「build for the exponential」——有些产品在当前模型上做不成，但在后续模型上可能成立，这给内部实验加了溢价，只能拿模型试了才知道。其次是产品饱和的提法：模型好到一定程度，产品就触顶；当下让模型变聪明的改进，在 agentic 和 Claude Code 这类工作流里比在 chatbot 里明显得多，所以要去想下一个大东西。另外两条：模型在从写代码走向软件工程、再走向直接经营业务；ship 得快容易攒下大量内部技术债，但模型也能帮着还。",
+        "这些引语是现场听写，除 80 倍和算力那两句明确是 Dario，其余未区分谁说的；80 倍也没有给统计口径和区间，按内部人自述处理。把这条和 Boris Cherny 同期讲的 Claude Code 立项史放在一起看，「为下一个模型做产品」是 Anthropic 反复对外讲的同一套打法。正在排产品路线的人可以把「当前模型差一点能跑通」的方向单独列一档，跟着模型发布节奏重新评估。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品，AI 教程作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @petergyang（引语集）",
+          "url": "https://x.com/petergyang/status/2052123472583864780"
+        },
+        {
+          "label": "原推 @petergyang（80 倍增长）",
+          "url": "https://x.com/petergyang/status/2052117599744672195"
+        },
+        {
+          "label": "原推 @trq212",
+          "url": "https://x.com/trq212/status/2052250816720056604"
+        }
+      ],
+      "engagement": "1,319 likes（@trq212 一条）"
+    }
+  ]
+}

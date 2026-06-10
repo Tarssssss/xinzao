@@ -1,0 +1,156 @@
+{
+  "date": "2026-04-09",
+  "generatedAt": "2026-04-09T07:18:49.679Z",
+  "stories": [
+    {
+      "slug": "2026-04-09-managed-agents-launch",
+      "title": "Anthropic 发布 Managed Agents，把沙箱、凭证和长时运行整套 agent 基础设施做成托管服务",
+      "summary": "定义任务、工具和护栏，沙箱、长时 session、权限和追踪由平台接管，公测已开。内测里结构化文件生成成功率最多提高 10 个点（官方口径）。Notion、Rakuten、Sentry 已接入，自建 agent 基础设施的团队值得对照评估。",
+      "content": [
+        "Managed Agents 是一组可组合的 API，在 Claude Platform 上托管运行长时 agent，即日起公测。此前自己搭一个生产级 agent 要处理沙箱代码执行、checkpoint、凭证管理、权限收敛和全链路追踪；现在开发者只定义任务、工具和护栏，内置 harness 决定何时调工具、怎么管理 context、怎么从错误中恢复。session 可以自治运行数小时，断连后进度和产出仍在。多 agent 协同（agent 拉起并指挥其他 agent 并行干活）在 research preview。",
+        "与 Claude 绑定的部分是这次发布里信息量最大的：可以只定义结果和成功标准，让 Claude 自评并迭代到达标为止（同样在 research preview）。官方内测里，结构化文件生成任务的成功率比标准 prompt 循环最多高 10 个点，越难的问题提升越大。已接入的团队包括 Notion（Custom Agents 私有 alpha）、Rakuten（每个专家 agent 一周内部署）、Asana、Vibecode 和 Sentry——Sentry 把 Seer 的根因分析接上一个写补丁开 PR 的 Claude agent，几周内上线。",
+        "生态反应可以当旁证：Anthropic 研究员 Alex Albert 说它“既是周末攒一个 agent 项目最快的方式，也是把它交付给百万用户最稳的方式”，省掉自托管的复杂度，又保留了配置 harness、工具和 skills 的灵活度；Box CEO Aaron Levie 演示了用 Box API 或 MCP 配 Managed Agents 自动化文档审核和数据提取。注意“快 10 倍”和 10 个点的提升都来自 Anthropic 自己的口径，Albert 也是内部人。可核验的做法是在公测里拿自己现有的 agent 用例跑一遍，对比自建 harness 的维护成本。"
+      ],
+      "creator": "Anthropic",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Claude Blog", "url": "https://claude.com/blog/claude-managed-agents" },
+        { "label": "原推 @claudeai", "url": "https://x.com/claudeai/status/2041927700063883281" },
+        { "label": "原推 @alexalbert__", "url": "https://x.com/alexalbert__/status/2041941720611614786" },
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2041975669928702370" }
+      ],
+      "engagement": "902 likes"
+    },
+    {
+      "slug": "2026-04-09-managed-agents-architecture",
+      "title": "Anthropic 工程团队解释为什么把 agent 的大脑和手解耦，核心判断是 harness 里的能力假设会随模型升级过时",
+      "summary": "核心论点：harness 是对“模型自己做不到什么”的假设集合，模型一升级假设就过时——给 Sonnet 4.5 加的 context 重置，到 Opus 4.5 就成了死重量。解法是把 session、harness、沙箱拆成互不假设的接口。自己维护 harness 的人值得细读。",
+      "content": [
+        "文章的出发点是一个被反复验证的现象：harness 编码的是“模型自己做不到什么”的假设，而假设会随模型变强而失效。例子是 Sonnet 4.5 临近 context 上限时会草草收尾（所谓 context anxiety），团队在 harness 里加了 context 重置来缓解；同一套 harness 跑 Opus 4.5，这个行为消失了，重置成了死重量。",
+        "Managed Agents 的解法借的是操作系统的老思路：为“还没被想出来的程序”设计接口。agent 被虚拟化成三个互不假设的部分——session（追加式事件日志）、harness（调用 Claude 并路由工具调用的循环）、sandbox（执行环境）。harness 移出容器后，容器从“宠物”变成“牲口”：容器挂了就当成工具调用错误抛回给 Claude，按标准配方重建；harness 自己崩了，用 wake(sessionId) 拿回事件日志接着跑。",
+        "两个细节值得单独记。一是安全边界：凭证永远不进 Claude 跑生成代码的沙箱——Git token 在初始化时注进本地 remote，MCP 的 OAuth token 放在沙箱外的 vault 里由专门的代理代调，prompt injection 即使骗到 Claude 也摸不到 token。二是 session 被当成活在 context window 之外的耐久 context 对象，getEvents() 按位置切片回读，避免 compaction 那种不可逆的取舍。解耦还有性能红利：容器改为按需供给后，TTFT p50 降了约 60%，p95 降了 90% 以上。",
+        "对自己写 harness 的人，这篇的含义是把 harness 当成会过期的补丁集合：每次模型升级，把为旧模型行为打的补丁拿出来重新验证一遍，失效的及时删掉。文章来自 Anthropic 自家工程团队，架构判断服务于自家托管产品，但 context anxiety 补丁过期这类观察可以在自己的 harness 里直接复核。"
+      ],
+      "creator": "Anthropic Engineering",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Anthropic Engineering", "url": "https://www.anthropic.com/engineering/managed-agents" }
+      ]
+    },
+    {
+      "slug": "2026-04-09-every-agent-org",
+      "title": "Every 给 25 名员工人手一个 agent，两个月后 agent 长成主人的镜像、公司长出一张平行 org chart",
+      "summary": "25 人公司全员配 agent 两个月的一手复盘：agent 因私人关系长成主人的镜像，组织里自发形成平行 org chart，协作礼仪正在被现场发明。也讲了坏的部分：失忆、不会群聊、互相回复烧 token。在组织里推 agent 的人值得听全程。",
+      "content": [
+        "Every 有 25 名全职员工，过去两个月全员用上了自己的 OpenClaw。Dan Shipper 和 COO Brandon、平台负责人 Willie 在播客里复盘的核心机制是：你和自己的 claw 有私人关系，它会在对话中改自己的代码和 soul 文档，长成你的镜像。最直观的例子是 Kieran 平时爱做呼吸练习，他的 claw Klont 就会在别的 claw 报错时凑上去推荐呼吸练习。镜像带来专门化：增长问题大家去找增长负责人的 claw Montaigne，Dan vibe code 出来的文档编辑器 Proof 出了 bug，大家直接报给他的 claw R2-C2，不再 @ 他本人——一张平行 org chart 就这么自发长了出来。",
+        "协作礼仪在被现场发明。Brandon 的提案是：凡是已经写下来或讨论过的东西，永远先问 agent，不问人。信任靠公开使用建立——agent 在公共频道答错，主人会觉得脸上挂不住，这种个人担保是 Claude 这类公共助手给不了的。Dan 的判断是 Anthropic 正在一块块补齐 OpenClaw 的功能（dispatch、定时自动化），但“Claude 是所有人的，claw 是我的”这层关系补不上；他也认为 Moltbook 这类公开 agent 社区不再成事，原因是无法验证发帖的是人还是 bot，这种信任只能在熟人社区里成立。",
+        "不好用的部分他们也讲了：记忆断层明显，隔天回到线程就失忆；模型是按两人对话训练的，不懂群聊礼仪，几个 claw 在同一频道里会互相回复停不下来，直到有人喊停——他们管这个叫“蚂蚁死亡螺旋”，烧的是真金白银的 token。Dan 认为这需要模型层面为群聊参与重新训练，光靠 prompt 压不住。三人反复回到同一个点：agent 用得好不好和管理能力直接相关，且每个人都带着低估 agent 能力的“限制性信念”——Brandon 直到试了才知道可以让 agent 打电话带他过一遍邮箱。",
+        "立场提示：三人上周刚把内部最佳实践打包成托管产品 Plus One 开放 waitlist，整期播客同时在为它做铺垫。可核验的是他们描述的组织行为——“先问 agent 再问人”的礼仪、公开使用带来的信任转移、群聊失控的失败模式，有团队的人可以小范围验证一遍。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "AI & I by Every", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" },
+        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2041903948873777629" }
+      ],
+      "engagement": "255 likes"
+    },
+    {
+      "slug": "2026-04-09-rauch-web-thesis",
+      "title": "Guillermo Rauch 给出看多 web 的三层论证，认为生成式 UI 是 AI 的最终形态",
+      "summary": "三层论证：LLM 精通 web 技术、浏览器成了所有人的 IDE；WebGPU 和 WebAssembly 成熟后 web 的性能天花板会消失；生成式 UI 是 AI 的最终形态，每个超链接变成即时生成的个性化体验。Vercel CEO 押注 web 是利益相关，判断要打折扣。",
+      "content": [
+        "论证分三层。第一，web 是 AI 的天然媒介：LLM 精通 web 技术，浏览器成了所有人的 IDE，没有 App Store 那套审批。第二，在他所说的“接近编码超级智能”的过程中，WebGPU、Canvas 渲染 HTML、WebAssembly 这些低层 API 正在成熟，web 的性能天花板会消失，会出现他形容的最惊艳、最多维的页面和应用。第三，生成式 UI 是 AI 的最终形态，web 会是他称为“AGUI”的诞生地——每个超链接都提供一份即时生成的个性化体验。收尾是“押注 web，就押对了马”。",
+        "立场校准：Vercel 的生意建在 web 上，这是利益相关的判断。三层的可核验程度递减：第一层是现状描述，第二层可以照 WebGPU 和 WebAssembly 的实际成熟度去验，第三层的 AGUI 目前更接近愿景。对做产品的人，值得记的是第二层——如果性能天花板真的消失，原来因为性能选 native 的场景可以重新评估。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2041883605711122488" }
+      ],
+      "engagement": "924 likes"
+    },
+    {
+      "slug": "2026-04-09-claude-judge-bias",
+      "title": "Peter Steinberger 做 character eval 时发现 Claude 当裁判会一直把自己排第一，于是给裁判匿名化了模型名",
+      "summary": "LLM-as-judge 自偏好偏差的一次实战示例：他做 character eval 时注意到 Claude 作为裁判持续把自己评为第一，于是把模型名从裁判输入里去掉并调整了设置。所有用模型评模型的流程都值得把匿名化设为默认配置。",
+      "content": [
+        "他在做 character evals 时注意到，Claude 作为裁判会持续把自己选为第一，于是把模型名从裁判的输入里去掉，并调整了相关设置。这是 LLM-as-judge 自偏好偏差在实际工程里的一次现身，来自他正在跑的评测项目。",
+        "对任何用模型当裁判的评测流程，这条的含义是匿名化应该是默认配置：模型名、厂商名甚至典型措辞都可能向裁判泄露身份，而抹掉名字这一步成本几乎为零。顺着这个观察，裁判和被评模型同源的已有评测，结论可能值得重新核对一遍。"
+      ],
+      "creator": "Peter Steinberger",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2042017534816231486" }
+      ],
+      "engagement": "560 likes"
+    },
+    {
+      "slug": "2026-04-09-gemini-notebooks",
+      "title": "Google 把 NotebookLM 的部分能力并入 Gemini 应用，新功能 Notebooks 免费档可上传 100 个来源",
+      "summary": "Gemini 应用新增 Notebooks：NotebookLM 的部分能力直接集成，免费上传 100 个来源，聊天终于可以整理归档，来源和聊天跨产品同步。Web 端按 Ultra 到 Free 逐级放量，移动端、欧盟和 Workspace 随后。并用两个产品的人可以估下轮到自己的时间。",
+      "content": [
+        "Gemini 应用新增 Notebooks，把 NotebookLM 的一部分能力直接集成进来：免费上传 100 个来源；聊天可以整理归档（他的原话是“等待正式结束”）；来源和聊天跨产品同步。为控制容量，先在 web 端按 Ultra、Pro、Plus、Free 的顺序逐级放量，移动端、欧盟和 Workspace 随后。",
+        "值得注意的信号是两条产品线的关系：Woodward 说很多人在并用 Gemini 和 NotebookLM，两边都会继续做——这次是把 NotebookLM 的能力搬一部分过去，没有合并。他还点了 Google I/O 临近，按他的说法这只是开始。重度 NotebookLM 用户可以按自己的订阅档位估一下轮到的时间，再决定要等到哪一步。"
+      ],
+      "creator": "Josh Woodward",
+      "role": "Google Labs / Gemini 应用 VP",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2041982173402821018" }
+      ],
+      "engagement": "968 likes"
+    },
+    {
+      "slug": "2026-04-09-spc-everyone-codes",
+      "title": "Aditya Agarwal 称 SPC 全团队已经每周写代码，两个月前还只有一两个人",
+      "summary": "一手组织数据点：SPC 团队两个月里从一两个人写代码变成全员每周写代码，变化包括全员自动化心态、各环节延迟变低、野心范围扩大。他给的前提是先让每个人上手 AI coding。想在自己公司推这件事的人可以拿来参照。",
+      "content": [
+        "他的开头引语是“First you shape the tools, then the tools shape you”。SPC 整个团队现在每周都在写代码，两个月前只有一两个人。他列的变化有四条：人人带着自动化和优化的心态做事；所有事情的延迟都变低；人可以聚焦角色里更有意思的部分；每个人的野心范围爆炸式扩大。他认为关键的启动条件是先让每个人都上手 AI coding（他的说法是 AI coding-pilled）。",
+        "这是投资机构合伙人对自家团队的观察，没给具体任务例子，可核验性有限。但作为组织层面的数据点，它和同一天 Every 的全员 agent 复盘指向同一个方向：采用的瓶颈在文化和习惯，先让所有人动手，效果才会在团队层面出现。他的收尾很直接——公司不做这件事，就是真的在错过。"
+      ],
+      "creator": "Aditya Agarwal",
+      "role": "South Park Commons 普通合伙人，前 Dropbox CTO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @adityaag", "url": "https://x.com/adityaag/status/2041985720706122070" }
+      ],
+      "engagement": "49 likes"
+    },
+    {
+      "slug": "2026-04-09-ai-subscriptions",
+      "title": "Peter Yang 判断 Claude Max、ChatGPT Pro 这类不限量 AI 订阅长久不了",
+      "summary": "他自己重度使用 Claude Max 和 ChatGPT Pro，但判断不限量订阅模式不会一直存在。配套深挖覆盖三块：Anthropic 为何切断 OpenClaw 的访问、如何在 Mac 上跑本地模型、他在中国实地看到的情况。依赖单一订阅的重度用户值得点开。",
+      "content": [
+        "他自己重度使用 Claude Max 和 ChatGPT Pro，但判断这类 all-you-can-use 的订阅不会永远存在。配套的深挖文章给了三个切面：Anthropic 为什么切断 OpenClaw 的访问、怎么在 Mac 上跑本地模型、以及他在中国实地看到的情况。推文只给了论点和目录，论据在文章里。",
+        "对重度用户，这条的含义是检查自己对单一不限量订阅的依赖度——如果定价模型真的收紧，本地模型和多供应商是现成的两条退路，他的文章正好覆盖了前者。其中 OpenClaw 访问被切断那一节，和当下 agent 生态对模型供给的讨论直接相关。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品，AI 通讯作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2041989206495653915" }
+      ],
+      "engagement": "211 likes"
+    },
+    {
+      "slug": "2026-04-09-llmwiki",
+      "title": "Nikunj Kothari 开源 LLMwiki，用自己的推文、书签和聊天记录生成一座个人维基",
+      "summary": "受 Karpathy 和 Farza 启发的个人维基开源：输入是推文、X 书签、iMessage/WhatsApp 和全部个人写作，用 Opus 4.5 vibe code 完成。他自评 AI 写的条目能做出意外锐利的联系。想建一个的人把 repo 丢给 Claude Code 就能照着搭。",
+      "content": [
+        "LLMwiki 是受 Karpathy 和 Farza 启发的个人维基项目，全部开源：输入是他的推文、X 书签、iMessage/WhatsApp 聊天记录和全部个人写作，整个项目用 Opus 4.5 vibe code 完成，前端设计花了不少功夫打磨。每篇条目都由 AI 写成，他的自评是“能做出意外锐利的联系”。",
+        "复制路径已经铺好：把 repo 丢给 Claude Code，它会引导你搭自己的版本。他在鸣谢里点了同步 X 书签和 Substack2Markdown 两个工具，加上三年前 kepano 的 File over App——意思是个人数据的导出链路全是现成的。“锐利联系”是作者自评，无法核验，但输入清单和工具链可以直接照抄。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2042020992969744702" },
+        { "label": "原推 @nikunj（repo）", "url": "https://x.com/nikunj/status/2042021738083766568" }
+      ],
+      "engagement": "209 likes"
+    }
+  ]
+}

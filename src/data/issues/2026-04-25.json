@@ -1,0 +1,171 @@
+{
+  "date": "2026-04-25",
+  "generatedAt": "2026-04-25T07:12:08.616Z",
+  "stories": [
+    {
+      "slug": "2026-04-25-gpt55-api",
+      "title": "OpenAI 把 GPT-5.5 和 GPT-5.5 Pro 开放到 API",
+      "summary": "Sam Altman 宣布 GPT-5.5 和 GPT-5.5 Pro 开放 API。原推只有一句，定价和速率限制都没给。同日已能看到第一波实测（本期 Cursor 切换、Star Fox demo 两条），想把 5.5 接进自己产品的人可以开始动手。",
+      "content": [
+        "Sam Altman 宣布 GPT-5.5 和 GPT-5.5 Pro 当天起可以通过 API 调用。原推只有一句话，没有附定价、速率限制或文档链接，这些信息需要自行到 OpenAI 官方渠道确认。",
+        "对 builder 的直接含义是 5.5 系列从此可以接进第三方产品，可以拿自己的任务和评测集直接测，不必只看别人晒的 demo。同日已经能看到第一波动作：Cursor 设计师 Ryo Lu 宣布把主力完全切到 GPT-5.5 加 Composer 2，Peter Yang 用 GPT-5.5 配 Codex 在十五分钟提示后做出 Star Fox 风格的 demo，两条本期都有单独条目。Altman 当天另一条推文写“这是不错的一周，为团队骄傲”，可以当作 OpenAI 这轮发布节奏收尾的注脚。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2047787124846653895" }
+      ],
+      "engagement": "5,187 likes"
+    },
+    {
+      "slug": "2026-04-25-ryolu-cursor-switch",
+      "title": "Cursor 设计师 Ryo Lu 把日常主力完全换成 GPT-5.5 加 Composer 2",
+      "summary": "Ryo Lu 宣布完全切到 GPT-5.5 加 Composer 2，理由是这个组合同时占住智能、速度和成本；另一条给出用 /multitask 跳出队列并行干活的技巧。他是 Cursor 员工、原话带宣传成分，重度 Cursor 用户值得自己对比验证。",
+      "content": [
+        "Ryo Lu 说自己已经完全切换到 GPT-5.5 加 Composer 2，称这是“智能、速度和成本的完美组合”，并补了一句“只在 Cursor 里有”。时间点在 GPT-5.5 开放 API 的几个小时后。",
+        "另一条是个使用技巧：用 /multitask 可以跳出任务队列，同时推进多件事。对习惯排队等单个 agent 跑完的用户，这是个值得记下的入口。",
+        "立场校准：他在 Cursor 做设计，这两条都带自家产品宣传的成分，“完美组合”要按营销话术打折听。可核验的部分是 GPT-5.5 已在 Cursor 可用、以及他本人换了主力这件事；智能、速度、成本的取舍是否成立，重度用户拿自己的日常任务对比跑一轮就有答案。"
+      ],
+      "creator": "Ryo Lu",
+      "role": "Cursor 设计师",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @ryolu_（切换 GPT-5.5 + Composer 2）", "url": "https://x.com/ryolu_/status/2047879353313431649" },
+        { "label": "原推 @ryolu_（/multitask）", "url": "https://x.com/ryolu_/status/2047766831105220799" }
+      ],
+      "engagement": "629 likes"
+    },
+    {
+      "slug": "2026-04-25-sap-cto-no-priors",
+      "title": "SAP CTO：agentic coding 能成靠结果可验证，企业流程缺的正是这种验证数据",
+      "summary": "Herzig 认为 agentic coding 能成是因为结果可验证，企业想复制就得先攒输入对输出的 eval 数据；agent 追问留下的决策痕迹可以沉淀为新流程和新 eval。另谈 20,000 个 API 下的 MCP 规模问题，做企业 agent 的人值得听。",
+      "content": [
+        "Herzig 在访谈里给 agentic coding 的有效性下了一个判断：它能成是因为结果可验证——程序编译通过、单元测试通过，agent 可以自己确认做对了。要在财务这类业务流程里拿到同样可靠的结果，就需要“给定这个输入、应该得到那个输出”的数据，让 agent 能对照断言；而他指出今天系统里的存量数据对这件事是不够的。对开发者的变化是工作重心从写代码移到描述边界条件和预期结果：他回忆测试驱动开发当年几乎没人真做（至少他自己没做），因为先写代码更有趣、产品需求也太乱，现在写代码这一半被自动化了，先把结果定义清楚成了人的主要工作。",
+        "第二个论点是规模。10 个文档的 RAG demo 谁都能搭，1,000 个就是真正的工程问题；MCP 同理，10 个 API 很简单，SAP 有 20,000 个 API，上下文膨胀立刻出现，还要叠加个性化——同一个差旅政策问题，美国员工和德国员工要按各自的主数据和税务规则得到不同答案。他的结论是企业 AI 的难点在让 AI 在这种规模下把事做对，模型能力本身倒在其次。",
+        "他还描述了一条数据飞轮：agent 执行中会回来问澄清问题，这些问答正是只存在于员工头脑和 Slack 里的部落知识。SAP 把记录这些决策痕迹的做法叫 agent mining——既能发现某地团队偏离标准流程的异常，也能把好的做法升级成更大范围的新标准，痕迹本身又变成新的 eval 数据，系统据此继续优化。",
+        "几个附带的判断：表格类预测（需求预测、回款延迟）他认为 LLM 天生不擅长，传统机器学习又难规模化（一家药企仅回款相关预测就要训 180 个模型），SAP 为此做了两年研究、发布了改架构的 RPT-1，他相信这个方向会很大；agent 操作企业软件，他自称还没有定论，但倾向于大部分走工具调用，computer use 兜底没有 API 的遗留系统；商业模式上他明确说 SAP 正从按席位转向带用量的混合计费，等结果可验证性足够后可能走结果计费。整场是 SAP CTO 讲自家战略，咨询场景“省大约 30% 工作量”之类的数字都是单方陈述；可以直接搬走的是方法论——先攒输入对输出的 eval 数据、回收 agent 的决策痕迹，这两条不依赖 SAP 的产品。"
+      ],
+      "creator": "No Priors",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "No Priors", "url": "https://www.youtube.com/watch?v=5u7AjPardvo" }
+      ]
+    },
+    {
+      "slug": "2026-04-25-levie-jevons",
+      "title": "Aaron Levie：AI 把任务做得越好，企业接的任务越多，配套招聘随之上升",
+      "summary": "Levie 认为杰文斯悖论是理解 AI 就业影响的关键：AI 把任务做得越好，企业能承接的任务越多，围绕任务的配套岗位反而增加；例子有小企业终于雇得起工程师、销售线索变多后要雇更多销售。他预测效应会随 AI 变强放大。",
+      "content": [
+        "Levie 引用的一段话写道：“如果 AI 能让员工更高效——这一点已被广泛接受——那么公司会想要尽可能多的高效劳动力单元，这是我改变想法的关键原因。”他接着给出自己的判断：这正是当下理解 AI 必须懂杰文斯悖论的原因，而且他认为反直觉的地方在于，AI 越好这个趋势越强——AI 把任务做得越好，企业能承接的任务越多，进而要雇更多人做这些任务周边的工作。",
+        "三个例子都在需求侧：雇不起复杂软件开发的小企业，在 AI 让单个工程师有 5 到 10 倍影响力之后，第一次值得投入工程；销售团队自动化客户情报和外呼获客之后，因为线索变多反而要雇更多销售；营销团队能做更高端的视频之后会去雇视频剪辑师。他的收尾是这件事“会以越来越多令人意外的方式发生”。",
+        "这是一条机制推演，三个例子都是构想，素材里没有已发生的统计数据。Box 卖企业内容 AI，乐观叙事和他的生意方向一致，立场要计入。它的用法是给 AI 减员类新闻提供一个对照机制：判断某个岗位的走向时，可以先问该岗位所在的任务总量会因为 AI 缩小还是扩大。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2047747142308274645" }
+      ],
+      "engagement": "476 likes"
+    },
+    {
+      "slug": "2026-04-25-replit-import",
+      "title": "Replit 支持从 Vercel 和 Lovable 几步导入应用",
+      "summary": "Amjad Masad 宣布 Replit 支持把 Vercel 或 Lovable 上的应用通过几次点击导入。原推没说迁移覆盖的范围，但方向清楚：降低从竞品搬家的摩擦。被平台锁定困扰的 vibe coding 用户多了一个换平台的低成本选项。",
+      "content": [
+        "Amjad Masad 宣布 Replit 支持把 Vercel 或 Lovable 上的应用通过几次点击导入。原推只有这一句加产品链接，没有说明迁移覆盖哪些部分——代码、数据库、域名各自怎么处理，需要实际试过才知道。",
+        "方向本身不难读：这是在降低从两家竞品搬家的摩擦，冲着对方的存量应用去的。对用户的含义是平台切换成本下降——如果导入真像宣传的那样顺，被锁定在某个平台的顾虑会小一截。想换平台的人可以拿一个非关键应用先走一遍导入，验证完整度再做决定。"
+      ],
+      "creator": "Amjad Masad",
+      "role": "Replit CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @amasad", "url": "https://x.com/amasad/status/2047747978690232550" }
+      ],
+      "engagement": "436 likes"
+    },
+    {
+      "slug": "2026-04-25-discrawl-discord-dm",
+      "title": "Peter Steinberger 发布 discrawl 0.6.0，能读 Discord 私信、刻意不做发送",
+      "summary": "discrawl 0.6.0 最大更新是不再需要可能导致封号的自定义登录手段就能读 Discord 私信；写入是刻意不做的，他的理由是不该让 agent 给真人发垃圾内容。想把 Discord 数据接进 agent 工作流的人可以试。",
+      "content": [
+        "discrawl 0.6.0 最大的新特性是可以读 Discord 私信，并且不再依赖那类可能导致账号被封的自定义登录手段。写入能力是刻意不做的，Steinberger 的原话理由是“给真人发 slop 不太好”。",
+        "把只读做成产品边界是这次发布里值得注意的设计决定：既绕开了封号风险，也把工具明确定位在数据获取一侧，不碰自动回复。想让 agent 读取 Discord 社群和私信上下文的人可以试 0.6.0；需要发送能力的，这个工具明确不覆盖。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw / OpenAI",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2047797210427859450" }
+      ],
+      "engagement": "229 likes"
+    },
+    {
+      "slug": "2026-04-25-starfox-demo",
+      "title": "Peter Yang 用 GPT-5.5 加 Codex 十五分钟提示做出 Star Fox 风格 demo",
+      "summary": "一个 GPT-5.5 的直观能力参照：Peter Yang 用它配 Codex 做 Star Fox，十五分钟提示词后拿到可玩版本，他还观察到模型在自己试玩做出来的游戏。单个 demo、题材在训练数据里常见，证明力有限，但视频值得扫一眼。",
+      "content": [
+        "Peter Yang 让 GPT-5.5 配 Codex 做 Star Fox，十五分钟提示词之后拿到可玩版本并发了视频。他在另一条里写“绝的是它在自己试玩自己做的游戏，纯属为了好玩”。",
+        "单个 demo 的证明力有限：没有代码量和可玩性的细节，经典游戏复刻也是训练数据里常见的题材。它的用途是给 GPT-5.5 的代码生成水平提供一个直观参照，想快速感受新模型上限的人可以直接看视频，不必外推到自己的业务场景。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang（demo）", "url": "https://x.com/petergyang/status/2047882568520102226" },
+        { "label": "原推 @petergyang（试玩观察）", "url": "https://x.com/petergyang/status/2047880605204144159" }
+      ],
+      "engagement": "167 likes"
+    },
+    {
+      "slug": "2026-04-25-nanyu-design-intent",
+      "title": "Nan Yu：设计是一种意图，没有意图的产出就是幻觉",
+      "summary": "Nan Yu 给 AI 时代的设计下了个判断标准：设计是一种意图，图像和原型都不是设计本身，没有意图的产出等同于幻觉；并举例：AI 之前 Dribbble 上成堆的概念天气 app 同样是幻觉。给被 AI 生成稿淹没的产品团队一个过滤标准。",
+      "content": [
+        "Nan Yu 转发并认同“设计的核心是理解，不在产出”这句话，自己补充：设计是一种意图，图像和原型都不是设计本身，没有意图的产出就是幻觉。",
+        "同日另一条把这个判断推到 AI 出现之前：他让大家回想 pre-AI 时代 Behance 和 Dribbble 上成堆的概念“天气 app”和“仪表盘”，结论是“全是幻觉”。顺着这个逻辑，幻觉的来源是缺少真实意图，和产出是人画的还是模型生成的没有必然关系——后半句是编辑引申，他的原文停在例子本身。",
+        "对正在被 AI 生成稿淹没的产品团队，这两条给了一个可用的过滤标准：评审产出前先问背后有没有清晰的意图和对问题的理解，再看完成度。这个标准只是两条推文的归纳，原文没有展开成方法论。"
+      ],
+      "creator": "Nan Yu",
+      "role": "Linear 产品负责人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @thenanyu（设计即意图）", "url": "https://x.com/thenanyu/status/2047751915271020920" },
+        { "label": "原推 @thenanyu（天气 app）", "url": "https://x.com/thenanyu/status/2047758400948408831" }
+      ],
+      "engagement": "146 likes"
+    },
+    {
+      "slug": "2026-04-25-notebooklm-auto-label",
+      "title": "NotebookLM 新增源文件自动打标签和归类",
+      "summary": "NotebookLM 上线源文件自动打标和归类。原推只有一句话加演示，分类规则和数量上限都没说明。把 NotebookLM 当长期资料库、源文件堆得多的用户值得直接试，看自动分类是否贴合自己的整理方式。",
+      "content": [
+        "Josh Woodward 宣布 NotebookLM 可以自动给源文件打标签并归类。原推只有一句话加演示，分类的规则、是否可自定义、源数量上限都没有说明。",
+        "对把 NotebookLM 当长期资料库用的人，这个功能对的是源文件多了之后手工整理成本高的问题。效果只能上手验证，重度用户值得拿自己现有的 notebook 试一下，看自动归类是否贴合自己的整理习惯。"
+      ],
+      "creator": "Josh Woodward",
+      "role": "Google Labs / Gemini App VP",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2047795981534847413" }
+      ],
+      "engagement": "297 likes"
+    },
+    {
+      "slug": "2026-04-25-turck-cohere-aleph",
+      "title": "Matt Turck：美国之外的市场对把智能外包给少数美国平台抵触极深",
+      "summary": "Turck 评 Cohere 与 Aleph Alpha 合并：他长期在美国之外跑的观察是，当前地缘政治混乱下，各地对把智能外包给少数美国平台的抵触强烈到再怎么强调都不为过。单条推文，但对做非美市场的 AI 公司是一个一手信号。",
+      "content": [
+        "Matt Turck 评论 Cohere 与 Aleph Alpha 的合并，称这是一个很有意思的时刻。他的依据来自长期在美国之外的见闻：考虑到当前的地缘政治混乱，各地对把智能外包给少数几家美国平台的抵触之深，再怎么强调都不为过。",
+        "顺着这个观察，非美模型公司之间的整合可以读作对这种情绪的供给侧回应——如果欧洲和其他市场的企业真的不愿依赖美国平台，非美选项的合并就有现实的需求基础。这是编辑推断，他的原文只到观察为止。单条推文，证据等级有限，但来自一线 VC 的现场感受，对做非美市场的 AI 公司是个值得记下的信号。"
+      ],
+      "creator": "Matt Turck",
+      "role": "FirstMark 投资人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @mattturck", "url": "https://x.com/mattturck/status/2047721904438493482" }
+      ],
+      "engagement": "39 likes"
+    }
+  ]
+}

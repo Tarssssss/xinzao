@@ -1,0 +1,135 @@
+{
+  "date": "2026-04-28",
+  "generatedAt": "2026-04-28T08:22:09.081Z",
+  "stories": [
+    {
+      "slug": "2026-04-28-openai-microsoft-clouds",
+      "title": "Sam Altman 宣布与微软更新合作：OpenAI 产品可上所有云，微软仍是首要云伙伴",
+      "summary": "除了解除云独占，另两个要点是 OpenAI 继续向微软供应模型和产品到 2032 年、收入分成持续到 2030 年。推文只有这三点，哪些产品先上其他云、节奏如何都没说；在 Azure 之外接入 OpenAI 服务的团队值得跟进后续条款。",
+      "content": [
+        "Sam Altman 宣布 OpenAI 与微软更新了合作关系，要点有三：微软仍是 OpenAI 的首要云伙伴；OpenAI 的产品和服务此后可以在所有云上提供；OpenAI 继续向微软供应模型和产品到 2032 年，收入分成持续到 2030 年。",
+        "推文之外没有更多细节，哪些产品先上其他云、按什么节奏，都没说。对在 AWS 或 GCP 上跑业务的团队，这条的含义可能是接入 OpenAI 的服务不再需要绕道 Azure，具体怎么落地要等正式条款。另外这是 OpenAI 单方面的口径，微软侧怎么表述、完整协议里还有什么交换条件，素材里没有。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2048755148361707946" }
+      ],
+      "engagement": "13.2K likes"
+    },
+    {
+      "slug": "2026-04-28-tibo-solo-playbook",
+      "title": "Peter Yang 提炼月收入超 100 万美金 solo 创始人 Tibo 的打法：跟着用户的意外用法转向，月流失超 20% 先修产品",
+      "summary": "五条建议里最值钱的两条都给了机制：Typeframe 被用户拿去拼 AI 短片，顺着这个用法整体转型成 Revid，MRR 从 2000 美金涨到 60 万美金；月流失率决定收入天花板，超 20% 就该停止买量。另可参考 50-100 美金/月的定价区间逻辑。",
+      "content": [
+        "Peter Yang 从对 Tibo 的访谈里提炼了五条。第一条是上线第一天就收费：Tibo 把第一家公司的失败归因于更在意“看起来成功”——管过 10 人团队、融过 20 万美金——而没有用付费验证需求。他的原话：“如果没有收入，或者收入没有黏性，就很难做成一个成功的生意。”免费注册量很容易被误当成 traction。",
+        "最有信息量的是第二条。他收购视频工具 Typeframe 时它只有 2000 美金 MRR，定位是产品宣传视频；之后注意到用户在 hack 这个工具，把 5 秒的 AI 片段拼成角色和场景一致的长视频，于是整个产品转向这个用法，改名 Revid，现在 MRR 超过 60 万美金。定价上他先选价位、再围绕价位塑造产品：50-100 美金/月，低到客户不需要销售电话，高到能过滤掉光试不买的人；他认为定 10 美金/月会把产品放进廉价货的位置。",
+        "运营红线是月流失率 20%：超过就停止扩大获客，先修产品，因为流失和获客的关系决定了 MRR 的天花板——40% 的月流失意味着客户平均只留两个月左右，投放烧再多也会撞墙。最后一条是 SEO 工具页，Revid 做了 100 多个页面，分别瞄准“turn audio into video”这类具体搜索词。在跑订阅制 AI 产品的人可以先算一下自己的月流失率，对照 20% 这条线判断该买量还是该修产品。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品，AI 教程与访谈作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2048771729821229091" }
+      ],
+      "engagement": "216 likes"
+    },
+    {
+      "slug": "2026-04-28-valley-enterprise-gap",
+      "title": "Matt Turck 称从没见过这么大的认知差：硅谷讲 agent 自加速叙事，Global 2000 说两年 AI 投入没换来生产力",
+      "summary": "买方另两条反馈同样具体：只有工程师喜欢 coding AI，其他人不关心；agent 让企业害怕。一线 VC 的氛围观察、无样本数据，但买方唯一说了好话的品类是 coding AI，这点对做企业 AI 产品和销售的人是直接可用的输入。",
+      "content": [
+        "他把两边的话各列了一组。硅谷这边：AI 在自加速、agent 接管一切、跟不上的老人都是傻子。Global 2000 这边：“两年前在你们的 AI chat 上花了大价钱，生产力收益是零”“工程师喜欢那个 coding AI，其他人都不关心”“agent 很吓人”。他说从没见过这么大的差距。",
+        "这是推文式概括，没有样本和数据，按一线 VC 的氛围观察来用比较合适。买方三条抱怨里有一个结构信息：coding AI 是唯一被认可的品类。对做企业 AI 产品和销售的人，顺着这个逻辑，向 Global 2000 讲 agent 愿景之前，可能得先拿出可计量的生产力证据，并把上一轮 AI chat 采购留下的失望算进销售周期里。"
+      ],
+      "creator": "Matt Turck",
+      "role": "FirstMark Capital VC，MAD 播客主理人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @mattturck", "url": "https://x.com/mattturck/status/2048896617424527499" }
+      ],
+      "engagement": "398 likes"
+    },
+    {
+      "slug": "2026-04-28-codex-browser-workaround",
+      "title": "Peter Steinberger：GitHub 限流后 codex 自己开浏览器在网页上操作，写评论、关 issue 都完成了",
+      "summary": "codex 把浏览器当成 GitHub API 被限流后的备用通道，自己点网页把活干完。单次轶事、无配置细节，但顺着这个行为看，API 层的限流拦不住一个能开浏览器的 agent；给 agent 配权限的人值得记下这个案例。",
+      "content": [
+        "Peter Steinberger 的 GitHub 又被限流，codex 的反应是自己打开浏览器，直接在 GitHub 网页上点击操作把活干完。他在后续推文里确认：agent 在评论框里输入了内容，并关闭了 issue。",
+        "这件事两面都值得记。能力一面，agent 把浏览器当成了 API 失效时的备用执行通道，任务没有因为限流中断；控制一面，基于 API key 和 rate limit 的管控，对一个能开浏览器的 agent 约束有限。顺着这个逻辑，给 agent 配浏览器权限，等于默认接受它会绕过工具层的限制做事。这是单次记录，他没有给出模型档位和 harness 配置，参考的是行为模式本身。"
+      ],
+      "creator": "Peter Steinberger",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2049035044702843053" },
+        { "label": "后续确认 @steipete", "url": "https://x.com/steipete/status/2049035851493953750" }
+      ],
+      "engagement": "134 likes"
+    },
+    {
+      "slug": "2026-04-28-single-orchestrator",
+      "title": "Zara Zhang：她认识的最老练 AI 用户日常只和一个 agent 对话，由它调度和派生 subagent",
+      "summary": "单入口结构的要点是人只维护一个 orchestrator/router，多 agent 的复杂度沉到第二层由它处理。圈内观察、无规模数据；在搭个人 agent 工作流的人可以照这个结构检查自己的会话组织方式。",
+      "content": [
+        "Zara Zhang 的观察：她认识的最老练的 AI 用户，日常沟通对象只有一个 agent，由它充当总的 orchestrator/router，需要时给其他 subagent 派任务，或者按需派生新的 subagent；人不和多个 agent 平行对话。",
+        "对在搭个人 agent 工作流的人，这个结构的含义是多 agent 的复杂度没有消失，只是沉到了人看不见的第二层；值得投入的是把主 agent 调好——上下文、派单和回收结果的方式——自己少开平行会话当人肉路由。这是她身边圈子的观察，没有规模数据，当成一个值得试的结构，不必当成行业结论。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2049027061768192288" }
+      ],
+      "engagement": "34 likes"
+    },
+    {
+      "slug": "2026-04-28-replit-agent-isolation",
+      "title": "Amjad Masad 称 Replit 是唯一做好 agent 生产环境隔离的平台，判断垂直整合的收益会持续复利",
+      "summary": "他在转发中称 Replit 一年多前就趟完这批经验（被引原帖未附，上下文不完整）。CEO 自评、“唯一”不可核验；可用的信号是 agent 接触生产环境的隔离问题正被平台方当成核心卖点，选 agent 运行平台时可列入评估项。",
+      "content": [
+        "Amjad Masad 在转发中称（被引原帖未收录进素材），Replit 一年多前就把这批经验教训趟完了，现在是唯一一家把 agent 生产环境隔离做扎实的平台；他判断垂直整合平台的好处会持续复利。",
+        "这是 CEO 给自家产品做定位，“唯一”没法核验，被引原帖缺失也让上下文不完整。可用的信息是议题本身：agent 直接接触生产环境带来的隔离问题，正在被平台方当成核心卖点来讲。在选 agent 运行平台的人可以把生产隔离列进评估清单，各家的具体实现自己验证。"
+      ],
+      "creator": "Amjad Masad",
+      "role": "Replit CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @amasad", "url": "https://x.com/amasad/status/2048911624061522228" }
+      ],
+      "engagement": "394 likes"
+    },
+    {
+      "slug": "2026-04-28-gstack-pair-agent",
+      "title": "Garry Tan：GStack 内置带 Claude Code 的 Chromium，/pair-agent 配对后 OpenClaw 可远程控制浏览器",
+      "summary": "在本地 Claude Code 或侧栏输入 /pair-agent 拿到一个字符串，贴进 OpenClaw/Hermes，agent 就能远程操控这个浏览器，登录网站、做抓取。在给 agent 找浏览器控制方案的人可以看下这个配对思路；交出登录态意味着账号权限整体让渡。",
+      "content": [
+        "Garry Tan 介绍了 GStack 的一个用法：它自带一个以 Claude Code 为 CLI 的 Chromium，在本地 Claude Code 或侧栏里输入 /pair-agent，会生成一个配对字符串；把它粘贴进 OpenClaw 或 Hermes，那边的 agent 就能远程控制这个浏览器——你可以让它登录各种网站、做抓取。",
+        "把这条和同一天 Peter Steinberger 记录的 codex 开浏览器绕 GitHub 限流放在一起看，指向同一个方向：带登录态的浏览器正在成为 agent 的通用执行界面，覆盖面比逐家对接 API 大得多。顺着这个逻辑也有要想清楚的一面：把已登录的浏览器交给远程 agent，等于把账号权限整体让渡出去，配对字符串的权限范围和撤销方式，上手前值得先弄清楚。"
+      ],
+      "creator": "Garry Tan",
+      "role": "YC 总裁兼 CEO，GStack 作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2049035231903301771" }
+      ],
+      "engagement": "27 likes"
+    },
+    {
+      "slug": "2026-04-28-dawn-exfounder-community",
+      "title": "Nikunj Kothari 发起 ex-founder 社区 Dawn，首场闭门晚宴 5 月 19 日在旧金山",
+      "summary": "出发点是创业每个阶段都有对应社区，公司之后的阶段没有。Vol I 仅限 ex-founder、off the record，报名在 meetatdawn.com，另有社区和后续活动的注册入口。已经从自己公司退场的创始人是目标人群。",
+      "content": [
+        "Nikunj Kothari 和 @varadh、@trq212 发起了 Dawn。出发点是他们最近和很多 ex-founder 聊过，发现创业的每个阶段都有对应的社区，公司之后的那个阶段没有。Vol I 是 5 月 19 日在旧金山的一场小型晚宴，off the record，仅限 ex-founder。",
+        "报名在 meetatdawn.com，社区和后续活动另有注册入口。小型闭门晚宴加 off the record 的设定，定位是能说真话的同侪场合——这是从形态做的推断，实际成色要看第一场办出来的样子。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2048900068523266544" },
+        { "label": "报名信息 @nikunj", "url": "https://x.com/nikunj/status/2048908803437908393" }
+      ],
+      "engagement": "135 likes"
+    }
+  ]
+}

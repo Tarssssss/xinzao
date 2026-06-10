@@ -1,0 +1,115 @@
+{
+  "date": "2026-04-27",
+  "generatedAt": "2026-04-27T08:20:43.831Z",
+  "stories": [
+    {
+      "slug": "2026-04-27-altman-os-agent-protocol",
+      "title": "Sam Altman 觉得该认真重想操作系统和 UI 的设计了，互联网应该有一个人和 agent 同样能用的协议",
+      "summary": "只有方向没有方案的一条表态，但把 OS、UI、互联网协议三件事一起点名，配上同晚公布的 OpenAI 五条原则，可以当作 OpenAI 在 agent 时代议程的信号。做 agent 入口、客户端或协议层的人值得留意。",
+      "content": [
+        "Altman 的原话只有两句：感觉现在是认真重新思考操作系统和用户界面设计的好时机；互联网也一样，应该有一个人和 agent 同样能用的协议。没有方案，也没有时间表。",
+        "他没有展开，但这句话点到的摩擦是真实的：agent 操作计算机和互联网，目前用的基本还是为人设计的入口——GUI、浏览器、为人写的网页。顺着他的说法，如果真出现一个人和 agent 同样可用的协议，要重写的不只是浏览器，操作系统和应用的交互层都在范围内。",
+        "同一晚他还发了一条更短的推，公布 OpenAI 的五条原则：民主化、赋能、普遍繁荣、韧性、适应性。推文只有五个词加一个链接，没有任何解释。",
+        "两条都只是方向表态，没有可核验的产品信息。对做 agent 入口、客户端或协议层的人，合理的用法是当作信号，跟踪 OpenAI 接下来在这几层的实际动作；从这两句话里读不出产品计划。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama（OS 与协议）", "url": "https://x.com/sama/status/2048428561481265539" },
+        { "label": "原推 @sama（五条原则）", "url": "https://x.com/sama/status/2048552677433643427" }
+      ],
+      "engagement": "10.5K likes"
+    },
+    {
+      "slug": "2026-04-27-garry-tan-three-files",
+      "title": "Garry Tan 公开他的 agent 三文件配置：SOUL.md 定人格，USER.md 建用户模型，AGENTS.md 管操作",
+      "summary": "他把 SOUL.md 称作宪法而非 system prompt，要求具体到「不许用 Great question 开头」这种句式级条目；USER.md 是对用户本人约 4000 词的深度建模。核心判断：指令越具体越有立场，agent 越不像 chatbot。想给个人 agent 调出风格的人可直接套用。",
+      "content": [
+        "他的拆法是三个文件各管一层。SOUL.md 管 agent 是谁：声音、价值观、操作原则、好输出和坏输出分别长什么样。他强调这不是 system prompt，是一部宪法，里面写的是「简洁是强制的」「幽默是强制的」「永远不要用 Great question 开头」「脏话用得准就可以用」这种具体到句式的条目。",
+        "USER.md 管你是谁，要求写成对用户本人的深度建模而非简历：思维方式、在做的事、强项、盲点、家庭、脾气、什么会刺激到你。他自己这份写了约 4000 词。AGENTS.md 则是操作手册：每条消息要检查什么、绝对不做什么、失败怎么处理、查找链和路径规则。前两个文件定义「是谁」和「为谁」，最后一个只管怎么干活。",
+        "他认为表达力来自 SOUL.md 把声音写得够不够具体：写「be helpful and concise」，得到的就是 ChatGPT；写「像一个有品味的同行那样说话，一句话能说清就只说一句，真话哪怕让人不舒服也欢迎，语言要带电」，得到的才是活的东西。他给的写作心法：像在向你最聪明的朋友交代怎么成为你，而不是在配置一个软件。",
+        "效果他给了一个日常样本：他的 OpenClaw 知道他的完整日程和健康目标，过了凌晨 12:30 就拒绝回答他的问题。在配个人 agent 的人可以对照检查：自己的配置里有没有 SOUL 和 USER 这两层，还是只有操作规则。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator President & CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan（三文件配置）", "url": "https://x.com/garrytan/status/2048669695344046090" },
+        { "label": "原推 @garrytan（半夜拒答）", "url": "https://x.com/garrytan/status/2048667055424249864" }
+      ],
+      "engagement": "62 likes"
+    },
+    {
+      "slug": "2026-04-27-levie-ai-jobs-overwork",
+      "title": "Aaron Levie：人们清楚自己工作里 AI 的最后一公里，却以为别人的工作能被立刻自动化",
+      "summary": "失业预测多来自「能自动化单个任务」的视角，没算完整工作的收尾投入，这是他怀疑失业论的理由；agent 过载感则来自两个机制——杠杆变大不敢让 agent 闲着、启动变易项目越开越多。他还预测实验转成生产流程会创造岗位。",
+      "content": [
+        "第一条讲的是 AI 版的 Gell-Mann 失忆症：人在自己的工作里用 AI，清楚最后一公里有多少活——数据访问的麻烦、要喂多少上下文、输出要逐条核对、结果还得接回业务流程；转头看到 AI 在别人的领域做成一件事，就推断那个职能马上能被整体自动化。他的结论：很多失业理论建立在「AI 能自动化单个任务」的视角上，没算进把 AI 在一份完整工作里跑通的全部投入，这是对它们保持怀疑的理由。",
+        "第二条给 agent 带来的过载感找了两个机制。一是边际投入的杠杆大幅上升：以前事情都慢，多投入的时间感觉不出价值，现在能清楚感到 agent 带来的复利杠杆。体验接近带团队的管理者——最怕让人闲着、指错方向、浪费时间，IC 现在通过管理 agent 也尝到了这种压力。他认为排优先级和拆任务因此成了关键技能。",
+        "二是启动一件事变得太容易：90% 的部分很快做完，最后 10% 占掉绝大部分时间，于是项目越开越多、收尾时间越堆越长。他自己的版本是经常晚上九点开一个以为很快的项目，到半夜还在收。他顺着这条往下推：团队会用 AI 快速验证大量想法，被验证的实验升级成生产流程，而这些实验没有 AI 根本不会启动——AI 带来的岗位创造会有很大一部分从这里来。他也说明这种过载在整个经济层面显然不可持续。",
+        "立场上，Box 的生意是帮企业把内容接进 AI，「落地比想象的难」这个论证方向对他有利。两条里可直接核验的是体验部分：不敢让 agent 闲着的压力、晚上九点开的「快速」项目，是不是也发生在自己身上；他点出的应对——把排优先级和拆任务当成关键技能来练——是当下就能做的。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie（失业论）", "url": "https://x.com/levie/status/2048576989930619185" },
+        { "label": "原推 @levie（过载感）", "url": "https://x.com/levie/status/2048537503972684252" }
+      ],
+      "engagement": "713 likes"
+    },
+    {
+      "slug": "2026-04-27-rauch-coding-agents",
+      "title": "Guillermo Rauch：coding agent 会是所有超级智能的基础，既精通计算机操作，又能检查和修改自身",
+      "summary": "论据两层：编码能力至少与「熟练使用计算机」无法区分；coding agent 还能检查自己的源码、状态、skills 和指令并修改自身。他顺带建议自我修改要配人类监督和审计记录。Vercel CEO 的立场与生意方向一致，论断无数据可核验，当方向判断读。",
+      "content": [
+        "论断分两层。下限：编码能力与「熟练使用计算机」无法区分，像 Claude Code 这样的 coding agent 已经精通 bash、文件系统、程序的安装和配置。上限是自我改进：coding agent 能检查自己的源码、状态、skills 和指令，对自己提出修改，甚至直接改动自身。他在括号里加了一句建议：这种修改应该有人类监督和审计记录。",
+        "收尾引的是「What I cannot create, I cannot understand」：在他看来，编码流利度让模型对所有计算机工作和知识工作都理解得更深，要掌握程序，就必须能创造程序。他自己的评语是，回头看这件事本应显而易见。",
+        "这是 Vercel CEO 的判断，方向上和他的生意一致，论断本身也没有数据可核验。其中能直接落地的反而是那句随手的建议：如果你的 agent 已经在改自己的 CLAUDE.md 或 skills，给这条路径加上人工审核和变更留痕，现在就可以做。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2048523195305902341" }
+      ],
+      "engagement": "427 likes"
+    },
+    {
+      "slug": "2026-04-27-steipete-birdclaw-wacrawl",
+      "title": "Peter Steinberger 发布 birdclaw 并更新 wacrawl：把推文、书签和 WhatsApp 归档收进本地，用 Git 备份",
+      "summary": "birdclaw 把 X 官方存档导入本地、备份到 GitHub，还能每天定时导入书签——动机是书签 API 拿不全；wacrawl 0.2.0 给 WhatsApp Desktop 归档加上 age 加密的 Git 备份和恢复。想把平台数据收回本地的人可以直接拿来用。",
+      "content": [
+        "birdclaw 的动机是他想要一份「真正本地」的推文存储：导入 X 官方存档，备份到 GitHub，自带定时任务，可以每天导入 X 书签——因为书签走 API 拿不全。",
+        "wacrawl 0.2.0 是同一件事的 WhatsApp 版本：新增 WhatsApp Desktop 归档的加密 Git 备份和恢复，backup push 把 age 加密的分片写上 GitHub，backup pull 负责解密、校验和本地恢复。",
+        "两个工具指向同一个方向：把锁在平台里的个人数据搬到本地，用 Git 做版本化、可加密的备份。顺着这个方向想，对在搭个人 agent 的人，这类本地归档可能就是 agent 最方便读取的上下文层——这层用途是编辑引申，他本人没有提。",
+        "同一天他还提到 OpenClaw 的开发一直被 CPU 卡着，把本地测试搬到 Blacksmith 之后，codex 可以直接开出 32 vCPU 的实例跑完整个测试套件。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw 开发者",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete（birdclaw）", "url": "https://x.com/steipete/status/2048626844694421842" },
+        { "label": "原推 @steipete（wacrawl 0.2.0）", "url": "https://x.com/steipete/status/2048660875007914176" },
+        { "label": "原推 @steipete（Blacksmith 测试）", "url": "https://x.com/steipete/status/2048630704972443918" }
+      ],
+      "engagement": "727 likes"
+    },
+    {
+      "slug": "2026-04-27-peter-yang-fitness-mcp",
+      "title": "Peter Yang 给自己的健身 app 写了个 MCP server，用 Claude 和 Codex 读训练数据、改训练安排",
+      "summary": "周末项目级别的动态：他给自用健身 app 加了 MCP server，训练数据的读取和训练安排的更新都不再经过 app 界面。信息量不大，收录是因为它是「个人软件 + MCP 接口」的又一个样本，在维护个人工具的人可以参考这个做法。",
+      "content": [
+        "他这个周末做了两件事：改进自己的移动端健身 app，再给它写一个 MCP server。接上之后，用 Claude、Codex 等任何支持 MCP 的客户端，都能直接拉他的最新训练数据、更新 app 里的训练内容。",
+        "推文本身只是个周末项目，模式值得记一笔：私人 app 加一层 MCP server，等于一次性接入所有支持 MCP 的客户端，数据进出不用再打开 UI。在维护个人工具的人，可以评估一下手里哪几个值得加这层接口。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2048611053333041158" }
+      ],
+      "engagement": "17 likes"
+    }
+  ]
+}

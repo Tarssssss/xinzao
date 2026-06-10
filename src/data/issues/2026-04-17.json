@@ -1,0 +1,161 @@
+{
+  "date": "2026-04-17",
+  "generatedAt": "2026-04-17T07:43:02.878Z",
+  "stories": [
+    {
+      "slug": "2026-04-17-opus-47-launch",
+      "title": "Claude Opus 4.7 全平台上线，Claude Code 新增 /ultrareview 命令，API 加入 xhigh 档和任务预算",
+      "summary": "模型发布之外的配套增量：Claude Code 新增 /ultrareview 跑专门的评审 session，auto mode 扩展到 Max 用户；API 在 high 和 max 之间加 xhigh 档，task budgets（beta）帮模型在长任务里排优先级、控成本。",
+      "content": [
+        "Opus 4.7 当天在 claude.ai、Claude Platform 和主要云平台同步可用。Claude Code 侧的两个更新更值得注意：新命令 /ultrareview 会跑一个专门的评审 session，通读你的改动，标出细心的 reviewer 会抓到的问题；auto mode 扩展到 Max 用户，更长的任务跑起来被打断的次数更少。",
+        "API 侧加了一个介于 high 和 max 之间的 xhigh effort 档，让你在难题上更细地权衡推理深度和延迟；task budgets 进入 beta，按官方说法是帮 Claude 在更长的运行里排任务优先级、管理成本。",
+        "这三条都来自官方发布帐号，功能描述可以直接验证。重度 Claude Code 用户可以先试 /ultrareview，再确认一遍自己的 effort 设置；跑长 agent 任务的可以观察 task budgets 能不能替代手动拆任务来控成本——这部分还在 beta，效果待验证。"
+      ],
+      "creator": "Claude",
+      "role": "Anthropic 官方帐号",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @claudeai（发布）", "url": "https://x.com/claudeai/status/2044785272617939282" },
+        { "label": "原推 @claudeai（Claude Code 更新）", "url": "https://x.com/claudeai/status/2044785266590622185" },
+        { "label": "原推 @claudeai（API 更新）", "url": "https://x.com/claudeai/status/2044785264313221470" }
+      ],
+      "engagement": "3.0K likes"
+    },
+    {
+      "slug": "2026-04-17-codex-computer-use",
+      "title": "Codex 发布一批重大改进，Altman 称 computer use 能并行操作 Mac 全部应用、比他预期的更有用",
+      "summary": "Altman 说这次 computer use 比他自己预期的更有用：能并行使用 Mac 上所有应用，且不干扰你手头的操作。Codex 还加了从经验中学习、主动建议、内置浏览器和一批新插件。Levie 把它解读为知识工作 agent 的又一次跳变。",
+      "content": [
+        "Altman 列的更新清单：computer use、从经验中学习并主动建议它能帮你做的事、内置浏览器、一批新插件。他给 computer use 的评价是对他来说是一次真实的升级，比预期的还要有用，具体能力是并行使用 Mac 上的所有应用，并且不干扰你正在进行的操作。OpenAI 的 Kevin Weil 也补了一句，说新的 computer use 好得惊人。",
+        "Box CEO Aaron Levie 给了一个使用方视角：能写代码、用工具、操作电脑的 agent，可以开始在后台执行各领域的长任务——起草报告、为并购搭 data room、审合同、客户 onboarding、生成营销素材、处理发票。他特别强调跨应用工作是杠杆所在，因为工具之间的连接变容易了。",
+        "三个人都有立场：前两位是 OpenAI 内部，Levie 同时在推 Box 在新 Codex 里的插件。可核验的是行为本身——并行、不抢占当前窗口，装上就能验；Levie 那套「长任务后台化加跨应用」的框架可以单独记下，和他的插件利益分开看。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama（更新清单）", "url": "https://x.com/sama/status/2044858862042591378" },
+        { "label": "原推 @sama（学习与插件）", "url": "https://x.com/sama/status/2044858863246323811" },
+        { "label": "原推 @kevinweil", "url": "https://x.com/kevinweil/status/2045004924682195027" },
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2044855448722100720" }
+      ],
+      "engagement": "7.7K likes"
+    },
+    {
+      "slug": "2026-04-17-notion-harness-rebuilds",
+      "title": "Notion 的 Simon Last 和 Sarah Sachs 复盘 agent 框架五次重写，核心教训是按模型的习惯设计环境",
+      "summary": "两位复盘了 Notion agent 框架大约五次重写的教训：环境要照模型的习惯设计（markdown、SQLite），别迁就自家数据模型；evals 要专门留一层 30% 通过率的难题。MCP 和 CLI 的取舍也给了具体框架。做 agent 产品的人值得完整听。",
+      "content": [
+        "重写史从 2022 年底开始：第一版就是 coding agent，让模型写 JavaScript 调 Notion 的 API，当时的模型写不动；之后在工具调用还不存在的年代自造了 XML 工具调用格式，教训是过度迁就 Notion 自己的数据模型。后来把页面表示换成 markdown、把数据库查询换成 SQLite——模型本来就熟的东西——表现立刻好转。Simon 把这条总结为 give the models what they want：环境围着模型的习惯设计，不把自家系统的复杂度暴露给它。",
+        "另一条主线是从 few-shot 走到工具定义。few-shot 时代全公司只有五六个人有权碰那一份 prompt 字符串；改成目标驱动的工具定义后，每个产品团队自己维护自己的工具和 eval，Sarah 称之为扩张速度上最大的杠杆。即将上线的版本里工具超过 100 个，团队正在给 harness 做 progressive disclosure，因为任何工程师加一个小众工具都可能拖垮整体表现。组织接口也在变：内部有人给 GTM 团队建了 30 多个 custom agent、每天收 70 多条阻塞通知，Simon 的解法是加一层 manager agent 统一调度排错，通知降到 5 条左右。",
+        "MCP 与 CLI 的取舍，两人给的框架是：Simon 看好 CLI，因为 agent 在同一个终端环境里可以自我修复——他转述了当天看到的例子，有人让缺浏览器的 agent 用约 100 行代码自己包了个 Chromium 封装；而 MCP 的 transport 坏掉时 agent 救不了自己。但 MCP 的权限模型天然更严，适合窄而轻、需要严格授权的场景。Sarah 补了成本帐：让语言模型反复通过 MCP 调第三方是重复付 token 费，能写成确定性代码调 CLI 的就一次解决。Notion 自己的 MCP 会继续维护。",
+        "evals 部分有两个一手信息。一是评估分三层：CI 回归、发布前的 report card（关键 user journey 通过 80% 到 90% 才能上线）、以及故意保持 30% 通过率的 headroom evals，内部叫 Notion's last exam——起因是旧评估饱和后，能给 lab 的反馈只剩「没变差」。二是他们观测到，号称同一个模型经一方、Bedrock、Azure 等不同渠道出来质量有差异，lab 也发过不是他们想要的 snapshot。两位都是 Notion 立场，方法论部分（评估分层、按模型习惯设计环境）可以直接对照自己的 harness 验证。"
+      ],
+      "creator": "Latent Space",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Latent Space", "url": "https://www.youtube.com/@LatentSpacePod" }
+      ]
+    },
+    {
+      "slug": "2026-04-17-gpt-rosalind",
+      "title": "OpenAI 发布科研专用前沿模型 GPT-Rosalind，限合格客户受信任访问，Codex 生命科学插件同日全量开放",
+      "summary": "OpenAI 第一个面向科研的前沿模型，覆盖生物、药物发现和转化医学；因生物滥用风险，只向合格客户做受信任访问部署。多数人当天能用上的是同步全量开放的 Codex 生命科学插件，配主线模型也能跑。",
+      "content": [
+        "GPT-Rosalind 的定位是 OpenAI 第一个为科学研究构建的前沿模型，覆盖生物、药物发现和转化医学，训练涵盖化学、蛋白质工程、基因组学，并内置研究者常用数据库和工具的知识。",
+        "访问方式是这次发布里最值得注意的设计：出于对生物滥用的防范，模型只通过受信任访问的部署结构向合格客户开放，需要申请。同日全量上线的是 Codex 的 Life Sciences 插件，对所有人开放，配主线模型也能用。",
+        "对非生科背景的 builder，当天可以动手的是插件，GPT-Rosalind 本体要走申请。这个发布形态本身值得记一下——高风险能力收紧、配套工具放开。这是编辑观察，OpenAI 没有说这会成为之后高危领域发布的惯例。"
+      ],
+      "creator": "Kevin Weil",
+      "role": "OpenAI VP Science",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @kevinweil（发布）", "url": "https://x.com/kevinweil/status/2044862783947448611" },
+        { "label": "原推 @kevinweil（链接与演示）", "url": "https://x.com/kevinweil/status/2044862785201565840" }
+      ],
+      "engagement": "772 likes"
+    },
+    {
+      "slug": "2026-04-17-ryo-lu-model-split",
+      "title": "Ryo Lu 公开自己在 Cursor 里的模型分工：Opus 4.7 做规划，Composer 2 做构建迭代，难 bug 交给 GPT-5.4",
+      "summary": "Opus 4.7 上线当天他就把它放进固定分工：规划给 4.7，构建和迭代用 Composer 2，难修的 bug 给 Codex/GPT-5.4，全部在 Cursor 里跑。他还顺带介绍了给设计师做的原型环境 baby glass。",
+      "content": [
+        "分工本身：规划用 Opus 4.7，构建和迭代用 Cursor 自家的 Composer 2，难修的 bug 交给 Codex/GPT-5.4，全程不离开 Cursor。这条发在 Opus 4.7 上线当天，新模型直接被放进了规划这个位置。",
+        "他同时在做的另一件事是 baby glass，和 @flowstated 一起做的 Cursor 新原型环境：让设计师在代码里快速构想、混搭和测试想法，用的是驱动 Cursor 3 新界面的同一套共享组件——顺带透露了 Cursor 3 有新界面这件事。"
+      ],
+      "creator": "Ryo Lu",
+      "role": "Cursor 设计师",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @ryolu_（模型分工）", "url": "https://x.com/ryolu_/status/2044789186130256062" },
+        { "label": "原推 @ryolu_（baby glass）", "url": "https://x.com/ryolu_/status/2044982132859400342" }
+      ],
+      "engagement": "2.4K likes"
+    },
+    {
+      "slug": "2026-04-17-alex-albert-opus-47",
+      "title": "Alex Albert 列出 Opus 4.7 的实用改进：effort 控 token 更可预测，高分辨率图不再被降采样",
+      "summary": "他挑的四个点都偏工程实用：异步任务和指令遵循更稳，effort 档位控 token 比以前可预测得多（另有新增的 xhigh 档），高分辨率图片不再被降采样，UI 和文档的品味明显变好。内部立场，行为类描述可以自己验证。",
+      "content": [
+        "他列的四点：非常擅长异步工作和遵循指令；effort 档位对 token 用量的控制比以前可预测得多，另有新增的 xhigh 档；高分辨率图片不再被降采样；UI、slides 和文档的品味明显更好。",
+        "这条来自 Anthropic 内部，立场偏自家。其中可核验的是行为描述：图片是否还被降采样、effort 和 token 用量的对应关系，都可以在自己的任务里直接验。品味一条主观成分大，参考权重可以放低。"
+      ],
+      "creator": "Alex Albert",
+      "role": "Anthropic 研究员",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @alexalbert__", "url": "https://x.com/alexalbert__/status/2044788914813292583" }
+      ],
+      "engagement": "857 likes"
+    },
+    {
+      "slug": "2026-04-17-claude-code-xhigh",
+      "title": "Claude Code 把 Opus 4.7 默认 effort 设为 xhigh，Cat Wu 建议把验证流程写进 claude.md",
+      "summary": "Claude Code 已把 Opus 4.7 的默认 effort 调到 xhigh，可用 /effort 改。她的另一条建议是把测试流程写进 claude.md 或做成 /verify-app skill——按她的说法，4.7 更擅长验证自己的工作。重度用户值得检查默认值。",
+      "content": [
+        "Claude Code 已把 Opus 4.7 的默认 effort 设为 xhigh，可以用 /effort 调整。她同一组使用建议里还有一条（素材里只见编号为 3 的这条）：告诉模型怎么验证自己的改动——把测试工作流写进 claude.md，或者加一个 /verify-app skill。按她的说法，Opus 4.7 更擅长验证自己的工作，把那些难以自行发现的本地开发技巧分享给它会有帮助。",
+        "可以做的两件事：确认 xhigh 默认值是否符合自己的延迟和用量偏好；把项目的测试流程显式写进 claude.md 或拆成 skill，让验证这步交给模型自己跑。"
+      ],
+      "creator": "Cat Wu",
+      "role": "Anthropic Claude Code 团队",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @_catwu（默认 xhigh）", "url": "https://x.com/_catwu/status/2044808539663978970" },
+        { "label": "原推 @_catwu（验证建议）", "url": "https://x.com/_catwu/status/2044808538351100377" }
+      ],
+      "engagement": "69 likes"
+    },
+    {
+      "slug": "2026-04-17-workflow-sdk",
+      "title": "Guillermo Rauch 判断 agent 后端最难的是 durability，Workflow SDK 的定位是后端的 Next.js",
+      "summary": "Rauch 的判断：agent 后端最难的是 durability——LLM 会挂、服务会限流、数据库会变慢。Workflow SDK 想对后端做 Next.js 对前端做过的事，第一天就带自托管和多云适配。Vercel 立场，给自家生态站台。",
+      "content": [
+        "Rauch 把 durability 列为 agent 和后端最难的问题，论据是一串必然发生的失败：调用的 LLM 会挂、依赖的服务会限流、数据库会突然变慢、你会被 on-call 叫醒。他说自己找了十年这样的方案——既要 SQS、Kafka、微服务组合那个级别的可靠性，又不想要那套东西本身，因为那类系统出了名地难推理、难本地开发、难测试、难部署。",
+        "Workflow SDK 的定位他直接类比 Next.js：对后端做 Next.js 对前端做过的事。另一个重点是第一天就有自托管和多云的部署能力，通过他们称为 Worlds 的适配器机制落到不同环境。",
+        "他在推文里用「我们」指代项目方，加上 Vercel CEO 的身份，这基本是给自家生态的发布站台，「没有妥协」这类说法要打折听。可核验的是工程主张本身：本地开发、测试和自托管的体验到底如何，装上跑一个长任务就知道。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2044858872842826102" }
+      ],
+      "engagement": "405 likes"
+    },
+    {
+      "slug": "2026-04-17-eval-agent-loop",
+      "title": "Peter Yang 构建 skill 的方法：独立 eval agent 做是/否打分，不全过就让执行 agent 继续改",
+      "summary": "他构建 skill 的固定流程：让 AI 另起一个 eval agent，对第一个 agent 的产出做一组是/否检查，没全过就打回去继续改。正在给 YouTube 缩略图和标题做一个。可以直接搬进自己 skill 工作流的小方法。",
+      "content": [
+        "流程本身很短：构建 skill 时，让 AI 另起一个独立的 eval agent，对第一个 agent 的产出做一组是/否检查；只要有一项不过，就让第一个 agent 继续改，直到全过。他现在正在给 YouTube 缩略图和标题构建这样一个评分器。",
+        "这个模式把验收标准压成了显式的二值判断，循环理论上可以少人值守地跑——这是编辑引申，他原帖只描述了流程。代价是每轮多一次评审调用，在自己的 skill 工作流里试一轮就知道值不值。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2044998456062906422" }
+      ],
+      "engagement": "15 likes"
+    }
+  ]
+}

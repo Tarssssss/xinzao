@@ -1,0 +1,162 @@
+{
+  "date": "2026-04-23",
+  "generatedAt": "2026-04-23T07:48:14.866Z",
+  "stories": [
+    {
+      "slug": "2026-04-23-ai-sandwich",
+      "title": "Cora GM Kieran Klaassen：agent 执行环节已基本可信，人的位置在工作流的开头和结尾",
+      "summary": "核心判断：有好计划时 agent 的执行环节已经可信，把复盘教训沉淀回仓库的 compound 步骤才是最大杠杆；人的位置收缩到前端定义问题、末端凭手感打磨。在想自己该站在 agent 工作流哪个环节的工程师值得听。",
+      "content": [
+        "Every 旗下播客 AI & I 这期请来 compound engineering 的作者、Cora GM Kieran Klaassen。这套方法分四步：计划、执行、review、compound——最后一步把 review 和计划中发现的教训写回仓库，让 agent 下次不再犯同样的错。Kieran 说 compound 是整个插件里目前最有力的部分；配套推文的说法是，它让一个工程师能交付五人团队的量。",
+        "「执行环节基本解决」的依据来自他的观察：给一个好计划，LLM 能照着连续做几小时甚至几天的深度工作，review 和计划环节也在接近这个状态。由此引出三明治结构（Trevin Chow 起的名）：人是两端的面包，AI 是中间的馅。Trevin 在计划之前加了 brainstorm 和 ideate 两步，这一段人要重度参与、用力想；过了这里到执行，人就该放手。Kieran 明确反对全程 human in the loop，他认为关键是分清何时在环内、何时交接，把注意力留给需要使劲想的时刻。",
+        "Dan Shipper 补了一个论点：人擅长换框架——膝盖疼可以吃止痛药，也可以去拉伸髂胫束，或者干脆别再天天在硬地上跑，每一层都是对同一个问题换了框架。他判断 agent 自己做好这件事会非常难，因为这类决策的反馈数据稀少，很难进入模型。他还给了自己的 AGI 标准：当 7×24 不停跑一个 agent 在经济上变得划算才算数；OpenClaw 在往这个方向推，但仍是按 schedule 跑，他认为离这个标准还很远，可能需要模型架构层面的改变。",
+        "这期对谈同时在推广 Every 自家的 compound engineering 插件，对「执行已解决」的判断要按内部人的热情打个折。可核验的是流程设计本身：把 review 里的教训沉淀成仓库内知识这一步不依赖任何特定产品，可以直接搬进自己的 CLAUDE.md 和 skills 工作流验证。"
+      ],
+      "creator": "AI & I by Every",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "AI & I by Every（YouTube）", "url": "https://www.youtube.com/watch?v=G0LTv8hQ5Cs" },
+        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2047027507397005367" }
+      ]
+    },
+    {
+      "slug": "2026-04-23-overcooking",
+      "title": "Ryo Lu 谈 overcooking：没人说不的合理决定不断堆积，AI 让这件事更严重",
+      "summary": "Cursor 设计师定义 overcooking：每个决定单独看都合理，堆在一起焦点全无；AI 把加东西的成本压到近零，让问题更严重。他判断多数「新想法」只是旧概念换皮。正在用 AI 快速堆功能的产品人值得对照自查。",
+      "content": [
+        "他给的场景是一个 dashboard：每个数字配 sparkline，每个操作配确认弹窗，每个空状态配动画插图和 tagline——每个决定在某个人那里都说得通，合在一起就是混乱，没有东西处在焦点上。overcooking 指的是一堆没人说不的合理决定累积出来的结果，单看其中任何一个决定都不算错。",
+        "AI 把它放大的机制：往产品里加东西的成本降到接近零，几分钟能造一个功能甚至一个全新概念，于是人们不停地加。他认为根子在于多数「新想法」并不新，只是把更底层已经存在的东西重新包装，旧概念贴新贴纸；因为有东西变了，感觉像进步，但思考没有变深，只是把自己复制成了混乱。",
+        "他对解法的描述：一个完整的东西有一个核，所有部分围绕它关联、平衡；装多了这种引力会变弱，因为注意力有限，却被迫摊到每个角落。需要的能力是看穿混乱、回到这个东西本来是什么、砍掉一切不服务于它的部分——这件事现在更难了，因为永远还有一个 prompt 就能加上的东西。",
+        "Peter Yang 同一天的帖子是同一个判断的短版：craft 在最后那 10%，要手动把自己的品味加上去，多数人从不做这一步。顺着两人的逻辑，AI 之后做出来本身不再稀缺，质量的分水岭可能移到了愿不愿意收敛和打磨。"
+      ],
+      "creator": "Ryo Lu",
+      "role": "Cursor 设计（前 Notion、Stripe）",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @ryolu_", "url": "https://x.com/ryolu_/status/2046957675079237668" },
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2047124883071816189" }
+      ],
+      "engagement": "1.1K likes"
+    },
+    {
+      "slug": "2026-04-23-vercel-security-update",
+      "title": "Rauch 通报 Vercel 安全调查进展：威胁情报指向窃取 token 的恶意软件，波及面超出 Context.ai 入侵",
+      "summary": "Vercel 拉了近 1 PB 全网日志复盘：攻击者活动超出 Context.ai 事件本身，威胁情报指向恶意软件在受害机器上搜刮 Vercel 等平台密钥；得手后的固定模式是快速调 API、枚举环境变量。管云平台凭证的团队值得读公告。",
+      "content": [
+        "Rauch 给出的进展：团队为找根因和理解攻击者行为做了深度分析，拉取并处理了接近 1 PB 的日志，覆盖整个 Vercel 网络和 API，范围远超最初的 Context.ai 入侵。目前的认识是，这个攻击者的活动不限于那一家创业公司的失陷；威胁情报指向其向个人电脑分发恶意软件，搜寻有价值的 token，包括 Vercel 账号密钥和其他服务商的凭证。",
+        "日志里反复出现的得手后模式：快速、全面的 API 调用，重点放在枚举非敏感环境变量上。Vercel 的应对：加深与 Microsoft、AWS、Wiz 等同业的合作；通知了与本次事件无关的其他疑似受害者，建议轮换凭证；又上线了一批产品加固。细节在安全公告里。",
+        "对读者的直接含义：攻击载体是端上恶意软件偷各家平台的 token，问题不限于 Vercel 一家。照 Rauch 自己的建议，先把暴露面大的平台凭证轮换一遍；顺着日志里的模式，也可以查一查自己账号近期的 API 调用有没有异常枚举。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2047150411170320808" }
+      ],
+      "engagement": "762 likes"
+    },
+    {
+      "slug": "2026-04-23-chatgpt-agents-headless",
+      "title": "Aaron Levie：新 ChatGPT agents 可能是软件 headless 化至今最大的新闻，Sam Altman 认为多数公司都会想用",
+      "summary": "Box CEO 判断新 ChatGPT agents 能接任意工具和数据、自带完整 coding 和 tool use，知识工作 agent 会随之普及；他演示了拿 Box 当知识源的销售助理。Sam Altman 转评称多数公司都会想用。注意 Levie 展示的正是自家集成。",
+      "content": [
+        "Levie 对新 ChatGPT agents 的描述：能接入用户指定的任意工具和数据，agent 自带完整的写代码与工具调用能力。他给的例子是一个定制销售助理 agent，拿 Box 当知识源，安全地访问企业内容、回答问题、即席生成新内容；借助 Box 通过 MCP 和 CLI 暴露的工具，工作流还可以复杂得多。",
+        "他的判断：这正是知识工作 agent 接下来的样子，可以在前台或后台拉起来辅助工作；headless 平台以及企业里构建和设计这类 agent 的 builder，眼下有一个大机会。Sam Altman 对同一条发布的转评只有一句：这些很酷，他认为多数公司都会想用。",
+        "立场校准：Levie 是 Box CEO，例子展示的正是自家集成，这条同时是产品营销；可核验的部分是对 agents 能力的描述。做企业软件的人可以拿他的框架想一遍：自家产品作为 headless 数据源被 agent 调用时，价值留在哪一层。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2047028112626749645" },
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2047017964105597009" }
+      ],
+      "engagement": "987 likes"
+    },
+    {
+      "slug": "2026-04-23-replit-static-analysis",
+      "title": "Amjad Masad：不必干等 Mythos，Replit 白皮书称现役 LLM 配静态分析工具可显著提升表现",
+      "summary": "Replit 发白皮书：现役 LLM 结合静态分析工具能显著提升表现，部分场景数字在 90% 以上（推文未给指标口径）。Amjad 的点是不必干等下一代模型。同日 Replit Agent 接入 Gemini Enterprise。做 coding agent 的人值得翻白皮书。",
+      "content": [
+        "Amjad 的话是：你没有 Mythos 的权限，不代表只能坐等。Replit 发布的白皮书显示，把现役 LLM 与静态分析工具结合，能拿到显著更好的表现，括号里给的数字是部分场景 90% 以上——推文没说明这是提升幅度还是绝对成绩，口径要看白皮书原文。",
+        "对做 coding agent 的团队，这是熟悉方向上多了一个数据点：把类型检查、linter 一类确定性工具接进 agent 循环，补模型的短板。如果白皮书的数字成立，说明在换更强模型之外，工程侧还有不小的空间。",
+        "同日另一条动态：Replit Agent 现在可以从 Gemini Enterprise 里直接调用。"
+      ],
+      "creator": "Amjad Masad",
+      "role": "Replit CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @amasad（白皮书）", "url": "https://x.com/amasad/status/2047156858214035590" },
+        { "label": "原推 @amasad（Gemini Enterprise）", "url": "https://x.com/amasad/status/2047149103294091301" }
+      ],
+      "engagement": "137 likes"
+    },
+    {
+      "slug": "2026-04-23-image-agent-framing",
+      "title": "Swyx 给 GPT-Image-2-Thinking 的定位：带搜索和修图工具、会复查自己产出的图像 agent",
+      "summary": "Swyx 的框架：Image-2 是新图像模型，Image-2-Thinking 是图像 agent——agent 循环里带搜索和类 Photoshop 工具，能检索、合成、复查自己的输出，所以生成要几十分钟、却能一次出对二维码和图表。判断文生图产品形态的人可借用这个框架。",
+      "content": [
+        "他要解释的现象：GPT-Image-2-Thinking 生成一次要几十分钟，但能一次出对二维码、示意图、logo、食物和人脸。他在和朋友讨论时觉得最好的说法是：Image-2 是一个新的图像模型，Image-2-Thinking 则是一个新的图像 agent——agent 循环里带着搜索和类 Photoshop 的工具，能检索、合成、并复查自己的产出。",
+        "他的类比：当年 Gemini Flash Vision 靠给 image-to-text 引入 agentic loop 把 benchmark 刷穿，现在 Image-2-Thinking 在 text-to-image 上做同一件事。",
+        "顺着这个框架看，几十分钟的时长对应的比较对象更像一段人工检索加修图的流程，单次出图模型的速度标准放在它身上可能不合适——这一步是编辑顺着他的定位往下推的，原推只给到 agent 定位本身。"
+      ],
+      "creator": "Swyx",
+      "role": "Cognition / Latent Space",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2047140362771132544" }
+      ],
+      "engagement": "56 likes"
+    },
+    {
+      "slug": "2026-04-23-fewer-fatter-skills",
+      "title": "Garry Tan 分享 skills 组织经验：相邻 skill 合并成带分支参数的大 skill，resolver 更短更省 context",
+      "summary": "YC CEO 的 skills 组织经验：遇到相邻 skill 就让模型自己做 DRY，合成一个带分支参数的大 skill；skill 更少更肥，resolver 就更短，context 占用更小。他强调这只是目前为止的经验，并在征集同行实验。维护成堆 skills 的人可对照。",
+      "content": [
+        "他的做法：一旦发现手头有几个相邻的 skill，就让模型自己做 DRY，把它们合并成一个带分支参数的更大 skill。到目前为止，他的经验是「更少、更肥、带分支参数」的组合方式更好用。",
+        "他给的机制：skill 更少更肥，resolver 就更短，resolver 短本身就意味着更少的 context 膨胀；短 resolver 好于长 resolver。",
+        "他在推文里主动征集还有谁在做类似实验，两条都带着「目前为止」的措辞，当成一份可试的一手经验，谈不上定论。skills 已经多到开始挤 context 的 agent 用户，可以挑几个相邻 skill 试一轮合并，对比 resolver 长度的变化。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator 总裁兼 CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan（合并经验）", "url": "https://x.com/garrytan/status/2047183884266402275" },
+        { "label": "原推 @garrytan（resolver 与 context）", "url": "https://x.com/garrytan/status/2047184243164651648" }
+      ],
+      "engagement": "158 likes"
+    },
+    {
+      "slug": "2026-04-23-cowork-charts",
+      "title": "Claude Cowork 上线交互式图表和示意图，beta 对所有付费计划开放",
+      "summary": "官方账号宣布 Cowork 新能力：产出可交互的图表和示意图，beta 状态对所有付费计划开放。信息就这一条，但对把 Cowork 当日常工作台的用户是直接可用的功能更新，值得开个会话试一下能力边界。",
+      "content": [
+        "官方公告就两句：交互式图表和示意图（interactive charts and diagrams）进入 Claude Cowork，beta 状态，所有付费计划可用。",
+        "公告没给能力边界和实现细节。把 Cowork 当日常分析、汇报工作台的用户可以直接开个会话试：拿一份数据让它出可交互的图，看能做到什么程度。"
+      ],
+      "creator": "Claude",
+      "role": "Anthropic 官方账号",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @claudeai", "url": "https://x.com/claudeai/status/2047047633416397076" }
+      ],
+      "engagement": "5.7K likes"
+    },
+    {
+      "slug": "2026-04-23-conversation-branching",
+      "title": "Josh Woodward：对话分支功能开始灰度，当前 20% 并在扩大",
+      "summary": "Google Labs 与 Gemini App 负责人的产品更新：对话分支（conversation branching）已开始灰度，当前 20% 并在扩大。推文没点名产品，按他的职责大概率是 Gemini App。在等这个功能的重度对话用户可以留意自己的账号。",
+      "content": [
+        "原推格式是「✅ Papercut fixed」加功能名：对话分支（conversation branching）已开始灰度，当前 20%，还在扩大。他没有点名是哪个产品。",
+        "按他分管 Google Labs、Gemini App 和 AI Studio 的职责推断，大概率是 Gemini App，确认要等全量或官方说明。在等对话分支的用户可以看看自己的账号有没有进这批灰度。"
+      ],
+      "creator": "Josh Woodward",
+      "role": "Google VP（Google Labs / Gemini App / AI Studio）",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2047147030351642914" }
+      ],
+      "engagement": "463 likes"
+    }
+  ]
+}

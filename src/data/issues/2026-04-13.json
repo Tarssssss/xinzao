@@ -1,0 +1,155 @@
+{
+  "date": "2026-04-13",
+  "generatedAt": "2026-04-13T07:59:47.375Z",
+  "stories": [
+    {
+      "slug": "2026-04-13-andreessen-agent-unix",
+      "title": "Marc Andreessen：agent 等于 LLM 加 shell 加文件系统加 cron，本体只是一堆文件，与模型解耦",
+      "summary": "最大增量是他对 Pi 和 OpenClaw 的架构拆解：agent 等于模型加 bash 加文件系统加 cron 循环，状态全存在文件里，因此可以换模型、可以自我改写和扩展。他并判断 LLM、推理、agent、自我改进四个突破已全部成立。做 agent 工具的人值得听全篇。",
+      "content": [
+        "他给「这次不一样」下了明确结论：LLM、推理（o1 和 R1）、agent（OpenClaw）、自我改进四个层面的突破已经全部在真实运转。在他的叙述里，推理突破回答了「这只是模式补全」的质疑；coding 是最难的场景，既然模型会横扫 coding，其他领域都会是它的衍生品。他把当下称作「八十年的一夜成名」：神经网络从 1943 年的论文起争议了六七十年，现在被证明是正确架构，这一波是几十年研究积压的集中兑现。",
+        "对 builder 最有用的是他对 Pi 和 OpenClaw 的架构解读：把语言模型心智和 Unix shell 心智结合，agent 就是模型加 bash shell 加文件系统加 markdown 状态加一个 cron 式循环，除模型外每个组件都是业界完全理解的东西。两个推论：一，agent 与模型解耦，换掉底层 LLM 后性格会变，但记忆和能力都留在文件里；二，agent 对自己的文件有完整的自省和改写权，可以按一句指令给自己加新能力。他还顺带否定了 MCP 这类协议的必要性，认为命令行接口就够用——这是他的个人判断。原话：「如果我现在 18 岁，这就是我会投入全部时间的东西。」",
+        "算力部分他正面回应了 2000 年重演的担忧：当年电信崩盘是债务杠杆加上对「流量每季度翻倍」的错误外推，这次出钱的是现金充裕的大公司，且每一块钱 GPU 投入当下就变成收入。供给短缺的另一面是我们在用「被压了规格的版本」——如果算力便宜十倍，实验室会训出更好的模型。一手数据点：他身边的重度用户每天花 1,000 美元买 token 跑 OpenClaw，他粗略估完整部署的个人 agent 潜在需求可到每天 5,000 到 10,000 美元，因此他认为推理成本的下降可能因供给约束阶段性放缓。他还引了一个反共识分析：三年前的 NVIDIA 推理芯片今天比当年更赚钱，因为软件进步快于芯片折旧，在他看来 Michael Burry 的做空论点完全反了。",
+        "最值得保留的对冲来自他自己：AI 乌托邦派和末日派都高估了社会的变化速度，职业牌照、码头工会、联邦机构、K-12 公立教育这些结构不会因为技术可行就改变，「AI 采用得快是社会走运，不快就是停滞」。立场上，a16z 投了 OpenAI、World 等他在节目里点名的项目，他全程站在多头位置发言；其中可核验的是 agent 架构那段描述，可以对照 OpenClaw 的实际实现去验证。"
+      ],
+      "creator": "Marc Andreessen",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Latent Space", "url": "https://www.youtube.com/@LatentSpacePod" }
+      ]
+    },
+    {
+      "slug": "2026-04-13-levie-enterprise-agents",
+      "title": "Aaron Levie 见完二十多位大企业 IT 负责人：agent 用例集中在以前做不了的事，不能被 agent 调用的软件会被踢掉",
+      "summary": "他一周见了银行、医疗、零售等行业二十多位 IT 和 AI 负责人。关键观察：token 怎么入 OpEx 预算已是真实博弈；没人谈用 agent 裁员，用例偏新增收入；不能被 agent 调用的软件会被踢掉。做企业产品和销售的人值得逐条核对。",
+      "content": [
+        "方向上，他看到企业从 chat 时代走向 agent 用工具、处理数据、执行真实工作的阶段，采纳方式也从「百花齐放」转向对准具体工作流的定向自动化。变更管理仍是最大的议题之一：多数工作流没法直接把 agent 放进去，有一家公司在每个业务单元都设了 AI 负责人，统一向中央团队汇报，只为协调各职能。",
+        "预算和基础设施是两个被反复提到的现实约束。OpEx 按年锁死，token 怎么入预算成了真实的取舍，有公司想用「shark tank」式的内部路演分配算力额度；同时几十年攒下的本地系统和只上了云、没有现代化的系统，让 agent 无法统一接入数据，修这些被排上了高优先级。",
+        "用例和供应商关系是信息量最大的两条。几乎没有公司在谈用 agent 替换岗位，主要用例是以前做不了或排不上优先级的事：软件升级、后台流程自动化、批量处理文档获取商机，整体上重点偏增加收入，省成本排在其次。headless 软件主导了他的对话：企业要求所有软件能被任意一组 agent 调用，技术或商业上做不到的供应商会被踢掉；多 agent 并存让互操作性成了头等要求，而且因为变化太快，没人敢把架构锁死在某个范式上。另外所有人都说团队比以往任何时候都忙，AI 没有让任何人少干活。",
+        "他收尾的 meta 观察值得单独记：硅谷觉得 AI 把难事变简单了，但 agent 的强用法——skills、MCP、CLI——对真实世界的企业反而比上一代软件更「技术」，扩散需要技术人力和时间。据此他认为外界对工程岗位的估计完全错了：工程师可能不再「写」软件，但会是搭建和运营这些自动化系统的人。对做企业产品的人，可操作的一条是把「能否被 agent 调用」当作即将到来的采购硬条件来准备。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2043426157367095397" }
+      ],
+      "engagement": "2,981 likes"
+    },
+    {
+      "slug": "2026-04-13-garrytan-fat-skills",
+      "title": "Garry Tan 总结今年的 agentic engineering：模糊操作进 markdown skill，确定性操作进代码，harness 保持薄",
+      "summary": "两条推合成一套分层法：人类聪明而模糊的判断写成胖 skill，必须每次都对的逻辑写成胖代码，harness 保持薄；配套原则是「在正确的层做正确的工作」。正在搭 agent 工作流的人可以对照检查自己把逻辑放在了哪一层。",
+      "content": [
+        "规则本身只有三句：把人类在做的聪明、模糊的操作推进 markdown skill，做厚（fat skills）；把必须每次都正确的确定性操作推进代码，做厚（fat code）；harness 本身保持薄。他说这是他今年在 agentic engineering 上学到的东西的最简提炼。",
+        "一分钟后他补了一条更一般的原则：「在正确的层做正确的工作」，其余都是 architecture astronomy——只在架构层面打转的空谈。顺着这个分工去检查现有系统，可操作的含义是：挤在 harness 里的模糊判断应该下放成 skill，混在 prompt 里的必须精确的流程应该固化成代码。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator 总裁兼 CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2043566215927328955" },
+        { "label": "原推 @garrytan（right layer）", "url": "https://x.com/garrytan/status/2043566405862236254" }
+      ],
+      "engagement": "450 likes"
+    },
+    {
+      "slug": "2026-04-13-anthropic-security-guide",
+      "title": "Anthropic 安全团队：两年内大量沉睡漏洞会被 AI 找出并串成 exploit，防御清单按哪些控制还守得住排序",
+      "summary": "核心判断：把补丁逆向成 exploit 正是模型擅长的机械分析，修补窗口在收缩，漏洞报告量要按一个数量级的增长来规划。最实操的一条是用攻击者同款模型先扫自己的代码。出自 Anthropic 自家安全团队，安全负责人值得整篇过一遍。",
+      "content": [
+        "判断部分：公开可用、能力低于 Mythos 的模型已经能找到传统评审长期漏掉的严重漏洞；他们预计未来 24 个月内，大量在代码里沉睡多年的 bug 会被模型批量找出并串成可用的 exploit；同样的能力对防御方一样成立。这份清单大多是已有的安全共识，新东西在排序：按他们在真实代码库上观察到的「哪些控制还守得住、哪些在失效」排优先级，并可直接映射到 SOC 2 和 ISO 27001 的控制项。",
+        "七个方向里几条值得划线的：CISA KEV 清单上的漏洞立即修，internet-facing 系统在 exploit 出现后 24 小时内打补丁，手工审批带来的延迟本身已是主要风险；接收和 triage 流程要按漏洞报告量一个数量级的增长来改造；靠制造麻烦的防御（多跳、限速、非标端口、短信 MFA）对一个有无限耐心的对手会失效，要换成硬件绑定凭证、短时 token 和根本不存在的网络路径。他们自己标注的「这节只做一件事」是：用攻击者会用的同款模型扫自己的代码，配隔离运行和验证步骤，再接进现有 triage 流程。",
+        "两个容易被略过的部分：一是给上游提交漏洞报告的规范——人工验证过、愿意署名才发，模型参与要在报告第一行披露，因为开源维护者已经开始无视看起来像 AI 生成的报告；二是给没有安全团队的小团队的简化清单：开自动更新、用托管服务、全面换 passkey、打开 Dependabot 和 CodeQL 这类免费工具。",
+        "立场校准：作者是 Anthropic 的安全工程和研究团队，文章绑着自家 Project Glasswing 的叙事，对攻击能力时间表的估计带厂商立场。但清单主体是对既有共识的重新排序，每条都能独立核验，当自查表用并不依赖对 24 个月时间表的判断。"
+      ],
+      "creator": "Claude Blog",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Claude Blog", "url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense" }
+      ]
+    },
+    {
+      "slug": "2026-04-13-levie-security-jevons",
+      "title": "Aaron Levie：AI 安全工具会推高对安全人才的需求，安全行业临近自己的 Jevons 悖论时刻",
+      "summary": "他认同一个反直觉判断：自动化漏洞验证只解决「证明」这一步，更多真实发现意味着更多 triage、修复和架构决策需要人。他的延伸：AI 会让代码量大增、安全发现暴增，筛选靠 AI、决策靠专家。安全从业者可作职业判断的参考。",
+      "content": [
+        "他转发的判断原文是：「反直觉的是，我认为更好的 AI 安全工具会增加而非减少对安全人才的需求。自动化可利用性验证自动化的是证明这一步，而不是响应。更多真实发现被更快地翻出来，意味着更多 triage、更多修复、更多需要人类判断的架构决策。」",
+        "Levie 的延伸把机制再往前推一步：AI 会让代码量大增（他给的量级是 100 倍），安全发现随之暴增；筛掉噪音只能靠 AI，但流程另一端仍需要专家做判断和收尾。他称之为安全这个工种的 Jevons 悖论时刻，并判断这会是一个巨大的人才机会品类。",
+        "把这条和本期收录的 Anthropic 防御指南放在一起看，两边给出了同方向的预期——后者明确建议按漏洞报告量一个数量级的增长做规划。对安全从业者，含义是瓶颈正在从「找到漏洞」移向「消化漏洞」，排人手和工具时可以照这个方向调。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2043318118169354302" }
+      ],
+      "engagement": "307 likes"
+    },
+    {
+      "slug": "2026-04-13-rauch-customer-groupchat",
+      "title": "Guillermo Rauch 的反馈方法：把最挑剔的客户和工程负责人拉进同一个 X 群聊，快速回应快速发布",
+      "summary": "方法只有三步：把最好且要求最高的客户拉进一个 X 群聊，把工程负责人也放进去，快速回应、快速发布。Vercel 已经为 v0 运营这样一个群，公开招募愿意持续给高质量反馈的用户。做产品的人可以直接照抄这个做法。",
+      "content": [
+        "做法本身：挑「最好且要求最高的」客户拉一个 X 群聊，把工程负责人本人放进去，快速回应、快速发布，用他的话说是 face the music——直接听最难听的反馈。",
+        "这不是设想，Vercel 已经为 v0 运营了一个这样的群，愿意持续提供高质量反馈的用户可以私信他加入。这等于把重度用户和工程负责人直连，省掉客服与工单的中转层；成本几乎为零，代价是工程负责人要直面投诉，适合迭代快、敢公开吃反馈的团队。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2043381737754120592" }
+      ],
+      "engagement": "540 likes"
+    },
+    {
+      "slug": "2026-04-13-zara-newtab-vibecode",
+      "title": "Zara Zhang 用 vibe coding 把 Chrome 新标签页改成 tab 管理器，代码已开源",
+      "summary": "她把新标签页改成 tab 管理器：所有 tab 按域名分组列出、检测重复、一键批量关掉首页和 localhost 这类「易赢」标签、没处理完的存进稍后清单。代码已开源。被几十个 tab 困住的人可以直接拿去用。",
+      "content": [
+        "功能上它是个 tab 管理器：所有打开的 tab 带清晰标题、按域名分组；首页、localhost 这类「易赢」标签聚成一组，一键批量关闭；重复 tab 自动检测、一键去重；没处理完的存进稍后清单；关掉任何 tab 会有音效和彩带。她管这套叫浏览器标签的 Marie Kondo 法，代码已开源。",
+        "这条的可复制之处在她的 PSA 本身：Chrome 的新标签页可以自己 vibe code。顺着这个思路，浏览器自带的高频小界面都成了可以按自己需求重写的对象，想找练手项目的人可以从这类天天打开的页面入手。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2043415572688629937" },
+        { "label": "原推 @zarazhangrui（代码）", "url": "https://x.com/zarazhangrui/status/2043415661528129873" }
+      ],
+      "engagement": "948 likes"
+    },
+    {
+      "slug": "2026-04-13-aditya-anthropic-culture",
+      "title": "Aditya Agarwal：Anthropic 的文化更像早期 Facebook，尽管前 Facebook 人更多在 OpenAI",
+      "summary": "Facebook 早期工程师、前 Dropbox CTO 的印象式观察：Anthropic 像早期 FB 的地方有玩得开心、对世界天真、自下而上的 hacker 文化、极强的使命对齐，外加一条保留——可能有点把自己太当回事。评估两家 lab 文化的人可作参考。",
+      "content": [
+        "他列的相似点：公司里的人玩得很开心；对世界有不少天真；自下而上的 hacker 文化；极强的使命对齐；可能有点把自己太当回事；以及「赢能解决很多问题」。他觉得有意思的地方在于，论前 Facebook 员工的数量，OpenAI 其实多得多，但文化上更像早期 Facebook 的是 Anthropic。",
+        "立场提示：他的参照系是一手的——Facebook 早期工程师、后来的 Dropbox CTO，现在在 South Park Commons 做投资；但这条是印象式判断，推文没有给出具体事例，适合当作一个内行视角的数据点，不必当结论。"
+      ],
+      "creator": "Aditya Agarwal",
+      "role": "South Park Commons 普通合伙人，前 Facebook 早期工程师、Dropbox CTO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @adityaag", "url": "https://x.com/adityaag/status/2043501400626491758" }
+      ],
+      "engagement": "265 likes"
+    },
+    {
+      "slug": "2026-04-13-nikunj-doordash-strategy",
+      "title": "Nikunj Kothari：更多公司会用 DoorDash 策略选址，从大城市旁的郊区起步",
+      "summary": "类比是 DoorDash 当年从核心城市外的郊区起步，最后反吃 Uber Eats 的主市场。他判断更多有野心但不想通勤的资深创业者会在 Palo Alto 这类地方建公司，依据包括他在 Meter 见过的郊区 coworking 需求。在选公司落点的创始人可参考。",
+      "content": [
+        "论点：更多公司会复制 DoorDash 的打法——当年外卖大战里，DoorDash 避开 Uber Eats 主攻的核心城市，从紧邻城市的郊区市场起步，再反吃主市场。映射到建公司上，他判断会有一批野心很大、但不想每天通勤二三十分钟的人在 Palo Alto 这类大城市旁的地方创业；对「Waymo 让通勤不再是问题」的反驳是，人们终究不想坐在车里。",
+        "依据和限定他都给了：在 Meter 时他见过很多准备开在郊区的 coworking 空间的计划，认为这类供给会继续出现；这个趋势会偏向更资深的创业者，19 岁想住进 SF、NY 的年轻人仍会去大城市，两种市场都会存在。他自称「SF-pilled」，这条算是对 SF 中心论的局部修正，推文末尾还在征集已经这样做的人的实际经验。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2043374140443553885" }
+      ],
+      "engagement": "170 likes"
+    }
+  ]
+}

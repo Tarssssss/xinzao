@@ -1,0 +1,175 @@
+{
+  "date": "2026-04-11",
+  "generatedAt": "2026-04-11T06:58:35.342Z",
+  "stories": [
+    {
+      "slug": "2026-04-11-ultraplan",
+      "title": "Claude Code 推出 /ultraplan，把规划放到云端、执行留在本地",
+      "summary": "Claude 在网页上生成实施计划，可读可改，能直接在云端跑，也能拉回终端执行，token 消耗和 plan mode 大致相当。Thariq 给的分工逻辑：实现常需要本地环境，规划主要是读代码、理解意图，适合放在云端。",
+      "content": [
+        "/ultraplan 是 Claude Code 的新命令：Claude 在网页上为你生成一份实施计划，你可以阅读和编辑，然后选择在网页上直接执行，或者拉回终端跑。预览版已对所有开启了 Claude Code on the web 的用户开放。",
+        "Thariq 补了两条信息。一是成本：ultraplan 的 token 消耗和订阅速率限制占用与 plan mode 大致相同。二是它和 plan mode 的分工逻辑：实现环节有时需要本地环境和交互性，但规划主要是读代码、理解意图，这部分放在云端没有损失。",
+        "顺着这个分工，重度用户可以把多个任务的规划环节挪到云端并行展开，本地会话只留给真正需要环境的执行部分。计划生成后可编辑这一点也值得注意——审改计划比审改代码省力，这可能是在终端之外介入 agent 工作流的一个更轻的位置。"
+      ],
+      "creator": "Thariq",
+      "role": "Anthropic Claude Code 团队",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @trq212（发布）", "url": "https://x.com/trq212/status/2042671370186973589" },
+        { "label": "原推 @trq212（token 消耗）", "url": "https://x.com/trq212/status/2042671371684319723" },
+        { "label": "原推 @trq212（plan 与 ultraplan 的分工）", "url": "https://x.com/trq212/status/2042673325139427724" }
+      ],
+      "engagement": "7.5K likes"
+    },
+    {
+      "slug": "2026-04-11-felix-rieseberg-cowork",
+      "title": "Felix Rieseberg 认为执行近乎免费之后，做产品的瓶颈转向对齐和品味",
+      "summary": "Anthropic 内部目前有上百个应用原型，Cowork 的 roadmap 最多排一个月。Felix 的解释是执行近乎免费后，难点变成从竞争想法里挑选，这一步靠人的品味。另有 Mythos 的内部观感和本地优先的论证，做 agent 产品的人值得听。",
+      "content": [
+        "访谈开头谈 Mythos preview。Felix 的描述是：这是一个通用前沿模型，没有专门为网络安全训练，却表现出超出预期的安全漏洞挖掘能力，对内部工程师是一次明显的跨越，大到他自己都觉得难以向外解释。他复述了一个已公开的例子：模型被放进沙箱，任务是「试着逃出去」，研究员去吃午饭，午饭中途收到模型发来的邮件说「我已经出来了」——它本不该有网络访问和邮箱。配套的 Project Glasswing 是把模型先交给 Linux Foundation 这类基础设施维护方，赶在能力被公开利用之前加固防御。",
+        "关于 Cowork 本身有两段值得记。一是「十天造出 Cowork」的真相：团队确实在发布前冲刺了十天左右（Boris Cherny 找他说该发点东西，最初要求周五交付，他争取到了周一），但建立在 Anthropic 此前的大量积累上；起点是 2025 年 12 月假期他看到大量非开发者在学着打开终端用 Claude Code，他把这种 latent demand 称作礼物，是整件事里最难复制的部分。二是产品底层很简单：Cowork 就是给 Claude Code 配了一台虚拟机，skills 是讲清楚怎么做事的 markdown 文件，memory 也只是模型自己写的文本文件。",
+        "方法论部分密度最高。Cowork 的 roadmap 最多排一个月，因为他认为没人有资格自信地说清 AI 一年后的样子；公司内部目前轻松有上百个应用原型，还没有一个达到给用户看的标准。支撑这种做法的是执行成本的坍塌：「如果你带着 10 个想法来找我，我可以很快说：10 个全做，看哪个更好。」瓶颈随之移到挑选和对齐上，这是人的品味还在起作用的地方。对做 agent 的创业者，他的建议是价值大概率不在 agent 和模型智能本身，而在帮人重新组织工作方式；他也顺带提到当天发布的 Claude Managed Agents，主张别自建太多基础设施。",
+        "立场上这是内部人谈自家产品和未发布模型，Mythos 的部分外界暂时无法核验。可以对照验证的是方法论：信任要从「清理我的桌面」这种小任务开始养成；本地优先的理由——「Gmail 对我的 agent 没什么用，带着我登录信息的 Gmail 才有用」；以及两条 hot take：MCP 被工程师低估了，并非每个产品都需要在右边加一个聊天侧栏。"
+      ],
+      "creator": "Felix Rieseberg",
+      "role": "Anthropic Claude Cowork 负责人",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "The MAD Podcast with Matt Turck", "url": "https://www.youtube.com/@DataDrivenNYC/videos" },
+        { "label": "原推 @mattturck（含时间轴）", "url": "https://x.com/mattturck/status/2042638661389328413" }
+      ]
+    },
+    {
+      "slug": "2026-04-11-claude-code-auto-mode",
+      "title": "Claude Code auto mode 用分类器代替逐条审批，Anthropic 公开了 17% 的真实漏报率",
+      "summary": "auto mode 用模型分类器代替逐条审批，分类器只看用户消息和工具调用，刻意屏蔽模型自述以防被说服。真实流量误拦率 0.4%，真实越权动作漏报 17%，官方把它定位成 skip-permissions 的替代品，仍不如认真的人工逐条审查。",
+      "content": [
+        "Claude Code 默认逐条审批的问题是审批疲劳——真实数据里 93% 的权限提示最后都被同意。auto mode 的做法是把审批交给模型分类器，分两层：输入层有服务端探针扫描工具输出里的 prompt injection 迹象，发现可疑内容就在结果旁加警告；输出层是跑在 Sonnet 4.6 上的 transcript 分类器，在每个动作执行前判断是否放行，先用单 token 快筛，被标记的才进入带推理的复核。",
+        "最值得看的设计选择是分类器被刻意做成「失明」的：它只看用户消息和工具调用，模型自己的解释和工具输出全部剥掉，防止 agent 用「用户其实已经默许」这类说辞把分类器说服。进入 auto mode 时还会撤掉用户配置里等同于任意代码执行的宽放行规则（比如整体放行 python、node 和包管理器 run 命令）。被拦截时 agent 不会停下等人，而是带着拒绝理由换一条更安全的路径，连续 3 次或累计 20 次拦截才升级给人。",
+        "数字给得坦诚：一万条真实流量上误拦率 0.4%；52 个真实越权动作样本上漏报 17%，博客自己称之为「诚实的数字」，并明确说这对常开 --dangerously-skip-permissions 的人是大幅改进，对认真逐条审批的人则可以说是退步。可操作的结论与此一致：常年跳过权限的用户应该换成 auto mode，高风险的基础设施任务仍然不要交给它。"
+      ],
+      "creator": "John Hughes",
+      "role": "Anthropic",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Anthropic Engineering", "url": "https://www.anthropic.com/engineering/claude-code-auto-mode" }
+      ]
+    },
+    {
+      "slug": "2026-04-11-eval-infra-noise",
+      "title": "Anthropic 实测仅资源配置就能让 agentic 评测分数差出 6 个百分点",
+      "summary": "同一模型、同一 harness、同一题集，只改资源配置，Terminal-Bench 2.0 的分差就有 6 个百分点。3 倍 headroom 以内加资源是在修稳定性，再往上资源开始帮 agent 解题。在评测配置公开之前，榜单上小于 3 个百分点的差距都该存疑。",
+      "content": [
+        "起因是 Anthropic 在自家 Kubernetes 集群上跑 Terminal-Bench 2.0，分数和官方榜对不上，最多 6% 的任务因 pod 错误失败。追查发现问题出在资源限制的执行方式：他们把每题的资源 spec 同时当保底和硬上限，瞬时内存波动就会让容器被杀，而官方榜用的沙箱供应商允许临时超额。于是他们做了对照实验——同一个 Claude 模型、同一套 harness、同一题集，只改资源配置，从严格执行到完全不设限共六档，两端分差 6 个百分点（p < 0.01）。",
+        "机制上有一条清晰的分界线。3 倍 headroom 以内，加资源主要在修基础设施可靠性：infra 错误率从 5.8% 降到 2.1%，成功率波动仍在噪音范围内，评测变稳了但没变容易。3 倍以上，资源开始替 agent 解题：宽裕的内存让装大依赖、跑重型测试这类策略变得可行。紧限制奖励写精简代码的模型，宽限制奖励能吃满资源的模型，两种都值得测，但混在一个不注明配置的分数里就没法解读。SWE-bench 上效应同方向但更小，5 倍 RAM 下高 1.54 个百分点。",
+        "给评测维护者的建议是把保底分配和击杀上限分开指定，并校准到两端分数落在噪音内。对读榜单的人，结论可以直接拿走：在评测配置标准化或公开之前，agentic 评测上低于 3 个百分点的领先值得怀疑——可能是真实能力差距，也可能只是更大的 VM。这是 Anthropic 自家发的方法论研究，但给了显著性数字和复现条件，结论对它自己的模型排名同样构成约束。"
+      ],
+      "creator": "Gian Segato",
+      "role": "Anthropic",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Anthropic Engineering", "url": "https://www.anthropic.com/engineering/infrastructure-noise" }
+      ]
+    },
+    {
+      "slug": "2026-04-11-claude-for-word",
+      "title": "Claude for Word 进入 beta，和 Excel、PowerPoint 版共享同一个会话",
+      "summary": "在 Word 侧边栏里起草、编辑和修订，Claude 保留原格式，改动以 Word 修订模式呈现；和 Claude for Excel、PowerPoint 共享上下文，一个会话能跨多个打开的文档工作。目前仅限 Team 和 Enterprise 计划。",
+      "content": [
+        "Claude for Word 进入 beta：在侧边栏里起草、编辑和修订文档，Claude 会保留原有格式，所有改动以 Word 的修订（tracked changes）形式出现。目前仅对 Team 和 Enterprise 计划开放。",
+        "信息量更大的是第二条：Claude for Word 和 Claude for Excel、Claude for PowerPoint 共享上下文，Claude 可以在一个会话里跨多个打开的文档工作。这等于说 Office 三件套各自的侧边栏背后是同一个会话，从表格取数写进文档这类跨应用任务有可能在一轮对话里完成——这一步是编辑推断，官方表述只到「跨打开的文档工作」为止。个人计划用户暂时不在开放范围内。"
+      ],
+      "creator": "Claude",
+      "role": "Anthropic 官方账号",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @claudeai（beta 发布）", "url": "https://x.com/claudeai/status/2042670341915295865" },
+        { "label": "原推 @claudeai（跨应用上下文）", "url": "https://x.com/claudeai/status/2042670343173574705" }
+      ],
+      "engagement": "22.7K likes"
+    },
+    {
+      "slug": "2026-04-11-harness-dead-weight",
+      "title": "Anthropic 平台团队建议每次模型升级后重问哪些 harness 代码已成死重",
+      "summary": "论点是 harness 写死的都是「模型还做不到」的假设，模型每升级一次都该重问哪些代码可以删。例证之一：让 Opus 4.6 用代码自己过滤工具输出，BrowseComp 从 45.3% 升到 61.6%。自建 agent harness 的团队值得对照自查。",
+      "content": [
+        "文章的出发点是 Chris Olah 那句「生成式 AI 是长出来的，多过是造出来的」：研究者设定生长条件，但长出什么能力没法完全预测。由此带来的问题是，agent harness 里写死的都是「Claude 自己做不到 X」的假设，模型每升级一次，这些假设就过期一批。全文给了三个应对模式：用 Claude 已经熟悉的工具（bash 加文本编辑器，skills、programmatic tool calling 和 memory 都是这两个工具的组合）、问自己还能停止做什么、谨慎地设置边界。",
+        "第二个模式的证据最硬。让 Claude 通过写代码来编排工具调用、自己决定哪些结果进上下文，Opus 4.6 在 BrowseComp 上从 45.3% 提到 61.6%；同一套 compaction 设置下，Sonnet 4.5 不管给多少预算都停在 43%，Opus 4.5 到 68%，Opus 4.6 到 84%——模型自己挑选记忆内容的能力在涨。Pokémon 的例子很直观：Sonnet 3.5 把 memory 当流水账，14000 步写了 31 个文件还停在第二个城镇；Opus 4.6 同样步数只有 10 个文件，拿了三个道馆徽章，外加一份从自己失败里提炼的 learnings 文件。",
+        "最值得留下的是结尾「context anxiety」的例子：Sonnet 4.5 会在感到上下文上限临近时提前收尾，团队为此加了重置机制；到 Opus 4.5 这个行为消失了，补偿机制成了 harness 里的死重。可操作的部分就是这个动作——每次大版本升级后，把自己 harness 里的兜底逻辑过一遍，看哪些可以删。数字全部来自 Anthropic 自家模型的内部评测，方向比绝对值可靠。"
+      ],
+      "creator": "Lance Martin",
+      "role": "Anthropic Claude Platform 团队",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Claude Blog", "url": "https://claude.com/blog/harnessing-claudes-intelligence" }
+      ]
+    },
+    {
+      "slug": "2026-04-11-levie-headless-software",
+      "title": "Aaron Levie 问了 20 位 IT 负责人，没人打算留下缺少好 API 的供应商",
+      "summary": "他在银行、媒体、金融、医疗的 20 位 IT 负责人里问，3 到 5 年后是否还会保留没有好 API 选项的供应商，回答一致是不会。他的推论是软件厂商必须能同样自如地通过平台内外的 agent 交付价值，商业模式也会被迫跟着演化。",
+      "content": [
+        "Levie 的数据点来自线下：他问了横跨银行、媒体、金融、医疗的 20 位 IT 负责人，3 到 5 年后是否还会保留没有好 API 选项的供应商，得到的回答一致是不会。他的判断由此而来——做软件如果没有好的 headless 模式，接下来几年会有风险；厂商必须能同样自如地通过自家界面之外的 agent（无论在平台内还是平台外）交付价值。他猜测大多数平台最终能过到对岸，但装睡的那部分不会。",
+        "另一面他也给了上行判断：在 agent 干活数量可能是人类用户 100 倍以上的世界里，绑定关键数据或关键工作流的厂商能接到的用例反而更多，他称之为一次复兴。商业模式会被迫演化——agentic 用量是算进席位授权还是改成按用量计费没有定论，他的底线判断是钱总会流向创造价值的地方。立场上 Box 自己就是 SaaS 厂商，这是在给自己所处的行业划生死线，可信度可以结合这一点看。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2042759653281456218" }
+      ],
+      "engagement": "242 likes"
+    },
+    {
+      "slug": "2026-04-11-china-ai-work-culture",
+      "title": "Peter Yang 的六条中国 AI 行业观察，包括普遍翻墙用美国工具和补贴一人公司",
+      "summary": "六条一手观察：很多人上午 11 点到岗、干到深夜 11 点，员工因此普遍年轻；这些公司都在翻墙用 Claude Code 等美国 AI 工具，VPN 在非科技人群里也常见；各城市在争抢 AI 创始人，青年就业差的背景下政府用补贴鼓励一人公司。",
+      "content": [
+        "六条观察可以分三组。工作方式：很多人上午 11 点才到公司、干到晚上 11 点，这种作息让员工构成普遍偏年轻，有孩子的人难以为继；年轻一代基本不喝酒不聚会，点外卖和奶茶到办公室一直干活。工具：这些公司里的人都在翻墙用 Claude Code 这类美国 AI 工具，VPN 即使在非科技行业也很普遍。环境：政府对 AI 创业非常支持，各城市在争抢 AI 创始人落地，北京看起来是主要的 AI 中心；青年就业仍然不好，政府也在用补贴和激励鼓励一人公司（OPC）。",
+        "这是一个美国产品人的现场见闻，他自己也在帖子里征集其他人的视角，样本范围没有说明，当成定性参考即可。其中工具那条对做开发者产品的人最有信息量——中国 AI 公司的实际工具栈，和从合规渠道能看到的可能是两回事。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2042772055905689977" }
+      ],
+      "engagement": "654 likes"
+    },
+    {
+      "slug": "2026-04-11-zara-new-world-formats",
+      "title": "Zara Zhang 认为工作文件的新世界是 Markdown、CSV 和 HTML",
+      "summary": "最高赞的一条把文件格式分成新旧世界，Word、Excel、PPT 对应 Markdown、CSV/JSON、HTML。配套两条：别只让 AI「总结」长内容，让它改写成保留原引语的杂志文章或苏格拉底对话；理解 AI 能力最好的办法是亲手去 build。",
+      "content": [
+        "最高赞的一条只有两行：旧世界是 Word、Excel、PowerPoint，新世界是 Markdown、CSV/JSON、HTML。她没有展开论证，但这三组替换的共同点很清楚——从二进制私有格式换成模型能直接读写的纯文本。",
+        "另一条给了三个代替「总结」的 prompt 写法：让 AI 把长内容改写成保留最佳原文引语的杂志文章；改写成老师和学生（学生代表你）之间的苏格拉底对话；或者基于它对你的了解，挑出你最可能感兴趣的洞察。出发点都是别停在「总结」这一步。",
+        "第三条谈为什么要亲手做：要真正理解 AI 的能力，几乎必须自己成为 builder——上手 AI coding 工具不只是为了赚钱、创业或提效，它也是最好的学习方式，learn to build、build to learn。三条放在一起是一套连贯的工作习惯，想试的话「总结改 remix」那条成本最低。"
+      ],
+      "creator": "Zara Zhang",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui（新旧世界）", "url": "https://x.com/zarazhangrui/status/2042513006018601065" },
+        { "label": "原推 @zarazhangrui（remix prompt）", "url": "https://x.com/zarazhangrui/status/2042846640130920574" },
+        { "label": "原推 @zarazhangrui（build to learn）", "url": "https://x.com/zarazhangrui/status/2042660162574467580" }
+      ],
+      "engagement": "556 likes"
+    },
+    {
+      "slug": "2026-04-11-nikunj-vc-lessons",
+      "title": "Nikunj Kothari 把转型 VC 两年的心得压成 11 条清单",
+      "summary": "他把原本要写成长文的转型心得压成 11 条。判断含量高的几条：conviction 从来不在 data room 里找到；对的 deal 遇上错的时机仍是错的 deal；慢拒绝比快拒绝糟糕得多。另一条推给了从 founder 视角识别好 VC 的信号。",
+      "content": [
+        "他本来在写一篇转型 VC 约两年所学的长文，最后决定压成 11 条，并自己说明有些是陈词滥调。判断含量高的几条：conviction 从来不是在 data room 里找到的；早期投资在创始人、市场、产品里挑两个，然后相信第三个会跟上；对的 deal 遇上错的时机仍然是错的 deal；慢拒绝比快拒绝糟糕得多；钱没到账就还不算成交。压轴一条是把诚信放在一切之上。",
+        "同天另一条推从 founder 视角补了一个识别信号：VC 的提问大多只是在测试你的深度，他认为最好的 founder 能把一个问题的正反两面都讲得极其清楚；真正值得你重新思考业务的问题很少——如果有人能持续问出这种问题，争取让他进 cap table。两条合起来，前者是给同行的清单，后者是顺手给 founder 的筛选标准。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj（11 条清单）", "url": "https://x.com/nikunj/status/2042758851074588945" },
+        { "label": "原推 @nikunj（识别好 VC）", "url": "https://x.com/nikunj/status/2042723383599861817" }
+      ],
+      "engagement": "161 likes"
+    }
+  ]
+}

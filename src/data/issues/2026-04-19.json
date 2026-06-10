@@ -1,0 +1,73 @@
+{
+  "date": "2026-04-19",
+  "generatedAt": "2026-04-19T07:16:09.071Z",
+  "stories": [
+    {
+      "slug": "2026-04-19-rauch-autonomous-design",
+      "title": "Guillermo Rauch：设计会走向自主化，形态更像被 coding agent 调用的 DESIGN.md",
+      "summary": "Rauch 判断设计会自主化：形态像被 coding agent 调用的 DESIGN.md，团队自己生成的专用设计工具会大量出现；Flint 等 agent 已在无人提示下维护品牌系统。他是 Vercel CEO，这套叙事对自家 v0 生态有利，做设计工具方向的人值得点开。",
+      "content": [
+        "起点是设计该发生在 Figma 还是 Claude Design 的争论，Rauch 认为这个争论偏离了更大的变化。他给出两个判断：一，设计会走向自主化，更有用的心智模型是 DESIGN.md——一份被运行“软件工厂”的 coding agent 直接使用的设计规范；二，各团队自己生成的专用“个人”设计工具会大量出现，因为设计是一种能力、不是一个工具，他认同 Rasmus Andersson 的看法，设计有很多面向，需要多个工具。",
+        "他自己仍然喜欢在 v0 里写 prompt，把它当作探索和表达灵感的地方，但已经看到新一代产品用 v0 Platform API 或 Sandbox 让设计自动运转：Flint 这类 agent 在自主生成和维护设计与品牌系统，能持续更新网站内容、保持设计一致，全程不需要人来提示。再往前推，他认为会出现完全自主的公司，由 agent 负责业务增长和广告投放。",
+        "Rauch 是 Vercel CEO，v0、Sandbox、Platform API 都是自家产品，这套“设计自主化”叙事同时在为自家平台站台。可核验的部分是 Flint 这类产品是否真能在无人提示下维护品牌系统，做设计工具或 design agent 的人可以直接验证。他结尾批评“现有产品加上 AI、某个职业就完蛋了”的句式短视，理由是 AI 是真正的不连续性，未来和现在会非常不同。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2045553025188835806" }
+      ],
+      "engagement": "1,049 likes"
+    },
+    {
+      "slug": "2026-04-19-levie-agent-architecture-churn",
+      "title": "Aaron Levie：为补模型限制做的 agent 工程，每隔几个季度就要扔掉很大一部分",
+      "summary": "Levie 的观察：agent 架构里补模型限制的部分作废最快，绕 context window 的系统已经没用，很多场景直接堆算力反而更简单；企业部署 agent 的方式和 18 个月前完全不同。他认为这种节奏短期内未必会放缓，建 agent 的团队值得对照检查自己的架构。",
+      "content": [
+        "Levie 的核心观察是模型进步的速度迫使 AI 架构频繁大改：做 agent 的团队每隔几个季度就得扔掉很大一部分既有工作，尤其是那些为弥补模型限制而做的部分。他举的例子是为绕开 context window 限制搭的系统现在已经没用；很多场景今天直接投入更多算力就能解决，而这在以前行不通。",
+        "部署侧的节奏差不多：把 agent 放进工作流的企业，大约也要以同样的频率重新设计核心系统。18 个月前在企业里部署 agent 的方式，和今天的最佳实践已经完全不同。",
+        "他认为这部分解释了为什么现在所有人都这么拼：最佳实践刚固化，模型又大幅升级，旧工作随即作废；在他看来这种节奏短期内未必会放缓，所以现在紧贴模型进展是划算的。顺着这个判断，对建 agent 的团队的含义是：投入前先分清哪些工作在补模型短板——这些大概率会作废——哪些是模型再强也需要的部分。这一步区分是编辑推断，原文没有展开。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2045680043607941548" }
+      ],
+      "engagement": "335 likes"
+    },
+    {
+      "slug": "2026-04-19-levie-engineering-jobs-expand",
+      "title": "Aaron Levie：agent 让每家公司都开始造软件，工程师的工作转向系统设计和指挥 agent",
+      "summary": "Levie 反驳工程职业终结论：agent 把过去技术上做不到或经济上不划算的自动化变得可行，生物制药、银行、零售都会自建大量软件，小公司 5 个人就可能做成过去要 50 人的项目。他在 Eli Lilly 招聘页已经看到 Lab Automation Software Engineer 岗位。",
+      "content": [
+        "Levie 认为人们对软件工程师的想象停留在科技公司做 app，这个心智模型已经过时。agent 让其他所有公司都开始为自己的工作流写软件——这件事过去要么技术上做不到，要么经济上不划算。",
+        "他列的范围：生物制药、工业、咨询、银行、零售都会做更多后端系统、数据处理、面向客户的数字体验和端到端流程自动化；过去需要 50 人团队的项目，小企业现在 5 个人就可能做成；企业还会专门招工程师来让 agent 落地、重新设计业务流程。工程师的工作内容随之变化：想清楚系统设计、串联各个平台、指挥 agent 做自动化、维护升级系统、审查 agent 的产出。",
+        "他给了一个可查证的样本：Eli Lilly 的招聘网站上已经有 Lab Automation Software Engineer 这个岗位类别，他把它看作未来工程师工作的众多例子之一。他的结论是在断言工程职业终结之前，先想想现实世界对这类工作的需求。立场提示：Box 做企业内容平台，“每家企业都要部署 agent”的叙事对他的生意有利；岗位是否真的在各行业铺开，可以直接在各公司招聘页核验。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2045616837787070695" }
+      ],
+      "engagement": "266 likes"
+    },
+    {
+      "slug": "2026-04-19-steipete-codexbar-021",
+      "title": "Peter Steinberger 发布 CodexBar 0.21，高 CPU 占用的根因查清是一次 OpenAI 网页抓取",
+      "summary": "CodexBar 0.21 发布：新增 Abacus AI provider 和 Codex Pro $100 档支持，修复本地成本扫描、z.ai 配额及 Antigravity、Cursor、Ollama 的问题。关键增量是高 CPU 占用根因查清，是一次 OpenAI 网页抓取，新安装默认禁用；keychain 问题也已解决。",
+      "content": [
+        "这一版的更新清单：新增 Abacus AI provider，支持 Codex Pro $100 订阅档，OpenAI 网页附加数据的获取更安全，修复了本地成本扫描，支持 z.ai 的 5 小时配额，修了 Antigravity、Cursor、Ollama 相关问题，刷新速度更快，并修复 macOS 26 的图标问题。",
+        "两个长期问题有了结论：CPU 占用过高的根因是一次 OpenAI 网页抓取，新安装版本已默认禁用；keychain 问题也已解决。Steinberger 在推里感谢了负责维护的 Ratul Sarna。被 CPU 占用困扰的老用户值得升级，但注意原文只说对新安装默认禁用这项抓取。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw + OpenAI",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2045582547996856682" }
+      ],
+      "engagement": "516 likes"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "date": "2026-05-03",
+  "generatedAt": "2026-05-03T07:59:02.694Z",
+  "stories": [
+    {
+      "slug": "2026-05-03-brockman-attention-bottleneck",
+      "title": "Greg Brockman：做事本身已经变便宜，人的注意力会成为最重要的瓶颈",
+      "summary": "Brockman 判断，执行本身已经变便宜，最大瓶颈会是人的注意力：由人来确认结果是不是自己想要的。他还提到当天发布的 Chronicle，接入 Codex，能看到你在电脑上的全部操作并形成记忆。做 agent 审批和上下文设计的人值得听全场。",
+      "content": [
+        "Brockman 在 Training Data 访谈里把瓶颈的转移讲得很具体：模型让把事做出来这一步变得便宜，人在审批环节点 approve 点到默认放行，真正稀缺的是停下来判断这件事好不好、是不是自己想要的、合不合自己的价值观。他认为下一步是让 AI 先给动作分险级——高风险的上报给人，其余自动通过——整个系统围绕人的注意力来设计。顺带一个标尺：按他自己的看法，AGI 大约走了 80%。",
+        "他举的两个内部例子方向相反，但都落在这个判断上。一个是他让 Codex 装一个同事写的包，失败后让它去 Slack 上找作者求助，两分钟没等到回复，模型自己把事情升级给了对方的经理——主动是对的，分寸不对，他的说法是模型的情商还在建。另一个是一位系统工程师把复杂系统优化的设计文档交给模型（5.3）后去睡觉，本打算醒来分给团队做一周，结果模型已经实现初版、发现性能慢、自己加了埋点、跑了 profiler、迭代到优化完成。",
+        "产品方向上，他说 Codex 正在从软件工程师的工具变成所有用电脑工作的人的工具；访谈当天宣布的 Chronicle 接在 Codex 上，能看到你在电脑上做的一切并形成记忆，省掉反复向 AI 解释背景的成本。他给创业者的对应建议：模型会持续变强，这部分不用赌；但让 AI 拿到足够上下文是一笔一次性投入，现在就该做。他还有一个自带保留的估计：12 月一个月里，agentic coding 工具大约从写你 20% 的代码变成了写 80%。",
+        "这是 OpenAI 总裁在讲自家路线，两个内部轶事无法核验，Chronicle 的实际形态也要等产品落地。可以直接借用的是设计框架：给 agent 的动作分险级，高风险交还给人、其余自动过；以及趁早做一次上下文基建，让 agent 默认看得到你工作的全貌。"
+      ],
+      "creator": "Greg Brockman",
+      "role": "OpenAI 联合创始人、总裁",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "Training Data",
+          "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-03-altman-smarter-still-matters",
+      "title": "Sam Altman：总觉得更想要模型便宜和快，但更聪明仍然是最重要的",
+      "summary": "Altman 说他反复觉得自己更想要便宜和快，但看下来更聪明仍然是最重要的事。同晚另一条是使用观察：5.5 的 xhigh 档加 fast mode 表现很好，他此前被推特风向带去用了一阵 medium。在权衡档位和成本的人可以参照。",
+      "content": [
+        "主判断是一次自我修正：他说自己总在想，比起更聪明，更想要的是模型便宜和快，但看下来更聪明仍然是最重要的事。这等于说，在他那里智能上限的优先级仍然压过成本优化——至于会不会反映到 OpenAI 的产品取舍上，推文没有展开。",
+        "同晚另一条更具体：5.5 的 xhigh 档在 fast mode 下表现很好，他说自己之前被推特上的风向带偏，用了一阵 medium。两条放在一起读，方向一致：把档位往上打。",
+        "两条都是单句推文，没有论证过程，评价的也是自家模型。可核验的是第二条：重度用户可以自己对比 xhigh 加 fast mode 和 medium 的输出差别，再决定要不要跟。"
+      ],
+      "creator": "Sam Altman",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @sama（更聪明仍然最重要）",
+          "url": "https://x.com/sama/status/2050671161915371998"
+        },
+        {
+          "label": "原推 @sama（5.5 xhigh）",
+          "url": "https://x.com/sama/status/2050658558174437701"
+        }
+      ],
+      "engagement": "9.5K likes"
+    },
+    {
+      "slug": "2026-05-03-levie-engineer-thought-experiment",
+      "title": "Aaron Levie：企业用上和科技大厂同样的模型之后，他聊到的几乎每一家都在多雇工程师",
+      "summary": "Levie 反驳 AI 取代工程师的判断：过去抢不到人的企业只能砍掉软件野心，现在用上和大厂同样的模型，工程师产能是过去的 2 倍甚至 5 倍，他聊过的公司几乎都在加雇。这也是他对 AI 带来新岗位的解释。关注就业影响的人值得读。",
+      "content": [
+        "他的思想实验从一家生命科学公司开始：十年前你想重投实验室自动化和大规模数据处理，算一下成本发现根本抢不过科技公司的工程师价码，只能收缩目标。每个新软件项目都有一笔固定的团队成本，预算和招聘能力决定了你能做多少事。",
+        "AI 出现之后，这家公司的工程师用的是和最好的科技公司完全相同的模型——他的说法是你们的 output tokens 一模一样。工程产能直接上调，和大厂的差距同时被抹平。剩下的选择是继续收缩，或者趁每个工程师有过去 2 倍甚至 5 倍的产能多雇人。他说几乎每一家他聊到的公司都选了后者。",
+        "再往外推：每家银行、制造商、工业公司、零售商，价值链上下的中小企业，以及工程之外同样缺资源的营销、法务、财务、设计。他认为这就是 AI 反而带来新岗位的原因——其他结论都没有把经济里大量未被满足的需求算进去。",
+        "立场上，Levie 做的是企业内容管理生意，所有企业都加大软件投入的叙事对 Box 有利；几乎每家都在加雇也只是他自己的接触样本，没有给出数字。可以对照的是自己所在行业 IT 预算和工程招聘的实际走向。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2050684160151617603"
+        }
+      ],
+      "engagement": "301 likes"
+    },
+    {
+      "slug": "2026-05-03-shipper-agent-left-app-right",
+      "title": "Dan Shipper：未来十年多数工作的形态是左边常驻 agent，右边是人和 agent 共用的应用",
+      "summary": "他的断言语气很确定：未来十年多数工作都会这样做——左侧是持续运行的 agent，右侧是人和 agent 共同使用的应用。想试这种形态，他指向 Every 自家的 codex-native 写作应用 proof。做 agent 产品界面的人值得看一眼。",
+      "content": [
+        "原话的确定性等级值得注意：他说的是 clear，未来十年我们做多数工作的方式就是这样——一个持续运行的 agent 在左边，右边是一个你和 agent 共同使用的应用。这等于把 agent 从对话框升级成常驻的协作者，和人面对同一个工作区。",
+        "同一天他让想试 codex-native 应用的人去用 proof，Every 自家的写作应用。两条放在一起看，他在拿自家产品验证这个形态。",
+        "Every 的业务就是做这类 AI 应用，这个断言同时是产品立场。可核验的部分是形态本身：做 agent 产品的人可以对照自己的界面，看 agent 是常驻在工作区里，还是只在被调用时出现。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @danshipper",
+          "url": "https://x.com/danshipper/status/2050583747041640608"
+        },
+        {
+          "label": "原推 @danshipper（proof）",
+          "url": "https://x.com/danshipper/status/2050608311888941301"
+        }
+      ],
+      "engagement": "323 likes"
+    },
+    {
+      "slug": "2026-05-03-vibe-kanban-shutdown",
+      "title": "Vibe-kanban 带着 3 万 MAU 现场关停，创始人：在赚钱的只有卖企业版和转售 token 两条路",
+      "summary": "Swyx 转述 AIE Europe 现场：tokengobbler 在台上关停了月活 3 万的 Vibe-kanban，项目转为开源存续。关停理由：在赚钱的都在做两件事，卖企业版和转售 token，我们两样都没做。做 AI 开发工具的人可以对照自己的收入结构。",
+      "content": [
+        "在 AIE Europe 的舞台上，tokengobbler 现场关停了 Vibe-kanban。产品当时还有 30,000 的月活，之后以开源项目的形式继续存在。Swyx 说有点意外的是，这已经不是第一家在 AIE 现场宣布关停的公司。",
+        "被引用的关停理由是这条推文里信息密度最高的部分：“在赚钱的人都在做两件事：卖企业版，以及转售 token。我们两样都没做。”对做开发工具的人，这句话的含义是用户量和收入结构是两回事——3 万月活没有自动变成一门生意。",
+        "Swyx 还提到那场覆盖 2021-2025 的软件工程复盘让他印象深刻，但推文没有展开内容。这条本身是二手转述，引语经过 Swyx 之手，完整的关停原因要看创始人自己的复盘材料。"
+      ],
+      "creator": "Swyx",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @swyx",
+          "url": "https://x.com/swyx/status/2050753293601935777"
+        }
+      ],
+      "engagement": "56 likes"
+    },
+    {
+      "slug": "2026-05-03-steipete-crabbox-openclaw",
+      "title": "Steinberger 一天两个发布：Crabbox 0.3.0 支持远程 Linux 运行，npm 包瘦身修复依赖问题",
+      "summary": "Crabbox 0.3.0 关键两项：dirty worktree 也能丢到远程 Linux 上跑，attach 支持实时回放运行过程。同日另一个发布修复了 npm 安装的依赖和缓慢问题，功能几乎都移进 extensions、包体更小。OpenClaw 生态用户可以直接升级。",
+      "content": [
+        "Crabbox 0.3.0 的更新清单：dirty worktree 的远程 Linux 运行、GitHub 浏览器登录、Blacksmith Testbox 封装、crabbox attach 实时回放、持久化的运行事件、AWS 镜像创建、Cloudflare Access 支持。升级命令是 brew upgrade openclaw/tap/crabbox。对日常使用最直接的可能是两项：本地带着未提交改动也能把任务丢到远程 Linux 跑；跑起来之后可以 attach 进去实时回放运行过程。",
+        "同日他转发了另一个版本的发布说明：修复了部分用户通过 npm 安装时的依赖问题和缓慢，包体明显变瘦，几乎所有功能都移进了 extensions。他自己的注脚是插件机制难做，但值得。",
+        "之前因为 npm 安装问题搁置的人可以再试一次；常用远程跑任务的人，attach 回放对排查 agent 中途做了什么有直接用处。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw 作者",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @steipete（Crabbox 0.3.0）",
+          "url": "https://x.com/steipete/status/2050490163810230579"
+        },
+        {
+          "label": "原推 @steipete（npm 修复）",
+          "url": "https://x.com/steipete/status/2050735979477008412"
+        }
+      ],
+      "engagement": "580 likes"
+    },
+    {
+      "slug": "2026-05-03-peter-yang-file-cleanup",
+      "title": "Peter Yang 让 Codex 和 Claude Code 清理本地文件和 Google Drive，每条提示都先要计划",
+      "summary": "做法：给 agent 整机权限加 Google Workspace CLI，清理开机启动项、下载文件夹和 Drive。关键纪律是每条提示先要计划、确认后再执行；他标注这是半危险操作、风险自担。想把 coding agent 用在文件管理的人可以照抄提示词。",
+      "content": [
+        "三条示例提示词都可以直接抄：告诉我开机时加载了哪些应用，给我一份清理计划；看一下我的下载文件夹，给一份清理和整理的计划；帮我整理 Google Drive，动手之前先一起过一遍你的计划。前提是给 Codex 或 Claude Code 整机访问权限，外加 gws（Google Workspace CLI）来碰 Drive。",
+        "安全边际全在先要计划这一步：三条提示词都把计划和执行分开，确认后才动手。他自己也提醒这属于半危险操作，风险自担。整机和云盘权限是一次性的信任决定，照这个思路用之前，先想清楚授权范围。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品经理",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @petergyang",
+          "url": "https://x.com/petergyang/status/2050623358488997917"
+        }
+      ],
+      "engagement": "222 likes"
+    },
+    {
+      "slug": "2026-05-03-nikunj-downside-capping",
+      "title": "Nikunj Kothari：太多基金按“大模型厂会收购兜底”出手，他怀疑这种打法做不出 5-10 倍基金",
+      "summary": "他的一手观察：问 GP 为什么投，连问五个为什么后，真实理由是反正大模型厂会收购、下行有保底。他不认为历史上这种打法做出过 5-10 倍的基金，并猜测激励已转向 AUM 最大化。融资中的 founder 可以参考对面的出价逻辑。",
+      "content": [
+        "他描述的现象：现在太多基金在给下行兜底，没有在追求上限的最大化。他常问 GP 或合伙人为什么做某个 deal，要到第五个为什么，真实原因才出来——反正 big token factory 会收购他们，我们的下行有保底。",
+        "他的判断带着犹疑：自己很多年没这么做了，但不认为历史显示这种打法能做出 5 到 10 倍回报的基金，原话末尾还挂着问号。对动机的解释也是猜测的语气：也许激励真的转向了 AUM 最大化，所以氛围变成使劲投就对了。他的评价是短视。",
+        "他自己先认了情绪成分：可能只是漫长一天后想发牢骚。但连问五个为什么的对话是他的实际经历，这部分是一手信息。顺着这个逻辑，融资中的 founder 拿到某些 offer 时可以多想一层：对方押的可能主要是被收购的下限，对公司上限的信念未必有报价显得那么足。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @nikunj",
+          "url": "https://x.com/nikunj/status/2050779734116856137"
+        }
+      ],
+      "engagement": "54 likes"
+    }
+  ]
+}
