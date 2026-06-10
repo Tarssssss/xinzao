@@ -1,61 +1,29 @@
-# AI Builder Website
+# 信噪 · Signal over noise
 
-一个给 AI builder 日报用的小型前端项目。
+AI builder 言论动向日刊。每天从 [follow-builders](https://github.com/zarazhangrui/follow-builders) 的 X / podcast / blog feed 里选稿，整理成中文 issue。摘要的唯一目标是帮读者在 30 秒内判断要不要点开原文。
 
-目标很简单：
+- 关键决策和理由：[docs/decision-log.md](docs/decision-log.md)
+- 每日自动更新流程（routine 蓝本）：[docs/daily-run.md](docs/daily-run.md)
+- 写稿规范（A/B 盲评产生）：[docs/writing-guide.md](docs/writing-guide.md)
 
-- 首页像 Hacker News 一样，快速刷今天新增的 builder 动态
-- 每条 story 保留三层结构：`title`、`intro`、`content`
-- 点进详情页能看完整内容和 source links
-- 每天从 `follow-builders` 的公开 feed 拉最新原始内容，再人工或通过 automation 追加新 story
+## 架构
 
-## 本地运行
+- 纯静态 Vite + React，无后端
+- `src/data/issues/YYYY-MM-DD.json`：每天一期，routine 只新增文件不改代码
+- Issue 期号按日期升序在加载时派生，不存盘
+- 部署在 Vercel，push 到 main 自动上线
 
-```bash
-npm install
-npm run dev
-```
-
-默认开发地址：
+## 命令
 
 ```bash
-http://localhost:5173
+npm run dev          # 本地开发 http://localhost:5173
+npm run build        # 类型检查 + 产线构建
+npm run sync:feeds   # 拉最新 feed 快照到 data/raw/
+node scripts/backfill-snapshots.mjs   # 从上游 git history 回填每日快照到 data/raw/days/
 ```
 
-## 现有命令
+## 数据流
 
-```bash
-npm run dev
-npm run build
-npm run preview
-npm run sync:feeds
-```
-
-## 数据结构
-
-- `src/data/news.ts`
-  网站实际展示的数据源
-- `data/raw/latest.json`
-  最新一次从 `follow-builders` 拉下来的原始 feed
-- `data/raw/latest-brief.md`
-  方便快速人工扫读的简版摘要
-
-## 每日更新流程
-
-1. `npm run sync:feeds`
-2. 看 `data/raw/latest-brief.md`
-3. 把新增内容整理成 `title + intro + content`
-4. 追加到 `src/data/news.ts`
-5. `npm run build`
-
-更详细的规则见：
-
-- `docs/daily-run.md`
-
-## 信源来源
-
-项目直接消费 `follow-builders` 仓库公开发布的 feeds：
-
-- [feed-x.json](https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-x.json)
-- [feed-podcasts.json](https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-podcasts.json)
-- [feed-blogs.json](https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-blogs.json)
+1. 上游 follow-builders 每天 ~06:17 UTC 提交新 feed（feed-x 为 24h 滚动窗口）
+2. 每天 09:00（Europe/London）Claude routine：sync → 按 daily-run.md 选稿、按 writing-guide.md 写稿 → 新增当日 issue JSON → build 验证 → push
+3. Vercel 检测到 push 自动重新部署

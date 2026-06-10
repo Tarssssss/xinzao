@@ -1,65 +1,42 @@
-import { useEffect } from 'react'
+import { useEffect, type CSSProperties } from 'react'
 import {
-  HashRouter,
+  BrowserRouter,
   Link,
   Route,
   Routes,
   useLocation,
   useParams,
 } from 'react-router-dom'
-import { newsFeed, type NewsItem, type SourceType } from './data/news'
+import { findStory, issues, latestIssue } from './data/issues'
+import type { NumberedIssue, SourceType, Story } from './data/types'
 import './App.css'
 
-const sortedItems = [...newsFeed.items].sort(
-  (left, right) =>
-    new Date(right.publishedAt).getTime() - new Date(left.publishedAt).getTime(),
-)
+const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六']
 
-const groupedStories = sortedItems.reduce<
-  Array<{
-    dateKey: string
-    dateLabel: string
-    startIndex: number
-    items: NewsItem[]
-  }>
->((groups, item) => {
-  const dateKey = item.publishedAt.slice(0, 10)
-  const existingGroup = groups.at(-1)
+function parseDate(value: string) {
+  const [year, month, day] = value.split('-').map(Number)
+  return new Date(year, month - 1, day)
+}
 
-  if (existingGroup && existingGroup.dateKey === dateKey) {
-    existingGroup.items.push(item)
-    return groups
-  }
+function formatDateCN(value: string) {
+  const date = parseDate(value)
+  return `${date.getFullYear()} 年 ${date.getMonth() + 1} 月 ${date.getDate()} 日`
+}
 
-  groups.push({
-    dateKey,
-    dateLabel: formatDate(item.publishedAt),
-    startIndex: groups.reduce((sum, group) => sum + group.items.length, 0),
-    items: [item],
-  })
+function weekdayCN(value: string) {
+  return `星期${WEEKDAYS[parseDate(value).getDay()]}`
+}
 
-  return groups
-}, [])
-
-function formatDate(value: string, options?: Intl.DateTimeFormatOptions) {
-  return new Intl.DateTimeFormat('zh-CN', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    ...options,
-  }).format(new Date(value))
+function issueNo(issue: NumberedIssue) {
+  return `第 ${String(issue.number).padStart(2, '0')} 期`
 }
 
 function sourceLabel(sourceType: SourceType) {
   if (sourceType === 'x') {
-    return 'Post'
+    return 'X'
   }
 
-  if (sourceType === 'podcast') {
-    return 'Podcast'
-  }
-
-  return 'Blog'
+  return sourceType === 'podcast' ? 'Podcast' : 'Blog'
 }
 
 function ScrollToTop() {
@@ -72,157 +49,249 @@ function ScrollToTop() {
   return null
 }
 
-function SiteHeader() {
+function Masthead({ issue }: { issue?: NumberedIssue }) {
   return (
-    <header className="masthead">
-      <div className="masthead-row">
-        <Link className="masthead-brand" to="/">
-          AI Builder Wire
-        </Link>
-        <time className="masthead-date" dateTime={newsFeed.curatedAt}>
-          {formatDate(newsFeed.curatedAt)}
-        </time>
+    <header>
+      <div className="masthead">
+        <div className="masthead-left">
+          <span className="masthead-seal" aria-hidden="true">
+            信噪
+          </span>
+          <h1 className="masthead-title">
+            <Link to="/">信噪</Link>
+          </h1>
+          <p className="masthead-en">Signal over noise</p>
+        </div>
+        {issue && (
+          <p className="masthead-issue">
+            <span className="issue-no">{issueNo(issue)}</span>
+            <br />
+            {formatDateCN(issue.date)} {weekdayCN(issue.date)}
+          </p>
+        )}
       </div>
+      <hr className="double-rule" />
       <p className="masthead-note">
-        今天的新 builder 动向，整理成一张可快速扫读的 front page。
+        AI builder 言论日刊 · 摘要只为帮你判断要不要点开原文
       </p>
     </header>
   )
 }
 
-function StoryCard({ item, index }: { item: NewsItem; index: number }) {
+function StoryRow({ story, rank }: { story: Story; rank: number }) {
+  const origin = story.sourceLinks[0]
+
   return (
-    <article className="story-row">
-      <div className="story-index">{index + 1}.</div>
-      <div className="story-copy">
-        <h2 className="story-title">
-          <Link to={`/story/${item.slug}`}>{item.title}</Link>
-        </h2>
-        <p className="story-intro">{item.intro}</p>
+    <li className="story-row" style={{ '--i': rank - 1 } as CSSProperties}>
+      <span className="story-rank" aria-hidden="true">
+        {rank}.
+      </span>
+      <div>
+        <h3 className="story-title">
+          <Link to={`/story/${story.slug}`}>{story.title}</Link>
+        </h3>
+        <p className="story-summary">{story.summary}</p>
         <p className="story-meta">
-          {item.creator} · {sourceLabel(item.sourceType)} ·{' '}
-          {formatDate(item.publishedAt, {
-            month: 'numeric',
-            day: 'numeric',
-          })}
+          <span className="creator">{story.creator}</span>
+          <span>{sourceLabel(story.sourceType)}</span>
+          {story.engagement && <span>{story.engagement}</span>}
+          {origin && (
+            <a
+              className="origin-link"
+              href={origin.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              原文 <span className="arrow">↗</span>
+            </a>
+          )}
         </p>
       </div>
-    </article>
+    </li>
+  )
+}
+
+function IssueSection({
+  issue,
+  headingPrefix,
+}: {
+  issue: NumberedIssue
+  headingPrefix?: string
+}) {
+  return (
+    <section>
+      <div className="issue-head">
+        <h2>
+          {headingPrefix ?? `${formatDateCN(issue.date)} ${weekdayCN(issue.date)}`}
+        </h2>
+        <span className="issue-meta">
+          {issueNo(issue)} · {issue.stories.length} 条
+        </span>
+      </div>
+      {issue.editorNote && <p className="editor-note">{issue.editorNote}</p>}
+      <ol className="story-list">
+        {issue.stories.map((story, index) => (
+          <StoryRow key={story.slug} story={story} rank={index + 1} />
+        ))}
+      </ol>
+    </section>
+  )
+}
+
+function ArchiveIndex({ skip }: { skip?: string }) {
+  const archived = issues.filter((issue) => issue.date !== skip)
+
+  if (archived.length === 0) {
+    return null
+  }
+
+  return (
+    <section className="archive">
+      <div className="archive-head">
+        <h2>往期</h2>
+        <span>{archived.length} 期</span>
+      </div>
+      <ul className="archive-list">
+        {archived.map((issue) => (
+          <li className="archive-row" key={issue.date}>
+            <Link to={`/issue/${issue.date}`}>
+              <span className="no">No.{String(issue.number).padStart(2, '0')}</span>
+              <span className="date">{issue.date}</span>
+              <span className="headline">{issue.stories[0]?.title}</span>
+              <span className="count">{issue.stories.length} 条</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <span>信噪 · 每天 09:00 更新</span>
+      <a
+        href="https://github.com/zarazhangrui/follow-builders"
+        target="_blank"
+        rel="noreferrer"
+      >
+        信源 follow-builders ↗
+      </a>
+      <span>由 Claude 自动选稿整理</span>
+    </footer>
   )
 }
 
 function HomePage() {
   return (
-    <main className="page-shell">
-      <SiteHeader />
-
-      <section className="front-page">
-        <div className="section-heading">
-          <p className="section-title">Front Page</p>
-          <p className="section-meta">
-            {sortedItems.length} stories · feed updated{' '}
-            {formatDate(newsFeed.feedGeneratedAt, {
-              month: 'numeric',
-              day: 'numeric',
-            })}
-          </p>
-        </div>
-
-        {groupedStories.map((group) => {
-          return (
-            <section className="story-group" key={group.dateKey}>
-              <div className="day-heading">
-                <h2>{group.dateLabel}</h2>
-                <p>{group.items.length} stories</p>
-              </div>
-
-              <div className="story-list">
-                {group.items.map((item, index) => (
-                  <StoryCard
-                    key={item.id}
-                    item={item}
-                    index={group.startIndex + index}
-                  />
-                ))}
-              </div>
-            </section>
-          )
-        })}
-      </section>
+    <main className="shell">
+      <Masthead issue={latestIssue} />
+      {latestIssue ? (
+        <>
+          <IssueSection issue={latestIssue} headingPrefix="今日" />
+          <ArchiveIndex skip={latestIssue.date} />
+        </>
+      ) : (
+        <p className="empty-state">第一期正在整理中。</p>
+      )}
+      <SiteFooter />
     </main>
   )
 }
 
-function DetailPage() {
-  const { slug } = useParams()
-  const item = newsFeed.items.find((entry) => entry.slug === slug)
+function IssuePage() {
+  const { date } = useParams()
+  const issue = issues.find((entry) => entry.date === date)
 
-  if (!item) {
-    return (
-      <main className="detail-shell">
-        <SiteHeader />
-        <Link className="back-link" to="/">
-          Back to front page
-        </Link>
-
-        <section className="detail-card">
-          <h1>这条 news 还没被收录。</h1>
-          <p className="detail-lead">
-            可能是链接错误，也可能是这条内容已经被替换成更完整的版本。
-          </p>
-        </section>
-      </main>
-    )
+  if (!issue) {
+    return <NotFound />
   }
 
   return (
-    <main className="detail-shell">
-      <SiteHeader />
-      <Link className="back-link" to="/">
-        Back to front page
+    <main className="shell">
+      <Masthead issue={issue} />
+      <IssueSection issue={issue} />
+      <ArchiveIndex skip={issue.date} />
+      <SiteFooter />
+    </main>
+  )
+}
+
+function StoryPage() {
+  const { slug } = useParams()
+  const found = findStory(slug)
+
+  if (!found) {
+    return <NotFound />
+  }
+
+  const { story, issue } = found
+
+  return (
+    <main className="shell">
+      <Masthead issue={issue} />
+      <Link className="back-link" to={`/issue/${issue.date}`}>
+        ← {issueNo(issue)} · {issue.date}
       </Link>
-
-      <article className="detail-card">
+      <article className="article">
+        <h1>{story.title}</h1>
         <p className="article-meta">
-          {item.creator} · {item.role} · {sourceLabel(item.sourceType)} ·{' '}
-          {formatDate(item.publishedAt)}
+          <span className="creator">{story.creator}</span>
+          {story.role && <> · {story.role}</>} · {sourceLabel(story.sourceType)}
+          {story.engagement && <> · {story.engagement}</>}
         </p>
-        <h1>{item.title}</h1>
-        <p className="detail-lead">{item.intro}</p>
-
-        <div className="detail-content">
-          {item.content.map((paragraph) => (
+        <p className="article-lead">{story.summary}</p>
+        <div className="article-body">
+          {story.content.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-
-        <section className="sources-panel">
-          <h2>Source</h2>
-          <ul className="source-list">
-            {item.sourceLinks.map((link) => (
+        <section className="sources">
+          <h2>原文</h2>
+          <ul>
+            {story.sourceLinks.map((link) => (
               <li key={link.url}>
                 <a href={link.url} target="_blank" rel="noreferrer">
-                  {link.label}
+                  {link.label} ↗
                 </a>
               </li>
             ))}
           </ul>
         </section>
       </article>
+      <SiteFooter />
     </main>
   )
 }
 
-function AppRouter() {
+function NotFound() {
   return (
-    <HashRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/story/:slug" element={<DetailPage />} />
-      </Routes>
-    </HashRouter>
+    <main className="shell">
+      <Masthead issue={latestIssue} />
+      <p className="empty-state">
+        这条内容不存在，可能链接有误或已被更完整的版本替换。
+        <br />
+        <br />
+        <Link to="/" style={{ textDecoration: 'underline' }}>
+          回到今日刊
+        </Link>
+      </p>
+      <SiteFooter />
+    </main>
   )
 }
 
-export default AppRouter
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/issue/:date" element={<IssuePage />} />
+        <Route path="/story/:slug" element={<StoryPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
