@@ -1,0 +1,95 @@
+{
+  "date": "2026-05-29",
+  "generatedAt": "2026-05-29T20:58:14.663Z",
+  "stories": [
+    {
+      "slug": "2026-05-29-levie-tokenmaxxing-enterprise-economics",
+      "title": "Aaron Levie：企业里 token 成本已成头号难题，前沿 token 单价不降反升、IT 预算装不下，钱被迫挪到业务线",
+      "summary": "Box CEO 基于今年上百位 CIO 的访谈给出一手观察：一个编码任务就能烧掉上千美元算力，旧的按席位订阅模型撑不住；前沿 token 因产能紧张和模型变大反而在涨价。考虑给非工程团队上 agent、且要为算力做预算的人值得看他给的应对路径。",
+      "content": [
+        "Levie 把成本痛点的根源拆成两层。一是单任务消耗变了量级：聊天时代一次问答的算力能塞进 20 美元/席位/月的订阅里，而一个编码 agent 单个任务就可能吃掉 1000 美元算力，定价模型直接失效。二是单价方向反转——过去几年大家互相讲「token 永远在变便宜」，他的判断是当前不成立：模型参数更大、推理更贵，加上算力产能紧张让数据中心和实验室有定价权，本该十年走完的算力降本被压进了十二个月，所以「该出现的成本曲线现在还没出现」。他特意做了立场校准，说自己不确定涨价是不是单纯因为之前在补贴，更可能是模型本身变大了，建议去问实验室的人。",
+        "顺着成本这条线，他点出一个组织层面的连锁反应：头两三年 AI 开销还能塞进 IT 预算，但 IT 通常只占公司收入的 3% 到 7%，一旦 agent 真的给市场、销售、客户 onboarding 带来产能，开销就会逃离这个盘子、挪到业务线的 OpEx。问题是业务线没有 FinOps，市场团队不知道怎么给算力做预算，也没有工具衡量「这些 token 的 ROI」。他举的例子是：员工按一个按钮就可能花掉相当于公司给的一顿免费午餐的钱，结构错一个 prompt 就可能让一个查询扇出到一堆系统、花掉 200 美元，而员工根本不知道算力的成本。他半开玩笑说这里有个「50 亿美元的创业机会」——给 AI 算力做一套 ERP。",
+        "对正在选型的人，他给了两条可操作的路径。其一是用 OpenAI 那种预留产能/锁定定价的方案对冲已知工作负载的成本。其二是他预测会出现「能力饱和后降级」的做法：先用 GPT-5.5 high、Opus 这类前沿模型把一个任务做到可靠，一旦这个能力饱和、任务能稳定完成，就把它剥离到更便宜的模型(甚至 OSS 模型)按需跑，比如把某类客服交互的单价封顶在每百万 token 50 美分、只会更低。他由此判断企业会用上「一堆模型的拼图」，平均一家企业会同时用上六个左右模型,不会什么都丢给最贵的「法拉利模型」。他还补了一句反直觉的:有些场景最后会发现根本不需要 agent,部署一段跑在 CPU 上的传统软件反而更便宜——「你不会想让 agent 每天早上把界面重渲染一遍」。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "podcast",
+      "engagement": "",
+      "sourceLinks": [
+        { "label": "The MAD Podcast：State of Enterprise AI 2026", "url": "https://www.youtube.com/watch?v=Gs2styCcwro" }
+      ]
+    },
+    {
+      "slug": "2026-05-29-levie-diffusion-bottleneck-internal-fde",
+      "title": "Aaron Levie：模型进步反而拖慢企业落地，编码之外的知识工作要靠「内部 FDE」一点点接上去",
+      "summary": "Box CEO 解释了一个反直觉现象：模型越快迭代，企业落地越慢，因为新突破不断让上一套架构作废。他列出编码能跑通、其他知识工作跑不通的五六个具体差异，并判断接活的「内部 FDE」是会长期存在的新岗位而非临时补丁。在企业里推 agent、或在判断哪些岗位会留下的人值得看。",
+      "content": [
+        "他先解释为什么「能力过剩」反而拖慢落地：如果现在把 GPT-5.5 或 Opus 的能力线冻住，整个生态大概两三年就能完成扩散和变更管理；真正的问题是突破来得比客户实现任何标准架构都快，而且新突破往往让你上一个实现作废——技术越先进，越没有稳定环境去铺开。他说现在企业 IT 里一致性是他见过最低的时候:同一个「部署 agent 做客户 onboarding」的需求,他能列出 10 到 15 套参考架构,于是每个系统集成商、创业公司、实验室都在给客户推十几种不同方案,反而拉长了销售周期、加重了决策复杂度;一个佐证是现在没人愿意和实验室签超过一年的合同。",
+        "他给出编码能跑通、其他知识工作跑不通的五六个具体差异,这是全集信息密度最高的部分:编码用户本身技术过硬,agent 出错能自己救回来、也消化资讯和最佳实践更快;编码工作可验证(代码能跑、能测、能 QA);代码库里装着几乎全部上下文,而其余知识工作的上下文散在 20 个地方、有数字的也有非数字的;最关键也最「无聊」的一条是权限控制——工程师对自己要做的代码有完整访问权,而知识工作里要么 agent 撞上 entitlement 拿不到资源、要么拿到太多、然后用本不该看到的数据去回答问题。他还点出一个被反复忽视的数据问题:让全员都能 MCP 进数据仓库查数,每个人会拿到不同口径的答案,因为公司算法可能做了 FX 调整、净留存的定义和模型训练时不一样——这是个二十年的老问题,过去能靠数据科学团队这个集中职能堆人解决,现在民主化给所有人之后反而炸开。",
+        "由此他推出一个判断:接这些活的「内部 FDE」是会长期存在的真实岗位,不是「实现一次就永远管用」的临时补丁——模型一变,就有新一轮活要干,要么吃到模型升级的红利、要么得为旧模型留下脚手架。这个角色长得像下一代软件/IT 工程师,坐到业务身边、吃透流程、再把数据和 agent 指令配置对。他特意指出有意思的一点:AI 超级加速派和怀疑派在这件事上落到了同一个结论——都觉得「居然还要派人去现场干」很扫兴;而他作为熟悉企业的人觉得这本就 100% 会发生。",
+        "顺着这个逻辑,他对岗位消失给了一个克制的反驳框架,含义是不能拿编码当模板去推断所有知识工作。编码可以「放手不管、agent 套 agent」是因为代码只要能跑、风格糙一点也没关系;但法律这类工作做不到——agent 改了一行合同里的责任条款,最终还得有律师拍板「我相信这 100% 有效」才能出手,这种「最后一公里」会比想象中保留在更广的知识工作里。他自称是「Jevons 悖论派」,理由是在自家、客户和小创业公司都看到:产能涨了之后反而要为更多新职能招人(比如 solo 创业者发现营销 agent 有效,下一步就是招个人来管这些 agent)。他也不回避有约 10% 的经济体已经在某些职能上饱和、agent 进来没有更多活可干,但其余部分更像是「第一次能负担得起一个设计师/工程师」,所以净岗位上他基本不担心。落到个人,他给的具体建议是:每月花 50 到 100 美元、砍掉一个有线电视订阅,去重度用 Codex、Cowork、Perplexity Computer、cursor,接上几个系统、在一个个人工作流上试,再想「如果我有一个能扔任何任务的无限 chief of staff,我会让它干什么」。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "podcast",
+      "engagement": "",
+      "sourceLinks": [
+        { "label": "The MAD Podcast：State of Enterprise AI 2026", "url": "https://www.youtube.com/watch?v=Gs2styCcwro" }
+      ]
+    },
+    {
+      "slug": "2026-05-29-rauchg-vercel-cli-agent-interface",
+      "title": "Guillermo Rauch：把 Vercel CLI 做成零依赖自更新二进制，理由是 CLI 已成「给 agent 的云」的关键接口",
+      "summary": "Vercel CEO 宣布把 CLI 改造成零外部依赖、可自更新的二进制，并解释这是因为编码 agent 让 CLI 从早年使用零散变成核心入口。他说常听到客户是被 OpenClaw、Claude Code、Codex 引导着接入 Vercel 的 agentic 基础设施。关注 agent 部署链路、或在做 CLI/SDK 分发的人值得看这个判断。",
+      "content": [
+        "这条的增量在于他给出的「情况反转」机制,而不是发布本身。Rauch 说 Vercel 很多年前就做过 pkg(把 CLI 打包成不依赖用户本地 Node.js 的二进制)来服务这个愿景,当时因为 Git 和 Web 起飞、CLI 使用更零散而被降了优先级;现在反过来了——他们比以往任何时候都更频繁地给 CLI 发改动,CLI 也嵌进了更多地方,所以重新把它做成零外部依赖、可自更新的二进制来解决分发瓶颈。",
+        "这是来自 Vercel CEO 对自家产品的判断,立场上自然偏向把 CLI 讲成关键基础设施,需要打个折看;其中可核验的部分是他对获客路径的具体描述:他说每天都听到客户是在 OpenClaw、Claude Code 或 Codex 不只介绍、还把用户 onboard 到 Vercel 的 agentic 基础设施之后才发现 Vercel 的,CLI(连同 MCP 和 SDK)是这一波的关键使能器。同日他另发一条说 Docker 已能在 Vercel Sandbox 里跑,可与上面这条对照看作同一个「云为 agent 服务」方向上的动作。在做 agent 部署或 CLI/SDK 分发的人,可以照这个「CLI 作为 agent 主接口」的描述,回看自己工具的分发和依赖假设是否还成立。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "Vercel CEO",
+      "sourceType": "x",
+      "engagement": "160 likes",
+      "sourceLinks": [
+        { "label": "原推：Vercel CLI 作为零依赖自更新二进制", "url": "https://x.com/rauchg/status/2060105470460010993" },
+        { "label": "同日：Docker 已可在 Vercel Sandbox 内运行", "url": "https://x.com/rauchg/status/2060443982342357032" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "必须说一句：Opus 4.8 配 OpenClaw 真的太强了。它在说明自己改了什么、在想什么、怎么和你一起解决问题这几点上清楚多了。",
+      "creator": "Garry Tan（@garrytan）",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2060387204774633720"
+    },
+    {
+      "quote": "「依赖以后再升级」这个借口刚刚死了。当 AI 让库升级几乎免费，保持最新就不再是奢侈、而是默认。技术债一直是个工具问题，现在成了过去式。",
+      "creator": "Garry Tan（@garrytan）",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2060461897594683861"
+    },
+    {
+      "quote": "如果你看到应用层创业公司收入暴涨，是因为很多公司在尽快挤进 token 通路。不过利润率是另一回事了。",
+      "creator": "Nikunj Kothari（@nikunj）",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2060420902521835905"
+    },
+    {
+      "quote": "在 Replit Canvas 上：生成图像、视频、音频并混剪；画点东西就让它成真；点选编辑、拖拽移动；拉个朋友一起做营销、网站或艺术。",
+      "creator": "Amjad Masad（@amasad）",
+      "handle": "amasad",
+      "sourceType": "x",
+      "url": "https://x.com/amasad/status/2060122956429472027"
+    },
+    {
+      "quote": "Google 免费的 5 天 AI Agents 课程回来了，这次主题是和 agent 一起 vibe coding（上一期有 150 万学员）。Day 1 用 Google Agents CLI 搭 agent；Day 2 工具与互操作；Day 3 记忆与上下文；Day 4 质量与安全(测试、护栏、evals)；Day 5 从原型到生产部署上线。每天 1-2 小时，Google 工程师授课，免费。",
+      "creator": "Peter Yang（@petergyang）",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2060149158615609474"
+    }
+  ]
+}

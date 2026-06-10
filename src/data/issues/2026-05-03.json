@@ -23,29 +23,6 @@
       ]
     },
     {
-      "slug": "2026-05-03-altman-smarter-still-matters",
-      "title": "Sam Altman：总觉得更想要模型便宜和快，但更聪明仍然是最重要的",
-      "summary": "Altman 说他反复觉得自己更想要便宜和快，但看下来更聪明仍然是最重要的事。同晚另一条是使用观察：5.5 的 xhigh 档加 fast mode 表现很好，他此前被推特风向带去用了一阵 medium。在权衡档位和成本的人可以参照。",
-      "content": [
-        "主判断是一次自我修正：他说自己总在想，比起更聪明，更想要的是模型便宜和快，但看下来更聪明仍然是最重要的事。这等于说，在他那里智能上限的优先级仍然压过成本优化——至于会不会反映到 OpenAI 的产品取舍上，推文没有展开。",
-        "同晚另一条更具体：5.5 的 xhigh 档在 fast mode 下表现很好，他说自己之前被推特上的风向带偏，用了一阵 medium。两条放在一起读，方向一致：把档位往上打。",
-        "两条都是单句推文，没有论证过程，评价的也是自家模型。可核验的是第二条：重度用户可以自己对比 xhigh 加 fast mode 和 medium 的输出差别，再决定要不要跟。"
-      ],
-      "creator": "Sam Altman",
-      "sourceType": "x",
-      "sourceLinks": [
-        {
-          "label": "原推 @sama（更聪明仍然最重要）",
-          "url": "https://x.com/sama/status/2050671161915371998"
-        },
-        {
-          "label": "原推 @sama（5.5 xhigh）",
-          "url": "https://x.com/sama/status/2050658558174437701"
-        }
-      ],
-      "engagement": "9.5K likes"
-    },
-    {
       "slug": "2026-05-03-levie-engineer-thought-experiment",
       "title": "Aaron Levie：企业用上和科技大厂同样的模型之后，他聊到的几乎每一家都在多雇工程师",
       "summary": "Levie 反驳 AI 取代工程师的判断：过去抢不到人的企业只能砍掉软件野心，现在用上和大厂同样的模型，工程师产能是过去的 2 倍甚至 5 倍，他聊过的公司几乎都在加雇。这也是他对 AI 带来新岗位的解释。关注就业影响的人值得读。",
@@ -65,30 +42,6 @@
         }
       ],
       "engagement": "301 likes"
-    },
-    {
-      "slug": "2026-05-03-shipper-agent-left-app-right",
-      "title": "Dan Shipper：未来十年多数工作的形态是左边常驻 agent，右边是人和 agent 共用的应用",
-      "summary": "他的断言语气很确定：未来十年多数工作都会这样做——左侧是持续运行的 agent，右侧是人和 agent 共同使用的应用。想试这种形态，他指向 Every 自家的 codex-native 写作应用 proof。做 agent 产品界面的人值得看一眼。",
-      "content": [
-        "原话的确定性等级值得注意：他说的是 clear，未来十年我们做多数工作的方式就是这样——一个持续运行的 agent 在左边，右边是一个你和 agent 共同使用的应用。这等于把 agent 从对话框升级成常驻的协作者，和人面对同一个工作区。",
-        "同一天他让想试 codex-native 应用的人去用 proof，Every 自家的写作应用。两条放在一起看，他在拿自家产品验证这个形态。",
-        "Every 的业务就是做这类 AI 应用，这个断言同时是产品立场。可核验的部分是形态本身：做 agent 产品的人可以对照自己的界面，看 agent 是常驻在工作区里，还是只在被调用时出现。"
-      ],
-      "creator": "Dan Shipper",
-      "role": "Every CEO",
-      "sourceType": "x",
-      "sourceLinks": [
-        {
-          "label": "原推 @danshipper",
-          "url": "https://x.com/danshipper/status/2050583747041640608"
-        },
-        {
-          "label": "原推 @danshipper（proof）",
-          "url": "https://x.com/danshipper/status/2050608311888941301"
-        }
-      ],
-      "engagement": "323 likes"
     },
     {
       "slug": "2026-05-03-vibe-kanban-shutdown",
@@ -171,6 +124,22 @@
         }
       ],
       "engagement": "54 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我总是觉得，比起更聪明，我更想要模型更便宜、更快；但看起来仅仅是更聪明这一点，仍然是最重要的事。",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2050671161915371998"
+    },
+    {
+      "quote": "很清楚，接下来十年我们大多数工作都会这样做：一个 agent 在左边持续运行，右边是一个你和这个 agent 共同使用的应用。",
+      "creator": "Dan Shipper",
+      "handle": "danshipper",
+      "sourceType": "x",
+      "url": "https://x.com/danshipper/status/2050583747041640608"
     }
   ]
 }

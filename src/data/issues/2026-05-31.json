@@ -1,0 +1,85 @@
+{
+  "date": "2026-05-31",
+  "generatedAt": "2026-05-31T07:34:55.496Z",
+  "stories": [
+    {
+      "slug": "2026-05-31-steipete-yielding-agents-skill",
+      "title": "Peter Steinberger：GPT-5.5 配上 /goal、autoreview 和 crabbox 后，单次任务从半小时拉长到 4-10 小时",
+      "summary": "他给出一手的工作流变化：换上 GPT-5.5 加几样自建工具后，一次能交给 agent 的任务从 30-60 分钟拉到常常 4-10 小时，且对结果是否真做完的信心也高了很多。在评估能不能把更大、更长的任务整块交出去的人值得看他怎么搭这套链路。",
+      "content": [
+        "他把这套提升归到一句「让 agent 跑起来本身是门手艺」（yielding agents is a skill），而不是单纯归功于换了模型。顺着这个逻辑，模型变强只是放大器，真正决定能不能放心交出 4-10 小时长任务的，是 /goal、autoreview、crabbox 这几样在任务前后兜住目标和检查的工具——没有它们，长任务跑飞了也发现不了。",
+        "他另给了一个具体的 codex 用法：让它查 bug，它常回「都没问题」；但只要告诉它「这里有个 bug」，它就会反复循环、最后真能找出问题。含义是这类模型的 review 默认偏保守，需要人为给一个「确实有问题」的前提去逼它深挖，不能只看它第一遍的结论。",
+        "这几条都来自他自己的实测，数字（30-60 分钟到 4-10 小时）和工具名是一手的；crabbox、autoreview 是他自建或在用的工具，不是通用产品，照着搭之前需要先确认这些工具的具体形态。可核验的是行为描述——可以在自己的 codex 工作流里试一遍「先断言有 bug 再让它查」这一招。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "Builder, @OpenClaw / @OpenAI",
+      "sourceType": "x",
+      "engagement": "2.9K likes",
+      "sourceLinks": [
+        { "label": "原推：yielding agents is a skill", "url": "https://x.com/steipete/status/2060678430031597696" },
+        { "label": "原推：codex review 循环", "url": "https://x.com/steipete/status/2060672154727825718" }
+      ]
+    },
+    {
+      "slug": "2026-05-31-levie-ai-reinvestment-not-cost-cutting",
+      "title": "Aaron Levie：大企业用 AI 多数在把省下的钱再投回业务，而不是单纯砍成本",
+      "summary": "他说和大量大企业 CIO/CTO/CEO 聊下来，多数要么因 AI 新增岗位而扩张，要么至少把效率节省再投回销售、市场等环节。落点是一个判断：长期看靠 AI 更好服务客户的公司会赢，只想省钱的反而更差。看 AI 对就业是增是减的人可作为一手反面参照。",
+      "content": [
+        "他点出的机制是：多数业务过去被「在给定成本下能产出多少软件、能招多少销售、能跑多少营销、能做多细的客户成功」这类产能上限卡住；AI 把这些事的单位成本压下来之后，投入并没有被抽走，而是回流去做以前预算不够或现在需求变大的领域。这是他对「AI=裁员省钱」这一默认叙事的直接反驳。",
+        "他援引高盛 CEO David Solomon 上周在《纽约时报》的一篇 OpEd，说 AI 浪潮一边在搭建和落地 AI 系统的过程中创造全新岗位，一边腾出资金投向长期投入不足的方向。这是他给自己观察找的一个外部佐证，而非他本人的数据。",
+        "这条评价来自 Box CEO，立场上他卖的就是帮企业落地 AI 的产品，对「AI 带来净增长」自然偏乐观，「服务客户者赢、只求省钱者输」也契合他的销售叙事。可核验的部分是那条经验观察本身——在你接触的企业里，AI 省下的预算到底是被抽走还是被再投，可以拿这个二分去对照。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO @Box",
+      "sourceType": "x",
+      "engagement": "154 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2060923684295221390" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "从 GPT-5.0 到 5.1 再到 5.5，数字每涨一档，对应的是能力和 token 效率的提升（后者带来速度），GPT-5.5 是我们目前最好的模型。这个简单的策略我们想继续保持。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2060627747760984429"
+    },
+    {
+      "quote": "五百万用户会同意这点。明早重置额度来庆祝一下，该去 /fast 了。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2060964284117782996"
+    },
+    {
+      "quote": "做出最好的产品。用很多 AI、用一点 AI、或者干脆不用 AI 都行。只要做到最好就行。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2060803480823193840"
+    },
+    {
+      "quote": "我喜欢 auto-review 的一点：Cursor 会解释这条命令和它的风险，新手因此更容易边学边直接动手做。",
+      "creator": "Ryo Lu",
+      "handle": "ryolu_",
+      "sourceType": "x",
+      "url": "https://x.com/ryolu_/status/2060766674203353190"
+    },
+    {
+      "quote": "我注意到 Opus 4.8 的一点变化：它写东西时不再用破折号了。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2060962160872919043"
+    },
+    {
+      "quote": "380 亿 token，最长一次任务 56 小时，当前连续 41 天。lfg codex。",
+      "creator": "Dan Shipper",
+      "handle": "danshipper",
+      "sourceType": "x",
+      "url": "https://x.com/danshipper/status/2060771279280513362"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "date": "2026-06-04",
+  "generatedAt": "2026-06-04T07:55:53.311Z",
+  "stories": [
+    {
+      "slug": "2026-06-04-satya-nadella-private-evals-harness-moat",
+      "title": "Satya Nadella 认为企业最大的 IP 正在变成私有 eval,判断标准是换模型后还能不能继续 hill-climb",
+      "summary": "Nadella 在 No Priors 给出一个可操作的护城河判断法:每家公司真正的资产是私有 eval,检验方式是把底层模型从 A 换到 B 后还能不能继续爬坡,能就掌控在自己手里,不能就受制于人。来自微软立场、偏生态叙事,但这条「换模型测试」对正在搭 agent 平台的团队可直接套用。",
+      "content": [
+        "Nadella 把这套逻辑建立在「这一代网络效应来自数据、而且只需要很少的样本」这个前提上:既然几个样本就能学到一件事的新意,模型本身就不再是壁垒,能沉淀并保护住的私有 eval 才是。他给的检验动作很具体:你有一套私有 eval,现在用模型 A,能不能换成模型 B 后继续往上爬。能,说明你掌控着这条价值曲线;不能,说明你被某个模型锁死。顺着这个逻辑,他主张 harness 要保持开放、让所有模型都能接进来,配上自己的 context、tools 和 eval 来爬坡——这也是他认为 AI 原生创业公司、SaaS 公司和传统企业都需要的同一项能力。",
+        "他进一步把这件事推到会计层面:私有 eval 加上「在公司里跑了很久、吃过所有 trace」的 veteran agent,在他看来应该进资产负债表——过去人的 tacit knowledge 没法入表,现在通过 agent 可能可以。这一步是他本人的判断,带「I think / 至少我们这么认为」的语气,不是已发生的事实。",
+        "关于工程角色,他没有给确定预测,而是转述了在场提到的一种划分(管 agent 的人、forward deployed engineer、安全工程师、做大规模基础设施的人,其余收敛进 agentic 流程),并补充 LinkedIn 已经实际搭了一个叫 full-stack builder 的新岗位:把设计、产品、前端的人合在一起,但每个人保留各自的「edge」。他还点了一个反直觉的细节——连 Excel 团队为了搭能学到 reward 的 RL 环境,都开始需要分布式系统人才。",
+        "立场上这是微软 CEO 在自家 Build 后的对谈,生态叙事(开放 harness、让别人也能成功)本身就服务于微软作为「harness / eval 公司」的定位,听的时候要打折。但其中可核验、可借用的是那条「换模型还能不能爬坡」的自查:正在选型或搭 agent 平台的团队,可以拿自己手里的 eval 真做一遍 A/B 切换,看锁定程度有多深。"
+      ],
+      "creator": "Satya Nadella",
+      "role": "Chairman & CEO, Microsoft",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "No Priors 播客", "url": "https://www.youtube.com/@NoPriorsPodcast" }
+      ]
+    },
+    {
+      "slug": "2026-06-04-aaron-levie-ai-expands-jobs-and-software-tam",
+      "title": "Aaron Levie 认为 AI 对就业和软件开支的影响是放大而非缩小,理由是软件项目和 token 开支同时暴增",
+      "summary": "Box CEO Levie 给出与「AI 取代岗位」相反的判断:AI 让公司软件项目数量空前增多,而只有工程师能维护、修安全、升级底层,这些都是岗位;销售、市场同理被放大。配套数据是企业 token 开支已远超历史软件开支。来自卖企业 AI 的立场,机制部分可对照自己组织验证。",
+      "content": [
+        "Levie 的机制是:非技术的人靠 AI 拼软件能撑一阵,但最终总得有人理解这东西到底是什么、去维护它、修出现的安全问题、升级底层系统——这些都是工作。他把工程当成「AI 冲击最大、感知风险最高」的样板来论证,再推广到销售(agent 能处理更多线索和客户调研所以更要招人)和市场(投放和定向效率提高会催生大量新岗位)。他的结论是 AI 对就业的净效应会和很多人预期的相反。",
+        "另一条推把这个判断接到开支上:过去企业大概每人每月花 10-50 美元买一份软件许可,现在为了增强生产力会在 token 上花到每人每月数百甚至上千美元——即使有雇主侧的额度上限,这笔开支也已远超历史上任何一次软件开支。他用这个来说明「企业里 intelligence 的 TAM」有多大,并据此判断 AI 市场会显著撑大传统软件市场的盘子。",
+        "需要做立场校准:Levie 卖的就是企业 AI,「软件市场会被撑大、岗位会更多」直接利好 Box 的叙事。可核验的是两个具体锚点——「软件项目比以往任何时候都多、且只有工程师能接手维护」这个现象,以及「per-license 几十美元 vs per-seat token 数百到上千美元」的量级对比,读者可以拿自己公司的实际开支和招聘情况对一对,看趋势是否成立。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "就业判断原推", "url": "https://x.com/levie/status/2062335852379066698" },
+        { "label": "token 开支原推", "url": "https://x.com/levie/status/2062280745889222937" }
+      ]
+    },
+    {
+      "slug": "2026-06-04-dan-shipper-saaspocalypse-backwards-chat-wrong-for-design",
+      "title": "Dan Shipper 对谈 Figma 的 Matt Colyer:自己跑 agent 反而更愿意付费买 SaaS,且 chat 是设计的错误界面",
+      "summary": "Every 的 Shipper 在 AI & I 播客抛出两个反共识判断:跑自己的 agent 会让你更愿意、而非更不愿意为 SaaS 付费;chat 这种界面不适合需要发散的设计工作。还点出 Figma MCP 的双向用法和「review 成为下一个瓶颈」。这是 Shipper 对其嘉宾观点的转述与背书,适合在重判 SaaS 价值的人点开。",
+      "content": [
+        "为什么自己跑 agent 反而更愿意付 SaaS 费,是这条最反直觉的点:Shipper 把它放在「SaaSpocalypse 叙事其实搞反了」的框架下提出,含义是当你手里有一堆 agent 在跑,对底层那套被沉淀好的数据模型、业务逻辑和服务的依赖不是变小而是变大。这一步的具体论证在播客正文里,推文只给了结论。",
+        "另一个判断针对界面:他认为 chat 不适合设计,因为设计需要发散(divergent)思维去生成大量新想法,而 chat 这种格式天生不擅长发散。配套讲了 Figma MCP 的两个方向——把一个线上网页反向重建到 Figma 画布上,或把 Figma 设计交给 agent 让它通过 pull request 去改。他还点了一句「review 是下一个瓶颈」,以及对应的方向是帮团队把评估规模化。",
+        "立场上要标注:这是 Shipper 主持自己节目、转述并认可嘉宾(Figma 开发者向产品管理总监 Matt Colyer)的观点,带推广性质;而且他在推里自陈在 SaaSpocalypse 恐慌期买过 Figma 股票、聊完「希望当时多买点」,对结论是看多的。这里可核验、可借用的是那两个机制命题本身——「自己跑 agent 是否真让你更依赖底层 SaaS」「chat 是否在发散类工作上吃亏」,做设计工具或 agent 产品的人可以拿自己的工作流验证。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "CEO, Every",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推(含时间轴)", "url": "https://x.com/danshipper/status/2062202908306030915" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "过去 24 小时里 Codex 接连出了三次影响可靠性的小故障,三次都太多了,我们正在采取措施防止再发生。我已经把所有付费套餐的 Codex 用量额度全部重置——愿 token 重新流动起来。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2062329981548802523"
+    },
+    {
+      "quote": "很高兴分享 Anthropic 数据团队用 Claude 把业务分析查询自动化了 95%。博客里讲了我们怎么做 eval、ablation 和线上验证。",
+      "creator": "Cat Wu",
+      "handle": "_catwu",
+      "sourceType": "x",
+      "url": "https://x.com/_catwu/status/2062408623565984209"
+    },
+    {
+      "quote": "在你的业务数据之上生成前端,是 coding AI 的杀手级应用之一。瓶子里的精灵已经放出来了,再也回不到笨重僵化的 dashboard。Vercel 本来就跑在 Snowflake 上,但有了 v0 和 Next.js,我们现在拿到了 1000 倍的价值。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2062199585322529108"
+    },
+    {
+      "quote": "OpenClaw 这周的 npm 下载量创了历史新高——再算上 Docker、GitHub、公司内部部署和大量 fork,真实数字更接近每周 1000 到 2000 万次下载。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2062276065448669627"
+    },
+    {
+      "quote": "发布 Beautiful Feishu Whiteboard skill:你的 agent 现在能在飞书 / Lark 文档里用 30 多种预设风格生成可编辑的 SVG 图,适合概念可视化、技术架构图、给会议或长文档做总结,甚至替代 PPT,而且所有元素都可编辑、能拖动。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2062256374730699257"
+    },
+    {
+      "quote": "说说这个产品的来历:Google Labs 的一个小团队想做一个把你和真正重要的东西连起来、又不用无尽下滑的 app,走廊里的一句话是「hope scrolling,不是 doom scrolling」。今天 Dreambeans 上线了,一份每天为你新鲜冲泡的灵感。",
+      "creator": "Josh Woodward",
+      "handle": "joshwoodward",
+      "sourceType": "x",
+      "url": "https://x.com/joshwoodward/status/2062217728824651848"
+    }
+  ]
+}

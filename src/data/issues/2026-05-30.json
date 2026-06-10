@@ -1,0 +1,77 @@
+{
+  "date": "2026-05-30",
+  "generatedAt": "2026-05-30T07:19:23.318Z",
+  "stories": [
+    {
+      "slug": "2026-05-30-salesforce-agentic-claude-code-boris-cherny",
+      "title": "Boris Cherny：Salesforce 用 Claude Code 把 231 天的迁移压到 13 天，且事故数没升反降",
+      "summary": "Claude Code 作者引用 Salesforce 的实操数据：一次原本估 231 天的迁移 13 天交付，单个 PR 交付 21 个端点且 100% 测试覆盖；PR 量上去的同时整体事故反而降了 5%。他的判断是收益最大的团队在重设工作流而非加速旧流程。想用 agent 做改造的工程负责人值得对照看完整 writeup。",
+      "content": [
+        "Cherny 把这组数字的前提点了出来：收益不来自让 agent 更快地做团队本来就在做的事，而来自删步骤、去交接、让 agent 端到端接管整段工作。他用一串问题框定改造方向——哪些步骤可以删掉、哪些交接可以消失、哪些环节 agent 可以自己全包。这是把「提速」和「重构」分开：只提速旧流程拿不到这个量级的结果。",
+        "可核验的硬数据有三个：一次原本估 231 天的迁移最终 13 天交付；单个 PR 一次性交付 21 个端点并做到 100% 测试覆盖；在 PR 出货量明显上升的同时，整体事故数还降了 5%。Salesforce 的做法是把安全护栏和质量标准直接写进 agentic 工作流本身，而不是事后补。",
+        "Cherny 顺势回应了「产能与质量是 tradeoff」这个常见框架——他说 Salesforce 没看到这种取舍。这条评价来自 Anthropic 内部，立场上自然偏向自家模型，且单一案例不等于普遍规律。可核验的是把质量门槛内建进 workflow 这个做法本身：正在用 agent 做大规模迁移的团队，可以照这个思路把测试覆盖和安全检查做成 agent 流程的硬约束，再看自己的事故曲线会不会跟着走平。完整 writeup 在原推链接里。"
+      ],
+      "creator": "Boris Cherny",
+      "role": "Claude Code, Anthropic",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "Salesforce 数据（231 天→13 天）",
+          "url": "https://x.com/bcherny/status/2060390852619272526"
+        },
+        {
+          "label": "质量与事故数",
+          "url": "https://x.com/bcherny/status/2060390853835726946"
+        },
+        {
+          "label": "重设工作流的判断",
+          "url": "https://x.com/bcherny/status/2060390855383400729"
+        }
+      ],
+      "engagement": "2.8K likes"
+    },
+    {
+      "slug": "2026-05-30-onyx-security-maxim-agent-oversight",
+      "title": "Onyx Security CEO：用「只判断要不要升级」的小模型监督 agent，因为给每个 agent 配一个 agent 成本扛不住",
+      "summary": "Maxim Bar Kogan 给出监督 agent 的工程取舍：给每个 agent 配一个全能 agent 来盯，成本和延迟扛不住，所以他们训只会判断「这一步要不要让更强的 agent 看」的小模型。他还给了企业部署占比和「为什么这事大厂自己做不了」的结构性理由。做 agent 治理、或在评估 AI 安全方案的人值得听。",
+      "content": [
+        "核心机制是为什么不能用「以 agent 治 agent」的直觉方案：如果给客户每个 agent 都配一个全能 agent 去监督，客户付给安全厂商的钱会超过付给 AI 本身的钱，延迟也无法接受。Kogan 的解法是训练一批「几乎什么都不会」的小模型，它们只擅长一件事——判断当前这一步要不要叫更强的 agent 来细看。只要这批小模型既不漏报、也不过度呼叫，就能在性能、成本、延迟之间拿到平衡。他用国际象棋类比：顶尖棋手大多数走子靠直觉、不前推计算，只在少数关键局面停下来长考；算力也应该这么花，高风险处才下重注。",
+        "他给了一组企业部署占比（来自自家客户群的观察）：自主编码 agent 和助手约占一半以上，低代码自动化约 45%，企业自建的 first-party agent 只有约 2%。他还点出传统安全工具为什么失效——身份权限模型的前提是限制软件能做什么，但企业恰恰想让 Claude Code 这类 agent 拥有自己的权限去自动干活；端点和 API 安全工具则不知道 agent「为什么」要删库，缺的是意图上下文。",
+        "他给的结构性判断是这事大厂（模型厂商）难以自己做完，理由有三：一是信任心理，买安全的人不会让卖产品的同一方来认证产品没问题，要独立第三方；二是数据，企业不愿把 agent 历史行为数据交给 Anthropic、OpenAI 这类「数据饥渴」的公司，但愿意给独立安全方，这给了 Onyx 大厂拿不到的行为基线；三是多供应商世界，出于成本和能力差异会同时用多家模型，指望每家都自带同等安全不现实。",
+        "这是外部创业者在讲自己融资中的产品，对市场规模（称是「千亿美元级」开口）和大厂做不了的判断都带卖方立场，需要打折看。可核验的是几条具体观察：human-in-the-loop 在动作量放大 100 倍、1000 倍后失效这个量级问题；以及他主动承认的 jagged intelligence——模型偶发的低级错误这一类，他认为会被模型厂商自己解决，Onyx 真正要管的是模型「有了自己的判断、和你不一致」那一类。正在搭 agent 治理的团队可以把「在哪一步该升级人工/强模型审查」当成一个可以单独训练的判断问题来设计，而不是全程上重模型。"
+      ],
+      "creator": "Maxim Bar Kogan",
+      "role": "Co-founder & CEO, Onyx Security（No Priors 播客）",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "No Priors：Building an AI Guardian for Enterprise",
+          "url": "https://www.youtube.com/watch?v=QDsbFLEt9ro"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "应用层拿不到比「一家公司花 5 亿美元自建一个它的版本」更好的广告了。这里当然有很多标题装不下的细节，但这应该让你对软件非常看好。",
+      "creator": "Aaron Levie",
+      "handle": "levie",
+      "sourceType": "x",
+      "url": "https://x.com/levie/status/2060525104384418271"
+    },
+    {
+      "quote": "一个创始人一直说「要是我们有钱就能做 X」。钱不是火，钱是浇在已经烧起来的火上的汽油。你没有融资问题，你有的是「大家还不想要」的问题。先去把第一把火点起来。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2060600088079356292"
+    },
+    {
+      "quote": "你还相信 benchmark，还是只听朋友的？是什么让你去试一个新模型？",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2060563528596287874"
+    }
+  ]
+}

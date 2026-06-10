@@ -1,0 +1,58 @@
+{
+  "date": "2026-05-11",
+  "generatedAt": "2026-05-11T10:00:12.739Z",
+  "stories": [
+    {
+      "slug": "2026-05-11-box-ai-automation-engineer",
+      "title": "Aaron Levie 说 Box 开始招「AI 自动化工程师」，把内部自动化当成嵌入业务的工程岗",
+      "summary": "Box CEO 解释为什么把 agent 落地到非编码的知识工作是一个独立的技术岗：要接数据与上下文、安全接系统、把关产出质量、设计人类介入点、跟着模型升级维护。他预计多数公司未来都会有这个角色的多种变体，适合在想内部铺 agent 的团队对照岗位边界。",
+      "content": [
+        "Levie 想说清的是为什么这件事必须是一个嵌入业务的全职技术岗，而不是兼职项目。他列的工作内容——确保 agent 拿到正确的上下文和数据、用安全的方式把系统接到 agent、保证产出质量、设计人在流程里介入的端到端形态、在模型和系统升级时维护 agent——指向同一件事：agent 从写代码扩展到其余知识工作时，失败点集中在数据接入、安全和质量把关，而这些都要懂业务的人贴着业务做。",
+        "他给这个岗位的类比是「面向内部职能的 forward deployed engineer」：既懂技术、又直接和业务部门搭档，帮他们改造工作方式、提升产出。他明确说这不是 nights and weekends 的副业，而是一个高度技术化的角色。",
+        "这条来自 Box 内部、本身在为招聘背书，立场上会放大这类岗位的必要性。可以核验的是他对工作内容的拆解——数据接入、安全集成、质量评估、人在环、升级维护。Levie 的判断是「我预计多数公司未来都会有这个角色的多种变体」(I expect most companies will have many flavors of this)，是预期不是断言；正在考虑内部铺 agent 的团队可以拿这份清单当岗位边界的参照。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO @ Box",
+      "sourceType": "x",
+      "engagement": "298 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2053672965125140915" }
+      ]
+    },
+    {
+      "slug": "2026-05-11-steipete-build-your-own-tools",
+      "title": "Peter Steinberger 演示给自己搭工具来提效：codex 跑 e2e、推特归档检索、RepoBar 内置浏览器",
+      "summary": "Steinberger 一连放出三个自建工具的用法：让 Codex 边跑 OpenClaw 端到端测试边用 /side 追问、用 Birdclaw 索引完整推特归档供 Codex 检索旧推、给 RepoBar 加内置浏览器在选 issue/PR 时带上下文。结论是要自己造工具才能更高效，适合想搭个人 agent 工作流的人参考。",
+      "content": [
+        "三条推背后是同一套做法：不是等现成工具，而是围绕自己的工作流现搭。一是让 Codex 给 OpenClaw 的 chat completion 端点做端到端测试改进，且测试用 OpenClaw 自身来跑，同时用 /side 在它工作时追加提问；二是 Birdclaw 存了他完整的推特归档，于是可以让 Codex 翻出任何一条以前点赞或收藏过的旧推；三是给 RepoBar 加了内置浏览器，在选中 issue、PR、commit sha 或 workflow 时直接带上上下文。",
+        "他对 RepoBar 的自评是「还有点 vibey，但能干活」(still a bit vibey but gets the job done)，没有把它说成成品。这三条都是他自家工具的演示，立场上偏向展示可行性；可核验的是用法本身——/side 的边问边跑、归档检索、带上下文的浏览器。",
+        "顺着他「你得给自己造工具才能更高效」(You gotta build yourself the tools to work more efficient)这句收尾，含义是：agent 编码门槛降到一定程度后，把私人工作流里反复出现的动作——追问、检索历史、凑上下文——封成自己的小工具，可能比迁就通用工具更划算。是否值得这么做仍取决于你重复这些动作的频率。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "Builder, OpenClaw / OpenAI",
+      "sourceType": "x",
+      "engagement": "160 likes",
+      "sourceLinks": [
+        { "label": "codex e2e + /side", "url": "https://x.com/steipete/status/2053744332675408151" },
+        { "label": "Birdclaw 推特归档检索", "url": "https://x.com/steipete/status/2053737275268177980" },
+        { "label": "RepoBar 内置浏览器", "url": "https://x.com/steipete/status/2053717468623872230" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "Jarred 试着把 Bun 用 Rust 重写了一遍，通过了现有测试套件的 99.8%。我们还不够有野心。",
+      "creator": "Thariq",
+      "handle": "trq212",
+      "sourceType": "x",
+      "url": "https://x.com/trq212/status/2053559397654348159"
+    },
+    {
+      "quote": "codex 原生的周末 hack：1. 买根线把 MIDI 键盘连上电脑；2.「嘿 codex，写个监听脚本和一个小网页，显示我在弹哪些和弦」；3. 好，现在再给我些练习、帮我看怎么提高。从头到尾就 5 分钟，完美跑通。",
+      "creator": "Dan Shipper",
+      "handle": "danshipper",
+      "sourceType": "x",
+      "url": "https://x.com/danshipper/status/2053551046299959760"
+    }
+  ]
+}

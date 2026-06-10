@@ -15,9 +15,18 @@
       "role": "Anthropic 官方帐号",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @claudeai（发布）", "url": "https://x.com/claudeai/status/2044785272617939282" },
-        { "label": "原推 @claudeai（Claude Code 更新）", "url": "https://x.com/claudeai/status/2044785266590622185" },
-        { "label": "原推 @claudeai（API 更新）", "url": "https://x.com/claudeai/status/2044785264313221470" }
+        {
+          "label": "原推 @claudeai（发布）",
+          "url": "https://x.com/claudeai/status/2044785272617939282"
+        },
+        {
+          "label": "原推 @claudeai（Claude Code 更新）",
+          "url": "https://x.com/claudeai/status/2044785266590622185"
+        },
+        {
+          "label": "原推 @claudeai（API 更新）",
+          "url": "https://x.com/claudeai/status/2044785264313221470"
+        }
       ],
       "engagement": "3.0K likes"
     },
@@ -33,10 +42,22 @@
       "creator": "Sam Altman",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @sama（更新清单）", "url": "https://x.com/sama/status/2044858862042591378" },
-        { "label": "原推 @sama（学习与插件）", "url": "https://x.com/sama/status/2044858863246323811" },
-        { "label": "原推 @kevinweil", "url": "https://x.com/kevinweil/status/2045004924682195027" },
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2044855448722100720" }
+        {
+          "label": "原推 @sama（更新清单）",
+          "url": "https://x.com/sama/status/2044858862042591378"
+        },
+        {
+          "label": "原推 @sama（学习与插件）",
+          "url": "https://x.com/sama/status/2044858863246323811"
+        },
+        {
+          "label": "原推 @kevinweil",
+          "url": "https://x.com/kevinweil/status/2045004924682195027"
+        },
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2044855448722100720"
+        }
       ],
       "engagement": "7.7K likes"
     },
@@ -53,7 +74,10 @@
       "creator": "Latent Space",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Latent Space", "url": "https://www.youtube.com/@LatentSpacePod" }
+        {
+          "label": "Latent Space",
+          "url": "https://www.youtube.com/@LatentSpacePod"
+        }
       ]
     },
     {
@@ -69,60 +93,16 @@
       "role": "OpenAI VP Science",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @kevinweil（发布）", "url": "https://x.com/kevinweil/status/2044862783947448611" },
-        { "label": "原推 @kevinweil（链接与演示）", "url": "https://x.com/kevinweil/status/2044862785201565840" }
+        {
+          "label": "原推 @kevinweil（发布）",
+          "url": "https://x.com/kevinweil/status/2044862783947448611"
+        },
+        {
+          "label": "原推 @kevinweil（链接与演示）",
+          "url": "https://x.com/kevinweil/status/2044862785201565840"
+        }
       ],
       "engagement": "772 likes"
-    },
-    {
-      "slug": "2026-04-17-ryo-lu-model-split",
-      "title": "Ryo Lu 公开自己在 Cursor 里的模型分工：Opus 4.7 做规划，Composer 2 做构建迭代，难 bug 交给 GPT-5.4",
-      "summary": "Opus 4.7 上线当天他就把它放进固定分工：规划给 4.7，构建和迭代用 Composer 2，难修的 bug 给 Codex/GPT-5.4，全部在 Cursor 里跑。他还顺带介绍了给设计师做的原型环境 baby glass。",
-      "content": [
-        "分工本身：规划用 Opus 4.7，构建和迭代用 Cursor 自家的 Composer 2，难修的 bug 交给 Codex/GPT-5.4，全程不离开 Cursor。这条发在 Opus 4.7 上线当天，新模型直接被放进了规划这个位置。",
-        "他同时在做的另一件事是 baby glass，和 @flowstated 一起做的 Cursor 新原型环境：让设计师在代码里快速构想、混搭和测试想法，用的是驱动 Cursor 3 新界面的同一套共享组件——顺带透露了 Cursor 3 有新界面这件事。"
-      ],
-      "creator": "Ryo Lu",
-      "role": "Cursor 设计师",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @ryolu_（模型分工）", "url": "https://x.com/ryolu_/status/2044789186130256062" },
-        { "label": "原推 @ryolu_（baby glass）", "url": "https://x.com/ryolu_/status/2044982132859400342" }
-      ],
-      "engagement": "2.4K likes"
-    },
-    {
-      "slug": "2026-04-17-alex-albert-opus-47",
-      "title": "Alex Albert 列出 Opus 4.7 的实用改进：effort 控 token 更可预测，高分辨率图不再被降采样",
-      "summary": "他挑的四个点都偏工程实用：异步任务和指令遵循更稳，effort 档位控 token 比以前可预测得多（另有新增的 xhigh 档），高分辨率图片不再被降采样，UI 和文档的品味明显变好。内部立场，行为类描述可以自己验证。",
-      "content": [
-        "他列的四点：非常擅长异步工作和遵循指令；effort 档位对 token 用量的控制比以前可预测得多，另有新增的 xhigh 档；高分辨率图片不再被降采样；UI、slides 和文档的品味明显更好。",
-        "这条来自 Anthropic 内部，立场偏自家。其中可核验的是行为描述：图片是否还被降采样、effort 和 token 用量的对应关系，都可以在自己的任务里直接验。品味一条主观成分大，参考权重可以放低。"
-      ],
-      "creator": "Alex Albert",
-      "role": "Anthropic 研究员",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @alexalbert__", "url": "https://x.com/alexalbert__/status/2044788914813292583" }
-      ],
-      "engagement": "857 likes"
-    },
-    {
-      "slug": "2026-04-17-claude-code-xhigh",
-      "title": "Claude Code 把 Opus 4.7 默认 effort 设为 xhigh，Cat Wu 建议把验证流程写进 claude.md",
-      "summary": "Claude Code 已把 Opus 4.7 的默认 effort 调到 xhigh，可用 /effort 改。她的另一条建议是把测试流程写进 claude.md 或做成 /verify-app skill——按她的说法，4.7 更擅长验证自己的工作。重度用户值得检查默认值。",
-      "content": [
-        "Claude Code 已把 Opus 4.7 的默认 effort 设为 xhigh，可以用 /effort 调整。她同一组使用建议里还有一条（素材里只见编号为 3 的这条）：告诉模型怎么验证自己的改动——把测试工作流写进 claude.md，或者加一个 /verify-app skill。按她的说法，Opus 4.7 更擅长验证自己的工作，把那些难以自行发现的本地开发技巧分享给它会有帮助。",
-        "可以做的两件事：确认 xhigh 默认值是否符合自己的延迟和用量偏好；把项目的测试流程显式写进 claude.md 或拆成 skill，让验证这步交给模型自己跑。"
-      ],
-      "creator": "Cat Wu",
-      "role": "Anthropic Claude Code 团队",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @_catwu（默认 xhigh）", "url": "https://x.com/_catwu/status/2044808539663978970" },
-        { "label": "原推 @_catwu（验证建议）", "url": "https://x.com/_catwu/status/2044808538351100377" }
-      ],
-      "engagement": "69 likes"
     },
     {
       "slug": "2026-04-17-workflow-sdk",
@@ -137,25 +117,42 @@
       "role": "Vercel CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2044858872842826102" }
+        {
+          "label": "原推 @rauchg",
+          "url": "https://x.com/rauchg/status/2044858872842826102"
+        }
       ],
       "engagement": "405 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我用 Opus 4.7 做规划，Composer 2 做构建和迭代，难修的 bug 交给 codex/gpt-5.4，全部在 @cursor_ai 里跑。",
+      "creator": "Ryo Lu",
+      "handle": "ryolu_",
+      "sourceType": "x",
+      "url": "https://x.com/ryolu_/status/2044789186130256062"
     },
     {
-      "slug": "2026-04-17-eval-agent-loop",
-      "title": "Peter Yang 构建 skill 的方法：独立 eval agent 做是/否打分，不全过就让执行 agent 继续改",
-      "summary": "他构建 skill 的固定流程：让 AI 另起一个 eval agent，对第一个 agent 的产出做一组是/否检查，没全过就打回去继续改。正在给 YouTube 缩略图和标题做一个。可以直接搬进自己 skill 工作流的小方法。",
-      "content": [
-        "流程本身很短：构建 skill 时，让 AI 另起一个独立的 eval agent，对第一个 agent 的产出做一组是/否检查；只要有一项不过，就让第一个 agent 继续改，直到全过。他现在正在给 YouTube 缩略图和标题构建这样一个评分器。",
-        "这个模式把验收标准压成了显式的二值判断，循环理论上可以少人值守地跑——这是编辑引申，他原帖只描述了流程。代价是每轮多一次评审调用，在自己的 skill 工作流里试一轮就知道值不值。"
-      ],
-      "creator": "Peter Yang",
-      "role": "Roblox 产品",
+      "quote": "Opus 4.7 里我最喜欢的几点：非常擅长异步工作和遵循指令；effort 档位对 token 控制可预测得多（还新增了 xhigh 档）；不再对高分辨率图片做降采样；在 UI、slides 和文档上明显更有品味。",
+      "creator": "Alex Albert",
+      "handle": "alexalbert__",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2044998456062906422" }
-      ],
-      "engagement": "15 likes"
+      "url": "https://x.com/alexalbert__/status/2044788914813292583"
+    },
+    {
+      "quote": "我们已经在 Claude Code 里把 Opus 4.7 的默认 effort 档位设为 xhigh，你可以用 /effort 调整。",
+      "creator": "Cat Wu",
+      "handle": "_catwu",
+      "sourceType": "x",
+      "url": "https://x.com/_catwu/status/2044808539663978970"
+    },
+    {
+      "quote": "我现在构建 skill 时，总会让 AI 另起一个独立的 eval agent，对第一个 agent 的产出做一组是/否检查；只要不是全部通过，就让第一个 agent 继续改。我现在正在给 YouTube 缩略图和标题构建一个这样的评分器。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2044998456062906422"
     }
   ]
 }

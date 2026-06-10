@@ -1,0 +1,134 @@
+{
+  "date": "2026-05-16",
+  "generatedAt": "2026-05-16T07:04:43.402Z",
+  "stories": [
+    {
+      "slug": "2026-05-16-lecun-ami-world-models",
+      "title": "LeCun 认为 LLM 本质上不可能做到可靠和安全,押注 JEPA 世界模型作为下一代路线",
+      "summary": "LeCun 在播客里系统讲了他离开 Meta 创办 AMI 的技术理由:LLM 在数学和代码上强,是因为语言本身就是推理的载体,但它无法预测自己行动的后果、也无法靠搜索做规划,因此他判断 LLM 这条路无法通向可靠的 agentic 系统。对在押注 agent 长期可靠性的人,这是一个来自图灵奖得主的反方坐标。",
+      "content": [
+        "LeCun 的核心论点是:智能行为需要两样 LLM 没有的东西——预测自己行动后果的能力,以及通过搜索和优化来规划一串行动的能力。LLM 的推理是逐 token 自回归预测,不是在动作空间里搜索一个能达成目标的序列。他由此推断,数学和代码之所以是 LLM 的强项,是因为这两个领域里语言本身就是推理的载体、且结果可被验证(跑代码、验证明);一旦离开这类领域,这套机制就没有对应物。顺着这个逻辑,他把 LLM 定位成「问题求解器」而非「软件架构师/计算机科学家」,认为它改变了人的工作层级(人上移到决定造什么),但不会整体替代人。",
+        "他对安全的判断比多数人更硬:LLM「本质上不可靠、不安全」,因为无法阻止幻觉,agentic 化之后也无法保证它不去执行一个没预测过后果的动作——训练误差和测试误差之间永远有缝,总能找到一个 prompt 让系统做蠢事。他提的替代方案是「目标驱动 AI」:系统靠世界模型预测一串想象动作的结果,用代价函数衡量任务是否达成,并可叠加安全约束(如「别伤到人」),让系统在构造上无法违反这些约束。他也保留了对冲:代价函数可能不准、世界模型可能不准,系统仍会犯错。",
+        "技术押注是 JEPA(联合嵌入预测架构):不在像素/token 空间做预测,而在抽象表示空间里预测。他给的经验证据是,过去能学好图像和视频表示的架构(DINO、I-JEPA、V-JEPA 等)全是非生成式的,生成式的(VAE、MAE)基本都不理想。难点是防止表示坍缩,他们正从蒸馏类方法转向一个显式正则项,最新的叫 SIGReG,他推荐读那篇 LeWorldModel 论文,但明确说目前仍是小规模。时间表上他说「五年完全统治」是引 Linus Torvalds 的玩笑,认真的判断是:需要换范式这件事大约到 2027 年初会变得显而易见,但这不代表那时就有解。",
+        "这是一条要做立场校准的素材:LeCun 在为自己新公司 AMI 的路线背书,对 LLM 的负面判断和对 JEPA 的信心都带利益相关。可核验的部分是他对架构差异的描述(自回归预测 vs 搜索规划、生成式 vs 联合嵌入)和他点名的具体工作(V-JEPA、SIGReG、LeWorldModel),这些可以自己去查论文验证;不可核验的是「五年/2027」这类时间判断和「LLM 永远不安全」这类强结论,按一位资深反方的观点来读即可。他另外抛出的 Tapestry 设想——用联邦学习式的开放基础模型让各国保留数据主权、各自微调出符合本地语言文化价值观的助手,并类比 Linux 最终抹平了 Sun/HP-UX——同属其长期判断,作为开源 vs 闭源走向的一个参照。"
+      ],
+      "creator": "Yann LeCun",
+      "role": "AMI Labs 创始人,前 Meta 首席 AI 科学家",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "Unsupervised Learning Ep 86(LeCun 专访)",
+          "url": "https://www.youtube.com/@RedpointAI"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-16-steipete-tokens-dont-matter",
+      "title": "Peter Steinberger 展示「假设 token 不要钱」怎么造软件:OpenClaw 上常驻约 100 个云端 codex",
+      "summary": "Steinberger 公开了 OpenClaw 的自动化全貌,核心问题是「如果 token 不要钱,未来该怎么造软件」。做法是把大量 codex 常驻云端,接管 PR/issue 审查、安全扫描、性能回归、去重、反垃圾,甚至旁听会议时主动开 PR。对在搭 agent 工程化流水线的人,这是一份具体到能照抄的清单。engagement: 3.7K likes。",
+      "content": [
+        "这条的信息量在于它把「token 不要钱」当成一个工程前提,据此重排了整条研发流水线。在这个前提下,单次调用成本不再是要纠结的变量,审查、维护、安全这些过去靠人间歇做的事,可以变成常驻的、对每个事件都触发的自动流程。",
+        "具体清单:约 100 个 codex 常驻云端审查每个 PR 和 issue;一个叫 clawsweeper 的 agent 会在 main 上修复落地后回头翻出半年前的老 issue 并附精确引用关掉它;每次 commit 跑 codex 做安全审查;用 codex 给 issue 去重、找聚类并把最紧迫的整理成报告;有 agent 能复现复杂环境、起临时机器、登录 Telegram、录制修复前后的视频贴到 PR;有 codex 盯新 issue,若契合既定愿景就自动开 PR(再由另一个 codex 审);还有专扫垃圾评论、验性能基准并把回归报进 Discord 的实例;甚至有 agent 旁听他们开会,讨论新功能时就当场开 PR。安全侧他同时用 Vercel 的 deepsec 和 Codex Security 找回归与漏洞。",
+        "同一天他还开源了 clawpatch 0.1.0(npm install -g clawpatch),把代码库切成语义化的功能切片做 bug 和质量审查、并记录带验证的修复尝试——这正是上面那套「让 codex 持续审查」流水线里负责切分和找问题的那块工具。他给的判断是「你会惊讶它能找出多少问题」,属作者对自家工具的宣传,可核验的部分是它的工作方式(语义切片 + 显式记录修复尝试),想验证可以装上跑一遍自己的库。对在搭类似 harness 的人,可操作的拿法是:先挑一两个高频、可自动验证的环节(PR 审查、安全扫描、性能回归)常驻化,而不是一次性铺满。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw 维护者",
+      "engagement": "3.7K likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推(token 不要钱的自动化全貌)",
+          "url": "https://x.com/steipete/status/2055405041843052792"
+        },
+        {
+          "label": "clawpatch 0.1.0 发布",
+          "url": "https://x.com/steipete/status/2055364630709448970"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-16-levie-fde-core-competency",
+      "title": "Aaron Levie 主张部署 AI 必须靠 FDE 模式,因为 AI 不像软件那样交付即定型",
+      "summary": "Levie 给出押注「前置部署工程(FDE)」的理由:软件是交付一个稳定产物就结束,AI 交付的是一个会持续变的东西——能力、最佳实践和底层模型都在变,模型升级甚至会改变工作流。他由此推断,随着系统从 chat 转向更难管理的 agentic,FDE 或其等价物会成为规模化部署 AI 的核心能力。",
+      "content": [
+        "他的机制论证是:在软件里你交付一个稳定的技术产物、客户采用、就结束了;但在 AI 里,你交付的东西在不断演化,既因为新能力和最佳实践不断冒出,也因为底层模型变化大到会实质改变工作流。正因为这种持续变动,他认为由一个厂商把最佳实践高效地复用到上千家公司,比每家公司各自摸索更合理,而且这些客户身上学到的东西应该直接回流进核心产品。",
+        "他把这条延伸到一个趋势判断:当系统从「谁都能较容易采用的 chat」走向「需要更显著投入去管理和更新的 agentic」,FDE 模式(或等价物)就从一种打法变成「任何规模化部署 AI 的人的核心能力」。",
+        "这条来自 Box CEO,Box 本身卖的就是内容 + AI、且在推 FDE 这套打法,立场上自然偏向「部署 AI 需要重服务」。可核验的部分是他描述的事实——模型升级确实会改变既有工作流、agentic 系统的运维成本高于 chat;这两点在自己团队的迁移经历里就能对照。要警惕的是「一个厂商复用最佳实践更优」这步带有卖方利益,是否真比公司自建更划算取决于具体场景。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "engagement": "220 likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2055501840419328286"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-16-danshipper-one-super-agent",
+      "title": "Dan Shipper 复盘在 OpenClaw 上做 agent 平台:一个公司级超级 agent 胜过给每人配 1:1 agent",
+      "summary": "Every 团队试做基于 OpenClaw 的 agent-as-a-service,Dan Shipper 给了两条一手教训:一是夹在 OpenClaw 和用户中间的平台层极难做,OpenClaw 迭代太快、回归多;二是现阶段「一个公司一个超级 agent」胜过「给每个人一个 1:1 agent」,因为 agent 要持续(常常是技术性的)维护才好用,而有本职工作的人不想整天折腾 agent 内部。",
+      "content": [
+        "第一条教训指向一个具体的位置风险:当你的产品是 OpenClaw 和用户之间的那一层,你既要跟上 OpenClaw 极快的迭代,又要替用户吸收它频繁的回归,这个中间层并不好待。",
+        "第二条是组织设计上的判断:与其给每个人配一个 1:1 的 agent,不如给全公司一个真正好用的 agent,并把「让它对全公司都好用」变成某个人的职责。理由是 agent 现阶段需要大量(常常是技术性的)工作才能保持好用,而有本职工作的人不愿意整天去碰 agent 的内部。他对长期方向保留了对冲——「我确实认为我们会慢慢走到(人手一个 agent)那一步」,只是现在还不行。",
+        "这是 Every CEO 对自家在做的方向的复盘,立场上会偏向他们押注的「公司级 agent + 专人负责」这条路。可核验的部分是两个具体观察——做 OpenClaw 上的中间层会被它的迭代和回归拖累、agent 需要持续技术维护;在自己评估要不要给团队铺 1:1 agent 时,可以拿这两点对照。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "Every CEO",
+      "engagement": "131 likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/danshipper/status/2055347527457886336"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "如果你既极擅长管理 agent、又极懂基本功,你会变得不可阻挡。我们都更愿意和真正的行家共事;新变化是,你已经承受不起错过 agent 给你产出带来的那种放大。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2055278852931530784"
+    },
+    {
+      "quote": "一代 PM 正难以适应 AI,因为他们被训练成执行 playbook,而 AI 要求你发明 playbook。过去二十年只有少数团队发明产品模式,其他人把它套到自己领域——这让大量 PM 工作变得枯燥机械,也是为什么这么多软件长得都一样。现在 PM 得做发明者,不是框架执行者,没有稳定的 playbook 可套了。你没法靠 A/B 测试测出一个突破性的 AI 产品。能做到,但 PM 需要先把旧的那套忘掉。",
+      "creator": "Madhu Guru",
+      "handle": "realmadhuguru",
+      "sourceType": "x",
+      "url": "https://x.com/realmadhuguru/status/2055414865146327088"
+    },
+    {
+      "quote": "/goal 简直就是给对工具的 AGI。我什么意思——它过了整个 2000+ 行条目的数据库,修好了所有产品图、由不同图片引起的前端 bug、还有描述,用浏览器 harness 从网上拿实时信息,用 web search 做事实核查,为它做过的所有活儿写了脚本以备将来……在我和创始人喝咖啡的两小时里跑完。我整个人傻了。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2055426430654439485"
+    },
+    {
+      "quote": "新加坡 AI Govtech 负责人估计,未来两年该国会有 13 亿个 agent,并正在搭一个国家级的 MCP gateway。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2055470634331750588"
+    },
+    {
+      "quote": "ChatGPT Finances 挺厉害的。不过 AI 在正确分类交易这件事上还是有困难。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2055396161910194395"
+    },
+    {
+      "quote": "我很欣赏团队总是这么认真对待这些反馈——哪怕最后的答案其实是「我习惯了现在这个程度的魔法,现在想要更多了,谢谢」。",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2055356452286640630"
+    }
+  ]
+}

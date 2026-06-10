@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-10",
+  "generatedAt": "2026-05-10T08:22:05.364Z",
+  "stories": [
+    {
+      "slug": "2026-05-10-elevenlabs-embedded-engineers",
+      "title": "ElevenLabs 在每个非技术团队里塞一名工程师，把审稿门槛而非人力扩出去",
+      "summary": "Mati 拆了 ElevenLabs 的组织打法：400 人、单团队不超 10 人、无 title，每个非技术团队（HR、法务、GTM）配一名工程师做自动化。他点出的真问题是非技术同事 vibe coding 后没人能把关安全和准确性。在搭内部 agent 团队的人值得对照。",
+      "content": [
+        "ElevenLabs 把工程师嵌进非技术团队，解决的是一个被 vibe coding 放大的新问题：当法务、HR、GTM 的人都开始让模型写代码和自动化，产出对不对、有没有安全和基建隐患，需要有人复核——而非技术岗位自己做这层复核的能力，按 Mati 的说法「相对很难」。所以团队里的那名工程师，角色更接近「把审稿质量这条线兜住」，而不只是替大家写脚本。",
+        "他给的具体例子是销售侧的让步谈判：以前每单的赔偿条款、责任上限给到什么程度都要他本人下场拍板，现在做成了一套按客户体量发「点数」的评分系统并全自动化。招聘端则是用工程能力去爬历史数据、分析过去什么有效。",
+        "组织形态上他强调几条同时成立：单个研究/产品团队都小于 10 人，多数人带 10 个左右直接下属，结构尽量扁平；公司无 title，按影响力而非资历定位。他提到这套「非技术团队里放工程师」的模式，在乌克兰政府那边也独立看到过。这是创始人对自家四岁公司的复盘，立场上会偏向证明小团队有效；可核验的是那套「评分系统替代逐单谈判」的具体做法，搭内部 agent 或自动化的人可以照着在自己流程里试一遍。"
+      ],
+      "creator": "Mati Staniszewski",
+      "role": "ElevenLabs 联合创始人兼 CEO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "Training Data 播客",
+          "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-10-elevenlabs-audio-jagged-trust",
+      "title": "Mati 画出音频模型的能力锯齿，并预测信任默认值会反转成「先假定是假的」",
+      "summary": "ElevenLabs 的 Mati 给了音频领域的 jagged intelligence 地图：客服和早期销售已稳定可用，真正的情感交互还不行、太慢；音乐能做制作级但出不了 Top Charts。他还提出一个反转判断：未来要验证的不是 AI，而是「被认证的真人」，其余默认是假的。对做语音 agent 的人有参考。",
+      "content": [
+        "Mati 把音频拆成几块不均匀的能力：把多个模型组合起来的客服支持场景「可靠地能用」，早期销售也开始能用；但一旦切到真正的情感互动，「还不行」——拿不准情绪、且偏慢。音乐侧同理，能拿到不错的制作级音乐，但即便有艺术家输入也做不出 Top Charts 水准。被问到是不是和 Karpathy 说的「实验室只训练有经济价值的部分」一样时，他没有顺着认领，而是说他们按「对客户的长期影响」来训，且会训一些短期不产生价值的模型，常花大量时间给数据标注音频的「怎么样」（用了什么情绪、声音如何描述），为此组了一个上千人、由声乐教练和音乐人组成的标注团队。",
+        "顺着护城河这个问题，他引了 Jensen 的说法：speech-to-text 是技术、text-to-speech 是艺术，并认同要真正做好 TTS 的情感性，得长期泡在这个空间、把用户偏好数据收回来做微调。含义是，他把可防御性押在数据和长期投入上，而不是单纯的模型规模——这是内部人对自家定位的判断，听的时候要打折。",
+        "更值得单独记的是他对信任的反转预测：当人人都有语音 agent 替自己订餐、问诊，所有交互都需要极高的「这确实是被认证的你」的信任度，于是未来会变成对「真人/被授权的真实」做编码解码，其余「默认全是假的」——和今天「默认是真、需要检测 AI」正好相反。这是 may/will 量级的预测而非已发生的事，但对做语音身份和 agent-to-agent 协议的人，是一个值得提前纳入设计的方向。"
+      ],
+      "creator": "Mati Staniszewski",
+      "role": "ElevenLabs 联合创始人兼 CEO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "Training Data 播客",
+          "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-10-levie-experts-higher-demand",
+      "title": "Aaron Levie：agent 让外行更容易入门，但抬高产出预期反而让专家需求更高",
+      "summary": "Box CEO Levie 论证 agent 带来的是和历次技术革命相同的双重效应：更多人能入门，但有经验的人用同样的工具产出更高，于是社会对各领域产出的预期持续上抬，专家因此更被需要、岗位不消失。机制是专家知道 agent 何时犯灾难性错误、能给对上下文。对在判断「专家会不会被取代」的人。",
+      "content": [
+        "Levie 的核心机制是：agent 同时放大两端，但专家那端放得更多。新手能进入以前进不去的领域去写软件、做创作、做研究；但同领域有经验的人，凭判断力和历史语境能把同样的工具用出超过新手的产出——他们知道 agent 什么时候在犯灾难性错误，能给 agent 对的上下文让它干得更好。",
+        "他把这归到一条和历次技术革命一致的规律上：民主化和专家产出提升同时发生，于是「我们对任何领域能拿到什么」的预期会随时间往上走，这反过来让专家需求更高、岗位不消失。他给了三个对照——你会更信一个用 agent 的律师而不是没见过合同怎么扛事的人，更信一个跑过生产系统的工程师，更信设计师的关键直觉而不是普通的 prompter。",
+        "这条判断和 Dan Shipper 此前「AI 让昨天的专家能力变便宜、却抬高对真专家的需求」是同一方向，但 Levie 补的增量是「预期上抬」这个传导环节：不是专家本身变稀缺，而是产出基准被抬高后，把没经验的人筛了出去。对正在判断自己所在领域会不会被 agent 取代的人，可核验的点是他这三个「你会更信谁」的断言——拿自己行业里 agent 出灾难性错误的真实案例去验证「有没有经验是不是真的拉开了差距」。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "engagement": "321 likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2053267097493573921"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-10-peter-yang-slop-compounding",
+      "title": "Peter Yang：AI 生成的 markdown 文件会让 slop 复利式累积",
+      "summary": "Peter Yang 描述了一个用 agent 攒文件的常见陷阱：你懒得手改 5% 的 slop，之后新文件又拿旧文件当参考来写，slop 从 5% 滚到 10% 再往上，最后攒出一堆没人搞得懂怎么运作的 AI 垃圾。机制是 agent 用自己的旧产出做新产出的上下文。对大量用 agent 生成 skills、md、html 的人是个值得警惕的失真循环。",
+      "content": [
+        "这条的增量在「复利」这个机制，而不是「AI 会产生 slop」这件已知事实。Peter Yang 拆的链路是：第一步你让 agent 生成一批 markdown（比如搭 skills），扫一眼觉得还行，明知有点 slop 但懒得手动改；第二步你让它生成更多文件，而此时它开始拿你之前那批文件当参考来写新的；于是初始的 5% slop 滚成 10%，再往上，最后你面对的是一堆让人发怵、自己都不清楚到底怎么运作的 AI 垃圾。",
+        "他在另一条推里点出根因的人性面：agent 生成的 md 和 html 看着都不错，但总有至少 10% 的 slop，而人会懒得手动去改。把这两点合起来看，问题不在单次生成质量，而在「不修正的产出被当成下一轮的参考输入」——错误没被截断，反而被沉淀成了上下文。对正在用 agent 批量攒 skills 和文档的人，含义是这层人工复核不能省，否则越往后越难回收。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品、AI 教程作者",
+      "engagement": "229 likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/petergyang/status/2053317001976881312"
+        },
+        {
+          "label": "相关推（10% slop / 懒得手改）",
+          "url": "https://x.com/petergyang/status/2053196581139321300"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-10-nikunj-model-execution-units",
+      "title": "Nikunj 给出一段自定义指令，让模型按「模型执行单位」而非人天来估工",
+      "summary": "Nikunj 贴了一段可直接粘进 custom instructions 的指令，解决模型老把活按人来估时的问题：要求它假设自己执行，按秒/分钟/工具调用/迭代次数报时，把工作切成模型可做的部分和需要账号、凭证、部署等人类前置步骤，只估自己那部分并显式标出人类阻塞步骤。对被模型的人天估算反复膈应的重度用户可直接抄。",
+      "content": [
+        "这条是可操作型素材，价值在那段指令本身的方法论。Nikunj 的设计是让模型在估算和规划时假设由它自己执行，时间单位改成模型执行单位（秒、分钟、工具调用、迭代次数），而不是人天或人头。",
+        "更关键的是它要求模型把任务显式拆成两类：(a) 模型自己能做的部分，(b) 需要人类前置或后续的部分，比如 API 注册、凭证、托管、部署，以及任何需要账号或它够不到的物理动作。模型只估自己那部分，把人类步骤标出来；其中会阻塞模型工作的人类步骤要标成 gating step 而非并行任务；如果一项任务完全要人来做，就直接说，而不是硬编一个模型计划。最后一条收尾设计得很实用：如果模型那部分短到能在当前对话里做完，就直接提议现在就开始，而不是只做规划。被模型按人天估工膈应的重度用户可以直接粘进自己的 custom instructions 试。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "engagement": "56 likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/nikunj/status/2053159569015328953"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "Mythos 显然能力强得离谱，我也很想用。但如果你正为它恐慌：benchmark 测的不是模型能力本身，而是在人类做完「找到一个能让模型能力显现出来的 prompt」这份工作之后的模型能力——那份工作并不轻松，需要熟练的专家在做一件看起来很像「工作」的事。",
+      "creator": "Dan Shipper",
+      "handle": "danshipper",
+      "sourceType": "x",
+      "url": "https://x.com/danshipper/status/2053191885116571935"
+    },
+    {
+      "quote": "HTML 重要，是因为人是视觉动物。多邻国创始人说过他做了多年消费产品后最大的教训之一是「人们不读字」。过去我们为「人来操作」优化输出格式（比如在 PPT 里推像素）；当 AI 来负责操作时，输出格式应该改为优化「人来消费」——事实证明人喜欢消费漂亮、可交互的产物。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2053291803135410674"
+    },
+    {
+      "quote": "GBrain v0.31.1 刚加了真正的 MCP thin client 支持。基本上你可以跑一个「家用 GBrain 服务器」，其它一切都通过 MCP 连上来，效果和本地跑差不多。GBrain 就此变成了 client-server。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2053306243704410460"
+    },
+    {
+      "quote": "教会了 codex 在 review PR 时去看社交信号。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2053374981824798751"
+    }
+  ]
+}

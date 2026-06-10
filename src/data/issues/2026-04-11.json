@@ -15,9 +15,18 @@
       "role": "Anthropic Claude Code 团队",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @trq212（发布）", "url": "https://x.com/trq212/status/2042671370186973589" },
-        { "label": "原推 @trq212（token 消耗）", "url": "https://x.com/trq212/status/2042671371684319723" },
-        { "label": "原推 @trq212（plan 与 ultraplan 的分工）", "url": "https://x.com/trq212/status/2042673325139427724" }
+        {
+          "label": "原推 @trq212（发布）",
+          "url": "https://x.com/trq212/status/2042671370186973589"
+        },
+        {
+          "label": "原推 @trq212（token 消耗）",
+          "url": "https://x.com/trq212/status/2042671371684319723"
+        },
+        {
+          "label": "原推 @trq212（plan 与 ultraplan 的分工）",
+          "url": "https://x.com/trq212/status/2042673325139427724"
+        }
       ],
       "engagement": "7.5K likes"
     },
@@ -35,8 +44,14 @@
       "role": "Anthropic Claude Cowork 负责人",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "The MAD Podcast with Matt Turck", "url": "https://www.youtube.com/@DataDrivenNYC/videos" },
-        { "label": "原推 @mattturck（含时间轴）", "url": "https://x.com/mattturck/status/2042638661389328413" }
+        {
+          "label": "The MAD Podcast with Matt Turck",
+          "url": "https://www.youtube.com/@DataDrivenNYC/videos"
+        },
+        {
+          "label": "原推 @mattturck（含时间轴）",
+          "url": "https://x.com/mattturck/status/2042638661389328413"
+        }
       ]
     },
     {
@@ -52,7 +67,10 @@
       "role": "Anthropic",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Anthropic Engineering", "url": "https://www.anthropic.com/engineering/claude-code-auto-mode" }
+        {
+          "label": "Anthropic Engineering",
+          "url": "https://www.anthropic.com/engineering/claude-code-auto-mode"
+        }
       ]
     },
     {
@@ -68,25 +86,11 @@
       "role": "Anthropic",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Anthropic Engineering", "url": "https://www.anthropic.com/engineering/infrastructure-noise" }
+        {
+          "label": "Anthropic Engineering",
+          "url": "https://www.anthropic.com/engineering/infrastructure-noise"
+        }
       ]
-    },
-    {
-      "slug": "2026-04-11-claude-for-word",
-      "title": "Claude for Word 进入 beta，和 Excel、PowerPoint 版共享同一个会话",
-      "summary": "在 Word 侧边栏里起草、编辑和修订，Claude 保留原格式，改动以 Word 修订模式呈现；和 Claude for Excel、PowerPoint 共享上下文，一个会话能跨多个打开的文档工作。目前仅限 Team 和 Enterprise 计划。",
-      "content": [
-        "Claude for Word 进入 beta：在侧边栏里起草、编辑和修订文档，Claude 会保留原有格式，所有改动以 Word 的修订（tracked changes）形式出现。目前仅对 Team 和 Enterprise 计划开放。",
-        "信息量更大的是第二条：Claude for Word 和 Claude for Excel、Claude for PowerPoint 共享上下文，Claude 可以在一个会话里跨多个打开的文档工作。这等于说 Office 三件套各自的侧边栏背后是同一个会话，从表格取数写进文档这类跨应用任务有可能在一轮对话里完成——这一步是编辑推断，官方表述只到「跨打开的文档工作」为止。个人计划用户暂时不在开放范围内。"
-      ],
-      "creator": "Claude",
-      "role": "Anthropic 官方账号",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @claudeai（beta 发布）", "url": "https://x.com/claudeai/status/2042670341915295865" },
-        { "label": "原推 @claudeai（跨应用上下文）", "url": "https://x.com/claudeai/status/2042670343173574705" }
-      ],
-      "engagement": "22.7K likes"
     },
     {
       "slug": "2026-04-11-harness-dead-weight",
@@ -101,7 +105,10 @@
       "role": "Anthropic Claude Platform 团队",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Claude Blog", "url": "https://claude.com/blog/harnessing-claudes-intelligence" }
+        {
+          "label": "Claude Blog",
+          "url": "https://claude.com/blog/harnessing-claudes-intelligence"
+        }
       ]
     },
     {
@@ -116,7 +123,10 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2042759653281456218" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2042759653281456218"
+        }
       ],
       "engagement": "242 likes"
     },
@@ -132,7 +142,10 @@
       "role": "Roblox 产品",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2042772055905689977" }
+        {
+          "label": "原推 @petergyang",
+          "url": "https://x.com/petergyang/status/2042772055905689977"
+        }
       ],
       "engagement": "654 likes"
     },
@@ -148,9 +161,18 @@
       "creator": "Zara Zhang",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @zarazhangrui（新旧世界）", "url": "https://x.com/zarazhangrui/status/2042513006018601065" },
-        { "label": "原推 @zarazhangrui（remix prompt）", "url": "https://x.com/zarazhangrui/status/2042846640130920574" },
-        { "label": "原推 @zarazhangrui（build to learn）", "url": "https://x.com/zarazhangrui/status/2042660162574467580" }
+        {
+          "label": "原推 @zarazhangrui（新旧世界）",
+          "url": "https://x.com/zarazhangrui/status/2042513006018601065"
+        },
+        {
+          "label": "原推 @zarazhangrui（remix prompt）",
+          "url": "https://x.com/zarazhangrui/status/2042846640130920574"
+        },
+        {
+          "label": "原推 @zarazhangrui（build to learn）",
+          "url": "https://x.com/zarazhangrui/status/2042660162574467580"
+        }
       ],
       "engagement": "556 likes"
     },
@@ -166,10 +188,25 @@
       "role": "FPV Ventures 合伙人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @nikunj（11 条清单）", "url": "https://x.com/nikunj/status/2042758851074588945" },
-        { "label": "原推 @nikunj（识别好 VC）", "url": "https://x.com/nikunj/status/2042723383599861817" }
+        {
+          "label": "原推 @nikunj（11 条清单）",
+          "url": "https://x.com/nikunj/status/2042758851074588945"
+        },
+        {
+          "label": "原推 @nikunj（识别好 VC）",
+          "url": "https://x.com/nikunj/status/2042723383599861817"
+        }
       ],
       "engagement": "161 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "Claude for Word 现已进入 beta：直接在侧边栏起草、编辑和修订文档，Claude 会保留你的格式，改动以修订形式呈现。已在 Team 和 Enterprise 计划上线。",
+      "creator": "Claude",
+      "handle": "claudeai",
+      "sourceType": "x",
+      "url": "https://x.com/claudeai/status/2042670341915295865"
     }
   ]
 }

@@ -15,9 +15,18 @@
       "role": "Anthropic 官方产品账号",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @claudeai（功能发布）", "url": "https://x.com/claudeai/status/2046328619249684989" },
-        { "label": "原推 @claudeai（版本历史）", "url": "https://x.com/claudeai/status/2046328621611065668" },
-        { "label": "原推 @claudeai（开放范围）", "url": "https://x.com/claudeai/status/2046328622869344429" }
+        {
+          "label": "原推 @claudeai（功能发布）",
+          "url": "https://x.com/claudeai/status/2046328619249684989"
+        },
+        {
+          "label": "原推 @claudeai（版本历史）",
+          "url": "https://x.com/claudeai/status/2046328621611065668"
+        },
+        {
+          "label": "原推 @claudeai（开放范围）",
+          "url": "https://x.com/claudeai/status/2046328622869344429"
+        }
       ],
       "engagement": "13K likes"
     },
@@ -34,7 +43,10 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2046397816755634340" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2046397816755634340"
+        }
       ],
       "engagement": "499 likes"
     },
@@ -51,59 +63,16 @@
       "role": "Vercel CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @rauchg（轮换密钥提醒）", "url": "https://x.com/rauchg/status/2046305710120829374" },
-        { "label": "原推 @rauchg（20 项安全改进）", "url": "https://x.com/rauchg/status/2046406894269747668" }
+        {
+          "label": "原推 @rauchg（轮换密钥提醒）",
+          "url": "https://x.com/rauchg/status/2046305710120829374"
+        },
+        {
+          "label": "原推 @rauchg（20 项安全改进）",
+          "url": "https://x.com/rauchg/status/2046406894269747668"
+        }
       ],
       "engagement": "647 likes"
-    },
-    {
-      "slug": "2026-04-21-openclaw-tencent-evals",
-      "title": "Peter Steinberger 披露腾讯为 OpenClaw 提供 evals 改进 harness 表现，修复将回流开源仓库",
-      "summary": "这条转发透露的合作有两层：腾讯提供 evals 帮 OpenClaw 改进 harness 性能，双方再把修复和改进带回开源仓库。他还说被转发的产品适合不习惯终端的用户。目前只有他单方面的说法，关注 OpenClaw 生态的人值得记一笔。",
-      "content": [
-        "steipete 公开感谢腾讯团队：对方提供 evals，用于改进 OpenClaw 的 harness 性能；双方还在合作把修复和改进带回开源仓库。这条是他转发腾讯相关发布时写的，他补了一句，对不习惯终端的用户来说这是个好选择——被转发的产品细节他没有展开。",
-        "值得记下的是参与方式：大厂以提供 evals、向上游回流改进的形式进入这个开源 agent 项目，而不只是拿走代码。这是编辑的解读，目前只有 steipete 单方面的说法，合作范围和持续性都待观察；后续可以看开源仓库里是否真出现来自腾讯方向的提交。"
-      ],
-      "creator": "Peter Steinberger",
-      "role": "OpenClaw 作者",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2046259696722465113" }
-      ],
-      "engagement": "1.1K likes"
-    },
-    {
-      "slug": "2026-04-21-swyx-sky-computer-use",
-      "title": "Swyx 认为 OpenAI 收购 Sky 可能是其近一年最好的交易，可用的 computer use 现在才真正铺开",
-      "summary": "swyx 给 Codex 与 Sky 这桩收购的定性：可能是 OpenAI 过去一年最好的 deal 之一。依据是他自 2024 年看到 Romain Huet 用 4o Vision 演示 ChatGPT App 起就在等真正的 computer use，到现在才看到它以可用形态实际铺开。",
-      "content": [
-        "swyx 认为 Codex 与 Sky 的收购可能是 OpenAI 过去一年做得最好的交易之一。他的参照点是时间：2024 年 AIEWF 大会上 Romain Huet 用 4o Vision 演示了 ChatGPT App，从那时起他就在等「真正的」computer use，直到现在才看到它以可用的形态实际铺开。",
-        "从 demo 到可用隔了大约两年，顺着他的时间线，computer use 的瓶颈更可能在可靠性而非演示效果——这是编辑推断，他本人没有展开原因。收购对这次落地的实际贡献有多大，要看 OpenAI 后续的披露；但「现在才真正可用」是一个长期跟踪该方向的人给出的体验判断，在评估 computer use 是否到了可集成阶段的人可以参考。"
-      ],
-      "creator": "Swyx",
-      "role": "Latent Space 播客 / AI Engineer 大会",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2046362691606855700" }
-      ],
-      "engagement": "93 likes"
-    },
-    {
-      "slug": "2026-04-21-petergyang-design-agents",
-      "title": "Peter Yang 觉得 Codex 的前端设计短板可以用 AI 设计工具补齐，他的首选是 Pencil",
-      "summary": "Peter Yang 的搭配思路：Codex 在前端设计能力上的差距，套一个 AI 设计工具就能轻松补上，他点名 Tom Krcha 的 Pencil。另一句感受是用 agent 做设计比用 agent 写码还有乐趣。用 Codex 做前端、嫌产出不好看的人可以试这条路。",
-      "content": [
-        "他觉得 Codex 在前端设计技能上的差距，用一个 AI 设计工具就能轻松补上，自己最喜欢的是 Tom Krcha 做的 Pencil。同一时间他还发了一句感受：比用 agent 写码更有乐趣的，只有用 agent 做设计。",
-        "这等于说模型选型不必把界面审美算成硬指标——编码强但设计弱的模型，可以在工具层补齐。他没有展开 Pencil 怎么接进 Codex 的工作流，当成方向提示比当成教程更合适；用 Codex 产出前端、对视觉效果不满意的人，可以拿 Pencil 这类工具试一轮。"
-      ],
-      "creator": "Peter Yang",
-      "role": "Roblox 产品，AI 教程作者",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @petergyang（Pencil 补设计短板）", "url": "https://x.com/petergyang/status/2046434019307561342" },
-        { "label": "原推 @petergyang（用 agent 做设计）", "url": "https://x.com/petergyang/status/2046434474603446535" }
-      ],
-      "engagement": "41 likes"
     },
     {
       "slug": "2026-04-21-turck-ai-tam",
@@ -117,7 +86,10 @@
       "role": "FirstMark Capital 投资人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @mattturck", "url": "https://x.com/mattturck/status/2046284478151086178" }
+        {
+          "label": "原推 @mattturck",
+          "url": "https://x.com/mattturck/status/2046284478151086178"
+        }
       ],
       "engagement": "16 likes"
     },
@@ -134,26 +106,46 @@
       "role": "OpenClaw 作者",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @steipete（wacli 0.6.0）", "url": "https://x.com/steipete/status/2046375922031321401" },
-        { "label": "原推 @steipete（gog 0.13）", "url": "https://x.com/steipete/status/2046356596683411924" }
+        {
+          "label": "原推 @steipete（wacli 0.6.0）",
+          "url": "https://x.com/steipete/status/2046375922031321401"
+        },
+        {
+          "label": "原推 @steipete（gog 0.13）",
+          "url": "https://x.com/steipete/status/2046356596683411924"
+        }
       ],
       "engagement": "702 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "感谢腾讯团队和我们合作、提供 evals 来改进 OpenClaw 的 harness 性能！我们还在和他们合作，把修复和改进带回开源仓库。对不习惯终端的人来说是个不错的选择。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2046259696722465113"
     },
     {
-      "slug": "2026-04-21-zara-agents-html",
-      "title": "Zara Zhang 主张让 agent 用 HTML 这门母语输出，做幻灯片 HTML 比 XML 好看得多",
-      "summary": "观点本身一句话：HTML 是 agent 的母语，让它用母语表达自己；出于类似原因，agent 用 HTML 生成的幻灯片观感远好于 XML。给 agent 产出物（幻灯片、报告、artifact）选格式的人，可以直接拿这条做一轮对比验证。",
-      "content": [
-        "她的说法是 agent 以 HTML 为母语，应该让 agent 用母语表达自己；出于类似的原因，agent 用 HTML 生成的幻灯片比用 XML 生成的好看得多。这是她在转发一条帖子时给出的评论。",
-        "顺着这个逻辑，给 agent 选输出格式时可以优先选它最熟悉的表达形式，再转换成目标格式——这是编辑引申，她的原话停在母语类比和幻灯片这个例子。正在为 agent 产出物选格式的人，拿 HTML 和 XML 各生成一版对比，验证成本很低。"
-      ],
-      "creator": "Zara Zhang",
-      "role": "Builder",
+      "quote": "Codex 收购 Sky 可能是 OpenAI 过去一年做得最好的交易之一。自从 2024 年 AIEWF 上 Romain Huet 用 4o Vision 演示 ChatGPT App 起，我就一直在等「真正的」computer use，直到现在它才以可用的形态真正铺开。",
+      "creator": "Swyx",
+      "handle": "swyx",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2046454622852657264" }
-      ],
-      "engagement": "34 likes"
+      "url": "https://x.com/swyx/status/2046362691606855700"
+    },
+    {
+      "quote": "我觉得 Codex 在前端设计能力上的差距，用一个 AI 设计工具就能轻松补上。我最喜欢的是 Tom Krcha 做的 Pencil。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2046434019307561342"
+    },
+    {
+      "quote": "agent 以 HTML 为母语，应该让 agent 用母语来表达自己。（出于类似的原因，agent 用 HTML 生成的幻灯片比用 XML 生成的好看得多。）",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2046454622852657264"
     }
   ]
 }

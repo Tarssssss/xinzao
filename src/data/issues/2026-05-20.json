@@ -1,0 +1,158 @@
+{
+  "date": "2026-05-20",
+  "generatedAt": "2026-05-20T07:32:12.985Z",
+  "stories": [
+    {
+      "slug": "2026-05-20-karpathy-joins-anthropic",
+      "title": "Karpathy 宣布加入 Anthropic，判断未来几年是 LLM 前沿最关键的时期",
+      "summary": "Karpathy 个人宣布加入 Anthropic，回到 R&D 一线，理由是他判断未来几年的 LLM 前沿会特别「formative」（最具塑形作用）。他同时说仍然对教育充满热情、打算「在适当的时候」重拾。关注前沿人才流向、或在意他教育内容后续的人值得知道。",
+      "content": [
+        "这条之所以是当天最大的信号，不在于「换了家公司」，而在于他对时机的判断和对自己精力的重新排序。他用的词是未来几年的 LLM 前沿会「especially formative」，原话强调的是这段时期对整个方向的塑形作用，所以他选择回到 R&D 一线，而不是停在评论或教育位置。",
+        "对教育，他的措辞是 hopefully 级别的犹疑：说自己仍然 deeply passionate，「打算在适当的时候」（plan to resume in time）重拾相关工作。这里不宜读成「他承诺会继续做教育」——原文是把教育放到了一个没有时间表的「以后」，当下的重心明确给了前沿研究。",
+        "这是一条本人发布的去向声明，不含任何关于职位、团队或具体方向的细节，外界目前能确认的只有「加入」和上述两点框架。顺着这个逻辑，如果他后续的产出方向是研究而非工具或课程，与这条自述是一致的，但这属于推断，不是他说过的话。"
+      ],
+      "creator": "Andrej Karpathy",
+      "role": "前 Tesla AI 总监、OpenAI 创始团队成员",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "Karpathy 原推", "url": "https://x.com/karpathy/status/2056753169888334312" }
+      ]
+    },
+    {
+      "slug": "2026-05-20-serval-jake-stauch-ai-native-itsm",
+      "title": "Serval 创始人 Jake Stauch：应用层公司的护城河是客户洞察，产品的价值在于给模型加边界",
+      "summary": "Serval 在做 AI 原生的 ServiceNow。创始人给出一套应用层在基础模型时代的生存逻辑：护城河是客户洞察而非可隔夜复制的产品，产品价值在于权限/审批/审计这类「边界」，并用双 agent 架构把能力和管控分开。对思考 wrapper 之争、或在搭企业内 agent 的人有方法论参考。属创始人自述，部分主张待核验。",
+      "content": [
+        "他对「基础模型会不会吃掉应用层」的回答，核心是把产品重新定义成约束而不是能力。原话是 the product is the boundaries, the product is the controls——他认为现在的问题不再是 Opus、GPT 能不能做到，而是大企业怎么在不抬高安全风险的前提下放手让模型跑；所以真正的产品是权限、审批、审计、日志、限定 API scope 这些「无聊的老式企业软件」的东西。",
+        "落到架构上是双 agent 拆分：admin agent 负责搭工具和 skills、配好审批和权限；helpdesk agent 面向终端用户、可以「放开跑」用全部推理能力解决问题，但只能调用 admin 已经明确批准的工具。他还提到一个具体的反面问题——让自动化变得太容易，会有人一周内建出第 20 个重复的改密码 workflow，AI 反而被搞糊涂；他们为此专门做了一个能感知全部历史 workflow 的 agent 来做去重和重构建议。",
+        "成本和护城河上他给了两个值得记的点。一是单位经济：他们不是在转卖 token，自动化一旦生成就是跑现成的 TypeScript，不会每次改密码都重新生成代码，所以 cogen 的 token 消耗比外界预期低；他明确说现在让团队「多花钱、用最好的产品」，成本优化留到以后。二是护城河：随着实施环节被 AI 做得很快，他认为可复制的产品优势会隔夜消失，留下来的护城河是客户洞察和人——他自己每天在 100 多个客户的 Slack 群里。",
+        "他还抛了一个值得跟踪的张力判断：个人想要 agent 的「自主」，组织（尤其 IT）想要「管控」，消费级产品天然偏自主、企业级偏控制层，而现在是个人在企业内自发采用工具、把这个张力顶到台前。可操作含义上，正在企业里搭 agent 的人可以照他这套「能力归 helpdesk 侧、管控归 admin 侧」的拆分来设计权限边界。需注意这是创始人对自家方法论的自述，其中「Anthropic 过去几个月新增的 ARR 超过 ServiceNow 过去二十年」是他给出的对比说法，应作为其观点而非核实过的数据看待。"
+      ],
+      "creator": "Jake Stauch",
+      "role": "Serval 创始人兼 CEO（嘉宾，Sequoia《Training Data》播客）",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Training Data 播客", "url": "https://www.youtube.com/watch?v=j7ypvRUFY7M" }
+      ]
+    },
+    {
+      "slug": "2026-05-20-anthropic-managed-agents-self-hosted-sandboxes-mcp-tunnels",
+      "title": "Anthropic 为 Claude Managed Agents 加入自托管沙箱与 MCP 隧道，工具执行可留在企业边界内",
+      "summary": "Anthropic 让 Claude Managed Agents 的工具执行可以搬到客户自己控制的沙箱、并通过 MCP 隧道连内网私有服务。机制是 agent 编排循环留在 Anthropic，工具执行和数据留在你的边界内。沙箱公测、MCP 隧道研究预览。在意数据不出域、正评估托管 agent 落企业的团队值得看。",
+      "content": [
+        "这次更新要解决的是「想用托管 agent、又不想让敏感文件和内网服务离开自己边界」的矛盾。做法是把职责切开：负责编排、上下文管理和错误恢复的 agent loop 留在 Anthropic 的基础设施上，而工具的实际执行挪到客户自己配置的环境里，文件和仓库不离开你既有的网络策略、审计日志和安全工具所在的边界。资源规格和运行时镜像也由客户侧设定，长构建、图像生成这类重计算任务能拿到需要的 CPU 和内存。",
+        "沙箱可以自带，也可以用四家列出的托管商，各有侧重：Cloudflare 用 microVM 和轻量 isolate 跑规模化、出站请求零信任注入密钥并可审计/改写 egress；Daytona 是长时有状态的「完整可组合计算机」，会话期间可经 SSH 或鉴权预览 URL 访问、能暂停并完整恢复状态；Modal 主打任意镜像亚秒启动、可扩到数十万并发沙箱并按需给 GPU；Vercel 把凭据在网络边界注入、使其不进入沙箱本体。文中点名了几个早期客户：Amplitude（在 Managed Agents + Cloudflare 上做内部设计 agent）、Clay 的 Sculptor、Rogo 的分析师 agent（Vercel Sandbox）。",
+        "另一半是 MCP 隧道：你部署一个轻量网关，只发起一条出站连接，不需要任何入站防火墙规则或公网端点，就能让 agent 把内网数据库、私有 API、知识库、工单系统当成工具来调，流量端到端加密。它在 Managed Agents 和 Messages API 都支持，由组织管理员从 Claude Console 的 workspace 设置里管理。需要留意成熟度差异：自托管沙箱是 public beta，MCP 隧道目前是 research preview、需申请加入——要进生产前可以据此先评估。"
+      ],
+      "creator": "Claude Blog（Anthropic）",
+      "role": "Anthropic 官方博客（产品发布）",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Claude Blog 公告", "url": "https://claude.com/blog/claude-managed-agents-updates" },
+        { "label": "Vercel CEO Rauch 转发", "url": "https://x.com/rauchg/status/2056735989830471977" },
+        { "label": "Claude 官方账号", "url": "https://x.com/claudeai/status/2056645493493575681" }
+      ]
+    },
+    {
+      "slug": "2026-05-20-sam-altman-discounted-token-commits",
+      "title": "Sam Altman：OpenAI 对 1-3 年用量承诺提供折扣 token，并给本批 YC 每家公司投 200 万美元 token",
+      "summary": "Altman 称客户越来越要算力确定性，OpenAI 据此对 1-3 年的用量承诺给折扣 token，并向本批 YC 每家创业公司投 200 万美元 token。他判断随模型变强，世界会有一段时间处于算力受限。供给有限、且要留足给 ChatGPT/Codex。正在做长期算力预算、或本批 YC 的团队直接相关。",
+      "content": [
+        "这套动作背后的逻辑是双向锁定。Altman 说客户越来越向他们要「算力的确定性」（certainty on capacity），而他的判断是随着模型变好，世界会有一段时间处于算力受限——所以 OpenAI 用 1 到 3 年的用量承诺换折扣 token，他同时点明这「也帮我们做规划」，措辞是 hopefully 级别的「但愿是个双赢」，不宜读成确定结论。",
+        "配套的是面向创业公司的「tokenmaxxing」投放：OpenAI 向当前这批 YC 的每家公司投 200 万美元的 token。他对这件事的表述是兴奋于会出现什么样的 tokenmaxxing 创业公司、以及它们内部怎么运作、能做出什么产品，而不是给出任何效果承诺。",
+        "有两个限定条件读者别漏：这个 token 投放计划只供应到「当前这批额度卖完为止」，并且他特地说会留足容量给 ChatGPT、Codex 等自家产品；他还说打算未来再做、意图仍是尽快建更多算力。可操作含义上，正在做多年算力预算的团队，可以把「用长期承诺换折扣 + 锁定容量」当成一个正在被供给方主动推的选项来评估，但要把上面的额度上限和优先级限定算进去。"
+      ],
+      "creator": "Sam Altman",
+      "role": "OpenAI CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "折扣 token 承诺", "url": "https://x.com/sama/status/2056827105401614656" },
+        { "label": "额度与容量说明", "url": "https://x.com/sama/status/2056834734915977382" },
+        { "label": "YC 每家投 200 万 token", "url": "https://x.com/sama/status/2056933166875857290" }
+      ]
+    },
+    {
+      "slug": "2026-05-20-levie-token-cost-enterprise-cio",
+      "title": "Aaron Levie：token 成本正成为企业里最被争论的话题，但还没人觉得自己有对的解法",
+      "summary": "Levie 从一场财富 500 强 CIO 晚宴带回一手观察：token 成本是最激烈的议题，企业在拼凑各种策略（按模型分配负载、按用户类型分配 agent、按团队设花费上限、要团队用 use case 论证、或干脆放开），但基本没人觉得自己找到了对的解法。在为企业做 AI 成本治理的人值得看。",
+      "content": [
+        "为什么没有标准答案，是这条的重点。Levie 的解释是底层技术和成本模型都在持续变动，企业是在一个移动靶上找「半可预测」的模型，所以现在看到的全是临时拼凑。这跟同一天 Altman 推「用长期承诺换折扣」是同一问题的两端——供给方在卖确定性，需求方还没想清楚怎么买。",
+        "他把企业正在用的策略列成了一份菜单，可以直接对照自查：按工作负载把任务分给不同档位的模型；按用户类型发更好或更差的 agent 权限；按团队设不同的花费上限；让团队用各自的 use case 来论证 AI 开支；以及一部分干脆给不设限的访问。Levie 的措辞是这些被「混着用」，没有指认哪条是对的。",
+        "这是来自一线企业买方的一手信号，价值在于「最激烈的议题」这个定性本身——它说明 token 成本治理已经从工程问题上升成 CIO 级的预算和组织问题。需要做这件事的人，可以把上面五条当成现成的策略清单去评估，而不必从零设计。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "Levie 原推", "url": "https://x.com/levie/status/2056965292753146019" }
+      ]
+    },
+    {
+      "slug": "2026-05-20-levie-box-eval-gemini-3-5-flash",
+      "title": "Aaron Levie：Gemini 3.5 Flash 在 Box 自家复杂工作评测上较 Gemini 3 Flash 提升 12 个百分点",
+      "summary": "Levie 公布 Box 用自家「复杂工作评测」对 Gemini 3.5 Flash 的早期结果：复杂文档任务整体 +12 个百分点，各行业全面提升，医疗、生命科学涨幅最大（+22pp、+20pp）。评测方式是让 Box AI Agent 做银行/咨询/医疗等行业的真实知识工作任务。属合作方自测，正评估 Flash 档模型的人可对照。",
+      "content": [
+        "这条的价值是给了一个区别于公开榜单的「真实任务」读数。Box 的评测不是跑标准 benchmark，而是给 Box AI Agent 一批代表银行、咨询、公共部门、医疗等行业里「常见但难」的知识工作任务——起草报告、做尽职调查这类，配上相关文档让它解。Levie 给出的整体结论是复杂文档任务相对 Gemini 3 Flash 提升 12 个百分点。",
+        "分行业的数字值得记，因为涨幅很不均匀：金融服务 81% 对 73%（+8pp）、公共部门 76% 对 59%（+17pp）、医疗 73% 对 51%（+22pp）、生命科学 67% 对 47%（+20pp）。原本低分的行业（医疗、生命科学）跳得最多，这对在这些领域里用 Flash 档模型的人是更直接的参考。",
+        "立场上要做校准：这条来自 Box，而 Box 正在把 Gemini 3.5 Flash 接入自家 Box AI Studio 和 API、Box MCP Server 也将进 Gemini app，所以框架自然偏正面。其中可核验的部分是评测方法（自家 eval、真实知识工作任务、按行业分项）和具体百分比——在意的人可以照这个口径在自己的文档任务上验一遍，而不必照单全收「全面提升」的总结。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "Levie 原推", "url": "https://x.com/levie/status/2056804573449474527" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "Google 今天这次发布是真的让人印象深刻（还记得他们一度落后吗）。Gemini 3.5 Flash 的表现：多模态延续既有强项（MMMU-Pro 拿到 83.6%），agentic coding 大跳（Terminal-Bench 76.2%、真实任务 Toolathon 56.5%），专家任务也有进展（Finance Agent 2 拿到 57.9%……我们要完了），SWE-Bench、OSWorld 等多项领先。当然，只是 benchmark，而且不便宜（约 9 美元/百万输出 token），但 Google 确实在发力——有三家实验室竞争，我们都被宠坏了。",
+      "creator": "Matt Turck",
+      "handle": "mattturck",
+      "sourceType": "x",
+      "url": "https://x.com/mattturck/status/2056834038946775343"
+    },
+    {
+      "quote": "即便在 Bay Area 这群 AI 信徒里，我觉得也极少有人真正把这件事计入预期：我们已经从助手走到了同事，并即将进入自主员工阶段。是的，「自主」目前确实还不工作，但 harness 和模型能力会在这片区域内、对相当一部分工作把我们带到那一步。AI 已正式进入扩散期（不是指扩散模型）——模型只需要被扩散到它们所做的一切中去，这要花未来 10 到 20 年，我把它叫做最后一公里的最后一公里。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2056865808832397344"
+    },
+    {
+      "quote": "我现在用 Composer 2.5 做规划、用 Composer 2.5 做构建和迭代、用 Composer 2.5 做调试。一个很棒的全能手，尤其在 UI 工作上——配合 Cursor 里的 Design Mode 能让你进入心流。",
+      "creator": "Ryo Lu",
+      "handle": "ryolu_",
+      "sourceType": "x",
+      "url": "https://x.com/ryolu_/status/2056892527626817935"
+    },
+    {
+      "quote": "我这套 AI 软件开发流程有四部分：1）先放好约 50 个测试，并指示它继续加，包括「建一条记忆：做浏览器 e2e 测试时，用计算机视觉在 mobile/desktop/iPad/ultrawide 各分辨率下也目检一遍设计和 UX 问题」；2）/plan 拆分并改写热路径，把文件隔离开便于编辑和阅读，顺手加好日志和错误边界/处理，再问它「为了可维护性/性能/AI 可编辑性还该重构什么」；3）（带着 plan）「你可以破坏向后兼容。先列出所有剩余工作，再做下一片，不做完不要停，期间定期停下来提交、部署、测试，但不做完不要停」；4）边跑边定期抽查已部署的功能、用 /steer 纠 bug。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2056877529991205072"
+    },
+    {
+      "quote": "推出 Gemini Spark！我们的 7×24 个人 AI agent，在你的指挥下主动管理任务、帮你打理数字生活。本周向受信任的测试者开放，下周向美国 Google AI Ultra 订阅者开放 Beta。",
+      "creator": "Josh Woodward",
+      "handle": "joshwoodward",
+      "sourceType": "x",
+      "url": "https://x.com/joshwoodward/status/2056873495116845485"
+    },
+    {
+      "quote": "最后是计算式发现（Computational Discovery），由 AlphaEvolve 和我们的实证研究 Agent（ERA）驱动。这个 agentic 研究引擎生成并评估成千上万种代码变体，挖掘出宝贵数据，用零头的时间帮助发现更先进的模型和算法。",
+      "creator": "Google Labs",
+      "handle": "GoogleLabs",
+      "sourceType": "x",
+      "url": "https://x.com/GoogleLabs/status/2056812957775142985"
+    },
+    {
+      "quote": "我们要上线一种能「抹平」流量峰值和病毒式事件的 CDN 定价模型，以此去掉压力和意外，同时不在质量和网络性能上妥协。可预测，且没有慢路由、没有降级的 PoP、没有优先带宽分级。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2056802789477740713"
+    }
+  ]
+}

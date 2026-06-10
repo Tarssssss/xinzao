@@ -15,24 +15,12 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2046805326784319663" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2046805326784319663"
+        }
       ],
       "engagement": "1,173 likes"
-    },
-    {
-      "slug": "2026-04-22-sama-chatgpt-images-2",
-      "title": "Sam Altman 晒出 ChatGPT Images 2.0 生成的漫画，OpenClaw 同日宣布接入 OpenAI Image 2",
-      "summary": "Sam Altman 晒出用 ChatGPT Images 2.0 做的漫画，内容是他和 Gabe 找更多 GPU，除模型名外没给任何发布细节。同日 OpenClaw 新版本提到 backport 了 OpenAI Image 2 支持。跟踪 OpenAI 图像模型的人可以从样张看一眼生成质量。",
-      "content": [
-        "推文只有一句话：这是 ChatGPT Images 2.0 做的、画他和 Gabe（@gabeeegoooh）找更多 GPU 的漫画。模型名是这条里唯一的硬信息，发布时间、能力说明、可用范围都没有提。",
-        "同一天有一个旁证：Peter Steinberger 的 OpenClaw 2026.4.21 版本说明里写了 backport OpenAI Image 2 支持。两边叫法不同（ChatGPT Images 2.0 和 OpenAI Image 2），按命名看大概率是同一代模型；如果是，说明已经有第三方工具在接入。想评估这代模型生成质量的人，目前能做的就是看这条推文里的漫画样张。"
-      ],
-      "creator": "Sam Altman",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @sama", "url": "https://x.com/sama/status/2046672912833458597" }
-      ],
-      "engagement": "3,603 likes"
     },
     {
       "slug": "2026-04-22-openclaw-release",
@@ -47,9 +35,18 @@
       "role": "OpenClaw 作者",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @steipete（OpenClaw 2026.4.21）", "url": "https://x.com/steipete/status/2046803162590335240" },
-        { "label": "原推 @steipete（discrawl 0.3.0）", "url": "https://x.com/steipete/status/2046748122928263345" },
-        { "label": "原推 @steipete（CI 提速）", "url": "https://x.com/steipete/status/2046787353906167992" }
+        {
+          "label": "原推 @steipete（OpenClaw 2026.4.21）",
+          "url": "https://x.com/steipete/status/2046803162590335240"
+        },
+        {
+          "label": "原推 @steipete（discrawl 0.3.0）",
+          "url": "https://x.com/steipete/status/2046748122928263345"
+        },
+        {
+          "label": "原推 @steipete（CI 提速）",
+          "url": "https://x.com/steipete/status/2046787353906167992"
+        }
       ],
       "engagement": "492 likes"
     },
@@ -65,75 +62,49 @@
       "role": "Builder",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2046758723998425433" }
+        {
+          "label": "原推 @zarazhangrui",
+          "url": "https://x.com/zarazhangrui/status/2046758723998425433"
+        }
       ],
       "engagement": "204 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "这是用 ChatGPT Images 2.0 做的、画 @gabeeegoooh 和我找更多 GPU 的漫画：",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2046672912833458597"
     },
     {
-      "slug": "2026-04-22-monologue-notes",
-      "title": "Dan Shipper 上线 Monologue Notes，卖点是 agent 可以从任何地方访问你随手录的笔记",
-      "summary": "Monologue Notes 上线：散步、开会、半夜随时录一条笔记，定位是 agent native——你的 agent 可以从任何地方访问这些笔记。把笔记明确当成 agent 的输入源来设计，是这条发布里最值得注意的点。在搭个人 agent 工作流的人可以看下接入方式。",
-      "content": [
-        "Dan Shipper 宣布 Monologue Notes 上线，使用场景是随时随地录笔记：散步时、会议中、半夜。发布文案里最实质的一句是 built to be agent native——你的 agent 可以从任何地方访问你的笔记。",
-        "这等于把笔记的读者从「未来的自己」扩展到「你的 agent」：笔记除了给自己回看，还成为个人 agent 的长期上下文来源。具体通过什么方式接入（协议、权限、范围）这条推文没有说，真要接进自己工作流的人需要去产品里确认。"
-      ],
+      "quote": "Monologue Notes 上线了！散步时、开会时、半夜随时录一条笔记。生来就是 agent native：你的 agent 可以从任何地方访问你的笔记。",
       "creator": "Dan Shipper",
-      "role": "Every CEO",
+      "handle": "danshipper",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2046643173766697214" }
-      ],
-      "engagement": "59 likes"
+      "url": "https://x.com/danshipper/status/2046643173766697214"
     },
     {
-      "slug": "2026-04-22-google-labs-designmd",
-      "title": "Josh Woodward 点名 Stitch 的 DESIGN.md，并宣布 Labs 实验产品 Pomelli 开放欧洲",
-      "summary": "Google Labs VP 一天提了两个实验：他说 DESIGN.md 是 Stitch 在做的事里他最喜欢的之一，但只留一句「懂的自然懂」；面向 SMB 的 Pomelli 开放欧洲。前者从命名看像 CLAUDE.md 一类的文件约定，做 AI 设计工具的人值得留意。",
-      "content": [
-        "信息量更大的是 DESIGN.md 这条：他说这是 Stitch 在做的事里他最喜欢的之一，原话只有「if you know, you know」，没有任何展开。从命名看，这可能是和 CLAUDE.md、AGENTS.md 同一类的做法——把约定写成 markdown 文件让工具读取，放到设计工具里就是把设计规范变成机器可读的上下文。这一段是从文件名出发的编辑推断，具体机制只能进 Stitch 验证。",
-        "另一条是 Pomelli 进入欧洲。这是 Labs 较新的实验之一，面向 SMB，他说 SMB 们正用它跑起来。推文里没有更多产品细节。"
-      ],
+      "quote": "DESIGN.md 是 Stitch 在做的事里我最喜欢的之一！懂的自然懂。",
       "creator": "Josh Woodward",
-      "role": "Google Labs VP",
+      "handle": "joshwoodward",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @joshwoodward（DESIGN.md）", "url": "https://x.com/joshwoodward/status/2046754179499356594" },
-        { "label": "原推 @joshwoodward（Pomelli）", "url": "https://x.com/joshwoodward/status/2046763674199794061" }
-      ],
-      "engagement": "207 likes"
+      "url": "https://x.com/joshwoodward/status/2046754179499356594"
     },
     {
-      "slug": "2026-04-22-gbrain-minions",
-      "title": "Garry Tan 升级自建的 agent 任务服务器 GBrain Minions，称调教 OpenClaw/Hermes 费功夫但值得",
-      "summary": "YC CEO 在亲手迭代自己的 agent 工具：他给 agent 写的 job server GBrain Minions 发了能力升级；他还说让 GBrain 指挥 OpenClaw/Hermes 做对事要花不少功夫，但值得。细节都没给，信号在于 YC 掌门人在深度自用 agent 工具链。",
-      "content": [
-        "GBrain Minions 是他给 agent 写的 job server，这次他称之为能力上的一次大升级，推文没有列具体改了什么。配合他同天的另一条：让 GBrain 去指挥 OpenClaw/Hermes 把事情做对要下不少功夫，但值得做。",
-        "这两条几乎没有功能细节，价值是行为信号：YC 的掌门人在亲手搭 agent 编排层，并且把「让一个系统正确指挥另一个系统」的胶水工作当成值得投入的事。在做 agent 编排工具的人可以把这当作一个需求存在的旁证。"
-      ],
+      "quote": "这是 GBrain Minions 能力上的一次大升级，它是我给你的 agent 做的 job server。",
       "creator": "Garry Tan",
-      "role": "YC 总裁兼 CEO",
+      "handle": "garrytan",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @garrytan（Minions 升级）", "url": "https://x.com/garrytan/status/2046804979160334433" },
-        { "label": "原推 @garrytan（调教 OpenClaw/Hermes）", "url": "https://x.com/garrytan/status/2046846939535495238" }
-      ],
-      "engagement": "12 likes"
+      "url": "https://x.com/garrytan/status/2046804979160334433"
     },
     {
-      "slug": "2026-04-22-blind-intro",
-      "title": "Nikunj Kothari 推荐给 10-15 个信任的人完全的盲介绍权限，以最大化 serendipity",
-      "summary": "具体做法：不止步于 double opt-in，挑 10-15 个你信任的人，授权他们不必事先征得你同意就直接做介绍。他说这是最大化 serendipity 最快的方式，也是他在结识有意思的人这件事上做过最有效的一件事。一条可以直接照做的人脉方法论。",
-      "content": [
-        "他的立场很明确：double opt-in（介绍前先问双方意愿）没问题，但他强烈推荐的做法是选 10-15 个信任的人，给他们完全的盲介绍权限——对方可以不经你确认直接把你介绍给任何人。他认为这是最大化 serendipity 最快的方式，也是他在结识最有意思的一批人上做过的最好的一件事。",
-        "这等于把「保护你的时间」这个默认设置，对一小圈你信任的人反转成「信任他们的判断」。代价是会收到一些错配的介绍，这一点他没有谈；照做之前可以先想清楚名单标准，这一步他也只给了「信任」一个词。"
-      ],
+      "quote": "double opt-in 不错，但我非常非常推荐给 10-15 个你信任的人完全的盲介绍权限。这是最大化 serendipity 最快的方式。这是我为结识一些最有意思的人做过的最好的一件事！",
       "creator": "Nikunj Kothari",
-      "role": "FPV Ventures 合伙人",
+      "handle": "nikunj",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2046821454143250636" }
-      ],
-      "engagement": "56 likes"
+      "url": "https://x.com/nikunj/status/2046821454143250636"
     }
   ]
 }

@@ -1,0 +1,167 @@
+{
+  "date": "2026-06-07",
+  "generatedAt": "2026-06-07T07:41:30.877Z",
+  "stories": [
+    {
+      "slug": "2026-06-07-lukasz-kaiser-generalization-post-transformer",
+      "title": "Transformer 作者 Lukasz Kaiser:模型已能解研究级数学,但泛化仍要先把所有别的路走尽才学到概念",
+      "summary": "Transformer 论文作者、前 OpenAI/Google 研究员 Kaiser 的判断:当前架构能力惊人,但要灌万亿 token 才肯学到概念,人类用远少的数据就能做到。他认为可能存在泛化更好的「后 Transformer」方向,但强调这只是直觉。关心架构路线和 RSI 的人值得听。",
+      "content": [
+        "Kaiser 的核心机制论点是:现在的模型「会先穷尽所有别的选项,最后才学到那个概念」——要先把表层的东西全学一遍,等到这些解释不了了,才真正学到概念。这和人类相反,人有时凭很少的数据甚至自己造概念就能跳跃式理解。所以他说有一种感觉:可能存在一种能从更少数据泛化、带有更长期理解形式的方法。他反复给这个判断加对冲——「这是一种感觉」,而且每次想把手指按在它上面,Transformer 就又追上来了;两边都在变强,后 Transformer 的论据也在变强,谁赢他「老实说还不知道」。",
+        "他用「锯齿状」描述当前的泛化:模型能在很难的领域解题,却长期卡在几何这类「看起来很近、对模型却不近」的问题上,后来靠更多数据(而非空间理解数据)才攻克。含义是,模型是在「以它自己那种异类的方式」泛化,覆盖不到人能覆盖的一些方向,所以使用时要一直提防它没补上的尖峰。他也给了反方论据:历史上模型总有万亿 token 可训,从没人为「少数据」优化过,若同等算力下限制数据、调一调 Transformer,可能也能做得好得多。",
+        "顺着这个逻辑,他评了主持人提到的一条近期传闻——Karpathy 加入 Anthropic 做 RSI(递归自我改进)。Kaiser 没有确认此事,而是就这个前提表达了保留:研究突破可能还在数年之外,因为想法空间极其庞大、「幸好大多数想法是错的,所以才叫研究」;即便有人类级甚至 10 倍速的 AI 研究员,在如此庞大的空间里高效搜索也未必能找到那个对的方向。对在押注架构路线或评估「自动化研究」叙事的人,这是一条来自一线研究者、明确偏谨慎的参考。"
+      ],
+      "creator": "Lukasz Kaiser",
+      "role": "Transformer 论文作者,前 OpenAI / Google 研究员",
+      "sourceType": "podcast",
+      "engagement": "",
+      "sourceLinks": [
+        {
+          "label": "Unsupervised Learning Ep 89(YouTube)",
+          "url": "https://www.youtube.com/watch?v=N1geOimmdDo"
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-07-kaiser-coding-agents-christmas-jump",
+      "title": "Kaiser:编码 agent 是他二十年来工作方式最大的改变,但去年圣诞那次跃迁连业内也说不清原因",
+      "summary": "Kaiser 给出一手数据:用 Codex 复现一篇旧论文从三周缩到两天,做私人项目时已基本不看代码。但他强调去年圣诞前后那次能力跃迁很难归因——harness、轻量后训练、新预训练模型同时在变。重度用 agent 写代码的人值得听他怎么描述这种状态。",
+      "content": [
+        "他先把跃迁的「难归因」讲透:从 RNN 到 Transformer 那次,变化很容易归到架构上;reasoning 重要也清楚。但去年冬天那一跳,是 harness 改了、做了一点后训练、又来了更强的新预训练模型,几样同时发生,「不容易钉死是哪个起的作用」,所以这次进步「有点乱」。他也提醒,这是半年内的事,圈外很多人仍把 AI 当成 Codex 之前那个样子,这是错的。",
+        "一手数据点:他在一台私人机器上复现一批旧论文(包括自己丢了代码的),其中一篇他此前手动复现需要约三周,用 Codex 两天就到了可运行状态,他自己估为 5 到 10 倍。他描述做私人项目(非生产仓库)时已经基本不看代码——但澄清这不等于变迟钝,反而因为不用记类名和函数细节,脑子里能始终掌控「损失是什么、batch 是什么、机器学习层面在跑什么」,反而比以前更有掌控感。前提是 agent 会「跑偏」:它曾自作主张加了一个莫名其妙的辅助损失,所以他像盯鹰一样盯着。",
+        "他还给了一个方法论判断:长上下文「被解决」其实是个能用的 hack——让模型把东西写进文件、用 grep 去找、写索引,再加一点 RL 做 compaction。换成五年前他会说这是创可贴、不是那个「深层的东西」,但他的原则是「我们不按解法好不好看来评判,只看它好不好用」,而它非常好用。他顺带提到自己更偏好 Codex 而非 Claude Code,理由正是 compaction:能续着同一个线程往下走且压缩得好。"
+      ],
+      "creator": "Lukasz Kaiser",
+      "role": "Transformer 论文作者,前 OpenAI / Google 研究员",
+      "sourceType": "podcast",
+      "engagement": "",
+      "sourceLinks": [
+        {
+          "label": "Unsupervised Learning Ep 89(YouTube)",
+          "url": "https://www.youtube.com/watch?v=N1geOimmdDo"
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-07-kaiser-why-anthropic-won-coding",
+      "title": "Kaiser:Anthropic 在编码上领先,部分原因是它当时在 chat 上竞争不过,只好押注别处",
+      "summary": "Kaiser 复盘 Anthropic 为何先在编码上成功:聚焦编码是个很好的决定,而做这决定的部分原因是它当年在 chat 上竞争不过 ChatGPT。他把这归到「敢押注非当下主流」的实验室文化,并对比了 OpenAI 转向 reasoning 的果断和 Google 的「什么都留着」。",
+      "content": [
+        "他给的机制是「下注非当下」:AI 每隔一阵就有一次大变动,真正赢的是押注「不是今天的东西」的人——哪怕今天的东西(比如 ChatGPT)已经很惊艳。Anthropic 聚焦编码是个好决定,而他认为做这个决定「部分原因是它当时根本竞争不过 chat」;OpenAI 并非没做编码,所以也能较快追上,只是当时不是重心。他用这条线解释了为什么先「钉死」一个方向的实验室能拿到即时领先。",
+        "他把这套押注能力放到实验室文化上看:OpenAI 当年决定「reasoning 会和预训练一样重要、模型都将是推理模型」是个很勇敢的赌注,当时推理模型不健谈、慢、还得同时维护两条产品线;但正是这种承诺让它至今在 RL 质量上领先,一些更大的实验室还没追上。对照之下,Google 是「什么都留着」的打法,被批评错失自己的发明,但对它也奏效——因为底子强,别人做出什么它都容易追上。",
+        "他的担忧落点是规模会侵蚀押注能力:公司一旦长到十亿级用户、有了流程,就更难下狂野的赌注,因为可输的太多。含义是,这也是为什么 Jerry Tworek 这类「neo lab」往外拆分、用一个强信念押注会显得更容易;但他也补了现实约束——出了实验室,GPU 既难拿又贵。对在判断模型路线竞争格局的人,这是一条把「组织规模」当变量的视角。"
+      ],
+      "creator": "Lukasz Kaiser",
+      "role": "Transformer 论文作者,前 OpenAI / Google 研究员",
+      "sourceType": "podcast",
+      "engagement": "",
+      "sourceLinks": [
+        {
+          "label": "Unsupervised Learning Ep 89(YouTube)",
+          "url": "https://www.youtube.com/watch?v=N1geOimmdDo"
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-07-model-routing-applied-layer-differentiation",
+      "title": "Levie 与 Madhu Guru:模型路由正成为应用层下一个差异化点,但做对它很难",
+      "summary": "Box 的 Levie 和前 Gemini PM Madhu Guru 都指向同一判断:token 成本升温后,把任务路由到合适模型会成为应用层的核心护城河。Levie 强调要靠最好的 evals、路由能力和与客户财务目标对齐的商业模式;Madhu 给出企业落地的三阶段曲线。",
+      "content": [
+        "两人都从「token 成本」这个机制切入。Levie 的逻辑是:token 在工作流成本里占比变大后,企业必然想让每一块钱花在最高效的 token 使用上——前沿智能在编码、法律金融分析、医疗这类高端任务上永远相关且投入只增,但单个任务可以剥离给更便宜的模型(开源权重或大厂的都行)。要做对,应用层得比谁都更懂自己领域的工作流:做文档抽取就得知道哪种模型对哪类文档更强,做法律分析就得知道哪种模型擅长哪类任务。",
+        "Madhu Guru 补的是企业落地节奏,基于他在 Gemini 时的观察:2024 年默认用「当红」模型(不管任务都上 GPT);2025 年初过度优化(都去找最小最便宜的模型,但 evals 不够细,反而烧时间、上线更慢);第三阶段才是「精细路由」——最成熟的 AI 原生创业公司把产品拆成子 agent,最难的推理给 Claude、最简单的给 Gemini Flash-Lite 或开源权重模型。他给出一个时间差判断:企业通常比 AI 原生 builder 晚 6 到 9 个月跟上。",
+        "把两条放一起看,差异化的归宿一致:Levie 认为最终胜出的会是 evals 最好、最会路由、且商业模式直接对齐客户财务目标的公司。对正在搭应用层的人,可操作的含义是先建立按自己产品任务来基准测模型的能力——Madhu 也强调路由「真的很难」,难点正在于把每个任务映射到对的模型并校准质量/成本权衡。"
+      ],
+      "creator": "Aaron Levie、Madhu Guru",
+      "role": "Box CEO;前 Google Gemini / Veo / Nano Banana 产品负责人",
+      "sourceType": "x",
+      "engagement": "Levie 404 likes,Madhu Guru 27 likes",
+      "sourceLinks": [
+        {
+          "label": "Aaron Levie 原推",
+          "url": "https://x.com/levie/status/2063320673217609936"
+        },
+        {
+          "label": "Madhu Guru 原推",
+          "url": "https://x.com/realmadhuguru/status/2063342268472574268"
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-07-kaiser-verifiability-is-a-spectrum",
+      "title": "Kaiser:可验证性是个被高估的概念,很多「不可验证」的领域其实能靠堆数据训出来",
+      "summary": "Kaiser 认为可验证性是连续谱而非二分:连数学都没大家以为的那么可验证,而诗歌、图像「好不好看」这类任务,只要找够多人来打标就能训出可观水平。他的提醒是每堵上一个洞,新的瓶颈就会冒出来。在判断哪些非编码领域可被 RL 攻克的人值得听。",
+      "content": [
+        "他先拆掉「可验证/不可验证」的二分:数学被高估了可验证性——竞赛题可验证,但大多数证明不形式化(除非用 Lean),前端编码也不那么可验证。所以这是一条谱,越往下越不可验证,但不代表那里没有信号。他举自己把诗歌译成波兰语的业余项目:看似很不可验证,可一旦用模型当 verifier,押韵、文化指涉这些它都能抓到一部分——「一旦你研究过人们以前是怎么验证这类东西的,就能拿到某种程度的可验证性」。",
+        "对从业者更有用的是他给的训练机制:即便是图像「好不好看」这种,只要在训练中让一堆人点「这个美/这个不美」,图像就真的会越来越美——可验证性这道坎其实「很弱」,本质只是个稀疏信号。所以他的判断是,在当前架构和 RL 方法下,几乎没有哪个领域是「太难而做不了」的,真正的约束是经济:你得从一个足够强(因此很大很贵、通常闭源)的模型起步,还要在数据和合约上投入可观成本,个人很难做,得是一家公司。",
+        "他也留了一句不满足:每堵上一个洞,它就不再是瓶颈,接着冒出来的又是你还没堵的洞,「我们就在这个循环里」。含义是,靠人工堆数据「砸」任何一个洞都能见效,但他真正想要的是一种「像大脑那样、本来就没那么多洞要堵」的方法。对在评估「要不要为某个非编码领域投入定制数据」的团队,这条给的是:大概率训得动,但要先算清数据和起步模型的账。"
+      ],
+      "creator": "Lukasz Kaiser",
+      "role": "Transformer 论文作者,前 OpenAI / Google 研究员",
+      "sourceType": "podcast",
+      "engagement": "",
+      "sourceLinks": [
+        {
+          "label": "Unsupervised Learning Ep 89(YouTube)",
+          "url": "https://www.youtube.com/watch?v=N1geOimmdDo"
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-07-kaiser-single-gpu-research-renaissance",
+      "title": "Kaiser:一块桌面 5090 的算力已是当年做 Transformer 研究整机的数倍,他呼吁学界多做狂野探索",
+      "summary": "Kaiser 算了一笔账:他买的一块 5090 约 200 TFLOPs(bf16),而当年研究 Transformer 用的 GPU 单卡才 9 TFLOPs。他说如今花几百到几千美元就能在几天里跑完「相当于一个人十年的学习量」,并以此呼吁学界和爱好者去试当下范式之外的狂野想法。对学界研究者和独立开发者有直接参考。",
+      "content": [
+        "他给的对比很具体:当年做 Transformer 研究的 GPU 单卡约 9 TFLOPs,八卡机器实测约 70 到 80 TFLOPs,常用十来台;而现在桌面下一块 5090 在 bf16 下约 200 TFLOPs(他说标称 400,但有一部分被关掉),相当于当年五台整机塞进一块卡。机制上,硬件变好就是 flops 和内存带宽这两件简单的事,而推理上能跑的模型量级已大幅提升,这直接放大了「能做的研究」。",
+        "他把这条推到一个具体设想:如果你对「大脑怎么学习」有想法,如今在大学里花几天、成本几百到几千美元(而非数百万),就能跑完相当于一个人十年学习量的实验,看它成不成——前提是你知道怎么评估。他认为这件事甚至比能训巨型模型更有意义。他也顺带提到 CUDA kernel 这种过去「很糟心」的活,现在可以让 agent 配着单元测试来写,虽然还不算特别好,但已经能用,等更大的模型出来会更省事。",
+        "他的收尾是一条明确的立场和行动呼吁:现在仍是做机器学习研究最激动人心的时候,鼓励大家去试自己的想法、向别人学习,并「多发表一些狂野的东西」——他看到太多论文只是「拿个预训练模型、用稍微不同的方式 RL 一下」,觉得有点可惜。他用自己的经历作注脚:在「Attention is all you need」之前一年,他还写过一篇叫「你不需要 attention」的论文,虽然不是好建议,但探索错的方向有时正是通往对的方向的路。需要提醒的是,这是来自一位资深研究者、立场偏鼓励学界的发言,「单卡就能复刻当年研究」更多是说算力门槛,而非任何想法都能在桌面机上跑通。"
+      ],
+      "creator": "Lukasz Kaiser",
+      "role": "Transformer 论文作者,前 OpenAI / Google 研究员",
+      "sourceType": "podcast",
+      "engagement": "",
+      "sourceLinks": [
+        {
+          "label": "Unsupervised Learning Ep 89(YouTube)",
+          "url": "https://www.youtube.com/watch?v=N1geOimmdDo"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "一个流行的说法是:研究论文的「alpha」和实验室发表大致是在研究者意识到——与其和市场部门内斗,不如直接走出门、靠自己受法律保护的隐性知识拿到一亿美元以上——的那一刻死掉的。加州的「禁止竞业禁止」对知识扩散的影响,比 GitHub、arxiv 和 HuggingFace 加起来还大。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2063432747432268259"
+    },
+    {
+      "quote": "静态内容的价值在下降,实时互动的价值在上升。人们想和一件作品背后的那个人产生连接,不管那是内容还是软件。粗糙且有观点 > 精致但泛泛。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2063391758189572266"
+    },
+    {
+      "quote": "应该有办法把我所有的 Codex 线程按不同方式筛选或排序,而不只是按项目分。比如按「全部等待批准」「全部正在运行」来筛或排。我想把它控制在 10 个线程以内,但已经开始变得不好管了。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2063475353335869922"
+    },
+    {
+      "quote": "我们从没说过不向云端上传任何用户数据。我们说的是代码(文件内容)这部分不会上传。Paxel 是来帮你的,随着本地模型变好,我们能在本地做的事会越来越多。挺期待的。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2063418130714800487"
+    },
+    {
+      "quote": "再补两个会越来越值钱的东西:Aidōs——对他人的敬重与回应;Dikē——感知何为正当的能力。",
+      "creator": "Dan Shipper",
+      "handle": "danshipper",
+      "sourceType": "x",
+      "url": "https://x.com/danshipper/status/2063436919967522848"
+    }
+  ]
+}

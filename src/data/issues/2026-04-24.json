@@ -15,7 +15,10 @@
       "creator": "Anthropic Engineering",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Anthropic Engineering", "url": "https://www.anthropic.com/engineering/april-23-postmortem" }
+        {
+          "label": "Anthropic Engineering",
+          "url": "https://www.anthropic.com/engineering/april-23-postmortem"
+        }
       ]
     },
     {
@@ -31,7 +34,10 @@
       "creator": "Unsupervised Learning",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Unsupervised Learning", "url": "https://www.youtube.com/@RedpointAI" }
+        {
+          "label": "Unsupervised Learning",
+          "url": "https://www.youtube.com/@RedpointAI"
+        }
       ]
     },
     {
@@ -46,8 +52,14 @@
       "creator": "Claude Blog",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Claude Blog", "url": "https://claude.com/blog/claude-managed-agents-memory" },
-        { "label": "原推 @claudeai", "url": "https://x.com/claudeai/status/2047421844311949513" }
+        {
+          "label": "Claude Blog",
+          "url": "https://claude.com/blog/claude-managed-agents-memory"
+        },
+        {
+          "label": "原推 @claudeai",
+          "url": "https://x.com/claudeai/status/2047421844311949513"
+        }
       ],
       "engagement": "6.4K likes"
     },
@@ -64,26 +76,12 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2047387742951313910" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2047387742951313910"
+        }
       ],
       "engagement": "255 likes"
-    },
-    {
-      "slug": "2026-04-24-amjad-deepseek-v4",
-      "title": "Amjad Masad 借 DeepSeek v4 发布反驳“中国蒸馏”叙事：公开的研究突破与数据无关，所有人受益",
-      "summary": "DeepSeek v4 发布当天，他的评论指向叙事本身：美国政客在渲染“中国蒸馏”，中国研究者却在公开分享真实突破；这类进展与数据无关，所有人受益，包括美国小实验室。技术细节需看他转引的原帖。",
-      "content": [
-        "Amjad 连发两条：先转发 DeepSeek v4 发布，随后评论说，在美国政客和说客渲染“中国蒸馏”的同时，中国科学家在公开分享真实的 AI 突破；他认为这类进展和数据无关，对所有人都有利，包括美国的小型实验室——他补了一句，可能也包括大型实验室。",
-        "素材里没有他转引帖子的具体内容，DeepSeek v4 的技术细节需要看原帖。这条的增量是立场本身：一位主流美国 AI 公司的 CEO 公开把“蒸馏窃取”叙事和“公开研究贡献”对立起来，把中国实验室定位成开放研究的贡献方。"
-      ],
-      "creator": "Amjad Masad",
-      "role": "Replit CEO",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @amasad（评论）", "url": "https://x.com/amasad/status/2047547275682214384" },
-        { "label": "原推 @amasad（DeepSeek v4）", "url": "https://x.com/amasad/status/2047519635063631914" }
-      ],
-      "engagement": "875 likes"
     },
     {
       "slug": "2026-04-24-levie-ai-more-work",
@@ -98,7 +96,10 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2047540230694350958" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2047540230694350958"
+        }
       ],
       "engagement": "300 likes"
     },
@@ -114,58 +115,12 @@
       "role": "FPV Ventures 合伙人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2047336067972624870" }
+        {
+          "label": "原推 @nikunj",
+          "url": "https://x.com/nikunj/status/2047336067972624870"
+        }
       ],
       "engagement": "52 likes"
-    },
-    {
-      "slug": "2026-04-24-peter-yang-fzero-test",
-      "title": "Peter Yang 的固定测试：GPT-5.5 加 Codex 是至今唯一做出可玩 F-Zero 游戏的组合",
-      "summary": "他每逢新模型发布都做同一个测试：做一个 F-Zero 赛车游戏。GPT-5.5 加 Codex 是至今唯一交出能玩成品的组合，还顺带造了陪跑 bot。单一样本，但同题纵向对比有参考价值，另附完整视频测评。",
-      "content": [
-        "Peter Yang 有个保留测试：每逢新模型发布，就让它做一个 F-Zero 赛车游戏。这次的结果是 GPT-5.5 加 Codex 成为至今唯一做出能跑的成品的组合，他还让模型顺带造了一批陪跑的赛车 bot。",
-        "单一题目、单一样本，不构成系统评测，但因为他每代模型都跑同一道题，纵向对比有参考价值。他同时发了 GPT-5.5 和 ChatGPT Images 2 的完整视频测评，链接在第二条原推里。"
-      ],
-      "creator": "Peter Yang",
-      "role": "Roblox 产品，AI 教程作者",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @petergyang（F-Zero 测试）", "url": "https://x.com/petergyang/status/2047502885710410159" },
-        { "label": "原推 @petergyang（视频测评）", "url": "https://x.com/petergyang/status/2047502897412468770" }
-      ],
-      "engagement": "150 likes"
-    },
-    {
-      "slug": "2026-04-24-shipper-gpt55-vibe-check",
-      "title": "Dan Shipper 评 GPT-5.5：很多模型写得出好计划但不敢执行，5.5 直接把事做完",
-      "summary": "一句话结论：很多模型写得出好计划，然后“被自己的计划吓住”；GPT-5.5 的区别是直接执行。论据在他链接的 Every 完整 vibe check 里，素材只含结论。在挑编码主力模型的人可顺链接看全文。",
-      "content": [
-        "Shipper 对 GPT-5.5 的判断浓缩成一句话：很多模型能写出很好的计划，然后“被自己的计划吓住”；GPT-5.5 的区别是直接把事做掉。",
-        "素材里只有结论本身，论据和测试过程在他链接的完整 vibe check 里。和同一天 Levie 的企业评测、Peter Yang 的游戏测试放在一起看，这是 GPT-5.5 发布后第一批基本一致的正面初步反馈。"
-      ],
-      "creator": "Dan Shipper",
-      "role": "Every CEO",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2047388883823087633" },
-        { "label": "原推 @danshipper（vibe check 链接）", "url": "https://x.com/danshipper/status/2047388895562842162" }
-      ],
-      "engagement": "24 likes"
-    },
-    {
-      "slug": "2026-04-24-sama-nvidia-codex",
-      "title": "Sam Altman：OpenAI 与 NVIDIA 试点整公司铺开 Codex，向其他公司开放同样合作",
-      "summary": "OpenAI 和 NVIDIA 试了在整家公司统一铺开 Codex，Altman 称效果很好并公开邀请其他公司报名。推文无任何细节和数据，增量在 OpenAI 把整司级部署当成可复制的对外产品动作来推。",
-      "content": [
-        "Altman 说 OpenAI 和 NVIDIA 试了一种新做法：在整家公司范围统一铺开 Codex，他对结果的评价是“看到它跑起来很棒”，并公开邀请其他公司报名同样的合作。",
-        "推文没有给出部署规模、流程或任何效果数据，增量在动作本身：OpenAI 把整司级 Codex 部署当成可对外复制的服务在推。对照同一天播客里 Swyx 对两家打法的概括——Anthropic 高价限量、Codex 补贴换渗透——这条可以看作渗透打法落到企业侧的一个具体动作。"
-      ],
-      "creator": "Sam Altman",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @sama", "url": "https://x.com/sama/status/2047395562501411058" }
-      ],
-      "engagement": "6.6K likes"
     },
     {
       "slug": "2026-04-24-claude-lifestyle-connectors",
@@ -179,10 +134,46 @@
       "creator": "Claude Blog",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Claude Blog", "url": "https://claude.com/blog/connectors-for-everyday-life" },
-        { "label": "原推 @claudeai", "url": "https://x.com/claudeai/status/2047383767984038093" }
+        {
+          "label": "Claude Blog",
+          "url": "https://claude.com/blog/connectors-for-everyday-life"
+        },
+        {
+          "label": "原推 @claudeai",
+          "url": "https://x.com/claudeai/status/2047383767984038093"
+        }
       ],
       "engagement": "414 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "在美国政客和说客渲染“中国蒸馏”的同时，中国科学家正在公开分享真实的 AI 突破；这类进展和数据无关，对所有人都有利，包括美国的小型实验室（可能也包括大型实验室）。",
+      "creator": "Amjad Masad",
+      "handle": "amasad",
+      "sourceType": "x",
+      "url": "https://x.com/amasad/status/2047547275682214384"
+    },
+    {
+      "quote": "我每次有新模型发布都会做一次 F-Zero 测试，GPT 5.5 加 Codex 是目前唯一做出能跑的游戏的组合，还顺带造了一批可以对赛的 bot，现在是搞开发的疯狂年代。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2047502885710410159"
+    },
+    {
+      "quote": "很多模型能写出很好的计划，然后被自己的计划吓住；OpenAI 新的 GPT-5.5 则是直接把事做掉。",
+      "creator": "Dan Shipper",
+      "handle": "danshipper",
+      "sourceType": "x",
+      "url": "https://x.com/danshipper/status/2047388883823087633"
+    },
+    {
+      "quote": "我们和 NVIDIA 试了一种新做法，在整家公司范围铺开 Codex，看到它跑起来很棒；如果你也想在自己公司这么做，告诉我们。",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2047395562501411058"
     }
   ]
 }

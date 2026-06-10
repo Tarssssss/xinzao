@@ -16,24 +16,15 @@
       "role": "Stripe 数据与 AI 负责人",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "AI & I by Every", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" },
-        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2049512129846530086" }
+        {
+          "label": "AI & I by Every",
+          "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL"
+        },
+        {
+          "label": "原推 @danshipper",
+          "url": "https://x.com/danshipper/status/2049512129846530086"
+        }
       ]
-    },
-    {
-      "slug": "2026-04-30-gpt-5-5-cyber",
-      "title": "OpenAI 数日内向关键网络防御方推送 GPT-5.5-Cyber，受信访问机制将与生态和政府共同敲定",
-      "summary": "OpenAI 未来几天开始向关键网络防御方推送网络安全模型 GPT-5.5-Cyber，访问按“受信访问”设计，规则将与整个生态和政府一起定。推文没给能力细节与申请渠道，安全团队和基础设施运营方值得盯后续。",
-      "content": [
-        "Sam Altman 宣布未来几天开始向关键网络防御方（critical cyber defenders）推送 GPT-5.5-Cyber，定位是 frontier 级网络安全模型。访问方式还没定型：OpenAI 会和整个生态及政府一起设计网络安全场景的“受信访问”（trusted access），目标是快速帮企业和基础设施加固安全。",
-        "推文一共两句话，没有能力说明、没有评测、也没有申请渠道。比模型本身更值得记的是发布形态：先按防御方身份放行，公开访问目前没有任何说法。顺着这个逻辑，如果受信访问模式跑通，高敏感能力的模型今后可能都走这条路——这是编辑推断，原文没说。安全团队和关键基础设施运营方可以先盯 OpenAI 后续公布的接入方式。"
-      ],
-      "creator": "Sam Altman",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @sama", "url": "https://x.com/sama/status/2049712078836170843" }
-      ],
-      "engagement": "5.6K likes"
     },
     {
       "slug": "2026-04-30-agent-reality-check",
@@ -48,7 +39,10 @@
       "role": "South Park Commons 普通合伙人，前 Dropbox CTO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @adityaag", "url": "https://x.com/adityaag/status/2049530878083379427" }
+        {
+          "label": "原推 @adityaag",
+          "url": "https://x.com/adityaag/status/2049530878083379427"
+        }
       ],
       "engagement": "361 likes"
     },
@@ -65,58 +59,46 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2049714403050918067" },
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2049599305825341518" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2049714403050918067"
+        },
+        {
+          "label": "原推 @zarazhangrui",
+          "url": "https://x.com/zarazhangrui/status/2049599305825341518"
+        }
       ],
       "engagement": "226 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我们将在未来几天开始向关键网络防御方推送 GPT-5.5-Cyber，一个 frontier 级网络安全模型。我们会和整个生态及政府一起为网络安全敲定受信访问方式，希望快速帮助保护企业和基础设施。",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2049712078836170843"
     },
     {
-      "slug": "2026-04-30-gemini-file-export",
-      "title": "Gemini 上线文件生成与导出，覆盖 Docs、Excel、PDF、Slides、LaTeX 等格式，全平台全球可用",
-      "summary": "告诉 Gemini 要什么内容、什么格式，直接产出 Google Docs、Word、PDF、Excel、CSV、Slides、Markdown、LaTeX 等文件并导出，所有平台全球上线。聊天助手开始直接交付文件，做文档和办公工具的人值得跑一遍格式覆盖。",
-      "content": [
-        "Josh Woodward 宣布 Gemini 上线文件生成与导出：告诉 Gemini 想要什么内容、什么格式，它直接把文件做出来。支持的格式包括 Google Docs、Word（.docx）、PDF、Google Sheets、Excel（.xlsx）、CSV、Google Slides，以及 Markdown、LaTeX、TXT、RTF，所有平台全球可用。",
-        "这类功能改的是交付物：聊天助手的输出从“复制出去自己排版”变成直接拿到能用的文件。发布帖本身只列了格式清单，质量没法从帖子判断——做文档和办公工具的人值得自己跑一遍格式覆盖和导出质量，再估自家产品和通用助手之间还剩多少差距。"
-      ],
+      "quote": "Gemini 新增功能：生成并导出文件。告诉 Gemini 你想创建什么内容、要什么格式，它现在会替你做出来。现支持 Google Docs、Word（.docx）、PDF、Google Sheets、Excel（.xlsx）、CSV、Google Slides，以及 Markdown、LaTeX、TXT、RTF，所有平台全球已上线。",
       "creator": "Josh Woodward",
-      "role": "Google Labs 与 Gemini App VP",
+      "handle": "joshwoodward",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2049524400131838436" }
-      ],
-      "engagement": "2.4K likes"
+      "url": "https://x.com/joshwoodward/status/2049524400131838436"
     },
     {
-      "slug": "2026-04-30-clawsweeper-codex-review",
-      "title": "Peter Steinberger 把 codex review 接进 clawsweeper：循环审到找不出新问题，自动合并",
-      "summary": "clawsweeper 集成了 codex review：作者称系统 prompt 和官方 /review 很接近、能拿到相同效果，外加自动合并、循环跑到无新发现为止。想把 code review 做成自动收敛流程的人可以直接参考这套组合。",
-      "content": [
-        "Peter Steinberger 把 codex review 集成进了 clawsweeper。按他的说法，用的系统 prompt 和官方 /review 非常接近，所以能拿到和 /review 相同的审查效果；clawsweeper 在此之上有自动合并，并且会循环跑审查，直到再也找不出新问题为止。",
-        "这套组合把 code review 从一次性的检查变成自动收敛的循环：审、修、再审，停在零新发现。“效果等同 /review”是作者自己的说法，没有对比数据；在用 codex /review 的人可以拿一个真实 PR 跑一遍这条流水线再下结论。"
-      ],
+      "quote": "把 codex review 集成进了 clawsweeper。我用的系统 prompt 非常接近，所以能拿到和 /review 一样的效果，而 clawsweeper 还有自动合并，会一直循环到再也找不出新问题为止。",
       "creator": "Peter Steinberger",
-      "role": "OpenClaw 作者",
+      "handle": "steipete",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2049518771023360010" }
-      ],
-      "engagement": "288 likes"
+      "url": "https://x.com/steipete/status/2049518771023360010"
     },
     {
-      "slug": "2026-04-30-kevinweil-radiologist",
-      "title": "Kevin Weil：放射科医生的工作是治好病人，AI 加快读片意味着能多接诊",
-      "summary": "一句话论点：读 X 光片是手段，治好病人才是工作，AI 加快读片，医生就能看更多、治更多人。没有数据支撑，属 OpenAI 高管表态，可当作“AI 与岗位”话题的口径样本，够不上对放射科就业的预测。",
-      "content": [
-        "Kevin Weil 在一条转推上给出自己的论点：“放射科医生的工作不是读 X 光片，是治好病人。”如果 AI 能加快理解 X 光片的过程，放射科医生就能接诊、治愈更多人。",
-        "论证方式是把岗位拆成手段和目的：读片是手段，治病是目的，AI 提速的只是手段。这是一句话表态，没有数据支撑，发言人是 OpenAI 的 VP Science，立场上偏向 AI 扩散的叙事。可以当作 AI 公司高管谈“AI 与岗位”时的口径样本来读，它本身够不上对放射科就业的实际预测。"
-      ],
+      "quote": "原来放射科医生的工作不是读 X 光片，而是治好病人。如果 AI 能加快理解 X 光片的过程，放射科医生就能看更多、治好更多人。",
       "creator": "Kevin Weil",
-      "role": "OpenAI VP Science",
+      "handle": "kevinweil",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @kevinweil", "url": "https://x.com/kevinweil/status/2049584046213378229" }
-      ],
-      "engagement": "259 likes"
+      "url": "https://x.com/kevinweil/status/2049584046213378229"
     }
   ]
 }

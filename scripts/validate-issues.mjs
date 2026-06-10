@@ -14,6 +14,7 @@ const slugs = new Map()
 const files = (await readdir(issuesDir)).filter((file) => file.endsWith('.json'))
 
 let storyTotal = 0
+let quickTotal = 0
 
 for (const file of files.sort()) {
   const date = file.replace('.json', '')
@@ -81,13 +82,34 @@ for (const file of files.sort()) {
     }
 
     const summaryLength = (story.summary ?? '').length
-    if (summaryLength > 140) {
-      warnings.push(`${where}: summary ${summaryLength} 字，明显超出 50-90 字标准`)
+    if (summaryLength > 180) {
+      warnings.push(`${where}: summary ${summaryLength} 字，长到像正文缩写，考虑收紧或下沉到 content`)
+    }
+  }
+
+  if (issue.quickTakes !== undefined) {
+    if (!Array.isArray(issue.quickTakes)) {
+      errors.push(`${file}: quickTakes 不是数组`)
+    } else {
+      for (const qt of issue.quickTakes) {
+        quickTotal += 1
+        const where = `${file} → 速览 ${qt.url ?? '(无 url)'}`
+
+        for (const field of ['quote', 'creator', 'sourceType', 'url']) {
+          if (!qt[field] || typeof qt[field] !== 'string') {
+            errors.push(`${where}: 缺字段 ${field}`)
+          }
+        }
+
+        if (qt.sourceType && !SOURCE_TYPES.has(qt.sourceType)) {
+          errors.push(`${where}: sourceType 非法 (${qt.sourceType})`)
+        }
+      }
     }
   }
 }
 
-console.log(`检查 ${files.length} 期 / ${storyTotal} 条 story`)
+console.log(`检查 ${files.length} 期 / ${storyTotal} 条 story / ${quickTotal} 条速览`)
 
 if (warnings.length > 0) {
   console.warn(`\n${warnings.length} 个警告（不阻塞 build，留待修稿）：`)

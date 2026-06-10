@@ -15,7 +15,10 @@
       "role": "Vercel CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2045553025188835806" }
+        {
+          "label": "原推 @rauchg",
+          "url": "https://x.com/rauchg/status/2045553025188835806"
+        }
       ],
       "engagement": "1,049 likes"
     },
@@ -32,7 +35,10 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2045680043607941548" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2045680043607941548"
+        }
       ],
       "engagement": "335 likes"
     },
@@ -49,25 +55,21 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2045616837787070695" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2045616837787070695"
+        }
       ],
       "engagement": "266 likes"
-    },
+    }
+  ],
+  "quickTakes": [
     {
-      "slug": "2026-04-19-steipete-codexbar-021",
-      "title": "Peter Steinberger 发布 CodexBar 0.21，高 CPU 占用的根因查清是一次 OpenAI 网页抓取",
-      "summary": "CodexBar 0.21 发布：新增 Abacus AI provider 和 Codex Pro $100 档支持，修复本地成本扫描、z.ai 配额及 Antigravity、Cursor、Ollama 的问题。关键增量是高 CPU 占用根因查清，是一次 OpenAI 网页抓取，新安装默认禁用；keychain 问题也已解决。",
-      "content": [
-        "这一版的更新清单：新增 Abacus AI provider，支持 Codex Pro $100 订阅档，OpenAI 网页附加数据的获取更安全，修复了本地成本扫描，支持 z.ai 的 5 小时配额，修了 Antigravity、Cursor、Ollama 相关问题，刷新速度更快，并修复 macOS 26 的图标问题。",
-        "两个长期问题有了结论：CPU 占用过高的根因是一次 OpenAI 网页抓取，新安装版本已默认禁用；keychain 问题也已解决。Steinberger 在推里感谢了负责维护的 Ratul Sarna。被 CPU 占用困扰的老用户值得升级，但注意原文只说对新安装默认禁用这项抓取。"
-      ],
+      "quote": "CodexBar 0.21 发布：新增 Abacus AI provider、支持 Codex Pro $100 档、更安全的 OpenAI 网页附加数据、修复本地成本扫描、支持 z.ai 的 5 小时配额、修复 Antigravity/Cursor/Ollama 相关问题、刷新更快、修复 macOS 26 图标问题等；CPU 占用过高这个大问题的根因是一次 OpenAI 网页抓取，现已对新安装默认禁用，keychain 问题也已解决，感谢 @RatulSarna 的维护。",
       "creator": "Peter Steinberger",
-      "role": "OpenClaw + OpenAI",
+      "handle": "steipete",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2045582547996856682" }
-      ],
-      "engagement": "516 likes"
+      "url": "https://x.com/steipete/status/2045582547996856682"
     }
   ]
 }

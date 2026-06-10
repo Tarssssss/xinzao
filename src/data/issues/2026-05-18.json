@@ -1,0 +1,96 @@
+{
+  "date": "2026-05-18",
+  "generatedAt": "2026-05-18T07:45:35.433Z",
+  "stories": [
+    {
+      "slug": "2026-05-18-noah-breyer-claude-code-second-brain",
+      "title": "Noah Breyer 把 Claude Code 架在 Obsidian 仓库上，当研究和思考的第二大脑用",
+      "summary": "Alethic 创始人 Noah Breyer 演示了一套几乎不写代码的 Claude Code 用法：在整个 Obsidian 笔记仓库根目录起 Claude Code，配一个被明令「只提问不写稿」的思考伙伴 subagent，还能用「帮我把过去几天的研究补上」重启思路。对想把 AI 当思考工具而非产出工具的人有参考价值。",
+      "content": [
+        "Breyer 的核心判断是：模型被叫做 generative，导致大家过度盯着它「写」的能力，却低估了它「读」的能力——而日常里人思考的频率远高于产出 artifact 的频率，所以读的价值反而更高。他的整套 setup 就是顺着这个判断搭的：Obsidian 仓库本质是一堆 markdown 文件和文件夹，可以用 Git 同步，Claude Code 直接架在上面读写。他特意在仓库根目录而不是单个项目文件夹启动 Claude Code，这样它能访问全部约 1500 条笔记；再用 package.json 给仓库挂自定义命令，让 Claude Code 能跑 slash command。",
+        "他反复遇到的一个障碍是模型「上来就想帮你产出 artifact」：即便明确说了不要写，它还是会动手。他的解法是配一个叫 thinking partner 的 subagent，front matter 里写死「Noah 在收集素材或说不要写时，照字面理解，不要生成任何提纲、草稿或版本，只整理素材」，并让它边提问边把问题和思路记成 running log。他把这归为一类通用张力：模型公司的经济产出是用 artifact 衡量的，「乐于助人的助手」又成了被自我强化的 meme，所以默认行为偏向替你动手。",
+        "另一个值得抄的用法是用「帮我把过去几天的研究补上」来重启中断的深度工作——Breyer 说写作或写代码最难的往往是重新拾起，而 Claude Code 会去按日期翻这个项目下所有文件、读一遍再汇报。他还把这套搬上了手机：地下室一台 mini PC 跑 Tailscale 组私有 VPN，Obsidian 经私有 GitHub 同步到这台机器，手机上用 Termius 连进去直接起 Claude Code，他描述自己在外面吃早餐时用手机做了两小时真正的研究和思考。",
+        "顺着 Breyer 自己点出的逻辑，这套法子的门槛不在工具而在判断力——他说现在用得好的人，区别在于「对模型能力边界有手感、并引导它在边界内工作」，比如让它在一个目录里按日期找文件这种确定能做好的事。需要提醒的是，这是他个人重度定制的工作流（自建服务器、自定义命令、手机远连），照搬成本不低；可直接借用的是两个低成本动作：给思考类任务单独配一个禁止写作的 subagent，以及用「补上这几天的进展」当重新进入项目的入口。"
+      ],
+      "creator": "Noah Breyer",
+      "role": "Founder, Alethic",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "AI & I by Every: Claude Code Can Be Your Second Brain", "url": "https://www.youtube.com/watch?v=in7i-EVDDlk" }
+      ]
+    },
+    {
+      "slug": "2026-05-18-aaron-levie-go-deep-expert-with-ai",
+      "title": "Aaron Levie 认为 AI 不会降低对技术人才的需求，会用 agent 的专家始终强于新手",
+      "summary": "Box CEO Aaron Levie 连发两条，反驳「学技术不再划算」的论调：编程变便宜意味着各行各业都需要技术人才去落地 agentic 系统，工程师该考虑的岗位类型反而大幅扩张；同时强调别放弃打深功底，会驾驭 agent 的专家永远比 vibe coding 的新手强。对正在纠结要不要继续钻研某个领域的人有参考。",
+      "content": [
+        "Levie 的论点不是「需求没变」，而是需求发生了错配：他说现在出现了一个临时性的供需错位——过去抢手的岗位（比如 CS 毕业生进科技公司做面向用户的软件，整条从大学到入职的管线都是为此搭的）和正在变得紧俏的新岗位对不上。他给的机制是：一旦意识到 AI 会让编程变得极其廉价，就会意识到「所有人都需要技术人才来落地 agentic 系统」，于是工程师该考虑的角色类型大幅扩张，而非收缩。",
+        "他用了一个一手观察支撑这个判断：一周前和一家《财富》500 强药企 CEO 聊，对方说现在比以往更缺技术人才；Levie 称这是他从「几乎每个行业的 CIO 和 CEO」那里听到的共同信号。落点是双向的呼吁——大学要醒过来，公司也得想清楚怎么搭进这些新岗位的人才管线。",
+        "第二条讲的是个人层面的应对：别因为 AI 就放弃在某个领域扎深。Levie 的机制是「专家配 AI 永远远胜新手」——能正确驾驭 agent、会评估其产出、会修它的错、会把成果接进工作流的人，才是这些工具最强的使用者。他逐一点名：用 agent 的资深开发者跑赢只会 vibe coding 的人，会用 AI 的设计师做出更好的产品和 campaign，懂财务模型的银行家或分析师能用 agent 做成更多事。",
+        "这两条来自 Box CEO，立场上他本身在卖企业 AI、也在为「人才仍然稀缺」背书，可核验的部分是那个机制判断本身：如果你正在评估某个领域值不值得继续深耕，Levie 给的检验标准是问自己能否做到「评估 agent 产出、修正其错误、把它接进工作流」这三件事——这恰恰是新手做不到、而深功底能换来的。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "engagement": "425 likes / 275 likes",
+      "sourceLinks": [
+        { "label": "Levie：别放弃打深功底", "url": "https://x.com/levie/status/2056051851439857933" },
+        { "label": "Levie：AI 让技术人才需求扩张", "url": "https://x.com/levie/status/2056219645796090197" }
+      ]
+    },
+    {
+      "slug": "2026-05-18-nikunj-kothari-unicorn-equity-triple-whammy",
+      "title": "Nikunj Kothari 拆解加入独角兽的「三重打击」：分层估值如何掏空员工股权",
+      "summary": "FPV Ventures 合伙人 Nikunj Kothari 指出，分层估值（tranched valuation）普及后，加入新晋独角兽的员工面临三重打击：行权价常达领投优先股价的两倍多、409A 与提前行权成本高、纸面薪酬被估值灌水。建议入职前用 Claude/ChatGPT 做退出测算、像投资人一样做尽调。对正在评估独角兽 offer 的人有直接用处。",
+      "content": [
+        "三重打击之间是有因果链的，不是三个独立的坑：Kothari 说分层估值如今很常见，员工拿到的入场行权价往往是领投优先股价的两倍多；行权价高，连带 409A 估值也高，于是想提前行权要掏一大笔钱，不行权就得等公司「长进」这个估值；而股权包「纸面上很漂亮」恰恰是被这套分层估值灌大的，所以宣称的 total comp 很高、真实价值（至少当下）并不高——他还点出这反过来成了公司追逐高估值的动机：估值越高，越能少发股权。",
+        "他的可操作建议很具体：入职前睁大眼睛，用 Claude 或 ChatGPT 给自己的股权做一遍退出测算（exit math），像投资人那样对要加入的公司做尽职调查。同时他做了立场校准式的提醒——加入独角兽能带来的远不止薪酬（学习、经历、强使命、好团队），这些才该是加入的核心理由。",
+        "他特意加了一条收敛，避免被读成「独角兽都别去」：不是所有独角兽都一样，有些基本面明显更好、是真的长进了估值，有些增长远快于只靠估值撑着的同行。他的落点是别把估值相近的公司一股脑归成一类，要自己做功课。这条对正在谈 offer、或在比较几家估值接近公司的人，提供了一个现成的尽调清单。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "Partner, FPV Ventures",
+      "sourceType": "x",
+      "engagement": "123 likes",
+      "sourceLinks": [
+        { "label": "Kothari：独角兽股权的三重打击", "url": "https://x.com/nikunj/status/2056125669466333672" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "做 eval 别在通用学术 benchmark 上演「eval 剧场」：去读模型和客户的真实对话来培养产品 sense，再用 Claude 把反馈归纳成排在前面的几个主题。模型越聪明，eval 就得越难，才能继续产生信号。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2056178053848703019"
+    },
+    {
+      "quote": "人们总是高估做出一个东西有多难，又低估了做出来之后赢得别人注意力有多难。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2056132881630826952"
+    },
+    {
+      "quote": "周五我用 AI 写了一大堆代码；周六我看人类踢球（足总杯决赛）、看人类跳舞（我孩子的舞蹈汇演）。我并不担心我们会失去意义和目的。",
+      "creator": "Aditya Agarwal",
+      "handle": "adityaag",
+      "sourceType": "x",
+      "url": "https://x.com/adityaag/status/2056015684145127612"
+    },
+    {
+      "quote": "Ken Griffin 没意识到天花板刚刚被抬高了。也许某个读到这条的二十几岁年轻人，会组出那支「AI- 人类- 计算机共生」的强队，超越他的整个盘子——因为他光顾着压成本、分了心。要把海煮沸，而不是砍你的成本。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2056123737544757733"
+    },
+    {
+      "quote": "在面向我那 12 万字 markdown 大脑的个人 AI 场景里，ZeroEntropy 拿到了头名。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2056122508550738223"
+    }
+  ]
+}

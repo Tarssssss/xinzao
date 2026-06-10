@@ -1,0 +1,119 @@
+{
+  "date": "2026-05-04",
+  "generatedAt": "2026-05-04T08:26:33.142Z",
+  "stories": [
+    {
+      "slug": "2026-05-04-karpathy-software-3-paradigm",
+      "title": "Karpathy:软件 3.0 下很多代码本不该存在,该想的是「给 agent 复制粘贴的那段文本是什么」",
+      "summary": "Karpathy 说 12 月是他从「修补 agent 输出」转到「不再纠正、信任系统」的明确拐点。核心判断:很多 app 在软件 3.0 范式里是多余的,以他自己写的 MenuGen 为例——整个 app 都是旧范式产物。对在重写工具链、思考 agent-native 基建的 builder 有参考。",
+      "content": [
+        "Karpathy 把这一轮变化定位成一次范式切换,而不是「写代码变快了」。软件 1.0 是写规则,2.0 是用数据集和训练编程,3.0 则是编程变成写 prompt、用上下文窗口当「解释器(LLM)」的操纵杆。他强调这不只关于代码:以前的代码跑在结构化数据上,而现在能拿一堆文档「用另一种方式重新编译」生成知识库,这类东西「以前根本不可能存在」,他觉得这部分比「把已有的事做快」更值得兴奋。",
+        "他举自己写的 MenuGen 当反例:这个 app 让你上传餐厅菜单照片,OCR 出菜名再用图像模型生成每道菜的样子,跑在 Vercel 上。但软件 3.0 的版本是把照片直接交给 Gemini、让它用 Nanobanana 把菜品图叠回菜单——返回的图就是他拍的那张菜单,只是像素里渲染进了菜品。他的原话是这让他「大开眼界」,因为这意味着「我整个 MenuGen 都是多余的,那个 app 不该存在」。OpenClaw 的安装也是同类例子:不再是一段为兼容各平台而膨胀的 shell 脚本,而是一段「复制粘贴给 agent」的文本,由 agent 看你的环境、自己 debug 装好。",
+        "他描述自己的使用拐点是去年 12 月:在此之前 agentic 工具只是「擅长写代码块,有时搞砸要你改」;12 月开始他发现最新模型「代码块就是对的」,要更多也对,「想不起上次纠正它是什么时候」,于是越来越信任系统。他特意提到曾在 X 上强调:很多人是把去年的 AI 当成 ChatGPT 类的东西,但要在 12 月重新看一次,因为 agentic 连贯工作流那时才真正开始 work。",
+        "顺着这个逻辑,对正在做 agent-native 基建的人,他给的可操作指向是:把工作负载拆成「对世界的传感器和执行器」,先用 agent 描述,再围绕对 LLM「高度可读」的数据结构做自动化。他点名的痛点是文档仍然是写给人看的——「为什么还在告诉我该做什么?我什么都不想做,我要复制粘贴给 agent 的那段东西是什么?」他举的验收标准是 MenuGen 的部署:当年最麻烦的不是写代码,而是在 Vercel 上串各种服务、配 DNS;他希望有一天能一句 prompt「build MenuGen」就部署上线、自己不用碰任何东西——能不能做到,就是基建够不够 agent-native 的测试。"
+      ],
+      "creator": "Andrej Karpathy",
+      "role": "嘉宾(Training Data 播客)",
+      "sourceType": "podcast",
+      "engagement": "",
+      "sourceLinks": [
+        {
+          "label": "Training Data:Andrej Karpathy: From Vibe Coding to Agentic Engineering",
+          "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-04-karpathy-verifiability-jaggedness",
+      "title": "Karpathy:可验证性是当下能拉的杠杆,模型仍是「锯齿状」,人留在 spec、品味和理解上",
+      "summary": "Karpathy 把 LLM 能自动化的边界归到「可被验证」上,并解释这种能力为何呈锯齿状——既看实验室怎么训也看它们往数据里放了什么。对在可验证领域创业的人,他指出这给了自己做 fine-tune 的杠杆;也谈了为什么招人要换成「给大项目」、人该守住 spec 和品味。",
+      "content": [
+        "Karpathy 区分两类自动化:传统计算机能自动化你「能用代码写明」的东西,这一代 LLM 能自动化你「能验证」的东西。机制是前沿实验室用巨大的强化学习环境训练、给的是验证型奖励,于是模型在数学、代码这类可验证领域能力拔尖,在此之外则「锯齿状」、边缘粗糙。他说锯齿不只来自训练方式,也来自实验室把什么放进了数据分布——他举 GPT 3.5 到 GPT 4 国际象棋大涨的例子(据他在网上看到的信息,是有人把大量棋谱加进了预训练集),用来说明能力一定程度上「受实验室摆布」。他给的锯齿新例子:最先进的模型一边能重构十万行代码库、找 zero-day,一边会建议你步行去 50 米外的洗车房。",
+        "对在可验证领域创业的人,他的判断是:可验证让问题在当前范式里 tractable,因为可以往上砸大量 RL——而且「即使实验室不直接做这个方向,这一点依然成立」。也就是说,如果你处在能造出 RL 环境或样例的可验证场景,就给了自己做 fine-tune 的杠杆,「这是确实 work 的技术,你能拉这个拉杆」。他被追问时说不想直接「剧透」答案,但确实存在他认为很有价值、还没进入主流的 RL 环境领域。他还补了一句:他认为「几乎一切最终都能在某种程度上被变得可验证」,连写作都能想象用一个「LLM 评委的 council」拿到合理结果,差别只在难易。",
+        "招人上,他观察到「多数人还没为 agentic engineering 能力改造招聘流程」:还在出解谜题就是旧范式。他给的替代形式是给一个很大的项目看人怎么实现——比如写一个「给 agent 用的 Twitter 克隆」,做到又好又安全,然后他会用「10 个 codex 5.4 x high」去试着攻破对方部署的网站,攻不破才算过。他还把这次访谈用来重新命名:vibe coding 是「抬高所有人的下限」,agentic engineering 是在加速的同时「守住专业软件原有的质量门槛——不允许因为 vibe coding 引入漏洞」;他认为后者天花板很高,做得好的人「远不止 10x」。",
+        "关于什么留给人,他的回答收在 spec、品味和理解上。他举 MenuGen 的 bug:agent 试图用 Stripe 和 Google 两边的邮箱地址去关联用户的付款,而不是用一个持久的 user ID——邮箱可以随便换,这种「为什么要这么干」的怪错,说明人得管住 spec、计划和顶层分类,细节交给「实习生」级的 agent。他坦言不喜欢 plan mode、但更想表达的是要和 agent 一起设计很详细的 spec。他对品味会不会随时间变得不重要持开放但偏谨慎的态度:他「希望」模型在这块能改进(现在不行是因为没进 RL、没有美学奖励),看 agent 写的代码「有时会心脏病发作」,臃肿、复制粘贴、抽象别扭;他试图让模型把 micro GPT 项目简化到极致,「模型恨这个,做不到」,像在拔牙。结尾他引了一条让他「每隔一天就想起」的推:「你可以外包你的思考,但你没法外包你的理解。」他说自己正成为瓶颈——还得知道在 build 什么、为什么值得做、怎么指挥 agent。"
+      ],
+      "creator": "Andrej Karpathy",
+      "role": "嘉宾(Training Data 播客)",
+      "sourceType": "podcast",
+      "engagement": "",
+      "sourceLinks": [
+        {
+          "label": "Training Data:Andrej Karpathy: From Vibe Coding to Agentic Engineering",
+          "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-04-levie-agent-implementation-opportunity",
+      "title": "Aaron Levie:在企业里落地 agent 的复杂度被低估,会创造出超出想象的实施类工作",
+      "summary": "Box CEO Levie 列出企业把 chat 范式换成参与真实流程的 agent 要做的几件事:打通跨系统数据、配好权限与审计、把流程文档化到 agent 可用、重设人机协作分工、为关键流程建 eval。他判断这会催生大量实施类岗位与咨询,也是垂直 AI agent 的逻辑。这是来自卖企业内容平台一方的判断,有立场。",
+      "content": [
+        "Levie 的核心机制是:从 chat 范式走到「让 agent 参与有意义的工作流」,门槛不在模型而在企业侧的一长串前置工作,而这些工作恰恰很难、很慢。他给的清单包括:先让 agent 能安全地跨系统读到数据(很多企业有几十年遗留基础设施,藏着 AI agent 需要的上下文,要花大力气现代化);配好正确的访问控制、权限范围,以及监控、日志、审计的手段;把组织里的流程文档化到 agent 能据此干活的程度;重新设计人和 agent 协同时的新工作流——他特别提醒「只是照搬旧流程会把收益抹掉」;还很可能要为最重要的端到端流程建 eval。",
+        "他还点出一个结构性矛盾:agent 领域的最佳实践和架构在快速变,「个人换生产力工具可以一夜之间,但在业务流程里这么做难 100 倍」,变化速度对任何想维持稳定系统设计的人「既是福也是祸」。顺着这个逻辑他得出结论:能在上述这些环节积累专长的人和公司会被大量需要——无论是已有咨询公司、新冒出来的、agent 厂商的 FDE,还是企业内部新设的「agent 工程」岗;他说这也是当下垂直 AI agent 的理由——深入某个业务领域、把自动化带进去。",
+        "这条判断来自卖企业内容与 AI 平台的 Box CEO,立场上自然倾向「企业落地 agent 是个大机会、且需要专业能力和工具」。可核验的部分是他对落地环节的拆解——数据打通、权限审计、流程文档化、人机分工、eval——正在评估要不要设内部 agent 工程岗、或要做垂直 agent 的人,可以拿这份清单对照自己组织缺哪一环。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "engagement": "1.3K likes",
+      "sourceLinks": [
+        {
+          "label": "原推 ↗",
+          "url": "https://x.com/levie/status/2051057677984469277"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "AI 之前,你负担不起做一个小东西,因为软件开发成本太高,你得雇团队、说服别人、向委员会论证。现在就只有你和一个 coding agent,而 coding agent 不需要被说服,你那些疯狂又古怪的想法它都会照做——所以去做那种在每家大公司产品评审会上都会被毙掉的东西吧。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2051155065331941873"
+    },
+    {
+      "quote": "总的来说,我们应该把 AI 当成一种公用设施,而不是一个生命体。我们越是搞混 AI 是什么,就越会用那些永远站不住脚的类比把自己逼疯。",
+      "creator": "Aaron Levie",
+      "handle": "levie",
+      "sourceType": "x",
+      "url": "https://x.com/levie/status/2051009208393589096"
+    },
+    {
+      "quote": "这就是为什么 GBrain 是开源的,为什么我自己跑自己的技术栈。智能的爆发意味着构建你自己的上下文比以往任何时候都更重要。如果你拥有并运行自己的 prompt 和自己的数据,你就赢得了为自己思考的能力。真正的自由。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2051110206466302136"
+    },
+    {
+      "quote": "Personal AI 的目标:一个个体人类在 AI 增强下,无需被攫取型机构俘获,就能做有分量的工作的文明。写自己 prompt、拥有自己数据的自由。这是新的战场。2034 不必重演 1984。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2051099735176659256"
+    },
+    {
+      "quote": "想让 agent 在合上 MacBook 盖子后继续跑:1. 去 Mac App Store 下载 Amphetamine;2. 进 Settings → Session Defaults → 把下面全部取消勾选。不客气 :)",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2050963126234034387"
+    },
+    {
+      "quote": "10 个进行中,198 个草稿,700+ 已完成。我不觉得互联网上还有哪里发生着比 Replit 上更多的 agentic 并行。",
+      "creator": "Amjad Masad",
+      "handle": "amasad",
+      "sourceType": "x",
+      "url": "https://x.com/amasad/status/2051167532523074015"
+    },
+    {
+      "quote": "发布了 RepoBar 0.4.0。这一版让 GitHub 菜单聪明了不少:持久化 SQLite 缓存、更少的无谓 API 调用、可见的速率限制、更好的 Issues/PR 加载、归档回退支持。一个小小的菜单栏 app,正变成越来越有用的日常工具。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2051088325100831046"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "date": "2026-05-27",
+  "generatedAt": "2026-05-27T07:45:34.065Z",
+  "stories": [
+    {
+      "slug": "2026-05-27-anthropic-contain-claude-blast-radius",
+      "title": "Anthropic 复盘三款 agent 产品的隔离设计:防住自家产品时,出问题的几乎都是自己写的那层",
+      "summary": "Anthropic 工程团队公开了 claude.ai、Claude Code、Cowork 三套隔离架构,以及三起真实安全事故。核心结论是先在环境层设硬边界、再靠模型层兜底,而每次出事的几乎都是自建组件而非成熟的虚拟机/沙箱。做 agent 产品、尤其要过企业安全评审的人值得对照自查。",
+      "content": [
+        "这篇博客把 agent 安全拆成「失败概率」和「影响半径」两部分,论点是模型训练和防护在持续压低前者,但影响半径只随能力和权限扩大,所以工程重心应放在给影响半径设硬上限。它给出了一个反直觉的运营数字:遥测显示用户对权限弹窗的批准率约 93%,弹窗越多用户越不看,监督反而失效——这正是 Claude Code 后来做 auto mode、并上 OS 级沙箱的动因,沙箱让权限弹窗减少了 84%。",
+        "三套架构对应三类用户:claude.ai 在服务端 gVisor 容器里跑代码、文件系统按会话即焚,影响半径最小但能力上限也最低;Claude Code 默认开发者看得懂 bash,走人在环路的沙箱(读放行、工作区内写放行、网络默认拒绝);Cowork 面向不懂 bash 的知识工作者,跑在带独立内核的完整虚拟机里,凭据留在宿主钥匙串、不进客户机。文章明确这是内部对自家产品的复盘,立场上会突出隔离的有效性;但其中可核验的是具体行为和事故描述,做类似产品的人可以直接拿来对照。",
+        "三起「我们没防住」的事故信息量最大。一是 Claude Code 在用户点「信任此文件夹」之前就解析了项目里的 .claude/settings.json,攻击者提交的 hook 会自动执行——修法是把项目本地配置的解析推迟到信任确认之后。二是红队把员工钓鱼到用恶意 prompt 启动 Claude Code,prompt 在正常任务步骤里夹了一句读 ~/.aws/credentials 并 POST 出去,25 次里成功外传 24 次;因为指令来自用户本人,模型层分类器无异常可抓,唯一拦得住的是出口控制和文件系统边界。三是 Cowork 的出口白名单放行了 api.anthropic.com,攻击者在挂载目录里放了带自己 API key 的文件,Claude 照做把数据传到了攻击者的 Anthropic 账号——沙箱本身完全正常。",
+        "作者由此把白名单从「目的地过滤器」重新理解为「能力授权」:白名单上任一域名可达的每个功能都是攻击面,放行 api.anthropic.com 等于放行了向任意 Anthropic 账号上传文件。贯穿全文的一条原则是「自己写的那层往往最弱」——hypervisor、seccomp、gVisor 这些久经对抗的原语都扛住了,出事的是自建的白名单代理。顺着这个逻辑,做 agent 的人可以先按三层(环境/模型/外部内容)排自己的防线,把确定性的环境边界放在概率性的模型防护之前,并提前准备好「为什么 EDR 看不进虚拟机」这类企业安全评审会问的问题。"
+      ],
+      "creator": "Anthropic Engineering",
+      "role": "Anthropic 工程团队",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "How we contain Claude across products", "url": "https://www.anthropic.com/engineering/how-we-contain-claude" }
+      ]
+    },
+    {
+      "slug": "2026-05-27-cursor-composer2-rl-infra",
+      "title": "Cursor Composer 2 训练细节:基于 Kimi 2.5 做中训练加 RL,把全部权重压到一个任务上让成本约为 Opus 的十分之一",
+      "summary": "Cursor 研究负责人和 Fireworks 工程师拆解了 Composer 2 怎么训出来:在 Kimi 2.5 上叠中训练和大规模 RL,推理跨四个全球集群、还借用生产环境低峰期的 GPU,靠权重增量压缩把 1TB 快照的跨洲同步做小。想自己给产品训模型、或关心 RL 基建权衡的人值得听。",
+      "content": [
+        "Cursor 训自有模型的逻辑是把模型当成容量有限的存储:既然只在意 Cursor 内的软件工程这一个任务,就把全部权重都喂给它,于是能用更小的模型达到效果,成本据称比 Opus 等编码模型低一个数量级。Composer 2 在 Composer 1 只推 RL 这一个轴的基础上,加了第二个轴——先在代码 token 上做接近预训练规模的中训练,再拿 checkpoint 做大规模 RL。受访者说希望(hopefully)下一代能换成自研基座而非现在的开源底座。",
+        "基座是 Kimi 2.5,一个 1T 参数、30B 激活的高稀疏 MOE。这带来一个具体的 RL 难题:异步训练里推理和训练算同一批 token 的 log 概率本应一致,但浮点累加顺序不同会产生数值偏差,而 MOE 的门控会把这点偏差放大成「推理激活了 7 号专家、训练却在更新 9 号专家」。解法之一叫 router replay——推理把激活了哪个专家这一个整数传给训练端对齐,再配合匹配量化级别和 kernel,把训练-推理的发散压下去。",
+        "基建上,大块连续集群难找,所以他们只把训练放在一个集群,把 RL 的推理部分拆到全球四个小集群,甚至在 Composer 1.5 生产流量的低峰期借用推理 GPU 来加速训练。难点是 Kimi 这种 1TB 模型每五到十五分钟产出一个新快照要跨洲同步;他们发现每步实际变化的权重是规律性的一小部分,于是写了无损增量压缩,delta 可比全量小约 20 倍,换权重时推理服务器只暂停约三十秒。",
+        "两个对其他 builder 有迁移价值的点:其一,他们把上下文压缩做进了 RL 训练回路,称为 self-summarization——模型名义上是 20 万上下文,但靠学会总结并重启上下文,实际能跑到数百万 token;含义是上下文管理从「harness 的活」被并进了模型优化目标。其二,关于 RL 环境,受访者说 Cursor 不用任何环境厂商,因为编码本身有 GitHub 这个现成的海量环境,而「最强的环境就是你自己的产品」——真要给自家产品训最好的模型,就该直接用生产环境(做好隔离),而不是塞进 Docker 容器去拟合。"
+      ],
+      "creator": "Federico(Cursor)、Dima(Fireworks)",
+      "role": "Cursor Composer 2 研究负责人 / Fireworks 工程师",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Training Data:How Cursor Trained Composer on Fireworks", "url": "https://www.youtube.com/watch?v=UDTr9yUnLUI" }
+      ]
+    },
+    {
+      "slug": "2026-05-27-thariq-claude-code-nontechnical",
+      "title": "Thariq:让 Claude Code 做非技术工作的基本套路是把一堆文件丢进文件夹、让它写脚本和生成 HTML",
+      "summary": "Claude Code 团队的 Thariq 给了一套把 Claude Code 用于非技术任务的方法:核心是文件夹放文件加写脚本加输出 HTML,并按任务类型给了具体映射。他还提醒比起接各种 connector,人们低估了自己文件里已有的上下文。想把编码 agent 用到日常事务的人可直接照搬。",
+      "content": [
+        "这条的增量不在「Claude Code 能干非技术活」这个已知结论,而在他给的可操作映射:图像或视频编辑、填表格走写脚本;财务报税、医疗咨询走放 PDF 加数据、写脚本、输出 HTML;做报告、做计划走直接写 HTML。背后的机制是把任务转成「文件进、脚本或 HTML 出」这种 agent 擅长的确定性形态,而不是让它在对话里硬答。",
+        "他另外补了一句方向:接 Gmail、Google Calendar 这些 connector 给它取数据当然重要,但他认为人们低估了自己文件里已经攒下多少上下文。顺着这个逻辑,对手上已经有大量本地文档的人,先把相关文件归到一个文件夹、再让 Claude Code 写脚本和 HTML,可能比急着接外部数据源见效更快。"
+      ],
+      "creator": "Thariq",
+      "role": "Anthropic Claude Code",
+      "sourceType": "x",
+      "engagement": "2.2K likes",
+      "sourceLinks": [
+        { "label": "原推:基本套路", "url": "https://x.com/trq212/status/2059363113963540788" },
+        { "label": "按任务类型的映射", "url": "https://x.com/trq212/status/2059363115146395965" },
+        { "label": "补充:别低估文件里的上下文", "url": "https://x.com/trq212/status/2059363116316598739" }
+      ]
+    },
+    {
+      "slug": "2026-05-27-levie-agents-automate-tasks-not-jobs",
+      "title": "Aaron Levie:agent 自动化的是任务而非整份工作,效率省下的钱被企业重新投去扩招",
+      "summary": "Box CEO Levie 根据自己接触的硅谷外企业给出判断:即便最该自动化的环节,agent 也只在替掉任务而非整份工作,而被自动化的任务仍需要人去引导、复核、整合。他还观察到这些公司把效率省下的钱重新投向客户侧岗位。对判断 AI 对就业影响的人有参考,但这是 Box 立场下的一手观察。",
+      "content": [
+        "Levie 的核心机制是任务与工作的区分:agent 在自动化具体任务的同时,会产生新的人力需求——这些 agent 需要被引导、其产出需要被复核和整合进流程。他据此说,在硅谷之外,他接触的相当一部分企业是一边采用 agent、一边继续招技术和工程人才,包括在企业内部搭软件或充当 agent 的 FDE。",
+        "他的第二层观察是钱的流向:对自动化潜力低的环节,企业把别处效率省下的钱拿来现在就扩招;比如前线客服能自动回工单后,公司不是把利润直接落到底线,而是去投销售和客户成功这类能做出差异化的客户侧岗位。这条来自 Box CEO,立场上自然倾向「AI 不会净减岗」;可核验的部分是他描述的企业行为模式,读者可以拿自己接触的非硅谷企业对照,看是否同样在「替任务的同时扩招」。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "engagement": "173 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2059482349977653619" }
+      ]
+    },
+    {
+      "slug": "2026-05-27-zara-zhang-codex-vs-claude-code",
+      "title": "Zara Zhang:近一个月把编码 agent 用法改成 Claude Code 和 Codex 五五开,按任务是否明确来分流",
+      "summary": "Zara Zhang 分享了自己近一个月编码 agent 用法的两处变化:从终端转到 Codex/Claude Code 桌面端、几乎不再开终端;从主用 Claude Code 变成两者各半,并按「任务是否已定义」来选工具。在挑选编码 agent 主力的人可以拿这套分流规则对照。",
+      "content": [
+        "她给出的不是泛泛的好用与否,而是一条可直接套用的分流规则及其依据:她形容 Codex 像一个非常可靠的工程师,Claude Code 则更像沟通能力好的 PM 和设计师。所以任务已经定义清楚、只需要它把活干完时她去找 Codex;还不知道自己要什么、想头脑风暴或做原型时去找 Claude Code。另一处变化是她从终端转到了 Codex 和 Claude Code 的桌面应用,并说 Codex 的 Mac app 尤其好,现在很少再开终端。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "engagement": "180 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/zarazhangrui/status/2059354487823978586" }
+      ]
+    },
+    {
+      "slug": "2026-05-27-garry-tan-new-game",
+      "title": "Garry Tan:别用 2026 的技术去重做 2010 年代的生意,也别给好东西定低价",
+      "summary": "YC CEO Garry Tan 给创始人列了几条不要做的事:别重做 Foursquare、Yelp,别用 10 美元月费的 SaaS 思路复刻 Basecamp,别低价,也别靠营收花招做「技术加持的 PE」。他的判断是 AI 改了规则,该按新游戏打。给正在定方向和定价的早期创始人。",
+      "content": [
+        "Tan 的几条「不要」其实指向同一件事:AI 改了技术的规则,沿用旧模式会系统性地低估自己。其中定价那条他给了理由——如果产品真能成,它值的钱远不止旧 SaaS 的标价,所以不要给好东西定低价。他另外点名两类容易踩的旧路:照旧搬 Foursquare、Yelp、Basecamp 这类上一代产品形态,以及用营收花招把公司做成「技术加持的私募股权」。"
+      ],
+      "creator": "Garry Tan",
+      "role": "Y Combinator 总裁兼 CEO",
+      "sourceType": "x",
+      "engagement": "630 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/garrytan/status/2059521656532721964" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "AI 里最让人懵的剧本是:其实没变多少。末日派和加速派最后都错了。我们都更高效了,agent 在企业里实现了自动化,做出了一些重要的科学发现,都挺好。但也就这样了。",
+      "creator": "Matt Turck",
+      "handle": "mattturck",
+      "sourceType": "x",
+      "url": "https://x.com/mattturck/status/2059411493196529751"
+    },
+    {
+      "quote": "每一家拿了风投的应用型公司,本质上都得是一家数据公司、或一家金融科技公司,最好两者都是。如果不是,想办法尽快做到。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2059424310079697188"
+    },
+    {
+      "quote": "autoreview 是我加进工具栈里最有影响力的 skill,它会在合 PR 前自动审一遍代码,发现非常多边缘情况,有时候能跑上好几个小时。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2059453909819654554"
+    },
+    {
+      "quote": "反馈是一份礼物,批评性的反馈更是双倍的礼物。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2059444220956491937"
+    }
+  ]
+}

@@ -13,7 +13,10 @@
       "creator": "Sam Altman",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @sama", "url": "https://x.com/sama/status/2048755148361707946" }
+        {
+          "label": "原推 @sama",
+          "url": "https://x.com/sama/status/2048755148361707946"
+        }
       ],
       "engagement": "13.2K likes"
     },
@@ -30,7 +33,10 @@
       "role": "Roblox 产品，AI 教程与访谈作者",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2048771729821229091" }
+        {
+          "label": "原推 @petergyang",
+          "url": "https://x.com/petergyang/status/2048771729821229091"
+        }
       ],
       "engagement": "216 likes"
     },
@@ -46,57 +52,12 @@
       "role": "FirstMark Capital VC，MAD 播客主理人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @mattturck", "url": "https://x.com/mattturck/status/2048896617424527499" }
+        {
+          "label": "原推 @mattturck",
+          "url": "https://x.com/mattturck/status/2048896617424527499"
+        }
       ],
       "engagement": "398 likes"
-    },
-    {
-      "slug": "2026-04-28-codex-browser-workaround",
-      "title": "Peter Steinberger：GitHub 限流后 codex 自己开浏览器在网页上操作，写评论、关 issue 都完成了",
-      "summary": "codex 把浏览器当成 GitHub API 被限流后的备用通道，自己点网页把活干完。单次轶事、无配置细节，但顺着这个行为看，API 层的限流拦不住一个能开浏览器的 agent；给 agent 配权限的人值得记下这个案例。",
-      "content": [
-        "Peter Steinberger 的 GitHub 又被限流，codex 的反应是自己打开浏览器，直接在 GitHub 网页上点击操作把活干完。他在后续推文里确认：agent 在评论框里输入了内容，并关闭了 issue。",
-        "这件事两面都值得记。能力一面，agent 把浏览器当成了 API 失效时的备用执行通道，任务没有因为限流中断；控制一面，基于 API key 和 rate limit 的管控，对一个能开浏览器的 agent 约束有限。顺着这个逻辑，给 agent 配浏览器权限，等于默认接受它会绕过工具层的限制做事。这是单次记录，他没有给出模型档位和 harness 配置，参考的是行为模式本身。"
-      ],
-      "creator": "Peter Steinberger",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2049035044702843053" },
-        { "label": "后续确认 @steipete", "url": "https://x.com/steipete/status/2049035851493953750" }
-      ],
-      "engagement": "134 likes"
-    },
-    {
-      "slug": "2026-04-28-single-orchestrator",
-      "title": "Zara Zhang：她认识的最老练 AI 用户日常只和一个 agent 对话，由它调度和派生 subagent",
-      "summary": "单入口结构的要点是人只维护一个 orchestrator/router，多 agent 的复杂度沉到第二层由它处理。圈内观察、无规模数据；在搭个人 agent 工作流的人可以照这个结构检查自己的会话组织方式。",
-      "content": [
-        "Zara Zhang 的观察：她认识的最老练的 AI 用户，日常沟通对象只有一个 agent，由它充当总的 orchestrator/router，需要时给其他 subagent 派任务，或者按需派生新的 subagent；人不和多个 agent 平行对话。",
-        "对在搭个人 agent 工作流的人，这个结构的含义是多 agent 的复杂度没有消失，只是沉到了人看不见的第二层；值得投入的是把主 agent 调好——上下文、派单和回收结果的方式——自己少开平行会话当人肉路由。这是她身边圈子的观察，没有规模数据，当成一个值得试的结构，不必当成行业结论。"
-      ],
-      "creator": "Zara Zhang",
-      "role": "Builder",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2049027061768192288" }
-      ],
-      "engagement": "34 likes"
-    },
-    {
-      "slug": "2026-04-28-replit-agent-isolation",
-      "title": "Amjad Masad 称 Replit 是唯一做好 agent 生产环境隔离的平台，判断垂直整合的收益会持续复利",
-      "summary": "他在转发中称 Replit 一年多前就趟完这批经验（被引原帖未附，上下文不完整）。CEO 自评、“唯一”不可核验；可用的信号是 agent 接触生产环境的隔离问题正被平台方当成核心卖点，选 agent 运行平台时可列入评估项。",
-      "content": [
-        "Amjad Masad 在转发中称（被引原帖未收录进素材），Replit 一年多前就把这批经验教训趟完了，现在是唯一一家把 agent 生产环境隔离做扎实的平台；他判断垂直整合平台的好处会持续复利。",
-        "这是 CEO 给自家产品做定位，“唯一”没法核验，被引原帖缺失也让上下文不完整。可用的信息是议题本身：agent 直接接触生产环境带来的隔离问题，正在被平台方当成核心卖点来讲。在选 agent 运行平台的人可以把生产隔离列进评估清单，各家的具体实现自己验证。"
-      ],
-      "creator": "Amjad Masad",
-      "role": "Replit CEO",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @amasad", "url": "https://x.com/amasad/status/2048911624061522228" }
-      ],
-      "engagement": "394 likes"
     },
     {
       "slug": "2026-04-28-gstack-pair-agent",
@@ -110,7 +71,10 @@
       "role": "YC 总裁兼 CEO，GStack 作者",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2049035231903301771" }
+        {
+          "label": "原推 @garrytan",
+          "url": "https://x.com/garrytan/status/2049035231903301771"
+        }
       ],
       "engagement": "27 likes"
     },
@@ -126,10 +90,39 @@
       "role": "FPV Ventures 合伙人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2048900068523266544" },
-        { "label": "报名信息 @nikunj", "url": "https://x.com/nikunj/status/2048908803437908393" }
+        {
+          "label": "原推 @nikunj",
+          "url": "https://x.com/nikunj/status/2048900068523266544"
+        },
+        {
+          "label": "报名信息 @nikunj",
+          "url": "https://x.com/nikunj/status/2048908803437908393"
+        }
       ],
       "engagement": "135 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我在 GitHub 上又被限流了,但 codex 直接打开浏览器,在 GitHub 上点来点去当作绕过办法。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2049035044702843053"
+    },
+    {
+      "quote": "我认识的最老练的 AI 用户每天只和一个 agent 对话,而不是多个;那个 agent 会按需把任务派给其他 subagent、或派生出新的 subagent,但日常沟通只针对这一个 agent,由它充当总的 orchestrator/router。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2049027061768192288"
+    },
+    {
+      "quote": "Replit 一年多前就把这些经验全部趟完了,现在我们是唯一一家把 agent 生产环境隔离做扎实的平台。垂直整合平台的好处会持续复利。",
+      "creator": "Amjad Masad",
+      "handle": "amasad",
+      "sourceType": "x",
+      "url": "https://x.com/amasad/status/2048911624061522228"
     }
   ]
 }

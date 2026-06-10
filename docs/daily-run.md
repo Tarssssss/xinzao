@@ -12,8 +12,8 @@
 
 1. **同步 feed**：`npm install && npm run sync:feeds`，产出 `data/raw/latest.json`（feed-x 是 24h 滚动窗口，正好对应今天这期的素材）。
 2. **去重检查**：读最近 3 期 `src/data/issues/*.json`，素材里主链接已被收录过的内容跳过；只是旧 story 的轻微补充时，更新旧 story 而不是新增。
-3. **选稿**（`docs/writing-guide.md` 第 7 节）：有明确观点、方法论、产品发布或 builder insight 的才收；纯玩笑、无上下文单句不收；同一 builder 同主题多推合并成一条。20-40 条推文的素材通常出 5-10 条 story。
-4. **写稿**：严格按 `docs/writing-guide.md` 写每条 story（保真红线最优先），写完逐条过第 8 节 self-check。
+3. **选稿与分层**（`docs/writing-guide.md` 第 3 节）：有明确观点、方法论、产品发布或 builder insight 的才收；纯玩笑、无上下文单句不收；同一 builder 同主题多推合并成一条。然后过「深度闸门」：能撑起 ≥3 个标题外增量点的做成完整 story，撑不起的降级为「速览」（只把原话翻成中文 + 署名 + 链接，不写 summary/content）。20-40 条推文通常出 5-10 条完整 story + 若干速览。
+4. **写稿**：严格按 `docs/writing-guide.md` 写每条完整 story（保真红线最优先），速览只翻译不发挥；写完逐条过第 8 节 self-check。
 5. **落盘**：写入 `src/data/issues/<YYYY-MM-DD>.json`（今天的 London 日期），结构与已有 issue 文件完全一致：
 
    ```json
@@ -32,11 +32,20 @@
          "sourceLinks": [{ "label": "原推 @handle", "url": "素材里的真实 url" }],
          "engagement": "（素材有就填，如 1.2K likes）"
        }
+     ],
+     "quickTakes": [
+       {
+         "quote": "原推照翻的中文一句话，不加引申/立场/受众",
+         "creator": "…",
+         "handle": "（不带 @）",
+         "sourceType": "x",
+         "url": "素材里的真实 url"
+       }
      ]
    }
    ```
 
-   期号不用管（按日期自动派生）；stories 按重要性排序。
+   期号不用管（按日期自动派生）；stories 按重要性排序。`quickTakes` 可选、可为空数组；至少要有 1 条完整 story 才落盘（纯速览的一天不发刊）。
 6. **验证**：`npm run build` 必须通过。失败先修 JSON，修不好就不要 push。
 7. **提交**：`git add src/data/issues data/raw && git commit -m "Issue YYYY-MM-DD" && git push`。Vercel 会自动部署。
 

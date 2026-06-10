@@ -15,9 +15,18 @@
       "role": "Anthropic 研究团队",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @alexalbert__（发布）", "url": "https://x.com/alexalbert__/status/2041579938537775160" },
-        { "label": "原推 @alexalbert__（开放范围）", "url": "https://x.com/alexalbert__/status/2041579950332113155" },
-        { "label": "原推 @alexalbert__（Glasswing 定性）", "url": "https://x.com/alexalbert__/status/2041578743769280811" }
+        {
+          "label": "原推 @alexalbert__（发布）",
+          "url": "https://x.com/alexalbert__/status/2041579938537775160"
+        },
+        {
+          "label": "原推 @alexalbert__（开放范围）",
+          "url": "https://x.com/alexalbert__/status/2041579950332113155"
+        },
+        {
+          "label": "原推 @alexalbert__（Glasswing 定性）",
+          "url": "https://x.com/alexalbert__/status/2041578743769280811"
+        }
       ],
       "engagement": "16.4K likes"
     },
@@ -34,7 +43,10 @@
       "creator": "Latent Space",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Latent Space", "url": "https://www.youtube.com/@LatentSpacePod" }
+        {
+          "label": "Latent Space",
+          "url": "https://www.youtube.com/@LatentSpacePod"
+        }
       ]
     },
     {
@@ -48,25 +60,12 @@
       "creator": "Sam Altman",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @sama", "url": "https://x.com/sama/status/2041658719839383945" }
+        {
+          "label": "原推 @sama",
+          "url": "https://x.com/sama/status/2041658719839383945"
+        }
       ],
       "engagement": "18.3K likes"
-    },
-    {
-      "slug": "2026-04-08-verification-tokens",
-      "title": "Claude Code 团队 Thariq：开放式验证很容易烧掉大量 token，输出却没有变好",
-      "summary": "他打了约 10 通电话、翻了一批 transcript 后给出最大的一条发现：在开放式验证上花大量 token 很常见，但这些 token 往往不会让输出变好。他说会试着再写怎么高效验证。在 agent 流程里加自动验证的人值得记下这条。",
-      "content": [
-        "Thariq 说目前打了大约 10 通这类电话、又看了一批 transcript，学到很多，其中最大的一条：在开放式验证上花掉大量 token 非常容易，而这些 token 往往不会让最终输出变好。他说会试着再写一篇讲怎么高效地做验证。",
-        "这是 Claude Code 团队成员从一手使用数据里得出的观察。对在 agent 流程里加自动验证的人，可以对照检查一遍：验证步骤有没有明确判据和停止条件——没有判据的「再检查一遍」，很可能就是他说的那类无效 token。这层检查清单是编辑引申，他的原推只给了现象，方法要等他后续的文章。"
-      ],
-      "creator": "Thariq",
-      "role": "Claude Code 团队 @ Anthropic",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @trq212", "url": "https://x.com/trq212/status/2041722125510377705" }
-      ],
-      "engagement": "588 likes"
     },
     {
       "slug": "2026-04-08-prism-paper-review",
@@ -81,9 +80,18 @@
       "role": "OpenAI VP Science",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @kevinweil（功能说明）", "url": "https://x.com/kevinweil/status/2041573802212303053" },
-        { "label": "原推 @kevinweil（实现细节与招聘）", "url": "https://x.com/kevinweil/status/2041592093718749659" },
-        { "label": "原推 @kevinweil（试用入口）", "url": "https://x.com/kevinweil/status/2041573804145799346" }
+        {
+          "label": "原推 @kevinweil（功能说明）",
+          "url": "https://x.com/kevinweil/status/2041573802212303053"
+        },
+        {
+          "label": "原推 @kevinweil（实现细节与招聘）",
+          "url": "https://x.com/kevinweil/status/2041592093718749659"
+        },
+        {
+          "label": "原推 @kevinweil（试用入口）",
+          "url": "https://x.com/kevinweil/status/2041573804145799346"
+        }
       ],
       "engagement": "85 likes"
     },
@@ -100,42 +108,16 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie（Mythos 与能力斜率）", "url": "https://x.com/levie/status/2041732610179703100" },
-        { "label": "原推 @levie（Box Agent 填 RFP）", "url": "https://x.com/levie/status/2041512156693201176" }
+        {
+          "label": "原推 @levie（Mythos 与能力斜率）",
+          "url": "https://x.com/levie/status/2041732610179703100"
+        },
+        {
+          "label": "原推 @levie（Box Agent 填 RFP）",
+          "url": "https://x.com/levie/status/2041512156693201176"
+        }
       ],
       "engagement": "125 likes"
-    },
-    {
-      "slug": "2026-04-08-claude-code-bash-write",
-      "title": "Garry Tan：Claude Code 限制 Write 工具写出 workspace，bash 的 cat >> 却似乎能写任意文件",
-      "summary": "他观察到 Claude Code 权限模型的一个口子：Write 工具被限制在 workspace 内，但 agent 似乎能用 bash 里的 cat >> 写文件系统任意位置。原话带「似乎」，没有确证。依赖 workspace 隔离跑 agent 的人值得自己验证一遍。",
-      "content": [
-        "原话的语气是反讽：他「喜欢」Claude Code 允许 bash 这件事——agent 不能用 Write File 工具写 workspace 之外的文件，但似乎可以用 cat >> 写到文件系统里的任何位置。他保留了「似乎」，这是一条观察，推文里没有复现细节。",
-        "对把 agent 接进真实文件系统的人，这条的含义直接：只在工具层做写入边界，挡不住 shell 这条旁路——bash 一开，cat、重定向都是等价的写入通道。依赖 Claude Code workspace 隔离的用户可以花几分钟自己复现一遍，确认当前版本的实际行为，再决定要不要在系统层补这道边界。"
-      ],
-      "creator": "Garry Tan",
-      "role": "Y Combinator 总裁兼 CEO",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2041654662764609735" }
-      ],
-      "engagement": "49 likes"
-    },
-    {
-      "slug": "2026-04-08-designers-pm",
-      "title": "Nan Yu：设计师和工程师抽象想产品问题时表现很好，工具一到手就直接开做；更多设计师该转 PM",
-      "summary": "他的管理观察：很多设计师和工程师在抽象讨论产品问题时表现很好，但只要手边有 IDE 或 Figma，就会直接动手做被要求的东西，跳过该想清的部分。他由此建议更多设计师转 PM。带产品团队的人可以参考。",
-      "content": [
-        "他的观察分两半：让设计师和工程师在抽象层面想产品问题，很多人想得很好；但工具在手边时，他们倾向于直接跳进去，把「被要求的那个东西」原样做出来。结论是更多设计师应该去做 PM，他认为他们会做得不错。",
-        "顺着这个观察，带产品团队的人有一个可以直接试的做法：产品定义阶段把讨论从 IDE 和 Figma 里挪出来，先把问题想完再开工具。这一步是编辑引申，他的原推只给了观察和转岗建议。"
-      ],
-      "creator": "Nan Yu",
-      "role": "Linear 产品负责人",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @thenanyu", "url": "https://x.com/thenanyu/status/2041495924682244275" }
-      ],
-      "engagement": "191 likes"
     },
     {
       "slug": "2026-04-08-changelog-check",
@@ -149,26 +131,42 @@
       "role": "FPV Ventures 合伙人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2041757065354293760" }
+        {
+          "label": "原推 @nikunj",
+          "url": "https://x.com/nikunj/status/2041757065354293760"
+        }
       ],
       "engagement": "43 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "目前做了大约 10 通这类电话，又看了更多 transcript，学到很多，其中最大的一条是：在开放式验证上很容易花掉大量 token，而这些 token 并不会让你的输出变得更好。我会试着再写一篇讲怎么高效地做验证。",
+      "creator": "Thariq",
+      "handle": "trq212",
+      "sourceType": "x",
+      "url": "https://x.com/trq212/status/2041722125510377705"
     },
     {
-      "slug": "2026-04-08-personalized-podcast",
-      "title": "Zara Zhang 发布 Personalized Podcast skill：把任意内容变成双 AI 主持的播客，经 RSS 进播客客户端",
-      "summary": "这个 skill 把任意材料转成两个 AI 主持的播客，发布成 RSS feed，可在任何播客 app 订阅收听。她自己的用法是把会议 transcript 重混成 AI 点评她本人的节目，并称这是「content for one」的时代。找 skill 玩法的人可以直接装。",
-      "content": [
-        "功能本身一句话能说完：输入任意内容，生成由两个 AI 主持的播客节目，发布成 RSS feed，在常用的播客 app 里订阅、通勤路上听。skill 链接在配套推文里。",
-        "她自己的用法更有信息量：把会议 transcript 重混成播客，让两个 AI 像旁听了她的对话一样，点评对她本人的印象。她把这类产物归为「content for one」——只为一个听众生成的内容。对在找 skill 玩法的人，这条展示了把个人数据流转成可消费内容的一种做法，可以直接装来试。"
-      ],
-      "creator": "Zara Zhang",
-      "role": "Builder",
+      "quote": "我喜欢 Claude Code 允许 bash 这一点：agent 不能用 Write File 工具写到 workspace 之外，但它似乎可以用 cat >> 写到文件系统里的任何文件。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @zarazhangrui（介绍）", "url": "https://x.com/zarazhangrui/status/2041736869998948528" },
-        { "label": "原推 @zarazhangrui（skill 链接）", "url": "https://x.com/zarazhangrui/status/2041736976630739000" }
-      ],
-      "engagement": "155 likes"
+      "url": "https://x.com/garrytan/status/2041654662764609735"
+    },
+    {
+      "quote": "很多设计师和工程师在被要求抽象地思考产品问题时表现很好，但你得把 IDE 或 Figma 从他们手里拿走，否则他们往往会直接动手，把被要求的东西原样做出来。更多设计师应该去做 PM，他们会做得很好。",
+      "creator": "Nan Yu",
+      "handle": "thenanyu",
+      "sourceType": "x",
+      "url": "https://x.com/thenanyu/status/2041495924682244275"
+    },
+    {
+      "quote": "推出 Personalized Podcast skill：把任何内容变成有两个 AI 主持人的播客，发布成 RSS feed，在你常用的播客 app 里随时收听。我一直在把自己的会议 transcript 重混成播客，让这两个 AI「偷听」我的对话、点评他们对我的印象，效果太疯狂了。这是「content for one」的时代。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2041736869998948528"
     }
   ]
 }

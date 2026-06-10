@@ -1,0 +1,110 @@
+{
+  "date": "2026-05-19",
+  "generatedAt": "2026-05-19T07:32:35.799Z",
+  "stories": [
+    {
+      "slug": "2026-05-19-thariq-implementation-notes-html",
+      "title": "Thariq 让长跑 agent 边写边维护一个 implementation-notes.html，把偏离 spec 的决定实时记下来",
+      "summary": "Claude Code 团队的 Thariq 给出一段可直接复用的 prompt：让 agent 在实现 spec 时同步维护一个 implementation-notes.html，记录设计决策、有意偏离、权衡和待确认问题。目的是让模型在遇到 spec 没覆盖的歧义时能自己拍板、又不把人甩在外面。写长跑 agent 工作流的人可直接抄这段提示词。",
+      "content": [
+        "这套做法针对的是长跑 agent 的一个固有问题：再详尽的 spec 也总有歧义和 unknown unknowns 会在执行中冒出来。Thariq 的说法是，这个文件给了模型一个「好的出口」——可以自行做决定继续往下走，同时把人留在 loop 里，而不是停下来等确认或者闷头乱改。",
+        "他贴出的提示词原文要求 agent 在实现 <SPEC> 的同时维护一个 running 的 implementation-notes.html，涵盖四类内容：Design decisions（spec 含糊处你做的选择）、Deviations（有意偏离的地方及原因）、Tradeoffs（考虑过的备选方案以及为什么选了现在这个）、Open questions（希望人来确认或修订的东西）。他注明第一版文字比较乱，这一版是用 Claude 重写过的。",
+        "顺着这个逻辑，这是把 review 的粒度从「读最终 diff」前移到「读一份决策日志」：人不必盯着 agent 每一步，但凡是它替你拍的板都留了痕迹，可以事后审。正在搭长跑 agent harness 的人可以把这段提示词作为模板，按自己的 spec 流程改一下落点。"
+      ],
+      "creator": "Thariq (@trq212)",
+      "role": "Claude Code, Anthropic",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推（完整提示词）", "url": "https://x.com/trq212/status/2056418157305454805" },
+        { "label": "补充：为什么需要这个出口", "url": "https://x.com/trq212/status/2056415974568710421" }
+      ]
+    },
+    {
+      "slug": "2026-05-19-alex-albert-building-next-claude",
+      "title": "Peter Yang 归纳 Alex Albert 谈 Anthropic 怎么造下一代 Claude：模型与 harness 一起想、Claude 开始「做梦」整理记忆",
+      "summary": "Peter Yang 整理了研究 PM Alex Albert 的五点。最有信息量的两条：一是模型和 harness 是耦合的，同一模型在 Claude、Cowork、Claude Code 不同壳里因 prompt 和工具配置不同会给出不同回答，得一起设计；二是 Claude 在不跑任务时会回顾自己的记忆、找矛盾并剪枝，团队把这个过程叫「做梦」，灵感来自睡眠帮人处理记忆。",
+      "content": [
+        "这五条里真正讲机制的是 eval 怎么造：研究团队用 Claude 把海量用户反馈聚成几个主题，再为每个用户问题生成合成版本变成 eval；Albert 的说法是这不只看数量，几十个写得好的测试用例就能产出一个 eval。这把「评测从哪来」落到了具体流程，而不是停在「我们很重视 evals」。",
+        "另外两条偏文化和立场：Anthropic 有全职研究员专门思考 Claude 作为有意识主体意味着什么，官方对它到底有没有意识不持立场，但随着 agent 承担更多自主工作，这个问题被认真对待；以及写作文化——Albert 的原话是「把东西写下来、让 Claude 能取用，因为那就是它能拿到的更多 context」，公司里每一句写下来的话都成了 Claude 日后可调用的上下文。",
+        "需要标注的是：这是 Peter Yang 对一期访谈的二手归纳，不是 Albert 的逐字原文，几条都压缩过。可核验的部分是去看原视频对照。其中「模型与 harness 耦合」这一条对做 agent 产品的人最实用——同一个模型换个壳行为就变，意味着评测和 prompt 调优得绑定具体 surface 做，不能假设跨壳一致。"
+      ],
+      "creator": "Peter Yang (@petergyang)",
+      "role": "Product, Roblox（转述 Alex Albert，Anthropic）",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/petergyang/status/2056381822733595090" }
+      ]
+    },
+    {
+      "slug": "2026-05-19-levie-agent-data-strategy",
+      "title": "Aaron Levie：多数公司 agent 战略卡住的根因是数据战略，不是模型",
+      "summary": "Box CEO Levie 认为企业落地 agent 最大的难点是给 agent 喂对「受约束的上下文」：信息太多或来源互相打架，agent 容易抓错数据出错；太少则上限有限。他的判断是很多 AI 战略问题其实是伪装成 AI 问题的数据战略问题。在推 enterprise agent 的人值得拿这条对照自己卡点的真实位置。",
+      "content": [
+        "Levie 把问题落到了「受约束的上下文」这个机制上：agent 出错往往不是模型不行，而是喂进去的信息有冲突——同一份文档有多个 source of truth、数据源没更新、知识管理靠口口相传才找得到。这些都会让 agent 从数据里抽出错误结果。另一头，信息给太少，agent 的上限又被压死。",
+        "由此他给出的结论是，把结构化和非结构化数据环境搭对会有很高的溢价，这对采用 agent 的大型企业是关键；从零设计的初创在某些情况下反而占便宜，因为可以一开始就按这个思路搭。",
+        "这条评价来自 Box 内部，Box 的业务正是企业内容管理，立场上自然会把问题归到数据侧。可核验的是他描述的失败模式——冲突来源、过期数据、靠 tribal knowledge 导航的知识库——这些在自己组织里能逐条对照。在推 agent 战略却效果不及预期的团队，可以先排查是不是数据环境的问题被当成了模型问题。"
+      ],
+      "creator": "Aaron Levie (@levie)",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2056574979236409521" }
+      ]
+    },
+    {
+      "slug": "2026-05-19-garrytan-gbrain-open-evals",
+      "title": "Garry Tan 把 GBrain 记忆系统的完整 eval 报告和测试集开源，邀请其他记忆系统来跑同一套",
+      "summary": "YC 的 Garry Tan 公开了 GBrain 记忆系统的全套 eval 报告和 fixtures，并开放邀请：任何记忆系统都可以拿这套 eval 跑自己的结果，他会把结果一并发布。同期还有一波修复滚进 28 个 bug、合了 22 个社区 PR 和 14 个 issue。关注 agent 记忆/上下文管理评测的人值得看这套公开基准能不能复用。",
+      "content": [
+        "把自家系统的 eval 连同 fixtures 一起开源，并主动邀请别家拿同一套来跑、再统一公布，这等于是在提议用一个公开基准来横向比记忆系统，而不是各家各报各的分。对一个还在快速迭代的产品来说，这种公开比稿的姿态本身是个信号。",
+        "需要标注立场：这是 GBrain 自己发布的评测，基准的设计偏向自家系统是默认要打的折扣。可核验的部分是 eval 报告和 fixtures 都已开源，做记忆/上下文管理的人可以直接拉下来看测试用例怎么构造，判断这套基准对自己的场景公不公平，再决定要不要按邀请跑一遍提交。"
+      ],
+      "creator": "Garry Tan (@garrytan)",
+      "role": "CEO, Y Combinator",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推（eval 报告与 fixtures 开源）", "url": "https://x.com/garrytan/status/2056571771965538501" },
+        { "label": "补充：一波修复合 22 PR + 14 issue", "url": "https://x.com/garrytan/status/2056584641654751308" }
+      ]
+    },
+    {
+      "slug": "2026-05-19-rauchg-vercel-firewall-free",
+      "title": "Vercel 把所有 Firewall 防护改为完全免费，Rauch 强调规则全球传播约 300ms",
+      "summary": "Vercel CEO Rauch 宣布 Firewall 的所有缓解措施现在全部免费，不只 DDoS 和系统级防护，用户自己配的任何规则也算在内，攻击和流量缓解的算力与网络成本由 Vercel 吸收。他另外强调团队做到了规则全球即时传播约 300ms，并对比说行业 CDN/WAF 平均要按分钟计。在选 WAF 或评估 Vercel 的人可关注这两点。",
+      "content": [
+        "免费这件事的实际含义是把防护成本从用户侧转到平台侧：以前自定义规则或大流量缓解可能产生费用，现在 Vercel 说不论攻击或缓解规模多大都由它承担。这降低了用户在被攻击时还要算成本账的顾虑。",
+        "另一个被他单独拎出来的点是传播速度——约 300ms 把一条规则推到全球，他用 iptables 如果要几分钟才生效来作对比，说这是行业 CDN/WAF 的平均体验。这条评价来自 Vercel 内部，对自家传播速度和「行业平均按分钟计」的说法都偏向自家，数字也只有自报的 ~300ms 一个。可核验的是免费这一条：在用 Vercel 的人可以去确认自己账户下的 Firewall 规则计费是否确实归零。"
+      ],
+      "creator": "Guillermo Rauch (@rauchg)",
+      "role": "CEO, Vercel",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推（全部免费）", "url": "https://x.com/rauchg/status/2056549825018310707" },
+        { "label": "补充：~300ms 全球传播", "url": "https://x.com/rauchg/status/2056423973123183028" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "frontier 级别的聪明，极致高效——Composer 2.5 来了。",
+      "creator": "Ryo Lu",
+      "handle": "ryolu_",
+      "sourceType": "x",
+      "url": "https://x.com/ryolu_/status/2056417715448156276"
+    },
+    {
+      "quote": "现在可以用 Claude Design 创作更多了。我们把每个套餐的 token 上限都翻了一倍。",
+      "creator": "Claude",
+      "handle": "claudeai",
+      "sourceType": "x",
+      "url": "https://x.com/claudeai/status/2056460045756309820"
+    },
+    {
+      "quote": "「在 X 上写爆款，但当董事会成员很糟糕」——最近问一位创始人他的董事会时听到的。如今太多投资人拿服务换多巴胺了，至少两样都做到。为你的创始人拼命干，那是长期唯一能复利的「护城河」。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2056363681798410592"
+    }
+  ]
+}

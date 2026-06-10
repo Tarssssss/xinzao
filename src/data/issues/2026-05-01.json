@@ -16,7 +16,10 @@
       "role": "前 Tesla AI 总监、OpenAI 创始团队成员",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @karpathy", "url": "https://x.com/karpathy/status/2049903821095354523" }
+        {
+          "label": "原推 @karpathy",
+          "url": "https://x.com/karpathy/status/2049903821095354523"
+        }
       ],
       "engagement": "3.4K likes"
     },
@@ -33,7 +36,10 @@
       "creator": "Demis Hassabis",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Training Data", "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8" }
+        {
+          "label": "Training Data",
+          "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
       ]
     },
     {
@@ -50,7 +56,10 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2050051426446152159" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2050051426446152159"
+        }
       ],
       "engagement": "357 likes"
     },
@@ -67,9 +76,18 @@
       "role": "Anthropic Claude Code 团队",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @_catwu", "url": "https://x.com/_catwu/status/2049964403177689130" },
-        { "label": "原推 @claudeai（定位）", "url": "https://x.com/claudeai/status/2049898741772021991" },
-        { "label": "原推 @claudeai（功能更新）", "url": "https://x.com/claudeai/status/2049898743772696745" }
+        {
+          "label": "原推 @_catwu",
+          "url": "https://x.com/_catwu/status/2049964403177689130"
+        },
+        {
+          "label": "原推 @claudeai（定位）",
+          "url": "https://x.com/claudeai/status/2049898741772021991"
+        },
+        {
+          "label": "原推 @claudeai（功能更新）",
+          "url": "https://x.com/claudeai/status/2049898743772696745"
+        }
       ],
       "engagement": "292 likes"
     },
@@ -86,9 +104,18 @@
       "role": "AI Engineer 大会团队、Latent Space 播客",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2050068468498842058" },
-        { "label": "writeup 链接 @swyx", "url": "https://x.com/swyx/status/2050076322781860144" },
-        { "label": "原推 @sama", "url": "https://x.com/sama/status/2049946120441520624" }
+        {
+          "label": "原推 @swyx",
+          "url": "https://x.com/swyx/status/2050068468498842058"
+        },
+        {
+          "label": "writeup 链接 @swyx",
+          "url": "https://x.com/swyx/status/2050076322781860144"
+        },
+        {
+          "label": "原推 @sama",
+          "url": "https://x.com/sama/status/2049946120441520624"
+        }
       ]
     },
     {
@@ -104,44 +131,28 @@
       "role": "Cursor 设计师，早期 Notion、Stripe 成员",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @ryolu_", "url": "https://x.com/ryolu_/status/2049866003287576978" }
+        {
+          "label": "原推 @ryolu_",
+          "url": "https://x.com/ryolu_/status/2049866003287576978"
+        }
       ],
       "engagement": "186 likes"
-    },
+    }
+  ],
+  "quickTakes": [
     {
-      "slug": "2026-05-01-steipete-openclaw-groupchat",
-      "title": "Steipete：OpenClaw 群聊的 agent 对话方式已重写，之前效果不稳的值得重试",
-      "summary": "两条可直接操作的更新：他改写了 agent 在群聊里的说话方式，此前在群聊拿到参差结果的用户应该再试；用 GPT 性能不佳的切到 codex harness，两个一起启用。作者自评没有对比数据，已部署 OpenClaw 的用户重跑一遍即可验证。",
-      "content": [
-        "两个具体动作：一是群聊场景——他说自己改变了 agent 在群聊里的对话方式，给此前结果参差的用户的建议是「一定要再试一次」；二是模型搭配——用 GPT 拿到次优表现的话，切换到 codex harness，并把两者都启用。",
-        "这是作者对自家改动的自评（原文「IT IS SO GOOD NOW」的语气接近营销），没有给对比数据；验证方式就是在自己的群聊场景重跑一遍。同日他还转发了与 NVIDIA、OpenAI、Microsoft、GitHub、腾讯混元等合作加固 OpenClaw 安全的进展，重度用户可以一并关注。"
-      ],
+      "quote": "如果你在群聊里试过 OpenClaw 但效果参差，你一定要再试一次——我改了 agent 在群聊里的说话方式，现在真的非常好了。如果你用 GPT 表现不佳，换成 codex harness；两个都开，效果就出来了。",
       "creator": "Peter Steinberger",
-      "role": "OpenClaw 作者",
+      "handle": "steipete",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2049988836160074022" },
-        { "label": "原推 @steipete（安全合作）", "url": "https://x.com/steipete/status/2049976855617314991" }
-      ],
-      "engagement": "1.2K likes"
+      "url": "https://x.com/steipete/status/2049988836160074022"
     },
     {
-      "slug": "2026-05-01-garry-tan-gbrain",
-      "title": "Garry Tan 给 GBrain 划品类：不做完美检索，专门服务 OpenClaw、Hermes 的个人 AI 场景",
-      "summary": "连发两条给自家开源项目定位：三周前 GBrain 和 Mempalace 还相似，现在他认为 GBrain 是独立品类——不追求完美的大海捞针式检索，面向 OpenClaw、Hermes 的个人 AI 场景；MIT 开源，建议装在 Karpathy 式知识 wiki 上。",
-      "content": [
-        "定位声明：三周前 GBrain 和 Mempalace 看起来还有些相似；三周后他的判断是 GBrain 已经是自己的品类——不去把「大海捞针」式的精确检索做到完美，目标场景是 OpenClaw、Hermes 这类个人 AI。",
-        "用法建议：Hermes Agent 或 OpenClaw 用户把 GBrain 装在自己的 Karpathy 式知识 wiki 之上，他的说法是会带来「巨大回报」。项目 MIT 协议开源。",
-        "这是作者本人推广自家项目（他的 bio 写着 GBrain 创作者），「巨大回报」没有附数据；可核验的是开源代码本身和与 Mempalace 的实际差异。已经在维护个人知识库并跑 OpenClaw 的用户，试装成本不高。"
-      ],
+      "quote": "三周前 GBrain 和 Mempalace 看起来还有点像；三周后已经很清楚，GBrain 是自己的一个品类，最适合 OpenClaw / Hermes 这类个人 AI 场景，而不是只想把大海捞针式的检索做到完美。",
       "creator": "Garry Tan",
-      "role": "Y Combinator CEO、GBrain 作者",
+      "handle": "garrytan",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @garrytan（品类定位）", "url": "https://x.com/garrytan/status/2050095919157350644" },
-        { "label": "原推 @garrytan（用法建议）", "url": "https://x.com/garrytan/status/2050096324100682097" }
-      ],
-      "engagement": "66 likes"
+      "url": "https://x.com/garrytan/status/2050095919157350644"
     }
   ]
 }

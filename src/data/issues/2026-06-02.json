@@ -1,0 +1,78 @@
+{
+  "date": "2026-06-02",
+  "generatedAt": "2026-06-02T07:59:00.877Z",
+  "stories": [
+    {
+      "slug": "2026-06-02-josh-pigford-solo-ai-workflow",
+      "title": "Josh Pigford 拆解单人用 AI agents 同时做多个产品的工作流",
+      "summary": "做了 25 年的单人 builder Josh Pigford 给出六条做法,最具操作性的三条:有内置成本的产品第一天就收费、养不活自己就关停并退款;用一个模型构建、换另一个模型做 review;把每个阶段的「这条没用」沉淀成 /learnings skill。适合在用 agent 同时推多个产品的独立开发者对照。",
+      "content": [
+        "这套方法的底子不是某个工具,而是 Pigford 把「试错成本」拆细后塞进流程的每一环。收费这条,他的逻辑是产品要能自己覆盖 hosting、LLM 这类内置成本,覆盖不了就直接关掉、给近期付费用户退款——等于用现金流当筛子,不靠主观判断决定哪个产品该留。",
+        "工程上他用 git worktree 并行开发多个 feature:每个 worktree 是代码库在独立分支上的单独副本,feature 之间不互相干扰,他的说法是这能挡住 context rot、隔离错误,并逼自己在进入下一块之前把每一块测过(他用 Conductor 来管理这些 worktree)。review 环节他刻意跨模型:用一个模型构建,再换另一个模型过一遍,他的原话是「GPT 总能挑出三到五个 Opus 漏掉的 bug」——不同模型抓不同的错。他在 Conductor 里设了默认 review 模型,每个 PR 自动跑。",
+        "/learnings 这条值得单独看:他做了一个在每个阶段结束时运行的 skill,把每次「不,这样不行」的时刻提炼成新规则,让 agent 不再重犯同样的错——相当于给 agent 攒了一份随项目增长的纠错记忆。顺着这个逻辑,agent 工作流里真正复利的可能不是单次 prompt,而是这种把失败固化成规则的机制。",
+        "最后一条是立场提示:Pigford 把自己现在用 agent 出活快归功于 AI 之前 25 年的积累——「我大概知道东西该长成什么样,所以能很快做到那一步」;他给新手的建议是「多失败,因为搞清楚什么不该做的唯一办法就是把事情做错一遍」。这是来自一位资深单人开发者的经验之谈,新 builder 可以照着把「收费筛选」和「跨模型 review」先用起来,但不必把他的产出速度当成 agent 本身的默认水平。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Product at Roblox / AI tutorials",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 ↗", "url": "https://x.com/petergyang/status/2061452068792287622" }
+      ]
+    },
+    {
+      "slug": "2026-06-02-levie-agent-era-moat",
+      "title": "Aaron Levie 认为 agent 时代的护城河来自把企业独有数据和流程接上 AI",
+      "summary": "Box CEO Levie 提出 agent 时代的核心问题:当对手能用同样的模型,优势从哪来。他的判断是谁能把自己的内部知识、数据资产和领域工作流跟 AI 接好谁就领先,自建还是用最佳工具只是变量,关键是长期捕获并保护这些独有价值,且每个行业的版本不同。在思考企业 AI 差异化的人值得看。",
+      "content": [
+        "Levie 这条的前提是模型本身正在变成大家都拿得到的东西:既然智能可外购,真正不可复制的就只剩企业自己的内部知识、已有数据资产和领域特定的工作流。他的推论是优势不在模型层,而在能不能把这三样跟 AI 接起来——这也是为什么他强调「捕获并保护」由独有数据、流程和专长创造的价值,而不是单纯接入一个更强的模型。",
+        "他特意把「自建技术栈还是组合最佳工具」放成一个变量而非答案:这只是一个核心变量,关键仍是找到能让企业长期守住这部分价值的方式,且他明确说每个行业会有自己的版本、优势按垂直领域不同而不同——没有归纳出一个通用打法。",
+        "这条判断来自 Box CEO,立场上自然偏向「企业应保留把任意模型接到自己数据上的灵活性」这一 Box 正在卖的方向(他也说在 Box 越来越多看到客户这么要)。可核验的部分是那个机制描述:在模型同质化的前提下,差异化确实更可能落在数据和流程的接入方式上。正在想企业 AI 差异化的人,可以拿这个框架去检查自己手里真正不可复制的是数据、流程还是别的东西。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO @ Box",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 ↗", "url": "https://x.com/levie/status/2061662386680127688" }
+      ]
+    },
+    {
+      "slug": "2026-06-02-mallaby-concentrated-vs-diversified-bets",
+      "title": "Demis 传记作者 Mallaby 用「集中下注 vs 分散下注」解释为何 Google 在聊天和编程上落后",
+      "summary": "传记作者 Mallaby 在播客里提出一个解释框架:Google DeepMind 资源极深却习惯同时押多条路,所以 ChatGPT 和编程 agent 两个标志性时刻都不出自它;Anthropic 靠集中押编程跑出来,研究者也往「自己就是那个赌注」的地方流动。他还重提自己 OpenAI 五五开会在明年夏天前出局的判断。关注实验室竞争格局的人值得看。",
+      "content": [
+        "Mallaby 把 Google 的「迟到」归到一种组织性格而非单纯的反应慢:DeepMind 出身 Demis 的神经科学背景,凡是有两条路就两条都走、能找到第三条就一起走,非常 hedged。代价是 ChatGPT 和编程 agent 这两个验证消费与编程体验的关键时刻都不来自它;而 Anthropic 愿意下一个更集中的赌注,从不碰生成式视频那一整块,才跑到了编程前面。他的说法是,资源极深的 hyperscaler 反而不容易做集中的押注,因为它输得起、可以晚两年再追上。",
+        "这个框架延伸到人才:Mallaby 转述 Jack Ray 当年离开 DeepMind 去 OpenAI,是因为 OpenAI 当时只在乎语言模型这一个集中赌注,而那正是他在做的;他认为如今在 robotics 上也会这样——顶尖研究者想去「自己的方向就是公司的方向」的地方。他还补了一句对 Anthropic 的观察:相对其他家流失率很低,他把这归因于 Dario 那种把安全和责任摆到台面上的领导者身份会筛掉一部分人,但留下的极其忠诚(这是他作为旁观传记作者的归因,不是来自 Anthropic 内部数据)。",
+        "格局判断上他重提了自己今年 1 月在《纽约时报》写的预测:OpenAI 有大约五成概率在明年夏天前出局——他特别澄清这里的「失败」指的是它把自己当成相对某家 hyperscaler 打折出售,而非技术不行(他说技术很好,取消 Sora 等成本削减也做得不错),问题在商业模式扛不住 Google 几乎无上限的现金消耗。这是一位非实验室内部人士、写完整本 Demis 传记后的判断,带着明显的概率口径(五五开)和时间限定,适合当作外部视角的参考、而非确定结论;关注 robotics 下一波格局的人,可以拿「集中赌注 vs 分散赌注」这条去看哪类玩家更可能先跑出来。"
+      ],
+      "creator": "Sebastian Mallaby (via Unsupervised Learning)",
+      "role": "Author, The Infinity Machine",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Unsupervised Learning Ep 88 ↗", "url": "https://www.youtube.com/@RedpointAI" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "MiniMax M3 现在是 Next.js agent 评测里领先的开源模型,紧随 Opus 和 GPT5 之后,但便宜 10 倍(在 ▲ AI Gateway 上目前还便宜 20 倍)。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2061593874498531707"
+    },
+    {
+      "quote": "我让 codex 在我分神、而它被卡住需要我帮忙解封时就用这个工具叫我,时不时听到它跟我说话,这是最酷的事(比如发布时要用 npm、又被 1Password 挡着的情况)。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2061574752574283858"
+    },
+    {
+      "quote": "AWS 有巨大的企业体量,手握来自企业的大额承诺合同。所以这次合作既给 OpenAI 的模型打开了更多分发渠道,也很可能整体上推高所有模型提供商的 token 消耗。",
+      "creator": "Aaron Levie",
+      "handle": "levie",
+      "sourceType": "x",
+      "url": "https://x.com/levie/status/2061612625574944804"
+    }
+  ]
+}

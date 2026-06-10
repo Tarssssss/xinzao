@@ -87,10 +87,28 @@
 }
 
 .masthead-note {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
   margin: 10px 0 0;
   font-size: 13px;
   color: var(--ink-faint);
   letter-spacing: 0.5px;
+}
+
+.masthead-nav-link {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.masthead-nav-link:hover {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ============ 期块 ============ */
@@ -403,6 +421,180 @@
   color: var(--accent-deep);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* ============ 速览 ============ */
+
+.quick-takes {
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--rule-strong);
+}
+
+.quick-takes-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+
+.quick-takes-head h3 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.quick-takes-head span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+.quick-takes ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quick-take {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.qt-quote {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.qt-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin: 5px 0 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+.qt-meta .creator {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.qt-handle {
+  color: var(--ink-faint);
+  font-weight: 400;
+}
+
+/* ============ 写作规范页 ============ */
+
+.guide {
+  margin-top: 18px;
+  animation: row-in 0.45s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+}
+
+.guide h1 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.4;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.guide h2 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 34px 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+}
+
+.guide h3 {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 22px 0 6px;
+  color: var(--ink);
+}
+
+.guide p {
+  margin: 10px 0 0;
+}
+
+.guide ul,
+.guide ol {
+  margin: 8px 0 0;
+  padding-left: 22px;
+}
+
+.guide li {
+  margin-top: 5px;
+}
+
+.guide strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.guide blockquote {
+  margin: 14px 0 0;
+  padding: 4px 0 4px 16px;
+  border-left: 3px solid var(--accent);
+  color: var(--ink-faint);
+  font-size: 13.5px;
+}
+
+.guide blockquote p {
+  margin: 4px 0 0;
+}
+
+.guide code {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  background: var(--paper-deep);
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+.guide table {
+  width: 100%;
+  margin: 12px 0 0;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.guide th,
+.guide td {
+  border: 1px solid var(--rule);
+  padding: 7px 9px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.65;
+}
+
+.guide th {
+  background: var(--paper-deep);
+  font-weight: 700;
+  font-family: var(--font-serif);
+  color: var(--ink);
+}
+
+.guide hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 26px 0 0;
 }
 
 /* ============ 页脚 / 空态 ============ */

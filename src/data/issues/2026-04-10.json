@@ -15,8 +15,14 @@
       "role": "前 Tesla AI 总监、OpenAI 创始团队成员",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @karpathy（能力认知差距）", "url": "https://x.com/karpathy/status/2042334451611693415" },
-        { "label": "原推 @karpathy（OpenClaw 时刻）", "url": "https://x.com/karpathy/status/2042341482531864741" }
+        {
+          "label": "原推 @karpathy（能力认知差距）",
+          "url": "https://x.com/karpathy/status/2042334451611693415"
+        },
+        {
+          "label": "原推 @karpathy（OpenClaw 时刻）",
+          "url": "https://x.com/karpathy/status/2042341482531864741"
+        }
       ],
       "engagement": "12.9K likes"
     },
@@ -33,7 +39,10 @@
       "creator": "Unsupervised Learning",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Unsupervised Learning Ep 84", "url": "https://www.youtube.com/@RedpointAI" }
+        {
+          "label": "Unsupervised Learning Ep 84",
+          "url": "https://www.youtube.com/@RedpointAI"
+        }
       ]
     },
     {
@@ -49,27 +58,24 @@
       "role": "Anthropic 官方账号",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @claudeai（beta 上线）", "url": "https://x.com/claudeai/status/2042308629940855048" },
-        { "label": "原推 @claudeai（评测数据）", "url": "https://x.com/claudeai/status/2042308627478773808" },
-        { "label": "原推 @claudeai（用法）", "url": "https://x.com/claudeai/status/2042308625989882054" },
-        { "label": "原推 @alexalbert__", "url": "https://x.com/alexalbert__/status/2042329150086922574" }
+        {
+          "label": "原推 @claudeai（beta 上线）",
+          "url": "https://x.com/claudeai/status/2042308629940855048"
+        },
+        {
+          "label": "原推 @claudeai（评测数据）",
+          "url": "https://x.com/claudeai/status/2042308627478773808"
+        },
+        {
+          "label": "原推 @claudeai（用法）",
+          "url": "https://x.com/claudeai/status/2042308625989882054"
+        },
+        {
+          "label": "原推 @alexalbert__",
+          "url": "https://x.com/alexalbert__/status/2042329150086922574"
+        }
       ],
       "engagement": "1.5K likes"
-    },
-    {
-      "slug": "2026-04-10-sama-100-dollar-pro-tier",
-      "title": "Sam Altman 宣布将推出 100 美元档 ChatGPT Pro，触发点是 Codex 的需求",
-      "summary": "原推只有一句：很高兴看到 Codex 这么受欢迎，应大量需求推出 100 美元档 ChatGPT Pro。档位包含什么、何时上线都没说。如果新档下放 Codex 类配额，能接触前沿 agentic 能力的人群会扩大一截——这是推断，待官方细节。",
-      "content": [
-        "原推只有两句话：很高兴看到 Codex 获得这么多喜爱；应非常多的需求，将推出 100 美元档 ChatGPT Pro。没有给出档位包含的内容和上线时间。",
-        "Karpathy 同日的帖子正好提供了背景：最前沿 agentic 模型的体验目前集中在每月付 200 美元的重度用户那里。顺着这两条信息推断，如果 100 美元档把 Codex 类能力的配额下放，能接触到最新能力的人群会明显扩大；但档位实际包含什么，要等官方细节再判断。"
-      ],
-      "creator": "Sam Altman",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @sama", "url": "https://x.com/sama/status/2042342572958630332" }
-      ],
-      "engagement": "7.9K likes"
     },
     {
       "slug": "2026-04-10-levie-automation-demand",
@@ -85,8 +91,14 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie（自动化需求）", "url": "https://x.com/levie/status/2042469771275329594" },
-        { "label": "原推 @levie（落地差距）", "url": "https://x.com/levie/status/2042392664943870443" }
+        {
+          "label": "原推 @levie（自动化需求）",
+          "url": "https://x.com/levie/status/2042469771275329594"
+        },
+        {
+          "label": "原推 @levie（落地差距）",
+          "url": "https://x.com/levie/status/2042392664943870443"
+        }
       ],
       "engagement": "165 likes"
     },
@@ -103,9 +115,18 @@
       "role": "Anthropic Claude Code 团队",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @trq212（prompting）", "url": "https://x.com/trq212/status/2042318547519762678" },
-        { "label": "原推 @trq212（Monitor Tool）", "url": "https://x.com/trq212/status/2042335178388103559" },
-        { "label": "原推 @levie（prompting）", "url": "https://x.com/levie/status/2042460500785602648" }
+        {
+          "label": "原推 @trq212（prompting）",
+          "url": "https://x.com/trq212/status/2042318547519762678"
+        },
+        {
+          "label": "原推 @trq212（Monitor Tool）",
+          "url": "https://x.com/trq212/status/2042335178388103559"
+        },
+        {
+          "label": "原推 @levie（prompting）",
+          "url": "https://x.com/levie/status/2042460500785602648"
+        }
       ],
       "engagement": "2.1K likes"
     },
@@ -122,8 +143,14 @@
       "role": "Vercel CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @rauchg（Agentic Infrastructure）", "url": "https://x.com/rauchg/status/2042358253510963384" },
-        { "label": "原推 @rauchg（shadcn 数据）", "url": "https://x.com/rauchg/status/2042294997278736552" }
+        {
+          "label": "原推 @rauchg（Agentic Infrastructure）",
+          "url": "https://x.com/rauchg/status/2042358253510963384"
+        },
+        {
+          "label": "原推 @rauchg（shadcn 数据）",
+          "url": "https://x.com/rauchg/status/2042294997278736552"
+        }
       ],
       "engagement": "252 likes"
     },
@@ -139,27 +166,20 @@
       "role": "Y Combinator 总裁兼 CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @garrytan（开源发布）", "url": "https://x.com/garrytan/status/2042497872114090069" },
-        { "label": "原推 @garrytan（Hermes 支持）", "url": "https://x.com/garrytan/status/2042495930948338048" },
-        { "label": "原推 @garrytan（部署方式）", "url": "https://x.com/garrytan/status/2042493525934424114" }
+        {
+          "label": "原推 @garrytan（开源发布）",
+          "url": "https://x.com/garrytan/status/2042497872114090069"
+        },
+        {
+          "label": "原推 @garrytan（Hermes 支持）",
+          "url": "https://x.com/garrytan/status/2042495930948338048"
+        },
+        {
+          "label": "原推 @garrytan（部署方式）",
+          "url": "https://x.com/garrytan/status/2042493525934424114"
+        }
       ],
       "engagement": "48 likes"
-    },
-    {
-      "slug": "2026-04-10-zara-ai-writing",
-      "title": "Zara Zhang：AI 对她最有用的是舒适区外的事，写作这类自己擅长的事用 AI 反而更慢",
-      "summary": "她的理由有二：写作是她享受且容易的事；她对文字标准高，用 AI 几乎总要反复迭代，总耗时超过自己动笔。顺着这个逻辑，给自己的工作流排 AI 优先级时，可以先看任务离自己的专长多远。",
-      "content": [
-        "她几乎不用 AI 写作，理由有二：写作本身是她享受、且做起来容易的事；她对文字标准高，用 AI 写几乎总要反复迭代，总耗时反而超过自己动笔。对她个人，AI 最有用的位置在舒适区之外（比如编程），而非舒适区之内（比如写作）。",
-        "顺着她的逻辑，这给了一个判断 AI 净收益的简单标尺：任务离自己的专长越近，验收标准越高，AI 产出过审的成本越高；离专长越远，AI 的杠杆越大。给自己的工作流排 AI 优先级时，可以先从舒适区外的环节下手。"
-      ],
-      "creator": "Zara Zhang",
-      "role": "Builder",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2042379962339246105" }
-      ],
-      "engagement": "104 likes"
     },
     {
       "slug": "2026-04-10-lyria-3-music",
@@ -173,9 +193,28 @@
       "role": "Google Labs / Gemini App 副总裁",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2042318148851188151" }
+        {
+          "label": "原推 @joshwoodward",
+          "url": "https://x.com/joshwoodward/status/2042318148851188151"
+        }
       ],
       "engagement": "378 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "很高兴看到 Codex 收获这么多喜爱。应众多需求，我们将推出 100 美元档 ChatGPT Pro。",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2042342572958630332"
+    },
+    {
+      "quote": "我很少用 AI 写作，因为我享受写作、觉得写起来既容易又有趣；而且我对写作的标准高，用 AI 写几乎总会因为反复迭代而比自己动笔更费时间。对我个人而言，AI 最有用的地方是帮我做舒适区之外的事（比如编程），而不是舒适区之内的事（比如写作）。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2042379962339246105"
     }
   ]
 }

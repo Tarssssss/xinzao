@@ -3,24 +3,6 @@
   "generatedAt": "2026-04-27T08:20:43.831Z",
   "stories": [
     {
-      "slug": "2026-04-27-altman-os-agent-protocol",
-      "title": "Sam Altman 觉得该认真重想操作系统和 UI 的设计了，互联网应该有一个人和 agent 同样能用的协议",
-      "summary": "只有方向没有方案的一条表态，但把 OS、UI、互联网协议三件事一起点名，配上同晚公布的 OpenAI 五条原则，可以当作 OpenAI 在 agent 时代议程的信号。做 agent 入口、客户端或协议层的人值得留意。",
-      "content": [
-        "Altman 的原话只有两句：感觉现在是认真重新思考操作系统和用户界面设计的好时机；互联网也一样，应该有一个人和 agent 同样能用的协议。没有方案，也没有时间表。",
-        "他没有展开，但这句话点到的摩擦是真实的：agent 操作计算机和互联网，目前用的基本还是为人设计的入口——GUI、浏览器、为人写的网页。顺着他的说法，如果真出现一个人和 agent 同样可用的协议，要重写的不只是浏览器，操作系统和应用的交互层都在范围内。",
-        "同一晚他还发了一条更短的推，公布 OpenAI 的五条原则：民主化、赋能、普遍繁荣、韧性、适应性。推文只有五个词加一个链接，没有任何解释。",
-        "两条都只是方向表态，没有可核验的产品信息。对做 agent 入口、客户端或协议层的人，合理的用法是当作信号，跟踪 OpenAI 接下来在这几层的实际动作；从这两句话里读不出产品计划。"
-      ],
-      "creator": "Sam Altman",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @sama（OS 与协议）", "url": "https://x.com/sama/status/2048428561481265539" },
-        { "label": "原推 @sama（五条原则）", "url": "https://x.com/sama/status/2048552677433643427" }
-      ],
-      "engagement": "10.5K likes"
-    },
-    {
       "slug": "2026-04-27-garry-tan-three-files",
       "title": "Garry Tan 公开他的 agent 三文件配置：SOUL.md 定人格，USER.md 建用户模型，AGENTS.md 管操作",
       "summary": "他把 SOUL.md 称作宪法而非 system prompt，要求具体到「不许用 Great question 开头」这种句式级条目；USER.md 是对用户本人约 4000 词的深度建模。核心判断：指令越具体越有立场，agent 越不像 chatbot。想给个人 agent 调出风格的人可直接套用。",
@@ -34,8 +16,14 @@
       "role": "Y Combinator President & CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @garrytan（三文件配置）", "url": "https://x.com/garrytan/status/2048669695344046090" },
-        { "label": "原推 @garrytan（半夜拒答）", "url": "https://x.com/garrytan/status/2048667055424249864" }
+        {
+          "label": "原推 @garrytan（三文件配置）",
+          "url": "https://x.com/garrytan/status/2048669695344046090"
+        },
+        {
+          "label": "原推 @garrytan（半夜拒答）",
+          "url": "https://x.com/garrytan/status/2048667055424249864"
+        }
       ],
       "engagement": "62 likes"
     },
@@ -53,8 +41,14 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie（失业论）", "url": "https://x.com/levie/status/2048576989930619185" },
-        { "label": "原推 @levie（过载感）", "url": "https://x.com/levie/status/2048537503972684252" }
+        {
+          "label": "原推 @levie（失业论）",
+          "url": "https://x.com/levie/status/2048576989930619185"
+        },
+        {
+          "label": "原推 @levie（过载感）",
+          "url": "https://x.com/levie/status/2048537503972684252"
+        }
       ],
       "engagement": "713 likes"
     },
@@ -71,7 +65,10 @@
       "role": "Vercel CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2048523195305902341" }
+        {
+          "label": "原推 @rauchg",
+          "url": "https://x.com/rauchg/status/2048523195305902341"
+        }
       ],
       "engagement": "427 likes"
     },
@@ -89,27 +86,36 @@
       "role": "OpenClaw 开发者",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @steipete（birdclaw）", "url": "https://x.com/steipete/status/2048626844694421842" },
-        { "label": "原推 @steipete（wacrawl 0.2.0）", "url": "https://x.com/steipete/status/2048660875007914176" },
-        { "label": "原推 @steipete（Blacksmith 测试）", "url": "https://x.com/steipete/status/2048630704972443918" }
+        {
+          "label": "原推 @steipete（birdclaw）",
+          "url": "https://x.com/steipete/status/2048626844694421842"
+        },
+        {
+          "label": "原推 @steipete（wacrawl 0.2.0）",
+          "url": "https://x.com/steipete/status/2048660875007914176"
+        },
+        {
+          "label": "原推 @steipete（Blacksmith 测试）",
+          "url": "https://x.com/steipete/status/2048630704972443918"
+        }
       ],
       "engagement": "727 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "感觉现在是认真重新思考操作系统和用户界面设计的好时机（互联网也一样，应该有一个人和 agent 同样可用的协议）。",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2048428561481265539"
     },
     {
-      "slug": "2026-04-27-peter-yang-fitness-mcp",
-      "title": "Peter Yang 给自己的健身 app 写了个 MCP server，用 Claude 和 Codex 读训练数据、改训练安排",
-      "summary": "周末项目级别的动态：他给自用健身 app 加了 MCP server，训练数据的读取和训练安排的更新都不再经过 app 界面。信息量不大，收录是因为它是「个人软件 + MCP 接口」的又一个样本，在维护个人工具的人可以参考这个做法。",
-      "content": [
-        "他这个周末做了两件事：改进自己的移动端健身 app，再给它写一个 MCP server。接上之后，用 Claude、Codex 等任何支持 MCP 的客户端，都能直接拉他的最新训练数据、更新 app 里的训练内容。",
-        "推文本身只是个周末项目，模式值得记一笔：私人 app 加一层 MCP server，等于一次性接入所有支持 MCP 的客户端，数据进出不用再打开 UI。在维护个人工具的人，可以评估一下手里哪几个值得加这层接口。"
-      ],
+      "quote": "这个周末我改进了自己的移动端健身 app，还给它写了一个 MCP server，这样我就能通过 Claude、Codex 等工具拿到最新的训练数据、更新 app 里的训练内容。这玩意儿太好玩了。",
       "creator": "Peter Yang",
-      "role": "Roblox 产品",
+      "handle": "petergyang",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2048611053333041158" }
-      ],
-      "engagement": "17 likes"
+      "url": "https://x.com/petergyang/status/2048611053333041158"
     }
   ]
 }

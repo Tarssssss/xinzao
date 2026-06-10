@@ -15,11 +15,26 @@
       "creator": "Claude",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @claudeai", "url": "https://x.com/claudeai/status/2044131493966909862" },
-        { "label": "Claude Blog", "url": "https://claude.com/blog/claude-code-desktop-redesign" },
-        { "label": "原推 @_catwu", "url": "https://x.com/_catwu/status/2044212251717186007" },
-        { "label": "原推 @alexalbert__", "url": "https://x.com/alexalbert__/status/2044144091395699055" },
-        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2044234654241436066" }
+        {
+          "label": "原推 @claudeai",
+          "url": "https://x.com/claudeai/status/2044131493966909862"
+        },
+        {
+          "label": "Claude Blog",
+          "url": "https://claude.com/blog/claude-code-desktop-redesign"
+        },
+        {
+          "label": "原推 @_catwu",
+          "url": "https://x.com/_catwu/status/2044212251717186007"
+        },
+        {
+          "label": "原推 @alexalbert__",
+          "url": "https://x.com/alexalbert__/status/2044144091395699055"
+        },
+        {
+          "label": "原推 @petergyang",
+          "url": "https://x.com/petergyang/status/2044234654241436066"
+        }
       ],
       "engagement": "31.2K likes"
     },
@@ -36,7 +51,10 @@
       "creator": "Training Data",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Training Data", "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8" }
+        {
+          "label": "Training Data",
+          "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8"
+        }
       ]
     },
     {
@@ -52,7 +70,10 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2044225408972009842" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2044225408972009842"
+        }
       ],
       "engagement": "525 likes"
     },
@@ -69,9 +90,18 @@
       "role": "Builder",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2044211269767704929" },
-        { "label": "原推 @zarazhangrui（简化版）", "url": "https://x.com/zarazhangrui/status/2044114136364397043" },
-        { "label": "原推 @zarazhangrui（代码）", "url": "https://x.com/zarazhangrui/status/2044114225287836048" }
+        {
+          "label": "原推 @zarazhangrui",
+          "url": "https://x.com/zarazhangrui/status/2044211269767704929"
+        },
+        {
+          "label": "原推 @zarazhangrui（简化版）",
+          "url": "https://x.com/zarazhangrui/status/2044114136364397043"
+        },
+        {
+          "label": "原推 @zarazhangrui（代码）",
+          "url": "https://x.com/zarazhangrui/status/2044114225287836048"
+        }
       ],
       "engagement": "191 likes"
     },
@@ -87,75 +117,46 @@
       "role": "FPV Ventures 合伙人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2044277884777574565" },
-        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2044294227887304731" }
+        {
+          "label": "原推 @nikunj",
+          "url": "https://x.com/nikunj/status/2044277884777574565"
+        },
+        {
+          "label": "原推 @swyx",
+          "url": "https://x.com/swyx/status/2044294227887304731"
+        }
       ],
       "engagement": "153 likes"
-    },
+    }
+  ],
+  "quickTakes": [
     {
-      "slug": "2026-04-15-claude-code-routines",
-      "title": "Claude Code 推出 Routines：按计划、GitHub 事件或 API 触发自动运行",
-      "summary": "Routines 让 Claude Code 按计划运行、由 GitHub 事件或其他 API 触发，定位是自动化工作中手动重复的部分。对 builder 的含义是 Claude Code 在往无人值守运行扩。有定期维护任务的用户可以拿低风险任务先试。",
-      "content": [
-        "Routines 的定位是自动化工作里手动、重复的部分：现在可以让 Claude Code 按计划运行，也可以由 GitHub 事件或其他 API 触发。她的预告只有这一句，细节在推文附带的链接里。",
-        "对 builder 的含义是：Claude Code 在从交互式会话往无人值守的自动化运行扩，和同一天发布的桌面版多 session 编排指向同一个方向——人从执行位挪到编排位。有定期重复任务的用户可以拿一件低风险的事先试。"
-      ],
+      "quote": "用 Routines 把工作里手动重复的部分自动化！现在可以让 Claude Code 按计划运行，也可以由 GitHub 事件和其他 API 触发。",
       "creator": "Cat Wu",
-      "role": "Anthropic Claude Code / Cowork 团队",
+      "handle": "_catwu",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @_catwu", "url": "https://x.com/_catwu/status/2044103103591657941" }
-      ],
-      "engagement": "121 likes"
+      "url": "https://x.com/_catwu/status/2044103103591657941"
     },
     {
-      "slug": "2026-04-15-garry-tan-gbrain",
-      "title": "Garry Tan 开源 GBrain：自述约 12 天建成，个人实例已超 1.7 万页",
-      "summary": "MIT 协议、免费，他自述用 OpenClaw 加自己 7 万 star 的 GStack 工具链建成。天数和页数均为他本人说法，repo 公开可验证。做个人记忆、第二大脑方向的 builder 可以直接读代码找参照。",
-      "content": [
-        "GBrain 免费、开源、MIT 协议。他没有在推文里展开定义这个产品，但从『我的个人 GBrain 已经超过 17,000 页，它了解我』看，方向是个人记忆／知识库。他自述大约 12 天建成，工具是 OpenClaw（他形容自己重度上瘾）加上他自己那个 7 万 GitHub star 的 agentic coding 工具链 GStack。repo 链接他单独发了一条。",
-        "天数、star 数、页数都来自他本人的说法，repo 是公开的，可以直接装来验证。做个人记忆、第二大脑方向的 builder，这是一份可以直接读代码的参照，也能顺便看一个重度 OpenClaw 用户的真实工程产出长什么样。"
-      ],
+      "quote": "GBrain 免费、开源、采用 MIT 协议。我大约用 12 天把它建出来，靠的是对 OpenClaw 的深度上瘾，以及我那个有 7 万 GitHub star 的开源 agentic coding 工具链 GStack。我个人的 GBrain 已经超过 17,000 页，还在增长，它了解我。",
       "creator": "Garry Tan",
-      "role": "Y Combinator 总裁兼 CEO",
+      "handle": "garrytan",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2044292522256806260" },
-        { "label": "原推 @garrytan（repo）", "url": "https://x.com/garrytan/status/2044292523817062575" }
-      ],
-      "engagement": "28 likes"
+      "url": "https://x.com/garrytan/status/2044292522256806260"
     },
     {
-      "slug": "2026-04-15-every-sparkle-v4",
-      "title": "Every 发布 Sparkle v4：常驻后台整理 Mac 文件的 agent",
-      "summary": "agent 先检查文件系统、按你的工作方式建组织结构，再做一次深度清理（经许可删除旧安装包、重复文件、系统垃圾），之后按计划在后台持续维护。自家产品自家夸；值得注意的是常驻后台维护这个 agent 产品形态。",
-      "content": [
-        "Sparkle v4 的形态是一个文件整理 agent：先检查你的文件系统，按你的工作方式帮你建一套组织结构；接着做一次深度清理，旧安装包、重复文件、被遗忘的截图、系统垃圾，经你许可后清掉；之后安静地在后台持续运行，可以设定计划，让 Mac 保持有序，而不是慢慢退回混乱。",
-        "Dan Shipper 是 Every CEO，他在另一条推里说 Sparkle『悄悄是 Every 订阅里最好的应用之一』，自家产品自家夸，效果要自己装了才知道。产品形态上值得注意的一点：从一次性清理工具变成常驻后台、按计划维护的 agent，可能是 agent 类消费产品接下来的一个方向。"
-      ],
+      "quote": "隆重推出 Every 的 Sparkle v4：你的桌面一团糟吗？我们为此做了一个 agent。它会检查你的文件系统，帮你按你自己的工作方式建一套组织结构；先做一次深度清理，旧安装包、重复文件、被遗忘的截图、系统垃圾，经你许可后清掉；然后安静地在后台运行，设定好计划，让你的 Mac 持续保持有序，而不是慢慢退回混乱。零成本帮你整理 Mac。",
       "creator": "Dan Shipper",
-      "role": "Every CEO",
+      "handle": "danshipper",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2044079255726838273" }
-      ],
-      "engagement": "97 likes"
+      "url": "https://x.com/danshipper/status/2044079255726838273"
     },
     {
-      "slug": "2026-04-15-dylan-clay-not-final-result",
-      "title": "Dylan 谈用 AI 创作：prompt 的输出不是最终结果，要当黏土反复塑形",
-      "summary": "访谈核心是用 AI 创作和把思考外包的区别：你是系统的评判者，可能性几乎无限，要自己判断什么好、什么值得继续挖。Peter 的一句话总结：AI 让你快速到达平均水平，品味才把你推过平均线。",
-      "content": [
-        "Dylan 在访谈里的原话：『把 prompt 的输出当成最终结果，是一个错误』；用 agent 探索发散的可能性时，『你需要把 AI 的输出拿过来，像黏土一样揉捏塑形』；『最终你是这个系统的评判者——可能性几乎无限，需要你来判断什么是好的、什么值得继续探索』。Peter Yang 给的一句话总结：AI 让你快速到达平均水平，把你推过平均线的是你的品味。",
-        "这和同一天 Zara Zhang 复盘 Tab Out 时说的『80% 的时间在砍功能』指向同一个方向：agent 时代产出很容易拿到，难的是判断什么该留下。完整对谈视频在 Peter Yang 的推文链接里。"
-      ],
+      "quote": "「把 prompt 的输出当成最终结果，是一个错误。」这是 Dylan 谈用 AI 创作和把思考外包的区别：「当你用 agent 探索发散的可能性时，你需要把 AI 的输出拿过来，像黏土一样揉捏塑形。最终你是这个系统的评判者——可能性几乎是无限的，需要你来判断什么是好的、什么值得继续探索。」一句话总结：AI 让你快速到达平均水平，把你推过平均线的是你的品味。",
       "creator": "Peter Yang",
-      "role": "Roblox 产品",
+      "handle": "petergyang",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2044061039671820406" }
-      ],
-      "engagement": "49 likes"
+      "url": "https://x.com/petergyang/status/2044061039671820406"
     }
   ]
 }

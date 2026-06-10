@@ -1,0 +1,122 @@
+{
+  "date": "2026-05-24",
+  "generatedAt": "2026-05-24T07:25:51.477Z",
+  "stories": [
+    {
+      "slug": "2026-05-24-feldman-coding-adoption-split",
+      "title": "Cerebras CEO 观察：公司内部用 AI 编码的产出拉开了 10x 与 100x 的差距，而多数人包括他自己仍在摸索",
+      "summary": "Feldman 说 Cerebras 八个月内月度编码 token 花费从不到一千美元涨到两三万，但收益高度集中在少数人手上：他们同时跑八到十个 agent、改成治理 agent 的工作方式、专门补模型弱点。想判断团队为什么用了 AI 产出却没普涨的人值得听这段。",
+      "content": [
+        "差距不在工具开通与否，而在工作方式有没有重构。Feldman 把受益的人描述成已经从写代码切换到「治理 agent」：同时跑八到十个 agent、单独挂一个 QA agent、并针对编码模型的已知毛病（输出啰嗦、爱删注释）专门做补偿。这套打法对他们的思维方式「像拼图一样契合」，于是从 10x 变成 100x；其余人包括他自己还在「跌跌撞撞」地找各自岗位（CEO、CFO、会计、市场）怎么用。",
+        "他给的数字是月度 token 花费八个月从不到一千美元涨到两三万美元，「在猛涨」。这是一手的内部支出数据，但只是总量，他没有给人均产出或具体岗位的拆分，放大解读时要留意。",
+        "顺着这个逻辑，团队内部 AI 编码产出不均，可能不是模型或额度问题，而是少数人先完成了向 agent 协作的工作流迁移。这条来自一家硬件公司 CEO 的运营观察，可核验的部分是「治理 agent + 专设 QA + 补模型弱点」这套具体做法，能在自己团队里对照看高产出的人是不是也在这么干。Feldman 的应对是把这些人的做法当最佳实践展示给其他人。"
+      ],
+      "creator": "Andrew Feldman",
+      "role": "Cerebras 联合创始人兼 CEO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "No Priors 播客",
+          "url": "https://www.youtube.com/watch?v=jeop9wfb9jU"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-24-feldman-speed-reorganizes-business",
+      "title": "Feldman 判断推理速度的真正价值不是把现有业务做快，而是会催生全新的业务模式",
+      "summary": "Feldman 用 Netflix 从寄 DVD 变成电影公司、PC 从替代打字机到云和 SaaS 重组工作流来类比：AI 当下只是替代了能看见的编码和设计，真正的生产力跃迁要等到围绕它重组工作方式之后。在想 AI 长期商业形态的人值得听这段框架。",
+      "content": [
+        "他的核心论点是替代现有任务只是表层，生产力的大跳跃来自重新组织工作的方式。类比有两层：Netflix 把网速变快后没有去更高效地寄 DVD，而是变成了电影公司，开出一门全新生意；PC 一开始替代打字机和总账记账，真正的跃迁发生在它带来云、云带来 SaaS、SaaS 让小公司也用得起以前买不起的工具之后。他认为 AI 现在还停在「替代能看见的东西」（编码、设计、部分 SaaS 工具）这一步。",
+        "支撑这套速度论的是他给的两组事实：Cerebras 自报推理比 GPU 快十五到二十倍（这是公司自家口径）；以及这一年半里的成交速度——年底签下据称超过两百亿美元的 OpenAI 协议，与 Sam 从夏天初谈到感恩节前夜签 term sheet、四周半后签下主协议。他借此说「以前以为是光速的事其实可以快得多」，并举 Cognition 一个周末买下 Windsurf 为例。",
+        "这是硬件供应商 CEO 对自家市场的判断，速度数字和「新业务模式」的前景都带卖方立场，听的时候宜区分：可核验的是已发生的成交事实和时间线，「会催生全新业务模式」目前还是预期而非已兑现的结果。"
+      ],
+      "creator": "Andrew Feldman",
+      "role": "Cerebras 联合创始人兼 CEO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "No Priors 播客",
+          "url": "https://www.youtube.com/watch?v=jeop9wfb9jU"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-24-levie-tasks-vs-jobs",
+      "title": "Aaron Levie：不要把「能自动化任务」当成「能消灭岗位」，岗位的定义往往会扩张",
+      "summary": "Levie 的机制是：即便 AI 自动化了一个岗位里的一项或多项任务，岗位定义几乎总会扩张——做更多同类任务、把质量做得更高、或转去尚未被自动化的任务，岗位反而以新方式变得有价值。对在判断 AI 对就业冲击的人，这是一个反「岗位消失论」的具体推理。",
+      "content": [
+        "他要反驳的是「任务可自动化等于岗位可消除」这个常见混淆。机制是岗位会吸收掉省下来的产能：同样的人因为能多做、做得更好、或腾出手去做还没被自动化的任务，岗位在新维度上重新变得有价值，而且很多情况下还会面向一批全新的客户。",
+        "他给的例子落在能力下沉带来的新需求：以前请不起完整营销代理公司的小企业，现在可以雇一个借助 agent 能顶一整家代理公司产出的营销人；想接更大软件项目却接不了的小公司或非科技公司，现在能接了，于是会为此招人。他点名这套逻辑同样适用于编码、法律、销售、市场。",
+        "这是 Box CEO 顺着一篇他认可的博文做的延伸，立场上偏乐观。可操作的部分是把它当成一个对照框架：评估某个岗位会不会消失时，先问这个岗位的定义有没有扩张空间、省下的产能会流向哪里，而不是只数有多少任务能被自动化。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2058223867815227756"
+        }
+      ],
+      "engagement": "627 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我一直想要一个 GitHub 仪表盘：看自己的仓库、打开的 Issue 和 PR、上次发布的版本号、距上次发布以来提交了多少次。于是我给所有人做了一个。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2058381186884411473"
+    },
+    {
+      "quote": "在让 codex 做较大的重构时，叫它一边干一边维护一份 scratch-log，记下它做的决策、取舍、评审后的修改，这样之后你能回看 agent 做了哪些取舍、你又漏说了什么。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2058308112134635528"
+    },
+    {
+      "quote": "时不时我会想起来，你可以跑一遍「请帮我省钱」这个 prompt，它还真的管用。",
+      "creator": "Thariq",
+      "handle": "trq212",
+      "sourceType": "x",
+      "url": "https://x.com/trq212/status/2058377974882210096"
+    },
+    {
+      "quote": "处理了 1400 条回复：OpenAI 正在追上 Anthropic；「Codex」被提及的次数超过了「Claude Code」；但按模型提及计，Anthropic 仍然领先。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2058353051073970416"
+    },
+    {
+      "quote": "我最新的 gbrain-evals 出炉了——这是 gbrain 对比其他方案的表现。它在重排和嵌入的成本、速度、检索成功率上是 SOTA。GBrain 在 LongMemEval 上比 MemPalace 高 1%，比 Vector RAG 高 38%。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2058448209027141709"
+    },
+    {
+      "quote": "Thinking Machines 很惊艳。今天下午我花了几个小时就微调出了自己的 Qwen3.5-397B 模型。又快又能用的多模态也会催生很惊人的个人 AI。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2058378310254793013"
+    },
+    {
+      "quote": "能想象吗，六个月前（2025 年 11 月）我们还活在一个主要靠和 LLM 聊天、就已经对 AI 心满意足的世界里。现在是 2026 年 5 月，这些 LLM 产出的代码已经超过了我们有史以来写过的全部代码。",
+      "creator": "Aditya Agarwal",
+      "handle": "adityaag",
+      "sourceType": "x",
+      "url": "https://x.com/adityaag/status/2058233900464238801"
+    },
+    {
+      "quote": "差不多一年前写的，现在终于开始看到更多 B2B 公司意识到这个机会。别再等一年了。要在一堆 slop 里脱颖而出，叙事和氛围极其重要。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2058203594672021769"
+    }
+  ]
+}

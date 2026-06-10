@@ -3,22 +3,6 @@
   "generatedAt": "2026-04-26T07:25:34.134Z",
   "stories": [
     {
-      "slug": "2026-04-26-sama-frontend-iq",
-      "title": "Sam Altman：OpenAI 模型前端观感还会被压一点，智力已经碾压，前端短板会修",
-      "summary": "OpenAI CEO 自评当前模型：前端观感还会被对手压一点，智力上已经碾压，并紧接着补了句前端会修。没点名对手、没给数据，属于竞争姿态的信号；在意前端生成质量的人可以自己对比验证。",
-      "content": [
-        "原话是「we still get looksmaxxed on frontend a little but we IQmog hard now」：前端观感上还会被别家压一点，但智力上现在已经碾压（mog 是网络俚语，指全面压制）。紧接着他补了一条「(and we will fix the former)」，明确说前端这个短板会修。",
-        "这是 OpenAI 负责人评自家模型，没点名对比对象，也没有任何数据，更接近竞争姿态的表态。可核验的有两处：前端生成质量的差距是否真在缩小，以及「会修」是否兑现到后续版本——都可以在自己的工作流里持续对比。"
-      ],
-      "creator": "Sam Altman",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @sama", "url": "https://x.com/sama/status/2048160404376105179" },
-        { "label": "补充 @sama", "url": "https://x.com/sama/status/2048160448340767038" }
-      ],
-      "engagement": "14.3K likes"
-    },
-    {
       "slug": "2026-04-26-levie-ai-leverage",
       "title": "Aaron Levie：AI 的杠杆让野心加基本功可以越过资历门槛，公司应把这批人放进关键位置",
       "summary": "Box CEO 的判断：AI 在几乎所有领域给出过去没有的杠杆，野心加基本功就能越过按资历设的门槛，新人尤其受益，抓住的人会大幅领先；公司应该把这批人找出来放进关键位置。这是对一篇文章的转评，原文不在素材里。",
@@ -31,7 +15,10 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2048223146063609965" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2048223146063609965"
+        }
       ],
       "engagement": "396 likes"
     },
@@ -47,9 +34,18 @@
       "role": "Y Combinator 总裁兼 CEO，GStack 与 GBrain 作者",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @garrytan（GStack Browser）", "url": "https://x.com/garrytan/status/2048278995121094868" },
-        { "label": "原推 @garrytan（安装方式）", "url": "https://x.com/garrytan/status/2048279121034101147" },
-        { "label": "原推 @garrytan（GBrain v0.22）", "url": "https://x.com/garrytan/status/2048290087318773807" }
+        {
+          "label": "原推 @garrytan（GStack Browser）",
+          "url": "https://x.com/garrytan/status/2048278995121094868"
+        },
+        {
+          "label": "原推 @garrytan（安装方式）",
+          "url": "https://x.com/garrytan/status/2048279121034101147"
+        },
+        {
+          "label": "原推 @garrytan（GBrain v0.22）",
+          "url": "https://x.com/garrytan/status/2048290087318773807"
+        }
       ],
       "engagement": "111 likes"
     },
@@ -65,26 +61,16 @@
       "role": "OpenClaw 作者",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @steipete（Summarize 0.14.0）", "url": "https://x.com/steipete/status/2048275589224628677" },
-        { "label": "原推 @steipete（CodexBar 0.23）", "url": "https://x.com/steipete/status/2048252455817785357" }
+        {
+          "label": "原推 @steipete（Summarize 0.14.0）",
+          "url": "https://x.com/steipete/status/2048275589224628677"
+        },
+        {
+          "label": "原推 @steipete（CodexBar 0.23）",
+          "url": "https://x.com/steipete/status/2048252455817785357"
+        }
       ],
       "engagement": "214 likes"
-    },
-    {
-      "slug": "2026-04-26-nanyu-adoption-sweet-spot",
-      "title": "Nan Yu：技术采用的甜蜜点是比最前沿晚几步，挑已经熬过淘汰的新东西",
-      "summary": "Linear 产品负责人的采用节奏判断：站在最前沿，行业每学到一课你就得重改一次做法；更好的位置是晚几步，挑相对新、但已经熬过淘汰的东西。纠结何时引入新 AI 工具或工作流的团队可以直接套这个框架。",
-      "content": [
-        "他的判断：站在采用曲线最前沿（the very bleeding edge）的问题是，整个行业还在学习，每学到一课你就得跟着改一次自己的做事方式，这个成本会持续发生。更好的位置是晚几步——挑那些相对新、但已经在各轮变动里存活下来的东西。",
-        "推文没有限定领域。顺着这个逻辑放到 AI 工具链上，每月翻新的 agent 框架、skill 体系大多还在淘汰期，按他的标准，值得投入的是已经稳定存活一段时间的实践——具体哪些算「存活」，他没有给名单，这一步是编辑引申。"
-      ],
-      "creator": "Nan Yu",
-      "role": "Linear 产品负责人",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @thenanyu", "url": "https://x.com/thenanyu/status/2048172709075402787" }
-      ],
-      "engagement": "55 likes"
     },
     {
       "slug": "2026-04-26-zara-writing-thinking",
@@ -99,7 +85,10 @@
       "role": "Builder",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2048101948826751429" }
+        {
+          "label": "原推 @zarazhangrui",
+          "url": "https://x.com/zarazhangrui/status/2048101948826751429"
+        }
       ],
       "engagement": "75 likes"
     },
@@ -115,7 +104,10 @@
       "role": "Replit CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @amasad", "url": "https://x.com/amasad/status/2048265772775162078" }
+        {
+          "label": "原推 @amasad",
+          "url": "https://x.com/amasad/status/2048265772775162078"
+        }
       ],
       "engagement": "369 likes"
     },
@@ -131,9 +123,28 @@
       "role": "FPV Ventures 合伙人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2048056524845482131" }
+        {
+          "label": "原推 @nikunj",
+          "url": "https://x.com/nikunj/status/2048056524845482131"
+        }
       ],
       "engagement": "84 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我们在前端上还是会被稍微比下去一点，但现在智力上已经全面碾压了。",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2048160404376105179"
+    },
+    {
+      "quote": "站在采用最前沿的问题是，随着行业不断学习，你会一直要改变自己的做事方式。甜蜜点就在稍微靠后几步——挑那些相对新、但已经熬过各轮淘汰的东西。",
+      "creator": "Nan Yu",
+      "handle": "thenanyu",
+      "sourceType": "x",
+      "url": "https://x.com/thenanyu/status/2048172709075402787"
     }
   ]
 }

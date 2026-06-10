@@ -15,7 +15,10 @@
       "role": "Vercel CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2045995362499076169" }
+        {
+          "label": "原推 @rauchg",
+          "url": "https://x.com/rauchg/status/2045995362499076169"
+        }
       ],
       "engagement": "5.5K likes"
     },
@@ -32,8 +35,14 @@
       "role": "Roblox 产品经理",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2046036593199497615" },
-        { "label": "早前推 @petergyang", "url": "https://x.com/petergyang/status/2045980068921684151" }
+        {
+          "label": "原推 @petergyang",
+          "url": "https://x.com/petergyang/status/2046036593199497615"
+        },
+        {
+          "label": "早前推 @petergyang",
+          "url": "https://x.com/petergyang/status/2045980068921684151"
+        }
       ],
       "engagement": "70 likes"
     },
@@ -50,7 +59,10 @@
       "role": "Builder",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2045810170245386713" }
+        {
+          "label": "原推 @zarazhangrui",
+          "url": "https://x.com/zarazhangrui/status/2045810170245386713"
+        }
       ],
       "engagement": "146 likes"
     },
@@ -67,26 +79,12 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2046067263326028108" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2046067263326028108"
+        }
       ],
       "engagement": "278 likes"
-    },
-    {
-      "slug": "2026-04-20-gstack-make-pdf",
-      "title": "Garry Tan 发布 GStack v1.4：日常缺什么工具就让 Claude Code 现做，做完开源",
-      "summary": "新版本加了 /make-pdf skill，可在 Claude Code 和 OpenClaw/Hermes 里用。更值得看的是他的生产方式：日常用到什么缺口，直接让 Claude Code 做出来再开源。想给自己的 agent 攒工具的人可以照搬这个流程。",
-      "content": [
-        "GStack v1.4 加了一个 /make-pdf skill，开源。按他的说法，它在 OpenClaw/Hermes 里当工具用效果很好，在它本来的设计场景 Claude Code 里也一样。",
-        "比版本号更值得看的是他的生产方式：在 OpenClaw 或日常使用里遇到需求，就让 Claude Code 把工具做出来，自己先用，再开源发布。想给自己的 agent 配工具的人可以直接照搬这个流程，缺什么现做什么，不必等现成的。"
-      ],
-      "creator": "Garry Tan",
-      "role": "Y Combinator 总裁兼 CEO",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2046097059057651941" },
-        { "label": "补充推 @garrytan", "url": "https://x.com/garrytan/status/2046097200292511968" }
-      ],
-      "engagement": "90 likes"
     },
     {
       "slug": "2026-04-20-cybersecurity-thesis",
@@ -100,9 +98,21 @@
       "role": "FPV Ventures 合伙人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2046007615512256624" }
+        {
+          "label": "原推 @nikunj",
+          "url": "https://x.com/nikunj/status/2046007615512256624"
+        }
       ],
       "engagement": "79 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我在 OpenClaw 或日常使用里遇到需求时，就直接让 Claude Code 把它做出来，然后开源发布——这是 GStack v1.4，带一个新的 /make-pdf skill，它作为工具在 OpenClaw/Hermes 里用效果很好。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2046097059057651941"
     }
   ]
 }

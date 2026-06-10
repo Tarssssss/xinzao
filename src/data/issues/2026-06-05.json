@@ -1,0 +1,162 @@
+{
+  "date": "2026-06-05",
+  "generatedAt": "2026-06-05T07:48:29.449Z",
+  "stories": [
+    {
+      "slug": "2026-06-05-anthropic-claude-writes-own-code",
+      "title": "Anthropic 公布内部数据:超 80% 合并代码由 Claude 写,最开放任务成功率半年从约 26% 升到 76%",
+      "summary": "Anthropic 研究员 Alex Albert 转述官方博客的一手内部数据,核心是几个量级:超八成合并代码出自 Claude、典型工程师出码量是 2024 年的 8 倍、最开放工程任务成功率半年从约 26% 跳到 76%。属内部口径,关心 AI 自动化进度的人值得点开核对原文。",
+      "content": [
+        "几个数字本身是这条的重量:超过 80% 合并进 Anthropic 代码库的代码由 Claude 写;不少研究员已经数月没手写过代码;典型工程师的出码量是 2024 年的 8 倍;在最开放的工程任务上,Claude 的成功率半年内从约 26% 升到 76%;研究 session 跑偏时,Claude 提出的下一步有 64% 的情况比人选的更好。这些指向的不只是写得多,而是在开放度高、需要判断下一步的环节也开始接管。",
+        "Albert 在结论上保留了对冲:他写「还没到递归自我改进」,但加了一句「可能比多数人预期来得更早」。按保真,这是「可能更早」,不是「会更早」;recursive self-improvement 这个边界他明确划在了当前之外。",
+        "立场提示:这是 Anthropic 内部数据加自家研究员的转述,口径偏乐观、且「80%」「8x」「26%→76%」都没有给出统计口径或样本定义。可核验的部分是 Albert 反复指向的那篇官方博客,想引用这些数字的人应先去原文确认定义,再决定是否拿来做判断。"
+      ],
+      "creator": "Alex Albert",
+      "role": "Research @ Anthropic",
+      "sourceType": "x",
+      "engagement": "2.3K likes",
+      "sourceLinks": [{ "label": "原推 ↗", "url": "https://x.com/alexalbert__/status/2062580571214389510" }]
+    },
+    {
+      "slug": "2026-06-05-levie-bottleneck-spotting-org-skill",
+      "title": "Aaron Levie 把 Anthropic 这篇里「发现并清除瓶颈会成为组织最重要技能」一句划成重点,并补一句:执行始终要人来管",
+      "summary": "Box CEO Levie 转 Anthropic 的博客,挑出他认为最关键的一段:想法的爆发远超组织能追的量,「发现并清除瓶颈的速度可能成为组织最重要的技能」——这句是 Anthropic 原文。他自己加的判断是,瓶颈卡在执行想法所需的周边工作上,再多 AI 进步也始终要人来管。对在想 AI 怎么落到组织层面的人有参考。",
+      "content": [
+        "Levie 引的那段 Anthropic 原文说,员工和强模型协作后出现了「新想法、新尝试、新工具、新模拟的爆发,远超我们有能力去追的量」,并接了一句「组织发现并清除这些瓶颈的速度,可能会成为它随时间最该练、也最重要的技能」。这后半句是 Anthropic 写的、Levie 标为「乐观情形的关键」,不是他原创。他在其上加的读法是:AI 大幅拉低了「做更多事」的门槛,结果不是事情变少,而是想法供给爆掉、真正稀缺的变成执行这些想法所需的周边工作和管理。",
+        "顺着这个逻辑,他给了一句自己的判断:即便有 agent 增强,这些活最终仍然要人来管,几乎不存在哪种 AI 进步能让这块需求消失。含义是,如果这成立,组织的竞争点会从「有没有 AI」移到「能不能比别人更快识别并清掉下一个卡点」——把 Anthropic 那句和 Levie 这句接起来是编辑推断,不是他原文的连贯论证。",
+        "立场上 Levie 是在替「AI 乐观情形」背书,且 Box 本身就卖企业 AI,这个判断对他有利。可核验的是他引的那段原文,以及他自己加的「管理工作不会因 AI 进步而消失」——后者更接近观点而非数据,拿来做判断时值得和实际运营对照。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO @ Box",
+      "sourceType": "x",
+      "engagement": "195 likes",
+      "sourceLinks": [{ "label": "原推 ↗", "url": "https://x.com/levie/status/2062728257359790292" }]
+    },
+    {
+      "slug": "2026-06-05-dan-roberts-rl-is-the-cake",
+      "title": "OpenAI 的 Dan Roberts:Erdős 那道题是模型「敢反着想」的结果,RL 现在是蛋糕本身而不是奶油",
+      "summary": "OpenAI RL 基础团队负责人在 MAD 播客里拆了近期 Erdős 数学突破的机制:模型敢假设一个人人默认为真的猜想是假的、沿一条极长路径坚持下去才推翻它。他还区分了可验证与不可验证奖励的边界。对想搞清 RL 为何此刻奏效、以及它能不能外推到无标准答案领域的人值得听。",
+      "content": [
+        "Roberts 把 OpenAI 那道单位距离结果讲成一个「探索」案例:这个下界猜想大家都默认成立、却证不出来,模型做的事是反过来假设它为假。他强调这种逆势走法需要极强的信念去沿一条很长的计算路径坚持——路径上任一步选错,就前功尽弃;而且还要恰好懂代数数论这种另一个领域,才能把它和原问题接上。他的对照是 DeepMind 走 Lean 形式化、自动可检验的路线,OpenAI 走的是非形式的英文证明、验证更难。",
+        "他重申自己一年半前那句「RL 是蛋糕而不是奶油」:有了大量算力,要把算力变成有用的智能,RL 是其中一条路,而且现在才刚开始大规模做。关于效率,他没否认 Karpathy 转的那句「像用吸管吸监督信号」——按 DeepSeek 那类算法,一条序列对错只是一个 bit;但他反问:就算想给更多监督,你又能怎么给?重点在这套方法确实带来了模型能力的爆发。",
+        "对能不能外推到咨询、法律、银行这类没有可验证奖励的领域,Roberts 的措辞是克制的:他「确实认为」OpenAI 会在这些领域有很好的产品、RL 会扮演一部分角色,但没把话说成 RL 能直接攻下这些领域。这层 hedge 值得保留——可验证奖励(答案是整数就字符串匹配)和不可验证(一段创意写作好不好)之间他明确承认有巨大缺口。",
+        "还有一个方法论点可单拎出来:他主张 scaling law 应「从大往小」看而非从小往大——当大模型出现小模型没有的现象时,与其说「能力在规模处涌现」,不如说你没理解清自己在 scale 的东西,工作是回去把更小的玩具模型做到能复现这个现象、恢复曲线的平滑。他用标准模型作类比:研究电磁学时可以忘掉其余的力。"
+      ],
+      "creator": "Dan Roberts",
+      "role": "Foundations of RL Lead @ OpenAI",
+      "sourceType": "podcast",
+      "engagement": "63 likes",
+      "sourceLinks": [
+        { "label": "MAD Podcast (YouTube) ↗", "url": "https://www.youtube.com/watch?v=oWOz2htozfI" },
+        { "label": "Matt Turck 预告推 ↗", "url": "https://x.com/mattturck/status/2062587000201580808" }
+      ]
+    },
+    {
+      "slug": "2026-06-05-cognition-100hr-enterprise-evals",
+      "title": "Cognition 放出首个 eval:企业级任务长达 100 小时,METR 公开集封顶约 16 小时",
+      "summary": "Swyx 介绍 Cognition 的首个 eval ship:对照 METR 公开数据集约 16 小时封顶,Cog 的私有企业 eval 跑到 100 小时,且敢为结果挂财务担保。数据集是 258 个真实企业开发 session、126 个用户,held-out 集 rlog 0.74。关心长任务真实世界评测怎么做的人值得看。",
+      "content": [
+        "这条的增量在数据集的「真实世界」性质和时长量级。Swyx 给的对照是:METR 的数据来自 7 名技术员工、34 个 session,用 GPT-4o 和 GPT-5 从压缩后的 Claude Code transcript 估算人等价耗时,rlog 0.83,任务是 ML 工程、GPU kernel、网络安全;Cog 这边是让 Devin 用户回看近期代表性 session、估算没有 Devin 时各自要花多久,凑出 258 个 session、126 个用户、覆盖多家企业客户,held-out 集 rlog 0.74,任务是真实的 Java/TypeScript/Python/C# 功能开发、修 bug、迁移。",
+        "他点出两个值得注意的细节:一是 Cog 的私有企业 eval 时长跑到 100 小时,远超 METR 公开集约 16 小时的封顶;二是 Cog「自信到敢为结果挂一个财务担保」。后者是 Swyx 的转述措辞,具体担保形式原文没展开。",
+        "立场提示:Swyx 挂着 Cognition 的从属关系,这条本质是在推自家工作,他自己也说这是更大一组「前沿代码评测」里的第一部分、他很期待写出来。可核验的部分是上面两套数据集的口径和 rlog 数字;想用这套方法论的人可以盯后续放出的完整内容,而不是先采信「敢挂财务担保」这类还没给出细节的说法。"
+      ],
+      "creator": "Swyx",
+      "role": "@ Cognition",
+      "sourceType": "x",
+      "engagement": "179 likes",
+      "sourceLinks": [{ "label": "原推 ↗", "url": "https://x.com/swyx/status/2062611218196771017" }]
+    },
+    {
+      "slug": "2026-06-05-peter-yang-codex-system-setup",
+      "title": "Peter Yang:把工作流前置搭进 Codex 能省一半以上时间,但每步留人工检查点保住「品味」",
+      "summary": "Roblox 的 Peter Yang 花一整天把创作者工作流的集成和 skill 搭进 Codex,判断只要把系统前置搭好,任何知识工作能省至少一半时间。他给了三步落地法,并强调每步留人工检查点。他同时点名 Codex 前端设计仍弱于 Claude,值得在意工具一印象的团队留心。",
+      "content": [
+        "他的核心判断不是「AI 提效」这种空话,而是把提效的来源定位到「系统前置」:省时间靠的是事先把集成和 skill 搭好,而不是临场让 AI 干。他特意说自己所有工作流都在中途留了人工检查点,好让自己施加「品味」——这一句是对「全自动」叙事的主动收敛,把判断权留在人这边。",
+        "落地三步他写得很具体:一是回顾上周,挑出最耗时、最重复、最痛的那个手工流程;二是把这个流程的每一步事无巨细列出来;三是把这份步骤清单粘进 Codex 或 Claude Code,直接问它「能搭哪些集成和 skill 来帮我把这个流程串起来」,剩下让 AI 引导。",
+        "他另开一条对 Codex 的负面观察:即便他已经开始很喜欢 Codex,前端设计仍明显欠缺——同一个 /slides skill,Claude 能一把出好看的 HTML 幻灯片,Codex 不行。他知道可以先用 ChatGPT 生图再让 Codex 照做,但认为 Codex 该把这块补上,因为这往往是新手对一个编码或知识工具的第一印象。这条对正在选编码 agent、且在意输出观感的人是一个具体的取舍点。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Product @ Roblox",
+      "sourceType": "x",
+      "engagement": "98 likes",
+      "sourceLinks": [
+        { "label": "工作流三步法原推 ↗", "url": "https://x.com/petergyang/status/2062740262338929110" },
+        { "label": "Codex 前端短板原推 ↗", "url": "https://x.com/petergyang/status/2062743491365544361" }
+      ]
+    },
+    {
+      "slug": "2026-06-05-nikunj-nock-skill-from-meeting-notes",
+      "title": "Nikunj Kothari 用 200 多份 Granola 会议记录搭了个「Nock」skill,让创始人先试自己的 pitch",
+      "summary": "FPV 的 Nikunj 用 Claude Code 拉了 200 多份 Granola 记录的创始人 1:1 pitch 笔记,筛到约 53 场有实质讨论的,建成一个叫 Nock 的 skill,再用 5-10 场真实对话对照打磨到「像他本人」。给想把个人判断沉淀成可复用 agent 的人一个具体可抄的流程。",
+      "content": [
+        "这条值得看的是打磨方法而非「做了个 skill」。他先用 Claude Code 拉出过去两年 200 多份 Granola 捕捉的创始人 1:1 pitch 笔记,只保留自己提过的问题,再筛到约 53 场有大量讨论和交锋的会议,又喂进几篇自己写过的、描述「他喜欢哪类创始人」的文章,用这些搭出一个有原则和问题库、且扎根真实对话的 skill。",
+        "关键一步是用真实对话做对照式迭代:他拿 5-10 份真实的 deck 和对话,先让 skill 输出它的判断,再和真实对话比对,反复改到「感觉像他本人的准确表达」为止。这等于把「这个 agent 像不像我」做成了一个可比对的 eval,而不是凭感觉调。",
+        "落地上他放了两个入口:想融资的创始人可以去测自己的 deck 会被怎么看;想给自己建一个 Nock 的 VC 也有对应入口。对在考虑把个人判断或评审标准沉淀成可复用 skill 的人,这套「拉历史记录—筛高信号样本—用真实案例对照打磨」的流程可以直接照搬。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "Partner @ FPV Ventures",
+      "sourceType": "x",
+      "engagement": "60 likes",
+      "sourceLinks": [{ "label": "原推 ↗", "url": "https://x.com/nikunj/status/2062659649732825549" }]
+    },
+    {
+      "slug": "2026-06-05-spiral-4-stylometry-writing-agent",
+      "title": "Dan Shipper 发布 Spiral 4.0:基于文体计量学的写作引擎,支持 MCP/CLI 给 agent 直接调用",
+      "summary": "Every 的 Dan Shipper 发布 Spiral 4.0,定位是「给你和你的 agent 用的写作伙伴」。核心两点:基于 stylometry 原理的新 Style Engine,从过往作品里提取个人/品牌声音;以及接入 MCP 和 CLI,让 Codex、Claude Code 这类 agent 直接调用。在找「让 agent 产出按品牌声音对齐」方案的团队值得点开。",
+      "content": [
+        "产品定位的增量在「给 agent 用」这一层:Spiral 4.0 不只是人去用的写作工具,而是做成可被 Codex、Claude Code、OpenClaw 等 agent 调用的能力,目标是让 agent 自动产出符合既定风格的文字。配套的 Style Engine 基于文体计量学(stylometry)原理,从你或品牌过往作品的样本里提取声音,再据此产出。",
+        "Shipper 给的佐证是内部 dogfooding:他说团队每天用它写落地页、推文、播客、营销邮件等,并以此保证全 30 人团队的产出在品牌声音上对齐。这是「自家在用」的描述,不是第三方验证。",
+        "立场提示:这是 Every CEO 在发自家产品,措辞自然偏向正面(如「每次都产出好文字」)。可核验的是它的接入方式——MCP 加 CLI、能被主流编码 agent 调用,这一点想验证的人可以照着接一遍;而「能提取声音并稳定对齐品牌」这类效果声明,更适合自己拿样本试过再判断。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "CEO @ Every",
+      "sourceType": "x",
+      "engagement": "222 likes",
+      "sourceLinks": [{ "label": "原推 ↗", "url": "https://x.com/danshipper/status/2062628079869005876" }]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我在为 Claude Code 招一名 PM,方向是模型表现。如果你有写 agentic eval 的经验、想把研究想法整合进我们的核心产品,我很想听听你的来信。",
+      "creator": "Cat Wu",
+      "handle": "_catwu",
+      "sourceType": "x",
+      "url": "https://x.com/_catwu/status/2062659533047259212"
+    },
+    {
+      "quote": "今天我们在修一个 codex 的 bug,它此前把发给某些 Pro 和 Plus 账号的 token 少计了一部分,小幅度。受影响的账号不到 15%。这不是你们希望我们去修的那种 bug,但我们不想悄悄处理,觉得该让你们知道。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2062648326332539015"
+    },
+    {
+      "quote": "你可以用 Python SDK 在自己的程序里调用 codex,很好用。由 @ah20im 和朋友们做的。pip install openai-codex。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2062734215494664697"
+    },
+    {
+      "quote": "一个 app 可以是一顿家常便饭(2020)。个人软件在 2020 年还有点早,但到了 2026,它真的可以像一顿家常便饭、或一封手写信那样个人化。",
+      "creator": "Thariq",
+      "handle": "trq212",
+      "sourceType": "x",
+      "url": "https://x.com/trq212/status/2062605395101884916"
+    },
+    {
+      "quote": "很多岗位现在会被注入工程能力。Marketing Engineer(营销工程师)就是一个很好的例子。",
+      "creator": "Aditya Agarwal",
+      "handle": "adityaag",
+      "sourceType": "x",
+      "url": "https://x.com/adityaag/status/2062655784127971565"
+    },
+    {
+      "quote": "差一点点到 PMF,仍然不是 PMF。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2062761266083754088"
+    }
+  ]
+}

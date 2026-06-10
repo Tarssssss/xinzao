@@ -1,0 +1,121 @@
+{
+  "date": "2026-06-03",
+  "generatedAt": "2026-06-03T08:03:30.181Z",
+  "stories": [
+    {
+      "slug": "2026-06-03-listen-labs-customer-research-simulation",
+      "title": "Listen Labs 用 AI 跑访谈替代焦点小组,正在把上万次访谈训练成可预测客户回答的模拟层",
+      "summary": "创始人 Alfred Wahlforss 的一手运营数据:平台已积累 3000 万受访者、做过百万次访谈,把单人访谈一小时的信息喂进模型,某些情况下能到 95% 准确率预测此人后续回答。在考虑做客户研究、或思考 AI 时代垂直应用护城河的人值得点开。",
+      "content": [
+        "他给出的核心机制是:模型在「单个具体人」上的预测能力,远好于把人设硬塞给通用模型。他说试过信用卡消费、购买行为等多种输入,效果都不如访谈数据——因为访谈允许跑题、能问行为类问题,通用模型则缺少某个具体人格怎么想、怎么行动的干净数据。所以 Listen 的做法是先把一个人建模得很细,再扩展成上千人的代表性样本。",
+        "他举了自己上周的用法:为一场会议演讲想了 100 个标题,丢进模拟系统,选出的最优标题「比第二名好一倍」;同样的题目给 ChatGPT 和他们的模拟各看一遍,ChatGPT 挑错了,模拟挑对了。他自己补了对冲:「我不知道是不是真对,但感觉是对的。」这套模拟功能还要几个月才发布,他对它能覆盖到什么程度仍说不准——大决策(如超级碗广告)还是要真人访谈,只有小决策(如小广告牌文案)适合交给模拟。",
+        "护城河部分他直接搬了 7 Powers 框架:供需两端的网络效应(受访者面板)、随访谈量增长的数据护城河(访谈越多模拟越准)、以及访谈沉淀在平台里带来的高切换成本。这条来自创始人本人,立场上会偏向自家壁垒;可核验的是他报的运营数字和「访谈优于其他数据源」这个判断,做客户研究的人可以拿自己的数据对照一下。",
+        "另一个值得注意的点是他描述的 eval 节奏:GPT-4 时代「同一个问题问 100 遍」的重复率 eval 从 20% 爬到 85% 后,他们又造了个更难的新 eval(理解你屏幕在做什么、跳过不再相关的问题),分数重新掉回 20%。顺着这个逻辑,他把「拥有专有 eval 并持续爬坡」本身当成垂直 AI 公司的核心优势。他还提到已上线 MCP,可以让 Claude 把 Listen 接进循环里跑创意生成。"
+      ],
+      "creator": "Alfred Wahlforss",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Training Data 播客", "url": "https://www.youtube.com/watch?v=Rumft-rsEu4" }
+      ]
+    },
+    {
+      "slug": "2026-06-03-aaron-levie-model-routing-applied-ai",
+      "title": "Aaron Levie 认为随 token 预算变成主要运营开支,模型路由会成为应用层最重要的差异化点之一",
+      "summary": "Box CEO 的判断:谁能靠领域内的工作模式理解和强 eval 把任务路由到合适价位的模型,谁就能聚合更多需求。他同时给了对冲——多数场景在可见的未来仍需要前沿模型。在做应用层产品、纠结成本与性能平衡的人值得对照。",
+      "content": [
+        "他的逻辑起点是成本结构:token 预算会逐渐占到运营开支的大头,所以模型路由是「不可避免的结论」。能做好的前提是理解自己领域里不同的工作模式、并为该领域建好 eval,才能在成本和性能之间有效优化。",
+        "他特意保留了不确定性:现在多数用例在可见的未来仍然需要前沿模型的表现;但一旦某个单独用例的质量「够用」了,就可以把它摘出来、发给更便宜的模型。这里他用的是「soon」和「likely」,不是确定性预测。",
+        "顺着这个逻辑,他把结论落在聚合上:企业各自在规模上自己摸索路由大概率做不成,所以能智能路由这些工作流的产品会处在聚合需求的强势位置。这条来自 Box 内部,立场上会偏向「应用层(而非模型层)是差异化所在」的叙事;可核验的部分是「领域 eval + 工作模式理解」这套方法论,做应用的人可以照着检查自己有没有这两块底子。"
+      ],
+      "creator": "Aaron Levie",
+      "sourceType": "x",
+      "engagement": "299 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2061974298760495132" }
+      ]
+    },
+    {
+      "slug": "2026-06-03-peter-yang-narrow-saas-harder-to-monetize",
+      "title": "Peter Yang 认为窄用例的简单 SaaS 现在更难变现,大型企业 SaaS 仍稳",
+      "summary": "Roblox 产品负责人给出三条机制:AI skills 能更灵活地解决同一问题、带个人上下文的 agent 比独立 SaaS 知道得更多、用户会拿 $20/月 SaaS 去和自己的 Claude/ChatGPT 订阅比价。他自己加了对冲——可能身处 bubble,多数人还没配自己的 AI skills。",
+      "content": [
+        "他的区分是规模:能做多份工作的大型企业 SaaS(他举 Figma)大概率没事;难的是为窄用例做的简单 SaaS。三条原因里最值得注意的是第三条定价锚——用户愿意为「服务」(人的触感如今稀缺)付几百上千,但面对 $20/月的 SaaS,会拿它去跟自己已有的 Claude/ChatGPT 订阅比较价值。",
+        "另一条机制是上下文:Codex、Claude Code 这类带用户个人上下文和记忆的 AI 原生 agent,比一个独立的 SaaS 网站或聊天机器人掌握更多解决问题所需的信息。他没说 SaaS 已死,只说窄用例的变现路径变窄了。",
+        "他在结尾自己做了立场校准:「我猜我在 bubble 里,多数人还没配好自己的 AI skills。」这是一条把对冲写进原文的观察,不是确定性预测;在评估某个单点 SaaS 还值不值得做的人,可以拿这三条机制对照自己的产品。"
+      ],
+      "creator": "Peter Yang",
+      "sourceType": "x",
+      "engagement": "39 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/petergyang/status/2061846283263103274" }
+      ]
+    },
+    {
+      "slug": "2026-06-03-rauchg-yes-code",
+      "title": "Guillermo Rauch 提出 YES-CODE:coding agent 让代码变得廉价丰富,no-code 的前提已被推翻",
+      "summary": "Vercel CEO 的判断:no-code 这一整类软件建立在「代码昂贵、稀缺、难」的假设上,coding agent 永久改变了这个等式。他借此把 Vercel 定位成「不需要毕业的、给 agent 的云」。在思考 no-code/low-code 赛道前景的人值得看这条立场。",
+      "content": [
+        "他的核心论点是前提失效:no-code 默认代码贵、难、稀缺,而 coding agent 让代码变得便宜、容易、丰富,等式被永久改写。他用 Vercel 早期一个细节做对比——有分析师问 cramforce「Vercel 是不是 no-code 平台」,对方答「不,正相反,是 yes-code 平台」。",
+        "他借这点把差异化讲清楚:no-code 方案靠走捷径、在性能和复杂度上设了硬天花板;Vercel 当初的取舍是在质量和复杂度上不妥协。这条来自 Vercel CEO,立场上服务于自家「给 agent 的云、永不需要毕业」的定位,把它当成一种产品叙事而非中立行业判断来读更准。"
+      ],
+      "creator": "Guillermo Rauch",
+      "sourceType": "x",
+      "engagement": "462 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/rauchg/status/2061934154732974376" }
+      ]
+    },
+    {
+      "slug": "2026-06-03-nikunj-kothari-fundraising-bar",
+      "title": "Nikunj Kothari 认为单点叙事融不到资,好创始人把六个要素都当必要但非全部",
+      "summary": "FPV 投资人列了六个要素(why now、融资、分发、市场、产品、收入),指出太多 pitch 只拿其中一个当核心理由。他的解释是 seed 到 A 的 gap 把门槛推高、VC 一侧的机会成本也在涨,所以要能讲清如何在多个要素上有别人难复制的独特性。在准备融资的创始人值得对照。",
+      "content": [
+        "他点出的机制是供需两侧同时变了:很多创始人觉得自家业务比以往任何时候都强,为什么 VC 不直接开支票?他的回答是门槛(看 seed-A 的 gap)和 VC 一侧的机会成本都在涨,所以 VC 需要一个能说服自家合伙人的理由,尤其在过度拥挤的品类里。",
+        "他给的可操作建议很具体:如果你已盈利、不需要资本,那无所谓;但若要融,就别只拿一个要素当卖点,要能解释自己如何在多个要素上以别人难抄的方式独特地组合。他特意强调叙事和野心很重要——花那额外十分钟把长期野心讲清楚,可能就是你和下一轮之间的微小差别。"
+      ],
+      "creator": "Nikunj Kothari",
+      "sourceType": "x",
+      "engagement": "50 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/nikunj/status/2062033620773306763" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "OpenAI 最新 Codex 报告:知识工作者现在约占 Codex 用户的 20%,采用速度是开发者的 3 倍多。知识工作者增长最快的任务类型是:数据分析(周环比 +110%)、研究(+37%)、知识产物(+36%)。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2061924300698091760"
+    },
+    {
+      "quote": "已修复一个小痛点:Thinking Levels 现在在 Gemini 的 Web、iOS、Android 上都能用了。",
+      "creator": "Josh Woodward",
+      "handle": "joshwoodward",
+      "sourceType": "x",
+      "url": "https://x.com/joshwoodward/status/2062025667852812583"
+    },
+    {
+      "quote": "一大堆能用在日常工作里的 Codex 好东西。如果你在 business 套餐上,现在可以托管和分享网站;我们大幅改进了面向各类角色的 plugins 和 skills;你还可以通过在文档、幻灯片、表格等里的可视化批注给 agent 反馈。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2061876999564791952"
+    },
+    {
+      "quote": "Workflows 是 Claude Code 自 skills 和 subagents 以来能力上最大的一次升级。我和 @sidbid 深入研究了最佳实践和示例,尤其让我兴奋的是它为 Claude Code 解锁的那些非技术类任务。",
+      "creator": "Thariq",
+      "handle": "trq212",
+      "sourceType": "x",
+      "url": "https://x.com/trq212/status/2061907538741006796"
+    },
+    {
+      "quote": "都快一周了,你们对 Opus 4.8 怎么看?我们测试时极度看好,但你们上手后反响似乎更平淡。我的一个理论是:它本质上会更用力地推你的框架,结果方差很大——有时做得惊艳,有时反对的方式又明显是错的。",
+      "creator": "Dan Shipper",
+      "handle": "danshipper",
+      "sourceType": "x",
+      "url": "https://x.com/danshipper/status/2061817375519809665"
+    }
+  ]
+}

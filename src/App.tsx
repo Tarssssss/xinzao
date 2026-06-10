@@ -1,4 +1,4 @@
-import { useEffect, type CSSProperties } from 'react'
+import { lazy, Suspense, useEffect, type CSSProperties } from 'react'
 import {
   BrowserRouter,
   Link,
@@ -8,8 +8,10 @@ import {
   useParams,
 } from 'react-router-dom'
 import { findStory, issues, latestIssue } from './data/issues'
-import type { NumberedIssue, SourceType, Story } from './data/types'
+import type { NumberedIssue, QuickTake, SourceType, Story } from './data/types'
 import './App.css'
+
+const GuideBody = lazy(() => import('./GuideBody'))
 
 const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六']
 
@@ -71,9 +73,12 @@ function Masthead({ issue }: { issue?: NumberedIssue }) {
         )}
       </div>
       <hr className="double-rule" />
-      <p className="masthead-note">
-        AI builder 言论日刊 · 摘要只为帮你判断要不要点开原文
-      </p>
+      <div className="masthead-note">
+        <span>AI builder 言论日刊 · 摘要只为帮你判断要不要点开原文</span>
+        <Link to="/guide" className="masthead-nav-link">
+          写作规范 ↗
+        </Link>
+      </div>
     </header>
   )
 }
@@ -111,6 +116,39 @@ function StoryRow({ story, rank }: { story: Story; rank: number }) {
   )
 }
 
+function QuickTakes({ items }: { items: QuickTake[] }) {
+  return (
+    <div className="quick-takes">
+      <div className="quick-takes-head">
+        <h3>速览</h3>
+        <span>{items.length} 条</span>
+      </div>
+      <ul>
+        {items.map((item) => (
+          <li className="quick-take" key={item.url}>
+            <p className="qt-quote">{item.quote}</p>
+            <p className="qt-meta">
+              <span className="creator">
+                {item.creator}
+                {item.handle && <span className="qt-handle"> @{item.handle}</span>}
+              </span>
+              <span>{sourceLabel(item.sourceType)}</span>
+              <a
+                className="origin-link"
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                原文 <span className="arrow">↗</span>
+              </a>
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
 function IssueSection({
   issue,
   headingPrefix,
@@ -134,6 +172,9 @@ function IssueSection({
           <StoryRow key={story.slug} story={story} rank={index + 1} />
         ))}
       </ol>
+      {issue.quickTakes && issue.quickTakes.length > 0 && (
+        <QuickTakes items={issue.quickTakes} />
+      )}
     </section>
   )
 }
@@ -292,6 +333,21 @@ function NotFound() {
   )
 }
 
+function GuidePage() {
+  return (
+    <main className="shell">
+      <Masthead issue={latestIssue} />
+      <Link className="back-link" to="/">
+        ← 回到今日刊
+      </Link>
+      <Suspense fallback={<p className="empty-state">规范载入中…</p>}>
+        <GuideBody />
+      </Suspense>
+      <SiteFooter />
+    </main>
+  )
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -300,6 +356,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/issue/:date" element={<IssuePage />} />
         <Route path="/story/:slug" element={<StoryPage />} />
+        <Route path="/guide" element={<GuidePage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

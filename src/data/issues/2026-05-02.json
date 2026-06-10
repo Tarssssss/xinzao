@@ -47,44 +47,6 @@
       "engagement": "430 likes"
     },
     {
-      "slug": "2026-05-02-shipper-humans-learn-faster",
-      "title": "Dan Shipper：模型懂得比任何一个人都多，但任何一个人都学得比模型快",
-      "summary": "他在转发认同一条讨论时给出理由：知识存量上模型早已超过任何个人，但个人学新东西的速度仍快于模型。一句话的框架，可以用来判断哪些工作短期内还会留在人手里。",
-      "content": [
-        "他转发认同一条帖子，给出的理由只有两句：模型知道的比任何单个人都多，但任何单个人都比模型学得快。他认为这个判断成立，且原因就这么简单。",
-        "顺着这个逻辑，个人相对模型的优势集中在更新速度上——模型的知识要等下一轮训练才会变，人在具体岗位上每天都在吸收新信息。如果这个判断成立，评估一项工作会不会被模型接走时，它依赖存量知识的程度是关键变量：越靠当下情境里持续学到的东西，越难被替代。这一段是编辑引申，原推只有上面那两句。"
-      ],
-      "creator": "Dan Shipper",
-      "role": "Every CEO",
-      "sourceType": "x",
-      "sourceLinks": [
-        {
-          "label": "原推 @danshipper",
-          "url": "https://x.com/danshipper/status/2050304359024759242"
-        }
-      ],
-      "engagement": "93 likes"
-    },
-    {
-      "slug": "2026-05-02-zara-agent-cofounder",
-      "title": "Zara Zhang 把 coding agent 当 cofounder 用：先摆问题和处境，再问它的意见",
-      "summary": "她观察到多数人把 coding agent 当员工使唤，自己当 cofounder 用：不只下命令，会摆出问题、描述处境、问模型意见。很短的方法论，重度用户可以直接拿来试。",
-      "content": [
-        "她的观察是很多人把 coding agent 当员工，她自己把它当 cofounder。具体做法照她原话：不只是下命令，而是把问题摆出来，描述当前的处境，然后问模型的意见。",
-        "这套用法的重点在让模型参与定义问题：上下文给足之后，模型提出的方案可能超出你预设的任务拆解。可以在下一个没想清楚怎么做的任务上试一遍——先不写具体指令，把处境和约束讲完整，让它先给意见。"
-      ],
-      "creator": "Zara Zhang",
-      "role": "Builder",
-      "sourceType": "x",
-      "sourceLinks": [
-        {
-          "label": "原推 @zarazhangrui",
-          "url": "https://x.com/zarazhangrui/status/2050326543797469415"
-        }
-      ],
-      "engagement": "74 likes"
-    },
-    {
       "slug": "2026-05-02-nikunj-paid-side-project",
       "title": "投资人 Nikunj Kothari 上线第一个付费 side project：购房报告工具，基本按成本价卖",
       "summary": "他用 Claude 和 Railway 等搭了购房报告工具，单份成本 8 至 9 美元、基本按成本卖，看房的人给反馈可拿半价码。想给 side project 收钱的人值得看这个最小样本。",
@@ -110,44 +72,36 @@
         }
       ],
       "engagement": "179 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "这是对的，原因很简单：模型懂得比任何一个人都多，但任何一个人都学得比模型快。",
+      "creator": "Dan Shipper",
+      "handle": "danshipper",
+      "sourceType": "x",
+      "url": "https://x.com/danshipper/status/2050304359024759242"
     },
     {
-      "slug": "2026-05-02-code-with-claude",
-      "title": "Code with Claude 开发者大会下周回归，直播注册已开放",
-      "summary": "官方宣布 Code with Claude 开发者大会下周举行，议程覆盖从刚上手到深度使用 Claude Code 的人群，直播已开放注册。日常用户可以排进日程，具体日期见注册页。",
-      "content": [
-        "官方账号宣布 Code with Claude 下周回归，措辞是 returns，即并非首届。官方的说法是无论刚开始用 Claude Code 还是已经用了一段时间，都有对应的 session，并放出了直播注册链接。",
-        "推文里没有具体日期和完整议程，确切安排要看注册页。从惯例推断，这类官方开发者大会常伴随功能或产品发布，但官方没有预告任何发布内容，这一句只是编辑猜测。"
-      ],
+      "quote": "我发现很多人把 coding agent 当成自己的员工，而我其实把它当成我的 cofounder。我不只是下命令，我会把问题摆出来、描述当前的处境，然后问它的意见。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2050326543797469415"
+    },
+    {
+      "quote": "我们的开发者大会 Code with Claude 下周回归。无论你才刚开始用 Claude Code，还是已经做了一阵子，都有适合你的 session。注册直播：",
       "creator": "Claude",
-      "role": "Anthropic 官方账号",
+      "handle": "claudeai",
       "sourceType": "x",
-      "sourceLinks": [
-        {
-          "label": "原推 @claudeai",
-          "url": "https://x.com/claudeai/status/2050252933866930339"
-        }
-      ],
-      "engagement": "7,562 likes"
+      "url": "https://x.com/claudeai/status/2050252933866930339"
     },
     {
-      "slug": "2026-05-02-replit-10th-free-day",
-      "title": "Replit 十周年，从太平洋时间早上五点起免费开放 24 小时",
-      "summary": "Amjad Masad 宣布 Replit 十周年，当天太平洋时间早 5 点起全部免费 24 小时，附十年回顾视频。没付费但想试的人可以趁这个窗口；免费覆盖范围推文没细说。",
-      "content": [
-        "Replit 十岁了。Amjad Masad 宣布从当天太平洋时间早上 5 点开始全部免费 24 小时作为庆祝；他说让所有人都能编程这件事从 2011 年就开始做，已帮助数百万人学习和发布作品，推文附了十年历程的回顾视频。",
-        "推文没有说明免费具体覆盖哪些功能和额度，以官方页面为准。没有付费订阅但想完整试一遍 Replit 的人，可以利用这个 24 小时窗口。"
-      ],
+      "quote": "Replit 满 10 岁了。为庆祝，我们从太平洋时间早上 5 点开始全部免费 24 小时。但我们让所有人都能编程这件事，要追溯到 2011 年。来看看这一路的高光时刻：能帮助数百万人学习和发布作品，是我们的荣幸。敬下一个十年！",
       "creator": "Amjad Masad",
-      "role": "Replit CEO",
+      "handle": "amasad",
       "sourceType": "x",
-      "sourceLinks": [
-        {
-          "label": "原推 @amasad",
-          "url": "https://x.com/amasad/status/2050479551537619413"
-        }
-      ],
-      "engagement": "22 likes"
+      "url": "https://x.com/amasad/status/2050479551537619413"
     }
   ]
 }

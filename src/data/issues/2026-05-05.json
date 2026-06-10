@@ -1,0 +1,99 @@
+{
+  "date": "2026-05-05",
+  "generatedAt": "2026-05-05T08:05:54.146Z",
+  "stories": [
+    {
+      "slug": "2026-05-05-waymo-dolgov-scaling-foundation-model",
+      "title": "Waymo 的 Dolgov 拆解规模拐点和基座模型架构：跑到 1 亿英里花了 16 年，再 6 个月就翻到 2 亿",
+      "summary": "Dolgov 给出一手的扩张曲线和安全数据：4 座城市一天上线、过去 7 个月新增 1000 万次乘车；并拆开了 Waymo Foundation Model 的 driver/simulator/critic 三支柱和「end-to-end 之外还要什么」的取舍。关心自动驾驶工程化、或想看长尾问题怎么被啃下来的人值得点开。",
+      "content": [
+        "扩张的非线性是这条对谈里最硬的一手信息。Dolgov 说从启动全自动运营到在 4 座城市向公众提供服务花了 8 年，而今年「几周前」一天就上线了 4 座城市；累计已提供超过 2000 万次全自动乘车，其中 1000 万次发生在最近 7 个月。他把这描述为一次「相变」（phase transition），机制是公司从「有意为之的串行去风险」转向「快速并行的全球商业化」——也就是说，慢的那 16 年是在串行验证 driver 和业务的关键环节，验证完之后才敢并行铺开。",
+        "技术上他澄清了两个常被误读的点。一是 Waymo Foundation Model 是一个多模态的 world-action-language 模型，同时驱动 driver、simulator、critic 三个相关但不同的任务；它不只处理图像和视频，还要推理 LiDAR、雷达等其他传感器。二是「end-to-end vs 其他」在他看来是个假二分：他们的基座本身就是 end-to-end（从传感器直接到决策），但在此之上还叠了「结构化的物化中间表示」（structured materialized intermediate representations）。Dolgov 的判断是，纯 vanilla 的 end-to-end 做 demo 或辅助驾驶够用，但要做到超人安全、规模化跑上亿英里，就必须有运行时的额外校验、闭环训练评估、可用于强化学习的奖励函数——这些在纯 end-to-end 里很难做。",
+        "安全数据是可核验的部分：在累计超过 1.7 亿全自动英里上，Waymo driver 在运营城市的严重伤害类碰撞上比人类司机安全 13 倍以上，按当前规模相当于每 8 天避免一起严重伤害。他举的 LiDAR 案例值得 builder 留意——公交车挡住视线时，系统从车底返回的稀疏信号里识别出行人脚步并提前做了预测性减速。他把这归为「涌现能力」（emerging capability），属内部人对自家系统的描述，立场上自然偏正面；能核验的是行为本身，安全倍数则来自 Waymo 自报口径。",
+        "对做 agent 和 AI 产品的人，这集的迁移含义是 Dolgov 反复强调的一点：前 90% 的能力和后面的「几个 9」是两个完全不同的问题，安全或可靠性必须从第一天就写进模型架构、训练评估配方和团队心态里，而不是先冲能力再补。顺着这个逻辑，任何要从 demo 走到大规模生产的 agent 系统，可能都得在 end-to-end 模型之外保留一层结构化的中间表示和运行时校验，而不是指望端到端一把梭。"
+      ],
+      "creator": "Dmitri Dolgov (Waymo) / Training Data 播客",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Training Data: Waymo's Dmitri Dolgov", "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8" }
+      ]
+    },
+    {
+      "slug": "2026-05-05-rauchg-deepsec-security-agent-orchestrator",
+      "title": "Vercel 把内部用的深度安全审计 agent 编排器开源为 deepsec",
+      "summary": "Rauchg 发布 npx deepsec，一个面向深度安全审计的开源 agent 编排器，先在内部用、又跑了若干主流 OSS 项目后才开源。卖点是 coding agent 能在几分钟内找出团队要数月才能发现的关键漏洞，并借 Vercel Sandbox 并行跑上千个 agent。关注 agent 在安全审计落地、或在评估并行 agent 工程的人可看。",
+      "content": [
+        "这条发布的机制重点不在「agent 能找漏洞」，而在并行规模化和先内部验证的路径。Rauchg 说 deepsec 针对 Vercel Sandbox 做了优化，因此可以「有效驾驭上千个 agent 并行审视代码库」——也就是把安全审计从串行的人工 review 改成大规模并行的 agent 扫描，这正是 sandbox 隔离环境能解锁的形态。",
+        "他给的能力描述是 coding agent 能在几分钟内找出「团队要花数月、甚至根本发现不了」的关键漏洞。这条评价来自 Vercel 内部、对自家工具，立场上偏正面；可核验的是 deepsec 已开源、可直接 npx 试跑，读者可以拿自己的仓库验证这个「几分钟 vs 数月」的说法是否成立。Rauchg 还说他们先内部用、又跑了一些主流开源项目、攒够信心才公开，并开放 DM 为 OSS 项目赞助审计跑。",
+        "对 builder 的可操作含义是直接的：维护开源项目或在意供应链安全的人，可以在自己的仓库上跑一次 deepsec 看产出质量；如果是 OSS 维护者，还可以直接找 Rauchg 申请赞助一次审计跑。"
+      ],
+      "creator": "Guillermo Rauch (@rauchg)",
+      "sourceType": "x",
+      "engagement": "1229 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/rauchg/status/2051386798899888539" }
+      ]
+    },
+    {
+      "slug": "2026-05-05-levie-agents-enter-knowledge-work-no-shortcut",
+      "title": "Levie：Anthropic 和 OpenAI 都在帮企业部署 agent，但把智能装进业务流程没有捷径",
+      "summary": "Levie 注意到两家大厂都新推了帮企业落地 agent 的项目，判断这股趋势虽早但会很快变大。他列出 agent 进入编码之外的知识工作时要做的实活——升级 IT 系统、喂上下文、改造工作流、做变更管理，并强调模型再强也没有捷径。想理解 agent 企业落地里机会在哪、是内部人评价的人可看。",
+      "content": [
+        "Levie 的核心判断是「模型能力很强」和「把这份智能稳定地用到一个业务流程上」之间隔着没有捷径的实活，这也是他这条推真正的增量。他把要做的工作摊开列了：升级 IT 系统、给 agent 它需要的上下文、改造工作流让它能和 agent 协作、厘清流程里人和 agent 的关系、推动采用并做变更管理。",
+        "他由此推出的结论是，这个落地层正在催生大量新的工作和新公司，连大厂自己也认识到这里的关键性。作为 Box CEO，Levie 在企业内容和工作流这块本就有商业立场，他强调「落地层有大机会」与 Box 自身定位一致，这一点读者宜带着立场去看；可核验的是 Anthropic 与 OpenAI 确有面向企业部署 agent 的新项目这一事实。",
+        "顺着他的逻辑，对做 AI 应用或服务的人，含义是价值可能不只在模型本身，而在把模型接进真实业务流程的那一层工程和变更管理上——如果这个判断成立，围绕 IT 集成、上下文供给、采用与变更管理的服务型机会会持续放大。"
+      ],
+      "creator": "Aaron Levie (@levie)",
+      "sourceType": "x",
+      "engagement": "836 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2051344780328858040" }
+      ]
+    },
+    {
+      "slug": "2026-05-05-nikunj-momentum-not-a-moat-retention",
+      "title": "Nikunj：靠发布视频和分发堆出来的势头不是护城河，2023-2025 这批创业公司开始为忽视留存买单",
+      "summary": "Nikunj 判断 2023-2025 这批创业公司正意识到，花哨的发布视频和只押分发能换来 VC 融资，但等额甚至更多本该花在留存上的精力没花，钱就烧没了。他说势头从来不是护城河，种子轮到 A 轮的间隔数字正在印证，并预计 acquihire 会比以往快得多。关注早期投资和创业公司健康度的人可看。",
+      "content": [
+        "Nikunj 这条的机制点在于把「势头」和「留存」拆开看。他说很多人把 momentum 当成了护城河，但它从来不是——光靠发布视频和分发能博来融资，真正决定生死的是留存，而把和分发等量、甚至更多的精力投到留存上的公司太少。他用 seed 到 series A 的间隔数据作为佐证，称这个 gap 正在把问题暴露出来。",
+        "他给出的具体预测是：acquihire 的节奏会比过去快得多。这是他作为早期投资人对当前这批 vintage 的判断，标注为「hot take」，读者可把它当成一个待验证的方向性预测，而非已发生的事实。他没有给出 gap 的具体数字，正文也不替他补。"
+      ],
+      "creator": "Nikunj Kothari (@nikunj)",
+      "sourceType": "x",
+      "engagement": "262 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/nikunj/status/2051349526171287930" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "Gemini Flash 又便宜又好用得不像话，还带 1M 上下文窗口和结构化输出。大概是我生产负载里用得最多的模型了。另外，如果你还没试过他们新的实时语音模型，效果好得让人惊掉下巴。",
+      "creator": "Nikunj Kothari",
+      "handle": "@nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2051321911741972900"
+    },
+    {
+      "quote": "编码是第一个前沿，知识工作是第二个，个人 agent 是第三个。",
+      "creator": "Peter Yang",
+      "handle": "@petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2051508988936937764"
+    },
+    {
+      "quote": "挺期待语音模型变得很厉害的。有意思的是，已经能看到人们开始改变和 AI 打交道的方式了。",
+      "creator": "Sam Altman",
+      "handle": "@sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2051464865634742334"
+    },
+    {
+      "quote": "gbrain 真正不一样在哪？它不是一个记忆层，也不是一个代码工具，也不是一个搜索引擎，而是这三者统一在一张图谱、一个查询接口之下，别人都没有这个。我自己用我那套 10 万个 markdown 文件的 OpenClaw+Hermes Agent 配置，整天都在用它。",
+      "creator": "Garry Tan",
+      "handle": "@garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2051525161380364315"
+    }
+  ]
+}

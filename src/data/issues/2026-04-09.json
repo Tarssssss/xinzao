@@ -14,10 +14,22 @@
       "creator": "Anthropic",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Claude Blog", "url": "https://claude.com/blog/claude-managed-agents" },
-        { "label": "原推 @claudeai", "url": "https://x.com/claudeai/status/2041927700063883281" },
-        { "label": "原推 @alexalbert__", "url": "https://x.com/alexalbert__/status/2041941720611614786" },
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2041975669928702370" }
+        {
+          "label": "Claude Blog",
+          "url": "https://claude.com/blog/claude-managed-agents"
+        },
+        {
+          "label": "原推 @claudeai",
+          "url": "https://x.com/claudeai/status/2041927700063883281"
+        },
+        {
+          "label": "原推 @alexalbert__",
+          "url": "https://x.com/alexalbert__/status/2041941720611614786"
+        },
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2041975669928702370"
+        }
       ],
       "engagement": "902 likes"
     },
@@ -34,7 +46,10 @@
       "creator": "Anthropic Engineering",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Anthropic Engineering", "url": "https://www.anthropic.com/engineering/managed-agents" }
+        {
+          "label": "Anthropic Engineering",
+          "url": "https://www.anthropic.com/engineering/managed-agents"
+        }
       ]
     },
     {
@@ -51,8 +66,14 @@
       "role": "Every CEO",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "AI & I by Every", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" },
-        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2041903948873777629" }
+        {
+          "label": "AI & I by Every",
+          "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL"
+        },
+        {
+          "label": "原推 @danshipper",
+          "url": "https://x.com/danshipper/status/2041903948873777629"
+        }
       ],
       "engagement": "255 likes"
     },
@@ -68,24 +89,12 @@
       "role": "Vercel CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2041883605711122488" }
+        {
+          "label": "原推 @rauchg",
+          "url": "https://x.com/rauchg/status/2041883605711122488"
+        }
       ],
       "engagement": "924 likes"
-    },
-    {
-      "slug": "2026-04-09-claude-judge-bias",
-      "title": "Peter Steinberger 做 character eval 时发现 Claude 当裁判会一直把自己排第一，于是给裁判匿名化了模型名",
-      "summary": "LLM-as-judge 自偏好偏差的一次实战示例：他做 character eval 时注意到 Claude 作为裁判持续把自己评为第一，于是把模型名从裁判输入里去掉并调整了设置。所有用模型评模型的流程都值得把匿名化设为默认配置。",
-      "content": [
-        "他在做 character evals 时注意到，Claude 作为裁判会持续把自己选为第一，于是把模型名从裁判的输入里去掉，并调整了相关设置。这是 LLM-as-judge 自偏好偏差在实际工程里的一次现身，来自他正在跑的评测项目。",
-        "对任何用模型当裁判的评测流程，这条的含义是匿名化应该是默认配置：模型名、厂商名甚至典型措辞都可能向裁判泄露身份，而抹掉名字这一步成本几乎为零。顺着这个观察，裁判和被评模型同源的已有评测，结论可能值得重新核对一遍。"
-      ],
-      "creator": "Peter Steinberger",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @steipete", "url": "https://x.com/steipete/status/2042017534816231486" }
-      ],
-      "engagement": "560 likes"
     },
     {
       "slug": "2026-04-09-gemini-notebooks",
@@ -99,7 +108,10 @@
       "role": "Google Labs / Gemini 应用 VP",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2041982173402821018" }
+        {
+          "label": "原推 @joshwoodward",
+          "url": "https://x.com/joshwoodward/status/2041982173402821018"
+        }
       ],
       "engagement": "968 likes"
     },
@@ -115,25 +127,12 @@
       "role": "South Park Commons 普通合伙人，前 Dropbox CTO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @adityaag", "url": "https://x.com/adityaag/status/2041985720706122070" }
+        {
+          "label": "原推 @adityaag",
+          "url": "https://x.com/adityaag/status/2041985720706122070"
+        }
       ],
       "engagement": "49 likes"
-    },
-    {
-      "slug": "2026-04-09-ai-subscriptions",
-      "title": "Peter Yang 判断 Claude Max、ChatGPT Pro 这类不限量 AI 订阅长久不了",
-      "summary": "他自己重度使用 Claude Max 和 ChatGPT Pro，但判断不限量订阅模式不会一直存在。配套深挖覆盖三块：Anthropic 为何切断 OpenClaw 的访问、如何在 Mac 上跑本地模型、他在中国实地看到的情况。依赖单一订阅的重度用户值得点开。",
-      "content": [
-        "他自己重度使用 Claude Max 和 ChatGPT Pro，但判断这类 all-you-can-use 的订阅不会永远存在。配套的深挖文章给了三个切面：Anthropic 为什么切断 OpenClaw 的访问、怎么在 Mac 上跑本地模型、以及他在中国实地看到的情况。推文只给了论点和目录，论据在文章里。",
-        "对重度用户，这条的含义是检查自己对单一不限量订阅的依赖度——如果定价模型真的收紧，本地模型和多供应商是现成的两条退路，他的文章正好覆盖了前者。其中 OpenClaw 访问被切断那一节，和当下 agent 生态对模型供给的讨论直接相关。"
-      ],
-      "creator": "Peter Yang",
-      "role": "Roblox 产品，AI 通讯作者",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2041989206495653915" }
-      ],
-      "engagement": "211 likes"
     },
     {
       "slug": "2026-04-09-llmwiki",
@@ -147,10 +146,32 @@
       "role": "FPV Ventures 合伙人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2042020992969744702" },
-        { "label": "原推 @nikunj（repo）", "url": "https://x.com/nikunj/status/2042021738083766568" }
+        {
+          "label": "原推 @nikunj",
+          "url": "https://x.com/nikunj/status/2042020992969744702"
+        },
+        {
+          "label": "原推 @nikunj（repo）",
+          "url": "https://x.com/nikunj/status/2042021738083766568"
+        }
       ],
       "engagement": "209 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我在做 character evals,注意到 Claude 会一直把自己选成第一,于是我把模型名从裁判那里去掉,并改了些设置。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2042017534816231486"
+    },
+    {
+      "quote": "尽管我很爱用 Claude Max 和 ChatGPT Pro,但我不认为这类不限量的 AI 订阅会一直存在。我的新一篇深挖讲了:为什么 Anthropic 切断了 OpenClaw 的访问、怎么在 Mac 上跑本地模型、以及我在中国实地看到的情况。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2041989206495653915"
     }
   ]
 }

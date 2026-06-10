@@ -15,7 +15,10 @@
       "role": "Y Combinator 总裁兼 CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2041388847930712399" }
+        {
+          "label": "原推 @garrytan",
+          "url": "https://x.com/garrytan/status/2041388847930712399"
+        }
       ],
       "engagement": "108 likes"
     },
@@ -32,7 +35,10 @@
       "creator": "Latent Space",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Latent Space", "url": "https://www.youtube.com/@LatentSpacePod" }
+        {
+          "label": "Latent Space",
+          "url": "https://www.youtube.com/@LatentSpacePod"
+        }
       ]
     },
     {
@@ -48,26 +54,12 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2041347596342460439" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2041347596342460439"
+        }
       ],
       "engagement": "112 likes"
-    },
-    {
-      "slug": "2026-04-07-claude-code-usage-calls",
-      "title": "Claude Code 团队征集额度异常提前用完的 MAX 用户连线排查，想改进 /usage",
-      "summary": "Thariq 征集 MAX 20x 额度意外提前用完的用户，愿意屏幕共享跑 prompt 的可以在评论区报名，目的是搞清 /usage 还该补什么信息。团队 4 月 7 日中午还有直播，会演示一个未发布的新功能。",
-      "content": [
-        "Thariq 在征集 MAX 20x 套餐额度意外提前用完的用户：愿意屏幕共享、现场跑几个 prompt 的可以在评论区报名，他想借这些一对一连线搞清楚 /usage 还应该展示哪些信息。此前已经连线过一批用户，这次想再约几个；这条推下已有三百多条回复。",
-        "另一条预告了 4 月 7 日中午 12 点（太平洋时间）的直播，Adam 会演示一个尚未发布的新功能。遇到额度异常的重度用户可以直接在征集推下报名，把用量问题当面讲给开发团队；关注新功能的可以等直播。"
-      ],
-      "creator": "Thariq",
-      "role": "Anthropic Claude Code 团队成员",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @trq212（用量征集）", "url": "https://x.com/trq212/status/2041252127943877068" },
-        { "label": "原推 @trq212（直播预告）", "url": "https://x.com/trq212/status/2041380183295590471" }
-      ],
-      "engagement": "1.4K likes"
     },
     {
       "slug": "2026-04-07-peter-yang-agent-first-work",
@@ -82,7 +74,10 @@
       "role": "Roblox 产品，AI 教程作者",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2041331383344443795" }
+        {
+          "label": "原推 @petergyang",
+          "url": "https://x.com/petergyang/status/2041331383344443795"
+        }
       ],
       "engagement": "74 likes"
     },
@@ -98,58 +93,46 @@
       "role": "Every CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @danshipper（层级）", "url": "https://x.com/danshipper/status/2041302485315248595" },
-        { "label": "原推 @danshipper（context rot）", "url": "https://x.com/danshipper/status/2041305658054574561" }
+        {
+          "label": "原推 @danshipper（层级）",
+          "url": "https://x.com/danshipper/status/2041302485315248595"
+        },
+        {
+          "label": "原推 @danshipper（context rot）",
+          "url": "https://x.com/danshipper/status/2041305658054574561"
+        }
       ],
       "engagement": "77 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我想再做几场这样的连线：如果你的 MAX 20x 套餐额度意外提前用完，又愿意屏幕共享、在 Claude Code 里跑几个 prompt，请在评论区留言；我想搞清楚怎么改进 /usage 让它给出更多信息。",
+      "creator": "Thariq",
+      "handle": "trq212",
+      "sourceType": "x",
+      "url": "https://x.com/trq212/status/2041252127943877068"
     },
     {
-      "slug": "2026-04-07-zara-cut-features",
-      "title": "Zara Zhang 提醒 AI 产品发布前最重要的一步是想清楚能砍掉哪些功能",
-      "summary": "用 AI 做完产品后，发布前最重要的一步是想能砍掉什么功能。顺着这个逻辑，AI 把加功能的成本压得很低，做减法的判断反而稀缺。用 AI 快速出货的人可以当成发布前的固定检查项。",
-      "content": [
-        "她的原话：在发布一个用 AI 做出来的产品之前，最重要的一步是想你能砍掉什么功能，不是想你还能加什么。",
-        "顺着这个逻辑，AI 把加功能的边际成本压得很低，功能膨胀会成为默认趋势，发布前的减法可能比以前更值得固定成一个步骤。她的简介自称 Builder，这条是一句话的经验之谈，没有展开例子，当成发布前检查清单里的一项收着即可。"
-      ],
+      "quote": "在发布一个用 AI 做出来的产品之前，最重要的一步是想清楚你能砍掉哪些功能，而不是还能加哪些功能。",
       "creator": "Zara Zhang",
-      "role": "Builder",
+      "handle": "zarazhangrui",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2041196551113179296" }
-      ],
-      "engagement": "96 likes"
+      "url": "https://x.com/zarazhangrui/status/2041196551113179296"
     },
     {
-      "slug": "2026-04-07-anthropic-revenue-runrate",
-      "title": "Nikunj Kothari 贴出 Anthropic 收入数据，最近一个月新增 110 亿美元年化收入",
-      "summary": "按他贴出的图，Anthropic 过去三个月增加了 210 亿美元，仅最近一个月新增的年化收入就有 110 亿美元。推文没给数据出处，210 亿的统计口径也没说明，引用前需要自行核验，但量级本身值得记一笔。",
-      "content": [
-        "他贴出的数据：Anthropic 过去三个月增加了 210 亿美元，仅最近一个月新增的年化收入就有 110 亿美元。其中 110 亿明确是年化 run rate 口径，210 亿的口径推文没有说明。",
-        "数字来自他附的图，推文没有注明原始出处，他本人是 FPV Ventures 合伙人，立场偏看多。想引用这组数字的人需要先找到一手来源；如果数字属实，这个增速可以作为判断模型层收入增长的一个直接参照。"
-      ],
+      "quote": "过去三个月增加了 210 亿美元，仅过去一个月新增的年化 run rate 收入就有 110 亿美元……天哪 @AnthropicAI。",
       "creator": "Nikunj Kothari",
-      "role": "FPV Ventures 合伙人",
+      "handle": "nikunj",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2041291304387444991" }
-      ],
-      "engagement": "50 likes"
+      "url": "https://x.com/nikunj/status/2041291304387444991"
     },
     {
-      "slug": "2026-04-07-spiral-headline-tracker",
-      "title": "Every 把实时 AI 头条追踪器的主笔换成 Spiral，每 30 分钟自动选题写稿",
-      "summary": "Dan Shipper 宣布旗下实时头条追踪器改由 Spiral 担任主笔，每 30 分钟找出并写出当下最重要的新闻。这是 AI 模型在生产环境里当 lead writer 的一个实例，做 AI 内容产品的人可以直接观察它的实际产出质量。",
-      "content": [
-        "Every 把旗下的实时 AI 头条追踪器升级了：Spiral 现在担任主笔，每 30 分钟找出并写出当下最值得关注的新闻，让读者知道该把注意力放在哪。",
-        "这是 AI 模型在生产环境里当 lead writer 的一个公开实例，选题和写作都交给模型、按固定节奏出稿。Spiral 是 Every 自家的产品，这条带推广性质；做 AI 内容产品的人可以直接去链接里看实际产出，判断全自动选题加写稿的质量。"
-      ],
+      "quote": "我们刚把实时 AI 头条追踪器升级成由 @TrySpiral 担任主笔：它现在每 30 分钟找出并写出最重要的头条，让你知道该关注什么。",
       "creator": "Dan Shipper",
-      "role": "Every CEO",
+      "handle": "danshipper",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2041273698452136210" }
-      ],
-      "engagement": "27 likes"
+      "url": "https://x.com/danshipper/status/2041273698452136210"
     }
   ]
 }

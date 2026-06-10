@@ -1,0 +1,126 @@
+{
+  "date": "2026-06-10",
+  "generatedAt": "2026-06-10T07:48:48.549Z",
+  "stories": [
+    {
+      "slug": "2026-06-10-cherny-fable5-thought-design-partner",
+      "title": "Boris Cherny 认为 Fable 5 把 Claude 从写代码的 agent 变成了一起想问题、做设计的伙伴",
+      "summary": "Claude Code 作者的一手判断:Fable 5 是 Opus 4.5 以来最明显的提升,debug 时会自己加日志、做测量、验证确实修好了才宣布完成,而这不来自 Claude Code 的提示词。属内部人评价,可作为是否把最复杂的工作交给模型的参考。",
+      "content": [
+        "他描述的关键变化是模型的工作方式,而不只是能力高低。Opus 4.5 出来后他卸载了 IDE,因为发现自己已经几周全程在终端里写代码;到 Fable,他的体感是 Claude 从一个执行编码任务的 agent,变成了在构建产品时一起思考、做设计的伙伴。他用 judgement(判断力)、taste(品味)和 dimensionality 来概括 Fable 比前代多出来的东西,正是这些让他更敢把最复杂的工作交给它。",
+        "最具体的一手证据是 debug 行为:他说这是他用过的第一个如此有条理、精确的模型——会先做测量、加日志,确认问题真的修好了才宣布完成。他特别点明,Claude Code 的提示词里没有任何一句让模型这么做,这是模型自带的性格,并称之为一种他此前没遇到过的 \"big model smell\"(大模型特有的那种感觉)。",
+        "这条评价来自 Anthropic 内部,立场上自然偏向自家模型。可以核验的是那段行为描述:测量、加日志、自验证后再报告完成——这是能在自己的工作流里直接对照的客观行为,而非 \"更聪明\" 这类主观感受。含义是,如果这种自验证确实成了模型默认行为,过去要靠提示词反复叮嘱的工程纪律,可能可以从 harness 里省掉一层。"
+      ],
+      "creator": "Boris Cherny",
+      "role": "Claude Code @ Anthropic",
+      "sourceType": "x",
+      "engagement": "8061 likes",
+      "sourceLinks": [{ "label": "原推", "url": "https://x.com/bcherny/status/2064431111154053187" }]
+    },
+    {
+      "slug": "2026-06-10-karpathy-fable5-major-version-bump",
+      "title": "Karpathy 认为 Claude Fable 5 是配得上大版本号的进步,在长时间求解难题上提升最明显",
+      "summary": "Karpathy 判断 Fable 5 不止 benchmark 全面 SOTA,定性上也是一次大版本级别的跳跃,跟 Opus 4.5 同一量级,长难题求解最突出。他提醒发布期的安全护栏调得偏敏感、希望后续能调,且强调不要真的在生产环境里完全不看代码。",
+      "content": [
+        "他先把这次发布定性清楚:Fable 5 和 Mythos 是同一底座、加了安全护栏,benchmark 全面 SOTA 且领先幅度明显;但他要补的是定性层面也是一次配得上大版本号的进步,和去年 11 月的 Claude 4.5 同一量级,在很难的问题上做长时间求解时尤其突出。",
+        "他说现在可以给它比以前习惯的更有野心的任务,模型 \"get 得到\",然后就自己跑下去;从来没有哪个版本让他这么想干脆完全不看代码——但他紧接着提醒,别真在生产环境里这么干。他也指出模型仍有一些怪癖,发布期的护栏配置偏 \"trigger happy\"(过于敏感),他希望这部分后续能慢慢调。这两处犹疑都不该当成对模型能力的负面结论,而是使用上的提醒。",
+        "他还顺着 Jevons 悖论谈了需求侧:当可用软件越来越像拧开水龙头就有,他自己对软件的需求反而在大幅上涨。他给的例子是讲解器、可视化、dashboard、为某个项目专门定制的一次性 app、把测试套件做大十倍、跑带自定义 HTML 结果页的大型研究项目。顺着这个逻辑,以前不值得专门写的一次性工具,现在可以重新评估要不要做。"
+      ],
+      "creator": "Andrej Karpathy",
+      "sourceType": "x",
+      "engagement": "20439 likes",
+      "sourceLinks": [{ "label": "原推", "url": "https://x.com/karpathy/status/2064409694761054332" }]
+    },
+    {
+      "slug": "2026-06-10-alex-albert-fable5-four-tips",
+      "title": "Alex Albert 给出迁移到 Fable 的四条建议,核心是重写为旧模型写的配置、从下发任务改成描述目标",
+      "summary": "随 Fable 发布各产品额度已重置。Alex Albert 给刚开始测试 Fable 的人四条建议,关键两条:为旧模型写的 skills 和 CLAUDE.md 会把 Fable 锚定在过时模式、应重写;以及从布置任务改成描述目标和验证方式。重度 Claude Code 用户值得对照检查自己的配置。",
+      "content": [
+        "为什么先动配置而不是直接上手:他指出为前代模型写的指令会把 Fable 锚定在过时的工作模式上,应该让它先用自己的判断,而不是被旧规则框住。这跟 Boris Cherny 说的 Fable 自带方法论是同一件事的反面——既然模型自己就有判断力,旧提示词反而成了限制。",
+        "四条建议按他自己的措辞:一是交给它比前代能处理的更大、更有野心的任务;二是默认用 xhigh/high effort,效果最好,med 留给追求快的交互式 session;三是重写 skills 和 CLAUDE.md;四是从提供任务转向提供目标——描述清楚 \"做完是什么样、怎么验证\",剩下的路让 Fable 自己找,他点名 /loop 和 /goal 就是为此设计的。第三和第四条指向同一个方向:模型自主性变强后,人要后撤一步,从指挥执行改成定义终点。",
+        "他同时把 Fable 5 放进了自己经历过的 step-change 序列:Claude Opus 3、Claude Sonnet 3.5、Claude Opus 4.5,现在是 Fable 5。他的体感是模型从一个被他指挥的工具,变成了更像协作的对象。这是 Anthropic 内部视角,偏向自家模型;可核验的部分是那四条操作建议,重度 Claude Code 用户可以趁这次额度重置,把现有 skills 和 CLAUDE.md 重新过一遍。"
+      ],
+      "creator": "Alex Albert",
+      "role": "Research @ Anthropic",
+      "sourceType": "x",
+      "engagement": "2346 likes",
+      "sourceLinks": [
+        { "label": "四条建议", "url": "https://x.com/alexalbert__/status/2064467657483829441" },
+        { "label": "step-change 序列", "url": "https://x.com/alexalbert__/status/2064394410004304003" }
+      ]
+    },
+    {
+      "slug": "2026-06-10-levie-applied-ai-untrainable-corner",
+      "title": "Aaron Levie 认为模型再强,应用层的护城河在于把企业私有现实整理成模型能用的形态",
+      "summary": "Levie 转一篇应用 AI 文章并表态:模型能力和把它落到具体企业流程之间仍有巨大鸿沟,难点在数据获取与格式化、变更管理和 FDE 式的现场实施。他判断前沿模型和应用/服务生态会同时壮大,适合思考应用层 AI 公司护城河的人。",
+      "content": [
+        "他引用的核心论点是 \"untrainable corner\"(模型练不进去的角落):应用的价值来自不光鲜的工作——把一家公司的私有现实整理成模型能据以行动的形态、把工具交到模型手里、和客户一起改造其员工队伍的现实。原文强调,这种 \"翻译\" 难以被复制,且永远不会结束:集成与维护和客户关系一样长,靠把领域专精的工程师和工具放到客户身边的团队来赢。",
+        "Levie 自己补充,模型能力和把它应用到具体企业工作流之间还有极大鸿沟:一部分是要新建的技术,很大一部分是拿到并格式化正确的数据,还有一大块是变更管理和具体落地实施(他点了 FDE,即前线部署工程师)。他给的判断是两件事可以同时为真——前沿实验室会持续高速增长,同时会涌现大量软件与服务公司把模型能力带进真实企业,留出新基础设施商、各垂直行业的应用 AI 公司和新型系统集成商的空间。",
+        "这条来自一位应用 AI 公司(Box)CEO,立场上倾向 \"应用层有持久价值\" 的叙事。可核验的是他描述的落地成本结构——数据、变更管理、现场实施——做应用层的人可以照这个清单,检查自己的护城河到底落在哪几项不光鲜的工作上。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO @ Box",
+      "sourceType": "x",
+      "engagement": "278 likes",
+      "sourceLinks": [{ "label": "原推", "url": "https://x.com/levie/status/2064569513023328268" }]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "Fable 5 是我见过最强的 \"大模型气场\"。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2064573857911152710"
+    },
+    {
+      "quote": "趁 Fable 现在还不按用量计费,让 Claude Code \"帮我审一遍代码找问题\" 有巨大的 alpha,你大概会震惊于自己以前居然没做 Fable 检查就把东西发上了生产。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2064492823781789969"
+    },
+    {
+      "quote": "Vercel CLI 现在可以创建 AI Gateway 的 API key、用 --budget 给它们的花费设上限、用 --refresh-period 设额度刷新周期。把它当成给 AI token 用的虚拟信用卡。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2064551967461114111"
+    },
+    {
+      "quote": "我让 Fable 一把生成了一个网站 escurves.com,讲过去 200 年里所有的 S 曲线、它们的拐点,以及对每个是不是泡沫的点评。提示词是在 Claude app 开研究模式、把那期播客的转写丢进去,让它研究历史上所有 S 曲线、列出所有章节、再给我一个能一把跑通的 Claude Code 提示词。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2064506504888373758"
+    },
+    {
+      "quote": "像指挥乐团一样用 codex,一次一个 /goal。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2064307859903447396"
+    },
+    {
+      "quote": "非技术人用编码 agent 的门槛从来不是界面,聊天是有史以来最简单的 UI;门槛是他们不知道该要什么。空白的聊天框默认你已经知道有哪些可能,而大多数人不知道。我试 Town 时,印象深的是它的 onboarding——agent 会主动建议工作流、主动说能帮你接走哪些事,而不是等你下指令。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2064587398529606082"
+    },
+    {
+      "quote": "对软件的需求将会爆表。",
+      "creator": "Josh Woodward",
+      "handle": "joshwoodward",
+      "sourceType": "x",
+      "url": "https://x.com/joshwoodward/status/2064509357216428171"
+    },
+    {
+      "quote": "Claude Fable 5 今天起在所有地方都可用;Claude Mythos 5 在我们扩大可信访问计划之前,仅限 Glasswing 合作伙伴。Mythos 5 与 Fable 5 同底座,只是在部分领域解除了安全护栏,面向少数网络安全防御者和关键基础设施提供方。",
+      "creator": "Claude",
+      "handle": "claudeai",
+      "sourceType": "x",
+      "url": "https://x.com/claudeai/status/2064394160522559632"
+    }
+  ]
+}

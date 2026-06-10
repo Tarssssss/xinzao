@@ -15,7 +15,10 @@
       "creator": "Marc Andreessen",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "Latent Space", "url": "https://www.youtube.com/@LatentSpacePod" }
+        {
+          "label": "Latent Space",
+          "url": "https://www.youtube.com/@LatentSpacePod"
+        }
       ]
     },
     {
@@ -32,26 +35,12 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2043426157367095397" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2043426157367095397"
+        }
       ],
       "engagement": "2,981 likes"
-    },
-    {
-      "slug": "2026-04-13-garrytan-fat-skills",
-      "title": "Garry Tan 总结今年的 agentic engineering：模糊操作进 markdown skill，确定性操作进代码，harness 保持薄",
-      "summary": "两条推合成一套分层法：人类聪明而模糊的判断写成胖 skill，必须每次都对的逻辑写成胖代码，harness 保持薄；配套原则是「在正确的层做正确的工作」。正在搭 agent 工作流的人可以对照检查自己把逻辑放在了哪一层。",
-      "content": [
-        "规则本身只有三句：把人类在做的聪明、模糊的操作推进 markdown skill，做厚（fat skills）；把必须每次都正确的确定性操作推进代码，做厚（fat code）；harness 本身保持薄。他说这是他今年在 agentic engineering 上学到的东西的最简提炼。",
-        "一分钟后他补了一条更一般的原则：「在正确的层做正确的工作」，其余都是 architecture astronomy——只在架构层面打转的空谈。顺着这个分工去检查现有系统，可操作的含义是：挤在 harness 里的模糊判断应该下放成 skill，混在 prompt 里的必须精确的流程应该固化成代码。"
-      ],
-      "creator": "Garry Tan",
-      "role": "Y Combinator 总裁兼 CEO",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2043566215927328955" },
-        { "label": "原推 @garrytan（right layer）", "url": "https://x.com/garrytan/status/2043566405862236254" }
-      ],
-      "engagement": "450 likes"
     },
     {
       "slug": "2026-04-13-anthropic-security-guide",
@@ -66,7 +55,10 @@
       "creator": "Claude Blog",
       "sourceType": "blog",
       "sourceLinks": [
-        { "label": "Claude Blog", "url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense" }
+        {
+          "label": "Claude Blog",
+          "url": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense"
+        }
       ]
     },
     {
@@ -82,25 +74,12 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2043318118169354302" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2043318118169354302"
+        }
       ],
       "engagement": "307 likes"
-    },
-    {
-      "slug": "2026-04-13-rauch-customer-groupchat",
-      "title": "Guillermo Rauch 的反馈方法：把最挑剔的客户和工程负责人拉进同一个 X 群聊，快速回应快速发布",
-      "summary": "方法只有三步：把最好且要求最高的客户拉进一个 X 群聊，把工程负责人也放进去，快速回应、快速发布。Vercel 已经为 v0 运营这样一个群，公开招募愿意持续给高质量反馈的用户。做产品的人可以直接照抄这个做法。",
-      "content": [
-        "做法本身：挑「最好且要求最高的」客户拉一个 X 群聊，把工程负责人本人放进去，快速回应、快速发布，用他的话说是 face the music——直接听最难听的反馈。",
-        "这不是设想，Vercel 已经为 v0 运营了一个这样的群，愿意持续提供高质量反馈的用户可以私信他加入。这等于把重度用户和工程负责人直连，省掉客服与工单的中转层；成本几乎为零，代价是工程负责人要直面投诉，适合迭代快、敢公开吃反馈的团队。"
-      ],
-      "creator": "Guillermo Rauch",
-      "role": "Vercel CEO",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2043381737754120592" }
-      ],
-      "engagement": "540 likes"
     },
     {
       "slug": "2026-04-13-zara-newtab-vibecode",
@@ -114,26 +93,16 @@
       "role": "Builder",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2043415572688629937" },
-        { "label": "原推 @zarazhangrui（代码）", "url": "https://x.com/zarazhangrui/status/2043415661528129873" }
+        {
+          "label": "原推 @zarazhangrui",
+          "url": "https://x.com/zarazhangrui/status/2043415572688629937"
+        },
+        {
+          "label": "原推 @zarazhangrui（代码）",
+          "url": "https://x.com/zarazhangrui/status/2043415661528129873"
+        }
       ],
       "engagement": "948 likes"
-    },
-    {
-      "slug": "2026-04-13-aditya-anthropic-culture",
-      "title": "Aditya Agarwal：Anthropic 的文化更像早期 Facebook，尽管前 Facebook 人更多在 OpenAI",
-      "summary": "Facebook 早期工程师、前 Dropbox CTO 的印象式观察：Anthropic 像早期 FB 的地方有玩得开心、对世界天真、自下而上的 hacker 文化、极强的使命对齐，外加一条保留——可能有点把自己太当回事。评估两家 lab 文化的人可作参考。",
-      "content": [
-        "他列的相似点：公司里的人玩得很开心；对世界有不少天真；自下而上的 hacker 文化；极强的使命对齐；可能有点把自己太当回事；以及「赢能解决很多问题」。他觉得有意思的地方在于，论前 Facebook 员工的数量，OpenAI 其实多得多，但文化上更像早期 Facebook 的是 Anthropic。",
-        "立场提示：他的参照系是一手的——Facebook 早期工程师、后来的 Dropbox CTO，现在在 South Park Commons 做投资；但这条是印象式判断，推文没有给出具体事例，适合当作一个内行视角的数据点，不必当结论。"
-      ],
-      "creator": "Aditya Agarwal",
-      "role": "South Park Commons 普通合伙人，前 Facebook 早期工程师、Dropbox CTO",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @adityaag", "url": "https://x.com/adityaag/status/2043501400626491758" }
-      ],
-      "engagement": "265 likes"
     },
     {
       "slug": "2026-04-13-nikunj-doordash-strategy",
@@ -147,9 +116,35 @@
       "role": "FPV Ventures 合伙人",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2043374140443553885" }
+        {
+          "label": "原推 @nikunj",
+          "url": "https://x.com/nikunj/status/2043374140443553885"
+        }
       ],
       "engagement": "170 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "这是我今年对 agentic engineering 学到的东西的最简提炼：把人类做的聪明、模糊的操作推进 markdown skill，做厚；把必须每次都完美的确定性操作推进代码，做厚；harness 呢？保持薄。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2043566215927328955"
+    },
+    {
+      "quote": "小建议：建一个 X 群聊，把你最好、要求最高的客户拉进来，再把你的工程负责人也放进去，快速回应、快速发布，直面最难听的反馈。我们为 v0 就有一个这样的群，想加入、且愿意持续提供优质反馈的可以私信我。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2043381737754120592"
+    },
+    {
+      "quote": "有意思的是，Anthropic 的文化让我想起很多早期的 Facebook，尽管 OpenAI 有多得多的前 Facebook 员工；相似点包括：公司里的人玩得很开心、对世界有不少天真、自下而上的 hacker 文化、极强的使命对齐、可能有点把自己太当回事，以及赢能解决很多问题。",
+      "creator": "Aditya Agarwal",
+      "handle": "adityaag",
+      "sourceType": "x",
+      "url": "https://x.com/adityaag/status/2043501400626491758"
     }
   ]
 }

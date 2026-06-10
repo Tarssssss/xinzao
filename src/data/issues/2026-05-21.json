@@ -1,0 +1,75 @@
+{
+  "date": "2026-05-21",
+  "generatedAt": "2026-05-21T07:36:25.306Z",
+  "stories": [
+    {
+      "slug": "2026-05-21-levie-fde-agent-job-durable",
+      "title": "Aaron Levie 认为部署 agent 的工程师岗位会长期存在,因为 agent 直接改写员工的工作流",
+      "summary": "Box CEO 解释为什么这类 FDE / agent 实施岗不会像当年云迁移那样很快做完:云只影响开发者和 IT、不改业务流程,agent 既要重度技术工作又要改流程和做变革管理,且每次模型更新都让旧脚手架要么解锁新能力、要么变成累赘。对在评估这条职业路径的早期技术人有参考。",
+      "content": [
+        "Levie 的核心论证是把 agent 实施和上一轮云采用做对比。云采用影响的是一小撮人(开发者和 IT),拿到收益基本不需要改变普通员工的工作方式,顶多去上一次培训就完事;而 agent 落地不仅技术难度高,还会直接改掉员工参与的底层工作流,因此连带着大量变革管理工作。这是他判断这个岗位不会很快消失的第一个理由。",
+        "第二个理由是变化速度。他指出云时代节奏没这么快,有充足时间让最佳实践扩散;现在每次模型更新都意味着要么能做以前做不到的事、要么某段脚手架变得冗余甚至拖后腿。顺着这个机制,他给出一个推断:正因为见过几百上千次实施的厂商或合作伙伴更容易把活干好,即便客户内部也出人配合,这活也常常更适合外部来做。",
+        "这条评论来自 Box 内部、且转的是别人讲 FDE 的文章,立场上他对这类岗位的前景偏乐观。可核验的部分是他给出的两个机制差异(影响范围、变化速度),正在考虑要不要走 agent 实施这条路的早期技术人,可以拿这两点对照自己所在的具体场景再判断。"
+      ],
+      "creator": "Aaron Levie",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 ↗", "url": "https://x.com/levie/status/2057315272156135501" }
+      ]
+    },
+    {
+      "slug": "2026-05-21-stainless-mcp-code-execution-future",
+      "title": "Stainless 创始人 Alex Rattray:MCP 的未来是给模型一个代码执行工具,而不是堆几百个工具",
+      "summary": "在 Every 的 AI & I 播客里,刚被 Anthropic 收购的 Stainless 创始人讲了 MCP 为什么难做好、以及他押注的方向:把整个 API 的 SDK 暴露给模型,让它写代码、跑分页和过滤,只把结果回传,从而几乎不占上下文。做 MCP server 或在 agent 里接大型 API 的人值得听。",
+      "content": [
+        "他先讲清 MCP 今天为什么不灵:把一个像 Stripe 这样有几百个 endpoint 的 API 一对一翻成 MCP 工具,光是工具定义就烧掉几十万 token,模型既扛不住也理解不了,所以现在要做好必须手工为模型定制少量工具。Stainless 的中间方案是 dynamic mode:无论 API 多大都只给三个工具(列 endpoint、查某个 endpoint、执行),代价是一件事要三轮模型调用,更慢、也有损耗。",
+        "他真正押注的方向是代码执行。给模型两个工具:一个执行代码的文本框(让它直接写 stripe.customers.retrieve 这类 SDK 调用),一个查文档的工具;模型可以写嵌套循环翻完所有分页、在'脑子里'跑完,最后只 console.log 出找到的那一条结果。这样前期上下文占用可能就一千 token 上下,翻页带来的上下文回传几乎为零,而且代码跑在云端紧挨 API,很快。他特别点出类型库的价值:有静态类型时,类型检查能当场指出模型写错的调用(比如 stripe.transactions.list 不存在),没有库就只能打 raw HTTP、又退回到要塞整份 OpenAPI spec 的老问题。",
+        "安全上他的看法是:不应该靠'在 MCP 层少暴露东西'来限制,因为底层 API 能做的事还是都能做;真正该做的是在 API 层用 OAuth + 细粒度 scope。他也提到从单一 API 提供方做起的一个好处是能保证沙箱只允许连到 api.stripe.com 这类单一出口。这条评价来自正在卖这套产品的创始人,主持人 Dan Shipper 也披露自己是小股东,立场上对'代码执行优于堆工具'自然偏向支持;可核验的是其中的机制论证(上下文预算、类型检查、分页),做 MCP 的人可以拿自己的 API 规模套一遍这套取舍。",
+        "另一个含义是,顺着'代码执行超级工具'这套逻辑,他预测以后'造工具'基本就只剩写 prompt:整套 API 能力都在一个工具里,真正要做的工程只是用指令描述特定任务。同一套机制还能把一次性脚本沉淀成长期软件——模型发现某段代码反复有用,就 commit 进仓库。"
+      ],
+      "creator": "Alex Rattray / Dan Shipper",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "AI & I 播客 ↗", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" },
+        { "label": "Dan Shipper 介绍推 ↗", "url": "https://x.com/danshipper/status/2057122805657821240" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "在 AI 原生团队里,个人贡献者应该开始像管理者那样思考:怎么把任务交给 agent、怎么定标准、怎么验证产出;管理者则应该开始像 IC 那样思考:怎么更动手做东西,而不只是做人员管理。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2057324988009685208"
+    },
+    {
+      "quote": "Google I/O 上'如何成为 AI 时代开发者'那一场有张很好的幻灯片讲 T 型人才。我觉得这个 T 型不只适用于开发者,而是适用于每一种岗位:在领域专长上钻得更深、在相邻技能和领域上铺得更宽,并在此之上学会用好 AI。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2057267931025957348"
+    },
+    {
+      "quote": "一个通用模型解决了数学里一个重大的未解问题。这种话接下来几年我们会经常说,但这仍算是个不小的里程碑。我很期待 AI 大幅拓展我们对世界的理解,不过今天我的心情有点复杂。",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2057203171198636251"
+    },
+    {
+      "quote": "拖了很久才说,但回头看,我觉得 sama 那句'做一个模型变强它就变好的生意',基本就是我之前说的 Agent Labs。能看到模型性能和 agent lab 营收之间有很直接的相关,2025 年第四季度出现了一个跳变。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2057119153337545096"
+    },
+    {
+      "quote": "顺带一提,我们做了一次 Exa 和竞品的横评,团队只花了 1.5 小时就一致收敛到了 Exa。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2057180080078791036"
+    }
+  ]
+}

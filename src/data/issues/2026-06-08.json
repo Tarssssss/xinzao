@@ -1,0 +1,124 @@
+{
+  "date": "2026-06-08",
+  "generatedAt": "2026-06-08T08:07:01.633Z",
+  "stories": [
+    {
+      "slug": "2026-06-08-boris-cherny-opus-autonomous-five-tips",
+      "title": "Boris Cherny 给出让 Opus 连续自主跑数小时到数天的五条做法",
+      "summary": "Claude Code 作者的一手清单：让模型长时间无人值守地干活，关键不在提示词，而在权限、编排、续跑、云端和自检五件事的配置。重度 Claude Code 用户值得对照检查自己跑长任务时缺了哪一环。",
+      "content": [
+        "这条的底层逻辑是：长任务跑不下去，通常不是模型能力不够，而是中途被卡住或跑偏没人接。五条建议各自堵的是一个断点——auto 权限模式堵的是「每步都要人点同意」；dynamic workflow 让 Claude 自己编排成百上千个子 agent，堵的是单线程做不完大任务；/goal 或 /loop 堵的是模型干到一半自己停下；云端跑（桌面或手机 app 最省事）堵的是「合上电脑就断」。",
+        "第五条单独拎出来：必须给 Claude 一条端到端自检的路径——网页用 Claude in Chrome 浏览器插件，移动端用 iOS/Android 模拟器 MCP，后端则要能起完整的 web server 或服务。没有自检闭环，模型跑得越久，错误累积越无人发现，前四条带来的「跑得久」反而放大风险。",
+        "这条评价来自 Anthropic 内部，立场上自然偏向 Opus 和 Claude Code 自家工具。可核验的部分是这套配置方法本身：auto 模式、/loop、云端执行、各端的自检通道都是公开能用的功能，可以照着在自己的长任务工作流里验证一遍，哪一环缺了最容易掉链子。"
+      ],
+      "creator": "Boris Cherny",
+      "role": "Claude Code @anthropicai",
+      "sourceType": "x",
+      "engagement": "1865 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/bcherny/status/2063792263067754658" }
+      ]
+    },
+    {
+      "slug": "2026-06-08-aaron-levie-gtm-is-the-hard-part",
+      "title": "Aaron Levie 认为 AI 让建软件变便宜后，GTM 反而成了企业软件最难的部分",
+      "summary": "Box CEO 反驳「AI 吃掉企业软件」的判断：开发从来只是企业软件成本的一部分，大头在 GTM，而 AI 没有降低这块成本。含义是当开发被压便宜，可发现性和差异化才是新的护城河。做企业级产品或投这一赛道的人值得对照。",
+      "content": [
+        "市场误判的根源在于把「软件难做」等同于「企业软件难做」。Levie 的拆解是：即便 AI 让开发变容易了一些，在规模化的企业软件里，成本大头一直不在写代码，而在 GTM——多数品类要靠大量顾问式销售、实施支持和集成才能打进去，这部分 AI 没有减少，landscape 变得更拥挤复杂后，买家更难做选择，这块成本在很多情况下反而更高。",
+        "顺着这个逻辑，他给出一个一般性推论：当你把某样东西（软件开发）变得更便宜、更充裕，瓶颈就转移到可发现性和市场差异化，也就是 GTM 成了最难的环节。这等于说，纯靠 AI 把开发做快做便宜，并不能直接转化成企业市场的胜势。",
+        "Levie 站在 Box 的立场上，这套论证自然也是在解释为什么自家这类有重 GTM 积累的公司不容易被颠覆。可核验的是论点结构本身：如果你在做企业级产品，可以核对自己产品的成本结构，看 GTM 是不是确实占了大头，以及 AI 把开发提速后，差异化的压力是不是真的往可发现性这一侧转移了。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "ceo @box",
+      "sourceType": "x",
+      "engagement": "378 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2063756386572681606" }
+      ]
+    },
+    {
+      "slug": "2026-06-08-aaron-levie-model-stratification-routing-layer",
+      "title": "Aaron Levie 判断模型分层后，能成本最优路由工作负载的编排层会越来越值钱",
+      "summary": "Box CEO 的判断：未来一两年用例会在前沿模型和便宜模型之间分层，前沿盘子比今天更大，低端也显著变大。含义是把工作负载路由到正确模型、既省成本又能完成任务的 agent 编排，会成为 AI 的新核心难题。做 agent 基础设施的人值得关注这个位置。",
+      "content": [
+        "这条的机制是用例会按经济价值自然分层：高端任务和工作用前沿智能，大批量、能被便宜模型充分接住的负载则下沉到便宜模型。Levie 特别说，前沿那一盘不会缩水，反而会比今天大得多，因为需求会撑起来；同时低端那一侧也会明显变大。这是双向变大，而不是前沿被便宜模型蚕食。",
+        "由此他点出真正的「the big update」：能高效把每个工作负载路由到正确模型的那一层会越来越值钱，因为这成了 AI agent 里的一个新硬问题。能在保证任务成功完成的前提下做成本优化的 agent 编排，会处在很强的位置。对做 agent 基础设施或编排层的人，这等于说明了未来价值会沉淀在哪个环节。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "ceo @box",
+      "sourceType": "x",
+      "engagement": "141 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2063835799096090749" }
+      ]
+    },
+    {
+      "slug": "2026-06-08-madhu-guru-training-data-why-swe-agents-first",
+      "title": "Madhu Guru 解释为何先有了 SWE agent 却还没有知识工作 agent",
+      "summary": "前 Google 产品负责人指出：推动模型前沿的训练数据不是低技能脏活，而是高经济价值任务的数据。SWE 之外这些任务大多缺文档、靠多年积累的领域知识、被互不打通的遗留工具割裂——这正是知识工作 agent 还没出现的原因。关心 agent 能力边界的人值得一看。",
+      "content": [
+        "常见误解是把训练数据当成低技能脏活：扫笔记、扒互联网、打标注。Madhu 的反驳是，真正推动模型前沿的数据恰恰相反——实验室需要的是高经济价值任务的数据，而 SWE 之外的这类任务大多没什么文档，是多年积累起来的复杂、领域专属的知识，还散落在一堆互不对话的遗留工具里。",
+        "这条逻辑直接解释了一个现象级的差距：正因为 SWE 任务相对有文档、可被采集成训练数据，我们才先有了 SWE agent，而没有知识工作 agent。含义是，知识工作 agent 迟到的瓶颈未必在模型，而在能不能把那些隐性的、领域专属的高价值任务变成可训练的数据。",
+        "他据此抬高了对 Mercor 这类做训练数据的公司的估值，称这是高杠杆、高技能的工作，对推进 AI 至关重要却被严重低估。这部分是 Madhu 的个人判断，带明显的立场；可核验的是前半段的机制——知识工作任务确实缺文档、被遗留工具割裂，这一点可以对照自己熟悉的领域验证。"
+      ],
+      "creator": "Madhu Guru",
+      "role": "Prev: Product Leader at Google - Gemini, Veo, Nano Banana",
+      "sourceType": "x",
+      "engagement": "60 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/realmadhuguru/status/2063704354910347520" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "这是给你的每月提醒：你不该再去给 coding agent 写提示词了，你该设计那些去给 agent 写提示词的 loop。",
+      "creator": "Peter Steinberger",
+      "handle": "@steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2063697162748260627"
+    },
+    {
+      "quote": "从 tokenmaxxing、token 焦虑到 tokenoptimizing 的氛围转变，几周之内就发生了，挺离谱的。可能是个 hot take：我还是觉得公司应该给员工大量的 token 预算，让他们待在前沿、把所有边界都探一遍。否则太容易退回到「事情一直以来怎么做就怎么做」。",
+      "creator": "Nikunj Kothari",
+      "handle": "@nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2063630238123483195"
+    },
+    {
+      "quote": "教人怎么用这些 AI 工具，已经成了一个严重的瓶颈。",
+      "creator": "Garry Tan",
+      "handle": "@garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2063786111588323780"
+    },
+    {
+      "quote": "Vercel AI Gateway 平均每月找回超过 1T 的 token，做法很像 Stripe 用智能重试在失败的扣款或信用卡更新上找回收入。而且我们在 labs 之上零加价做这件事，还加上了冗余、零数据留存的强制执行、可观测性、用量 API、额度上限等等。",
+      "creator": "Guillermo Rauch",
+      "handle": "@rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2063714700618334260"
+    },
+    {
+      "quote": "我手上有了一个新的大按钮可以为 Codex 按下。接下来 100 天，我们每天选一个用 Codex 做出惊艳或极其有用工作的人，给他一个月 10 倍的用量额度，看看他能用它做出什么。第一个明天揭晓。",
+      "creator": "Thibault Sottiaux",
+      "handle": "@thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2063748242681307611"
+    },
+    {
+      "quote": "我觉得我的 Frontend Slides skill 能这么自然地长起来，一个原因是幻灯片本身就带社交属性。人们看到这些很酷的 slides 总会问「你怎么做的」，而且用 HTML deck 的人会被看作更 AI-native、更懂 AI。",
+      "creator": "Zara Zhang",
+      "handle": "@zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2063638307586662539"
+    },
+    {
+      "quote": "我经历过两次 IPO（Meta 和 Dropbox）。巨额财富往往放大更深层的欲望，而不是创造新的欲望。主流叙事是「早期员工赚了大钱、买豪宅、去海滩」。对一些人确实如此，他们想歇一歇，挺好，我为他们高兴。但对很多人来说，这是去做更疯更野的事的机会：创立新东西、投资新东西，把硅谷那个疯狂的循环继续转下去。",
+      "creator": "Aditya Agarwal",
+      "handle": "@adityaag",
+      "sourceType": "x",
+      "url": "https://x.com/adityaag/status/2063731771284619521"
+    }
+  ]
+}

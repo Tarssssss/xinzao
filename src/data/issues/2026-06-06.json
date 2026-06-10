@@ -1,0 +1,112 @@
+{
+  "date": "2026-06-06",
+  "generatedAt": "2026-06-06T07:23:01.789Z",
+  "stories": [
+    {
+      "slug": "2026-06-06-matt-colyer-figma-review-bottleneck",
+      "title": "Figma 的 Matt Colyer：agent 产出已不是瓶颈，审查才是，今年的工作重心是把审查规模化",
+      "summary": "Figma 开发者产品负责人在 Every 播客里给出一线判断：agent 已经足够便宜、足够能干，瓶颈转移到了人怎么审查海量产出。他还把「每个问题都变成了上下文问题」当作贯穿全场的框架。在搭内部 agent、设计审查流程的人值得听。",
+      "content": [
+        "他的核心判断是产能过剩、审查不足：agent 现在能产出大量内容、便宜又随手可得，于是人成了瓶颈——只有这么多双人眼睛去 review 所有工作。顺着这个逻辑，他把今年的重心放在「怎么把审查规模化」：可能是录一段视频走查，可能是截图，也可能是再派一个带不同 prompt 的 agent 去审，审到你信任它、愿意批准它的判断为止。他对具体形态明说「很难预测」，没有给确定答案。",
+        "贯穿全场的一句框架是「每个问题都变成了上下文问题」，工作于是变成用对的信息把问题框好。他用一个具体例子撑这句话：Figma 产品运营团队把组织架构塞进 SQLite、接上 Asana / Slack / GitHub，再配一个「新人 onboarding」skill——只要告诉它新人是谁、加入哪个团队，它能自己走组织架构图找出这个团队产品/工程/设计的三人组，读最近三十天的 Slack、翻 Asana 看板，生成一份「该认识的人和频道」。他形容结果「好得有点瘆人」。",
+        "对 SaaS 末日论他给的是反方向的体感：自己亲手 vibe code 过 agent，但「这些天买的软件比以前任何时候都多」，因为自己跑 agent 要承担持续维护成本，不如花钱让别人替你跑。在画布上他区分了发散 agent 和收敛 agent——前者把你扔上去的 frame 往不同方向推，后者把 25 个概念聚类、还能扮演用户视角帮你挑。这是命令行 agent 还做不到的工作流。",
+        "对「PM / 设计师还有没有未来」，他的回答是基本功仍然重要：类比有了计算器还是要学长除法，驱动这些系统得先理解概念本身。他把落点放在「保持好奇」——能把工具用到极限的是那些追问「这东西怎么搭起来的」的人，而不是接受输出就完事的人。这条来自 Figma 内部、带产品立场，可核验的是他描述的具体工作流（onboarding skill、code↔design 的 MCP 往返），想验证的人可以照着在自己的栈里搭一遍。"
+      ],
+      "creator": "Matt Colyer",
+      "role": "Director of Product Management for Developers, Figma",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "AI & I by Every:The SaaS Apocalypse Is a Goldmine With Figma's Matt Colyer",
+          "url": "https://www.youtube.com/watch?v=kYKebKB3-d0"
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-06-aaron-levie-coding-agents-best-case",
+      "title": "Aaron Levie：编程是 AI 自动化条件最好的领域，却仍离不开人来盯 agent，所以其他知识工作的失业风险被高估了",
+      "summary": "Box CEO 拆了为什么编程是 AI agent 的最优场景：海量高质量训练代码、用户够技术、结果可测试、上下文已数字化躺在代码库里。即便占齐这些优势，工程师仍供不应求——他由此推断其他数据没那么数字化、必须全量人工复核的知识工作，被取代的风险其实更低。",
+      "content": [
+        "他的论证机制是把编程拆成四个对 agent 异常有利的条件：模型在海量复杂代码上训练过；用户高度技术化、能快速上手新工具；工作「可验证」，因为你能测一个 app；而且产出常常和代码质量脱钩——代码写得糙，app 照样能跑。再加上 agent 要的上下文往往已经数字化、就躺在代码库里。",
+        "他的推断是：这些优势里有一部分能迁到知识工作，但在那些「必须全量复核才有用」「数据没那么充分数字化」的领域，大多数条件并不成立，agent 的活儿因此更复杂。落点是一个相对判断——既然占齐这么多优势、工程师还供不应求，那其他知识工作被取代的风险就比外界感知的要小；他同时保留了另一半：agent 会让人做得比以前多得多，但人不会消失。",
+        "这条来自 Box 内部、立场上对「人不会被取代」自然有倾向。可核验的是他列的四个条件本身，以及「编程仍需人盯 agent」这个当下事实；想验证的人可以拿自己所在的知识工作领域逐条对照，看四个条件能占几个，再判断这套类比对自己行业成不成立。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "engagement": "283 likes",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2063055332545540096"
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-06-madhu-guru-build-for-the-slope",
+      "title": "Madhu Guru：企业 AI 团队最常见的错是按今天的模型能力和价格做产品，应该「为斜率而建」",
+      "summary": "前 Google Gemini / Veo 产品负责人指出企业 AI 团队的常见错误：对着今天的模型能力和价位做设计。他给的方法是围绕当下模型的弱点搭脚手架去推进前沿，赌下一代模型会原生解决掉这层脚手架，再推一次——反复识别并填补模型缺口的能力本身会沉淀成护城河。",
+      "content": [
+        "他的判断前提是模型半年后会明显更聪明、更便宜，所以按当下能力和价格点做设计会很快过时。他给出的动作链是：围绕今天模型的弱点搭脚手架，把前沿往前推；押注下一代模型会原生解决掉这层脚手架；然后再推一次前沿。他把这套概括成一句「为斜率而建」（build for the slope）——对的不是模型此刻的位置，而是它的变化速率。",
+        "顺着这个逻辑，他把护城河落在能力而非某个具体脚手架上：反复识别模型缺口、并把它桥接起来的能力，本身会随时间长成护城河。含义是，任何为补当前模型短板而做的功能都应被视为有保质期的——下一代模型可能让它失效，真正该积累的是「持续发现并填补缺口」这件事本身。这是一条编辑推断，他原文只说能力会「成为自己的护城河」，没有展开单个脚手架会被淘汰这层。"
+      ],
+      "creator": "Madhu Guru",
+      "role": "Prev Product Leader, Google (Gemini, Veo, Nano Banana)",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/realmadhuguru/status/2063024953721827329"
+        }
+      ]
+    },
+    {
+      "slug": "2026-06-06-peter-yang-self-improving-skills",
+      "title": "Peter Yang 给出五步法：让 AI skill 能自查产出、随用随改",
+      "summary": "Peter Yang 列了搭一个能自我改进的 skill 的五步：给上下文加好坏样例、写清触发描述、配一份 10 条通过/不通过的 evals、加一个记一句话经验的 memory、再做一个专门清理其他 skill 的 skill。每步都附了可直接用的 prompt 模板，想系统化做 skill 的人可照搬。",
+      "content": [
+        "这套方法的逻辑是让 skill 不止能跑、还能自查和迭代：第一步给上下文，连同「什么是好产出」的样例一起喂进去，让它知道好的样子；第二步用固定句式「Use when the user wants to [做某事]」写触发描述，让它容易被正确调用；第三步配一份带 10 条通过/不通过检查的 evals，专门盯常见错误；第四步加一个 memory 文件，把每次使用里学到的经验压成一句话存下来。",
+        "第五步是元层面：做一个「清理 skill 的 skill」，专门删掉其他 skill 里重复或过时的指令、含糊的规则和 AI 套话。含义是把 skill 库当成需要持续维护的代码来管，而不是写完就放着。他每一步都给了可直接复制的 prompt 模板，想系统化做 skill 的人可以照这五步搭起一条从样例到自查再到自清理的闭环。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Product at Roblox",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/petergyang/status/2062899832965255443"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "比「永远用 plan mode」更聪明的做法：把你的任务写成一个问题，这样模型会被邀请来反驳、给你的想法打分、提替代方案，而不是盲目执行你「说出口」的那句话（往往不是你真正想要的）。常常只要在 prompt 末尾加个「？」就够了。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2063082950317486133"
+    },
+    {
+      "quote": "更好的记忆 = 更短的 prompt = 每个 token 带来更多效用。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2062966625733861752"
+    },
+    {
+      "quote": "有时候所谓的快，只是把没耐心伪装成了野心。",
+      "creator": "Aditya Agarwal",
+      "handle": "adityaag",
+      "sourceType": "x",
+      "url": "https://x.com/adityaag/status/2062917027103130013"
+    },
+    {
+      "quote": "我们把 Claude Cowork 的用量上限在下个月翻倍，作用于你的 5 小时速率限制。如果你一直攒着一个又大又乱的项目，现在正是时候。",
+      "creator": "Boris Cherny",
+      "handle": "bcherny",
+      "sourceType": "x",
+      "url": "https://x.com/bcherny/status/2063028954546733462"
+    }
+  ]
+}

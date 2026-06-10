@@ -15,9 +15,18 @@
       "role": "Claude Code 团队（Anthropic）",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @trq212（指南）", "url": "https://x.com/trq212/status/2044653083817660431" },
-        { "label": "原推 @trq212（autocompact 设置）", "url": "https://x.com/trq212/status/2044653085415604473" },
-        { "label": "原推 @trq212（Claude Blog 版）", "url": "https://x.com/trq212/status/2044654705780179011" }
+        {
+          "label": "原推 @trq212（指南）",
+          "url": "https://x.com/trq212/status/2044653083817660431"
+        },
+        {
+          "label": "原推 @trq212（autocompact 设置）",
+          "url": "https://x.com/trq212/status/2044653085415604473"
+        },
+        {
+          "label": "原推 @trq212（Claude Blog 版）",
+          "url": "https://x.com/trq212/status/2044654705780179011"
+        }
       ],
       "engagement": "375 likes"
     },
@@ -34,9 +43,18 @@
       "role": "OpenClaw 维护者",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @steipete（闭源逆向）", "url": "https://x.com/steipete/status/2044423791405924562" },
-        { "label": "原推 @steipete（安全方案）", "url": "https://x.com/steipete/status/2044482797449150520" },
-        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2044512730087072000" }
+        {
+          "label": "原推 @steipete（闭源逆向）",
+          "url": "https://x.com/steipete/status/2044423791405924562"
+        },
+        {
+          "label": "原推 @steipete（安全方案）",
+          "url": "https://x.com/steipete/status/2044482797449150520"
+        },
+        {
+          "label": "原推 @garrytan",
+          "url": "https://x.com/garrytan/status/2044512730087072000"
+        }
       ],
       "engagement": "1420 likes"
     },
@@ -53,8 +71,14 @@
       "role": "Vercel CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @rauchg（Shader Lab）", "url": "https://x.com/rauchg/status/2044445445636972578" },
-        { "label": "原推 @rauchg（软件工厂）", "url": "https://x.com/rauchg/status/2044419655306215492" }
+        {
+          "label": "原推 @rauchg（Shader Lab）",
+          "url": "https://x.com/rauchg/status/2044445445636972578"
+        },
+        {
+          "label": "原推 @rauchg（软件工厂）",
+          "url": "https://x.com/rauchg/status/2044419655306215492"
+        }
       ],
       "engagement": "1705 likes"
     },
@@ -71,25 +95,11 @@
       "creator": "AI & I by Every",
       "sourceType": "podcast",
       "sourceLinks": [
-        { "label": "AI & I by Every", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" }
+        {
+          "label": "AI & I by Every",
+          "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL"
+        }
       ]
-    },
-    {
-      "slug": "2026-04-16-gemini-on-mac",
-      "title": "Google 发布 Mac 原生 Gemini 客户端：小团队不到 100 天做出 100 多个功能",
-      "summary": "Josh Woodward 给的发布数字：听了用户反馈后新招一支小团队，不到 100 天、100 多个功能、100% 原生 Swift，主打快。产品之外，这组交付节奏是他主动挑出来讲的信息；Mac 用户可以直接装来试，他在公开收反馈。",
-      "content": [
-        "Josh Woodward 公布 Gemini 的 Mac 原生客户端，给的背景是：听了用户反馈，新招了一支小团队，不到 100 天做了 100 多个功能，100% 原生 Swift，他强调的体验点是快。",
-        "这条发布推的信息量主要在交付方式：小团队、百天周期、原生实现，是他主动挑出来讲的三件事。Mac 用户可以直接下载试用，他也在公开收反馈。"
-      ],
-      "creator": "Josh Woodward",
-      "role": "Google 副总裁（Google Labs、Gemini App、AI Studio）",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @joshwoodward", "url": "https://x.com/joshwoodward/status/2044452201947627709" },
-        { "label": "原推 @joshwoodward（下载链接）", "url": "https://x.com/joshwoodward/status/2044452203596071052" }
-      ],
-      "engagement": "5901 likes"
     },
     {
       "slug": "2026-04-16-swyx-meta-turn",
@@ -102,7 +112,10 @@
       "creator": "Swyx",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2044598788065731017" }
+        {
+          "label": "原推 @swyx",
+          "url": "https://x.com/swyx/status/2044598788065731017"
+        }
       ],
       "engagement": "70 likes"
     },
@@ -119,25 +132,12 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie", "url": "https://x.com/levie/status/2044621545348481285" }
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2044621545348481285"
+        }
       ],
       "engagement": "156 likes"
-    },
-    {
-      "slug": "2026-04-16-swyx-subagents-spaces",
-      "title": "Swyx：subagents 是优化问题，让 agent 组合并指挥其他 agent 是能力问题",
-      "summary": "背景是 Cognition 当天发布 Spaces，Swyx 称三个月前以顾问身份参与设计了这个概念，这次发布只是开始。注意他的利益相关；值得记的是那个区分——往下拆是调度优化，往上让 agent 组合、互相管理和查询要靠模型能力。",
-      "content": [
-        "Swyx 此前的说法是“今年是 subagents 之年”，这次他补了一个区分：把任务往下拆给 subagents，大体上是个优化问题；反过来的问题——让 agent 能互相组合、由 boss agent 去管理和查询其他 agent——是个能力问题。",
-        "背景是 Cognition 当天发布 Spaces。Swyx 说自己以顾问身份在三个月前参与了这个概念的设计，并称这次发布只是后续一系列东西的开始。他是 Cognition 的顾问，对这次发布的评价立场偏向；区分本身比站台更值得记：往下拆考验调度和编排，往上组织考验模型能力，两边要解的问题类型不同。"
-      ],
-      "creator": "Swyx",
-      "role": "Cognition 顾问",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2044542494420214217" }
-      ],
-      "engagement": "49 likes"
     },
     {
       "slug": "2026-04-16-amjad-oss-security-metric",
@@ -151,9 +151,28 @@
       "role": "Replit CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @amasad", "url": "https://x.com/amasad/status/2044437437141909609" }
+        {
+          "label": "原推 @amasad",
+          "url": "https://x.com/amasad/status/2044437437141909609"
+        }
       ],
       "engagement": "410 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "正式发布 Mac 版 Gemini。我们听取了大家的反馈，组了一支小团队，他们用不到 100 天做了 100 多个功能。100% 原生 Swift，速度极快。欢迎告诉我们你的想法！",
+      "creator": "Josh Woodward",
+      "handle": "joshwoodward",
+      "sourceType": "x",
+      "url": "https://x.com/joshwoodward/status/2044452201947627709"
+    },
+    {
+      "quote": "我说过「今年是 subagents 之年」，但那大体上是个优化问题。反过来的问题——让 agent 能互相组合、由 boss agent 去管理和查询它们——是个能力问题。作为 Cognition 的顾问，我很自豪在三个月前参与了新 Spaces 概念的一点设计工作，而今天的发布只是更多东西的开始。恭喜团队！",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2044542494420214217"
     }
   ]
 }

@@ -1,0 +1,126 @@
+{
+  "date": "2026-05-22",
+  "generatedAt": "2026-05-22T07:32:48.084Z",
+  "stories": [
+    {
+      "slug": "2026-05-22-yann-dubois-harness-last-mile",
+      "title": "OpenAI 的 Yann Dubois：别押注通用 harness，但垂直领域的「最后一公里」仍大有可做",
+      "summary": "OpenAI 后训练负责人对 builder 的直接建议：通用 harness 撑不过模型迭代，别投太多；面向具体垂直、为了眼下把可靠性从 80% 抬到 85% 的 harness 值得做，但要做好将来重调的准备。在评估自建 agent 框架还是等模型吃掉它的人值得对照。",
+      "content": [
+        "Dubois 把问题拆成两类 harness。瓶颈在他看来不是模型的「原始智能」，而是最后一公里：权限、连接器、让模型能拿到该拿的数据。所以他对外部公司和创业者的判断是分层的——为一个具体垂直、为了现在就把可靠性从 80% 推到 85% 而做的 harness 很重要，应该做；但想做一个能长期沿用的通用 harness，他认为行不通，因为模型能力还在快速往上走，会把它吃掉。",
+        "他对自建 harness 的态度并不是劝退，反而偏鼓励：有具体问题在手的团队「应该多做」，因为没有好 harness 等于把大量价值留在桌上。他甚至说，如果把现有模型冻住、认真打磨 harness，很多领域里人们「已经能感受到 AGI」。关键的限定是：别指望它一劳永逸，要预期将来还得重调。",
+        "这条评价来自 OpenAI 内部，立场上自然偏向「模型会继续吃掉外围工程」这一边，对自家横向能力的进展也会偏乐观。可核验的部分是他对 80%→85% 这种垂直收益的描述，以及「瓶颈是权限和连接器而非智能」这个判断——正在纠结该不该重投 agent 框架的团队，可以拿自己产品里真实卡住的环节对照一下，看瓶颈到底落在模型能力还是最后一公里的接入上。"
+      ],
+      "creator": "Yann Dubois",
+      "role": "OpenAI 后训练 Frontiers 团队负责人",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "MAD Podcast 原集（YouTube）", "url": "https://www.youtube.com/watch?v=DhD1zZ8w8Mw" }
+      ]
+    },
+    {
+      "slug": "2026-05-22-yann-dubois-progress-step-function",
+      "title": "Yann Dubois：AI 进展其实是连续的，「阶跃」感来自三件事叠加",
+      "summary": "OpenAI 后训练负责人的解释：能力曲线在他看来一直连续，最近的「突然变好」是三件事叠加——去年 12 月左右越过了可用性的可靠性阈值、模型反过来加速研究员自己、以及把可验证奖励的 RL 工具迁到了真实任务上。对在判断该信多少「拐点叙事」的人有用。",
+      "content": [
+        "三条原因里，最值得 builder 注意的是第三条：o1/o3 时代的强化学习主要针对「可验证奖励」——数学题、编程竞赛这类有标准答案、好判对错的任务；去年底到今年初，他们把这套为可验证奖励造的工具迁移到了真实世界的混乱任务上，开始直接优化对用户的实际效用。在 Dubois 看来，这才是「编程从竞赛级跳到真实工作」体感突变的直接来源。",
+        "第一条是可靠性阈值。他把 agent 模型看成每两分钟就有一定出错概率，跑得越久最终出错概率越高；他认为大约在去年 12 月（至少在 OpenAI 内部）越过了一个门槛，从那以后「可以信任模型去做我们在做的很多工作」。第二条是自我加速——内部都在用模型写代码、训练别的模型、搭研究工具，于是这几个月「越来越快」。",
+        "顺着他的逻辑，含义是：这种「连续能力 + 阶跃体感」的模式会从编程外溢到其他垂直。他明确说多数领域的人现在还没像编程那样感到模型有用，但同一套机制会逐步渗透过去。需要提示的是这是 OpenAI 内部视角，对进展会偏乐观；可对照的是「可验证奖励 → 真实任务」这条迁移路径——它也解释了为什么 cyber、编程这类好判对错的领域先涨。"
+      ],
+      "creator": "Yann Dubois",
+      "role": "OpenAI 后训练 Frontiers 团队负责人",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "MAD Podcast 原集（YouTube）", "url": "https://www.youtube.com/watch?v=DhD1zZ8w8Mw" }
+      ]
+    },
+    {
+      "slug": "2026-05-22-yann-dubois-continual-learning",
+      "title": "Yann Dubois：持续学习仍是没攻克的瓶颈，模型起点高于新员工但之后基本不长进",
+      "summary": "OpenAI 后训练负责人坦言持续学习还没破解。他用「时间—对用户效用」曲线描述：模型在第 0 天就比多数新员工有用，但之后基本持平，不学公司知识、不随时间变高效，而人学得很快。他说自己也不太清楚为什么这么久还没解决，连单用户场景都没做到。",
+      "content": [
+        "他认为该看的指标是这条曲线下的积分面积，而非起点高度。模型起点高，但曲线随时间近乎水平；人起点低却快速上升。正因如此，他判断在很多场景里人仍然更有用——把曲线从水平掰成单调上升、让模型在一个环境里待得越久越有用，才是持续学习真正要解决的事。",
+        "他对进度的态度罕见地直白：现有的 codex 记忆有帮助，但远不是终态；三年前 ChatGPT 刚出时他以为 OpenAI 半年内就能搞定记忆和个性化，三年后「我不觉得我们到了」。企业内的记忆还牵扯权限和隐私，但他强调即便是单用户场景也还没做到，而且他自己也说不清为什么这么难。",
+        "这是来自模型一线的承认，可核验的是行为描述——模型不会随在某个环境里工作变久而变得更懂这家公司、更高效。对 builder 的含义是：如果你的产品价值依赖「用得越久越懂你」，目前这块仍要靠外部记忆/检索自己补，模型层短期内大概率给不了。"
+      ],
+      "creator": "Yann Dubois",
+      "role": "OpenAI 后训练 Frontiers 团队负责人",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "MAD Podcast 原集（YouTube）", "url": "https://www.youtube.com/watch?v=DhD1zZ8w8Mw" }
+      ]
+    },
+    {
+      "slug": "2026-05-22-levie-inference-cost-stratification",
+      "title": "Aaron Levie：模型推理成本不会收敛到单一低价，而是按任务持续分层拉大",
+      "summary": "Box CEO 的判断：此前以为 AI 每 token 成本会收敛到一个低价，现在看分层只会越拉越大——前沿用例继续用最贵最强模型，能胜任的任务再剥给低成本模型。含义是企业要新增财务团队和技术方案来按任务做价格优化，能帮客户做这件事的平台会占优。对做企业 AI 采购和平台定位的人有用。",
+      "content": [
+        "他给出的机制是：行业已从「便宜、小上下文窗口的聊天工具」走到「大上下文、能跟踪长任务、且因为强很多而推理成本贵一个数量级的 agent」。接下来是两条并行的路——编程、科学、金融、咨询这类前沿用例继续吃最强模型，同时把够用的任务剥离给低成本模型。所以在他看来收敛不会发生，按任务的分层只会继续变宽。",
+        "他把这点落到企业侧的具体动作：广泛落地 AI 需要企业新增程序、新的财务团队和技术方案来管理这套成本结构。结论是，能让客户「按手头任务做价格优化」的实验室和平台会处在最好的位置——这既是他对行业的判断，也顺带是 Box 这类要做治理和编排层的公司的定位。",
+        "这条来自 Box CEO，立场上偏向「需要一层管理和优化」的叙事对他自家产品有利，读时可打个折。可核验的是「成本按任务分层而非收敛」这个趋势判断——正在规划多模型采购或内部成本治理的团队，可以拿自己实际的模型账单结构对一下，看是不是也在往「贵的更贵、便宜的够用」两端分化。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "Box CEO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2057663408376516703" }
+      ],
+      "engagement": "474 likes"
+    },
+    {
+      "slug": "2026-05-22-zara-zhang-claude-code-lark-bridge",
+      "title": "Zara Zhang 开源 Claude Code 的 Lark/飞书桥，把 CC 会话搬进 IM 群聊",
+      "summary": "Zara Zhang 开源了 Claude Code Lark/飞书 Bridge：在 Lark 里像同事一样使唤 CC，手机上也能用；一个群聊对应一个会话来管多个 CC session，替代乱糟糟的终端标签页；CC 还能经 CLI 读取 Lark 里的聊天/文档/会议记录、写飞书文档、被 @ 回复。对在飞书生态里重度用 Claude Code 的人值得一试。",
+      "content": [
+        "这套桥的设计核心是把终端这层换成 IM：一个 Lark 群聊就是一个 CC 会话，多会话用多个群聊来组织，目的是摆脱终端里成排标签页的状态管理。它顺带让 CC 接上了工作上下文——通过 CLI 读取 Lark 里的聊天、文档、会议转写，并能反过来给你写飞书文档，你在评论里 @ 它它会回复，转发任意 Lark 消息给它就能直接把活干了。",
+        "对 builder 的含义是：把 agent 的入口从终端挪到团队已经在用的协作工具里，等于让手机和非工程同事也能触达同一个 CC 会话，还能发带按钮的交互卡片。项目已开源，在飞书生态里的团队可以直接拿来对照自己当前的 CC 使用方式。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder（@zarazhangrui）",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/zarazhangrui/status/2057710284920520906" }
+      ],
+      "engagement": "28 likes"
+    },
+    {
+      "slug": "2026-05-22-aditya-agarwal-early-stage-hiring",
+      "title": "Aditya Agarwal 给早期招聘的四条硬话：拿不动 70% 降薪的人直接别聊",
+      "summary": "South Park Commons GP、前 Dropbox CTO 给出四条早期招聘判断：在大厂/大实验室和 pre-B 之间还要犹豫的工程师，立刻停止接触；不愿接受相对大厂降薪 70% 现金的人会不开心；谈 offer 的过程最能看清人，有新信息就别怕走开；创业没有 work-life balance。立场极硬，对在招早期团队的创始人有用。",
+      "content": [
+        "四条的共同逻辑是用「意愿」做早筛信号，而不是用能力或履历：还在 pre-B 与大厂之间比较的人，被他直接判为「显然还没准备好进创业公司」；卡在现金降薪上的人，他预期会不开心、有压力。第三条把谈判/closing 过程本身当成考察环节——拿到新信息就别怕走开。",
+        "这是一条立场鲜明、近乎筛人门槛的发言，来自有大厂和创业双重经历的投资人，可作为早期创始人定招聘标准时的一个对照样本。需要注意它是个人经验式的强主张，不是普适结论——尤其「70% 现金降薪」「零 work-life balance」这类硬线，更多反映他对早期阶段投入度的偏好。"
+      ],
+      "creator": "Aditya Agarwal",
+      "role": "South Park Commons GP，前 Dropbox CTO",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/adityaag/status/2057502381038846306" }
+      ],
+      "engagement": "403 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "我们一向乐于和客户聊，但你不该被迫先跟我们对话才能买产品。",
+      "creator": "Amjad Masad",
+      "handle": "amasad",
+      "sourceType": "x",
+      "url": "https://x.com/amasad/status/2057504360217891018"
+    },
+    {
+      "quote": "我觉得这套技术栈已经赢下了 local-first 这一仗。或许后面还有新篇章，但如果你想快速搭快速应用，我认为就是它了。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2057576893621150020"
+    },
+    {
+      "quote": "每个人都该有一个带 GBrain 的 agent。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2057636167525498961"
+    }
+  ]
+}

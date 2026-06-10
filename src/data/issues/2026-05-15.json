@@ -1,0 +1,140 @@
+{
+  "date": "2026-05-15",
+  "generatedAt": "2026-05-15T09:24:50.319Z",
+  "stories": [
+    {
+      "slug": "2026-05-15-daytona-agent-needs-computer",
+      "title": "Daytona 创始人 Ivan Burazin：每个 agent 都需要至少一台自己的计算机,因为多数知识工作仍锁在传统应用里",
+      "summary": "Daytona 把 sandbox 定义为「给 agent 的可组合计算机」。核心判断:只要 agent 要做工具调用、写代码或操作浏览器就需要它,纯聊天不需要。他用自己的实例(给 agent 单独的银行账号和带额度上限的信用卡)说明隔离的安全逻辑。在搭 agent 基建、判断 sandbox 是不是真需求的人值得看。",
+      "content": [
+        "Ivan 的论证起点是他自己踩的坑:做董事会材料时让 Claude 去取银行数据,模型回「你登录把权限给我」,他当场拒绝,认为这「从根上击穿了整件事的前提」。结论不是不让 agent 干,而是给它一台独立机器、独立账号——他给自己的 agent 配了单独的 Daytona 账号、单独的电话号(因为这家银行进系统只能用手机做 2FA)和一张每日限额的信用卡。这样隔离之后,agent 能看银行数据但不能动钱,剩下唯一的风险是它会不会把数据泄露出去,而整台机器随时能关掉。",
+        "他把 sandbox 拆成三层:基础设施(启动速度、并发量)、原语(VM / 容器 / micro VM 等不同形态)、工具层(让 agent 干得更好的 headless 工具,以及防它乱来的护栏,如 secrets manager、防火墙)。一个反复出现的判断是「所有工具最终都会变成 headless」,因为那是 agent 工作最高效的方式;但他同时承认,今天绝大多数知识工作仍然锁在 Windows 里的传统应用里,所以「要让 agent 端到端做完一件事,今天你就是得给它一台计算机」——能从 API / MCP 走的就走 headless,走不通的就让它开浏览器登录操作。",
+        "立场上这是 sandbox 基建供应商在论证自家品类的必要性,需要打折看。可核验的部分是他对使用边界的描述:他明确说纯聊天类、情感陪伴类 agent 不需要 sandbox,需要的是要做工具调用、搜索、写代码或操作浏览器的那类。顺着这个边界,正在判断「我的 agent 到底要不要独立沙箱」的人,可以拿「它有没有需要真实执行环境的动作」当分界线,而不是默认所有 agent 都得配一台。"
+      ],
+      "creator": "Ivan Burazin",
+      "role": "CEO, Daytona",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "The MAD Podcast: Why Every AI Agent Needs Its Own Computer",
+          "url": "https://www.youtube.com/watch?v=kMXJrzAa5fM"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-15-levie-ai-enhances-specialization",
+      "title": "Aaron Levie 判断 AI 会强化而非消解专业分工,角色边界的暂时模糊不等于一个人能干完整件事",
+      "summary": "Box CEO 的判断:AI 让人更容易探索别的职能,角色短期会被搅在一起,但「一些不变的规律」最终会重新浮现,工作量累积到一定程度仍会迫使重新分工。他赌 AI 反而强化专业化,专家的工具链和产出会远超业余玩票者。在思考 AI 时代组织分工和自己职业定位的人值得看。",
+      "content": [
+        "他的机制是「暂时混淆」和「真正取代」的区别:AI 让 PM 能写点代码、工程师能多懂点业务、产品营销能自己做出一版能用的设计和视频,于是角色边界看起来在消失。但他认为这只是因为单个人现在能多干一点别人的活,一旦各自的工作量累积够多,「重新专业化」在经济上又会变得划算。他举的例子是规模化阶段:PM 仍该花大量时间泡在客户那里想清楚要建什么,工程师仍要在 10 倍特性速度下保证系统可扩展、安全。",
+        "需要做立场校准:这是 Box CEO 对「AI 是否取代专业岗位」这个高度争议话题的个人下注(他用的词是 my bet),不是已发生的事实。他押的方向是 AI 强化专业化,即便少数角色会彼此合并,未来专家的工具链和「手艺」会是高杠杆的,产出远超任何在该职能上玩票的业余者。对正在据此调整团队结构或个人定位的人,这是一条值得对照的判断,但要记得它带着明确的 hedge,而非确定性预测。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "engagement": "182 likes",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2055143231625818554"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-15-daytona-cpu-shortage-infra",
+      "title": "Daytona 提出继 GPU 之后可能出现 CPU 短缺,因为 RL 训练和长跑 agent 都在大量吃 CPU 沙箱",
+      "summary": "Ivan 转述 SemiAnalysis 的预测——可能 10 月起 CPU 不够用,并给出机制:RL 训练要让贵的 GPU 满载,就得用海量能秒级开关的 CPU 沙箱喂它;长跑 agent 也每个任务占一台。他给了一手运营数据(跑超 24 小时的沙箱占 2.5% 但贡献约 20% 收入)。关注算力供给和基建瓶颈的人值得看。",
+      "content": [
+        "为什么 agent 时代会缺 CPU 而不只是 GPU:他的逻辑是 RL 已经是过去一年多模型进步的主要来源,而 RL 训练里 GPU 比 CPU 贵得多,所以要让 GPU 始终满载,就得用大量 CPU 沙箱在旁边快速起停地喂任务——沙箱开关越慢,GPU 闲置越久。这把 CPU 从「便宜的背景资源」变成了训练吞吐的瓶颈。他转述 SemiAnalysis(Dylan Patel)的报告,称大约 10 月就可能没有多余 CPU,并提到自己此前发过一条「该买 Intel」的推(他特别声明非投资建议)。",
+        "支撑需求侧体量的是几个一手数字:Daytona 60 毫秒起一台沙箱、70 秒内起 5 万台,有客户提出过 500 万台并发的需求。这些不是营销虚数,而是他用来解释为什么 off-the-shelf 的 Kubernetes / Nomad 调度器撑不住、他们不得不自研调度器的依据。",
+        "最有判断价值的一手数据点是商业结构:跑超过 24 小时的长跑沙箱只占沙箱总量的 2.5%,却贡献了约 20% 的收入。含义是,长跑 agent 虽然数量稀少,单位经济价值却远高于一次性短任务——对在做 agent 产品定价和算力规划的人,这是个可以拿去对照自己用量分布的真实参照。注意这是供应商自报数据,口径无法独立核验。"
+      ],
+      "creator": "Ivan Burazin",
+      "role": "CEO, Daytona",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "The MAD Podcast: Why Every AI Agent Needs Its Own Computer",
+          "url": "https://www.youtube.com/watch?v=kMXJrzAa5fM"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-15-daytona-gtm-for-technical-founders",
+      "title": "Daytona 创始人讲技术型创始人的分发心法:产品同质时靠认知度和体验取胜,客服第一反应要快",
+      "summary": "Ivan 复盘 16 年做开发者工具的分发经验:零销售、靠 Twitter 和线下活动做 PLG。框架借自 David——客户选你看认知度、偏好、有没有别人没有的硬条件。他强调上家公司没分清 user 和 customer 的教训,以及一套具体的客服法则。给做技术产品但不擅长分发的创始人。",
+      "content": [
+        "他给技术创始人的核心框架来自 David:客户选产品看三件事——认知度(知不知道你存在)、偏好(品牌、定价、体验、功能)、以及有没有一个别人给不了的确定性条件(他举的例子是 FedRAMP 这类认证,有了客户就只能选你)。他的精力主要放在前两件上,假设「如果所有产品都一样,差异化在哪」:更多人知道你、品牌和体验更好。他特意把客服、客户支持也算进 go-to-market,理由是这些都是「品牌即感知」的一部分。",
+        "上一家公司 CodeAnywhere 教给他的最大教训是分不清 user 和 customer:那个产品只有单个开发者价值、没有企业用例,而单个开发者不愿为这类工具付费;Daytona 同样是 PLG,但单个开发者背后是公司,会用公司的卡付钱——这个差别创业之初看不出来。",
+        "他还给了一套很具体、可直接照搬的客服法则:第一反应一定要快,因为人一旦确认问题被接走就会安心;然后承诺一个解决时间;关键是在那个时间点之前要么解决、要么主动联系对方说明延期并给新时间——「你在他想起这件事之前就替他想了」。他说这来自早年做系统管理员的经历,不复杂,但多数人没有直觉地这么做。"
+      ],
+      "creator": "Ivan Burazin",
+      "role": "CEO, Daytona",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "The MAD Podcast: Why Every AI Agent Needs Its Own Computer",
+          "url": "https://www.youtube.com/watch?v=kMXJrzAa5fM"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "他刚花了一年给自己的 agent harness 搭脚手架。然后(实验室)一发新模型更新,这套东西全作废了。",
+      "creator": "Aaron Levie",
+      "handle": "levie",
+      "sourceType": "x",
+      "url": "https://x.com/levie/status/2055136119969529993"
+    },
+    {
+      "quote": "每一家有数据墙的大公司都在意识到:是时候转向 headless 了(否则基本就是等死)。这也是对的判断,因为 agent 的市场和用量会比人类大 100 倍。如果你只为人类把守系统,你的价值很可能会缩水到 1/100。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2054924517135540320"
+    },
+    {
+      "quote": "博客一旦署名从具体个人变成「某某团队」,就开始死亡。所有权越大,该担的责也越大。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2055079344632926603"
+    },
+    {
+      "quote": "今天我才知道:让 AI 在没有设计系统和组件的情况下直接开始画界面,是通往垃圾产出的必经之路。也许那些设计师当初是有道理的。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2055091746036716026"
+    },
+    {
+      "quote": "每当有人问我怎么让组织被 agent 渗透,我的回答都一样:头号领先指标是他们的领导层是不是每天亲自用 Codex、Claude Code 或 Cowork。",
+      "creator": "Dan Shipper",
+      "handle": "danshipper",
+      "sourceType": "x",
+      "url": "https://x.com/danshipper/status/2055015466054410400"
+    },
+    {
+      "quote": "我们和 Apple 谈妥了,四个月来第一次重新上架了我们的 app。感谢所有帮过忙的客户和创作者。这一路不容易,但我们从不放弃。",
+      "creator": "Amjad Masad",
+      "handle": "amasad",
+      "sourceType": "x",
+      "url": "https://x.com/amasad/status/2055185058282226146"
+    },
+    {
+      "quote": "Codex 上线 ChatGPT 手机 app 了!",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2055034461591588916"
+    },
+    {
+      "quote": "正式确认了:成立刚满 9 个月,Gradium 已经在第三方 TTS 基准上压过整个语音 AI 领域——比 OpenAI 强、比 ElevenLabs 强、比 Cartesia 强、比 Deepgram 强。",
+      "creator": "Matt Turck",
+      "handle": "mattturck",
+      "sourceType": "x",
+      "url": "https://x.com/mattturck/status/2055029555455222199"
+    }
+  ]
+}

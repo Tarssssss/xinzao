@@ -1,0 +1,122 @@
+{
+  "date": "2026-06-01",
+  "generatedAt": "2026-06-01T08:12:54.071Z",
+  "stories": [
+    {
+      "slug": "2026-06-01-swyx-pewdiepie-opencode-benchmark",
+      "title": "Swyx 把 pewdiepie 自己 vibecode 的 OpenCode 套件当成知识工作 agent 创业的 DIY 基准线",
+      "summary": "Swyx 的判断:个人本地 agent 从两年前没人信,到现在一个 vibecode 的 OpenCode 封装就能 DIY 出含邮件、文档、日历的生产力套件。他给知识工作 agent 创业者立了条狠标准:跑不过这个 DIY 产物就可以收摊。做这类 horizontal agent 产品的人值得对照。",
+      "content": [
+        "Swyx 拿这件事做的是一个时间轴对照:2026 年 2 月 Soumith Chintala 讲个人、本地、私有 agent 的设想时大多数人不信;一年多后 pewdiepie 发布了自己 vibecode 的 OpenCode 封装,被描述为一套完整的个人 AI 生产力套件,含邮件、文档和日历。他给的热度数据是 HN 置顶、一天内浏览量轻松过百万、星标过万——这些都是他原推里写的,不是外部核实的。",
+        "他由此推出的标准是:如果你的知识工作 agent 创业项目打不过 pewdiepie 这个产物,「不如收摊回家」,因为它已经是「你能 DIY 出什么」的基准线。含义是,当一个非工程背景的人用现成 harness 就能拼出横向生产力套件,纯做通用知识工作 agent 的创业公司,护城河被抬高的门槛就落在这条 DIY 线之上。",
+        "顺着这个逻辑,这条对在做 horizontal agent 产品的人最有参考价值:可以拿这个 DIY 产物当下限,问自己的产品在它之上还多给了什么。需要留意的是 Swyx 本人与 Cognition 等多家公司有关联,这条带有从业者视角的立场。"
+      ],
+      "creator": "Swyx",
+      "role": "@swyx",
+      "sourceType": "x",
+      "engagement": "137 likes",
+      "sourceLinks": [
+        { "label": "原推 ↗", "url": "https://x.com/swyx/status/2061256096719970337" }
+      ]
+    },
+    {
+      "slug": "2026-06-01-levie-enterprise-agent-context-problem",
+      "title": "Aaron Levie 认为 context 是企业 AI agent 的头号问题,也是应用层公司和 FDE 模式的最大杠杆",
+      "summary": "Box CEO 给出的判断:从 agentic coding 走到知识工作 agent,context 问题反而更尖锐,因为知识散在不互通的遗留系统、权限模型对不上真实工作、关键流程只在人脑里没数字化。他把这点同时框成应用层公司和 FDE/系统集成模式的最大机会。做企业 agent 落地的人值得对照。",
+      "content": [
+        "Levie 的核心机制是把两类 agent 拉开对比:写代码时大量 context 就在代码库里,用户本身技术也够,把剩下的喂给 agent 不难;一旦换成知识工作 agent,context 问题变得「尖锐得多」。难点他拆成两层——一是已有数字化知识往往散落在不互通、且访问控制对不上真实工作需求的遗留系统里,得整体迁到现代安全云环境;二是很多关键 context 根本还没被捕捉数字化,决策、流程、工作流只活在人的脑子和部门口头知识里,需要先转成 agent 能用的非结构化数据。",
+        "他把这件事同时框成两个判断:一是这是应用层 AI 公司最大的杠杆点之一,因为它们可以专门去帮 agent 拿到所需的信息和领域专长;二是这也是 FDE 和新系统集成商模式现在特别奏效的原因。",
+        "这条评价来自 Box 内部,Box 自身就在做企业内容与 AI,立场上偏向「context 难、需要专门的人和平台来解决」这个对自家有利的结论。其中可核验的部分是对障碍的描述——权限模型对不上真实工作、知识只在人脑里——做企业 agent 落地的人可以照这两条在自己客户环境里验证一遍,看 context 卡点是不是真在这里。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "@levie",
+      "sourceType": "x",
+      "engagement": "479 likes",
+      "sourceLinks": [
+        { "label": "原推 ↗", "url": "https://x.com/levie/status/2061247380897579500" }
+      ]
+    },
+    {
+      "slug": "2026-06-01-garrytan-own-your-memory-harness-wars",
+      "title": "Garry Tan 主张自己掌控和托管 memory,称这会是 2027 年「AI harness 之战」的决定性战场",
+      "summary": "YC 的 Garry Tan 提出:memory 是唯一一件你应该能带去任何平台的东西,所以要自己掌控、自己托管;否则用别人的 harness,就等于在别人的 AI 生态里当佃农。他把平台保持开放、数据可轻松导出和他所说的 2027 年 harness 之战绑在一起。关心 agent 平台锁定的人值得点开。",
+      "content": [
+        "Tan 的机制论点是:在 AI harness 走向的方向上,用别人家的 harness 最终意味着你在「给别人的 AI 生态当佃农」(sharecropping)。所以他把 memory 单独拎出来——这是你应该能带到任何平台的那一件东西,因此应该自己掌控、自己托管。他还把这件事类比成新一轮浏览器大战,称之为 2027 年的「AI harness 之战」,这是一个带时间点的预测,不是已发生的事。",
+        "与之相连他强调平台要保持开放,导出自己的数据不该费很大力气。含义是,如果 memory 不可携带,平台层的锁定就会沿着 harness 这条线形成;反过来,谁让 memory 真正可迁移,谁就在这场他预言的战争里占位。",
+        "这条对在选 agent 平台、或在做 harness/memory 层产品的人有参考价值:可以把「我的 memory 能不能完整带走」当成评估平台锁定风险的一个具体检查项。需要注意「2027 年 harness 之战」是 Tan 的预测措辞,不是既成定论。"
+      ],
+      "creator": "Garry Tan",
+      "role": "@garrytan",
+      "sourceType": "x",
+      "engagement": "1423 likes",
+      "sourceLinks": [
+        { "label": "原推(memory)↗", "url": "https://x.com/garrytan/status/2061174413513678941" },
+        { "label": "原推(平台开放)↗", "url": "https://x.com/garrytan/status/2061176075288453333" }
+      ]
+    },
+    {
+      "slug": "2026-06-01-rauchg-coding-agents-plg-fication-enterprise",
+      "title": "Guillermo Rauch 观察到 CEO/CTO 因 coding agent 重新亲自写代码,称这是企业市场的 PLG 化",
+      "summary": "Vercel CEO 的一手观察:有上市公司 CEO 主动私信他,说靠 Claude Code 和 Vercel 重新爱上发软件;过去 C-suite 要很晚才懂基础设施。他把 coding agent 称为企业市场的终极 PLG 化,糟糕的遗留软件再也藏不住。他自己说不确定这是不是持久趋势。关注企业销售路径变化的人值得点开。",
+      "content": [
+        "Rauch 给的机制是:coding agent 把技术栈的优劣变得「自证」——从实习生到 CEO,整个组织都能直接看出哪套栈管用,于是糟糕的遗留软件再也藏不住。他由此称 coding agent 是企业市场的终极 PLG 化(自下而上、产品驱动地渗透进企业),并说过去 C-suite 往往要到很晚才理解基础设施,现在 CEO、CTO 又「带着劲」回来亲自写代码。",
+        "他举的证据是一手的:有上市公司 CEO 通过 DM 和 InMail 找他,说靠 Claude Code 和 Vercel 重新爱上了发软件;还有一些一直想合作的「梦想客户」因此打开。",
+        "这条评价来自 Vercel 内部,且点名了自家产品和 Claude Code,立场上自然偏向「coding agent 利好我们这类公司」。Rauch 本人也加了对冲——明说「不确定是不是一个持久趋势」。可核验的部分是那个行为描述:高管亲自上手、栈的优劣在组织内变得透明。做企业销售或开发者工具的人可以观察自己客户里 C-suite 是否真的开始直接接触技术栈,而不是只听这条结论。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "@rauchg",
+      "sourceType": "x",
+      "engagement": "1226 likes",
+      "sourceLinks": [
+        { "label": "原推 ↗", "url": "https://x.com/rauchg/status/2061135404942974982" }
+      ]
+    },
+    {
+      "slug": "2026-06-01-steipete-codex-qa-assistant-background-prs",
+      "title": "Peter Steinberger 把 Codex 训练成 QA 助手,每次提交自动跑用户测试并后台开 PR 修复",
+      "summary": "Steinberger 分享的工作流:让 Codex 当 QA,每个 commit 都生成一个用户测试场景,用 webVNC、computer/browser use 像真实用户那样测 OpenClaw,整个过程在后台跑并直接开 PR 提交修复。给在搭 agent 自动化测试管线的人一个具体可抄的形态。",
+      "content": [
+        "这条的增量在于把 agent 用在了「测自己」的回路上:不是让模型写测试代码,而是让 Codex 针对每个 commit 现造一个用户测试场景,再借 webVNC(crabbox)、computer/browser use(peekaboo/mcporter)这套工具,像一个用户或 QA 人员那样实际操作 OpenClaw 去测。",
+        "他强调这套是后台运行、并直接开 PR 带上修复——也就是从「发现问题」到「提出改动」整条链路无人值守。含义是,如果这种每提交一次就自动走一遍真实用户路径的回路稳定可用,常规手动回归测试的一部分就可以交给 agent。",
+        "这是 OpenClaw 作者描述自家工作流,具体工具(crabbox / peekaboo / mcporter)是否通用、稳定性如何,原推没有展开。在搭 agent 测试管线的人可以把「每个 commit 生成用户测试场景 + 用 computer use 真机操作 + 后台开 PR」当成一个可参照的结构,自己验证可行性。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "@steipete",
+      "sourceType": "x",
+      "engagement": "1008 likes",
+      "sourceLinks": [
+        { "label": "原推 ↗", "url": "https://x.com/steipete/status/2061208638027395490" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "每个 evals/分析类创业公司在 2026 年都在经历一次性的、代际式的升级,变成持续学习平台。很多会失败,但一如既往,有品味的那些会赢。",
+      "creator": "Swyx",
+      "handle": "@swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2061206120233054327"
+    },
+    {
+      "quote": "没见过 Codex 写即兴 codemod,但它刚刚为一次较大的 TypeScript 迁移写了一个。挺受触动。",
+      "creator": "Peter Steinberger",
+      "handle": "@steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2061115471760441692"
+    },
+    {
+      "quote": "「真正的精通不是付出最多的努力,而是用最少的必要努力达成结果。死磕对任何创造性问题都没有好处。」",
+      "creator": "Zara Zhang",
+      "handle": "@zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2061143524020822158"
+    },
+    {
+      "quote": "为什么 coding agent 用「随时吩咐」结尾会让我这么烦——你是我的联合创始人,不是我的仆人。",
+      "creator": "Zara Zhang",
+      "handle": "@zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2061341642544783801"
+    }
+  ]
+}

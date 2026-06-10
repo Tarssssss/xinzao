@@ -1,0 +1,55 @@
+{
+  "date": "2026-05-14",
+  "generatedAt": "2026-05-14T08:50:39.990Z",
+  "stories": [
+    {
+      "slug": "2026-05-14-suno-creation-is-entertainment",
+      "title": "Suno 的 Mikey Shulman：产品的卖点是「创作本身就是娱乐」，而音乐不是规模问题",
+      "summary": "Suno CEO 给出一手运营判断：每天 90% 用户会创作，且大多不为导出到别处，创作本身就是娱乐。他还反常识地说音乐不是 scale 问题、模型护城河很薄。在想消费级 AI 怎么做、或押注模型层 vs 产品层的人值得点开。",
+      "content": [
+        "Shulman 把 Suno 和「AI 版 Spotify」明确切开。多数人默认 AI 音乐就是用 AI 喂一个更好的推荐流，而他的判断是：这条路明显是错的，真正的 step change 在于创作端——按他给的数字，任意一天有 90% 的用户会创作点什么，而且大多不是为了拿到别处去用，就是为创作本身的乐趣。他把这类产品归为「creative entertainment」，并类比 Claude Code：自己搭的东西大多不会上 AWS 给百万人用，但搭的过程和用自己搭的东西本身就是娱乐。",
+        "技术判断同样反 LLM 直觉。他说音乐基本不是 scale 问题，模型反而小：LLM 世界有 benchmark，堆算力沿着榜往上爬很有效；音乐没有标准答案、没有 benchmark，scale 帮助有限，问题更脏。模型小还带来一个 UX 上的好处——出音乐更快。他认为真正的 edge 来自偏好数据，而且这批数据的规模大到「没有它连现在用的技术都开发不出来」，等于把产品使用本身变成了研究输入。他还提到一个和文本模型的差别：文本模型担心 sycophancy，音乐这边几乎没有这个顾虑，可以更强地把人类偏好 RL 回模型。",
+        "产品哲学里有两条对 builder 有参考价值。一是他直说模型层的护城河不确定有多厚——Google 已经在做音乐模型，Suno 现在明显更好，但对方能七天不停地砸钱、模型侧大概率追得上，所以他把投入压在 UI/UX 和「持续取悦用户」上。二是一个产品驱动的技术取舍：早期他们选 autoregression 而非 diffusion、坚持做完整带人声的歌而不是十几秒高保真片段，代价是很长一段时间音质明显比所有竞品差（「一秒就能听出是 Suno、听着像垃圾」），理由是「一首歌是一个故事」，讲故事比音质脆不脆更重要。",
+        "这是创始人讲自家产品，立场上自然偏向「创作即娱乐」这套叙事，对 slop、版权这些争议的回答也偏乐观（他把 Warner 的和解说成「以前不可能、现在能一起建的东西」）。可核验的是那些行为和运营描述：90% 日活创作率、$300M 收入 run rate、五天内 90% 流量从 Discord 迁到 web app。顺着他「模型护城河薄、押注产品体验」的逻辑，做消费级 AI 的人可以拿自己的产品对一遍——价值到底落在模型还是落在让人「想熬夜玩、不想睡」的那层体验上。"
+      ],
+      "creator": "Mikey Shulman",
+      "role": "Suno 创始人兼 CEO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Training Data 播客：Suno's Mikey Shulman", "url": "https://www.youtube.com/watch?v=Jq3BIGz4vXQ" }
+      ]
+    },
+    {
+      "slug": "2026-05-14-claude-managed-agents-dreaming-outcomes",
+      "title": "Claude Managed Agents 上新：dreaming、outcomes 和多智能体编排，主打少人工干预下的复杂任务",
+      "summary": "Anthropic 给 Managed Agents 加了三样东西：dreaming（跨 session 复盘记忆做自我改进）、outcomes（用 rubric + 独立 grader 让 agent 自检自纠）、多智能体编排。带可核验数字：outcomes 让任务成功率最高 +10 分。在搭 agent harness、纠结怎么减少人工 review 的人值得对照。",
+      "content": [
+        "三个能力都在解同一个问题：让 agent 在「没人盯着」的情况下也能把复杂任务做对。outcomes 的机制最值得拆——你写一份描述「什么算成功」的 rubric，由一个独立的 grader 在自己的 context window 里打分，因此不受 agent 自身推理过程的影响；不达标时 grader 指出要改哪里，agent 再过一遍。这等于把「人来 review 每一次产出」换成「另一个上下文里的评分器来 review」，绕开了 agent 自己评自己容易自洽的问题。dreaming 则是一个定时进程，跨 session 复盘记忆、抽取模式（反复犯的错、收敛出的工作流、团队共享的偏好）并重构记忆，可以选自动更新或人工审过再落地。",
+        "数字是这次的硬料，且来自 Anthropic 自己的内部基准，看的时候要带这个立场：outcomes 相比标准 prompting loop 把任务成功率最高拉高 10 分，且最难的问题上提升最大；文件生成上 docx +8.4%、pptx +10.1%。客户侧案例——Harvey 用 dreaming 让 agent 跨 session 记住学到的东西（包括文件类型的 workaround），测试里完成率涨了约 6 倍；Wisedocs 用 outcomes 做文档质检，review 快了 50%。这些是厂商给的测试口径，适合当上限信号而非保证。",
+        "多智能体编排的形态是：一个 lead agent 拆活、把每块分给带自己模型/prompt/工具的 specialist，在共享文件系统上并行，事件持久化所以 lead 能中途回查谁做了什么。Spiral（Every 旗下）的配法有参考价值——lead agent 跑在 Haiku 上接需求、必要时追问，把起草丢给跑在 Opus 上的 subagent，要多份草稿时并行跑，再用 outcomes 按 Every 的编辑原则和用户语气打分，只放过过线的草稿。对正在搭 agent 系统的人，这是一套「便宜模型做调度、贵模型做重活、再加一层 rubric 把关」的现成模板，可以照着评估自己的 harness 要不要拆成主从分工。"
+      ],
+      "creator": "Claude Blog",
+      "role": "Anthropic 官方博客",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "New in Claude Managed Agents", "url": "https://claude.com/blog/new-in-claude-managed-agents" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "每次读到「今天很艰难，我们决定裁掉 1000+ 人，业务从未如此强劲，但 AI 改变了我们的工作方式」这种公告，我都会在心里翻译成实际发生的事：「我们在零利率时代过度招聘、现在需要砍成本，而 AI 是个好甩锅的对象。」Q1 有超过 80,000 名科技员工被裁，是 2022-23 年以来最高。这是我吐槽这些裁员为什么一再发生、以及员工能用哪 6 种方式把主动权拿回来的一篇文章。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2054569893060809151"
+    },
+    {
+      "quote": "如果你需要一个信号来确认 VC 已经彻底变成了「共识资本」，那这就是了。如果你只是为了当创始人而当创始人，这会让你很有共鸣，因为你需要资本来跑业务。但如果你是真的着迷、不在乎世界怎么看，你会把每一次拒绝当成可能的学习——而不是一份「你不该创这家公司」的判决书。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2054599845214650442"
+    }
+  ]
+}

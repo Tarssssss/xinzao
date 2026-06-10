@@ -1,0 +1,114 @@
+{
+  "date": "2026-05-25",
+  "generatedAt": "2026-05-25T07:55:59.650Z",
+  "stories": [
+    {
+      "slug": "2026-05-25-levie-ceo-ai-psychosis",
+      "title": "Aaron Levie:CEO 最容易对 AI 产生错觉,因为他们离最后一公里的真实工作太远",
+      "summary": "Box CEO 提出一个反直觉判断:正因为 CEO 远离落地环节,他们玩 AI 时只看到 happy path,低估了 agent 产出到可用之间那十几二十步收尾。他给出的解法不是少碰,而是大量用 AI,亲自踩一遍坑。对正在给公司定 AI 方向的管理者有用。",
+      "content": [
+        "Levie 的机制点在于把「错觉」归因到岗位距离,而不是认知能力。CEO 的日常本来就被组织隔在交付的最后一公里之外,所以当他们自己上手玩 AI,看到的是被裁剪过的成功路径——很难自动想到产出之后还要发生的十几二十件事,而正是这些事决定了 agent 能不能稳定产生价值。",
+        "他用两个例子把这层落差具体化:做出一个很酷的产品原型,但你没经历过上线前审代码、修一堆问题的环节;生成了一份合同,但你没逐条核对条款、也没把过往合同接进来一起跑。两个场景的共同点都是「演示成立」和「生产可用」之间隔着大量收尾工作。",
+        "他的结论不是让 CEO 远离 AI,反而是大量地用,以此摸清 agent 在企业里的真实含义,最后同时建立起对上限和对落地工作量的认识。这条来自 Box 内部、长期卖企业 AI 的立场,本身就偏向「企业落地没那么简单」的叙事;但他描述的 happy-path 盲区是可核验的——给公司定 AI 目标前,可以照他说的先亲手把一条完整链路从原型走到生产跑一遍。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO @ Box",
+      "engagement": "4865 likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2058582370253701432" }
+      ]
+    },
+    {
+      "slug": "2026-05-25-madhu-guru-vague-ai-mandates",
+      "title": "Madhu Guru:CEO 出于 FOMO 下达模糊的 AI 指令,换来的是员工的表演式 demo",
+      "summary": "Google 产品负责人描述一条组织失败链:习惯了远距离管理的 CEO 缺乏亲自上手 AI 的肌肉,于是下达笼统指令,员工用低投入的演示去应付,两年过去毫无实质进展,而上手做事的创业公司正在颠覆你。对推动公司 AI 转型的管理者有参照价值。",
+      "content": [
+        "这条的机制在于把「指令的粗糙」直接连到「产出的表演化」。Guru 的观察是,很多 CEO 和他们的副手长期习惯了 arms-length 的远距离领导,没有亲自上手 AI 的肌肉,所以只能定出大而空的目标;目标越笼统,员工越容易用低投入、好看的 demo 来对付,而不是真去解决问题。",
+        "他把这条链一直推到后果:这样过了两年,公司没有真实进展,而一家由亲自上手的领导带队的创业公司正在颠覆你。这条与同日 Aaron Levie 的「CEO 容易对 AI 产生错觉」是一组——Levie 讲个人认知的盲区,Guru 讲这种盲区在组织层面如何放大成两年空转,Guru 这条正是引用 Levie 那条发出的。"
+      ],
+      "creator": "Madhu Guru",
+      "role": "Product Leader @ Google (Gemini, Veo, Nano Banana)",
+      "engagement": "23 likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/realmadhuguru/status/2058591611245011157" }
+      ]
+    },
+    {
+      "slug": "2026-05-25-ryan-carson-solo-founder-agents",
+      "title": "Ryan Carson(经 Peter Yang 转述):拿了 200 万美元种子轮,但短期内不打算招人,改用 AI agent 当团队",
+      "summary": "在 Peter Yang 播客里,Ryan Carson 分享了单人加 AI agent 跑创业公司的做法:用 OpenClaw 当 AI 幕僚长处理邮件和销售,用 Codex、Devin 当工程团队在他睡觉时发版。他强调前期把 skills 和文档搭好,等于解锁十个人的产能。对想用 agent 替代早期招聘的创始人有参照。",
+      "content": [
+        "Carson 把传统创业建议反过来用:过去说先做 MVP,他主张先搭出「能造 MVP 的系统」。这背后是一个关于 onboarding 成本的判断——他说创始人应该先理解并亲自做每一份工作、感受过其中的痛,再去招人;而 agent 比人更快上手,且会留住所有训练成果,可以随时间持续改进它。",
+        "落到具体配置:OpenClaw 做 AI 幕僚长,负责筛邮件、订会议、做销售外联;Codex 和 Devin 当工程团队,在他睡觉时发功能。他给出的几条操作建议很具体——前期花大量时间搭好 skills 和文档,把 agent 当真正的员工对待、给它独立邮箱、日历和 GitHub 账号;设计和品牌则先花钱请设计师搭好一套体系,之后再用 AI 按这套体系生成素材。",
+        "这条原话来自一位正在这么干的创始人,带有「我的打法行得通」的自我推介成分;可以核验的是他的具体配置和分工方式。顺着他的逻辑,把 agent 当员工管理(独立账号、前期文档投入)是这套打法能不能复制的关键变量,想试的人可以从这两点先验证。"
+      ],
+      "creator": "Ryan Carson (via Peter Yang)",
+      "role": "经 Peter Yang(Product @ Roblox)转述",
+      "engagement": "164 likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/petergyang/status/2058555226479866312" },
+        { "label": "Ryan 谈 onboarding agent", "url": "https://x.com/petergyang/status/2058609058714968194" }
+      ]
+    },
+    {
+      "slug": "2026-05-25-nikunj-reverse-engineer-apis-claude-code",
+      "title": "Nikunj Kothari:用 Claude Code 嗅探网络请求来逆向 API,是自动化任务里最好玩的一类活",
+      "summary": "FPV 投资人分享一套具体工作流:很多网站没法靠 DOM 或截图稳定操作,他让 Claude Code 配合 browser_harness 或 playwright 抓网络请求,自己点几下要的数据,模型就能从日志里推出 API 结构、鉴权方式和速率限制。他还预测网站很快都得 headless,并需要类似 llms.txt 的 tools.txt。对做爬取、监控类小项目的人有用。",
+      "content": [
+        "这条的可操作性在于它给出了一条绕开「确定性操作」难题的路径。Kothari 的出发点是:大量网站无法通过 DOM 或截图被稳定地自动化,所以与其硬抠界面,不如直接看底层流量。具体做法是把 Claude Code 指向 browser_harness(来自 browser_use)或原生 playwright 去嗅探页面的网络请求,他本人只负责在想要的数据区域反复点击。",
+        "之后模型一般能从日志里推断出这些 API 的正确结构、需要哪种鉴权(他说多数是基于 cookie 的),速率限制则靠试错来确定;最终他用这些构造出可编程拉取数据的任务。他列举的用途不止爬取:还包括做监控网站获取情报、travel CLI 这类随手做的小项目等。",
+        "他顺着这个方向做了一个预测:每个网站很快都将需要 headless 化,届时还得解决 agent 如何以编程方式向这些网站付费;并类比 llms.txt 提出可能需要一个 tools.txt,让 agent 判断有哪些可被调用的工具。这部分是他对趋势的推断,不是已发生的事实,但前半段的抓包逆向工作流可以直接照着复现。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "Partner @ FPV Ventures",
+      "engagement": "57 likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/nikunj/status/2058783316753686558" }
+      ]
+    },
+    {
+      "slug": "2026-05-25-thariq-legacy-codebases-distillation",
+      "title": "Thariq:从 Bun 重写里得到的主要启发是,遗留代码库会成为「蒸馏」成新形态代码的宝贵来源",
+      "summary": "Anthropic Claude Code 团队的 Thariq 认为,看完 Bun 的重写,遗留代码库的价值在于可以被模型「蒸馏」进新形态:每个游戏都该跨平台,所有遗留软件都该能跑在 web 上,不再需要 COBOL。他明确加了对冲——模型现在还没到这一步,Bun 极易验证、测试覆盖极好,但他认为它们会到。对思考代码迁移和遗留资产价值的人有参照。",
+      "content": [
+        "Thariq 这条把遗留代码库重新定位成一种原料:它的价值不在继续运行,而在于作为「蒸馏」的来源,被转写成新的形态。由此他列了几个方向——每个游戏都该是跨平台的,所有遗留软件都该能在 web 上跑,我们不再需要 COBOL。",
+        "他对当前能力做了明确对冲,值得原样保留:他不认为模型现在已经到位,并点出 Bun 的特殊性在于它极易验证、有极好的测试覆盖,正是这两点让这次重写成立;他只是判断模型会到那一步,而非已经到。把这条当作趋势判断而非现状描述来读更准确。"
+      ],
+      "creator": "Thariq",
+      "role": "Claude Code @ Anthropic",
+      "engagement": "1413 likes",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/trq212/status/2058576195000660319" },
+        { "label": "补充:模型还没到位", "url": "https://x.com/trq212/status/2058576196481200223" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "如今的破局点是高能动性加好品味(high agency high taste)。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2058769355916411099"
+    },
+    {
+      "quote": "碰到一位原本做工程经理的朋友,她刚主动转回了 IC,从未这么开心过,因为终于能重新亲手做东西了。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2058640897236140034"
+    },
+    {
+      "quote": "AGI 已经到了吗?「我觉得如果把现在的模型冻住,认真打磨 harness,也许再多花点时间配着一套好的 harness 去训练,人们真的会在每一个领域都感受到 AGI。」——OpenAI 的 Yann Dubois。",
+      "creator": "Matt Turck",
+      "handle": "mattturck",
+      "sourceType": "x",
+      "url": "https://x.com/mattturck/status/2058659995311358332"
+    }
+  ]
+}

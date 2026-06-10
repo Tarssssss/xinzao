@@ -1,0 +1,81 @@
+{
+  "date": "2026-05-09",
+  "generatedAt": "2026-05-09T08:12:14.479Z",
+  "stories": [
+    {
+      "slug": "2026-05-09-anthropic-platform-harness-model-pairing",
+      "title": "Anthropic 平台团队:通用 harness 热插拔模型的时代正在过去,harness 和模型越来越要绑在一起",
+      "summary": "Claude 平台负责人 Angela、Caitlin 在 Every 播客的一手判断:下一代模型各家训练路径分化,过去那种「写个超通用 harness、底下随便换模型」的做法不再划算,真正该热插拔的单位是「harness + 模型」整体。属 Anthropic 内部视角,在做多模型架构选型的人值得对照。",
+      "content": [
+        "他们给出的机制是模型的「路径依赖」:你让模型用文件系统还是别的方式、怎么调工具,这些早期看似不起眼的选择会改变模型后续被优化的方向,最终把模型锁进某些它特别擅长的车道。Anthropic 自己做 managed agents 的 memory 功能时,试了多个 harness,同一套 eval 下表现差异很大——这说明把 harness 工程做对能「爬坡」爬出很多收益,而不同模型对 harness 的反应已经不通用。",
+        "顺着这个逻辑,Caitlin 提出一个反直觉的观察:大多数人以为难的是 harness engineering,真正撞墙的地方其实是基础设施——原型跑得飞快,可一旦要上生产、扩规模,就会碰到要常驻服务器、要安全沙箱、要存 transcript、沙箱一断整个 agent 就死这类问题。她说这正是 Anthropic 把内部反复造过的那套东西做成 managed agents 的原因。这是内部人推销自家产品,立场上自然偏向「用我们的平台省掉这层」;可以核验的是「基础设施才是扩规模的墙」这个描述,自己在把 agent 搬上生产时验证一下是不是同一个痛点。",
+        "对谈里还有两个对 builder 有用的具体点。一是落地形态:他们反复举的例子是「legal 审 marketing 文案」这种薄薄一层 app——agent 先过一遍再丢进法务收件箱,关键是要 human in the loop,所以它不能只是一个 skill,得能拉起独立 session、让多人协作。二是 agent 的「保鲜」:他们承认 agent 很快会过时(没人管、跑着旧模型),已经在做帮你「换新模型」的 skill,而 Dan Shipper 提到自己团队的运营经验是「没有一个具体的人负责的 agent 会迅速变成死物」。",
+        "对未来的设想是 hedge 过的:Angela 希望平台最终压缩到只剩「目标 + 预算」两个参数,Claude 好到能理解自己、自动选模型、自动拉起 sub-agent,从而不太需要再做 harness engineering 和 prompt engineering。她明确说不确定一年内能不能到,可能只能先做到「目标」那部分、预算上还带误差。这是方向性的愿景而非路线承诺,听的时候按愿景对待。"
+      ],
+      "creator": "Angela & Caitlin(Anthropic Claude 平台团队)/ Dan Shipper",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "AI & I by Every:The Secrets of Claude's Platform From the Team Who Built It", "url": "https://www.youtube.com/watch?v=lLypHkIVLqc" }
+      ]
+    },
+    {
+      "slug": "2026-05-09-levie-token-budgeting-enterprise",
+      "title": "Aaron Levie:随长任务 agent 普及,token 预算正成为大企业的资源分配新议题",
+      "summary": "Box CEO 的观察:agent 能跑越来越多长任务、吃越来越多算力,大企业开始像管人才、营销预算一样把 token 在各团队间分配。他判断这块支出会溢出 IT 预算、落到各业务线,且现有可见性和管控不足,可能是一个独立的创业机会。在做企业 AI 预算或工具的人可参考。",
+      "content": [
+        "他点出的核心机制是可见性缺口:在大公司规模下,数据和「agent 到底在干哪些数字化工作」之间隔着层层抽象,没有一个中心化的视角能看清。后果是团队和业务负责人迟早要被分到 token 预算,但他们目前连足够的可见性和管控手段都没有——Levie 据此说「光为解决这个问题就需要一整套新软件」。",
+        "他给的可操作含义是预算归属会迁移:agent 支出会越来越多地溢出 IT 预算的范围,像其他开销一样进到各业务线/部门预算里。配套的风险是误配——他举的场景是月度预算可能被烧在相对低价值的任务上,等真正高价值的任务来了反而被卡住,所以 token 需要被「极其精细地管理」。",
+        "需要做立场校准:Levie 是 Box CEO,Box 主打企业内容与 AI,他描绘「需要全新软件来管 token 分配」对自家定位有利,且这是对趋势的判断而非已发生的事实(他自己加了「尤其在我们还受算力约束时」这个前提)。可核验的是「token 预算成为企业议题」这个现象本身,在自己公司里看一看 agent 算力是否已经开始需要跨团队分配。"
+      ],
+      "creator": "Aaron Levie(@levie)",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 ↗", "url": "https://x.com/levie/status/2052903105256382679" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "给 Codex 的 skill 越多,你要写的 prompt 就越少。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2052971550966440251"
+    },
+    {
+      "quote": "HTML 是新的 markdown。我几乎已经不再写 markdown 文件,改成用 Claude Code 帮我生成 HTML。原因就在这里。",
+      "creator": "Thariq",
+      "handle": "trq212",
+      "sourceType": "x",
+      "url": "https://x.com/trq212/status/2052811606032269638"
+    },
+    {
+      "quote": "用 OpenAI 的 realtime 2 API 做了个「YouTube 实时副驾」浏览器扩展:agent 和你一起看视频,你可以随时用实时语音问它刚才讲了什么。最离谱的是它能区分 YouTube 的音频流和你的声音,所以不会把视频内容当成指令,你不问它就一直保持安静。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2052977849267892339"
+    },
+    {
+      "quote": "我越想 AI agent 的定价,就越不觉得它会纯按用量来收费。token 成本当然重要,但企业级 agent 可能需要身份、角色、鉴权、预算、审计日志等等。这听起来反而有点像按席位收费?只是不是按人头的那种席位。",
+      "creator": "Matt Turck",
+      "handle": "mattturck",
+      "sourceType": "x",
+      "url": "https://x.com/mattturck/status/2052839798063112303"
+    },
+    {
+      "quote": "正在下载……据说在一台 128GB 的 MacBook Pro 上,就能跑出带 1M token 上下文窗口、还能实际可用的 coding agent 能力,太离谱了。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2052996691586932783"
+    },
+    {
+      "quote": "对齐研究往往不得不聚焦于避免那些令人担忧的行为,但我觉得这类训练也有一个正向的愿景:我们能给模型一个诚实而正向的图景,说清楚 AI 模型可以成为什么、以及为什么。我对这项工作的未来感到兴奋。",
+      "creator": "Amanda Askell",
+      "handle": "AmandaAskell",
+      "sourceType": "x",
+      "url": "https://x.com/AmandaAskell/status/2052928572810256748"
+    }
+  ]
+}

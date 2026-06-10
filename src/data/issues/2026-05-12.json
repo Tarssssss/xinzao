@@ -1,0 +1,70 @@
+{
+  "date": "2026-05-12",
+  "generatedAt": "2026-05-12T09:13:04.393Z",
+  "stories": [
+    {
+      "slug": "2026-05-12-long-lake-ai-take-private-amex-gbt",
+      "title": "Long Lake 用 63 亿美元收购 Amex GBT，押注买下传统服务公司再用 AI 改造的模式",
+      "summary": "Long Lake CEO Taubman 讲清这套 AI roll-up 的核心逻辑：直接买下公司而不是卖软件，因为只有拥有公司才能推动 AI 落地最难的那一步——变更管理。重度关注 AI 商业化路径的人值得点开看完整机制。",
+      "content": [
+        "Taubman 把这套模式直接收购、而非卖软件的原因讲得很具体：AI 在传统服务业落地最难的不是模型，而是变更管理——改流程、改组织设计。卖软件的供应商管不到买方的业务结果，也就没法推动这些改动；只有直接拥有公司、拥有客户关系，才能真正把 AI 嵌进工作流。这是整套打法的根，也是它和传统 SaaS 路径的根本分野。",
+        "支撑机制是一个叫 Nexus 的横向平台，约 80% 基础设施在各垂直行业间复用，剩下的是把工作流映射、数据源清洗整合后接到模型上（平台对模型保持中立）。Taubman 称早期第一批收购要花一年多才能看到 AI 带来的业务结果，现在合作后几天内就能部署见效。他给的业绩口径是：被投公司原本年增长 0-5%，现在有机增长 20% 以上，且是 HOA 行业增长最快的公司。这些是创始人自述数据，非独立核验。",
+        "他反复强调取向是增长而非降本：把现有团队效率提升 30-40% 后，每个员工能服务更多客户，公司就从高边际人力成本的劳动密集型，变成像软件公司一样高增量利润率地扩张。同时形成一道人才护城河——员工离开 Long Lake 去竞对就得重新干那些被 AI 接走的杂活，于是留存率很高。这是立场偏多的一方自述，可核验的是行为描述（部署速度、增长口径），值得对照其他 AI roll-up 案例验证。",
+        "顺着这个逻辑，他给的市场判断是 AI 在真实企业用例里只渗透了约 1%，99% 的美国企业是拿不到大公司资源的小企业；对想做 AI 商业化的人，含义可能是真正稀缺的能力是把私募收购、AI 工程、变更管理三种能力捏到一支团队里——这三种能力的组合由主持人点出，Taubman 自己把赢下竞标归因于长期资本加上能第一天就部署的 AI 平台。"
+      ],
+      "creator": "Alexander Taubman",
+      "role": "Long Lake 联合创始人兼 CEO",
+      "sourceType": "podcast",
+      "engagement": "",
+      "sourceLinks": [
+        {
+          "label": "No Priors 播客",
+          "url": "https://www.youtube.com/watch?v=g5TWnUjbeFM"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-12-karpathy-vision-as-ai-output-html",
+      "title": "Karpathy 判断视觉是 AI 的首选输出形态，建议现在就让模型把回答结构化成 HTML",
+      "summary": "Karpathy 给出一个关于人机交互形态演进的判断：音频是人给 AI 的首选输入，视觉是 AI 给人的首选输出，输出格式正从 markdown 往 HTML 迁移。给想优化 AI 交互体验的人一个能立刻试的具体动作。",
+      "content": [
+        "Karpathy 的论据是大脑分工：约三分之一的脑区是专门处理视觉的大规模并行处理器，是信息进脑的十车道高速路，所以随 AI 变强，输出形态会顺着这条带宽往上走。他给的进阶序列是：纯文本（读起来费劲）→ markdown（当前默认）→ HTML（仍是带底层代码的过程式产物，但在图形、排版乃至交互上灵活得多，他认为这是正在形成的新默认）→ 更远处是直接由扩散神经网络生成的交互式视频 / 模拟。",
+        "可立刻操作的一招：在 query 结尾让 LLM 把回答结构化成 HTML，再在浏览器里打开生成的文件；他说也试过让模型把输出做成幻灯片等形式。注意他对终局是带 hedge 的——直接生成交互视频的技术目前还不存在，怎么把 Software 1.0 那种精确过程式产物和扩散网络的神经产物编织到一起仍有很多开放问题。",
+        "他同时点出输入端也有待补：音频、文本、视频单独都不够，比如他需要对着屏幕指点、做手势，就像有人坐在你电脑旁时会做的那些动作。他的总体判断是人机之间的输入输出磨合还远没到上 Neuralink 那类脑机接口的阶段，眼下值得探索的就是这些更朴素的形态。"
+      ],
+      "creator": "Andrej Karpathy",
+      "role": "前 Tesla AI 总监、OpenAI 创始团队成员",
+      "sourceType": "x",
+      "engagement": "13K likes",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/karpathy/status/2053872850101285137"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "运行 claude agents 就能在终端里得到一个控制平面；之后在任何 CLI 会话里按返回键就能把它注册进去。我个人喜欢从代码根目录运行 claude agents，把所有 Claude Code agent 统一管理。",
+      "creator": "Cat Wu",
+      "handle": "_catwu",
+      "sourceType": "x",
+      "url": "https://x.com/_catwu/status/2053999857799672111"
+    },
+    {
+      "quote": "用现在年轻人的说法，这叫 Thinking Machines 把 GDM 和 OpenAI 狠狠地比下去了。基本上所有人对实时的定义都被大幅升级了。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2053960011748098462"
+    },
+    {
+      "quote": "现在你可以听我和 Joe 把 Claude 的宪法当有声书读出来了。正在加上倍速收听的选项。",
+      "creator": "Amanda Askell",
+      "handle": "AmandaAskell",
+      "sourceType": "x",
+      "url": "https://x.com/AmandaAskell/status/2054010971765805486"
+    }
+  ]
+}

@@ -15,9 +15,18 @@
       "role": "Anthropic 官方账号",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @claudeai（Blender connector）", "url": "https://x.com/claudeai/status/2049143438281445811" },
-        { "label": "原推 @claudeai（Autodesk Fusion）", "url": "https://x.com/claudeai/status/2049143440508616863" },
-        { "label": "原推 @claudeai（更多 connector 与 Blender 基金）", "url": "https://x.com/claudeai/status/2049143442601546054" }
+        {
+          "label": "原推 @claudeai（Blender connector）",
+          "url": "https://x.com/claudeai/status/2049143438281445811"
+        },
+        {
+          "label": "原推 @claudeai（Autodesk Fusion）",
+          "url": "https://x.com/claudeai/status/2049143440508616863"
+        },
+        {
+          "label": "原推 @claudeai（更多 connector 与 Blender 基金）",
+          "url": "https://x.com/claudeai/status/2049143442601546054"
+        }
       ],
       "engagement": "34.3K likes"
     },
@@ -33,8 +42,14 @@
       "creator": "Peter Steinberger",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @steipete（流水线全貌）", "url": "https://x.com/steipete/status/2049356949523730699" },
-        { "label": "原推 @steipete（十分钟抓到 bug）", "url": "https://x.com/steipete/status/2049290741013262522" }
+        {
+          "label": "原推 @steipete（流水线全貌）",
+          "url": "https://x.com/steipete/status/2049356949523730699"
+        },
+        {
+          "label": "原推 @steipete（十分钟抓到 bug）",
+          "url": "https://x.com/steipete/status/2049290741013262522"
+        }
       ],
       "engagement": "269 likes"
     },
@@ -51,8 +66,14 @@
       "role": "Every CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @danshipper（在 codex 里用 PostHog）", "url": "https://x.com/danshipper/status/2049236793761976357" },
-        { "label": "原推 @danshipper（codex-native 概念）", "url": "https://x.com/danshipper/status/2049223933766041688" }
+        {
+          "label": "原推 @danshipper（在 codex 里用 PostHog）",
+          "url": "https://x.com/danshipper/status/2049236793761976357"
+        },
+        {
+          "label": "原推 @danshipper（codex-native 概念）",
+          "url": "https://x.com/danshipper/status/2049223933766041688"
+        }
       ],
       "engagement": "184 likes"
     },
@@ -70,8 +91,14 @@
       "role": "Box CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @levie（100 倍软件与技术杠杆）", "url": "https://x.com/levie/status/2049333853777764495" },
-        { "label": "原推 @levie（维护税与边界）", "url": "https://x.com/levie/status/2049163935182733396" }
+        {
+          "label": "原推 @levie（100 倍软件与技术杠杆）",
+          "url": "https://x.com/levie/status/2049333853777764495"
+        },
+        {
+          "label": "原推 @levie（维护税与边界）",
+          "url": "https://x.com/levie/status/2049163935182733396"
+        }
       ],
       "engagement": "419 likes"
     },
@@ -88,9 +115,18 @@
       "role": "Anthropic Claude Code 团队",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @trq212（征集白鲸 bug）", "url": "https://x.com/trq212/status/2049234228290961690" },
-        { "label": "原推 @trq212（无闪烁渲染器）", "url": "https://x.com/trq212/status/2049234229926695188" },
-        { "label": "原推 @trq212（大文件写入假死）", "url": "https://x.com/trq212/status/2049252080892973563" }
+        {
+          "label": "原推 @trq212（征集白鲸 bug）",
+          "url": "https://x.com/trq212/status/2049234228290961690"
+        },
+        {
+          "label": "原推 @trq212（无闪烁渲染器）",
+          "url": "https://x.com/trq212/status/2049234229926695188"
+        },
+        {
+          "label": "原推 @trq212（大文件写入假死）",
+          "url": "https://x.com/trq212/status/2049252080892973563"
+        }
       ],
       "engagement": "1,038 likes"
     },
@@ -107,7 +143,10 @@
       "role": "Replit CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @amasad", "url": "https://x.com/amasad/status/2049242460078100638" }
+        {
+          "label": "原推 @amasad",
+          "url": "https://x.com/amasad/status/2049242460078100638"
+        }
       ],
       "engagement": "1,159 likes"
     },
@@ -123,41 +162,28 @@
       "role": "Vercel CEO",
       "sourceType": "x",
       "sourceLinks": [
-        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2049216048831025232" }
+        {
+          "label": "原推 @rauchg",
+          "url": "https://x.com/rauchg/status/2049216048831025232"
+        }
       ],
       "engagement": "1,025 likes"
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "别让 AI 生成图片，让它生成 SVG！矢量插图能无缝融入设计风格，是 HTML 幻灯片的完美补充（这里我在 AnyGen 的 Frontend Slides 功能里用了 Quiver 的 API）。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2049258231042805806"
     },
     {
-      "slug": "2026-04-29-svg-over-images",
-      "title": "Zara Zhang：HTML 幻灯片的插图让 AI 生成 SVG，比位图更容易融入整体设计",
-      "summary": "做 HTML 幻灯片配图，与其让 AI 生成位图，不如让它生成 SVG 矢量插图——矢量图能无缝融入页面的设计风格。她的具体用法是在 AnyGen 的 Frontend Slides 里调 Quiver 的 API。用 AI 做幻灯片或网页排版的人可以直接试这个组合。",
-      "content": [
-        "她的建议是：HTML 幻灯片的插图不要让 AI 生成位图，改成生成 SVG 矢量插图——矢量图能无缝融入页面的整体设计风格，她称之为 HTML 幻灯片的理想补充。",
-        "她的具体配置是在 AnyGen 的 Frontend Slides 功能里调用 Quiver 的 API。顺着这个思路解释一层：SVG 以代码形式生成，配色、线条理论上能和页面共用同一套设计语言，这可能就是“融入感”的来源——这层解释是编辑推断，原帖只给了结论和效果图。做 AI 幻灯片的人可以直接试这个组合。"
-      ],
+      "quote": "对这个很感兴趣。我以前做带 GUI 的 web 应用，现在直接分享带代码的 GitHub 仓库，大家可以按自己喜欢的方式定制 UI。有点像 Karpathy 的“idea file”：只要把想法写下来，别人的 agent 就能以定制化的方式替他们实现。",
       "creator": "Zara Zhang",
-      "role": "Builder",
+      "handle": "zarazhangrui",
       "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2049258231042805806" }
-      ],
-      "engagement": "120 likes"
-    },
-    {
-      "slug": "2026-04-29-share-repos-not-apps",
-      "title": "Zara Zhang 不再做带界面的 web 应用，改成分享仓库让用户的 agent 自己定制 UI",
-      "summary": "她描述自己分发方式的变化：以前做带 GUI 的 web 应用，现在直接分享 GitHub 仓库，拿到的人让自己的 agent 按需定制 UI。她类比 Karpathy 的“idea file”——写下想法，别人的 agent 替他们实现。做小工具的独立开发者可以重新考虑分发形态。",
-      "content": [
-        "这是她转评一条相关讨论时的自述：以前做带 GUI 的 web 应用，现在直接分享带代码的 GitHub 仓库，拿到的人想要什么界面，让自己的 agent 去定制。她类比 Karpathy 的“idea file”——把想法写下来，别人的 agent 就能以定制化的方式替他们实现。",
-        "顺着这个逻辑，当目标用户人手一个 coding agent 时，产品的最小分发形态可以是一个结构清晰的仓库加说明文档，UI 退到用户侧。边界也明显：这只适用于用户自己在跑 agent 的圈子，面向普通消费者的产品不在此列——这条边界是编辑补充。"
-      ],
-      "creator": "Zara Zhang",
-      "role": "Builder",
-      "sourceType": "x",
-      "sourceLinks": [
-        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2049186121314415054" }
-      ],
-      "engagement": "94 likes"
+      "url": "https://x.com/zarazhangrui/status/2049186121314415054"
     }
   ]
 }

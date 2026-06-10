@@ -1,0 +1,115 @@
+{
+  "date": "2026-05-26",
+  "generatedAt": "2026-05-26T07:32:02.973Z",
+  "stories": [
+    {
+      "slug": "2026-05-26-garry-tan-skill-file-evals",
+      "title": "Garry Tan 给出用 LLM 做评委、把 skill file 调好后固化的迭代法",
+      "summary": "Garry Tan 描述了一套让 agent 自我打分的迭代流程：让它用三个不同前沿模型审 skill file 调用代码的输入输出、按有效性打分并追问为什么不是满分。配上 evals 和单测后，他说改进会一直保持。想系统性提升 agent 产出质量的人值得照做一遍。",
+      "content": [
+        "这套方法的核心是把「评委」这一角色交给模型自己，而且要换多个模型来审。具体做法是直接告诉 agent：结合此前讨论过的目标、原因和已经发生的情况，用三个不同前沿模型去看它那段 skill file 调用代码的输入与输出，按有效性打分，再追问「为什么不是 10 分、怎么改才能到」。Garry Tan 说这样跑几轮，提升速度会快到让人意外。",
+        "他强调的另一半是固化：因为评分逻辑被写进 skill file 加代码，再配上 evals（LLM 做评委）和单元测试，改进会一直保持下去。顺着这个逻辑，这套做法的价值不只在一次性调好一个 skill，而在于把「调好」这件事变成可重复、可回归的资产——如果 evals 和单测确实覆盖到位，后续改动就不容易把已经调好的效果改坏。",
+        "这是来自 YC 总裁的一手实践描述，可核验的部分是流程本身：多模型交叉打分、追问满分差距、再把评分固化成 evals。正在搭 skill file 工作流的人可以照这个步骤验证一遍，看自我打分加多模型交叉是否真的比单轮人工评审收敛得更快。"
+      ],
+      "creator": "Garry Tan",
+      "role": "President & CEO @ Y Combinator",
+      "sourceType": "x",
+      "engagement": "26 likes",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/garrytan/status/2059148823403082154"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-26-ryan-carson-systems-first-reversal",
+      "title": "Ryan Carson：过去「先出 MVP、别搭系统」的建议在 AI agent 下反过来了",
+      "summary": "Peter Yang 转述 Ryan Carson 的一手经验：以前做 MVP 的铁律是别花时间搭系统，现在彻底反转——要先把文档和系统搭好，做成带 skill file 的 cron job，才能高效交付。Ryan 称这能让一个人干十个人的活。在用 agent 提速、还在沿用旧 MVP 心法的 builder 值得重看自己的流程。",
+      "content": [
+        "反转的机制在于交付方式变了。过去搭系统在 MVP 阶段像是拖延，因为人力有限、系统的回报要很久才显现；但当 agent 来执行时，前期投入的文档和系统直接决定了 agent 能不能跑得动、跑得对。Ryan Carson 的原话是「我们过去说做 MVP 就做到能出货的最低限度，别在系统上花时间，现在完全反过来了」。",
+        "他给的具体路径是：花大量时间把文档建好，再把这些建进一个带 skill file 的 cron job，然后「突然之间你就在做十个人的活」。这条「一个人干十个人活」是他本人的说法，属于运营者的自我评估，量级未必能照搬，但方向上指出了投入重心从写功能前移到了搭系统和文档。",
+        "这是 Peter Yang 在追问 Ryan「怎么做到一天交 10 个 PR」时得到的回答。还在用「先出最小可用、系统以后再说」节奏的人，可以对照检查：现在限制产出的到底是功能开发速度，还是 agent 可依赖的文档和自动化底座没搭起来。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Product @ Roblox",
+      "sourceType": "x",
+      "engagement": "32 likes",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/petergyang/status/2059029752858775581"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-26-levie-goldman-ceo-ai-jobs",
+      "title": "Aaron Levie 借高盛 CEO 的论点反驳 AI 抢工作：需求会随产能一起涨",
+      "summary": "Aaron Levie 认同高盛 CEO 对 AI 抢工作悲观论的反驳：历史上效率大涨从没让工作消失，因为人会不断要求更多——一旦有玩家用自动化做得更多，就抬高了所有人的预期，不跟进的就没法竞争。结论是把世界看成静态才会误判。关心 AI 与就业的人可作为乐观侧的论证样本。",
+      "content": [
+        "论证的关键不在「效率提高」本身，而在需求的反应方式。Levie 引用的论点是：面对自动化，市场不会满足于「同样的东西更便宜」，而是会期待整个产品或服务做得更多；只要有玩家选择用自动化多做一些，就会抬高所有人的预期，不响应的玩家就失去竞争力。换句话说，省下来的产能被重新投入到更高的标准，而不是用来裁掉岗位。",
+        "他列了一串具体的「要更多」：分析师给出更多财务分析、更全面的法律意见、更定制的金融产品、过去以为没法自动化的细分领域里更好的软件、医疗方提供更多检查和更深入的建议。这些例子支撑的是「期望水涨船高」这一条，而不是「岗位总数一定不变」——原文给的是机制方向，没有给出岗位数量的预测。",
+        "需要注意立场：这是高盛 CEO 的论点，经 Box CEO Levie 转述并认同，两位都站在偏乐观一侧。可核验的部分是那条历史类比和需求机制——几十年来效率已经大涨，工作并没有消失。把它当成 AI 就业讨论里乐观侧的一个完整论证来看，而不是结论性判断。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO @ Box",
+      "sourceType": "x",
+      "engagement": "530 likes",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/levie/status/2059025559896883489"
+        }
+      ]
+    },
+    {
+      "slug": "2026-05-26-steipete-token-efficient-skills",
+      "title": "Peter Steinberger 提醒写 skill 时让 agent 压缩描述、放松语法以省 context",
+      "summary": "Peter Steinberger 指出很多 skill 的描述写得像书，而这些内容会被加载进每一次 context。他建议写 skill 时直接让 agent 把描述写得 token 高效、放松语法，并放出了一个专门找最臃肿 skill 的检测工具。维护大量 skill、关心 context 占用的人值得排查一遍自己的 skill 描述。",
+      "content": [
+        "成本机制是这条提醒的要害：skill 的描述不是用到才读，而是每次都被装进 context，所以一段啰嗦的描述会持续地占用每一次调用的预算。Steinberger 的观察是太多 skill 在描述里「写了一整本书」，这些内容全程跟着上下文走。",
+        "他给的做法很直接：写 skill 时就让 agent 把内容写得 token 高效、可以放松语法（grammar）要求，优先压缩体积。配套地，他写了一个 skill 专门揪出占用最严重的那些。对在维护一堆自定义 skill 的人，可操作的一步是先用这类检测过一遍，看哪些描述明显超出了表达意图所需的长度，再让 agent 重写精简。"
+      ],
+      "creator": "Peter Steinberger",
+      "role": "OpenClaw / OpenAI",
+      "sourceType": "x",
+      "engagement": "3.9K likes",
+      "sourceLinks": [
+        {
+          "label": "原推",
+          "url": "https://x.com/steipete/status/2058917897590673525"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "Codex 很强，尤其让我印象深刻的是它会用浏览器测试自己做的东西。但任何设计或前端相关的任务，Claude 还是更胜一筹。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2059099566377693305"
+    },
+    {
+      "quote": "得把 tokenmaxxing 当成在自助餐厅吃蟹腿：自助餐（管够的 AI 套餐）不会永远存在，趁还能吃赶紧把蟹腿都吃了。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2059070818798465330"
+    },
+    {
+      "quote": "OpenClaw 的依赖清理还在继续。干掉了 Sharp 和 Jimp，换成 photon——一个跑编译后 Rust、做图像处理的小型 WebAssembly。2MB 对 140MB。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2058922222790525272"
+    },
+    {
+      "quote": "每周都有一堆人私信我：你不是 VC 吗，为什么还在写代码？兄弟，这个领域变得太快，唯一能学习、能待在前沿的办法就是自己动手做。先验每隔几个月就得重新想一遍。自动化别人，或者被自动化，这是我们都得学的苦涩教训。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2058927145519562867"
+    }
+  ]
+}

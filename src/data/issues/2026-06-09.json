@@ -1,0 +1,94 @@
+{
+  "date": "2026-06-09",
+  "generatedAt": "2026-06-09T07:33:17.959Z",
+  "stories": [
+    {
+      "slug": "2026-06-09-frontiercode-metr-benchmark",
+      "title": "Cognition 与 METR 发布 FrontierCode，Swyx 称 SWE-bench 超半数结果是不可合并的劣质代码",
+      "summary": "Swyx 公布 Cognition 与 METR 合作的新编码 benchmark：3000+ 条 rubric 覆盖代码质量与反作弊，最难档 Opus 4.8 仅得 13.8%。他还借历史回测把「2025 年 12 月那次 vibe shift」量化成了一个具体数字。关心 benchmark 是否还能区分前沿模型的人值得点开。",
+      "content": [
+        "这条的底层判断是现有 benchmark 已经测不出代码质量。Swyx 转述 METR 的发现：SWE-bench 里超过一半的结果是无法合并的劣质代码（unmergeable slop）。FrontierCode 的应对是用 3000+ 条 rubric 显式覆盖代码质量，以及困扰其他 benchmark 的反作弊和 reward hacking 问题，素材里说任务来自 1000+ 小时经维护者验证的工程工作。最难的 FC Diamond 难到 Opus 4.8 只拿到 13.8%。",
+        "Swyx 把编码 benchmark 划成三个时代：2021 年自动补全对应 HumanEval，2023 年通过测试对应 SWE-bench、TerminalBench，2026 年可维护代码对应 FrontierCode。他自己最看重的是一次对所有旧模型的历史回测：FC Extended 里最容易的三分之一任务在 2025 年下半年被迅速攻克，Opus 在 4 个月内通过率从 41% 翻到接近 74%。",
+        "他用这个数字去解释 dhh、Karpathy 等人讲过的「2025 年 12 月到底发生了什么」的体感转变，按他的说法，这等于把 2 次重试拿到 95% 成功率和 6 次重试的区别量化了出来——成功率到这个水平，才让 Geoffrey Huntley 的 ralph loop、Boris Cherny 的 /goals、Steipete 的「让 agent 自己循环 prompt」这类再上一层抽象的 agentic 做法变得可行，而不必太担心跑偏。对后续节奏他只给了 hedge：猜测每一档会依次饱和，希望大致一年一档（hopefully ~annually），并已让团队准备 FrontierCode 2027。",
+        "立场上 FrontierCode 是 Cognition 自家产品，Swyx 推它天然有动机，对「SWE-bench 过半是 slop」这种贬低现有标准的说法要留一份保留。可核验的部分是那些具体数字（Opus 4.8 在 Diamond 上 13.8%、Extended 易档 41%→74%）和 rubric 数量，可以等 benchmark 数据公开后对照。"
+      ],
+      "creator": "Swyx",
+      "role": "@cognition / @latentspacepod",
+      "sourceType": "x",
+      "engagement": "631 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/swyx/status/2064081945567580323" }
+      ]
+    },
+    {
+      "slug": "2026-06-09-levie-context-still-needed",
+      "title": "Aaron Levie：再强的模型也替代不了对它的引导，context 和专有数据始终要进上下文窗口",
+      "summary": "Box CEO 的论点：通用模型方向无穷，必须靠指令、领域 context 和专有数据约束方向才有用。由此他解释了为什么 AI 自动化不是免费的、为什么收益分布如此不均，以及为什么 applied AI 那层抽象会持续有价值。在判断模型能力提升会冲掉还是利好应用层的人值得点开。",
+      "content": [
+        "他的核心机制是：只要同一个模型同时被律师、工程师、金融分析师、医疗从业者使用，而你又想做任何有差异化或具体的事，那么指令、领域 context 和专有数据就始终需要进上下文窗口，模型才会有用。原因是通用模型的可能方向是无穷的，智能再强也不会自己知道你想去哪个方向。",
+        "顺着这个逻辑他给了两个推断：AI 自动化之所以不是免费的，是因为你得真的投入这部分引导工作，投入了才能在另一头拿到真实价值；当前谁从 AI 拿到最大收益、谁没拿到，差距宽就来自这里。",
+        "立场上这是 Box CEO 在讲 applied AI 的价值，对自家所在的应用层天然偏向。他的结论是任何能在原始智能之上、能让你更快上手（off to the races faster）的抽象层都会持续有价值。可核验的部分是那个机制本身——可以拿自己手上效果好和效果差的 AI 用例对照，看是不是差在有没有把领域 context 喂进去。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO @box",
+      "sourceType": "x",
+      "engagement": "216 likes",
+      "sourceLinks": [
+        { "label": "原推", "url": "https://x.com/levie/status/2064186766907887941" }
+      ]
+    },
+    {
+      "slug": "2026-06-09-claude-foundation-models-framework",
+      "title": "Claude 接入 Apple Foundation Models 框架，让设备端模型在需要复杂推理时交接给 Claude",
+      "summary": "Anthropic 发布一个 Swift 包，让开发者在 Apple 的 Foundation Models 框架里调用 Claude：设备端模型先用 @Generable 返回类型化 Swift 值，复杂多步推理、代码生成等再交接给 Claude，输入因此是干净的结构化数据而非原始文本。在 Apple 平台上做端云混合 AI 功能的开发者值得点开。",
+      "content": [
+        "这次接入的关键不在于多一个调用入口，而在于交接点的输入质量。因为 Apple 框架通过 @Generable 注解返回类型化的 Swift 值，开发者到了调用 Claude API 这一步拿到的是干净的结构化输入，而不是原始用户文本。设备端模型负责快、本地的任务（如摘要、抽取），需要多步推理、代码生成时再交给 Claude，对用户是一段连贯体验，每一步背后是合适的模型。Claude 这一侧还能联网取当前信息、执行代码做数据分析。",
+        "博客给的例子是这套「同一体验、分步选模型」的模式：日记应用在设备端生成每日 prompt，再让 Claude 在几个月的条目里找出线索；学习应用在设备端给出术语定义，学生追问「这对我们学过的其他东西为什么重要」时再交接给 Claude。",
+        "可操作信息：支持随 iOS 27、iPadOS 27、macOS 27、visionOS 27 和 watchOS 27 上的 Apple Foundation Models 框架使用，博客称将于次日（明天）上线。接入方式是把 Swift 包加进项目、用 Anthropic API key 登录，包本身处理流式、工具调用和把结构化响应返回 SwiftUI 视图，最少三行代码即可拿到类型化返回。这是来自 Anthropic 官方博客的发布说明，立场上是自家产品介绍。"
+      ],
+      "creator": "Claude Blog",
+      "role": "Anthropic 官方博客",
+      "sourceType": "blog",
+      "sourceLinks": [
+        { "label": "Claude 博客原文", "url": "https://claude.com/blog/claude-for-foundation-models" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "感觉拿 200 美元/月补贴订阅的 AI builder，和在公司里要尽量不超支 API 成本的员工，是两套完全不同的最佳实践。",
+      "creator": "Peter Yang",
+      "handle": "@petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2064063499517743417"
+    },
+    {
+      "quote": "NotebookLM 新的杀手级功能：可以轻松把检索范围扩展到你自己的源文件之外；配合今天的更新，还能生成新的输出格式：PDF、DOCX、XLSX、PPTX、图表等。",
+      "creator": "Josh Woodward",
+      "handle": "@joshwoodward",
+      "sourceType": "x",
+      "url": "https://x.com/joshwoodward/status/2064046368352825492"
+    },
+    {
+      "quote": "我现在觉得新世界可能是：Markdown、HTML、SVG。SVG 被低估了。",
+      "creator": "Zara Zhang",
+      "handle": "@zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2064108976565092706"
+    },
+    {
+      "quote": "GA 一年后，我和 @_catwu 聊了聊 Claude Code 哪些变了：为什么我用 auto mode 而不是 plan mode、routines 怎么在我看到 bug 之前就修掉、为什么我现在大部分编码在手机上完成，以及产品要往哪走。最早内部 demo 时，它在 Slack 上只得到两种反应。",
+      "creator": "Boris Cherny",
+      "handle": "@bcherny",
+      "sourceType": "x",
+      "url": "https://x.com/bcherny/status/2064034799711588805"
+    },
+    {
+      "quote": "有意思的是最近几个月冒出这么多「自主」公司，但即便有了各种 loop，最后一公里还是相当难。这个差距接下来几个月大概会缩小。",
+      "creator": "Nikunj Kothari",
+      "handle": "@nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2063981835290562692"
+    }
+  ]
+}
