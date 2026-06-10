@@ -1,49 +1,48 @@
-# Daily Update Workflow
+# Daily Run（每日 routine 蓝本）
 
-这个项目把站点和“抓 builder 信源”拆成两层：
+这是每天 09:00（Europe/London）自动跑的 Claude routine 的操作手册。目标：为今天发布一期《信噪》，全程无人值守。
 
-1. 站点只消费 `src/data/news.ts` 里的结构化 news 数据。
-2. 原始信源每天通过 `npm run sync:feeds` 拉到 `data/raw/`。
+## 前提
 
-## 手动更新步骤
+- 仓库：https://github.com/Tarssssss/xinzao （push 到 main 即自动部署）
+- 写作规范：`docs/writing-guide.md`（唯一写作指南，先完整读一遍再动笔）
+- 上游 feed 每天 ~06:17 UTC 更新，09:00 London 跑的时候一定是新的
 
-1. 运行 `npm run sync:feeds`
-2. 快速浏览 `data/raw/latest-brief.md`
-3. 如需深读，再打开 `data/raw/latest.json`
-4. 在 `src/data/news.ts` 里只追加真正新增的 stories，不要删除旧内容
-5. 运行 `npm run build` 验证页面可用
+## 步骤
 
-## 保留历史内容
+1. **同步 feed**：`npm install && npm run sync:feeds`，产出 `data/raw/latest.json`（feed-x 是 24h 滚动窗口，正好对应今天这期的素材）。
+2. **去重检查**：读最近 3 期 `src/data/issues/*.json`，素材里主链接已被收录过的内容跳过；只是旧 story 的轻微补充时，更新旧 story 而不是新增。
+3. **选稿**（`docs/writing-guide.md` 第 7 节）：有明确观点、方法论、产品发布或 builder insight 的才收；纯玩笑、无上下文单句不收；同一 builder 同主题多推合并成一条。20-40 条推文的素材通常出 5-10 条 story。
+4. **写稿**：严格按 `docs/writing-guide.md` 写每条 story（保真红线最优先），写完逐条过第 8 节 self-check。
+5. **落盘**：写入 `src/data/issues/<YYYY-MM-DD>.json`（今天的 London 日期），结构与已有 issue 文件完全一致：
 
-- 网站首页现在会按日期分组显示 story，所以明天新增内容时，今天的内容会自然保留在下面
-- `src/data/news.ts` 采用追加式维护：新增 story 直接 append，旧 story 保留
-- `data/raw/YYYY-MM-DD.json` 会保存每天同步下来的原始 feed 快照，方便回看或重新整理
-- 如果未来内容很多，可以再把特别旧的内容拆到单独的 archive 数据文件里，但当前阶段不用急着做
+   ```json
+   {
+     "date": "YYYY-MM-DD",
+     "generatedAt": "<latest.json 里的 feedGeneratedAt>",
+     "stories": [
+       {
+         "slug": "YYYY-MM-DD-short-name",
+         "title": "…",
+         "summary": "…",
+         "content": ["…", "…"],
+         "creator": "…",
+         "role": "（素材有就填）",
+         "sourceType": "x | podcast | blog",
+         "sourceLinks": [{ "label": "原推 @handle", "url": "素材里的真实 url" }],
+         "engagement": "（素材有就填，如 1.2K likes）"
+       }
+     ]
+   }
+   ```
 
-## 选稿标准
+   期号不用管（按日期自动派生）；stories 按重要性排序。
+6. **验证**：`npm run build` 必须通过。失败先修 JSON，修不好就不要 push。
+7. **提交**：`git add src/data/issues data/raw && git commit -m "Issue YYYY-MM-DD" && git push`。Vercel 会自动部署。
 
-- 优先收录有明确观点、方法论、产品发布或 builder insight 的内容
-- 尽量避免只有一句玩笑、没有上下文的帖子
-- 同一天如果同一个 builder 连发多条相关帖子，可以合并成一条 story
+## 硬规则
 
-## 写作规则
-
-- `title`
-  优先使用博客标题、播客标题或推文首句；如果原文太弱，再改成更抓人的标题
-- `intro`
-  用第三人称写一段叙述性摘要，说明“讲了什么”和“为什么重要”
-- `content`
-  写 2 到 4 段，比 intro 更完整，保留判断、背景和可操作含义
-- `sourceLinks`
-  至少保留一个原始链接；如果 story 由多条 source 合成，可以保留多个链接
-
-## 去重规则
-
-- 如果 `sourceLinks` 里的主链接已经出现在旧 story 中，就不要重复收录
-- 如果新内容只是旧 story 的轻微补充，优先更新旧 story，而不是新增一条
-
-## 建议的 automation 行为
-
-- 每次只处理当天 raw feed 中真正新增的内容
-- 更新完成后运行 `npm run build`
-- 在结果里简要说明新增了哪些 story，哪些 source 被跳过
+- 当天素材全部不值得收：不发刊、不写文件、不 push。**绝不为了凑一期而编内容或放水选稿标准**。
+- feed 拉取失败：重试一次，仍失败就放弃当天，不要用旧素材冒充。
+- 漏跑补刊：发现某天没跑，用 `node scripts/backfill-snapshots.mjs --since <漏的日期>` 取回当天素材（上游 git history 里都在），按同样流程补写。
+- 方向性决定（调整选稿标准、改结构等）不要在 routine 里做，记到 `docs/decision-log.md` 留给人决定。
