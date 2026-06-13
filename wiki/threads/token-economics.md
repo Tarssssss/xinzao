@@ -13,6 +13,7 @@
 - **Jeremy Allaire（Circle）**：结算侧最早开枪。agent 间几美分到几十美分的支付已开始出现，现有金融基础设施撑不住全球即时、可编程的数十亿笔微支付，给出自家方案 ARC（USDC 原生、数百毫秒结算）（[2026-04-12-allaire-agentic-economy]）。全程推自家产品，需求清单可用。
 - **Amjad Masad（Replit）**：从平台成本角度呼应微支付——bot 达到人类水平后免费服务难以为继，每次 git push 收几美分可能就足以减少垃圾请求，结算或许用比特币避免 KYC，措辞停在「值得探索」（[2026-04-29-micropayments-for-git-push]）。
 - **Peter Steinberger（OpenClaw）**：本线索的反方参照系。直接把「token 不要钱」当工程前提，约 100 个 codex 常驻云端接管 PR 审查、安全扫描、性能回归等全部流水线（[2026-05-16-steipete-tokens-dont-matter]）。个人开源项目的成本结构与企业预算约束相反，恰好标出争论的另一极：单价再涨，对押注 token 换工程产能的人也可能不构成约束。
+- **Ari（Datalogy）/ Rob（Radical），Unsupervised Learning**：把算力紧缺推到 API 供给端。实验室赚自家产品（Claude Code）多于赚 API，Ari 判断可能不为商业、纯被算力逼着限流或阶段性停掉公开 API，OpenAI 卖「锁定未来 token 额度」的期货是前兆；Rob 加码——最强模型可能只留内部用。Ari 给预测：2027 年底前有把握看到 Anthropic 或 OpenAI 暂停/大幅限制 API 一段时间。研究者兼投资人预判，带对冲（[2026-06-13-compute-crunch-api-access-risk]）。
 
 ## 时间线
 
@@ -29,3 +30,4 @@
 - 2026-05-20 [2026-05-20-levie-token-cost-enterprise-cio] Levie 从 CIO 晚宴带回：token 成本是企业最激烈议题，五种策略混用、没人觉得解法对
 - 2026-05-22 [2026-05-22-levie-inference-cost-stratification] Levie：推理成本不收敛，按任务分层持续拉大，能帮客户按任务优化价格的平台占优
 - 2026-05-29 [2026-05-29-levie-tokenmaxxing-enterprise-economics] Levie 算总账：前沿 token 单价不降反升，单任务可烧上千美元，开销逃离 IT 预算挪到业务线
+- 2026-06-13 [2026-06-13-compute-crunch-api-access-risk] Ari/Rob：算力紧缺可能逼实验室阶段性限停 API，因自家产品比 API 更赚钱，非商业决策

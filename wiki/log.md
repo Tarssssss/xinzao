@@ -5,3 +5,5 @@
 ## [2026-06-10] init | 建立 wiki 骨架（WIKI-GUIDE / index / log），待回填 workflow 编译 builders 与 threads
 
 ## [2026-06-10] backfill | 回填 workflow（96 agents）：编译 25 个 builder 页 + 14 个 thread 页，为 62 期 257 条 story 写入 555 条 related
+
+## [2026-06-13] ingest | 新增 4 story（Fable 监管、API 供给风险、开源退潮、Swyx future codebase）+ 5 速览；更新 Levie/Yang/Masad/Swyx 页与 token-economics、review-bottleneck 两条线索；新建 unsupervised-learning 渠道页

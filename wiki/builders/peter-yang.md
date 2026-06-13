@@ -45,3 +45,4 @@ Roblox 产品经理，高频输出 agent 工作流实操方法论，同时是刊
 - 2026-06-03 [2026-06-03-peter-yang-narrow-saas-harder-to-monetize] 窄用例简单 SaaS 更难变现的三条机制，大型企业 SaaS 仍稳，自加 bubble 对冲
 - 2026-06-05 [2026-06-05-peter-yang-codex-system-setup] 工作流前置搭进 Codex 省一半时间，每步留人工检查点；点名 Codex 前端设计弱于 Claude
 - 2026-06-06 [2026-06-06-peter-yang-self-improving-skills] 五步法做能自查产出、随用随改的 skill，含清理其他 skill 的元 skill
+- 2026-06-13 [2026-06-13-fable-restriction-ai-regulation] 反应政府限制「在美外国人」用 Fable：质疑根本无法核验执行，预测访问最强模型很快要做身份验证

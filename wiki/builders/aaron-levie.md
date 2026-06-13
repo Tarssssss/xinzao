@@ -37,6 +37,9 @@ Box CEO，刊中言论量最大的企业 AI 看多者，自称「Jevons 悖论�
 - GPT-5.5 较 5.4 在企业知识工作评测平均 +10pp，四行业一致提升 13-19pp（2026-04-24-levie-gpt55-box-evals）。
 - Gemini 3.5 Flash 较 3 Flash 复杂文档任务 +12pp，原本低分行业（医疗 +22pp、生命科学 +20pp）跳得最多（2026-05-20-levie-box-eval-gemini-3-5-flash）。
 
+### AI 监管与政府介入（新）
+- 首次就监管表态（2026-06-13-fable-restriction-ai-regulation）：政府限制「在美外国人」用 Fable，他读作政府开始直接判定模型本身「太强、不能用于特定用途」，为日后一系列管控立先例；本人主张该管用途而非模型，但认定政府深度介入 AI 进展已不可逆。立场仍与 Box 应用层位置一致。
+
 ## 言论时间线
 
 - 2026-04-07 [2026-04-07-levie-work-abstraction] agent 把工作上移一层抽象，拆成六环节；任务越长规划和审查占比越大
@@ -99,3 +102,4 @@ Box CEO，刊中言论量最大的企业 AI 看多者，自称「Jevons 悖论�
 - 2026-06-08 [2026-06-08-aaron-levie-model-stratification-routing-layer] 模型分层双向变大，能成本最优路由负载的编排层越来越值钱
 - 2026-06-09 [2026-06-09-levie-context-still-needed] 再强的模型也替代不了引导，context 和专有数据始终要进上下文窗口
 - 2026-06-10 [2026-06-10-levie-applied-ai-untrainable-corner] 应用层护城河在 untrainable corner：把企业私有现实整理成模型能用的形态
+- 2026-06-13 [2026-06-13-fable-restriction-ai-regulation] 反应政府限制「在美外国人」用 Fable：政府开始管模型本身而非用途，是监管转折先例；他反对管模型，但称政府深度介入已不可逆

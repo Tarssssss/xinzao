@@ -29,6 +29,7 @@
 - [ivan-burazin](builders/ivan-burazin.md) — Daytona CEO：agent 需独立计算机、CPU 短缺预判、开发者工具分发心法
 - [aditya-agarwal](builders/aditya-agarwal.md) — SPC GP、前 Dropbox CTO：全员 AI coding、agent 离消费级远、招聘硬线
 - [latent-space](builders/latent-space.md) — AI 工程播客渠道页：Mistral/OpenAI Frontier/Notion 三期 agent 工程访谈
+- [unsupervised-learning](builders/unsupervised-learning.md) — Jacob Efron 的 AI vibe check 圆桌渠道页：算力紧缺逼停 API、近前沿开源模型退潮两条判断
 
 ## Threads
 

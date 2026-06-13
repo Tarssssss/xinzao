@@ -1,0 +1,119 @@
+{
+  "date": "2026-06-13",
+  "generatedAt": "2026-06-13T07:35:56.854Z",
+  "stories": [
+    {
+      "slug": "2026-06-13-fable-restriction-ai-regulation",
+      "title": "政府限制「在美外国人」用 Fable,Levie 视之为 AI 监管转向管模型本身的先例",
+      "summary": "多位 builder 在反应一项限制「在美外国人」使用 Fable 的政府措施。Levie 的判断最完整:政府开始把某些模型认定为「太强、不能用于特定用途」,为日后一系列管控立了先例;他主张该管 AI 用途而非模型本身,但承认已回不到政府不深度介入 AI 进展的世界。这是 Box CEO 偏应用层的立场。盯监管边界、或在前沿模型上搭产品的人值得看多方反应。",
+      "content": [
+        "Levie 这条的增量是「先例」这层。在他看来,政府过去主要管 AI 怎么用,现在开始直接对模型本身下判断——认定某个模型强到不能用于特定用途。他个人反对这种管法,理由是该规制的是使用而非底层模型;但他把话收在一个更硬的结论上:无论这次具体结果如何,「政府不深度介入 AI 进展速度」的那个世界已经回不去了。",
+        "围绕同一件事,另外两位 builder 给的是更具体的反应。Peter Yang 抓的是执行问题——把 Fable 对「每一个在美外国人」关掉,这在现实里根本没法核验到底是谁在用;顺着这个,他预测访问最强的模型很快会需要做身份验证。Replit 的 Amjad Masad 则给了平台侧的直接后果:听起来 Replit 得把 Fable 的访问关掉。两条放在一起,能看出这项限制一旦落地,压力会先压到在产品里转发模型的人身上。",
+        "需要说清的是,这几条都是 builder 对一则消息的即时反应,措施本身的范围、依据和执行方式,这些推文并没有给全;能确认的只是它针对「在美外国人」使用 Fable。立场上,Levie 是 Box CEO、身处应用层,本就倾向反对模型层面的监管,他的「该管用途不管模型」要按这个位置打折看。对在前沿模型上搭东西的人,可核验、可跟踪的是 Yang 提的那条:如果访问开始绑定身份验证,产品的注册和分发链路要提前考虑这一层。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2065616509666472329" },
+        { "label": "@petergyang 反应", "url": "https://x.com/petergyang/status/2065602691850764667" },
+        { "label": "@amasad 反应", "url": "https://x.com/amasad/status/2065600809224814835" }
+      ]
+    },
+    {
+      "slug": "2026-06-13-compute-crunch-api-access-risk",
+      "title": "算力紧缺可能逼 Anthropic 或 OpenAI 阶段性限停 API,Datalogy 的 Ari 给到 2027 年底前的时间表",
+      "summary": "Datalogy 创始人 Ari 在 Unsupervised Learning 给了对 API 依赖者最该警惕的判断:算力会长期紧缺,实验室赚 Claude Code 远多于赚 API,所以可能限流甚至阶段性停掉公开 API——不是商业决策,是被算力逼的。这是带对冲的预测,他对 2027 年底前发生较有把握。在前沿 API 上搭产品的人该当供给风险规划。",
+      "content": [
+        "这条判断的机制是利润加稀缺。实验室从 Claude Code 这类自家产品上赚的钱,比卖 API token 多;当算力成为最硬的约束,理性做法就是先喂自己的产品、再去配给 API。Ari 给出让这件事新近变得可信的触发点:OpenAI 已经在卖「锁定未来 token 额度」式的推理期货合约,他把这称作对所有在模型之上搭东西的人的生存级威胁。",
+        "Radical 的 Rob 把这层推得更远:实验室不止可能不开源,还可能干脆不把最强的模型对外公开,只留作内部使用。两人都把这件事的程度系在算力瓶颈持续多久上;Ari 判断真正的缓解大概要到 2030 年前后才会出现(造芯、光刻这些方向的突破至少还要五年),所以这是结构性的挤压,不是一阵子的事。",
+        "Ari 的具体预测是:有合理概率会看到 Anthropic(也可能是 OpenAI)在某段时间里暂停或大幅限制 API 访问——发生在 2026 下半年他说偏激进,到 2027 年底前他更有把握,并自己补了一句「时点很难判断」。这是研究者兼投资人的预判、明确带对冲,不是已宣布的计划。对 builder 可操作的含义很直接:产品如果只是某一家实验室 API 的薄封装,就面对一个半年前还不存在的供给风险,值得现在就做多家备援、或去谈有保障的预留额度。"
+      ],
+      "creator": "Unsupervised Learning",
+      "role": "AI vibe check 圆桌:Jacob Efron × Datalogy Ari × Radical Rob",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Unsupervised Learning 播客", "url": "https://www.youtube.com/watch?v=W_iO8XxgD_I" }
+      ],
+      "related": [
+        { "slug": "2026-05-20-sam-altman-discounted-token-commits", "note": "同源:算力受限 API 让位自家产品" },
+        { "slug": "2026-05-02-baseten-inference-crunch", "note": "印证算力紧缺的一手行情" }
+      ]
+    },
+    {
+      "slug": "2026-06-13-open-weight-ai-decline",
+      "title": "播客嘉宾判断近前沿开源模型会越来越少:经济账不支持,Meta 和中国实验室都在收",
+      "summary": "Rob(Radical)和 Ari(Datalogy)都改了判断:近前沿的开源权重模型可能整体退场,变的不是能力而是经济账——Meta 在收,中国实验室也把最强的留作闭源、只放更小的版本。他们认为唯一跑得通的开源生意是「开权重、不开 harness,用 API 卖整套系统」。属预测,Ari 自陈半年前没看到这转向。押注开源模型持续供应的人该重估前提。",
+      "content": [
+        "账是这么算的:做到或逼近前沿要砸巨额前期投入,而把开源权重模型服务出去几乎没有收入进来。开源在早期作为打口碑的营销说得通,可一旦口碑建立起来,继续完全开放就会直接拖垮自己的托管推理生意。于是实验室把更小、更弱的版本开权重,最强的留作闭源。Ari 特别点出:开源模型的能力其实一直在收敛、技术上没出现大变化,真正变的是建和放开源模型的经济决策。",
+        "他们认为唯一可能活下来的开源商业模式是:开放权重,但不开放 harness 和 scaffolding,再用一个 API 卖整套系统的访问。Ari 拿 Kimi/Moonshot 举例,说大致是这个路子、光 API 那块就到了几亿美元 ARR 量级。这背后是更大的一个判断——模型已经不只是模型,而是模型加 harness 加 scaffolding,越来越多的创新发生在 harness 这一层,开源权重却不开源这层,正好卡在价值留得住的地方。",
+        "再往外推一层:NVIDIA 之所以使劲通过 Reflection 等扶持西方的开源模型供应方,本身就说明开源生态更像被结构性地撑着,而不是自然长出来的。对 builder 的含义是,如果你押注的是源源不断的近前沿开源权重、好自己托管来控成本和控数据,这条供给看起来没那么可靠了;退路很可能变成「开源权重配别人的闭源 harness、走 API」,而那又把你本想绕开的依赖重新装了回来。这一条同样是带对冲的预判,Ari 也说当年开源模型崛起他没料到,如今的退潮他半年前也没看到。"
+      ],
+      "creator": "Unsupervised Learning",
+      "role": "AI vibe check 圆桌:Jacob Efron × Datalogy Ari × Radical Rob",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "Unsupervised Learning 播客", "url": "https://www.youtube.com/watch?v=W_iO8XxgD_I" }
+      ],
+      "related": [
+        { "slug": "2026-04-16-swyx-meta-turn", "note": "Meta 最强模型已不开源" }
+      ]
+    },
+    {
+      "slug": "2026-06-13-swyx-future-codebase-git",
+      "title": "Swyx 设想 PR、code review 消亡后 Git 也该退场,未来代码库更像 Notion/Linear 数据库而非 .git",
+      "summary": "Swyx(Cognition)抛出一个推测式设想:PR 和 code review 淡出后,Git 可能是下一个该退场的——论据是大约 20-40% 的写代码开销只花在处理合并冲突上,他质疑这是不是「过时的马车」,未来代码库或更像 Notion/Linear 数据库而非 .git 对象。他在做编码 agent 的 Cognition,这类叙事对自己有利,要打折。对在重做开发协作流程的人有参考。",
+      "content": [
+        "这条的核心是那个类比。Swyx 的意思是,逐行解决合并冲突、以及用 CI/CD 卡关,都是机器给文件做版本管理的产物,不是人真实协作的方式。人和人一起改一份有法律或财务后果的高风险文档时,并不走 .git 那套合并仪式——而是聊、提修改建议、留旁注,最后由一个 owner 拍板合入。如果写代码的主力变成 agent,那套 .git 模型可能就是在照搬过去。",
+        "他给的终点是:未来的代码库也许长得更像 Notion 或 Linear 那样的数据库,而不是一棵 .git 对象树——效率更低,但更可扩展,他自己把这叫做「Salty Lesson」。要强调这是他「在认真琢磨」的一个问题,不是定论;而它和他一贯的立场是连着的——零人工 review 是下一个前沿,这次只是把同一个想法往技术栈更下面又推了一层。立场上,Swyx 在做编码 agent 的 Cognition,「旧的开发工具会死」这种叙事本就对他有利,听的时候打个折。"
+      ],
+      "creator": "Swyx",
+      "role": "Cognition / Latent Space",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2065559864559145420" }
+      ],
+      "related": [
+        { "slug": "2026-04-24-swyx-coding-agents-containment", "note": "他的零人工 review 主张再下一层" },
+        { "slug": "2026-04-08-harness-engineering", "note": "PR 失效后丢弃重做的先例" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "都以为 AI 编码工具让创始人自由了。看看人们实际拿它造什么:规则、审批、流程、层层结构——同一个牢笼,只是组装得更快。能在一下午搭出任何东西的工具,也能在一下午搭出你的官僚体系。建造的速度就是固化的速度。去造那种能让你创造新东西的东西——以前不曾发生的体验。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2065416181943865611"
+    },
+    {
+      "quote": "能病毒式传播的产品,背后有一个看得见、听得到的创始人。人们向人购买。一段创始人出镜的录屏,胜过公司宣传片或一长串功能列表。露脸。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2065674426197393779"
+    },
+    {
+      "quote": "Tokenmaxxing 那阵风刚起时,有些企业客户找我们要一个 token 用量排行榜。我们说不。这对生意「很好」,但我们不做为了卖 token 而卖 token 的生意——我们卖的是结果。而且我们早知道它不会持久。",
+      "creator": "Amjad Masad",
+      "handle": "amasad",
+      "sourceType": "x",
+      "url": "https://x.com/amasad/status/2065597793998422308"
+    },
+    {
+      "quote": "我快跟不上大家给 crabbox 提的 Issue 和 PR 了。Codex 在 crabbox 内部一边跑、一边构建 crabbox,正成为我工作里离不开的基础设施。过去四天它在多个分支上不停循环,因为全程端到端可验证,基本是它自己在造自己;它甚至会自己通过浏览器 / computer use 注册各种服务。我的主要工作就是填信用卡信息,以及关掉那些我觉得不合适的。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2065650561484267540"
+    },
+    {
+      "quote": "我们刚发布了 HarnessAgent,一个统一抽象,把任意 agent 的「大脑」编排并接进你的应用。AI SDK 现在让你既不被模型锁定、也不被 agent 锁定。(而且不只是可移植,用起来也很舒服。)",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2065520041894756480"
+    }
+  ]
+}
