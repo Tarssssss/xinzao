@@ -25,6 +25,7 @@ YC 总裁兼 CEO，同时是活跃的个人 agent 工具作者（GBrain、GStack
 ### 给创始人的判断
 - 给 Moore「跨越鸿沟」打补丁：当客户的替代方案是「零」（没有现状可对比）时鸿沟不存在，买家会为 60% 的方案买单，别纠结完整产品和标杆客户；有在位者时 Moore 框架照旧适用（[2026-05-23-garrytan-bar-is-zero-skip-the-chasm]）
 - 别用 2026 的技术重做 2010 年代的生意（Foursquare/Yelp/Basecamp 式），别给好东西定低价——产品真能成就值远超旧 SaaS 标价（[2026-05-27-garry-tan-new-game]）
+- 给 Fable 5 禁令（见 [2026-06-13-fable-restriction-ai-regulation]）配了笔粗账：按他自报的假设（500 万日活、90 美元每小时、48 小时内 17.8% 工作转向 Fable、Fable 高 15% 生产力）算出每工作小时损失约 1200 万美元。所有输入无来源，头条数是修辞弹药，唯一有信息量的是那条「两天内近两成工作转向」的采用速度假设；立场上他一贯反对模型层限制（[2026-06-18-garry-tan-fable-ban-productivity-cost]）
 
 ## 言论时间线
 
@@ -42,3 +43,4 @@ YC 总裁兼 CEO，同时是活跃的个人 agent 工具作者（GBrain、GStack
 - 2026-05-26 [2026-05-26-garry-tan-skill-file-evals] 用多个前沿模型做评委迭代 skill file，再以 evals + 单测固化改进
 - 2026-05-27 [2026-05-27-garry-tan-new-game] 别用 2026 技术重做 2010 年代的生意，别给好东西定低价
 - 2026-06-01 [2026-06-01-garrytan-own-your-memory-harness-wars] 主张自己掌控和托管 memory，预测 2027 年「AI harness 之战」
+- 2026-06-18 [2026-06-18-garry-tan-fable-ban-productivity-cost] 给 Fable 5 禁令配粗账：每工作小时损失约 1200 万美元，但所有输入全是自报假设、无来源

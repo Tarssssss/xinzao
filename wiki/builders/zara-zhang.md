@@ -18,6 +18,9 @@
 - 复盘方法论：Tab Out 项目 20% 时间做功能、80% 时间砍功能；「Claude 倾向做过头（overkill），你得管住它」；入口要放进已有高频动线；LLM 功能当成本看，不可靠就砍（[2026-04-15-zara-tab-out-cutting-features]）
 - 学习技巧：让 Claude Code 把自己当前 context window 画成 HTML，直观理解上下文运作（[2026-04-22-claude-code-context-viz]）
 
+### AI 写作与品味
+- 别在养出自己的品味和声音之前用 AI 写作：用 AI 写本身不坏，坏在还没养出判断力就用——AI 写出 slop 时你根本认不出那是 slop，也无从改。顺序是大量读（建立「什么算好」）、大量写（摸清自己的声音），到这一步再用 AI 帮忙，并确保成品仍像你（[2026-06-18-zara-zhang-taste-before-ai-writing]）。与「写作是思考、打字只是最后一步」（[2026-04-26-zara-writing-thinking]）同一根线：AI 适合放大已成形的品味，替不了养成品味的过程。
+
 ### 编码 agent 的入口与工具选择（用法有明确演变）
 - 5 月先做了 Claude Code 的 Lark/飞书桥并开源：一个群聊对应一个 CC 会话，把 agent 入口从终端搬进 IM，摆脱终端标签页（[2026-05-22-zara-zhang-claude-code-lark-bridge]）
 - **用法变化标注**：此前主用 Claude Code、在终端操作；5 月底改为 Claude Code 与 Codex 五五开、转用桌面应用、几乎不再开终端。分流规则：Codex 像可靠工程师，任务已定义清楚就交给它；Claude Code 像沟通好的 PM/设计师，还不知道要什么、要脑暴或原型时用它（[2026-05-27-zara-zhang-codex-vs-claude-code]）
@@ -32,3 +35,4 @@
 - 2026-04-26 [2026-04-26-zara-writing-thinking] 打字只是写作的最后一步，80% 在头脑里完成；产物 ≠ 思考
 - 2026-05-22 [2026-05-22-zara-zhang-claude-code-lark-bridge] 开源 Claude Code 的 Lark/飞书桥，把 CC 会话搬进 IM 群聊
 - 2026-05-27 [2026-05-27-zara-zhang-codex-vs-claude-code] 用法改成 Claude Code 与 Codex 五五开，按任务是否明确分流，转桌面端弃终端
+- 2026-06-18 [2026-06-18-zara-zhang-taste-before-ai-writing] 在养出品味和声音之前别用 AI 写作，否则它产出 slop 你都认不出；顺序是先读后写再用 AI

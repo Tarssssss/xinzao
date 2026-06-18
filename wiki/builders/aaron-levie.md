@@ -32,6 +32,7 @@ Box CEO，刊中言论量最大的企业 AI 看多者，自称「Jevons 悖论�
 ### 应用层护城河
 - AI 变容易的能力对所有人同样容易，不构成护城河，差异化被挤到别处（2026-05-08-levie-ai-commoditization-differentiation）；造软件变便宜后 GTM 成企业软件最难的部分（2026-06-08-aaron-levie-gtm-is-the-hard-part）。
 - 护城河落点：把企业独有数据、流程、领域 context 接上 AI（2026-06-02-levie-agent-era-moat）；再强的模型也替代不了引导，context 和专有数据始终要进上下文窗口（2026-06-09-levie-context-still-needed）；应用层价值在「untrainable corner」——把企业私有现实整理成模型能用的形态（2026-06-10-levie-applied-ai-untrainable-corner）。
+- **打法整合（2026-06-18）**：把前面散着说的判断收成一份四组件清单，起点是反驳「应用层只是 LLM 薄封装」——驱动企业 agentic 工作流远比预期复杂，越复杂越能随时间长出护城河。四组件：衔接智能与工作流的功能、模型路由器、FDE 推变更管理、领域化 GTM；再加一段收尾，正面回应「模型够强这些就不重要」的 bitter lesson 式质疑（企业现在就要人帮着改，这部分价值不随模型变强消失）（2026-06-18-levie-applied-ai-playbook）。是前述 context／路由／FDE／GTM 各条的合流，无立场变化。
 
 ### Box 自家评测数据点（自测自报，方法未公开）
 - GPT-5.5 较 5.4 在企业知识工作评测平均 +10pp，四行业一致提升 13-19pp（2026-04-24-levie-gpt55-box-evals）。
@@ -103,3 +104,4 @@ Box CEO，刊中言论量最大的企业 AI 看多者，自称「Jevons 悖论�
 - 2026-06-09 [2026-06-09-levie-context-still-needed] 再强的模型也替代不了引导，context 和专有数据始终要进上下文窗口
 - 2026-06-10 [2026-06-10-levie-applied-ai-untrainable-corner] 应用层护城河在 untrainable corner：把企业私有现实整理成模型能用的形态
 - 2026-06-13 [2026-06-13-fable-restriction-ai-regulation] 反应政府限制「在美外国人」用 Fable：政府开始管模型本身而非用途，是监管转折先例；他反对管模型，但称政府深度介入已不可逆
+- 2026-06-18 [2026-06-18-levie-applied-ai-playbook] 反驳「应用层只是 LLM 薄封装」，把落地打法整理成四组件（衔接功能／路由／FDE／GTM）＋bitter lesson 回应，复杂度本身生护城河

@@ -11,6 +11,7 @@ agent 把执行环节做便宜之后，瓶颈整体转移到了人这一侧：�
 - **Greg Brockman（OpenAI 总裁）**：给出系统设计答案——执行变便宜后人点 approve 点到默认放行，真正稀缺的是停下来判断「这是不是我想要的」；解法是让 AI 先给动作分险级，高风险上报给人、其余自动通过，整个系统围绕人的注意力来设计（2026-05-03-brockman-attention-bottleneck）。
 - **Mati Staniszewski（ElevenLabs CEO）**：给出组织设计答案——vibe coding 普及后，非技术团队产出的代码没人能把关安全和准确性，于是在每个非技术团队（HR、法务、GTM）嵌一名工程师，扩的不是人力而是审稿门槛（2026-05-10-elevenlabs-embedded-engineers）。
 - **Peter Yang（Product @ Roblox）**：保守端的个人实践。把集成和 skill 前置搭进 Codex 能省一半以上时间，但所有工作流每步留人工检查点，好让自己施加「品味」——对「全自动」叙事的主动收敛，判断权留在人这边（2026-06-05-peter-yang-codex-system-setup）。
+- **Kyle Daigle（GitHub COO）**：平台运营者的一手量级加工具答案。仅 2026 年 3 月就有 1700 万个 PR 由 agent 创建，他反对「agent 代码全是 slop」、称行业刚爬出早期采用期；代价是开源维护者被淹没。GitHub 不抢做第一个定标准的人，给维护者控流工具（决定接谁的 PR、Hashimoto 式 vouch），再配 agentic 代码审查（找新型漏洞、评论即修）和 agentic 合并（设好允许范围后让 Copilot 去合 PR、等 CI 和策略）（2026-06-18-github-coo-agent-prs-not-slop）。落点与 Colyer 一致——审查是瓶颈、解法走向 agent 审 agent。
 - **Matt Colyer（Figma 开发者产品负责人）**：一线确认加方向探索。agent 已经便宜又能干，瓶颈是「只有这么多双人眼睛」，今年重心是把审查规模化——录视频走查、截图、或再派一个带不同 prompt 的 agent 去审，审到你信任它为止；具体形态他明说「很难预测」（2026-06-06-matt-colyer-figma-review-bottleneck）。
 
 ## 时间线
@@ -25,3 +26,4 @@ agent 把执行环节做便宜之后，瓶颈整体转移到了人这一侧：�
 - 2026-06-05 [2026-06-05-peter-yang-codex-system-setup] Peter Yang：系统前置省一半时间，但每步留人工检查点保住品味
 - 2026-06-06 [2026-06-06-matt-colyer-figma-review-bottleneck] Colyer 一线确认：产出已不是瓶颈，审查才是，今年重心是把审查规模化（含 agent 审 agent）
 - 2026-06-13 [2026-06-13-swyx-future-codebase-git] Swyx 把零 review 主张再下推：PR/review 之后 Git 也该退场，代码库或转向类数据库形态
+- 2026-06-18 [2026-06-18-github-coo-agent-prs-not-slop] Kyle Daigle：3 月 1700 万个 agent PR，反对「全是 slop」，给维护者控流＋agentic 审查/合并，落点同 Colyer

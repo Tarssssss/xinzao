@@ -1,0 +1,174 @@
+{
+  "date": "2026-06-18",
+  "generatedAt": "2026-06-18T08:03:03.076Z",
+  "stories": [
+    {
+      "slug": "2026-06-18-levie-applied-ai-playbook",
+      "title": "Levie 反驳「应用层只是 LLM 薄封装」,把企业落地打法整理成复杂度生护城河的四个组件",
+      "summary": "Box CEO Levie 把先前散着说的应用层判断收成一份四组件打法,起点是反驳「应用层只是 LLM 薄封装」:驱动企业 agentic 工作流远比预期复杂,而越复杂的地方越能随时间长出护城河。他还正面回应了「模型够强这些就不重要」的质疑。在应用层搭产品、判断护城河落点的人值得逐条对照。",
+      "content": [
+        "他这条的增量是把过去两个月散着说的判断收成了一套可对照的打法,起点是一个机制——凡是复杂的环节,往往都会随时间沉淀出护城河。被他点名反驳的「应用层只是 LLM 上面一层薄封装」,默认应用层无非是把模型的输出 token 转呈给用户;而真实情况是,驱动企业里的 agentic 工作流要做的事远不止这些:为具体工作调好的界面、专门用来捕获 agent 所需 context 的功能、给 agent 用的一堆定制工具、人在环里(human-in-the-loop)的交互。做得越深,可持续的价值越多,这一层的深度本身就是壁垒。",
+        "他列的组件可以分两组看。产品侧两条:一是做衔接智能和工作流的功能,有些工作流接个通用界面就能自动化,更多则要为被增强或自动化的那项工作量身定制;二是充当模型路由器,在前沿智能和便宜模型之间按任务调度——这一条只有那些对各家模型在具体任务上都有深 eval、且商业模式允许自由切换的公司才吃得到。GTM 侧两条:一是靠 FDE(或等价角色)推动真正的落地和变更管理,数据要清洗迁移、流程要重新设计和文档化、工作流要做 eval、SLA 要达标,每个流程都不一样,带着行业最佳实践来的公司占优;二是做贴着具体行业的销售和 GTM,不同行业的话术、合规、监管、行业活动、系统集成商伙伴都不同,越通用就越说不上客户的语言。",
+        "他自己把最强的反方意见摆了出来:也许这些最终都被模型智能本身抹平,bitter lesson 在极限处解决一切。他的回应是,这话「也许成立」,但企业需要的是「今天」就能改;而且把智能带进真实工作的很多环节,并不只取决于模型纯能力这一根轴,所以现在为赢下市场所做的事,大概率无论模型多强都仍然重要。立场上要打折:Levie 是 Box CEO、身处应用层,「应用层有护城河」本就对 Box 有利。可核验的是他点到的横向证据——这套打法是在编码、法律、医疗、客服、金融服务等多个领域同时被观察到的;在应用层搭东西的人,可以拿这四个组件逐条对一下,看自己到底真正占住了哪几个,哪些只是接了个通用界面在转呈 token。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2067455756795039957" }
+      ],
+      "related": [
+        { "slug": "2026-06-10-levie-applied-ai-untrainable-corner", "note": "护城河落点的最近表述" },
+        { "slug": "2026-06-08-aaron-levie-model-stratification-routing-layer", "note": "路由组件的来源判断" },
+        { "slug": "2026-06-08-aaron-levie-gtm-is-the-hard-part", "note": "GTM 组件的来源判断" }
+      ]
+    },
+    {
+      "slug": "2026-06-18-github-coo-model-router-token-cost",
+      "title": "GitHub COO:遏制编码 agent 费用失控,靠按任务意图自动路由模型,而不是指望开发者手动降级",
+      "summary": "GitHub COO Kyle Daigle 给「200 美元订阅滚成 2000 美元账单」的解法:别指望开发者为省 token 手动切便宜模型,而是让工具按任务意图自动路由——难的活交前沿模型,收尾小活下放到 Haiku 级小模型。注意这同向于 GitHub / 微软自家的路由产品。给为编码 agent 付费或做成本管控的人。",
+      "content": [
+        "账单膨胀的结构性原因,在他看来是大家总在挑「当天 / 当周 / 当下最火的那个模型」,而这些模型很贵——哪怕手头是件很轻的活。他拿自己举例:让 agent 干完一大块工作,最后总有个小尾巴,比如把某个命名全改掉,本质就是一次查找替换;为省这点 token,他会不会手动从 4.8 或 5.5 切到 Haiku?「大概不会。但工具可以。」所以杠杆在按任务意图自动路由:用户只需说清自己想推到多狠——「这题很难,我愿意一路上到顶」,还是「我就想待在这儿,让你帮我选」。",
+        "第二个杠杆是 frontier tuning 和个性化。他把长线讲清楚:模型会持续变强,token 经济账会成为「用哪个模型」越来越大的决定因素,而且离「在本地设备上跑一个比小语言模型更强一档的东西来干部分活」已经不远。一旦假定 token 这头有充分的可选项,从 ChatGPT、GitHub Copilot 出现至今一直成立的那条真理就是个性化 / context / 记忆——一个能帮你「把一个想法补完」、还不用你亲手把那个想法喂给它的 agent。他说手握 M365 数据的企业可以直接 frontier tuning(拿 MAI thinking 这类模型当底座),不必做全套手工 eval 就能见效。他坦言自己一开始觉得这是「魔术戏法」、根本不可能成,后来发现「有时候 alpha 恰恰藏在那些简单到不像能成的地方」。",
+        "立场要打折:他是 GitHub COO,又兼微软开发者业务的 CMO,「自动模型路由」和「frontier tuning」正好都落在 GitHub Copilot 和微软 Foundry 的产品线上,这个框架天然对他们有利。可核验、可自用的是那套路由逻辑本身——把一个任务拆成难的部分和琐碎的收尾,分别路由,因为省钱省在「别拿前沿模型的价格去做查找替换」。这条按任务路由的判断,也和 Levie 从应用层那侧给的结论是同一个:能按任务把负载调度到合适价位模型的编排层,会越来越值钱。"
+      ],
+      "creator": "Kyle Daigle",
+      "role": "GitHub COO / 微软开发者业务 CMO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "AI & I by Every 播客", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" }
+      ],
+      "related": [
+        { "slug": "2026-06-08-aaron-levie-model-stratification-routing-layer", "note": "Levie 同主张:路由层最值钱" },
+        { "slug": "2026-05-16-steipete-tokens-dont-matter", "note": "反方:押 token 不要钱" }
+      ]
+    },
+    {
+      "slug": "2026-06-18-github-coo-agent-prs-not-slop",
+      "title": "GitHub COO:3 月有 1700 万个 PR 来自 agent,他不认同「全是 slop」,重心放在给维护者控流和 agentic 审查 / 合并",
+      "summary": "从能看到几乎所有代码的 GitHub 视角,Kyle Daigle 给了一手量级:仅 3 月就有 1700 万个 PR 由 agent 提交。他不认同「这些全是 slop」,称行业刚爬出早期采用期。代价是开源维护者被淹没,GitHub 的应对是把控制权交给维护者、再配 agentic 的代码审查与合并。给被 agent PR 淹没、或在搭审查基础设施的人。",
+      "content": [
+        "GitHub 这个数之所以值得看,是因为无论代码由哪个工具写、最后几乎都会落到 GitHub 上,它的计数最接近一份 agent 代码经济的人口普查。他给的量级:仅 3 月就有 1700 万个 PR 由 agent 创建(他特意补一句「这只是 agent 那部分 PR」);去年全年是 10 亿次 commit,「照线性走今年会到 140 亿,而它不会是线性的」。对「这些全是 slop、没人在乎」的说法,他的回应是这并不属实:行业已经爬出了最早期的采用阶段,正在往上走——从只有 Kyle 一个人写,到 Kyle 加一个、两个乃至 n 个用着他的 skills 和 context 的 agent 一起写。",
+        "代价集中在开源:你管不住谁给你发 PR。GitHub 给维护者的是控制权——决定接不接、接谁的 PR、要求贡献者证明自己能带来有意义的东西;他举了 Mitchell Hashimoto 他们用的 vouch(背书)机制,但明确说不会把某一套系统推给所有人,因为同样有大量社区并不想用。方法论是:GitHub 不当那个第一个定标准的人,只提供 building block,等某套实践真在社区里跑出来、成了多数人的选择,才把它固化下来。面向所有开发者的两件具体工具:agentic 的代码审查,现在能找出更多新型漏洞,你评论一句、agent 就去把改动实现掉;以及 agentic 合并,你设定好允许 Copilot 做哪些,然后让它「去合这个 PR,等 CI、等各项策略过」。",
+        "立场上,GitHub 显然卖 Copilot 和这些工具,所以「agent 的 PR 是真东西、不是 slop」和「你需要我们的审查 / 合并工具」两条都对 GitHub 有利。可核验的是那个 1700 万的口径,是 GitHub 自己的、也公开讲过。把它放进语境:这是一个平台运营者的一手数据,顶在「agent 代码多半是不可合并的劣质代码」那类判断的对面(Swyx 6-09 对 SWE-bench 的读法);而它的落点和 Figma 的 Colyer 是同一处——产出已不是瓶颈,审查才是,正在浮现的解法是 agent 审 agent。对维护者可操作的是:不必等行业标准,现在就可以照「先控住入口、再上 agentic 审查」这套来。"
+      ],
+      "creator": "Kyle Daigle",
+      "role": "GitHub COO / 微软开发者业务 CMO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "AI & I by Every 播客", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" }
+      ],
+      "related": [
+        { "slug": "2026-06-09-frontiercode-metr-benchmark", "note": "他反驳「agent 代码全是 slop」" },
+        { "slug": "2026-06-06-matt-colyer-figma-review-bottleneck", "note": "审查成瓶颈、agent 审 agent" }
+      ]
+    },
+    {
+      "slug": "2026-06-18-zara-zhang-taste-before-ai-writing",
+      "title": "Zara Zhang:在养出自己的品味和声音之前别用 AI 写作,否则它产出 slop 你都认不出来",
+      "summary": "Zara Zhang 的判断:用 AI 写作本身不坏,坏在还没养出品味就用——AI 写出 slop(低质内容)时,你根本认不出那是 slop。她给的顺序很明确:大量读,建立「什么算好」的标准;大量写,摸清自己的声音;到这一步再让 AI 帮忙,并确保成品仍然像你。对还在靠 AI 产出文字、却自认判断力尚未成形的人,这是一条直接的提醒。",
+      "content": [
+        "她这条把「该不该用 AI 写作」从一个是非题改成了顺序题:问题不在用不用,而在用的时机——在你还没养出判断力之前就用,等于把唯一的质量闸门也外包出去了。她的原话是:「AI 写出 slop 时,你甚至认不出那是 slop。」品味在这里是那个能分辨好坏的东西,没有它,你看不出 AI 给你的是好东西还是垃圾,自然也无从改。",
+        "可操作的顺序她列得很清楚:大量读,先知道好是什么样;大量写,知道自己的声音是什么样;到这一步再用 AI 帮忙写,并且盯住一点——成品得仍然像你。这和她一贯的主张是同一根线:写作是思考,打字只是最后一步;AI 能接管的是最后那步生成,接管不了前面的判断,而判断恰恰得先长出来。说到底,AI 适合放大已经成形的品味,不适合替你跳过养成品味的过程。"
+      ],
+      "creator": "Zara Zhang",
+      "role": "Builder",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2067423674689638652" }
+      ],
+      "related": [
+        { "slug": "2026-04-26-zara-writing-thinking", "note": "同一线:写作是思考,产物≠思考" }
+      ]
+    },
+    {
+      "slug": "2026-06-18-garry-tan-fable-ban-productivity-cost",
+      "title": "Garry Tan 给 Fable 5 禁令算了笔粗账:按他的假设,每个工作小时损失约 1200 万美元生产力",
+      "summary": "Garry Tan(YC)给 6-13 那条 Fable 5 禁令配了个数字:按他的粗略估算,每工作小时约损失 1200 万美元生产力。但这串数全是他自报的假设、无一给出来源,头条数更像修辞弹药;真正有信息量的是那条采用速度假设:禁令前两天内近两成工作已转向 Fable(也没给来源)。盯禁令连锁反应的人值得看,留意 Garry 一贯反对模型层限制。",
+      "content": [
+        "他把账摆了出来:假设到 2026 年年中有 500 万前沿 AI 编码日活开发者、满载成本约 90 美元 / 小时、48 小时内有 17.8% 的工作被路由到 Fable、Fable 平均高出约 15% 生产力,推出每位开发者的有效吞吐损失约 17.8% × 15% ≈ 2.7%,折成 2.7% × 90 ≈ 2.4 美元 / 人 / 小时,乘以 500 万人,得到每个工作小时约 1200 万美元。需要说清的是,这几个输入没有一个给了出处,都是他自己设的;而结论只能和最弱的那个假设一样可靠——撑起整笔账的恰恰是「48 小时内 17.8%」和「一律高 15%」这两条最没根据的。",
+        "那个美元头条数的作用是修辞:让禁令听起来很贵。真正值得拎出来的,反倒是那条采用速度假设——如果成立,意思是一个模型上线两天内就能拿下近两成的前沿编码工作量,几乎是即时占领;但 Garry 同样没给来源,只能当成一个碰巧很具体的猜测看。立场上,他是 YC 总裁、公开反对在模型层面设限(和 6-13 把这条禁令读作监管开始管到模型本身,是一脉相承的),所以整笔账是倡导、不是测量。能用的读法是:这个数告诉你挺 builder 的那一方在怎么给禁令的代价定调,而不是代价到底是多少。"
+      ],
+      "creator": "Garry Tan",
+      "role": "总裁兼 CEO, Y Combinator",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2067366749411176831" }
+      ],
+      "related": [
+        { "slug": "2026-06-13-fable-restriction-ai-regulation", "note": "他在给这条禁令估成本" }
+      ]
+    },
+    {
+      "slug": "2026-06-18-rauch-glm-next-evals-agent-framework",
+      "title": "Rauch:开源模型 GLM 5.2 在 Vercel 自家的 Next.js Evals 上反超 Opus 4.8,他借此说 agent 需要专属的构建框架",
+      "summary": "Rauch(Vercel)抛出一个数据点:开源模型 GLM 5.2 在 Vercel 自家的 Next.js Evals 上反超了 Opus 4.8。他借此推自家 AI SDK——模型竞争这么激烈,更需要一套能把 agent 建出来、部署掉的框架。可核验的只有这一个评测结果:Vercel 自家评测、未给方法,要重打折。给跟踪模型竞争的人。",
+      "content": [
+        "值得注意的不是名次本身,而是它发生在哪种评测上。GLM 5.2 是开源模型,而 Vercel 的 Next.js Evals 测的是贴着框架的真实任务(把一个真的 web 应用建出来、部署掉),不是抽象跑分;一个开源模型在这种评测上压过最新的 Opus 4.8,信号和它在通用 benchmark 上领先不一样——是在 Vercel 客户实际在做的那类活上领先。前提先摆清楚:这是 Vercel 自家的评测、推文没给方法,所以这条只能当「在这一个评测里」,不是一个普适排名。它也和 6-13 那条「近前沿开源模型会越来越少」形成对照——不过那条讲的是经济账(实验室选择不放出来),不是能力停滞,所以这里是个侧面的、而非正面的反例。",
+        "他的论点是:模型竞争到这个程度、彼此越来越可替换,真正持久的需求是一套把 agent 实际建出来、部署出去的框架——「就像 React 需要 Next.js 来解决建一个真正 web 应用这件事」。(这条推文在此处断了,停在「And that's eve.」,所以他到底把哪一层点名成这个框架,没写全;他指向的是自家 AI SDK。)立场上,这是 Rauch 反复在讲的同一套叙事——他把 Workflow SDK 称作「后端的 Next.js」——也直接服务于 Vercel 和 AI SDK,要照此打折。能拿走的就一句窄的:可核验的只有那个单一评测结果;框架那套是推销,但底下那条观察——模型选择正在商品化,价值往构建 / 部署层挪——是站得住的。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "CEO, Vercel",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @rauchg", "url": "https://x.com/rauchg/status/2067242482190979186" }
+      ],
+      "related": [
+        { "slug": "2026-04-17-workflow-sdk", "note": "他「agent 需专属框架」的早前说法" },
+        { "slug": "2026-06-13-open-weight-ai-decline", "note": "对照:开源模型实测反超前沿" }
+      ]
+    },
+    {
+      "slug": "2026-06-18-github-coo-agent-self-improvement-loop",
+      "title": "GitHub COO 的主力 agent 用法不是写代码,而是让它读自己每周的邮件和发言、回报表达问题",
+      "summary": "Kyle Daigle 说他个人的 agent 循环大半用来改进自己、而非软件:他单养了一个与工作系统隔离的 agent(他叫它 Baxter),让它读他写和说的一切,每天回一份「沟通报告」指出哪句不清楚,还回看过去 7 天他有没有照做。他的判断是,人更容易接受机器人的批评,因为不像被人指出那样有威胁感。给想给 agent 找个写代码之外用法的人。",
+      "content": [
+        "重点在他那句「我的 agent 循环大半是关于我自己,而不是软件那边」。Baxter 是他一个和工作系统隔离开的 OpenClaw agent,吃进他写的和说的一切(他说这次访谈最终也会喂进去)。它每天的产出不是把原话复述一遍,而是一份批评:「Kyle,你老这么说」「这句不够清楚」;因为他写和说都偏爱用比喻,它会专门给他举出更清楚的比喻。这个循环是明确回看式、且闭环的:读过去 7 天的邮件和 Slack,给反馈,再回头看接下来 7 天他有没有照着改,然后接着循环。",
+        "在他的说法里,这之所以管用,是因为「人更愿意接受来自机器人的批评,而不是来自其他人的——它没那么有威胁感」(他把这接回 GitHub 早年的 Hubot / chatops)。这是他真正想要的那种个人化 AI 体验:把工具调到懂你。可搬走的就是这套模式——拿一个隔离的 agent 对着自己最近的沟通记录,要它给具体(而非泛泛)的批评,再用「有没有照做」来闭环。它没挂任何产品主张,所以除了「这是一个人的日常用法」之外,没什么要额外打折的。"
+      ],
+      "creator": "Kyle Daigle",
+      "role": "GitHub COO / 微软开发者业务 CMO",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "AI & I by Every 播客", "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "「品味」不只是审美上的品味,就像「设计」不只是视觉设计。感觉关于这个话题的对话有一半都是在各说各话,就卡在这个区别上。",
+      "creator": "Nan Yu",
+      "handle": "thenanyu",
+      "sourceType": "x",
+      "url": "https://x.com/thenanyu/status/2067327619897446721"
+    },
+    {
+      "quote": "我觉得两样还是都得有,但最关键的一点是:技术型创始人现在能用上商业思维,商业型创始人现在能用上技术思维。净结果:更多真正跑得通的创业公司,就这么简单。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2067308407603048774"
+    },
+    {
+      "quote": "提醒一下:Codex 的 App、CLI 和 SDK 可以配任意开源模型用,不限于 OpenAI 自家的模型。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2067181377028538431"
+    },
+    {
+      "quote": "Claude Design 和 Claude Code 现在双向打通(今天开始陆续上线):可以把设计稿交付出去构建,也可以从 Claude Code 起步、在终端里同步设计项目。支持导出为 PDF 和 PowerPoint,或发送到你已经在用的更多工具里。",
+      "creator": "Claude",
+      "handle": "claudeai",
+      "sourceType": "x",
+      "url": "https://x.com/claudeai/status/2067325893001826552"
+    },
+    {
+      "quote": "在今天的市场里,认出一轮分批(tranched)融资特别简单:如果有人按公布的估值融了几千万美元、稀释却不到 10%,基本可以断定这是一轮分批交易。这在种子轮 / A 轮显然成立,但可惜 B 轮也开始看到些奇怪的分批了。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2067397092981772501"
+    }
+  ]
+}

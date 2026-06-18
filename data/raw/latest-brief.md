@@ -1,147 +1,132 @@
 # Follow Builders Feed Brief
 
-Synced at: 2026-06-13T12:47:38.151Z
-Feed generated at: 2026-06-13T07:35:56.854Z
+Synced at: 2026-06-18T08:11:32.939Z
+Feed generated at: 2026-06-18T08:03:03.076Z
 Builders: 16
-Tweets: 39
+Tweets: 38
 Podcasts: 1
-Blogs: 3
+Blogs: 0
 
 Use this file as the quick scan view. Full payload lives in `data/raw/latest.json`.
 
 ## X / Twitter
 
-### Andrej Karpathy (@karpathy)
-- In awe of SpaceX and its story - past, present and the future. You can think about it in 10+ different ways and continue re-blowing your mind in circles. Huge congrats to the team! 🚀
-  https://x.com/karpathy/status/2065490793092337691
-
 ### Swyx (@swyx)
-- how your email finds me (if youre waiting for a decision or reply pls dont take it personally im just in peak crunch mode for aie) https://t.co/BISqXaFlHm
-  https://x.com/swyx/status/2065699264907694123
-- ## The Future Codebase After the PR dies, after the Code Review dies, i am seriously wondering if Git needs to die next. roughly 20-40% of code spend is just managing and updating merge conflicts. necessary evil? or legacy "horseless carri…
-  https://x.com/swyx/status/2065559864559145420
-- neat thing about developer exception engineering is: the happy paths are all happy in their own way. the unhappy paths are ~universally the same. https://t.co/Wnbtc9eAzk
-  https://x.com/swyx/status/2065516685113827533
+- @midjourney @Scobleizer @bryan_johnson @DavidSHolz @iScienceLuvr best review from a cancer survivor x tech realist https://t.co/SjOAkpX2U4
+  https://x.com/swyx/status/2067512137405350067
+- @midjourney @Scobleizer @bryan_johnson @DavidSHolz @iScienceLuvr another SUPER fun highlight of my evening was telling @zoink how we are using @polymarket prediction markets to gauge the implied value of our july 1 @aiDotEngineer world cup…
+  https://x.com/swyx/status/2067511309609115657
+- @midjourney @Scobleizer @bryan_johnson @DavidSHolz @iScienceLuvr paper https://t.co/Zl7ihLAFZn
+  https://x.com/swyx/status/2067495676972540343
+
+### Josh Woodward (@joshwoodward)
+- Co-create: one of the key @GoogleLabs values. It looks like this, thanks Voltage team! https://t.co/L90dHl9VQh
+  https://x.com/joshwoodward/status/2067337173699850487
 
 ### Thibault Sottiaux (@thsottiaux)
-- Heard your (amusing) feedback that it was at times annoying to receive a reset of your Codex usage without warning. Next time we press the button you will get to choose when it actually applies. Happy codexing. https://t.co/xXiqGijtIP
-  https://x.com/thsottiaux/status/2065468501750649006
+- Dearest gentle codexer. We did a sneaky double reset. Not only do you get a full reset on us. But you are also getting one into the reset bank to use at your own leisure. Enjoy https://t.co/eORoaKb3pL
+  https://x.com/thsottiaux/status/2067399435009622521
+- Reminder that you can use the Codex App, CLI and SDK with any open source model, not just with OpenAI models. https://t.co/spPifB4ck3
+  https://x.com/thsottiaux/status/2067181377028538431
 
 ### Peter Yang (@petergyang)
-- Yeah I think ID verification will soon be required to access the best models
-  https://x.com/petergyang/status/2065622592309039449
-- Suspending Fable for all “foreign person inside the US” is wild. How can you even enforce this properly?
-  https://x.com/petergyang/status/2065602691850764667
-- Wow wtf?! https://t.co/T4gztHHj8e
-  https://x.com/petergyang/status/2065601540350750846
+- Watched Mortal Kombat 2 and it was terrible. The Furious has set the bar too high for action movies.
+  https://x.com/petergyang/status/2067472851444420715
+- Guys are you telling me that /goal build me an amazing game doesn’t work? 🤣
+  https://x.com/petergyang/status/2067441631100596436
+- Video is now live! Watch here: https://t.co/0VPeCoLfSw
+  https://x.com/petergyang/status/2067407099496464393
 
-### Madhu Guru (@realmadhuguru)
-- Just wrote out a whole doc with my bare hands - manually, with a keyboard. No dictation, no AI. Because I like to live dangerously.
-  https://x.com/realmadhuguru/status/2065541200971759669
+### Nan Yu (@thenanyu)
+- like, pg talks about taste and wears cargo shorts, he's clearly not talking about taste in pants
+  https://x.com/thenanyu/status/2067327901666521478
+- "taste" is not just taste in aesthetics, the same way "design" is not just visual design. feels like half the conversations on the subject are people talking past each other because of this distinction
+  https://x.com/thenanyu/status/2067327619897446721
 
 ### Amjad Masad (@amasad)
-- Sounds like we’re going to have turn off access to Fable. https://t.co/9LpO1RhlXc
-  https://x.com/amasad/status/2065600809224814835
-- When the whole Tokenmaxxing craze started some our enterprise customers asked us for a leaderboard. We said no. Would’ve been “great” for business but we’re not in the business of selling tokens for the sake of tokens. We sell outcomes. An…
-  https://x.com/amasad/status/2065597793998422308
-- If you make money on Replit, you get free credits! https://t.co/UfC2HCi7lZ
-  https://x.com/amasad/status/2065503810592833560
+- Was so fun interviewing Spike Jones! https://t.co/EVkl1bH8so
+  https://x.com/amasad/status/2067386053980266542
+- Design with Claude, Ship with Replit https://t.co/zY1RSyubKT
+  https://x.com/amasad/status/2067363904183783833
+- Vibecon https://t.co/5MFsYh7X4Z
+  https://x.com/amasad/status/2067363597110391230
 
 ### Guillermo Rauch (@rauchg)
-- https://t.co/iMbPIuCsnR
-  https://x.com/rauchg/status/2065595134906191912
-- We just shipped 𝙷𝚊𝚛𝚗𝚎𝚜𝚜𝙰𝚐𝚎𝚗𝚝, a unified abstraction to orchestrate and integrate any agent’s “brain” into your app. @aisdk now frees you from both model and agent lock-in. (And it doesn’t just get you portability, it’s also del…
-  https://x.com/rauchg/status/2065520041894756480
-- HTML is so back. Drag and https://t.co/HJSiShgTtP https://t.co/ay1f9Iol4W
-  https://x.com/rauchg/status/2065494112669966660
-
-### Alex Albert (@alexalbert__)
-- Pulled this from our prompting guide which has many more tips for working with Fable: https://t.co/xHvvfIY0Ex
-  https://x.com/alexalbert__/status/2065493242158924031
-- Fable feels superhuman at working over long agentic conversations, sometimes to the point where I can't keep up with what it's telling me 😅 This prompt snippet has been the best fix I've found for getting it to write clearly and drop any …
-  https://x.com/alexalbert__/status/2065493229760565758
+- https://t.co/ZciGmJ8SAP
+  https://x.com/rauchg/status/2067369305826574587
+- (Part of) the wonderful team that made Vercel SHIP London possible 🫶 https://t.co/X0BWDRSdDp
+  https://x.com/rauchg/status/2067274101702406554
+- React → https://t.co/a4QDSs9wxd Next.js → https://t.co/nDDXqUmgw5 @aisdk is more relevant than ever, given the intense model competition landscape. Just today, GLM 5.2, an open model, surpassed Opus 4.8 in our Next.js Evals (https://t.co/a…
+  https://x.com/rauchg/status/2067242482190979186
 
 ### Aaron Levie (@levie)
-- This is a big turning point for AI regulation. The government is starting to deem some models too powerful for certain uses, which creates a precedent for a range of possible controls in the future. I’m in the camp that this is unnecessary…
-  https://x.com/levie/status/2065616509666472329
-- This is pretty freaking cool https://t.co/bHnIUti4FH
-  https://x.com/levie/status/2065594956186865815
-- Incredible. Congrats to @elonmusk and the entire SpaceX team on the 25 years of blood, sweat and tears to build a world-defining company. Amazing to have examples like this that push the future forward. The downstream implications of this …
-  https://x.com/levie/status/2065469347712401712
+- The past couple months we may be witnessing what the Applied AI layer will look like at scale. Despite some of the initial critique that this would just be a thin layer on the LLM, it’s turning out that actually driving agentic workflows i…
+  https://x.com/levie/status/2067455756795039957
 
 ### Garry Tan (@garrytan)
-- So proud of @datacurve (YC W24) - building THE defining software engineering benchmark in DeepSWE Tired? SWE-Bench Pro Wired? Datacurve DeepSWE https://t.co/ZoftIrEGKc
-  https://x.com/garrytan/status/2065595201008398592
-- I just discovered forceBlockStreamingForReasoning = resolvedReasoningLevel === "on" for OpenClaw and frankly I love it Seeing the reasoning traces of my claw with Claude Fable 5 is a mind-blowing experience. Seeing the tale of the tape, an…
-  https://x.com/garrytan/status/2065432924724539848
-- Everyone thinks AI coding tools set founders free. Watch what people actually build with them: rules, approvals, process, layers. The same cage, assembled faster. The tool that can scaffold anything in an afternoon will scaffold your burea…
-  https://x.com/garrytan/status/2065416181943865611
+- Rough estimate on $ productivity lost by Fable 5 ban: $12M per hour Frontier AI-coding daily actives, mid-2026: 5M devs Fully-loaded cost: $90/hr Work routed to Fable in 48 hours: 17.8% Fable is on average ~15% more productive Effective th…
+  https://x.com/garrytan/status/2067366749411176831
+- I think you still need both, but the main lede is: technical founders now have access to business thinking Business founders now have access to technical thinking Net net: more startups that actually work, period https://t.co/Kd3iRxQrtE
+  https://x.com/garrytan/status/2067308407603048774
+- We don’t care what your age is We care if you can build with craft and care And if you can make something people want https://t.co/iCv9svn4VD
+  https://x.com/garrytan/status/2067260431597723825
 
 ### Zara Zhang (@zarazhangrui)
-- There are SO many people, friends, acquaintances, followers, startups, asking me to try their new AI products every day Like I get at least 3 such requests per day If I tried all of these products I wouldn’t have time to do anything else T…
-  https://x.com/zarazhangrui/status/2065696088519270402
-- A viral product has a founder people can see and hear People buy from people. A screen recording from the founder beats a corporate promo video or a wall of features. Show your face. https://t.co/8gdGFsIVJB
-  https://x.com/zarazhangrui/status/2065674426197393779
+- Don't use AI for writing until you develop your own taste and voice Using AI to write isn't inherently bad. The danger is using AI to write before you've developed your taste for what is good content. If the AI produces slop, you won't eve…
+  https://x.com/zarazhangrui/status/2067423674689638652
+- The thing about vibe coded personal apps: Building the thing takes a day. Finding out if you'll actually use it takes a week. Most of my dead projects worked fine. I just never opened them. Most products are built for a person who doesn't …
+  https://x.com/zarazhangrui/status/2067313780724551853
 
 ### Nikunj Kothari (@nikunj)
-- My shot at how application companies survive the “what if large lab builds this” question 😅 https://t.co/2Hux7K4oIQ
-  https://x.com/nikunj/status/2065581110822593000
-- https://t.co/N1t71afKPF
-  https://x.com/nikunj/status/2065559895450288611
-- Anyone else have two voices? I often have two voices that come out both in my writing and how I speak. One is the frenetic, time is the enemy, direct, punchy gets to the point quickly and then the second is more calm, measured, structured …
-  https://x.com/nikunj/status/2065473941385421279
+- Why am I so against tranches? Because it f*cks the next employee that joins. I was an early employee at four startups. My 409A would be so high. And why am I being subject to the ridiculous valuation that the lead preferred investor didn’t…
+  https://x.com/nikunj/status/2067399657639285150
+- Spotting a tranched round is so simple in today’s market.. If someone raises xxM $ at under 10% dilution of the published valuation, you can safely bet it was a tranched round. This is obviously true for seed/A but sadly seeing weird tranc…
+  https://x.com/nikunj/status/2067397092981772501
+- The next 12 months we are going to see some incredible emerging manager's come out with their debut funds.. These are NOT household names today, but will be in the next decade. Each one has intense founder love, unique lens on the world an…
+  https://x.com/nikunj/status/2067378464773292066
 
 ### Peter Steinberger (@steipete)
-- I can barely keep up with implementing/testing/landing all the Issues/PRs folks submit to https://t.co/qUxn0LF7Ct Codex runs INSIDE crabbox while it is building crabbox. This is becoming essential infra for my work. Codex been looping nons…
-  https://x.com/steipete/status/2065650561484267540
-- “not consistently candid in their communications” is my fav new americanism. https://t.co/MJItibA6xZ
-  https://x.com/steipete/status/2065574894545560062
-- codex -C ~/projects/openclaw -m gpt-5.5-cyber time https://t.co/6ANgzM1JKJ
-  https://x.com/steipete/status/2065567852162355551
+- sci-fi vibes intensify https://t.co/4Y4iakN3vv
+  https://x.com/steipete/status/2067431311317352809
 
 ### Dan Shipper (@danshipper)
-- harry potter fan fiction and hillbilly elegy brought us to this https://t.co/tVAPAWq1Sg
-  https://x.com/danshipper/status/2065620303729078435
-- this seriously messes up my weekend plans i may have to actually see people
-  https://x.com/danshipper/status/2065618107750916323
-- cfos everywhere: we are so back https://t.co/v4ZxOKeYYk
-  https://x.com/danshipper/status/2065610408627724635
+- @every @ninklefitz i wrote "against explanations" in 2023 about how AI might change the sciences...extremely pumped to see the prospect of so much progress so fast https://t.co/kHiw3WpOMd
+  https://x.com/danshipper/status/2067386395283345808
+- we @every make investments every so often in founders building things in AI who we think are excellent @ninklefitz is one of those founders—and i am also a huge fan of tacit's mission and approach https://t.co/Hn9B8bWf8l
+  https://x.com/danshipper/status/2067386342661624055
+- @hammer_mt @github @kdaigle YouTube: https://t.co/SFX4wwc2rf Spotify: https://t.co/X01KaoY5cC
+  https://x.com/danshipper/status/2067293009964630081
 
 ### Aditya Agarwal (@adityaag)
-- It's a good day to be called SPC. We are temporarily renaming ourselves to Space Park Commons.
-  https://x.com/adityaag/status/2065467866930135491
-- Very very excited to welcome Ryan Atkins to the team as a Partner. We have a lot to build @southpkcommons! https://t.co/LwqApZUBRj
-  https://x.com/adityaag/status/2065460544719704355
+- Apply to SPC https://t.co/xWaXyqC7Rj
+  https://x.com/adityaag/status/2067306245942317426
+- Read through all of the questions https://t.co/iT8yVX5SMg
+  https://x.com/adityaag/status/2067306244390428893
+- The questions SPC members explore signal where the frontier is heading next. https://t.co/3bvAEkvMpP
+  https://x.com/adityaag/status/2067306242825949398
+
+### Sam Altman (@sama)
+- We offer no explanation as to why Noams are so good at AI; we attribute their success, as all else, to divine benevolence. https://t.co/QQ93UCF4ok
+  https://x.com/sama/status/2067427678529974740
+- noam is one of the people I have most wanted to work with since the very beginning of openai. only took 10 years. i think it will be worth the wait! https://t.co/Hj2fjCywjv
+  https://x.com/sama/status/2067427421083652131
 
 ### Claude (@claudeai)
-- What are you building?
-  https://x.com/claudeai/status/2065456700379807900
-- https://t.co/LtOV9OsRkv
-  https://x.com/claudeai/status/2065456697670352901
-- https://t.co/BtwoXkczqm
-  https://x.com/claudeai/status/2065456695422136567
+- Claude Design is in beta on all paid plans, on web and desktop. Give it a try: https://t.co/C9iewmyMQs
+  https://x.com/claudeai/status/2067325894268428560
+- Claude Design and Claude Code work together in both directions (rolling out today). Hand a design off to build, or start in Claude Code and sync design projects from your terminal. Export to PDF and PowerPoint, or send your work to more of…
+  https://x.com/claudeai/status/2067325893001826552
+- The redesigned editor is steadier for daily work. New layout controls let you drag, resize, and align elements directly on the canvas.
+  https://x.com/claudeai/status/2067325891781226581
 
 ## Podcasts
 
-### Unsupervised Learning
-- AI Vibe Check: Lab Wars, Why APIs Might Vanish & Future Predictions
-- https://www.youtube.com/watch?v=W_iO8XxgD_I
-- Transcript preview: Speaker 1 | 00:00 - 00:22 I'm Jacob Efron, and this is unsupervised learning. We've had a bunch of new subscribers over our last few months, and so wanted to welcome you to the show. We basically probe the sharpest minds in AI on everything that's happening today, what's real, and what's coming up,…
+### AI & I by Every
+- GitHub’s COO Explains Why AI Hasn’t Replaced Developers
+- https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL
+- Transcript preview: Speaker 1 | 00:00 - 00:36 Hi, I'm Mike Taylor. I'm the head of tech consulting at Every, and I sat down with Kyle Daigle, the COO of GitHub, and talked to him about what is happening on the front lines of coding agents. We have 17,000,000 poll requests coming in every month to GitHub now, it's grow…
 
 ## Blogs
 
-### Anthropic Engineering
-- An update on recent Claude Code quality reports
-- https://www.anthropic.com/engineering/april-23-postmortem
-- Over the past month, we’ve been looking into reports that Claude’s responses have worsened for some users. We’ve traced these reports to three separate changes that affected Claude Code, the Claude Agent SDK, and Claude Cowork. The API was not impacted. All three issues have now been resolved as of…
-
-### Anthropic Engineering
-- Scaling Managed Agents: Decoupling the brain from the hands
-- https://www.anthropic.com/engineering/managed-agents
-- Get started with Claude Managed Agents by following our docs . A running topic on the Engineering Blog is how to build effective agents and design harnesses for long-running work . A common thread across this work is that harnesses encode assumptions about what Claude can’t do on its own. However, …
-
-### Claude Blog
-- New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels
-- https://claude.com/blog/claude-managed-agents-updates
-- Starting today, Claude Managed Agents can operate in a sandbox you control and connect to your private Model Context Protocol (MCP) servers. Both the sandbox where an agent executes tools and the services it reaches run within the established boundaries of your enterprise, under your security and r…
+- No fresh blog posts in the current feed.
 
