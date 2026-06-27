@@ -20,6 +20,7 @@ Cognition 成员、Latent Space 播客主理人、AI Engineer 大会主办者。
 ### 行业格局观察
 - Meta AI 标拐点：Llama 4 翻车后回转，证据四件套——招聘不减反增、Zuck 搬去与 Alexandr/Nat 同住并亲自写代码、上线「接近 Opus 级」模型（他个人评级，无 API 不开源、不可外部核验）、收购 Dreamer 和 Manus 瞄准 AI OS 的 prosumer 层（[2026-04-16-swyx-meta-turn]）
 - AI 开发工具变现：转述 Vibe-kanban 创始人关停理由「在赚钱的只做两件事：卖企业版、转售 token」——3 万月活没有自动变成生意；且这不是第一家在 AIE 现场宣布关停的公司（[2026-05-03-vibe-kanban-shutdown]）
+- 价值往服务侧走：OpenAI 和 Anthropic 都在组建几十亿美元级服务部门（services arms），FDE 因此成了地球上最抢手的职业之一；他自陈没干过这活、正办首届 AI FDE 小会，带自家活动推广成分，可核验的是「两家头部实验室自己也在往服务走」（[2026-06-27-value-shift-software-to-services]，佐证 Peter Yang）
 
 ## 言论时间线
 
@@ -31,3 +32,4 @@ Cognition 成员、Latent Space 播客主理人、AI Engineer 大会主办者。
 - 2026-06-05 [2026-06-05-cognition-100hr-enterprise-evals] 介绍 Cognition 首个 eval：企业任务长达 100 小时，远超 METR 公开集
 - 2026-06-09 [2026-06-09-frontiercode-metr-benchmark] 发布 FrontierCode；称 SWE-bench 过半结果是不可合并的劣质代码
 - 2026-06-13 [2026-06-13-swyx-future-codebase-git] 设想 PR/review 之后 Git 也该退场：合并冲突占写码开销 20-40%，未来代码库或像 Notion/Linear 数据库
+- 2026-06-27 [2026-06-27-value-shift-software-to-services] OpenAI 和 Anthropic 都在组建几十亿美元级服务部门，FDE 成最抢手职业之一（佐证 Peter Yang 的价值转向服务）

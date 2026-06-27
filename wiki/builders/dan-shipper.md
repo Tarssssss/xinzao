@@ -31,6 +31,9 @@ Every（30 人 AI native 内容+产品公司）CEO，AI & I 播客主持人。�
 - Plus One：内部 agent 最佳实践打包的托管产品（2026-04-09-every-agent-org 整期为其铺垫）。
 - Spiral 4.0：基于 stylometry 的写作引擎，MCP/CLI 接入供 agent 调用（2026-06-05-spiral-4-stylometry-writing-agent）。
 
+### 模型访问与政策
+- 反对 frontier 模型访问被收窄：GPT-5.6 Sol 发布即被限制在约 20 家公司（他称按美国政府指令），主张最强模型必须保持广泛、民主的访问——既关系美国 AI 领先，也关系普通从业者拿到工具的机会；他理解网络安全那部分监管，但反对把模型锁给少数巨头（2026-06-27-gpt56-sol-access-gating）。
+
 ## 言论时间线
 
 - 2026-04-07 [2026-04-07-shipper-hierarchy-context-rot] 反对「AI 消灭组织层级」：context rot 决定专业化分工仍必要
@@ -47,3 +50,4 @@ Every（30 人 AI native 内容+产品公司）CEO，AI & I 播客主持人。�
 - 2026-05-28 [2026-05-28-dan-shipper-writing-workflow-claude-codex] 公开 8000 字长文工作流：Claude 想清楚、Codex 转播客复听
 - 2026-06-04 [2026-06-04-dan-shipper-saaspocalypse-backwards-chat-wrong-for-design] SaaSpocalypse 搞反了：跑 agent 更依赖 SaaS；chat 不适合设计
 - 2026-06-05 [2026-06-05-spiral-4-stylometry-writing-agent] 发布 Spiral 4.0：stylometry 写作引擎，MCP/CLI 供 agent 调用
+- 2026-06-27 [2026-06-27-gpt56-sol-access-gating] 称 GPT-5.6 Sol 发布即被限制访问（约 20 家公司、据其说按政府指令），主张 frontier 模型必须保持广泛民主访问

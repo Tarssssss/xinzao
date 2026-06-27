@@ -24,6 +24,7 @@ FPV Ventures 合伙人，前 founder/operator（曾在 Meter），转型 VC 约�
 - 边界论：不否认简单工作流会被 vibe code 掉，但质量、深度、好系统仍要时间——「You can't vibe code lessons」（[2026-04-15-nikunj-vibe-code-lessons]）
 - 实践上是重度用户，且方法论输出密集：开源 LLMwiki 个人维基（Opus 4.5 vibe code，[2026-04-09-llmwiki]）；第一个付费 side project 购房报告工具，按成本价卖、半价码换反馈（[2026-05-02-nikunj-paid-side-project]）；「模型执行单位」估工指令（[2026-05-10-nikunj-model-execution-units]）；用 Claude Code 嗅探网络请求逆向 API，并预测网站将需要 headless 化和 tools.txt（[2026-05-25-nikunj-reverse-engineer-apis-claude-code]）；用 200+ 份 Granola 会议记录搭 Nock skill，用真实对话做对照式 eval 打磨到「像他本人」（[2026-06-05-nikunj-nock-skill-from-meeting-notes]）
 - 两条线不矛盾：他用 AI 压低执行成本，但坚持判断/经验/打磨没法 vibe code——这是他「留存 > 势头」主线在工具层的延伸。
+- 6-27 给 taste 加一层细分（对前一条的细化，非反转）：taste 是靠下场反复迭代 + 主动打破模式练出来的、可习得的本事，所以 AI 有相当大机会真正长出 taste（靠同样的「学习、吸收、打破模式」循环）；偏乐观、冲着「AI 不可能有 taste」一派，本身是观点。可检验关口是 AI 能否引入真正变化而非过拟合训练分布（[2026-06-27-nikunj-taste-iteration-ai]，同场讨论另一面见 [2026-06-18-zara-zhang-taste-before-ai-writing]）
 
 ### 其他赛道/趋势判断
 - 网络安全看多：攻击节奏随模型能力提升加快、人仍是首要攻击向量；发在 Vercel 入侵通报后不到一小时，VC 观点帖无数据支撑（[2026-04-20-cybersecurity-thesis]）
@@ -53,3 +54,4 @@ FPV Ventures 合伙人，前 founder/operator（曾在 Meter），转型 VC 约�
 - 2026-05-25 [2026-05-25-nikunj-reverse-engineer-apis-claude-code] 用 Claude Code 抓网络请求逆向 API；预测网站需 headless 化 + tools.txt
 - 2026-06-03 [2026-06-03-nikunj-kothari-fundraising-bar] 单点叙事融不到资，六要素要有难复制的组合独特性
 - 2026-06-05 [2026-06-05-nikunj-nock-skill-from-meeting-notes] 用 200+ 份 Granola 记录搭 Nock skill，真实对话对照打磨
+- 2026-06-27 [2026-06-27-nikunj-taste-iteration-ai] taste 靠反复迭代 + 打破模式练出来，AI 有相当大机会真正长出 taste（反共识、偏乐观）

@@ -9,3 +9,5 @@
 ## [2026-06-13] ingest | 新增 4 story（Fable 监管、API 供给风险、开源退潮、Swyx future codebase）+ 5 速览；更新 Levie/Yang/Masad/Swyx 页与 token-economics、review-bottleneck 两条线索；新建 unsupervised-learning 渠道页
 
 ## [2026-06-18] ingest | 新增 7 story（Levie 应用层四组件打法、GitHub COO 三条：模型路由/agent PR 量级/自我改进循环、Zara AI 写作品味、Garry Fable 禁令成本估算、Rauch GLM 反超 Opus）+ 5 速览；新建 kyle-daigle 页；更新 Levie/Zara/Garry/Rauch 页与 app-layer-moat、token-economics、review-bottleneck 三条线索
+
+## [2026-06-27] ingest | 新增 3 story（GPT-5.6 Sol 限制访问、价值转向服务、Nikunj taste 可习得）+ 5 速览；新建 frontier-model-access-restriction 线索（访问受限主题已跨 6-13/6-18/6-27 三期、多 builder，达开页阈值）；更新 Dan/Garry/Peter Yang/Swyx/Nikunj 页与 headless-software-saaspocalypse 线索

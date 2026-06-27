@@ -12,6 +12,7 @@ Roblox 产品经理，高频输出 agent 工作流实操方法论，同时是刊
 ### 应用层与 SaaS 格局
 - 一手行为数据：把常用服务 API 接进个人 agent（OpenClaw）后几乎不再打开任务型应用，X 仍每天刷；推断任务型应用萎缩、娱乐应用活得久（2026-04-07-peter-yang-agent-first-work）
 - 6 月把该判断收敛细化：窄用例简单 SaaS 更难变现（skills 更灵活、带个人上下文的 agent 知道更多、用户拿 $20/月 SaaS 与自己的 Claude/ChatGPT 订阅比价），大型企业 SaaS（如 Figma）仍稳；自加对冲「我可能在 bubble 里」。是 4 月判断的深化而非反转（2026-06-03-peter-yang-narrow-saas-harder-to-monetize）
+- 6-27 把范围从「窄 SaaS」推到「纯软件公司」整体：钱在往服务而非软件走、人要的是结果不是工具，纯软件很难比用户自己的 Codex/Claude Code 加 skill/agent 更值钱；以「Thoughts?」收尾、属开放发问（2026-06-27-value-shift-software-to-services）
 
 ### Skill 与 AI 产出的维护
 - 警告 slop 复利机制：agent 拿自己未修正的旧产出当新产出的上下文，5% slop 滚到 10% 再往上；人工复核不能省（2026-05-10-peter-yang-slop-compounding）
@@ -46,3 +47,5 @@ Roblox 产品经理，高频输出 agent 工作流实操方法论，同时是刊
 - 2026-06-05 [2026-06-05-peter-yang-codex-system-setup] 工作流前置搭进 Codex 省一半时间，每步留人工检查点；点名 Codex 前端设计弱于 Claude
 - 2026-06-06 [2026-06-06-peter-yang-self-improving-skills] 五步法做能自查产出、随用随改的 skill，含清理其他 skill 的元 skill
 - 2026-06-13 [2026-06-13-fable-restriction-ai-regulation] 反应政府限制「在美外国人」用 Fable：质疑根本无法核验执行，预测访问最强模型很快要做身份验证
+- 2026-06-27 [2026-06-27-value-shift-software-to-services] 钱在往服务侧走、人要结果不要工具，纯软件难比用户自己的 Codex/Claude Code 加 skill 更值钱
+- 2026-06-27 [2026-06-27-gpt56-sol-access-gating] 反应 GPT-5.6 Sol 限制访问：一边把 frontier 蒸馏成便宜开源、一边限制访问，只会把需求推向开源、削弱美国创新

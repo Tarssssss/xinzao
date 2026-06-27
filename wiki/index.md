@@ -48,3 +48,4 @@
 - [编码 agent 的自治边界](threads/autonomous-coding-frontier.md) — 从盯着跑到放手数天：自主时长、零干预与企业级战绩
 - [可验证性与锯齿状能力](threads/verifiability-jaggedness.md) — 能力跃升集中在可验证领域吗？研究者对边界的反复修正
 - [人人写代码与一人公司](threads/everyone-codes-solo-builders.md) — 非工程师 vibe coding、CEO 重新上手、solo founder 拿 agent 当团队
+- [前沿模型访问受限：监管与门槛](threads/frontier-model-access-restriction.md) — 政府/政策与算力双向收窄最强模型的访问，builder 担心扼杀创新

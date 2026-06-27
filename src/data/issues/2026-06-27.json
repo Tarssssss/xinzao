@@ -1,0 +1,105 @@
+{
+  "date": "2026-06-27",
+  "generatedAt": "2026-06-27T07:24:33.639Z",
+  "stories": [
+    {
+      "slug": "2026-06-27-gpt56-sol-access-gating",
+      "title": "OpenAI 发布 GPT-5.6 Sol 当天即限制访问,据 Dan Shipper 称按政府指令只开放约 20 家公司,多位 builder 警告会扼杀创新",
+      "summary": "OpenAI 发布 GPT-5.6 Sol,但据 Dan Shipper,访问当天即被限制在约 20 家预批公司,他称是按美国政府指令。Dan 主张最强模型必须保持广泛、民主的访问,反对锁给少数巨头;Garry Tan 和 Peter Yang 都强烈反对,认为这只会把需求推向开源、削弱美国创新。立场多偏访问派、需打折;关注 AI 政策或依赖 frontier 访问的人值得看。",
+      "content": [
+        "Dan Shipper 是这条里信息最全的一手转述:GPT-5.6 Sol 当天发布,访问被限制在约 20 家预先获批的公司,Every 不在名单上;他称这是美国政府的指令,官方口径是在政府赶着为发布有高级能力的 frontier 模型制定长期政策期间的临时安排。真正的增量在这次限制的性质:它是一道决定「谁能用一个 frontier 模型」的政策闸门。算力紧张或定价造成的限流是一回事,政策层面直接卡访问资格是另一回事。Dan 的立场是,他理解并支持出于网络安全、让美国基础设施更抗攻击的那部分监管,但坚持 frontier 模型必须保持广泛、民主的访问——这既关系美国在 AI 竞赛里的领先,也关系普通学生、独立开发者和职场人能不能拿到工具去学习、创造、竞争;把最强模型锁给 AI 巨头和少数公司的员工,等于剥夺其余所有人的这个机会。",
+        "两条反应把代价讲得更具体。Peter Yang 把它排成一个循环:先发布 frontier 模型,它们被蒸馏进便宜的开源模型,美国公司因为开源够用且便宜得多纷纷采用,这时又开始限制 frontier 模型的访问。他顺势点出后果——在开源已经追上来的节点上限制访问,会把需求往开源那边推、把美国自己的创新往下压。Garry Tan(YC 总裁)的话更冲:「这根本不是发布模型该有的方式;照这样持续开发和发布,等于在土里撒盐,把小创业公司的一切创新都扼杀掉。」需要打折的是立场:Dan(Every)和 Garry(YC)都站在广泛访问这一侧,访问越开放对他们各自的生意和生态越有利。能独立核验、与立场无关的是那条结构性逻辑——当近前沿的开源替代已经存在,限制官方 frontier 访问确实会把更多采用挤向开源。",
+        "放进语境:这是两周内第二起 frontier 模型访问被收紧。上一次是 6-13 政府限制「在美外国人」使用 Fable——Peter Yang 当时就预测访问最强模型很快要做身份验证,Levie 把它读作监管开始直接管模型本身、为日后管控立先例。两件事方向一致:能用到最强模型的口子在从两个方向收窄,一边是这种政策闸门,一边是算力经济(实验室可能把最强模型更多留作内部用,见 6-13 算力紧缺那条)。对 builder 可操作的一点是,如果产品或工作流押在 frontier 模型的 API 访问上,「访问随时可能被设限」从此是个要纳入预案的现实风险,而不是假想;接下来值得盯的是这次约 20 家公司的限制会不会像官方说的那样很快放开。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "CEO, Every",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @danshipper", "url": "https://x.com/danshipper/status/2070554118146412979" },
+        { "label": "原推 @garrytan", "url": "https://x.com/garrytan/status/2070699046939820223" },
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2070633838146134219" }
+      ],
+      "related": [
+        { "slug": "2026-06-13-fable-restriction-ai-regulation", "note": "上一次前沿模型被限制访问" },
+        { "slug": "2026-06-13-compute-crunch-api-access-risk", "note": "访问收窄的另一条力量:算力" },
+        { "slug": "2026-06-18-garry-tan-fable-ban-productivity-cost", "note": "他一贯反对模型层限制" }
+      ]
+    },
+    {
+      "slug": "2026-06-27-value-shift-software-to-services",
+      "title": "Peter Yang:AI 时代的价值在往服务侧走,纯软件公司越来越难比过用户自己的 Codex/Claude Code 加 skill",
+      "summary": "Roblox 的 Peter Yang 一手观察:钱大多流向了服务而非软件本身,因为人要的是结果,不是工具;纯软件公司很难比用户直接用 Codex/Claude Code 加个人 skill 和 agent 更值钱——他以发问收尾。Swyx 同向佐证:OpenAI 和 Anthropic 都在组建几十亿美元级服务部门,FDE 因此成了最抢手的职业之一。对判断价值落点的人有用。",
+      "content": [
+        "超出标题的增量是 Peter Yang 给的那条对比:纯软件工具如今要直接和买家自己的 Codex/Claude Code 加个人 skill、agent 这套栈竞争,而后者带着买家的个人上下文、知道更多,又被打包进他本来就在付的订阅里。所以衡量的尺子从「软件做得好不好」换成了「你比用户用现成 agent 自己拼出来的多值在哪」;当答案落在结果而非工具时,价值自然往能交付结果的服务侧走。这条是他 6-03 判断的延伸:当时说的是窄用例、简单 SaaS 更难变现,现在他把范围从窄 SaaS 推到了纯软件公司整体,并换了个角度(结果 vs 工具)重述。他自己用「Thoughts?」收尾,留了余地,当成一个待验证的读法看更稳。",
+        "Swyx 从另一头指向同一件事。他说,OpenAI 和 Anthropic 都在组建几十亿美元级的服务部门(services arms),正因为如此,FDE 成了地球上最抢手的职业之一——他还坦言自己从没干过这活,正在办第一届 AI FDE 主题的小会。要打折的是,这条带着他自家活动的推广成分;能独立核验、和推广无关的那半,是「两家头部实验室自己也在往服务走」这个事实。两条合起来:价值正从卖工具往交付结果挪,承接点是服务、FDE、部署这一层——这也接上刊里一直在跟的 headless 软件之争和 Levie 的 FDE 判断。对在做软件的人,能立住的问题变成一句:你交付的那个结果,得是买家拿自己的 agent 加上下文拼不出来的东西;拼得出来,就没有立足之地。"
+      ],
+      "creator": "Peter Yang",
+      "role": "Roblox 产品经理",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @petergyang", "url": "https://x.com/petergyang/status/2070568705365577990" },
+        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2070606851377672675" }
+      ],
+      "related": [
+        { "slug": "2026-06-03-peter-yang-narrow-saas-harder-to-monetize", "note": "从窄 SaaS 扩到纯软件公司" },
+        { "slug": "2026-04-07-peter-yang-agent-first-work", "note": "任务型应用萎缩的早前判断" }
+      ]
+    },
+    {
+      "slug": "2026-06-27-nikunj-taste-iteration-ai",
+      "title": "Nikunj Kothari:taste 靠在场反复迭代练出来,AI 有机会真正长出 taste",
+      "summary": "FPV 的 Nikunj Kothari 谈「taste(品味)」:嘲讽 taste 的人多半从没真做过东西,而 taste 离不开下场反复迭代——厨师的第 101 道菜已吃进上万次迭代的教训,但不带变化的过拟合会让人腻。反共识结论:taste 是练出来、可习得的本事,AI 就有机会靠同样那套「学习、吸收、打破模式」的循环真正长出 taste。对在争论 AI 有没有 taste 的人有参考。",
+      "content": [
+        "增量在他对 taste 的机制拆解:taste 是一种练出来的本事,靠在场子里大量做、并且刻意带变化练出来。他的厨师类比很具体——一个厨师做到第 101 道菜时,这道菜已经把前面上万次迭代的教训都吸收了进去;但如果只是不带多少变化地过拟合,人会腻,因为大家本来就想要点新的。所以在他这里,taste 等于大量迭代加上主动打破模式,只是重复并不生 taste。他对批评者那句「这些话来自一大堆从没真做过东西的人」也不只是抬杠:它把 taste 框定成一种练出来的手艺,为后面那句关于 AI 的判断铺好了前提。",
+        "正因为把 taste 看成可迭代习得的本事,他给出那个反共识判断:AI 有相当大的机会真正长出 taste,靠的是和人一样那套「学习、把教训吸收进去、再靠打破既有模式去创新」的循环,他说「不像多数人,我觉得它有挺大机会真做到」。要打折的是立场和性质:这是一位 VC 偏乐观的个人判断,也是冲着「AI 不可能有 taste」那一派来的,本身是观点不是证据。真正可检验的那一关是,AI 能不能像他描述的那样引入真正的变化、主动打破模式,而不是过拟合到训练分布上原地打转。放进语境,这条也给他自己 4 月「经验教训没法 vibe code」的说法加了层细分:那时他强调判断和经验抄不了近路,这次他说,长出 taste 所依赖的那套迭代机制,AI 原则上也能跑;和 Zara Zhang 6-18「没养出 taste 之前别用 AI 写作」是同一场 taste 讨论里的不同侧面。"
+      ],
+      "creator": "Nikunj Kothari",
+      "role": "FPV Ventures 合伙人",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @nikunj", "url": "https://x.com/nikunj/status/2070649602953576825" }
+      ],
+      "related": [
+        { "slug": "2026-04-15-nikunj-vibe-code-lessons", "note": "他此前说经验教训没法 vibe code" },
+        { "slug": "2026-06-18-zara-zhang-taste-before-ai-writing", "note": "同一 taste 讨论的另一面" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "GPT-5.6 是真的,看起来非常强。会很适合需要大量工具调用、长时间运行 agent 干活的知识工作。我们现在在 AI 进展上没有撞到任何墙。",
+      "creator": "Aaron Levie",
+      "handle": "levie",
+      "sourceType": "x",
+      "url": "https://x.com/levie/status/2070563281916620895"
+    },
+    {
+      "quote": "我们给所有 Codex 用户免费重置一次用量额度,几小时内会显示在账户里。我们已经上了一些缓解措施,但调查并未显示用户受到大范围影响,会继续监控。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2070653282440405046"
+    },
+    {
+      "quote": "AI 一个有意思的副作用是,我对浅层的人际互动彻底没了耐心。我很看重关系里的深度连接,能加深这种连接的方式都格外有价值。其余的一切,就交给 agent。我猜我们的世界会同时变得更小、又在关系深度上更丰富。",
+      "creator": "Aditya Agarwal",
+      "handle": "adityaag",
+      "sourceType": "x",
+      "url": "https://x.com/adityaag/status/2070621064271688021"
+    },
+    {
+      "quote": "秘密的第 6 级:有个问题,但它不值得解决,那就别去碰它。这就是为什么一堆都是 level 1 的组织能赢——他们不会被支线任务分心。",
+      "creator": "Nan Yu",
+      "handle": "thenanyu",
+      "sourceType": "x",
+      "url": "https://x.com/thenanyu/status/2070656348488937889"
+    },
+    {
+      "quote": "agent 是特别难调试的一类软件:一来,模型按设计就是非确定性的,同样两个 prompt 也不一定给出一样的输出;二来,agent 还是复杂的分布式系统,要跨多个函数和沙箱跑很多步,触达几十个随时可能宕机或限流的 API 服务。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2070676383135834334"
+    }
+  ]
+}

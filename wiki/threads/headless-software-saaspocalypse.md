@@ -7,7 +7,7 @@
 - Aaron Levie（Box CEO，主推手）：软件 headless 化不可避免，agent 用量可达人的 100 倍，不能被 agent 调用的软件 DOA。证据线从 20 位 IT 负责人访谈（2026-04-11-levie-headless-software、2026-04-13-levie-enterprise-agents）推进到定价三段式（2026-05-01-levie-headless-pricing）。他同时主张这对 SaaS 非零和：承接 agent 工作的底层记录系统反而受益（2026-05-02-levie-agents-software）。注意 Box 是这套叙事的直接受益方。
 - Bill McDermott（ServiceNow CEO，反方）：自家测算用 LLM 复刻平台应用总成本贵 10 倍，「企业不原谅软件犯错」；风险分层——跨部门 system of record 安全，单一职能的部门级软件最危险（2026-04-18-mcdermott-saaspocalypse）。末日论对手盘里最完整的一版，但 10 倍成本是未公开口径。
 - Guillermo Rauch（Vercel CEO，供给侧激进派）：用现成构件生成软件已比搜寻采购 SaaS 容易，每个团队都能建自己的「设计工厂」（2026-04-16-rauch-design-factory）；no-code 赖以成立的「代码昂贵稀缺」前提被 coding agent 推翻，提出 yes-code（2026-06-03-rauchg-yes-code）。两条都服务 Vercel「给 agent 的云」定位。
-- Peter Yang（Roblox 产品负责人，分化论）：大型多用途企业 SaaS 仍稳，窄用例简单 SaaS 变现路径变窄——AI skills 更灵活、带个人上下文的 agent 知道更多、$20/月会被拿去和用户自己的 Claude/ChatGPT 订阅比价（2026-06-03-peter-yang-narrow-saas-harder-to-monetize）。自己对冲了一句「可能在 bubble 里」。
+- Peter Yang（Roblox 产品负责人，分化论）：大型多用途企业 SaaS 仍稳，窄用例简单 SaaS 变现路径变窄——AI skills 更灵活、带个人上下文的 agent 知道更多、$20/月会被拿去和用户自己的 Claude/ChatGPT 订阅比价（2026-06-03-peter-yang-narrow-saas-harder-to-monetize）。自己对冲了一句「可能在 bubble 里」。6-27 再把范围从「窄 SaaS」推到「纯软件公司」整体：钱在往服务走、人要结果不要工具，纯软件难比用户自己的 Codex/Claude Code 加 skill/agent 更值钱；swyx 从供给侧佐证两家头部实验室都在组建服务部门、FDE 成最抢手职业（2026-06-27-value-shift-software-to-services）。
 - Dan Shipper（Every CEO，反共识）：SaaSpocalypse 叙事搞反了——自己跑 agent 会加深而非削弱对底层 SaaS 数据模型和业务逻辑的依赖（2026-06-04-dan-shipper-saaspocalypse-backwards-chat-wrong-for-design）。转述 Figma 嘉宾观点并自陈持有 Figma 股票，立场看多。
 
 ## 时间线
@@ -23,3 +23,4 @@
 - 2026-06-03 [2026-06-03-peter-yang-narrow-saas-harder-to-monetize] Peter Yang 分化判断：大型企业 SaaS 稳，窄用例 SaaS 更难变现
 - 2026-06-03 [2026-06-03-rauchg-yes-code] Rauch 提出 yes-code：coding agent 推翻 no-code 的「代码昂贵」前提
 - 2026-06-04 [2026-06-04-dan-shipper-saaspocalypse-backwards-chat-wrong-for-design] Shipper 反转：自己跑 agent 反而更愿意为 SaaS 付费，chat 不适合设计类发散工作
+- 2026-06-27 [2026-06-27-value-shift-software-to-services] Peter Yang：价值往服务侧走，纯软件难比用户自己的 agent 栈更值钱；swyx 佐证实验室在建服务部门、FDE 成最抢手职业
