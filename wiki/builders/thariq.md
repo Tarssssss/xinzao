@@ -22,3 +22,4 @@ Anthropic Claude Code 团队成员，刊中言论密集于工程实操：prompti
 - 2026-05-19 [2026-05-19-thariq-implementation-notes-html] 给出可复用 prompt：长跑 agent 边写边维护 implementation-notes.html 记录偏离 spec 的决定
 - 2026-05-25 [2026-05-25-thariq-legacy-codebases-distillation] 从 Bun 重写得出：遗留代码库会成为「蒸馏」成新形态代码的原料（带能力对冲）
 - 2026-05-27 [2026-05-27-thariq-claude-code-nontechnical] 非技术任务基本套路：文件夹放文件 + 写脚本 + 输出 HTML
+- 2026-07-01 [2026-07-01-thariq-fable-classifier-fallback] 回应社区：Fable 5 安全分类器更新后，常规编程/调试任务被降级到 Opus 是误报、非能力限制，改进方向是更准确区分合法请求与滥用

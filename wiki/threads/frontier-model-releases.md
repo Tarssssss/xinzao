@@ -27,3 +27,4 @@
 - 2026-06-10 [2026-06-10-cherny-fable5-thought-design-partner] Fable 5 发布，Boris Cherny 称其 debug 自验证行为不来自提示词，是模型自带性格
 - 2026-06-10 [2026-06-10-karpathy-fable5-major-version-bump] Karpathy 定性 Fable 5 为大版本级跳跃、长难题求解最突出，提醒护栏偏敏感
 - 2026-06-10 [2026-06-10-alex-albert-fable5-four-tips] Alex Albert 给四条迁移建议：重写旧配置、默认 xhigh/high、给更大任务、从下发任务改成描述目标
+- 2026-07-01 [2026-07-01-sonnet5-launch] Sonnet 5 上线，成为 Free/Pro 默认模型；Anthropic 称性能接近 Opus 4.8、不靠提示词自行验证输出、低成本 agentic；Box 三行业分数超 Sonnet 4.6（方法未公开）；介绍期定价至 8 月 31 日

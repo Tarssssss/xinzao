@@ -30,3 +30,4 @@
 - 2026-05-28 [2026-05-28-dan-shipper-skeptical-of-ai-layoff-claims] Shipper 直接质疑裁员叙事：经营不好甩锅 AI；一手调查发现裁掉客服的公司两个月后回头返聘
 - 2026-06-04 [2026-06-04-aaron-levie-ai-expands-jobs-and-software-tam] Levie 把论证接到开支上：企业 token 开支（每人每月数百到上千美元）已远超历史软件许可开支，AI 撑大就业和软件 TAM
 - 2026-06-06 [2026-06-06-aaron-levie-coding-agents-best-case] Levie 收束论证：编程占齐自动化全部有利条件、工程师仍供不应求，故其他知识工作的失业风险被高估
+- 2026-07-01 [2026-07-01-levie-ai-headcount-survey] Levie 发布 Box 1,600 家企业调查：AI 最成熟采用者 79% 预计增员（总体 58%），方向与裁员叙事相反；Levie 自标相关性非因果、方法未公开

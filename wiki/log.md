@@ -11,3 +11,5 @@
 ## [2026-06-18] ingest | 新增 7 story（Levie 应用层四组件打法、GitHub COO 三条：模型路由/agent PR 量级/自我改进循环、Zara AI 写作品味、Garry Fable 禁令成本估算、Rauch GLM 反超 Opus）+ 5 速览；新建 kyle-daigle 页；更新 Levie/Zara/Garry/Rauch 页与 app-layer-moat、token-economics、review-bottleneck 三条线索
 
 ## [2026-06-27] ingest | 新增 3 story（GPT-5.6 Sol 限制访问、价值转向服务、Nikunj taste 可习得）+ 5 速览；新建 frontier-model-access-restriction 线索（访问受限主题已跨 6-13/6-18/6-27 三期、多 builder，达开页阈值）；更新 Dan/Garry/Peter Yang/Swyx/Nikunj 页与 headless-software-saaspocalypse 线索
+
+## [2026-07-01] ingest | 新增 6 story（Sonnet 5 发布、Thariq 分类器误报说明、Levie 增员调查、Dylan Patel 协同设计降本、Vercel Services、jailbreak 行业标准化）+ 4 速览；新建 dylan-patel 页；更新 Anthropic/Thariq/Levie/Rauch 页与 frontier-model-releases、automation-jobs-debate、frontier-model-access-restriction 三条线索

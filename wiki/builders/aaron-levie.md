@@ -105,3 +105,5 @@ Box CEO，刊中言论量最大的企业 AI 看多者，自称「Jevons 悖论�
 - 2026-06-10 [2026-06-10-levie-applied-ai-untrainable-corner] 应用层护城河在 untrainable corner：把企业私有现实整理成模型能用的形态
 - 2026-06-13 [2026-06-13-fable-restriction-ai-regulation] 反应政府限制「在美外国人」用 Fable：政府开始管模型本身而非用途，是监管转折先例；他反对管模型，但称政府深度介入已不可逆
 - 2026-06-18 [2026-06-18-levie-applied-ai-playbook] 反驳「应用层只是 LLM 薄封装」，把落地打法整理成四组件（衔接功能／路由／FDE／GTM）＋bitter lesson 回应，复杂度本身生护城河
+- 2026-07-01 [2026-07-01-levie-ai-headcount-survey] Box 1,600 家企业调查：58% 预计增员，AI 最成熟采用者组升至 79%；他自标相关性非因果、方法未公开，但「AI 高采用企业裁人」的担忧在数据里未出现
+- 2026-07-01 [2026-07-01-levie-fable-jailbreak-framework] 解读 Anthropic 博文：跨公司 jailbreak 评估行业标准化（联合亚马逊、微软等）；接受政府介入不可逆，但警告评估主观性和若每次大版本都要走同等审查则拖慢突破节奏

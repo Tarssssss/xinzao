@@ -30,3 +30,4 @@ Vercel CEO，刊中最高频的 infra 侧发声者。立场一贯且利益相关
 - 2026-06-01 [2026-06-01-rauchg-coding-agents-plg-fication-enterprise] CEO/CTO 因 coding agent 重新亲自写代码，是企业市场的终极 PLG 化
 - 2026-06-03 [2026-06-03-rauchg-yes-code] 提出 YES-CODE：代码变廉价丰富，no-code 的前提已被推翻
 - 2026-06-18 [2026-06-18-rauch-glm-next-evals-agent-framework] 称开源 GLM 5.2 在 Vercel 自家 Next.js Evals 上反超 Opus 4.8，借此推 AI SDK：agent 需要专属构建框架
+- 2026-07-01 [2026-07-01-rauch-vercel-services] Vercel Services 发布：单项目内同托管 Python/Node.js/前端，vc dev 统一本地运行，统一部署、回滚和内网通信

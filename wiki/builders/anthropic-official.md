@@ -48,3 +48,4 @@ Anthropic 官方口径的集合页（@Claude 发布账号、Claude Blog、Anthro
 - 2026-05-20 [2026-05-20-anthropic-managed-agents-self-hosted-sandboxes-mcp-tunnels] 自托管沙箱 + MCP 隧道，工具执行可留在企业边界内
 - 2026-05-27 [2026-05-27-anthropic-contain-claude-blast-radius] 复盘三款 agent 产品隔离设计与三起事故：自己写的那层最弱
 - 2026-06-09 [2026-06-09-claude-foundation-models-framework] 接入 Apple Foundation Models：设备端模型复杂推理时交接给 Claude
+- 2026-07-01 [2026-07-01-sonnet5-launch] Sonnet 5 上线，成为 Free/Pro 默认模型；官方称性能接近 Opus 4.8、不靠提示词自行验证输出；Box 企业评测同步公布分行业读数

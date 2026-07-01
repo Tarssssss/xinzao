@@ -15,6 +15,7 @@
 - 2026-06-13 [2026-06-13-fable-restriction-ai-regulation] 政府限制「在美外国人」使用 Fable；Levie 读作监管开始管模型本身、立先例，Peter Yang 预测访问最强模型很快要做身份验证，Masad 点出 Replit 得关访问
 - 2026-06-18 [2026-06-18-garry-tan-fable-ban-productivity-cost] Garry Tan 给 Fable 禁令配粗账（每工作小时约损失 1200 万美元），输入全是自报假设、无来源
 - 2026-06-27 [2026-06-27-gpt56-sol-access-gating] GPT-5.6 Sol 发布即被限制在约 20 家预批公司（据 Dan Shipper 称按政府指令、属临时措施）；Dan、Garry Tan、Peter Yang 集体反对，担心扼杀创新、把需求推向开源
+- 2026-07-01 [2026-07-01-levie-fable-jailbreak-framework] Anthropic 联合亚马逊、微软等制定跨公司 jailbreak 严重性评估行业标准，并深化与美国政府的预发布测试合作；Levie 接受介入不可逆，但警告评估主观性和重大发布需同等审查将拖慢突破节奏
 
 ## 相关
 
