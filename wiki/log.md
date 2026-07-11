@@ -13,3 +13,5 @@
 ## [2026-06-27] ingest | 新增 3 story（GPT-5.6 Sol 限制访问、价值转向服务、Nikunj taste 可习得）+ 5 速览；新建 frontier-model-access-restriction 线索（访问受限主题已跨 6-13/6-18/6-27 三期、多 builder，达开页阈值）；更新 Dan/Garry/Peter Yang/Swyx/Nikunj 页与 headless-software-saaspocalypse 线索
 
 ## [2026-07-01] ingest | 新增 6 story（Sonnet 5 发布、Thariq 分类器误报说明、Levie 增员调查、Dylan Patel 协同设计降本、Vercel Services、jailbreak 行业标准化）+ 4 速览；新建 dylan-patel 页；更新 Anthropic/Thariq/Levie/Rauch 页与 frontier-model-releases、automation-jobs-debate、frontier-model-access-restriction 三条线索
+
+## [2026-07-11] ingest | X feed 因上游 X API 402（欠费/额度问题）当天返回 0 builders/0 tweets，仅 podcasts 有 1 条素材（The MAD Podcast，Stripe Emily Glassberg Sands）；拆成 2 story（token 盗窃三手法、agentic commerce 终局判断）；新建 emily-glassberg-sands 页（此前 4-30 有她的 story 但未建页，属回填遗漏，本次补上）；更新 token-economics 线索

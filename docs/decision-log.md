@@ -94,3 +94,10 @@ tars-writing 9:3 胜 baseline（4 素材 × 3 评委：扫描/编辑/事实核�
 | # | 决策 | 选择 | 理由 |
 |---|------|------|------|
 | 36 | 博客去重范围 | 今日 feed 的 blogs 段又冒出 3 篇 Anthropic/Claude 旧文（april-23-postmortem、engineering/managed-agents、claude-managed-agents-updates，内文模型只到 Opus 4.7、4 月/5 月已分别收录于 2026-04-09 / 04-24 / 05-20），按主链接全量去重后跳过、未收。待人定：去重规则现写「对照最近 3 期」，但旧博客可能远超 3 期重现，是否把 blogs 的去重显式扩成对全部 issue 的 url 做 grep | 当天已按 URL 全量去重处理、不影响本期；但口径调整是方向性的，留给人决定是否改 daily-run 第 2 步 |
+
+### 2026-07-11 routine 发现：上游 X feed 因 402 欠费全天返回空（留给人定）
+
+| # | 决策 | 选择 | 理由 |
+|---|------|------|------|
+| 37 | 当天素材短缺处理 | X 部分完全跳过（不用旧数据冒充），仅用当天到手的 1 条 podcast 素材写稿；不因为「通常该有 20-40 条推文」而强行等待或补量 | `npm run sync:feeds` 两次尝试后，`feed-x.json` 里 `x: []`，`errors` 字段显示对全部 6 组 handle 的 X API `User lookup failed: HTTP 402`（欠费/超额，不是网络抖动，重试不会自愈）；blogs/podcasts 两路无 error、正常拉取（blogs 当天确实 0 篇、podcasts 1 篇），说明只是 X 这一路的上游账号出了问题 |
+| — | 待人定 | 上游 `zarazhangrui/follow-builders` 仓库的 X API 账号看起来欠费/超额，可能不是一次性的；如果连续几天都是这样，日报会持续缺 X 这个主要素材源，需要人去确认/续费上游账号，或考虑加一层监控提醒 | 402 是持续性的账号状态而非瞬时故障，routine 里的「重试一次」机制对这类问题基本无效，需要人工介入 |

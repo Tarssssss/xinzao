@@ -9,7 +9,7 @@
 - **Dario Amodei（Anthropic，Peter Yang 听写）**：需求侧最硬的数字——今年早些时候用量和收入增长 80 倍，所以继续尽可能收购算力（[2026-05-07-dario-80x-compute]）。内部人自述，无统计口径。
 - **Tuhin Srivastava（Baseten）**：推理云一手行情，称算力紧缺远超外界认知：18 家云 90 个集群利用率多数在 95% 左右，每天下午固定开会调配容量；拿 1024 张 B200 要签三到五年合同加 20-30% 预付，资金成本成了竞争变量（[2026-05-02-baseten-inference-crunch]）。卖推理服务的人，行情条款可核验。
 - **Ivan Burazin（Daytona）**：把短缺预期从 GPU 延伸到 CPU——RL 训练要靠海量秒级起停的 CPU 沙箱喂满 GPU，长跑 agent 每任务占一台，转述 SemiAnalysis 预测 10 月起 CPU 可能不够用；一手商业结构数据：跑超 24 小时的沙箱占 2.5% 却贡献约 20% 收入（[2026-05-15-daytona-cpu-shortage-infra]）。
-- **Emily Glassberg Sands（Stripe）**：计价与风控层的一手数据。判断模型提供方按 token 计费会继续、垂直 AI 走向按结果计费、企业 seat 授权半年内可能腰斩；欺诈从盗卡转向偷算力——免费试用滥用半年涨 4 倍，有公司每个付费用户背后先烧 625 美元试用成本，免费算力成了新的获客成本（[2026-04-30-stripe-agent-economy]）。
+- **Emily Glassberg Sands（Stripe）**：计价与风控层的一手数据。4 月判断模型提供方按 token 计费会继续、垂直 AI 走向按结果计费、企业 seat 授权半年内可能腰斩；欺诈从盗卡转向偷算力——免费试用滥用半年涨 4 倍，有公司每个付费用户背后先烧 625 美元试用成本，免费算力成了新的获客成本（[2026-04-30-stripe-agent-economy]）。7 月同题数据继续恶化：多账号滥用占新注册比例从 7% 涨到六分之一以上，免费试用滥用半年又翻倍多；拆出三种具体欺诈手法和转售黑产链条，并给出应对基础设施——Metronome+Tempo 的实时计量/结算，判断终局是 agent 变成自负盈亏的"微型公司"（[2026-07-11-stripe-sands-token-theft-fraud]、[2026-07-11-stripe-sands-agent-micro-firm]）。
 - **Jeremy Allaire（Circle）**：结算侧最早开枪。agent 间几美分到几十美分的支付已开始出现，现有金融基础设施撑不住全球即时、可编程的数十亿笔微支付，给出自家方案 ARC（USDC 原生、数百毫秒结算）（[2026-04-12-allaire-agentic-economy]）。全程推自家产品，需求清单可用。
 - **Amjad Masad（Replit）**：从平台成本角度呼应微支付——bot 达到人类水平后免费服务难以为继，每次 git push 收几美分可能就足以减少垃圾请求，结算或许用比特币避免 KYC，措辞停在「值得探索」（[2026-04-29-micropayments-for-git-push]）。
 - **Peter Steinberger（OpenClaw）**：本线索的反方参照系。直接把「token 不要钱」当工程前提，约 100 个 codex 常驻云端接管 PR 审查、安全扫描、性能回归等全部流水线（[2026-05-16-steipete-tokens-dont-matter]）。个人开源项目的成本结构与企业预算约束相反，恰好标出争论的另一极：单价再涨，对押注 token 换工程产能的人也可能不构成约束。
@@ -33,3 +33,5 @@
 - 2026-05-29 [2026-05-29-levie-tokenmaxxing-enterprise-economics] Levie 算总账：前沿 token 单价不降反升，单任务可烧上千美元，开销逃离 IT 预算挪到业务线
 - 2026-06-13 [2026-06-13-compute-crunch-api-access-risk] Ari/Rob：算力紧缺可能逼实验室阶段性限停 API，因自家产品比 API 更赚钱，非商业决策
 - 2026-06-18 [2026-06-18-github-coo-model-router-token-cost] Kyle Daigle：编码 agent 费用失控的解法是按任务意图自动路由模型，难活给前沿、收尾小活给小模型，而非指望开发者手动降级
+- 2026-07-11 [2026-07-11-stripe-sands-token-theft-fraud] Sands：token 盗窃三种手法（多账号滥用、免费试用滥用、用量计费拖欠），占比较 4 月继续恶化，外加转售黑产链条
+- 2026-07-11 [2026-07-11-stripe-sands-agent-micro-firm] Sands：SaaS 按人头计费为何在 AI 上失灵，Metronome+Tempo 流式支付基础设施，agent 终局是自负盈亏的"微型公司"

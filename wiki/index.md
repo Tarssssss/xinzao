@@ -32,6 +32,7 @@
 - [dylan-patel](builders/dylan-patel.md) — SemiAnalysis 创始人：AI 推理降本曲线来自模型-硬件-软件三层协同设计，CUDA 护城河已部分松动
 - [latent-space](builders/latent-space.md) — AI 工程播客渠道页：Mistral/OpenAI Frontier/Notion 三期 agent 工程访谈
 - [unsupervised-learning](builders/unsupervised-learning.md) — Jacob Efron 的 AI vibe check 圆桌渠道页：算力紧缺逼停 API、近前沿开源模型退潮两条判断
+- [emily-glassberg-sands](builders/emily-glassberg-sands.md) — Stripe 数据与 AI 负责人：token 欺诈一手数据（持续恶化）、计价从按人头转按用量、agent 终局是自负盈亏微型公司
 
 ## Threads
 
