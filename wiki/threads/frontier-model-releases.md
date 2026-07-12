@@ -13,6 +13,9 @@
 - **Ryo Lu（Cursor 设计师）**：发布后的「用脚投票」样本——GPT-5.5 开放 API 几小时后宣布主力完全切到 GPT-5.5 + Composer 2，称智能/速度/成本的完美组合（[2026-04-25-ryolu-cursor-switch]）。带自家产品宣传成分。
 - **Cursor 研究团队（Federico）+ Fireworks（Dima）**：发布竞赛的另一条路线——不追前沿通用模型，基于 Kimi 2.5 做中训练加 RL，把全部权重压到 Cursor 内软件工程这一个任务上，成本约为 Opus 的十分之一（[2026-05-27-cursor-composer2-rl-infra]）。
 - **Swyx（独立）**：格局观察者视角，把 Meta 上线「接近 Opus 级」模型放进 Llama 4 翻车后的回转叙事；该评级无 API、不开源、暂无法外部核验（[2026-04-16-swyx-meta-turn]）。
+- **Thibault Sottiaux（OpenAI，Codex 工程负责人）**：GPT-5.6 Sol 发布几天后（发布于 7 月 9 日，刊中未在发布当天覆盖）给出的不是评测数字，而是具体操作——用 CLIProxyAPI 把 Claude Code 默认子模型换成 Sol 的完整配置，并自曝这是非官方方法、随时可能被封；功能清单部分（快、省 token、前端好）是产品宣传，缺具体数字（[2026-07-12-sottiaux-gpt56-sol-claude-code-hack]）。
+- **Zara Zhang（独立 builder）**：「用脚投票」式的独立验证——7 月 8 日刚抱怨 Codex 前端设计是唯一让她不想更频繁用的短板，7 月 12 日确认这一点在 GPT-5.6 Sol 上有改善，同一痛点四天前后对照（[2026-07-12-sottiaux-gpt56-sol-claude-code-hack]）。
+- **Dax Raad（OpenCode 作者）**：发布后一周的一手用量数据——团队接入 Sol 后，Fable-5 只占约 5% 用量却吃掉 30% 成本，隐含单位成本差距悬殊；Altman 转发放大这条对自家不算有利的数据（[2026-07-12-dax-altman-fable-cost-share]）。
 
 ## 时间线
 
@@ -28,3 +31,6 @@
 - 2026-06-10 [2026-06-10-karpathy-fable5-major-version-bump] Karpathy 定性 Fable 5 为大版本级跳跃、长难题求解最突出，提醒护栏偏敏感
 - 2026-06-10 [2026-06-10-alex-albert-fable5-four-tips] Alex Albert 给四条迁移建议：重写旧配置、默认 xhigh/high、给更大任务、从下发任务改成描述目标
 - 2026-07-01 [2026-07-01-sonnet5-launch] Sonnet 5 上线，成为 Free/Pro 默认模型；Anthropic 称性能接近 Opus 4.8、不靠提示词自行验证输出、低成本 agentic；Box 三行业分数超 Sonnet 4.6（方法未公开）；介绍期定价至 8 月 31 日
+- 2026-07-09 OpenAI 发布 GPT-5.6（Sol/Terra/Luna 三档），刊中未在发布当天覆盖，最早的一手反馈见 7-12 两条
+- 2026-07-12 [2026-07-12-sottiaux-gpt56-sol-claude-code-hack] Sottiaux 公布把 Sol 接入 Claude Code 当子模型运行的配置；Zara Zhang 独立确认前端短板有改善
+- 2026-07-12 [2026-07-12-dax-altman-fable-cost-share] Dax Raad：接入 Sol 首周 Fable 只占约 5% 用量却吃掉 30% 成本；Altman 转发放大

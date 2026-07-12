@@ -24,6 +24,7 @@
 ### 编码 agent 的入口与工具选择（用法有明确演变）
 - 5 月先做了 Claude Code 的 Lark/飞书桥并开源：一个群聊对应一个 CC 会话，把 agent 入口从终端搬进 IM，摆脱终端标签页（[2026-05-22-zara-zhang-claude-code-lark-bridge]）
 - **用法变化标注**：此前主用 Claude Code、在终端操作；5 月底改为 Claude Code 与 Codex 五五开、转用桌面应用、几乎不再开终端。分流规则：Codex 像可靠工程师，任务已定义清楚就交给它；Claude Code 像沟通好的 PM/设计师，还不知道要什么、要脑暴或原型时用它（[2026-05-27-zara-zhang-codex-vs-claude-code]）
+- **前端短板的前后对照（2026-07）**：7 月 8 日抱怨 Codex 前端设计是唯一让她不想更频繁用它的原因；7 月 12 日确认 GPT-5.6 Sol 在这一点上有改善——同一具体痛点四天内的独立前后验证，是对 Thibault Sottiaux 功能宣传的第三方佐证（[2026-07-12-sottiaux-gpt56-sol-claude-code-hack]）
 
 ## 言论时间线
 - 2026-04-11 [2026-04-11-zara-new-world-formats] 工作文件的新世界是 Markdown、CSV、HTML；别只让 AI 总结，让它 remix；learn to build, build to learn
@@ -36,3 +37,4 @@
 - 2026-05-22 [2026-05-22-zara-zhang-claude-code-lark-bridge] 开源 Claude Code 的 Lark/飞书桥，把 CC 会话搬进 IM 群聊
 - 2026-05-27 [2026-05-27-zara-zhang-codex-vs-claude-code] 用法改成 Claude Code 与 Codex 五五开，按任务是否明确分流，转桌面端弃终端
 - 2026-06-18 [2026-06-18-zara-zhang-taste-before-ai-writing] 在养出品味和声音之前别用 AI 写作，否则它产出 slop 你都认不出；顺序是先读后写再用 AI
+- 2026-07-12 [2026-07-12-sottiaux-gpt56-sol-claude-code-hack] 确认 GPT-5.6 Sol 前端能力改善，四天前才抱怨这是 Codex 唯一的短板

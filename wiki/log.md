@@ -15,3 +15,5 @@
 ## [2026-07-01] ingest | 新增 6 story（Sonnet 5 发布、Thariq 分类器误报说明、Levie 增员调查、Dylan Patel 协同设计降本、Vercel Services、jailbreak 行业标准化）+ 4 速览；新建 dylan-patel 页；更新 Anthropic/Thariq/Levie/Rauch 页与 frontier-model-releases、automation-jobs-debate、frontier-model-access-restriction 三条线索
 
 ## [2026-07-11] ingest | X feed 因上游 X API 402（欠费/额度问题）当天返回 0 builders/0 tweets，仅 podcasts 有 1 条素材（The MAD Podcast，Stripe Emily Glassberg Sands）；拆成 2 story（token 盗窃三手法、agentic commerce 终局判断）；新建 emily-glassberg-sands 页（此前 4-30 有她的 story 但未建页，属回填遗漏，本次补上）；更新 token-economics 线索
+
+## [2026-07-12] ingest | X feed 恢复正常（此前 402 问题已自愈，15 tweets/1 podcast/0 blogs）；新增 4 story（Fogel/Booking 的 Penny 经济账坦白、Altman 承认 AI 净创造就业+Levie/Swyx 同日声音、Dax Raad 的 Fable 成本占比数据、Sottiaux 的 GPT-5.6 Sol 接入 Claude Code 方法+Zara 独立验证）+ 1 速览；新建 glenn-fogel/dax-raad/thibault-sottiaux 三页；更新 Aaron Levie/Sam Altman/Swyx/Zara Zhang 页与 automation-jobs-debate、token-economics、frontier-model-releases、enterprise-agent-fde 四条线索；GPT-5.6 Sol 于 7-9 发布但刊中未在发布当天覆盖，本次是最早的一手反馈

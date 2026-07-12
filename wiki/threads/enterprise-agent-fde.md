@@ -6,6 +6,7 @@
 
 - **Aaron Levie（Box CEO，本线索主推手）**：核心论点一以贯之——从 chat 到 agent 参与真实业务流程隔着大量实活，没有捷径（[2026-05-05-levie-agents-enter-knowledge-work-no-shortcut]）。障碍清单：遗留技术栈、数据碎片、知识未数字化、权限与审计、变更管理，且要边经营边做（[2026-04-22-levie-enterprise-agents]、[2026-05-04-levie-agent-implementation-opportunity]）。由此推出岗位判断：每个团队都需要专职部署和运营 agent 的人（[2026-04-14-agent-deployer-role]、[2026-04-21-levie-agent-ops-roles]），FDE 短期不会消失、对 SI 和咨询是新机会（[2026-04-15-levie-forward-deployed-engineers]），且因为 AI 交付物持续演化（模型一升级工作流就变），FDE 是规模化部署 AI 的核心能力而非过渡打法（[2026-05-16-levie-fde-core-competency]）；与云迁移不同，agent 直接改写员工工作流，所以这个岗位比当年云实施更耐久（[2026-05-21-levie-fde-agent-job-durable]）。Box 自己照此招人：内部 agent 工程师 / AI 自动化工程师，像对内的 FDE，嵌入业务、打通系统、把工作流沉淀成 skills（[2026-04-30-levie-agent-engineering-roles]、[2026-05-11-box-ai-automation-engineer]）。归因再往下挖一层：多数公司 agent 战略卡住的根因是数据战略——上下文冲突、数据过期、tribal knowledge（[2026-05-19-levie-agent-data-strategy]）；模型迭代越快企业落地反而越慢，因为新突破不断作废上一套架构，编码之外的知识工作（可验证性、上下文集中度、权限）都不具备编码的有利条件，要靠内部 FDE 一点点接上去（[2026-05-29-levie-diffusion-bottleneck-internal-fde]）。对高管的提醒：CEO 离最后一公里太远，玩 AI 只见 happy path，解法是亲手把一条链路从原型走到生产（[2026-05-25-levie-ceo-ai-psychosis]）。
 - **Matt Turck（FirstMark Capital VC）**：买方证词，落差的实证侧。称从没见过这么大的认知差——Global 2000 说两年 AI 投入生产力收益为零、只有工程师喜欢 coding AI、agent 很吓人；无样本数据，按一线氛围观察用（[2026-04-28-valley-enterprise-gap]）。
+- **Glenn Fogel（Booking Holdings CEO，新加入，2026-07-12）**：一手企业运营视角，和 Turck 的悲观「零生产力」证词形成对照——Penny（agent 旅行顾问）据称采用率连续数月翻倍，一个具体的多目的地家庭行程案例说明产品体验已经能打；但同时坦白公司自己也没算清每次调用的真实成本和对应的长期客户价值，规模仍相对总交易额（1,860 亿美元）小到可以忽略。他的案例说明「落地慢」和「已经有真实但小的进展」可以同时成立，不是简单的乐观或悲观（[2026-07-12-fogel-booking-penny-agent-economics]）。
 - **Madhu Guru（Google 产品负责人）**：补组织和产品方法两侧。组织侧：CEO 出于 FOMO 下模糊 AI 指令，员工用表演式 demo 应付，两年空转——是 Levie「CEO AI 错觉」在组织层面的放大，此条正是引 Levie 发出（[2026-05-25-madhu-guru-vague-ai-mandates]）。方法侧：别按今天的模型能力和价格做设计，「为斜率而建」——围绕当下模型弱点搭脚手架并赌下一代模型原生解决，反复识别并填补缺口的能力才是护城河；与 Levie「模型一变就有新一轮活」同构，但他把答案落在产品方法而非岗位上（[2026-06-06-madhu-guru-build-for-the-slope]）。
 
 ## 时间线
@@ -26,3 +27,4 @@
 - 2026-05-25 [2026-05-25-madhu-guru-vague-ai-mandates] Madhu Guru 引 Levie 把错觉推到组织层面：CEO FOMO 下模糊指令，员工用表演式 demo 应付，两年空转。
 - 2026-05-29 [2026-05-29-levie-diffusion-bottleneck-internal-fde] Levie 解释模型进步反而拖慢落地（新突破作废旧架构），列出编码之外知识工作的五六个劣势，判断内部 FDE 是长期岗位。
 - 2026-06-06 [2026-06-06-madhu-guru-build-for-the-slope] Madhu Guru 给企业 AI 团队方法论：「为斜率而建」，围绕当下模型弱点搭有保质期的脚手架，识别并填补缺口的能力本身是护城河。
+- 2026-07-12 [2026-07-12-fogel-booking-penny-agent-economics] Fogel：Penny 采用率据称连续翻倍、具体案例体验已经能打，但公司自己也算不清每次调用的成本和长期价值，规模相对总交易额仍小

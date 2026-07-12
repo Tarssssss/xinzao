@@ -1,0 +1,102 @@
+{
+  "date": "2026-07-12",
+  "generatedAt": "2026-07-12T07:09:39.460Z",
+  "stories": [
+    {
+      "slug": "2026-07-12-fogel-booking-penny-agent-economics",
+      "title": "Booking Holdings CEO Glenn Fogel：agent 旅行顾问 Penny 增长快，但公司自己也算不清每次调用的成本和长期回报",
+      "summary": "核心坦白：Booking 的 agent 顾问 Penny 采用率据称连续数月翻倍，但公司自己也算不清每次调用的真实成本和能换回的长期价值——规模化部署近两年后仍是没解的问题。他同时重申没有护城河，只能靠不断做新东西活下去。给正在算企业 agent ROI 的人看。",
+      "content": [
+        "问题出在两头都不好量：一头是每次对话本身要往返几轮、消耗多少 token 不好预估——不像传统一次性 API 调用，一次完整的行程规划可能来回问好几轮限制条件；另一头是这笔支出换回来的东西要等很久才能兑现，客户的终身价值有没有提升、复购率有没有变化，这些指标本身就需要时间积累才能看出差异。他把这两件事都摆在“还不知道”的框里，而不是“正在优化的已知量”，这个坦白发生在 Penny 已经对外跑了一段时间之后，比“采用率翻倍”本身更值得记一笔。",
+        "具体例子来自他自己上周的实测：一次多目的地的家庭旅行，大人和小孩分舱、含一段单独返程，还要横向比较用里程还是现金付款更划算——Penny 全程来回追问清楚每一项限制条件，给出的方案和他自己心里盘算的一致。但他紧接着的解释是，这类体验目前还没有反映在整体经营数字上，因为绝对规模仍然很小：去年 Booking 做了 1,860 亿美元的旅行交易额、超十亿间夜，Penny 现在这点用量放在这个分母下几乎可以忽略。放在这个背景下看，前面“不知道该用哪个模型、什么时候用更便宜”的坦白就不只是技术细节——一家年交易额近两千亿美元的公司，在这个问题上和刚开始接入多个模型的创业公司站在同一条起跑线上。",
+        "两处细节值得单独标注立场。一是客服成本：他此前在 Q1 财报电话会上给出的数字是每次客服接触的成本降了约 10%，这次采访里他确认方向没变、客户满意度同步在涨，但没有重复报出具体数字。二是 OpenAI 一度上线又撤下 ChatGPT 内的旅行结账功能：消息传出时 Booking 股价一度下跌，OpenAI 撤下功能后又涨回约 8%，Fogel 的态度是两头都不要读太多——单条新闻不足以支撑“agent 会不会吃掉旅行行业”这么大的判断。他反复重申的“没有护城河、只能不停做新东西”这句话来自旅行业在位者本人，天然有为自己抗打击力辩护的动机，但可核验的部分是具体行为：Penny 现在能不能真的把一次复杂的多程家庭旅行安排利落，可以在自己的行程上试一次。对正在评估企业级 agent 项目、纠结怎么算 ROI 的人，这条访谈最实用的一点或许是：即便是已经把 agent 推向真实客户的大公司，这笔账依然没算完，不是只有自己算不清楚。"
+      ],
+      "creator": "Glenn Fogel",
+      "role": "CEO, Booking Holdings",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        { "label": "No Priors 播客", "url": "https://www.youtube.com/watch?v=8nj_0wZkbtA" }
+      ],
+      "related": [
+        { "slug": "2026-04-28-valley-enterprise-gap", "note": "Turck 给出相反的落地证词" },
+        { "slug": "2026-05-20-levie-token-cost-enterprise-cio", "note": "呼应 Levie 的 token 成本线" }
+      ]
+    },
+    {
+      "slug": "2026-07-12-altman-levie-swyx-ai-job-creation",
+      "title": "Sam Altman：目前来看 AI 净创造就业，与他自己此前预期相反；Aaron Levie 同日给出机制，Swyx 称编程只是先兆",
+      "summary": "Altman 承认目前来看 AI 净创造就业，与他此前预期相反，且明说“这个方向可能继续”而非预测。同日 Levie 给出机制：成本降低推高总需求，人仍要做维护和决策，但他没给出岗位数据来源；Swyx 把范围从编程扩大到全部知识工作。关注 AI 真实就业影响、想反驳或佐证“AI 抢工作”叙事的人值得看。",
+      "content": [
+        "这条判断的分量首先来自说话人的位置：如果 AI 对就业没有造成预期中的冲击，由这个方向能力提升最直接的推动方亲口这么说，比从旁观者嘴里听到更值得记一笔。他的原话保留了两层不确定性——一是“so far at least”限定的是目前为止，不是长期结论；二是“it is possible this direction keeps going”把未来仅仅表述为一种可能，不是预测。这条推文本身没有附带任何数据，是他个人判断的转变，不是一份报告。",
+        "同一天，Levie 给出了具体机制：一件事的生产成本降低、而这件事本身有很多潜在用途时，人们会想要更多这件事被生产出来——这套逻辑此前在工业时代反复出现，现在轮到了知识工作。软件变得更便宜之后，企业开工的软件项目数量在增加，很多是以前从没立项过的；维护代码、决定要做什么、长期运营和迭代这些环节因为没有被完全自动化，仍然需要人去做，需求就是这样被撑住的。他给出的具体论据是“软件岗位招聘在逆势增长，跑赢其他行业”，但这条没有附上岗位数据的来源或统计口径，是他自己的观察陈述。",
+        "Swyx 同日转发 Altman 这条，把论证范围往外推了一层：他认为如果只从编程领域的软件需求去理解杰文斯悖论，可能低估了它在“人能熟练驾驭 coding agent”和“coding agent 正在突破编程之外的知识工作边界”这两个条件下的力度——他的原话是编程这件事发生的一切不是例外，而是先兆。这个说法目前只是他自己的类比性论断，没有给出编程之外行业的具体证据。三条放在一起看，呼应的是这个站之前反复出现的论争：Levie 一直提醒编程占齐了自动化的所有有利条件，不能直接套用到其他知识工作；Swyx 这次的说法恰好站在了这条提醒的对立面，主张编程的模式会外溢。这个分歧本身，比任何一条单独的判断都更值得跟踪。"
+      ],
+      "creator": "Sam Altman",
+      "role": "CEO, OpenAI",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @sama", "url": "https://x.com/sama/status/2076036901824532530" },
+        { "label": "原推 @levie", "url": "https://x.com/levie/status/2076116544980214164" },
+        { "label": "原推 @swyx", "url": "https://x.com/swyx/status/2076155833428431012" }
+      ],
+      "related": [
+        { "slug": "2026-07-01-levie-ai-headcount-survey", "note": "Levie 上一次给出的就业数据" },
+        { "slug": "2026-06-06-aaron-levie-coding-agents-best-case", "note": "Levie 曾说编程不能类推" }
+      ]
+    },
+    {
+      "slug": "2026-07-12-dax-altman-fable-cost-share",
+      "title": "Dax Raad：团队接入 GPT-5.6 Sol 首周，Fable 只占约 5% 用量却吃掉 30% 成本，Altman 转发这条数据",
+      "summary": "Dax Raad（OpenCode 作者）晒出团队接入 GPT-5.6 Sol 首周的用量图：Fable-5 只占约 5% 用量却吃掉团队 30% 成本，隐含单位成本差距悬殊；这个成本数字是他自己补充陈述，图表本身没有直接呈现。Altman 转发追问这个数字，没有替自家模型辩护。给做多模型路由决策的人看。",
+      "content": [
+        "他贴出的这张图显示的是用量：Sol 20 个用户、308.53 亿；Fable-5 13 个用户、17.23 亿——Fable 只占约 5% 的用量，图表单位标注为 B，大概率是 token 或请求数。他文字里另外加了一句“这部分吃掉了 30% 的成本”，这句话没有配对应的成本图表，是他自己的补充陈述。把这两个数字放在一起看：5% 的用量对应 30% 的成本，隐含的是 Fable 的单位成本明显比 Sol 贵得多——这是把两个数字放一起推算，他本人没有直接给出具体倍数。",
+        "Altman 转发这条并追问“这个用量水平下，30% 的成本花在 Fable 上？”，语气是惊讶而不是反驳。这个转发动作本身值得注意：这条数据对 OpenAI 不算是好消息，他没有删除或反驳，而是把它放大给了更多人看——可能是当成“连拿到我们新模型的人还在给 Fable 花大钱”的调侃，也可能只是单纯觉得这个数字反常，原文只是一个问句，两种读法他都没有明说。",
+        "两处需要打折看。一是 dax 团队规模、任务类型、以及“我们的团队”具体指哪个项目都没有说明，这条数据只反映一个团队一周的用量，不构成行业普遍结论。二是图表里的单位没有注明是 token 数、请求数还是别的计量方式，换算出的成本比只能算方向性参考。对正在给 agent 产品做多模型路由的人，可操作的一点是：模型发布带来的用量迁移和成本迁移不是同一回事，新模型抢到大部分调用量，不代表旧模型在预算里的分量会同步下降——路由决策该看的是任务级别的单位成本，而不是只看谁的调用次数多。"
+      ],
+      "creator": "Dax Raad",
+      "role": "创始人, OpenCode / SST",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @thdxr", "url": "https://x.com/thdxr/status/2075963734745342361" },
+        { "label": "Altman 转发 @sama", "url": "https://x.com/sama/status/2075982820322025788" }
+      ],
+      "engagement": "3.8K likes",
+      "related": [
+        { "slug": "2026-05-29-levie-tokenmaxxing-enterprise-economics", "note": "呼应模型分层成本判断" },
+        { "slug": "2026-05-20-sam-altman-discounted-token-commits", "note": "Altman 此前谈算力与折扣" }
+      ]
+    },
+    {
+      "slug": "2026-07-12-sottiaux-gpt56-sol-claude-code-hack",
+      "title": "Thibault Sottiaux：公布把 GPT-5.6 Sol 接入 Claude Code 当子模型运行的方法，Zara Zhang 独立确认前端能力改善",
+      "summary": "Thibault Sottiaux（OpenAI Codex 工程负责人）给出把 GPT-5.6 Sol 接入 Claude Code 当子模型运行的配置，提醒这是非官方方法、随时可能被封。同日 Zara Zhang 独立确认：三天前还在抱怨的 Codex 前端短板在 5.6 Sol 上有改善。想试的人可以直接抄这份配置；功能清单部分是产品宣传，需要打折。",
+      "content": [
+        "这条最值得注意的地方不是他列的“快、省 token、后端强、前端好、不乱用 useEffect”这份功能清单——那本质是一份产品宣传。真正有信息量的是他紧接着给出的具体操作：通过 CLIProxyAPI 这个中间层，把 Claude Code 里默认调用的子模型换成 GPT-5.6 Sol，配上一段可以直接抄的 alias 命令，包含并发数上限、effort 强制开启、关闭工具搜索等具体参数。一个 OpenAI 内部工程负责人，公开教人怎么把自家最新模型接进对手的 harness 里跑，这个动作本身比模型能力描述更能说明他对这个方法的信心。",
+        "他自己也标了这条方法的风险：“如果这个方法被封，算我欠你一次重置”——说明这不是官方支持的接入方式，可能触碰某一方的服务条款，随时可能被限流或封堵，愿意试的人要有心理准备。第二条独立证据来自 Zara Zhang：她三天前（7 月 8 日）刚发推抱怨“真希望 Codex 前端设计能更好，这是唯一让我不想更频繁用它的原因”，这次（7 月 12 日）确认“5.6 Sol 前端做得真不错”——同一个人、同一个具体痛点，间隔四天给出前后对照，比单条夸奖更可信。",
+        "需要打折的部分：Thibault 是 OpenAI Codex 团队的工程负责人，功能清单部分是在推自己的产品，“又快又省 token”这类描述缺乏具体数字支撑。可操作的部分：用 Claude Code 作为主 harness、但想尝试用 GPT-5.6 Sol 处理某些任务（尤其前端相关）的人，可以直接照抄他给的 CLIProxyAPI 配置试一次，自己判断值不值得冒被封的风险；顺带的一个判断是，当 harness 和模型解耦到可以这样手动换着用时，选子模型这件事正在变成一个日常操作，而不是一次性决定。"
+      ],
+      "creator": "Thibault Sottiaux",
+      "role": "Codex 工程负责人, OpenAI",
+      "sourceType": "x",
+      "sourceLinks": [
+        { "label": "原推 @thsottiaux（功能清单）", "url": "https://x.com/thsottiaux/status/2076145711922696371" },
+        { "label": "原推 @thsottiaux（接入方法）", "url": "https://x.com/thsottiaux/status/2076119366647894371" },
+        { "label": "Zara Zhang 确认 @zarazhangrui", "url": "https://x.com/zarazhangrui/status/2076130810143367453" },
+        { "label": "Zara Zhang 7 月 8 日抱怨", "url": "https://x.com/zarazhangrui/status/2075003007520096416" }
+      ],
+      "engagement": "3.9K likes",
+      "related": [
+        { "slug": "2026-04-25-ryolu-cursor-switch", "note": "同类型：发布后用脚投票" }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "现在有不少 benchmark 显示 5.6 sol 是全世界最好的模型，但更可靠的判断方法是：埃隆又开始对我念念不忘了。",
+      "creator": "Sam Altman",
+      "handle": "sama",
+      "sourceType": "x",
+      "url": "https://x.com/sama/status/2075983427019612242"
+    }
+  ]
+}

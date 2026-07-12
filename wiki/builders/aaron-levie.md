@@ -8,6 +8,7 @@ Box CEO，刊中言论量最大的企业 AI 看多者，自称「Jevons 悖论�
 - 核心机制群：效率提升推高总需求（律师 1975 年约 40 万→2025 年约 137.5 万，2026-04-12-levie-demand-expansion）；AI 在一处提速后瓶颈转移到仍需人的环节（2026-04-16-levie-job-bottlenecks）；任务可自动化≠岗位可消灭，岗位定义会扩张（2026-05-24-levie-tasks-vs-jobs、2026-05-27-levie-agents-automate-tasks-not-jobs）；竞争抬高所有人的产出预期，省下的产能被再投入而非裁掉（2026-05-26-levie-goldman-ceo-ai-jobs、2026-05-31-levie-ai-reinvestment-not-cost-cutting）。
 - 失业论错在哪：建立在「AI 能自动化单个任务」的视角上，没算完整工作的收尾投入——AI 版 Gell-Mann 失忆症（2026-04-27-levie-ai-jobs-overwork）；编程是 agent 条件最好的领域（可验证、context 在代码库、用户技术化）仍离不开人盯，不能拿它当模板推断其他知识工作（2026-06-06-aaron-levie-coding-agents-best-case、2026-05-29-levie-diffusion-bottleneck-internal-fde）。
 - 工程师需求扩张：agent 让每家公司都开始造软件，企业用上和大厂同样的模型后几乎每家都在多雇工程师（2026-04-19-levie-engineering-jobs-expand、2026-05-03-levie-engineer-thought-experiment、2026-06-04-aaron-levie-ai-expands-jobs-and-software-tam）；安全行业同理——发现漏洞变易，瓶颈移到 triage 和修复（2026-04-13-levie-security-jevons、2026-05-23-levie-security-engineer-boom-jevons）。
+- **新增声音（2026-07-12）**：Sam Altman 首次以第一人称承认「目前来看 AI 净创造就业，与自己此前预期相反」，Swyx 同日把范围从编程外推到全部知识工作——三人同日发声是这条论争目前为止参与者最集中的一次（2026-07-12-altman-levie-swyx-ai-job-creation）。
 - 专家侧：agent 抬高产出基准，专家更被需要而非被取代（2026-05-10-levie-experts-higher-demand）；AI 强化而非消解专业分工，角色边界的暂时模糊不等于取代（2026-05-15-levie-ai-enhances-specialization）；别因 AI 放弃扎深领域（2026-05-18-aaron-levie-go-deep-expert-with-ai）；AI 杠杆让野心+基本功越过资历门槛，新人尤其受益（2026-04-26-levie-ai-leverage）。
 - 自己保留的限定：约 10% 经济体某些职能已饱和、agent 进来没有更多活（2026-05-29-levie-diffusion-bottleneck-internal-fde）；部分领域纯降本，但这种价值有上限（2026-04-16-levie-job-bottlenecks）；AI 暂时不会让人少干活，启动变易反而项目越开越多（2026-04-24-levie-ai-more-work、2026-04-27-levie-ai-jobs-overwork）。
 
@@ -107,3 +108,4 @@ Box CEO，刊中言论量最大的企业 AI 看多者，自称「Jevons 悖论�
 - 2026-06-18 [2026-06-18-levie-applied-ai-playbook] 反驳「应用层只是 LLM 薄封装」，把落地打法整理成四组件（衔接功能／路由／FDE／GTM）＋bitter lesson 回应，复杂度本身生护城河
 - 2026-07-01 [2026-07-01-levie-ai-headcount-survey] Box 1,600 家企业调查：58% 预计增员，AI 最成熟采用者组升至 79%；他自标相关性非因果、方法未公开，但「AI 高采用企业裁人」的担忧在数据里未出现
 - 2026-07-01 [2026-07-01-levie-fable-jailbreak-framework] 解读 Anthropic 博文：跨公司 jailbreak 评估行业标准化（联合亚马逊、微软等）；接受政府介入不可逆，但警告评估主观性和若每次大版本都要走同等审查则拖慢突破节奏
+- 2026-07-12 [2026-07-12-altman-levie-swyx-ai-job-creation] 给出「AI 净创造就业」的机制解释：成本降低推高总需求，维护/决策/迭代仍离不开人；呼应 Altman 同日的预期反转、Swyx 的编程外推论断，但「软件岗位招聘逆势增长」缺具体数据来源

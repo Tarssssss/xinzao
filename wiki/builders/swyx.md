@@ -6,6 +6,7 @@ Cognition 成员、Latent Space 播客主理人、AI Engineer 大会主办者。
 
 ### Coding agent 破圈（核心叙事，持续加码）
 - 「coding agents breaking containment」是今年爆发主题：所有知识工作者（不只程序员）都会被 agent 改变认知；多数人用 agent 的强度远远不够。一手案例：AI Engineer 团队用 agent 跑杂务（CMS 到租充气龙虾），极小团队免费服务月均约 100 万独立开发者（[2026-05-01-swyx-agents-containment]）
+- **杰文斯悖论外推到全部知识工作（2026-07-12）**：转发 Altman「AI 净创造就业」的判断，认为只从编程领域理解杰文斯悖论会低估其力度——前提是「人能熟练驾驭 coding agent」+「coding agent 正在突破编程边界」，他的原话是编程发生的一切不是例外而是先兆；这个说法目前只是类比性论断，没有编程之外的具体证据，且恰好站在了 Levie「编程不能类推其他知识工作」这条提醒的对立面（[2026-07-12-altman-levie-swyx-ai-job-creation]）
 - 同方向加码：pewdiepie vibecode 的 OpenCode 封装（含邮件/文档/日历的个人生产力套件）被他立为知识工作 agent 创业的 DIY 基准线——打不过这个 DIY 产物「不如收摊回家」。对照点：2026 年 2 月 Soumith Chintala 讲个人本地 agent 时多数人还不信（[2026-06-01-swyx-pewdiepie-opencode-benchmark]）
 - 把破圈逻辑推进版本管理层：PR 和 code review 淡出后，连 Git 该不该留也成问题——合并冲突占写码开销 20-40%，设想未来代码库像 Notion/Linear 数据库而非 .git 对象，自称「Salty Lesson」。推测式发问，且本就服务于 Cognition 的 agent 编码叙事（[2026-06-13-swyx-future-codebase-git]）
 
@@ -33,3 +34,4 @@ Cognition 成员、Latent Space 播客主理人、AI Engineer 大会主办者。
 - 2026-06-09 [2026-06-09-frontiercode-metr-benchmark] 发布 FrontierCode；称 SWE-bench 过半结果是不可合并的劣质代码
 - 2026-06-13 [2026-06-13-swyx-future-codebase-git] 设想 PR/review 之后 Git 也该退场：合并冲突占写码开销 20-40%，未来代码库或像 Notion/Linear 数据库
 - 2026-06-27 [2026-06-27-value-shift-software-to-services] OpenAI 和 Anthropic 都在组建几十亿美元级服务部门，FDE 成最抢手职业之一（佐证 Peter Yang 的价值转向服务）
+- 2026-07-12 [2026-07-12-altman-levie-swyx-ai-job-creation] 把杰文斯悖论从编程外推到全部知识工作：编程发生的一切不是例外而是先兆，恰与 Levie「编程不能类推」的提醒相对立

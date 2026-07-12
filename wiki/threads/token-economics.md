@@ -14,6 +14,8 @@
 - **Amjad Masad（Replit）**：从平台成本角度呼应微支付——bot 达到人类水平后免费服务难以为继，每次 git push 收几美分可能就足以减少垃圾请求，结算或许用比特币避免 KYC，措辞停在「值得探索」（[2026-04-29-micropayments-for-git-push]）。
 - **Peter Steinberger（OpenClaw）**：本线索的反方参照系。直接把「token 不要钱」当工程前提，约 100 个 codex 常驻云端接管 PR 审查、安全扫描、性能回归等全部流水线（[2026-05-16-steipete-tokens-dont-matter]）。个人开源项目的成本结构与企业预算约束相反，恰好标出争论的另一极：单价再涨，对押注 token 换工程产能的人也可能不构成约束。
 - **Kyle Daigle（GitHub COO）**：从开发者付费侧给路由解法。针对「200 美元订阅滚成 2000 美元用量账单」，他判断关键不是让开发者手动切便宜模型（真到那步基本没人会切），而是让工具按任务意图自动路由——难的活交前沿模型、收尾小活（查找替换式改命名）下放到 Haiku 级小模型，再叠加 frontier tuning 减少返工；微软 Foundry 已有 API 层路由器（[2026-06-18-github-coo-model-router-token-cost]）。与 Levie 从应用层提的路由判断同向，但落在 GitHub/微软自家产品上，要打折。
+- **Dax Raad（OpenCode 作者）**：一手运营数据显示用量份额和成本份额可以严重脱节——团队接入 GPT-5.6 Sol 头一周，Fable-5 只占约 5% 的用量却吃掉团队 30% 的成本，隐含 Fable 单位成本远高于 Sol；具体计量单位未注明，只反映一个团队一周的情况（[2026-07-12-dax-altman-fable-cost-share]）。Altman 转发这条追问，没有反驳或删除，反而放大了这条对自家模型不算有利的数据。
+- **Glenn Fogel（Booking Holdings CEO）**：企业买方视角的坦白补充——即便 Penny（agent 旅行顾问）已经对外跑了一段时间、采用率据称连续翻倍，公司自己也没算清每次调用的真实 token 成本和对应的长期客户价值，「该用哪个模型、什么时候用」仍是待解的路由难题；这条坦白说明即便是年交易额近两千亿美元的公司，也没有比创业公司领先多少（[2026-07-12-fogel-booking-penny-agent-economics]）。
 - **Ari（Datalogy）/ Rob（Radical），Unsupervised Learning**：把算力紧缺推到 API 供给端。实验室赚自家产品（Claude Code）多于赚 API，Ari 判断可能不为商业、纯被算力逼着限流或阶段性停掉公开 API，OpenAI 卖「锁定未来 token 额度」的期货是前兆；Rob 加码——最强模型可能只留内部用。Ari 给预测：2027 年底前有把握看到 Anthropic 或 OpenAI 暂停/大幅限制 API 一段时间。研究者兼投资人预判，带对冲（[2026-06-13-compute-crunch-api-access-risk]）。
 
 ## 时间线
@@ -35,3 +37,5 @@
 - 2026-06-18 [2026-06-18-github-coo-model-router-token-cost] Kyle Daigle：编码 agent 费用失控的解法是按任务意图自动路由模型，难活给前沿、收尾小活给小模型，而非指望开发者手动降级
 - 2026-07-11 [2026-07-11-stripe-sands-token-theft-fraud] Sands：token 盗窃三种手法（多账号滥用、免费试用滥用、用量计费拖欠），占比较 4 月继续恶化，外加转售黑产链条
 - 2026-07-11 [2026-07-11-stripe-sands-agent-micro-firm] Sands：SaaS 按人头计费为何在 AI 上失灵，Metronome+Tempo 流式支付基础设施，agent 终局是自负盈亏的"微型公司"
+- 2026-07-12 [2026-07-12-dax-altman-fable-cost-share] Dax Raad：团队接入 GPT-5.6 Sol 首周，Fable 只占约 5% 用量却吃掉 30% 成本，Altman 转发放大这条对自家不利的数据
+- 2026-07-12 [2026-07-12-fogel-booking-penny-agent-economics] Fogel：Booking 的 Penny 采用率据称翻倍，但公司自己也算不清每次调用的真实成本和长期价值，路由决策仍是待解难题

@@ -33,6 +33,9 @@
 - [latent-space](builders/latent-space.md) — AI 工程播客渠道页：Mistral/OpenAI Frontier/Notion 三期 agent 工程访谈
 - [unsupervised-learning](builders/unsupervised-learning.md) — Jacob Efron 的 AI vibe check 圆桌渠道页：算力紧缺逼停 API、近前沿开源模型退潮两条判断
 - [emily-glassberg-sands](builders/emily-glassberg-sands.md) — Stripe 数据与 AI 负责人：token 欺诈一手数据（持续恶化）、计价从按人头转按用量、agent 终局是自负盈亏微型公司
+- [glenn-fogel](builders/glenn-fogel.md) — Booking Holdings CEO：agent 旅行顾问 Penny 采用率据称翻倍，但公司自己也算不清每次调用的成本和长期价值
+- [dax-raad](builders/dax-raad.md) — OpenCode 作者：一手运营数据显示 Fable 用量占比小但成本占比高，隐含单位成本差距悬殊
+- [thibault-sottiaux](builders/thibault-sottiaux.md) — OpenAI Codex 工程负责人：公布把 GPT-5.6 Sol 接入 Claude Code 当子模型运行的具体方法
 
 ## Threads
 
