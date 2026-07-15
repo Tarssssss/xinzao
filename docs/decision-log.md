@@ -101,3 +101,9 @@ tars-writing 9:3 胜 baseline（4 素材 × 3 评委：扫描/编辑/事实核�
 |---|------|------|------|
 | 37 | 当天素材短缺处理 | X 部分完全跳过（不用旧数据冒充），仅用当天到手的 1 条 podcast 素材写稿；不因为「通常该有 20-40 条推文」而强行等待或补量 | `npm run sync:feeds` 两次尝试后，`feed-x.json` 里 `x: []`，`errors` 字段显示对全部 6 组 handle 的 X API `User lookup failed: HTTP 402`（欠费/超额，不是网络抖动，重试不会自愈）；blogs/podcasts 两路无 error、正常拉取（blogs 当天确实 0 篇、podcasts 1 篇），说明只是 X 这一路的上游账号出了问题 |
 | — | 待人定 | 上游 `zarazhangrui/follow-builders` 仓库的 X API 账号看起来欠费/超额，可能不是一次性的；如果连续几天都是这样，日报会持续缺 X 这个主要素材源，需要人去确认/续费上游账号，或考虑加一层监控提醒 | 402 是持续性的账号状态而非瞬时故障，routine 里的「重试一次」机制对这类问题基本无效，需要人工介入 |
+
+### 2026-07-15 routine 发现：7-13、7-14 两天无 issue（留给人核实）
+
+| # | 决策 | 选择 | 理由 |
+|---|------|------|------|
+| 38 | 待人核实 | 本地仓库 git log 显示最近一期是 2026-07-12，之后 7-13、7-14 无 commit；7-14 有未提交的 `data/raw/latest.json`／`latest-brief.md` 改动和一份 `2026-07-14.json` 快照（本次已 `git stash` 保留，未丢弃），说明当天大概率跑过 sync:feeds 但没有产出 issue、没 push——符合「素材不值得收就不发刊」硬规则；7-13 完全没有痕迹（无 commit、无残留 sync 文件），无法判断是没跑还是跑了但清理了现场 | 只是记录观察，不属于本次 routine 该做的方向性决定；如果是 scheduled task 没有按时触发，需要人去检查 xinzao-daily-issue 这个定时任务本身的执行记录 |
