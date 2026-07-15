@@ -1,0 +1,188 @@
+{
+  "date": "2026-07-15",
+  "generatedAt": "2026-07-15T07:02:03.486Z",
+  "stories": [
+    {
+      "slug": "2026-07-15-anthropic-platform-ecosystem-not-walled-garden",
+      "title": "Anthropic 平台团队：agent 该跑在谁家机器上不重要，他们想守住的是编排接口这一层",
+      "summary": "Anthropic Claude 平台负责人一手判断：执行层基础设施不锁自家，已打通 Modal、Vercel、Cloudflare 和 Amazon 的 micro VM；更大构想是把架构拆成知识、执行、协调三层，协调层想给 token 分饰不同角色。基础设施开放已是发布产品，三层构想仍是方向性愿景。做多云 agent 架构的人值得看。",
+      "content": [
+        "这套开放姿态背后的逻辑，团队自己用电做了类比：蜡烛时代能做的事有限，电真正变成通用基础设施，是因为谁都能接进去、有标准和接口让人插上——这件事没法一家公司关起门来做完，必须和整个生态一起搭。落到执行层，这意味着 Anthropic 不坚持 agent 必须跑在自己控制的沙箱或存储上：他们已经上线自托管沙箱，合作方包括 Modal、Vercel、Cloudflare，还接入了 Amazon 新出的 micro VM，配套 MCP tunnel 让防火墙后面的 MCP server 也能被穿透调用。真正在意的是编排接口本身可靠不可靠、扩不扩得动，基础设施跑在谁家机器上不重要。",
+        "他们把这套架构拆成三层：最底层是“知识”——messages API 的参数设计、skills、memory，本质是让 Claude 知道怎么用自己；往上是“执行”层，今天对外的产品形态是 Managed Agents，负责真正把活干出来、管沙箱和存储；再往上是团队正在摸索的“协调”层，他们称之为 strategies，核心想法是同一个 token 可以派不同的活：有的就是单纯执行，有的负责回顾过去的 session、把心得写进记忆，有的用更大的模型给小模型出主意再让小模型执行，还有的角色是跑完之后拉一个 grader 来判定这次做得好不好，不合格就重来。团队用 Andrej Karpathy 的说法形容协调层最具体的落地例子 Claude Tag——“像一个组织级别的 harness”：表面看只是在 Slack 里 @ 一下，重点其实是背后的 context engineering 和权限判断，理论上可以换到 WhatsApp、邮件或任何人协作的地方，接口只是露出水面的一角，复杂度都埋在水下。",
+        "这是 Anthropic 平台团队的一手表态，细节部分可核验（自托管沙箱、MCP tunnel、Claude for Financial Services 都已经是发布过的产品），但“协调层”和 token 分角色的构想目前还停在方向性描述，团队自己也说还在摸索，不是路线承诺。他们选品的一条隐性标准值得记下：更愿意做“token hungry”的场景——一轮做完用户会想要更多而不是转身就走，coding 是范例，这也是他们先啃金融、法务这类垂直而不是均匀铺开的原因。正在做基础设施选型、或纠结自建 harness 还是接 Managed Agents 的人，可以对照这套三层框架给自己的系统分层，再决定哪层值得自己做、哪层交出去。"
+      ],
+      "creator": "Katelyn Lesse & Angela Jiang(Anthropic Claude 平台团队)",
+      "role": "Claude 平台团队, Anthropic",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "Training Data：Building an Ecosystem, not a Walled Garden",
+          "url": "https://www.youtube.com/watch?v=vPnVTHYplrQ"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-05-09-anthropic-platform-harness-model-pairing",
+          "note": "同一团队谈 harness 绑模型"
+        },
+        {
+          "slug": "2026-05-20-anthropic-managed-agents-self-hosted-sandboxes-mcp-tunnels",
+          "note": "自托管沙箱／MCP tunnel 首发"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-15-codex-chatgpt-work-9m-reset",
+      "title": "OpenAI Codex 团队：用量逼近 900 万，纠结要不要再重置额度，Altman 说接下来服务可能不稳定",
+      "summary": "OpenAI Codex 负责人 Thibault Sottiaux 说用量可能很快摸到 900 万、正纠结要不要再重置限额，同时开出反馈换 100 美元额度；Sam Altman 同日说推理团队在硬扛需求，接下来可能会出点小状况。4 月 Altman 曾承诺周活每涨百万重置一次直到一千万，这次已经很接近那条线。关注 Codex 容量的人可以留意。",
+      "content": [
+        "这轮沟通要放进 4 月的承诺里看：Altman 当时说周活到 300 万后会重置一次额度，以后每涨 100 万都重置，一路重置到一千万为止。Thibault Sottiaux 这次说的“可能很快摸到 900 万”，如果延续的是同一个指标，意味着团队已经在逼近自己许下的那条线，只是没有直接确认。用户量涨得比基础设施跟得上的速度快，团队一边纠结“再重置一次还是让用量喘口气”，一边转向用钱换反馈——这个组合动作本身就是需求超预期的信号。",
+        "具体做法是给前 1 万条“说说你为什么爱上 GPT-5.6 Sol 或者为什么切换过来”的推文发 100 美元 Codex 额度，同时 Sottiaux 自己在评论区公开问“ChatGPT Work 该改进什么”。同一天，Altman 在另一条推文里说增长“快到离谱”，推理团队做了“英雄级”的工作才撑住这波需求，但接下来“可能会出点小状况”——这是 OpenAI 官方账号少见地把“扩容跟不上”直接说出口，而不是等出问题了才解释。",
+        "这些数字全部来自 OpenAI 内部团队自述，没有第三方口径核验，“900 万”具体是什么指标（注册用户还是周活）也没说清楚；可核验的部分是“每涨 100 万重置一次直到一千万”这个承诺本身是 4 月公开做出的，现在可以对照进度。重度依赖 Codex 或 ChatGPT Work 的人，接下来几周可以多留意官方的服务状态通报，“小状况”通常是限流或响应变慢的委婉说法。"
+      ],
+      "creator": "Thibault Sottiaux、Sam Altman",
+      "role": "Codex 工程负责人, OpenAI / CEO, OpenAI",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @thsottiaux（用量与重置）",
+          "url": "https://x.com/thsottiaux/status/2077271889626706300"
+        },
+        {
+          "label": "原推 @thsottiaux（反馈换额度）",
+          "url": "https://x.com/thsottiaux/status/2077248807533003257"
+        },
+        {
+          "label": "原推 @thsottiaux（征集反馈）",
+          "url": "https://x.com/thsottiaux/status/2077212009071075330"
+        },
+        {
+          "label": "原推 @sama（增长与扩容）",
+          "url": "https://x.com/sama/status/2077106587307798989"
+        }
+      ],
+      "engagement": "9,749 likes（Altman 增长那条）",
+      "related": [
+        {
+          "slug": "2026-04-08-codex-3m-reset",
+          "note": "4 月承诺：周活每涨百万重置一次"
+        },
+        {
+          "slug": "2026-07-12-sottiaux-gpt56-sol-claude-code-hack",
+          "note": "同一人上期谈 Sol 接入方法"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-15-ryo-lu-ai-source-of-creation",
+      "title": "Ryo Lu：AI 能替你把手艺产出做出来，却替不了你决定什么值得投入热爱",
+      "summary": "Cursor 设计师 Ryo Lu 长文的核心判断：写作、写代码、设计这类曾经证明“自己有点特别”的技艺，正在变成模型能模仿甚至更快做出来的东西，但 AI 决定不了什么值得投入热爱——他把这个私人、无观众的部分称为“源头”，认为守住它才是作品不变薄的关键。这是立场性随笔而非方法论，对用 AI 提速产出又觉得哪里不对的创作者更有共鸣。",
+      "content": [
+        "他给的机制链条是两段式的，AI 只是第二段。第一段发生在 AI 之前：爱好变成工作的那一刻，好奇心就开始被 deadline、团队、客户、KPI 接管，“策展变成路线图，品味变成决策，玩变成产出”——这是任何一个把热爱做成职业的人都会踩到的坑。第二段才是 AI：写作、写代码、设计、推理，这些原本用来证明“自己有点特别”的手艺，现在一个模型可以模仿、remix，有时候做得更快。他把这个叠加说成，这件事之所以疼，是因为它碰到了你围绕自己编的那个神话——如果我擅长的事一个机器也能做，那这件事里真正属于我的部分是什么。",
+        "他给的答案不是比谁产出快，而是有没有还在维系“和源头的关系”——那个没有观众、没有路线图、没人需要它、可以走神、可以做错事、可以慢下来的部分。他的判断是 AI 能抬高手艺的下限、加快产出，但替不了你想要，替不了你决定什么值得爱，替不了你守住那根让你一开始就在意的私密的线。少了这部分，人依然能操作机器、审核、拍板、按时交付，但作品会变薄、变安全、变得更容易解释、更没有生命力。",
+        "这是一篇立场性随笔，没有方法论清单，判断本身也无法像功能发布那样核验——但可以核验的是说话人的位置：他在 Cursor 做设计，同一时间还在组建设计团队、招 design engineer，写这篇东西的人本身就站在“AI 正在吃掉设计手艺”这个议题的中心。对正在用 AI 加速产出、又觉得东西不对劲的创作者或 builder，这篇更适合当一面镜子而不是操作指南：检查一下自己有没有还留一块“无路线图”的地方，而不是照抄他的结论。"
+      ],
+      "creator": "Ryo Lu",
+      "role": "设计师, Cursor",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @ryolu_",
+          "url": "https://x.com/ryolu_/status/2077162119506833627"
+        }
+      ],
+      "engagement": "809 likes",
+      "related": [
+        {
+          "slug": "2026-05-01-ryo-lu-opinionated-design",
+          "note": "同一人的设计方法论长文"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-15-levie-code-testability-evals",
+      "title": "Aaron Levie：代码天生适合 agent 是因为能被快速验证，他呼吁企业给其余工作也补上同等的评测体系",
+      "summary": "Box CEO Aaron Levie 的机制判断：代码对 agent 友好是因为能被快速测试，多数工作只有砸进真实世界才算“测试”。他判断会出现一批给其余工作补测试的新机会，但前提是企业先把 evals 建起来——多数企业今天的工作流没有配套 evals。方法论向的人值得对照自己团队有没有这层评测。",
+      "content": [
+        "这条延续他一贯的立场——编程是 agent 条件最好的领域，但这次他把“为什么”讲得更细：代码能被快速测试，你可以直接跑一遍看应用是不是工作，或者跑一个测试用例；多数其他工作没有这层反馈，只有等到最终产出砸进真实世界才算数——一笔股票交易执行了，一份合同谈成了，一次销售提案递出去了，那才是“测试”发生的时刻，而且往往已经晚了，改不回来。",
+        "顺着这个逻辑，他判断会出现一整批新机会，专门解决“怎么把其余工作也变得可快速测试”，agent 会因此被一层一层嵌进更多工作流——但这条路要走通，企业得先把评测体系建起来。他指出的现状是，多数企业今天的工作流根本没有配套的 evals，没法判断一次模型、提示词或系统改动到底是让结果变好还是变坏，这块空白目前基本没人填。",
+        "这是他个人判断，不是 Box 的自测数据，不带具体产品推广，但呼应他此前反复强调的立场——企业能不能把自己的知识工作建出评测，决定了能不能吃到 agent 红利。可操作的部分很直接：如果所在团队还没有一套“模型、提示词或系统改动前后怎么判断结果变好变坏”的评测机制，这条可以当作优先级信号，而不是等自动化真的出问题才补。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2077201458546745553"
+        }
+      ],
+      "engagement": "149 likes",
+      "related": [
+        {
+          "slug": "2026-06-06-aaron-levie-coding-agents-best-case",
+          "note": "同一人判断编程是 agent 最佳案例"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-15-claude-for-teachers-launch",
+      "title": "Claude for Teachers 上线，主打 K-12 隐私合规和贴着学区标准生成教案",
+      "summary": "Anthropic 官方账号发布 Claude for Teachers：不用师生对话训练模型，数据处理协议按 FERPA 合规；教案生成会先接进所在州课程标准和 Learning Commons 课纲，再产出材料给老师复核。隐私条款和课纲集成是公告里的具体承诺，教案质量没有第三方数据。给 K-12 老师或做教育类 agent 产品的人看。",
+      "content": [
+        "这次发布把重点放在两条具体承诺上，而不是泛泛的“AI 帮老师省时间”。第一条是隐私边界：官方明确不会用师生的对话去训练模型，且签了符合 FERPA（美国联邦学生隐私法）的数据处理协议——K-12 场景对这条格外敏感，过去不少教育类 AI 工具在这一点上语焉不详，Anthropic 选择把承诺直接写进产品公告本身。",
+        "第二条是内容来源：生成教案时不是模型自由发挥，而是先接进老师所在州的课程标准，再从 Learning Commons 收录的课纲库里取材，拼出教案初稿和可以直接发给学生的材料，老师再手动修改。这套“先接标准和课纲、再生成、人再复核”的流程，本质是把“学生看到的内容有没有依据”这个风险点前置解决，而不是发布后再靠老师自己把关。",
+        "这是 Anthropic 自己的产品公告，隐私承诺和 Learning Commons 集成是写进公告的具体条款，可以对照核验；教案质量好不好、老师实际改动量有多大，官方没有给数据，目前无从判断。K-12 老师或者在做教育类 agent 产品的人，可以拿这套“隐私边界先说清楚、内容先接权威源”的做法当参照——面向未成年人的产品，隐私条款这道门槛通常是采购的第一道筛选条件。"
+      ],
+      "creator": "Anthropic",
+      "role": "",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @claudeai（产品链接）",
+          "url": "https://x.com/claudeai/status/2077047282109714488"
+        },
+        {
+          "label": "原推 @claudeai（隐私与合规）",
+          "url": "https://x.com/claudeai/status/2077047280767488218"
+        },
+        {
+          "label": "原推 @claudeai（教案生成流程）",
+          "url": "https://x.com/claudeai/status/2077047279689535705"
+        }
+      ],
+      "engagement": "647 likes（教案流程那条）",
+      "related": []
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "有人提了一个建 AI 标准机构的方案，他觉得很到位——这跟监管机构不是一回事，能让标准迭代和行业协作快很多。真正的风险是如果 AI 进展被拖到政府那种速度，基本可以确定进步会停摆，美国还可能因此输掉这场竞赛。这套框架把两头都照顾到了，唯一的坎是业内自己对该防哪些安全风险都还没谈拢。",
+      "creator": "Aaron Levie",
+      "handle": "levie",
+      "sourceType": "x",
+      "url": "https://x.com/levie/status/2077043523703243070"
+    },
+    {
+      "quote": "最近沉迷 Pokemon Champions，开始用 Claude Code 帮忙——用 Smogon 的 npm 库写代码，拉实时使用率数据，再写成报告帮自己看对位、临界点或做队伍构筑。",
+      "creator": "Thariq",
+      "handle": "trq212",
+      "sourceType": "x",
+      "url": "https://x.com/trq212/status/2077051280267399550"
+    },
+    {
+      "quote": "Vercel AI Gateway 上的 AI token 流向数据集开放了，里面的洞察很有意思。",
+      "creator": "Guillermo Rauch",
+      "handle": "rauchg",
+      "sourceType": "x",
+      "url": "https://x.com/rauchg/status/2077176141790752798"
+    },
+    {
+      "quote": "前 AI 时代的工程管理思维理解不了：最强的工程师往往也最爱泡在网上。agent 干活的时候，刷 X 就是等待期里的多巴胺来源，科技行业花在 X 上的时间只会继续涨。",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2077144910508257317"
+    }
+  ]
+}

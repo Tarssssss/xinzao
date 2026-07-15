@@ -28,6 +28,9 @@ Anthropic 官方口径的集合页（@Claude 发布账号、Claude Blog、Anthro
 ### 质量透明度
 - 公开复盘「Claude 变笨」：三个独立改动（默认 effort 降档、清思考历史的缓存 bug、压输出长度的系统提示词）叠加所致，全部回滚/修复并重置订阅额度；后续承诺逐行 ablation、灰度发布（2026-04-24-claude-code-postmortem）。
 
+### 垂直产品：教育（新）
+- 发布 Claude for Teachers：不用师生对话训练模型、签 FERPA 合规的数据处理协议；教案生成先接进所在州课程标准和 Learning Commons 课纲库，再产出教案与学生材料，教师复核（2026-07-15-claude-for-teachers-launch）。是继 Financial Services、Security 之后又一个垂直包装产品。
+
 ## 言论时间线
 
 - 2026-04-09 [2026-04-09-managed-agents-launch] 发布 Managed Agents，沙箱/凭证/长时运行做成托管服务，公测
@@ -49,3 +52,4 @@ Anthropic 官方口径的集合页（@Claude 发布账号、Claude Blog、Anthro
 - 2026-05-27 [2026-05-27-anthropic-contain-claude-blast-radius] 复盘三款 agent 产品隔离设计与三起事故：自己写的那层最弱
 - 2026-06-09 [2026-06-09-claude-foundation-models-framework] 接入 Apple Foundation Models：设备端模型复杂推理时交接给 Claude
 - 2026-07-01 [2026-07-01-sonnet5-launch] Sonnet 5 上线，成为 Free/Pro 默认模型；官方称性能接近 Opus 4.8、不靠提示词自行验证输出；Box 企业评测同步公布分行业读数
+- 2026-07-15 [2026-07-15-claude-for-teachers-launch] 发布 Claude for Teachers：不训练师生对话、FERPA 合规，教案先接州课标和 Learning Commons 课纲再生成

@@ -4,7 +4,7 @@
 
 ## 各方立场
 
-- **Anthropic（工程团队 / Claude 平台团队 / Alex Albert）**：立场最连贯的「绑定」派，但绑定的层次在演进。先说 harness 是会过期的补丁集合，每次模型升级要重新验证、删死代码，架构上把 session/harness/sandbox 拆成互不假设的接口（[2026-04-09-managed-agents-architecture]）；平台团队再把删死代码做成方法论，例证 Opus 4.6 自己写代码过滤工具输出反而涨分（[2026-04-11-harness-dead-weight]）；到 5 月直接宣布「通用 harness 热插拔模型的时代正在过去」，真正可热插拔的单位是「harness + 模型」整体（[2026-05-09-anthropic-platform-harness-model-pairing]）；Alex Albert 补了造模型侧的视角：同一模型在不同壳里行为不同，模型与 harness 要一起设计（[2026-05-19-alex-albert-building-next-claude]）。
+- **Anthropic（工程团队 / Claude 平台团队 / Alex Albert）**：立场最连贯的「绑定」派，但绑定的层次在演进。先说 harness 是会过期的补丁集合，每次模型升级要重新验证、删死代码，架构上把 session/harness/sandbox 拆成互不假设的接口（[2026-04-09-managed-agents-architecture]）；平台团队再把删死代码做成方法论，例证 Opus 4.6 自己写代码过滤工具输出反而涨分（[2026-04-11-harness-dead-weight]）；到 5 月直接宣布「通用 harness 热插拔模型的时代正在过去」，真正可热插拔的单位是「harness + 模型」整体（[2026-05-09-anthropic-platform-harness-model-pairing]）；Alex Albert 补了造模型侧的视角：同一模型在不同壳里行为不同，模型与 harness 要一起设计（[2026-05-19-alex-albert-building-next-claude]）；7 月把「harness + 模型」这个绑定单位再往上叠一层——知识/执行/协调三层抽象，协调层（strategies）本质是给 token 分饰不同角色的元 harness，执行层基础设施本身反而主张不锁定（自家/Modal/Vercel/Cloudflare 均可），锁定的是编排接口而非硬件（[2026-07-15-anthropic-platform-ecosystem-not-walled-garden]）。
 - **OpenAI（Yann Dubois / Frontier 团队实践）**：与 Anthropic 同向。Dubois 直接建议别押注通用 harness，撑不过模型迭代；但垂直领域把可靠性从 80% 抬到 85% 的「最后一公里」harness 值得做，做好将来重调的准备（[2026-05-22-yann-dubois-harness-last-mile]）。Frontier 的 Ryan Lopopolo 是实践注脚：模型换代时整个代码库跟着改（GPT-5.3 变得没耐心，一周内把构建系统压到一分钟内），harness 与当前模型行为深度绑定（[2026-04-08-harness-engineering]）。
 - **Garry Tan（YC）**：解耦派，但解耦的对象是数据不是 harness 本身。主张 thin harness、fat skills，memory 和技能放在 markdown 和 git 里，harness 只读不拥有——harness 死掉时记忆跟着死就是建得太厚（[2026-04-12-thin-harness-fat-skills]）；6 月升级成平台政治论：memory 是唯一应该能带去任何平台的东西，要自己托管，否则就是在别人生态里当佃农，这会是 2027 年「harness 之战」的决定性战场（[2026-06-01-garrytan-own-your-memory-harness-wars]）。
 - **Marc Andreessen（a16z)**：最彻底的解耦派。agent 等于模型加 bash 加文件系统加 cron 循环，状态全在文件里，换模型只是性格变了、记忆和能力都还在；顺带否定 MCP，认为命令行接口够用（[2026-04-13-andreessen-agent-unix]）。
@@ -26,3 +26,4 @@
 - 2026-05-22 [2026-05-22-yann-dubois-harness-last-mile] OpenAI 的 Dubois 给 builder 划线：通用 harness 别投太多，垂直「最后一公里」harness 值得做但要准备重调
 - 2026-06-01 [2026-06-01-garrytan-own-your-memory-harness-wars] Garry Tan 把战线推到数据主权：memory 要自己托管，2027 年「harness 之战」的决定性战场
 - 2026-06-04 [2026-06-04-satya-nadella-private-evals-harness-moat] Nadella 给出护城河判据：企业 IP 是私有 eval，检验标准是换模型后还能不能继续 hill-climb
+- 2026-07-15 [2026-07-15-anthropic-platform-ecosystem-not-walled-garden] Anthropic 平台团队把绑定单位再叠一层：知识/执行/协调三层抽象，协调层给 token 分饰不同角色；执行层基础设施反而主张不锁定自家硬件

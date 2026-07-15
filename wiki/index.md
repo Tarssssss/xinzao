@@ -22,7 +22,7 @@
 - [sam-altman](builders/sam-altman.md) — OpenAI CEO：Codex 增长运营、算力受限判断与折扣 token、微软云合作
 - [zico-kolter](builders/zico-kolter.md) — OpenAI 安全委员会主席；agent 安全要专门投入，鲁棒性不随规模提升
 - [yann-dubois](builders/yann-dubois.md) — OpenAI 后训练负责人；垂直 harness 可做、通用别押，持续学习仍未解
-- [ryo-lu](builders/ryo-lu.md) — Cursor 设计师；批判 overcooking，主张「无观点本身是强观点」
+- [ryo-lu](builders/ryo-lu.md) — Cursor 设计师；批判 overcooking，主张「无观点本身是强观点」，另有 AI 与创作动机随笔
 - [matt-turck](builders/matt-turck.md) — FirstMark VC，拿一线见闻纠偏 AI TAM、地缘与企业买方叙事
 - [madhu-guru](builders/madhu-guru.md) — 前 Google Gemini/Veo 产品负责人，主张为模型斜率而建
 - [amjad-masad](builders/amjad-masad.md) — Replit CEO，押注 AI 时代安全成默认、免费层经济学被重写
@@ -35,7 +35,7 @@
 - [emily-glassberg-sands](builders/emily-glassberg-sands.md) — Stripe 数据与 AI 负责人：token 欺诈一手数据（持续恶化）、计价从按人头转按用量、agent 终局是自负盈亏微型公司
 - [glenn-fogel](builders/glenn-fogel.md) — Booking Holdings CEO：agent 旅行顾问 Penny 采用率据称翻倍，但公司自己也算不清每次调用的成本和长期价值
 - [dax-raad](builders/dax-raad.md) — OpenCode 作者：一手运营数据显示 Fable 用量占比小但成本占比高，隐含单位成本差距悬殊
-- [thibault-sottiaux](builders/thibault-sottiaux.md) — OpenAI Codex 工程负责人：公布把 GPT-5.6 Sol 接入 Claude Code 当子模型运行的具体方法
+- [thibault-sottiaux](builders/thibault-sottiaux.md) — OpenAI Codex 工程负责人：公布 GPT-5.6 Sol 接入 Claude Code 的方法，用量逼近 900 万时公开纠结重置节奏
 
 ## Threads
 
