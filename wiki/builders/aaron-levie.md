@@ -29,6 +29,7 @@ Box CEO，刊中言论量最大的企业 AI 看多者，自称「Jevons 悖论�
 - token 需求被低估几百倍（2026-04-12-levie-demand-expansion）；token 成本已从工程问题升级成 CIO 级预算与组织问题，没人觉得自己有对的解法；支出会溢出 IT 预算落到业务线 OpEx，业务线没有 FinOps（2026-05-09-levie-token-budgeting-enterprise、2026-05-20-levie-token-cost-enterprise-cio、2026-05-29-levie-tokenmaxxing-enterprise-economics）。
 - **立场变化（成本收敛→分层拉大）**：他自述此前以为 AI 每 token 成本会收敛到单一低价，5 月下旬改判为按任务分层只会越拉越大（2026-05-22-levie-inference-cost-stratification）；进一步说「token 永远变便宜」当前不成立，前沿 token 因模型变大和产能紧张单价不降反升（2026-05-29-levie-tokenmaxxing-enterprise-economics）。
 - 由此推出路由层判断：模型分层是双向变大（前沿盘子更大、低端也更大），能按任务把负载路由到合适价位模型的编排层会越来越值钱，是应用层最重要差异化点之一；前提是领域工作模式理解 + 强 eval（2026-06-03-aaron-levie-model-routing-applied-ai、2026-06-07-model-routing-applied-layer-differentiation、2026-06-08-aaron-levie-model-stratification-routing-layer）；「能力饱和后降级」：先用前沿模型把任务做可靠，再剥给便宜模型，企业平均会同时用约六个模型（2026-05-29-levie-tokenmaxxing-enterprise-economics）。
+- **修正（2026-07-18）**：在 7 月 12 日的杰文斯论证上加了一层——AI 效率提升不只拉高总用量，连前沿闭源模型的需求也会跟着涨，机制是编排环节离不开最强模型、执行环节的大部分 token 才分给便宜模型；他同时预判这条效率红利最终压缩的是利润率，智能定价会向基础设施本身的利润率靠拢（2026-07-18-levie-frontier-demand-margin）。
 
 ### 应用层护城河
 - AI 变容易的能力对所有人同样容易，不构成护城河，差异化被挤到别处（2026-05-08-levie-ai-commoditization-differentiation）；造软件变便宜后 GTM 成企业软件最难的部分（2026-06-08-aaron-levie-gtm-is-the-hard-part）。
@@ -113,3 +114,4 @@ Box CEO，刊中言论量最大的企业 AI 看多者，自称「Jevons 悖论�
 - 2026-07-01 [2026-07-01-levie-fable-jailbreak-framework] 解读 Anthropic 博文：跨公司 jailbreak 评估行业标准化（联合亚马逊、微软等）；接受政府介入不可逆，但警告评估主观性和若每次大版本都要走同等审查则拖慢突破节奏
 - 2026-07-12 [2026-07-12-altman-levie-swyx-ai-job-creation] 给出「AI 净创造就业」的机制解释：成本降低推高总需求，维护/决策/迭代仍离不开人；呼应 Altman 同日的预期反转、Swyx 的编程外推论断，但「软件岗位招聘逆势增长」缺具体数据来源
 - 2026-07-15 [2026-07-15-levie-code-testability-evals] 代码对 agent 友好是因为能被快速测试，呼吁企业给其余工作也补上同等的评测体系
+- 2026-07-18 [2026-07-18-levie-frontier-demand-margin] 给杰文斯论证加修正：AI 效率提升连前沿闭源模型的需求也会跟着涨，代价是利润率被压缩

@@ -1,0 +1,174 @@
+{
+  "date": "2026-07-18",
+  "generatedAt": "2026-07-18T06:58:12.224Z",
+  "stories": [
+    {
+      "slug": "2026-07-18-claude-fable5-access-tiers",
+      "title": "Anthropic 承认 Fable 5 需求一直估不准,7 月 20 日起 Max/Team Premium 限额升到 50%,Pro/Team Standard 改发 100 美元额度",
+      "summary": "Anthropic 官方罕见承认:Fable 5 的需求从上线起就没判断准过,访问权限因此分阶段反复调整。7 月 20 日起 Max 和 Team Premium 的标准访问额度回到 50%,Pro 和 Team Standard 没拿到限额提升,只换一次性 100 美元额度。Pro/Team Standard 用户值得对照自己这次实际能拿到什么。",
+      "content": [
+        "这次公告里比限额数字更值得记的,是官方话里的坦白:需求一直没预测准,访问权限因此才分阶段反复调整,期间已经不止一次扩大过范围。这句话承认的其实是持续了数月的状态,不只是一次性的容量事故。",
+        "具体动作是 7 月 20 日起,Max 和 Team Premium 这两档使用 Fable 最重的用户,标准访问额度回到 50% 限额;Pro 和 Team Standard 用户没有拿到限额提升,只换来一次性 100 美元的使用额度。这个差异化处理本身是个信号:新增的容量优先给了用量最大的付费档位,较轻用户档位拿到的是现金补偿而不是访问权限的实质提升。",
+        "这是 Anthropic 官方账号自己的说法,没有第三方口径核验新增了多少算力、下一次限额还会不会变。可核验的部分是具体条款和日期。付费用 Fable 的订阅用户,尤其是 Pro 和 Team Standard 档位的人,可以对照这次公告确认自己实际能拿到什么,而不是默认所有人都在恢复标准访问。"
+      ],
+      "creator": "Anthropic",
+      "role": "",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @claudeai(致歉与说明)",
+          "url": "https://x.com/claudeai/status/2078302417100394737"
+        },
+        {
+          "label": "原推 @claudeai(政策细节)",
+          "url": "https://x.com/claudeai/status/2078302415804379218"
+        }
+      ],
+      "engagement": "28.1K likes(政策细节那条)",
+      "related": [
+        {
+          "slug": "2026-06-13-compute-crunch-api-access-risk",
+          "note": "预测算力紧缺会逼实验室限流"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-18-katti-openai-compute-supply-demand",
+      "title": "OpenAI 工业算力负责人 Sachin Katti:每次以为算力够了想放慢,事后都证明判断错了,真正的瓶颈是建不够快",
+      "summary": "OpenAI 工业算力负责人 Sachin Katti 的核心判断:需求一直跑赢供给,每次以为算力够用想放慢建设事后都证明判断错了,真正担心的是建不够快而非建太多。细节佐证:Jalapeno 芯片九个月流片(他职业生涯最快)、AI 已协助设计下一代系统。内部人自述,无第三方口径,但能解释同一周 Claude、Codex 为何都在收紧访问额度。",
+      "content": [
+        "这条判断背后的机制是训练和推理的界限本身在消失。他解释,团队不再区分训练和推理,因为训练一个新模型时生成合成数据是推理、做后训练是推理、跑测试时计算也是推理——哪怕是“训练”阶段,消耗的很大一部分算力本质上已经是推理。叠加另一个因素:AI 研究本身正在被 AI 加速,以前研究员能跑多少实验受限于人类研究员这个稀缺资源,现在 AI 自己能做 AI 研究,可运行的实验数量会爆炸式增长,连带需要的研究算力也跟着爆炸。这是他判断“算力永远不够用”不会在可预见的将来改变的根据。",
+        "具体到硬件,团队自研芯片 Jalapeno 从设计到流片只用了九个月,他说这是自己职业生涯里见过最快的一次。原因除了团队本身有 Google TPU 设计经验、和 Broadcom 的深度合作,更关键的是 OpenAI 知道自己要跑的模型长什么样——普通芯片厂商设计芯片时通常不知道最终客户会拿它跑什么负载,而 OpenAI 自己就是客户,能据此跳过大量设计决策的试错。他还提到 AI 已经在协助优化芯片设计,并判断“递归”的世界不会太远——AI 设计自己训练和运行下一代 AI 所需系统的阶段,芯片也包含在内。",
+        "这套判断被他落到了具体的商业动作上:OpenAI 最近开始卖“guaranteed capacity”,本质是保证一定金额的 token 供应——在算力持续短缺、token 因此始终稀缺的前提下,企业需要像对待任何关键供应品一样对智能做供应链对冲。团队同时在多头下注算力来源:微软、AWS、Google 这类超大规模云商仍是大头,同时布局 Neo Cloud、自研芯片、自建部分数据中心,不押注单一渠道。另一个不太被讨论的瓶颈是人:电工、水管工这类建设数据中心必需的技术工种明显短缺。",
+        "这是 OpenAI 内部人自述,可核验的部分是具体时间线和技术事实——Jalapeno 九个月流片、新发布的 MRC 多路径网络协议都是公开工程细节;“递归不远”这类判断目前无法验证,且这套叙事本身也在为公司持续的巨额基础设施投入背书,需要打折。对关注算力基础设施投资、或好奇 Claude 和 Codex 为什么在同一周都收紧访问额度的人,这条访谈提供的背景是:只要需求持续跑赢供给,限流大概率会反复出现,很难靠某家公司加强管理就解决。"
+      ],
+      "creator": "Sachin Katti",
+      "role": "工业算力负责人, OpenAI",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "The MAD Podcast with Matt Turck",
+          "url": "https://www.youtube.com/watch?v=wEZBlmvxx4o"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-06-13-compute-crunch-api-access-risk",
+          "note": "与他的供给紧张判断呼应"
+        },
+        {
+          "slug": "2026-05-07-dario-80x-compute",
+          "note": "Anthropic 侧算力抢购的对照"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-18-levie-frontier-demand-margin",
+      "title": "Aaron Levie:AI 效率提升不只拉高总用量,连前沿闭源模型的需求也会跟着涨,代价是利润率被往下压",
+      "summary": "Aaron Levie 在 7 月 12 日杰文斯悖论论证上加了一条修正:AI 效率提升不仅拉高总用量,连前沿闭源模型的需求也会跟着涨——机制是编排环节要用最强模型,执行环节的大部分 token 可以分给便宜或调优过的模型。他同时预判这条效率红利最终压缩的是利润率。这是他个人判断,回复贴的原贴内容不明,缺乏数据支撑。做多模型路由架构决策的人值得对照。",
+      "content": [
+        "他给的机制是分工:复杂任务的编排环节需要用得起的最强模型来做判断和拆解,但拆解完之后,真正消耗掉大部分 token 的执行环节可以交给更便宜或调优过的小模型去做。这套分工意味着,即便平均单价在下降,前沿模型被调用的频次不会跟着降——它只是不再承担所有的 token 量,但仍然是编排层不可替代的一环。效率提升带来的结果是“总任务量变多,前沿模型被更频繁地叫来做判断”,而不是前沿模型的份额被便宜模型直接吃掉。",
+        "这条修正接在他 7 月 12 日和 Altman、Swyx 的判断之后——那次三人的共识是效率提升会推高总需求、创造更多岗位;这次他把同一套逻辑用在成本结构上:AI 部署成本效率越高,能覆盖的任务就越多,反而可能带来更多而不是更少的前沿模型开支。但他也直接点出这条效率红利最终压缩的是利润率,“智能”这门生意的定价迟早会向基础设施本身的利润率靠拢,这句话本身也是在提醒同行别把当前的高毛利当成常态。",
+        "这条判断来自一条回复贴,原贴内容不在素材里,他自己的论证是自洽的,但缺乏具体数据支撑——“前沿模型需求也会涨”目前只是他的个人推演,不是 Box 或第三方的实测数字。需要打折的地方是,他经营的 Box 本质上靠企业持续购买 AI 能力赚钱,“需求会一直涨”的判断对他的生意天然有利。正在设计多模型路由架构的人,可以把“编排用强模型、执行用廉价模型”当作一个现成的分层参考。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2078139206946459853"
+        }
+      ],
+      "engagement": "331 likes",
+      "related": [
+        {
+          "slug": "2026-07-12-altman-levie-swyx-ai-job-creation",
+          "note": "接续同一杰文斯论证"
+        },
+        {
+          "slug": "2026-06-08-aaron-levie-model-stratification-routing-layer",
+          "note": "路由分层判断的延伸"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-18-madhu-guru-enterprise-moat-evals-harness",
+      "title": "Madhu Guru:Kimi 这类开源模型的钱大概率要经 Google Cloud 转一手,企业落地真正卡住的是 evals 和 harness 人才",
+      "summary": "前 Google 产品负责人 Madhu Guru 同一天给出两处判断:一是 Kimi 这类开源模型,企业大概率绕道 Google Cloud 换安全、合规、芯片保证,钱转一圈还是进大厂口袋;二是企业做不出超越聊天机器人的应用,卡点是缺人搭 evals 和 harness,不是模型不够强。两条都是个人观察,无数据支撑。做企业 AI 落地决策的人值得看。",
+      "content": [
+        "第一条判断的机制是企业采购的现实约束:多数企业对便宜、能力强的开源模型本身没有意见,真正绕不开的是安全保证、数据驻留、合规资质这几道门槛——这些恰恰是云厂商的强项,模型厂商接不住。于是即便像 Kimi 这样的开源模型价格更有优势,企业实际付费的对象大概率还是 Google Cloud、AWS 这类云平台——模型本身开源,但离企业最近的那一层依然被云厂商把住,钱在两个口袋之间打转。",
+        "第二条判断补的是另一半图景:企业困在基础聊天机器人阶段,他把原因指向三样缺口,模型能力不在其中——够不够格的评测体系(能不能覆盖真实用例、能不能推着模型逼近能力边界、能不能帮企业在质量-成本-延迟这条曲线上选对模型)、独立于模型本身的 harness(路由、多智能体编排、上下文管理、工具调用、记忆是否都成体系)、以及能把这两样真正搭出来的人才,他把人才明确标为其中最稀缺的一环。这套拆解和 Aaron Levie 三天前“企业普遍缺 evals”的判断方向一致,但 Madhu Guru 把范围从评测扩到了整个 harness 层。",
+        "两条判断都来自他个人从业观察,没有引用具体客户数据或统计口径,他此前在 Google 负责 Gemini、Veo、Nano Banana 这类产品,现在的视角更贴近“模型之外的落地层”而不是模型本身。对正在评估要不要自建 harness 团队、或者判断开源模型能不能绕开云厂商直接触达企业客户的人,这条判断提供的是一份具体的检查清单,而不是可以直接照抄的结论。"
+      ],
+      "creator": "Madhu Guru",
+      "role": "前产品负责人(Gemini/Veo/Nano Banana), Google",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @realmadhuguru(Kimi 与 Google)",
+          "url": "https://x.com/realmadhuguru/status/2078210889778708744"
+        },
+        {
+          "label": "原推 @realmadhuguru(evals 与 harness)",
+          "url": "https://x.com/realmadhuguru/status/2078131628262752550"
+        }
+      ],
+      "engagement": "264 likes(evals/harness 那条)",
+      "related": [
+        {
+          "slug": "2026-06-08-madhu-guru-training-data-why-swe-agents-first",
+          "note": "他6月判断agent卡在训练数据"
+        },
+        {
+          "slug": "2026-07-15-levie-code-testability-evals",
+          "note": "Levie 同期也谈企业缺 evals"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "如果你还没把 codex / claude / gemini / devin 这类自动化设成每周自动研究怎么提升 SEO/AEO,你正在错过一个免费、本该被瓜分完却出奇没人抢的机会。",
+      "creator": "Swyx",
+      "handle": "swyx",
+      "sourceType": "x",
+      "url": "https://x.com/swyx/status/2078244735794413786"
+    },
+    {
+      "quote": "又来了。给 Codex 和 ChatGPT Work 的全体付费用户重置使用额度。团队一直在以最快速度迭代,还撑住了比以往任何时候都快的扩张节奏,非常感谢他们。周末愉快!",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2078320950488297917"
+    },
+    {
+      "quote": "codex 用浏览器加电脑操作打开 Chrome、跳到我的 PR、点评论、和 macOS 的文件选择器搏斗——就为了上传一张图片,这事儿看着又神奇又难受。GitHub 没有对应的 API 也挡不住它这么干。我让 codex 都在虚拟机里跑,省得它们抢占我电脑的焦点。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2078318731785359634"
+    },
+    {
+      "quote": "先做 mockup、schema、数据模型这些原型和概念验证,是避免烧掉一大堆 token 之后才发现自己根本不想要这个结果的最好办法。",
+      "creator": "Thariq",
+      "handle": "trq212",
+      "sourceType": "x",
+      "url": "https://x.com/trq212/status/2078189833445654714"
+    },
+    {
+      "quote": "公开建造的小技巧:如果做内容感觉是额外的活,那就把产品里本来就在发生的工作展示出来——一段小小的录屏、第一个版本、或者改变了你设计方向的用户行为。思考过程比制作精良程度更重要。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2078086930756202924"
+    },
+    {
+      "quote": "几年前,很多人还不太习惯会议被录音。现在大家默认所有商务会议都会被记录——不是为了给人看,是为了给 agent 看。技术真的会改变文化。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2078076500683997446"
+    }
+  ]
+}

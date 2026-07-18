@@ -1,132 +1,117 @@
 # Follow Builders Feed Brief
 
-Synced at: 2026-07-15T16:30:20.938Z
-Feed generated at: 2026-07-15T07:02:03.486Z
-Builders: 15
-Tweets: 39
+Synced at: 2026-07-18T16:12:52.347Z
+Feed generated at: 2026-07-18T06:58:12.224Z
+Builders: 13
+Tweets: 27
 Podcasts: 1
-Blogs: 0
+Blogs: 3
 
 Use this file as the quick scan view. Full payload lives in `data/raw/latest.json`.
 
 ## X / Twitter
 
 ### Swyx (@swyx)
-- @shloked @amazon https://t.co/X46Xm0VBx7
-  https://x.com/swyx/status/2077243485518979188
-- SF Personal AI engineers - if you are building personal agents, come demo at new media lab this thursday night (and meet @shloked, one of the best builder-writers I've had the fortune to meet this year). last time we held this meetup our f…
-  https://x.com/swyx/status/2077243443391422813
-- @VivianBala still unreal that this is a real picture from this year lol https://t.co/TMLXGa45QW first talk https://t.co/FNDJq104GA
-  https://x.com/swyx/status/2077239676692472287
+- still true https://t.co/2eYqwze1Ae
+  https://x.com/swyx/status/2078364141878952242
+- alpha only gone when we all stop asking these level of questions and start discussion about on-policy autoaeo (does claude optimizing your aeo disproportionately work on claude?) vs generalizable aeo https://t.co/GrymTTqz6O
+  https://x.com/swyx/status/2078293998398263587
+- btw if you havent set your {codex | claude | gemini | devin} automations to autoresearch how to improve your seo/aeo every week you are really truly missing out on free, should-be-commoditizing-but-weirdly-untapped alpha
+  https://x.com/swyx/status/2078244735794413786
 
 ### Thibault Sottiaux (@thsottiaux)
-- Embarrassment of riches. But looks like we might hit 9M soon. Should we reset the ChatGPT Work and Codex usage again or give it some space?
-  https://x.com/thsottiaux/status/2077271889626706300
-- Or… what if we gave you $100 in Codex credits if you tell us what you love about GPT-5.6 Sol or why you switched? Tweet it, claim your gift, enjoy more usage. First 10k get the free tokens! https://t.co/8mU93eA13i https://t.co/8FfAGx68wR
-  https://x.com/thsottiaux/status/2077248807533003257
-- Here you are! Thinking I am about to announce a reset. But no. I’m just scrolling twitter and looking for feedback on ChatGPT Work. What should we improve?
-  https://x.com/thsottiaux/status/2077212009071075330
+- And transitively might also have reset other rate limits out there. Let's see. You're welcome if so.
+  https://x.com/thsottiaux/status/2078321266524881065
+- Oops... I did it again. Enjoy reset usage limits for all paid users for Codex and ChatGPT Work. Super grateful for an incredible team who is iterating at lightspeed and keeping the infra up as we scale faster than ever. Enjoy the weekend! …
+  https://x.com/thsottiaux/status/2078320950488297917
+- GPT-5.6 Sol confirmed to be an extremely good model https://t.co/nZaAnFhsPX
+  https://x.com/thsottiaux/status/2078310751878647932
 
 ### Peter Yang (@petergyang)
-- Tomorrow, I’m sharing a new video on how I use ChatGPT Work (also known as Codex 😅) to do almost everything on my computer. I’ll cover my complete setup in 7 steps below, from choosing the right GPT-5.6 model to managing email, calendar, …
-  https://x.com/petergyang/status/2077196815951417649
-- Holy shit a time traveler or cope? https://t.co/H7DMs5fVz4
-  https://x.com/petergyang/status/2077172496424751376
-- Best player from Spain https://t.co/bHWyd4s1eN
-  https://x.com/petergyang/status/2077139905692799065
+- Codex browser use has finally been defeated. https://t.co/qGAIvxtjnJ
+  https://x.com/petergyang/status/2078303748649320529
+- Legendary episode dropping this weekend featuring the one and only @trq212, who showed me his AI video workflows and much more. 📌 Subscribe to get it on Sunday: https://t.co/744uInp9aE https://t.co/ZTh2IpXRnM
+  https://x.com/petergyang/status/2078293685238993072
+- The reason I want this btw is spending an entire day staring at screens trying to manage agents fries my brain. Much better to be walking around outside talking to the agents "on the phone" giving them work to do and having them update me …
+  https://x.com/petergyang/status/2078276992470794531
+
+### Madhu Guru (@realmadhuguru)
+- Why do you think kimi hurts Google? Many enterprises won’t consume Kimi directly. They’ll get it through Google Cloud because they still need enterprise guarantees - security, data residency, compliance and most importantly, chips. Money o…
+  https://x.com/realmadhuguru/status/2078210889778708744
+- The reason enterprises struggle to go beyond basic chat bots is the talent gap to build harnesses and evals. 1. Evals: do you clearly understand your use cases and can you replicate that in the form of offline and online evals. Do the eval…
+  https://x.com/realmadhuguru/status/2078131628262752550
 
 ### Thariq (@trq212)
-- I'll open source this if it's interesting! But here's my first public artifact, a breakdown on my Mega Sceptile team: https://t.co/WYqzNIRybo
-  https://x.com/trq212/status/2077051282146431092
-- I've been playing a lot of Pokemon Champions recently and started using Claude Code to help me. It writes code using Smogon's npm library, pulls live usage stats and then writes reports to understand matchups, breakpoints or theorycraft te…
-  https://x.com/trq212/status/2077051280267399550
+- building prototypes of mockups, schemas, data models, proof of concepts, etc. is the best way to avoid spending tons of tokens before realizing you don't want the output https://t.co/BjYeXC7zfk
+  https://x.com/trq212/status/2078189833445654714
+
+### Amjad Masad (@amasad)
+- This is a sick exploration of chess history. The Replit community is ChessMaxxing https://t.co/JqBIq5WRct https://t.co/FyMdf7nIhS
+  https://x.com/amasad/status/2078273728618877326
 
 ### Guillermo Rauch (@rauchg)
-- I used this dataset to create ↓ https://t.co/3cjcH9Sp9o
-  https://x.com/rauchg/status/2077176287131840734
-- We're opening up the dataset of AI token flows on @vercel AI Gateway. Fascinating insights contained within! https://t.co/2ZhCBFrGBg
-  https://x.com/rauchg/status/2077176141790752798
-- The @agentmail team has been cooking. Tell your agent to 𝚟𝚎𝚛𝚌𝚎𝚕 𝚒𝚗𝚜𝚝𝚊𝚕𝚕 𝚊𝚐𝚎𝚗𝚝𝚖𝚊𝚒𝚕 – no signup, automatic setup and unified billing. https://t.co/cvnKepOWtF
-  https://x.com/rauchg/status/2077154901013221444
+- 🆓 Sandbox data for downloads. Happy Friday! Time to ship more agents https://t.co/xkRucYqs8I
+  https://x.com/rauchg/status/2078305023784620342
+- Ship like @shadcn https://t.co/J6YwECf2Wi
+  https://x.com/rauchg/status/2078299647689310270
 
 ### Aaron Levie (@levie)
-- One of the many properties that code has that makes it highly amenable to agents is that you can more or less quickly test it. You can either go see if the application works manually, or you can actually run a test on what you built. Most …
-  https://x.com/levie/status/2077201458546745553
-- Thoughtful proposal for a standards body for AI. This is distinct from a regulatory agency, and would certainly allow for much faster improvement of standards and collaboration with the industry. What you definitely don’t want is for AI pr…
-  https://x.com/levie/status/2077043523703243070
+- This post is key. The cheaper AI gets, the more opportunity there is for the entire ecosystem - especially including end-customers - to benefit. Everything is bottlenecked by being able to successfully and cost effectively deploy AI in rea…
+  https://x.com/levie/status/2078139206946459853
 
-### Ryo Lu (@ryolu_)
-- when the dream becomes the job i used to think the dream was to make my hobby my work. to spend my life close to the things i loved: computers, tools, interfaces, systems, tiny details, the feeling of making something from nothing. the thi…
-  https://x.com/ryolu_/status/2077162119506833627
-- assembling the best design team (looking for design engs, too) https://t.co/4BwnGqWmk3
-  https://x.com/ryolu_/status/2077108336844210352
-- 💛 https://t.co/JKFuImHNq7
-  https://x.com/ryolu_/status/2077107655894860137
-
-### Garry Tan (@garrytan)
-- Never go full omnicause https://t.co/UJu7sve1zH
-  https://x.com/garrytan/status/2076948530598486090
-- Your tax dollars at work The doom loop in SF isn’t just about ruining the city for normal citizens It’s also about looting the public good https://t.co/1qg0kXUtfx
-  https://x.com/garrytan/status/2076935141658611759
-
-### Matt Turck (@mattturck)
-- The cruel reality of the World Cup is that 47 out of 48 teams go home heartbroken. We love it anyway.
-  https://x.com/mattturck/status/2077168963822231753
-- How France played 10/10 football throughout the World Cup and 4/10 football in the semi final will need to be studied in football school as the ultimate cautionary tale.
-  https://x.com/mattturck/status/2077139555535241253
+### Zara Zhang (@zarazhangrui)
+- Great video https://t.co/tGU8LfdzFQ
+  https://x.com/zarazhangrui/status/2078357435203695071
+- Tip for building in public: If making content feels like extra work, show the work already happening inside your product. A tiny screen recording, the first version, or the user behavior that changed your design. The reasoning matters more…
+  https://x.com/zarazhangrui/status/2078086930756202924
+- Just a few years ago, many people were uncomfortable with recording meetings Now it’s just assumed that all business meetings are recorded (not for humans, but for agents) Technology really changes culture
+  https://x.com/zarazhangrui/status/2078076500683997446
 
 ### Nikunj Kothari (@nikunj)
-- The Benji Taylor-fication of this app has been such a joy.. Noticing all the small delightful touches. Long may it continue 👏
-  https://x.com/nikunj/status/2077233695556067336
-- The pre-AI engineering leader mind can’t comprehend that their most cracked engineer is also extremely online.. While the agents are working, X becomes the dopamine spike they need as they wait. I think time on X numbers especially in tech…
-  https://x.com/nikunj/status/2077144910508257317
+- Why is no one awake and on the streets, Dad? Because it’s 5:32 am buddy 😴 https://t.co/qnPaaQTt3D
+  https://x.com/nikunj/status/2078033435398897982
 
 ### Peter Steinberger (@steipete)
-- (yes, it'll burn ya tokens, but it'll calm your nerves)
-  https://x.com/steipete/status/2077266132625698820
-- That's why you always wanna run autoreview. https://t.co/zbUjIS2LQQ https://t.co/tWPB3UZsAq
-  https://x.com/steipete/status/2077265627379843242
-- Suno AI is delivering bangers! https://t.co/TUxkmyzsph
-  https://x.com/steipete/status/2077250314575745024
-
-### Dan Shipper (@danshipper)
-- receipts, from our Codex Desktop app launch vibe check: https://t.co/QHZ9UQ8KAm
-  https://x.com/danshipper/status/2077196796586025327
-- if you are reading @every, you knew codex was about to take off 6 months ago :) success kid pointing to when i started getting extremely, absolutely, annoyingly codex pilled and we began covering it https://t.co/LdErRzAtpQ https://t.co/R2e…
-  https://x.com/danshipper/status/2077196636971815135
-- COME SEE @EVERY IRL! We're hosting an @every subscriber meetup at our brownstone in Brooklyn TOMORROW Wednesday, July 15 from 6-8 PM You should come! https://t.co/3uMWbmQcWZ https://t.co/Ewfuql42PF
-  https://x.com/danshipper/status/2077156555376492557
-
-### Aditya Agarwal (@adityaag)
-- Is there any move involving Lamine Yamal where Yamal doesn't end up on the floor rolling around?
-  https://x.com/adityaag/status/2077136023616962651
-- I appreciate the in-depth feature set of the new "ChatGPT" app... But there is a real tradeoff. I used ChatGPT (Legacy) 15-20 times a day for queries... And now it feels so heavyweight for that use case. Shame.
-  https://x.com/adityaag/status/2077130899733553560
+- It's both amazing and painful to watch codex use browser + computer use to open Chrome, go to my PR, tap on comment and wrangle with the macOS picker - all TO UPLOAD AN IMAGE. GitHub has no API doesn't stop anyone. I let my codex run in VM…
+  https://x.com/steipete/status/2078318731785359634
+- Are we still talking loops or did we shift to graphs yet?
+  https://x.com/steipete/status/2078277297791189132
+- ya'all made me go crazy with codexbar icon customization issues, so I built an editor. (by me, I mean codex) https://t.co/edAthj1eZw
+  https://x.com/steipete/status/2078264088644276598
 
 ### Sam Altman (@sama)
-- hello! https://t.co/riq8bTHR5V
-  https://x.com/sama/status/2077118672150388816
-- 5.6 sol growth is insane. the inference team has done heroic work to be able to support demand. we are going to move mountains to continue to scale, but it is possible there are some hiccups soon.
-  https://x.com/sama/status/2077106587307798989
-- also, a reason to favor open-source harnesses.
-  https://x.com/sama/status/2077053226080436235
+- this is cool: https://t.co/X4HEmFym68
+  https://x.com/sama/status/2078244242993164716
 
 ### Claude (@claudeai)
-- Read more about how Claude for Teachers works: https://t.co/mRTR2WJx54
-  https://x.com/claudeai/status/2077047282109714488
-- Claude for Teachers is built for K-12 privacy. We never train our models on your conversations, and student information is protected by a data processing agreement written to comply with FERPA.
-  https://x.com/claudeai/status/2077047280767488218
-- Ask for a lesson plan, and Claude starts from your state standards and high-quality curricula by connecting through Learning Commons. It then drafts a plan and student-facing materials you can revise and take into class.
-  https://x.com/claudeai/status/2077047279689535705
+- We know this has been frustrating, and we want to give you more certainty about what your plan includes. We are making access standard at 50% usage for the plans that use Fable most intensively. Thank you for your patience over the past se…
+  https://x.com/claudeai/status/2078302417100394737
+- Beginning July 20, Claude Fable 5 will be included in all Max and Team Premium plans, at 50% of limits. Pro and Team Standard users will continue to have access to Fable via usage credits, and will receive a one-time $100 credit. Demand fo…
+  https://x.com/claudeai/status/2078302415804379218
+- Explore more projects from the hackathon here: https://t.co/NTQ5I4RGby
+  https://x.com/claudeai/status/2078189443878469950
 
 ## Podcasts
 
-### Training Data
-- Anthropic's Katelyn Lesse & Angela Jiang: Building an Ecosystem, not a Walled Garden
-- https://www.youtube.com/watch?v=vPnVTHYplrQ
-- Transcript preview: Speaker 1 | 00:00 - 00:31 The last layer of abstraction on top of this is probably the coordination layer. So you have knowledge, and you have execution, and you have coordination. And at the coordination layer, we're beginning to think of these things called, like, strategies where, basically, it'…
+### The MAD Podcast with Matt Turck
+- OpenAI’s Compute Chief: We Can’t Build Fast Enough | Sachin Katti
+- https://www.youtube.com/watch?v=wEZBlmvxx4o
+- Transcript preview: Speaker 1 | 00:00 - 00:19 Anytime you have thought you have enough compute, we can slow down. Always negatively surprises like, oh, we should not have slowed down. Demand far outstrips compute supply today. So anything we can bring online, we consume immediately. Our biggest worry is that still at …
 
 ## Blogs
 
-- No fresh blog posts in the current feed.
+### Anthropic Engineering
+- An update on recent Claude Code quality reports
+- https://www.anthropic.com/engineering/april-23-postmortem
+- Over the past month, we’ve been looking into reports that Claude’s responses have worsened for some users. We’ve traced these reports to three separate changes that affected Claude Code, the Claude Agent SDK, and Claude Cowork. The API was not impacted. All three issues have now been resolved as of…
+
+### Anthropic Engineering
+- Scaling Managed Agents: Decoupling the brain from the hands
+- https://www.anthropic.com/engineering/managed-agents
+- Get started with Claude Managed Agents by following our docs . A running topic on the Engineering Blog is how to build effective agents and design harnesses for long-running work . A common thread across this work is that harnesses encode assumptions about what Claude can’t do on its own. However, …
+
+### Claude Blog
+- New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels
+- https://claude.com/blog/claude-managed-agents-updates
+- Starting today, Claude Managed Agents can operate in a sandbox you control and connect to your private Model Context Protocol (MCP) servers. Both the sandbox where an agent executes tools and the services it reaches run within the established boundaries of your enterprise, under your security and r…
 

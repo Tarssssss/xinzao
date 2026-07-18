@@ -17,6 +17,9 @@
 - **Dax Raad（OpenCode 作者）**：一手运营数据显示用量份额和成本份额可以严重脱节——团队接入 GPT-5.6 Sol 头一周，Fable-5 只占约 5% 的用量却吃掉团队 30% 的成本，隐含 Fable 单位成本远高于 Sol；具体计量单位未注明，只反映一个团队一周的情况（[2026-07-12-dax-altman-fable-cost-share]）。Altman 转发这条追问，没有反驳或删除，反而放大了这条对自家模型不算有利的数据。
 - **Glenn Fogel（Booking Holdings CEO）**：企业买方视角的坦白补充——即便 Penny（agent 旅行顾问）已经对外跑了一段时间、采用率据称连续翻倍，公司自己也没算清每次调用的真实 token 成本和对应的长期客户价值，「该用哪个模型、什么时候用」仍是待解的路由难题；这条坦白说明即便是年交易额近两千亿美元的公司，也没有比创业公司领先多少（[2026-07-12-fogel-booking-penny-agent-economics]）。
 - **Ari（Datalogy）/ Rob（Radical），Unsupervised Learning**：把算力紧缺推到 API 供给端。实验室赚自家产品（Claude Code）多于赚 API，Ari 判断可能不为商业、纯被算力逼着限流或阶段性停掉公开 API，OpenAI 卖「锁定未来 token 额度」的期货是前兆；Rob 加码——最强模型可能只留内部用。Ari 给预测：2027 年底前有把握看到 Anthropic 或 OpenAI 暂停/大幅限制 API 一段时间。研究者兼投资人预判，带对冲（[2026-06-13-compute-crunch-api-access-risk]）。
+- **Sachin Katti（OpenAI 工业算力负责人）**：供给侧第一次有人给出内部机制解释。需求一直跑赢供给，历史上每次以为算力够用想放慢建设都被证明是判断错误；训练和推理的界限本身在消失（合成数据生成、后训练、测试时计算都算推理），叠加 AI 加速 AI 研究，算力需求会持续爆炸式增长。自研芯片 Jalapeno 九个月流片（职业生涯最快），因为 OpenAI 自己是芯片的最终客户；判断 AI 设计自己所需系统的「递归」阶段不远。商业化动作是卖「guaranteed capacity」（保证一定金额的 token 供应），把智能当成企业要做供应链对冲的关键资源（[2026-07-18-katti-openai-compute-supply-demand]）。内部人自述，为公司基础设施投入背书，需打折；可核验部分是具体时间线和工程细节。
+- **Anthropic 官方**：Fable 5 访问限额是这条线索里第一次由需求方厂商亲自证实「限流是结构性反复，不是一次性事故」——罕见承认需求从上线起就没判断准过，访问权限因此分阶段调整、扩大过多次；7 月 20 日起 Max/Team Premium 限额回到 50%，Pro/Team Standard 改发一次性 100 美元额度，新增容量优先给了用量最大的付费档位（[2026-07-18-claude-fable5-access-tiers]）。呼应 Ari/Rob 六月的预判。
+- **Aaron Levie（Box）**：在自己的杰文斯论证上加修正——AI 效率提升不只拉高总用量，连前沿闭源模型的需求也会跟着涨，机制是编排环节离不开最强模型、执行环节的大部分 token 才分给便宜模型；他同时预判效率红利最终压缩的是利润率，智能定价会向基础设施本身的利润率靠拢（[2026-07-18-levie-frontier-demand-margin]）。个人推演，缺数据支撑。
 
 ## 时间线
 
@@ -39,3 +42,6 @@
 - 2026-07-11 [2026-07-11-stripe-sands-agent-micro-firm] Sands：SaaS 按人头计费为何在 AI 上失灵，Metronome+Tempo 流式支付基础设施，agent 终局是自负盈亏的"微型公司"
 - 2026-07-12 [2026-07-12-dax-altman-fable-cost-share] Dax Raad：团队接入 GPT-5.6 Sol 首周，Fable 只占约 5% 用量却吃掉 30% 成本，Altman 转发放大这条对自家不利的数据
 - 2026-07-12 [2026-07-12-fogel-booking-penny-agent-economics] Fogel：Booking 的 Penny 采用率据称翻倍，但公司自己也算不清每次调用的真实成本和长期价值，路由决策仍是待解难题
+- 2026-07-18 [2026-07-18-katti-openai-compute-supply-demand] Katti：需求一直跑赢供给，训练推理界限消失叠加 AI 加速 AI 研究，Jalapeno 九个月流片，判断 AI 设计自身系统的「递归」不远
+- 2026-07-18 [2026-07-18-claude-fable5-access-tiers] Anthropic 承认 Fable 5 需求一直估不准，7 月 20 日起 Max/Team Premium 限额回到 50%，Pro/Team Standard 改发 100 美元额度
+- 2026-07-18 [2026-07-18-levie-frontier-demand-margin] Levie 修正杰文斯论证：效率提升连前沿模型需求也会涨，代价是利润率被压缩

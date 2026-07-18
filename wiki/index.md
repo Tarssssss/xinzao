@@ -36,6 +36,7 @@
 - [glenn-fogel](builders/glenn-fogel.md) — Booking Holdings CEO：agent 旅行顾问 Penny 采用率据称翻倍，但公司自己也算不清每次调用的成本和长期价值
 - [dax-raad](builders/dax-raad.md) — OpenCode 作者：一手运营数据显示 Fable 用量占比小但成本占比高，隐含单位成本差距悬殊
 - [thibault-sottiaux](builders/thibault-sottiaux.md) — OpenAI Codex 工程负责人：公布 GPT-5.6 Sol 接入 Claude Code 的方法，用量逼近 900 万时公开纠结重置节奏
+- [sachin-katti](builders/sachin-katti.md) — OpenAI 工业算力负责人：需求一直跑赢供给，Jalapeno 芯片九个月流片，判断 AI 设计自身系统的「递归」不远
 
 ## Threads
 

@@ -31,6 +31,9 @@ Anthropic 官方口径的集合页（@Claude 发布账号、Claude Blog、Anthro
 ### 垂直产品：教育（新）
 - 发布 Claude for Teachers：不用师生对话训练模型、签 FERPA 合规的数据处理协议；教案生成先接进所在州课程标准和 Learning Commons 课纲库，再产出教案与学生材料，教师复核（2026-07-15-claude-for-teachers-launch）。是继 Financial Services、Security 之后又一个垂直包装产品。
 
+### 容量与访问限额（新）
+- 罕见公开承认 Fable 5 的需求从上线起就没判断准过，访问权限因此被迫分阶段反复调整、扩大过多次。7 月 20 日起 Max/Team Premium 标准访问额度回到 50%，Pro/Team Standard 没拿到限额提升、只换一次性 100 美元额度——新增容量优先给了用量最大的付费档位（2026-07-18-claude-fable5-access-tiers）。呼应 token-economics 线索里 6 月 13 日 Ari/Rob 对「算力紧缺逼实验室限流」的预判。
+
 ## 言论时间线
 
 - 2026-04-09 [2026-04-09-managed-agents-launch] 发布 Managed Agents，沙箱/凭证/长时运行做成托管服务，公测
@@ -53,3 +56,4 @@ Anthropic 官方口径的集合页（@Claude 发布账号、Claude Blog、Anthro
 - 2026-06-09 [2026-06-09-claude-foundation-models-framework] 接入 Apple Foundation Models：设备端模型复杂推理时交接给 Claude
 - 2026-07-01 [2026-07-01-sonnet5-launch] Sonnet 5 上线，成为 Free/Pro 默认模型；官方称性能接近 Opus 4.8、不靠提示词自行验证输出；Box 企业评测同步公布分行业读数
 - 2026-07-15 [2026-07-15-claude-for-teachers-launch] 发布 Claude for Teachers：不训练师生对话、FERPA 合规，教案先接州课标和 Learning Commons 课纲再生成
+- 2026-07-18 [2026-07-18-claude-fable5-access-tiers] 承认 Fable 5 需求一直估不准，7 月 20 日起 Max/Team Premium 限额回到 50%，Pro/Team Standard 改发 100 美元一次性额度
