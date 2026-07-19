@@ -10,6 +10,7 @@ Vercel CEO，刊中最高频的 infra 侧发声者。立场一贯且利益相关
 - **coding agent 的地位**：是所有超级智能的基础——既精通计算机操作，又能检查修改自身（顺带建议自我修改要配人类监督和审计）（2026-04-27-rauch-coding-agents）；在企业市场是终极 PLG 化，C-suite 重新亲自写代码、糟糕的遗留栈藏不住（他自己对冲：不确定是否持久趋势）（2026-06-01-rauchg-coding-agents-plg-fication-enterprise）。
 - **安全**：4 月下旬 Vercel 遭入侵（员工账号→枚举非敏感环境变量），他"强烈怀疑"攻击被 AI 显著加速；后续口径是端上恶意软件偷各平台 token、波及面超出 Context.ai 一家（2026-04-20 / 04-21 / 04-23 三条通报）。产品侧回应：deepsec 开源（上千 agent 并行安全审计）（2026-05-05）、Firewall 全免费（2026-05-19）。
 - 素材期内（2026-04 至 06）无立场反转，叙事高度连贯：从 web 论到 agent 云到软件工厂是同一套故事的不同切面。
+- **用自家评测播报模型能力（延续到 07）**：反复用 Vercel 内部评测捧开源模型——6-18 说 GLM 5.2 在 Next.js Evals 上反超 Opus 4.8；7-19 又用「隐藏评测」比网络安全能力，称开源 Kimi K3 顶尖、GPT-5.6 Sol 领先但贵、Claude Fable 5 全程拒答连防御性加固都不做。这类播报每次都导向自家产品、且方法不公开，引用时按产品推广打折；可核验的是他点出的模型「愿不愿接任务」的行为差异（2026-07-19-rauch-cyber-evals-kimi-sol-fable）。
 
 ## 言论时间线
 
@@ -31,3 +32,4 @@ Vercel CEO，刊中最高频的 infra 侧发声者。立场一贯且利益相关
 - 2026-06-03 [2026-06-03-rauchg-yes-code] 提出 YES-CODE：代码变廉价丰富，no-code 的前提已被推翻
 - 2026-06-18 [2026-06-18-rauch-glm-next-evals-agent-framework] 称开源 GLM 5.2 在 Vercel 自家 Next.js Evals 上反超 Opus 4.8，借此推 AI SDK：agent 需要专属构建框架
 - 2026-07-01 [2026-07-01-rauch-vercel-services] Vercel Services 发布：单项目内同托管 Python/Node.js/前端，vc dev 统一本地运行，统一部署、回滚和内网通信
+- 2026-07-19 [2026-07-19-rauch-cyber-evals-kimi-sol-fable] 内部「隐藏评测」比网络安全能力：Kimi K3 顶尖（反驳 Moonshot 刷榜说）、Sol 领先但成本高、Fable 全程拒答且不做防御性加固，结论「前沿级开源网络安全能力已到来」，导向自家防御产品

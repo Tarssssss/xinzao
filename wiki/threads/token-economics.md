@@ -45,3 +45,4 @@
 - 2026-07-18 [2026-07-18-katti-openai-compute-supply-demand] Katti：需求一直跑赢供给，训练推理界限消失叠加 AI 加速 AI 研究，Jalapeno 九个月流片，判断 AI 设计自身系统的「递归」不远
 - 2026-07-18 [2026-07-18-claude-fable5-access-tiers] Anthropic 承认 Fable 5 需求一直估不准，7 月 20 日起 Max/Team Premium 限额回到 50%，Pro/Team Standard 改发 100 美元额度
 - 2026-07-18 [2026-07-18-levie-frontier-demand-margin] Levie 修正杰文斯论证：效率提升连前沿模型需求也会涨，代价是利润率被压缩
+- 2026-07-19 [2026-07-19-schmidhuber-bearish-model-companies] Schmidhuber：开源紧追压定价、递归自我改进无护城河，举债建的数据中心「当下并不盈利」，判断 CapEx 严重过头会反噬（学界看空立场）

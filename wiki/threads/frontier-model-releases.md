@@ -34,3 +34,4 @@
 - 2026-07-09 OpenAI 发布 GPT-5.6（Sol/Terra/Luna 三档），刊中未在发布当天覆盖，最早的一手反馈见 7-12 两条
 - 2026-07-12 [2026-07-12-sottiaux-gpt56-sol-claude-code-hack] Sottiaux 公布把 Sol 接入 Claude Code 当子模型运行的配置；Zara Zhang 独立确认前端短板有改善
 - 2026-07-12 [2026-07-12-dax-altman-fable-cost-share] Dax Raad：接入 Sol 首周 Fable 只占约 5% 用量却吃掉 30% 成本；Altman 转发放大
+- 2026-07-19 [2026-07-19-rauch-cyber-evals-kimi-sol-fable] Rauch 内部隐藏评测比网络安全能力：开源 Kimi K3 顶尖、Sol 领先但贵、Fable 全程拒答连防御性加固都不做（Vercel 立场、方法未公开，可核验的是各家的拒答行为差异）
