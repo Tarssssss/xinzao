@@ -12,6 +12,7 @@
 - **Herzig（SAP CTO）**：把框架搬到企业流程侧。agentic coding 能成靠结果可验证（编译、测试通过），企业流程缺的正是「给定输入、应得输出」的验证数据，存量数据不够用，所以要先攒 eval 数据、回收 agent 决策痕迹（[2026-04-25-sap-cto-no-priors]）。
 - **Mati Staniszewski（ElevenLabs CEO）**：给出音频版锯齿地图——客服稳定可用、情感交互还不行、音乐能做制作级但出不了 Top Charts；被问到是否就是 Karpathy 的「实验室只训有经济价值的部分」时没有顺着认领，称他们按客户长期影响来训、也会训短期不产生价值的模型（[2026-05-10-elevenlabs-audio-jagged-trust]）。
 - **Madhu Guru（前 Google Gemini 产品负责人）**：训练数据视角的补充解释。推动前沿的是高经济价值任务的数据，SWE 任务相对有文档、可被采集，所以先有 SWE agent；知识工作任务缺文档、靠隐性领域知识、被遗留工具割裂，这是知识工作 agent 迟到的原因——瓶颈未必在模型，在数据可得性（[2026-06-08-madhu-guru-training-data-why-swe-agents-first]）。
+- **Swyx（Cognition）**：把可验证性从「模型能力」延到「实验室可信度」。点名 poolside 少见地公开完整评测集（6 benchmark×4 遍×几百轮），外部可自查有没有 reward hacking——可核验性从「信厂商报分」转向「自审运行记录」；同时称其 Small 模型编码胜过 Thinking Machines（他的措辞、单一信源）（[2026-07-24-swyx-poolside-eval-openness]）。与 Lample「Lean 编译通过即正确、无 reward hacking 空间」同一关切的落地版。
 
 ## 时间线
 
@@ -26,3 +27,4 @@
 - 2026-06-07 [2026-06-07-kaiser-verifiability-is-a-spectrum] Kaiser：可验证性是被高估的连续谱，堆标注数据几乎什么领域都训得动，约束是经济
 - 2026-06-07 [2026-06-07-lukasz-kaiser-generalization-post-transformer] Kaiser：模型以异类方式锯齿状泛化，要穷尽别的选项才学到概念，后 Transformer 直觉仍是直觉
 - 2026-06-08 [2026-06-08-madhu-guru-training-data-why-swe-agents-first] Madhu Guru：SWE 任务有文档可采集所以先有 SWE agent，知识工作 agent 迟到卡在数据不在模型
+- 2026-07-24 [2026-07-24-swyx-poolside-eval-openness] Swyx：poolside 公开完整评测集让外部自查 reward hacking，把「可自证不作弊」立为实验室可信信号

@@ -24,7 +24,7 @@
 - [yann-dubois](builders/yann-dubois.md) — OpenAI 后训练负责人；垂直 harness 可做、通用别押，持续学习仍未解
 - [ryo-lu](builders/ryo-lu.md) — Cursor 设计师；批判 overcooking，主张「无观点本身是强观点」，另有 AI 与创作动机随笔
 - [matt-turck](builders/matt-turck.md) — FirstMark VC，拿一线见闻纠偏 AI TAM、地缘与企业买方叙事
-- [madhu-guru](builders/madhu-guru.md) — 前 Google Gemini/Veo 产品负责人，主张为模型斜率而建
+- [madhu-guru](builders/madhu-guru.md) — 现 Meta AI 高级总监（前 Google Gemini/Veo），主张为模型斜率而建；提出 agent 身份/IAM 难题
 - [amjad-masad](builders/amjad-masad.md) — Replit CEO，押注 AI 时代安全成默认、免费层经济学被重写
 - [ivan-burazin](builders/ivan-burazin.md) — Daytona CEO：agent 需独立计算机、CPU 短缺预判、开发者工具分发心法
 - [aditya-agarwal](builders/aditya-agarwal.md) — SPC GP、前 Dropbox CTO：全员 AI coding、agent 离消费级远、招聘硬线

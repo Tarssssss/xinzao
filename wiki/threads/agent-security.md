@@ -11,6 +11,7 @@ AI 同时在加速攻和防：模型能批量找漏洞、把补丁逆向成 expl
 - **Amjad Masad（Replit）**：提议 GitHub 在 star 旁加「加固算力投入」指标，称这是开源能被信任的唯一办法（[2026-04-16-amjad-oss-security-metric]）；断代式判断「2025 起每家公司都是网络安全公司」，无论据，方向信号（[2026-04-26-amasad-cybersecurity]）。
 - **Peter Steinberger（OpenClaw）+ Garry Tan**：开源 harness 一侧的攻防实录。Steipete 认账 12 月不安全，四个月加固后有沙箱、allow-list、按次 exec 确认，提醒更该警惕不发安全公告的项目；Garry Tan 转发站台（[2026-04-16-openclaw-security-hardening]）。Tan 此前也转发了 Cowork 文件外泄漏洞的披露（[2026-04-07-cowork-exfiltration-vuln]）。
 - **Nikunj Kothari（FPV Ventures）**：VC 视角，攻击节奏随模型能力只会加快、人仍是首要攻击向量、网络安全公司会更值钱；发在 Vercel 通报后不到一小时，无数据支撑（[2026-04-20-cybersecurity-thesis]）。
+- **Madhu Guru（Meta，前 Google）**：把攻防话题推到 agent 身份层。传统 IAM 为有限员工设计（每人一套身份/角色/权限/生命周期），但一个员工能拉起几百个、还会自我繁殖的 agent，权限继承、生命周期（任务/工单/一周）、子 agent 继承、审计全无定解；GPT Sol 事件后抛出的一串开放问题，二手转述（[2026-07-24-madhu-guru-agent-identity-security]）。
 - **Maxim Bar Kogan（Onyx Security）**：agent 监督的工程取舍——给每个 agent 配全能 agent 成本扛不住，用只判断「要不要升级审查」的小模型；并主张这事独立第三方比模型厂商更适合做（[2026-05-30-onyx-security-maxim-agent-oversight]）。卖方立场。
 
 ## 时间线
@@ -32,3 +33,4 @@ AI 同时在加速攻和防：模型能批量找漏洞、把补丁逆向成 expl
 - 2026-05-23 [2026-05-23-levie-security-engineer-boom-jevons] Levie 重申 Jevons 判断：找漏洞变容易，瓶颈转到修复，会催生安全工程师热潮
 - 2026-05-27 [2026-05-27-anthropic-contain-claude-blast-radius] Anthropic 复盘三款产品隔离设计与三起事故：环境层硬边界优先，自建组件最容易出事
 - 2026-05-30 [2026-05-30-onyx-security-maxim-agent-oversight] Onyx CEO：用只判断「要不要升级审查」的小模型监督 agent，给每个 agent 配 agent 成本扛不住
+- 2026-07-24 [2026-07-24-madhu-guru-agent-identity-security] Madhu Guru：为有限员工设计的 IAM 接不住会自我繁殖的几百个 agent，权限继承/生命周期/审计全无定解（GPT Sol 事件后的开放问题，二手转述）

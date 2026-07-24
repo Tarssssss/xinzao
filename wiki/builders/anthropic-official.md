@@ -34,6 +34,9 @@ Anthropic 官方口径的集合页（@Claude 发布账号、Claude Blog、Anthro
 ### 容量与访问限额（新）
 - 罕见公开承认 Fable 5 的需求从上线起就没判断准过，访问权限因此被迫分阶段反复调整、扩大过多次。7 月 20 日起 Max/Team Premium 标准访问额度回到 50%，Pro/Team Standard 没拿到限额提升、只换一次性 100 美元额度——新增容量优先给了用量最大的付费档位（2026-07-18-claude-fable5-access-tiers）。呼应 token-economics 线索里 6 月 13 日 Ari/Rob 对「算力紧缺逼实验室限流」的预判。
 
+### 消费级交互：语音（新）
+- 语音模式升级：从「只能聊、跑轻模型」变成跑 Opus/Sonnet 更强模型、且能在对话中途调用已连接的 connector（邮件、日历）——语音第一次成了能调工具、能干活的入口而非口述接口；多语言（西/法/印地/日等）对所有付费档位开放，移动/桌面/网页公测。同日 OpenAI 也在推 ChatGPT Voice，两家几乎同时把语音往「能调工具」方向推（2026-07-24-claude-voice-models-tools）。呼应 connector 目录（2026-04-24-claude-lifestyle-connectors）这条入口叙事。
+
 ## 言论时间线
 
 - 2026-04-09 [2026-04-09-managed-agents-launch] 发布 Managed Agents，沙箱/凭证/长时运行做成托管服务，公测
@@ -57,3 +60,4 @@ Anthropic 官方口径的集合页（@Claude 发布账号、Claude Blog、Anthro
 - 2026-07-01 [2026-07-01-sonnet5-launch] Sonnet 5 上线，成为 Free/Pro 默认模型；官方称性能接近 Opus 4.8、不靠提示词自行验证输出；Box 企业评测同步公布分行业读数
 - 2026-07-15 [2026-07-15-claude-for-teachers-launch] 发布 Claude for Teachers：不训练师生对话、FERPA 合规，教案先接州课标和 Learning Commons 课纲再生成
 - 2026-07-18 [2026-07-18-claude-fable5-access-tiers] 承认 Fable 5 需求一直估不准，7 月 20 日起 Max/Team Premium 限额回到 50%，Pro/Team Standard 改发 100 美元一次性额度
+- 2026-07-24 [2026-07-24-claude-voice-models-tools] 语音模式改用 Opus/Sonnet、能在通话中途调 connector（邮件/日历），多语言对所有档位开放，移动/桌面/网页公测

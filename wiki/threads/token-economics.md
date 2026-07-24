@@ -20,6 +20,7 @@
 - **Sachin Katti（OpenAI 工业算力负责人）**：供给侧第一次有人给出内部机制解释。需求一直跑赢供给，历史上每次以为算力够用想放慢建设都被证明是判断错误；训练和推理的界限本身在消失（合成数据生成、后训练、测试时计算都算推理），叠加 AI 加速 AI 研究，算力需求会持续爆炸式增长。自研芯片 Jalapeno 九个月流片（职业生涯最快），因为 OpenAI 自己是芯片的最终客户；判断 AI 设计自己所需系统的「递归」阶段不远。商业化动作是卖「guaranteed capacity」（保证一定金额的 token 供应），把智能当成企业要做供应链对冲的关键资源（[2026-07-18-katti-openai-compute-supply-demand]）。内部人自述，为公司基础设施投入背书，需打折；可核验部分是具体时间线和工程细节。
 - **Anthropic 官方**：Fable 5 访问限额是这条线索里第一次由需求方厂商亲自证实「限流是结构性反复，不是一次性事故」——罕见承认需求从上线起就没判断准过，访问权限因此分阶段调整、扩大过多次；7 月 20 日起 Max/Team Premium 限额回到 50%，Pro/Team Standard 改发一次性 100 美元额度，新增容量优先给了用量最大的付费档位（[2026-07-18-claude-fable5-access-tiers]）。呼应 Ari/Rob 六月的预判。
 - **Aaron Levie（Box）**：在自己的杰文斯论证上加修正——AI 效率提升不只拉高总用量，连前沿闭源模型的需求也会跟着涨，机制是编排环节离不开最强模型、执行环节的大部分 token 才分给便宜模型；他同时预判效率红利最终压缩的是利润率，智能定价会向基础设施本身的利润率靠拢（[2026-07-18-levie-frontier-demand-margin]）。个人推演，缺数据支撑。
+- **Andrew Feldman（Cerebras CEO，MAD 播客嘉宾）**：从硬件/供给侧给「速度」定价。AI 2025 年年中好用到人们真的开始用后，竞争就转到 token 出得多快（指标：每用户每秒 token 数），多轮 agentic 流程等待被成倍放大；并称 CUDA 不再是护城河。卖快推理芯片的立场，「速度即一切」对他有利；可核验的是「多轮放大延迟」（[2026-07-24-feldman-cerebras-inference-speed]）。
 
 ## 时间线
 
@@ -46,3 +47,4 @@
 - 2026-07-18 [2026-07-18-claude-fable5-access-tiers] Anthropic 承认 Fable 5 需求一直估不准，7 月 20 日起 Max/Team Premium 限额回到 50%，Pro/Team Standard 改发 100 美元额度
 - 2026-07-18 [2026-07-18-levie-frontier-demand-margin] Levie 修正杰文斯论证：效率提升连前沿模型需求也会涨，代价是利润率被压缩
 - 2026-07-19 [2026-07-19-schmidhuber-bearish-model-companies] Schmidhuber：开源紧追压定价、递归自我改进无护城河，举债建的数据中心「当下并不盈利」，判断 CapEx 严重过头会反噬（学界看空立场）
+- 2026-07-24 [2026-07-24-feldman-cerebras-inference-speed] Feldman：AI 能用起来后竞争转到出 token 的速度，agent 多轮放大延迟，CUDA 不再是护城河（嘉宾观点，卖快推理芯片立场）

@@ -2,7 +2,7 @@
 
 从模型一线产品视角讲企业 AI 方法论：组织怎么用 AI、产品怎么跟模型迭代、agent 能力边界由什么决定。
 
-身份变化：2026-05-25 素材 role 还是「Product Leader @ Google」，2026-06-06 起变为「Prev Product Leader」——期间离开 Google（见 [2026-06-06-madhu-guru-build-for-the-slope]）。
+身份变化：2026-05-25 素材 role 还是「Product Leader @ Google」，2026-06-06 起变为「Prev Product Leader」——期间离开 Google（见 [2026-06-06-madhu-guru-build-for-the-slope]）；2026-07-24 素材 bio 显示已加入 Meta，任 AI 高级总监（Sr Director, AI）。
 
 ## 立场与主张
 
@@ -12,6 +12,7 @@
 
 三条共享一个底层判断：模型会持续快速变强变便宜，组织和产品都该对「变化速率」而非「当前位置」下注。暂无立场反转。
 
+- **agent 时代的身份与安全（新，2026-07-24）**：转述一位上市公司安全负责人的判断——GPT Sol 事件后最难的是 agent 的身份与权限。传统 IAM 假设员工数量有限、各有身份/角色/权限/生命周期，可现在一个员工能拉起几百个、还会自我繁殖的 agent；权限继承、生命周期（任务/工单/一周）、子 agent 继承、审计全都没有现成答案。是一串开放问题不是解法，二手转述。与 Anthropic 环境层硬边界、Kolter 的权限管理同指一个未解问题（2026-07-24-madhu-guru-agent-identity-security）。
 - **企业 AI 的两处结构卡点（新，2026-07-18）**：一是分发侧——像 Kimi 这样的开源模型，企业大概率不会直接接入，而是绕道 Google Cloud 这类云厂商换安全、数据驻留、合规、芯片保证，钱转一圈还是进大厂口袋；二是执行侧——企业做不出超越聊天机器人的应用，卡点是缺人搭 evals（能否覆盖用例、能否推前沿、能否帮选模型）和独立于模型的 harness（路由/编排/上下文/工具调用/记忆），人才是其中最稀缺的一环。呼应他 6 月「训练数据决定 agent 顺序」的数据瓶颈判断，也和 Aaron Levie 三天前「企业普遍缺 evals」同向（2026-07-18-madhu-guru-enterprise-moat-evals-harness）。
 
 ## 言论时间线
@@ -20,3 +21,4 @@
 - 2026-06-06 [2026-06-06-madhu-guru-build-for-the-slope] 企业 AI 团队别按今天的模型能力定价做产品，要「为斜率而建」
 - 2026-06-08 [2026-06-08-madhu-guru-training-data-why-swe-agents-first] 解释为何先有 SWE agent：高价值任务数据可得性决定 agent 顺序
 - 2026-07-18 [2026-07-18-madhu-guru-enterprise-moat-evals-harness] 开源模型的钱大概率绕道云厂商；企业落地卡在缺 evals 和 harness 人才，不是模型能力
+- 2026-07-24 [2026-07-24-madhu-guru-agent-identity-security] 抛出 agent 身份难题：为有限员工设计的 IAM 接不住一个人拉起、会自我繁殖的几百个 agent

@@ -1,0 +1,163 @@
+{
+  "date": "2026-07-24",
+  "generatedAt": "2026-07-24T07:10:46.068Z",
+  "stories": [
+    {
+      "slug": "2026-07-24-claude-voice-models-tools",
+      "title": "Claude 语音模式升级：改用 Opus / Sonnet 更强模型，通话中途能调用已连接的邮件、日历等工具，多语言对所有档位开放",
+      "summary": "Claude 把语音从「能聊」往「能干活」推了一步：通话改跑 Opus、Sonnet 更强模型，并能在对话中途调用你连接的邮件、日历等工具——这条把语音从口述接口变成能对着说话的 agent 入口。多语言这次对所有档位开放，今天起移动 / 桌面 / 网页公测。做语音或多模态交互的人可对照，注意是官方口径的 beta。",
+      "content": [
+        "这次更新真正的增量不在多语言，而在语音现在能在对话中途调用你连接的工具。此前语音基本是个「只能聊」的模式、跑在更轻的模型上；改用 Opus、Sonnet 之后，它既能接更难的问题，又能中途去够到邮件、日历这类已连接的工具——语音从一个口述接口，变成了可以边说边把活交出去的入口。官方给的用法就是「把难题说出来、边走边解决」。",
+        "具体到能力清单：语音通话改用聊天里那批更强的模型（点名 Opus 和 Sonnet）；对话进行中可以调用你已接入的 connector（官方举的例子是邮件和日历）；多语言（西班牙语、法语、印地语、日语等）这次不再分档、对所有付费计划开放；今天起在移动端、桌面端和网页以公测形式滚动上线。",
+        "这是官方发布、且仍是 beta，能力清单是厂商口径，真正可核验的是行为——它到底能不能在通话中途读到你的日历、按你说的去动邮件，值得自己试一遍再决定要不要放进日常。顺着这个方向看，同一天 OpenAI 也在推 ChatGPT Voice（见速览），两家几乎同时把语音往「能调工具、能干活」推；这等于说，语音正从消费级聊天玩具变成 agent 的一个入口，但它能不能替代打字交互，暂时只能个案验证。"
+      ],
+      "creator": "Anthropic",
+      "role": "",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @claudeai（语音升级主推）",
+          "url": "https://x.com/claudeai/status/2080376094939603366"
+        },
+        {
+          "label": "原推 @claudeai（更强模型 + 中途调工具）",
+          "url": "https://x.com/claudeai/status/2080376096873177300"
+        },
+        {
+          "label": "原推 @claudeai（多语言与公测）",
+          "url": "https://x.com/claudeai/status/2080376099268169943"
+        }
+      ],
+      "engagement": "8895 likes（语音升级主推那条）",
+      "related": [
+        {
+          "slug": "2026-04-24-claude-lifestyle-connectors",
+          "note": "语音接的正是这些 connector"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-24-madhu-guru-agent-identity-security",
+      "title": "Madhu Guru 抛出 agent 时代的身份难题：为有限员工设计的 IAM，接不住一个人拉起、还会自我繁殖的几百个 agent",
+      "summary": "Madhu Guru 转述一位上市公司安全负责人的判断：GPT Sol 事件后最难办的是 agent 的身份与权限——传统 IAM 假设员工数量有限、各有一套身份和生命周期，可现在一个员工就能拉起几百个、还会自我繁殖的 agent。权限要不要整份继承、生命周期按任务还是按周算、怎么审计，都没现成答案。给做 agent 平台或管企业安全的人的问题清单，不是解法，属二手转述。",
+      "content": [
+        "传统 IAM（身份与访问管理）能成立，靠的是一个隐含前提：员工数量是有限的，每个人对应一个身份、一个角色、一套权限，以及一条从入职到离职的生命周期。agent 把这些前提一次性打破——数量不再有界（一个人就能拉起几百个），而且它们会自我繁殖（agent 再生成 agent）。于是「身份」不再是一份能点清的名册，而是一张不断扩张、没人枚举得完的图。",
+        "他据此抛出的几个问题，难点各不相同。权限继承：如果 agent 直接继承拉起它的那个人的全部权限，那么顺着这个逻辑，一个被攻破的 agent 就等于那名员工的完整访问权，再乘以几百个实例。生命周期：人的身份在离职时被回收，可 agent 的「离职」触发条件——一个任务做完？一张工单关闭？还是一周？——没有定义，结果是大量带着权限的过期身份不断堆积。再往下，子 agent 继承什么、整条链路怎么审计，传统审计假设的是一组有界的行为主体，这里也不成立。",
+        "需要打折的地方很清楚：这是他转述一位在上市公司做安全的朋友的看法，是「GPT Sol 事件」之后抛出的一串开放问题、不是他自己给的解法，他本人现在在 Meta。但即便没有答案，这份框架对做 agent 平台的人也是可用的清单——在把产品放出去之前，先把 agent 的身份怎么定、权限按最小授权单独给（而不是让它整份继承那个人的权限）、以及一条明确的回收 / 失效触发想清楚。它和 Anthropic「用环境层硬边界圈住影响半径、白名单是能力授权」的思路、以及 Kolter 把权限列为 agent 安全三件事之一，指向同一个还没解决的问题。"
+      ],
+      "creator": "Madhu Guru",
+      "role": "Meta AI 高级总监（前 Google Gemini / Veo 产品负责人）",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @realmadhuguru",
+          "url": "https://x.com/realmadhuguru/status/2080315474093760714"
+        }
+      ],
+      "engagement": "23 likes",
+      "related": [
+        {
+          "slug": "2026-05-27-anthropic-contain-claude-blast-radius",
+          "note": "同问 agent 权限与影响半径"
+        },
+        {
+          "slug": "2026-05-08-zico-kolter-agent-security",
+          "note": "权限是 agent 安全三件事之一"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-24-feldman-cerebras-inference-speed",
+      "title": "Cerebras CEO Feldman：AI 一旦真能用起来，竞争就转到出 token 的速度上——agent 多轮任务里等待被成倍放大",
+      "summary": "Cerebras 的 Feldman 给做 agent 产品的人一个框架：AI 在 2025 年年中好用到人们真的开始用，竞争就转到「出 token 有多快」，指标是每用户每秒 token 数，而多轮 agentic 流程里等待会被成倍放大。立场上他卖的就是快推理芯片、还称 CUDA 不再是护城河，「速度即一切」对他有利；但「多轮放大延迟」这条，做 agent 的人可拿自家产品直接验证。",
+      "content": [
+        "他给出的是一个时间点加一个机制。时间点：AI 在 2025 年年中之前更像「客厅魔术」，酷但没用；一旦好用到人们真的开始用，速度立刻成了要紧事——因为「更快的 token 就是更有生产力的 token」，同样时间里做完更多事，价值就更高。于是整个行业的话题从别处收敛到一件事：怎么把 token 送得更快。",
+        "衡量的指标是每用户每秒 token 数（从第一个 token 到最后一个 token 有多快），而对多轮往返的 agentic 流程，等待会被成倍放大，慢 token 直接毁掉那种「实时感」。他用 Netflix 讲清速度的性质：网速慢时 Netflix 靠邮寄 DVD，网速快之后它们不是把 DVD 寄得更快，而是变成了流媒体公司——速度到位会让产品变成另一种东西，而不只是同一件事做得更快。他顺带撂下一句判断：不管你今天用的是 Fable 还是 GPT，它都会是你这辈子用到的最差的一个模型。",
+        "这套「速度即一切」要打的折很直接：Feldman 是卖快推理芯片的 Cerebras 的 CEO，把竞争叙事定在速度上、并称 CUDA 已不再是护城河，都对挑战者一方有利。对做产品的人真正可核验的是那条「agent 多轮放大延迟」——任何跑多步 agent 的人都能量一量：单步延迟怎样累加成整条任务的耗时和体感。这和 Dylan Patel 判断 CUDA 护城河已部分松动同向，也是 token 经济账里算力紧缺、推理成本那条线的另一面。"
+      ],
+      "creator": "Andrew Feldman",
+      "role": "联合创始人兼 CEO, Cerebras",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "Matt Turck 预告（含分段目录）",
+          "url": "https://x.com/mattturck/status/2080333707483725876"
+        },
+        {
+          "label": "MAD 播客 · Matt Turck × Andrew Feldman",
+          "url": "https://www.youtube.com/@DataDrivenNYC/videos"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-07-01-dylan-patel-hardware-software-codesign",
+          "note": "同判 CUDA 护城河松动"
+        },
+        {
+          "slug": "2026-07-18-katti-openai-compute-supply-demand",
+          "note": "供给侧的算力紧缺判断"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-24-swyx-poolside-eval-openness",
+      "title": "Swyx 点名 poolside 被低估的开放度：Small 模型在编码上胜过 Thinking Machines，还公开完整评测集让你自己查有没有刷分",
+      "summary": "Swyx 说 poolside 被低估的是它的开放度，这给「怎么信一个模型实验室」提了个可操作标准：它把完整评测集公开了——6 个 benchmark、每个 4 遍、每遍几百轮，你能自己查有没有 reward hacking，而不是只看厂商报的分。他还称其 Small 模型在编码上胜过 Thinking Machines（他的措辞）。属单一信源称赞，做编码模型选型或掂量评测可信度的人可参考。",
+      "content": [
+        "这条的增量不在「poolside 很强」，而在什么才算一个模型实验室的可信信号。多数实验室报给你一个分数，你没法独立核对；poolside 少见地把完整的评测数据集公开了——6 个公开 benchmark、每个跑 4 遍、每遍几百轮——于是外部的人可以自己去验证它到底有没有 reward hacking。可核验性因此从「相信厂商报的那个数」变成「自己去审那些运行记录」。",
+        "Swyx 具体点的几件事：poolside 出了一个「Small」级别的模型，据他说在编码上胜过了 Thinking Machines；论文公开发得漂亮，而且是少数连完整评测集也一并放出来的。要留意「胜过 Thinking Machines」是他的措辞，不是一份你能立刻调出来的公开对拆结果。",
+        "立场上，Swyx 人在 Cognition、不在 poolside，这不是自卖自夸，但仍是单一信源的称赞，「在编码上胜过谁」是他的判断而非公开跑分。对要选编码模型、或要掂量某家 benchmark 说法的人，能拿来用的是这条筛子：比起看头条分数，先问「他们有没有公开到足以让你自己查 reward hacking」。这也呼应他自己一直在做的编码 eval 重建——他此前转述 METR 称 SWE-bench 过半结果是不可合并的劣质代码。"
+      ],
+      "creator": "Swyx",
+      "role": "Cognition / Latent Space",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @swyx",
+          "url": "https://x.com/swyx/status/2080387171723137440"
+        }
+      ],
+      "engagement": "104 likes",
+      "related": [
+        {
+          "slug": "2026-06-09-frontiercode-metr-benchmark",
+          "note": "他自己也在重建可信的编码 eval"
+        },
+        {
+          "slug": "2026-04-07-mistral-voxtral-leanstral",
+          "note": "同题：可验证、防刷分"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "把 AI 当成你已经懂的领域（或你想学一门新领域的速度）的放大器，是最靠谱的用法。第三类人——没有既有判断力、也没兴趣去培养——基本只会产出 slop，带不动多少经济产出。结果是工具越强，专精越重要：市场对产出的预期被抬高，把任何一门手艺练好在未来依然是必需的。",
+      "creator": "Aaron Levie",
+      "handle": "levie",
+      "sourceType": "x",
+      "url": "https://x.com/levie/status/2080471989060559336"
+    },
+    {
+      "quote": "科技圈这些词因为用得太滥，已经完全失去信号：「neo-」开头的、full stack、fellows、labs、partner、forward deployed、RL（正在慢慢沦陷）。（我知道很讽刺——我们自己就办 fellowship，我的头衔也是 partner。）",
+      "creator": "Nikunj Kothari",
+      "handle": "nikunj",
+      "sourceType": "x",
+      "url": "https://x.com/nikunj/status/2080293627784212933"
+    },
+    {
+      "quote": "下一步的进化，是能同时开好几个 ChatGPT Voice 线程——这样就有一整个「团队」既跟我说话、也彼此对话。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2080508139091427741"
+    },
+    {
+      "quote": "Viktor 用 Replit 颠覆了代理公司的模式，赚了不少钱。然后他想：为什么不把整件事都自动化，而不只是写代码那部分？「所谓代理公司，不过是一个 agent loop……」于是他找我们团队要了个 MCP，我们做了出来，如今他已经建起了自己的自主代理公司。",
+      "creator": "Amjad Masad",
+      "handle": "amasad",
+      "sourceType": "x",
+      "url": "https://x.com/amasad/status/2080371567221944657"
+    }
+  ]
+}

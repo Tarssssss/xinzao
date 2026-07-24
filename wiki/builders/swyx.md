@@ -14,6 +14,7 @@ Cognition 成员、Latent Space 播客主理人、AI Engineer 大会主办者。
 - 底层判断：现有 benchmark 测不出代码质量，转述 METR 称 SWE-bench 超半数结果是不可合并的劣质代码。FrontierCode（Cognition x METR）用 3000+ 条 rubric 覆盖代码质量与反作弊；最难档 FC Diamond Opus 4.8 仅 13.8%（[2026-06-09-frontiercode-metr-benchmark]）
 - 三个时代划分：2021 自动补全（HumanEval）→ 2023 通过测试（SWE-bench/TerminalBench）→ 2026 可维护代码（FrontierCode）。用历史回测把「2025 年 12 月 vibe shift」量化：FC Extended 易档 4 个月内 41%→74%，成功率到位才让 ralph loop、/goals 这类更高抽象的 agentic 做法可行（[2026-06-09-frontiercode-metr-benchmark]）
 - 真实世界长任务 eval：Cognition 私有企业 eval 时长达 100 小时（METR 公开集封顶约 16 小时），258 个真实企业 session、126 个用户，held-out rlog 0.74；「敢挂财务担保」是他的转述措辞，细节未给（[2026-06-05-cognition-100hr-enterprise-evals]）
+- **把「公开评测集」立为实验室可信信号（2026-07-24）**：点名 poolside 被低估的开放度——Small 模型据他说在编码上胜过 Thinking Machines，更少见的是把完整评测集公开（6 benchmark×4 遍×几百轮），外部可自查有没有 reward hacking。可信度从「看厂商报分」转向「自己审运行记录」；单一信源的称赞、「胜过」是他的措辞（[2026-07-24-swyx-poolside-eval-openness]）
 
 ### 产品/模型定位框架
 - 模型 vs agent 的区分框架：GPT-Image-2 是图像模型，Image-2-Thinking 是图像 agent（循环带搜索和类 Photoshop 工具，能检索、合成、复查产出），所以慢几十分钟但一次出对二维码图表。类比 Gemini Flash Vision 当年用 agentic loop 刷穿 image-to-text（[2026-04-23-image-agent-framing]）
@@ -35,3 +36,4 @@ Cognition 成员、Latent Space 播客主理人、AI Engineer 大会主办者。
 - 2026-06-13 [2026-06-13-swyx-future-codebase-git] 设想 PR/review 之后 Git 也该退场：合并冲突占写码开销 20-40%，未来代码库或像 Notion/Linear 数据库
 - 2026-06-27 [2026-06-27-value-shift-software-to-services] OpenAI 和 Anthropic 都在组建几十亿美元级服务部门，FDE 成最抢手职业之一（佐证 Peter Yang 的价值转向服务）
 - 2026-07-12 [2026-07-12-altman-levie-swyx-ai-job-creation] 把杰文斯悖论从编程外推到全部知识工作：编程发生的一切不是例外而是先兆，恰与 Levie「编程不能类推」的提醒相对立
+- 2026-07-24 [2026-07-24-swyx-poolside-eval-openness] 点名 poolside 开放度被低估：公开完整评测集让外部自查 reward hacking，Small 模型据他称编码胜过 Thinking Machines
