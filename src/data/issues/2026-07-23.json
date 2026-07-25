@@ -1,0 +1,132 @@
+{
+  "date": "2026-07-23",
+  "generatedAt": "2026-07-23T07:09:39.150Z",
+  "stories": [
+    {
+      "slug": "2026-07-23-rauch-wtfs-per-day-engineering-feats",
+      "title": "Guillermo Rauch:Fable 近乎自主地把 Turbopack / Next.js 内存效率提升了 15-30%,他用「每天多少次卧槽(WTFs/day)」来衡量 AI 进展",
+      "summary": "Rauch 用一串一手战绩说明 AI 工程能力在加速:Fable 近乎自主地在 Turbopack / Next.js 上找到 15-30% 的内存效率提升;三天前 Sol 帮他们在「全世界被审计得最彻底的代码之一」里发现新漏洞;当天 Fable 又在一个复杂的 Rust 代码库上落地大优化,他还看到二进制体积缩小 10-20 倍。他说那种「卧槽」时刻现在每周都有、还在加速,「WTFs/day」是他最喜欢的 AI 进展指标。想知道前沿模型在真实工程里能干到什么程度的人值得对照,但这来自 Vercel 自家使用。",
+      "content": [
+        "他要区分的是两种「看到 AI 进步」:读 benchmark 和网上的故事是一回事,亲眼看着这些机器每天在你自己的代码库里完成工程壮举是另一回事。后者才是他判断进展的依据,所以他半开玩笑地提出一个指标——「WTFs/day」,每天让你脱口而出「卧槽」的次数;他说这个数现在每周都有,而且在加速。",
+        "他给的具体战绩有几条:Fable 近乎自主地在 Turbopack / Next.js 上找到了 15-30% 的内存效率提升;三天前 GPT-5.6 Sol 帮他们在「全世界被审计得最彻底的代码之一」里发现了以前没被发现的漏洞;就在当天,Fable 又在一个非常复杂的 Rust 代码库上落地了一次大优化,他还提到看到把二进制体积缩小 10-20 倍的结果。这些都是带具体数字的工程结果,不是演示。",
+        "立场上要标注:这些全部来自 Vercel 自家的使用,是 CEO 在讲自家团队拿前沿模型干出的活,天然偏正面,而且「近乎自主」「审计得最彻底的代码」这类限定词只有他们内部能核实。可核验的是方向和量级——如果你手上有性能优化、漏洞挖掘或体积压缩这类有明确验收标准的任务,正好可以拿它当参照:把一个真实的、能量化的优化任务丢给前沿模型,看它能不能自己找到 Rauch 这个量级的改进,而不是只看跑分。"
+      ],
+      "creator": "Guillermo Rauch",
+      "role": "CEO, Vercel",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @rauchg",
+          "url": "https://x.com/rauchg/status/2080098518535110913"
+        }
+      ],
+      "engagement": "2098 likes",
+      "related": [
+        {
+          "slug": "2026-07-20-rauch-cybersecurity-superintelligence-benchmark",
+          "note": "他这周反复讲 Sol 挖漏洞"
+        },
+        {
+          "slug": "2026-07-19-rauch-cyber-evals-kimi-sol-fable",
+          "note": "更早的模型攻防能力对比"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-23-anthropic-economics-labor-augmenting-jagged",
+      "title": "Anthropic 经济学负责人:AI 目前对就业的负面冲击小于预期,它是「技能偏向 + 增强劳动」的,靠人在环里指挥和纠错;Levie 借此重申 Jevons 效应",
+      "summary": "Levie 转 Anthropic 经济学负责人的一篇文章,给「AI 会大规模取代岗位」降了温:数据显示 AI 对就业的负面冲击小于预期,因为它自动化的多是任务而非整个岗位,而自动化这些任务往往让同一岗位产出更多,反而维持甚至抬高需求。原文判断 AI 目前「技能偏向且增强劳动」,能力进步快但依旧参差(jagged),要靠专家在环里引导、并在它失手时兜底。Levie 补充软件工程正是如此,Jevons 效应仍成立。关注 AI 对岗位影响的人值得对照,但这是模型厂自家的经济研究。",
+      "content": [
+        "这条的核心机制是:AI 到目前主要自动化的是「任务」,不是「岗位」。大多数工作没法被整体替代,只有其中一部分任务能交给 AI;而一旦把这些具体任务自动化,同一个岗位反而能产出更多,于是需求被维持、甚至被抬高——这正是「取代」叙事没算到的一环。他转的 Anthropic 研究说,数据里一次又一次看到这个结果:就业受到的负面冲击小于预期。",
+        "Anthropic 原文里有一段值得照抄:「到目前为止,AI 既是技能偏向的,也是增强劳动的。它补足领域专长;它依赖人在环里去指挥和评估最复杂的工作;它奖励对 AI 的熟练度。模型能力在快速提升,但依旧顽固地参差不齐(jagged)。要填补这条参差前沿上的坑,需要专家的监督去驾驭这些能力极强的 AI 系统,并在它们失手时把局面救回来。」",
+        "Levie 顺着说,软件工程就是活例子:被生产出来的软件在成倍增加,但这一切仍然需要开发者去管理 agent 在做的事;而且现在各行各业、各种规模的公司都能点亮以前根本不划算的软件项目,所以对工程师的需求反而扩大——「Jevons 效应仍然成立」。要打的折是:这是模型厂(Anthropic)自家的经济研究,方向上会倾向「AI 不抢工作、还创造需求」。真正可用的是那条可核对的机制——AI 自动化的是任务而非岗位、且需要专家在环兜底;正在判断自己岗位或团队受不受冲击的人,可以照这个口径去看自己的工作里有多少是「能被整块自动化的」,而不是听单一方向的结论。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @levie(转 Anthropic 经济学负责人)",
+          "url": "https://x.com/levie/status/2080156917373214900"
+        }
+      ],
+      "engagement": "116 likes",
+      "related": [
+        {
+          "slug": "2026-07-12-altman-levie-swyx-ai-job-creation",
+          "note": "同讲 AI 创造而非消灭岗位"
+        },
+        {
+          "slug": "2026-07-18-levie-frontier-demand-margin",
+          "note": "他连日在算 AI 的经济账"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-23-every-ai-sandwich-agent-email-workflow",
+      "title": "Every 团队示范一个可复用的 agent 工作流:把一条 Slack 想法截图丢进 Codex 跑 /LFG 循环、人去健身房,回来时四封分众邮件已排好,次日带来约 2.5 万美元收入",
+      "summary": "Every 增长团队的 Austin 在一期播客里给了个具体例子:发布当天想给「进了结账页却没付款」的用户补发提醒邮件,他把 Slack 讨论截图丢进 Codex、跑他们插件里的 /LFG 让 agent 走完 brainstorm→plan→work→review 闭环,人就去了健身房;回来时四类分众邮件已写好、配图、排进次日发送,他微调十分钟,次日带来两万五千多美元。他把这套叫「AI 三明治」:人定义问题和审校,中间交给 agent。想把 agent 用进真实运营的人值得对照,但这是 Every 推销自家工具栈的节目。",
+      "content": [
+        "值得看的不是「agent 能写邮件」,而是这条链路里人到底只做了什么。发布当天,想法是「给那些进到结账页却没付款的用户,再补一封带紧迫感的邮件」(而且这想法还不是 Austin 自己的,是 Dan 提的、Josh 转到 Slack 的)。Austin 的全部动作是:把那段 Slack 讨论截了张图,丢进一个 Codex 线程(用 5.6、Medium 档),再敲一个 /LFG——这是他们 compound engineering 插件里的 harness,让 agent 自己走一遍 brainstorm→plan→work→review 的闭环。然后他就去健身房了。",
+        "等他回来,agent 已经把事情做完了:它分出四类受众(到过结账页没付款的、访问过 Builder Pack 页面没下单的、参与度最高的免费用户等),给每一类各写了针对性的邮件;文案过了他们那款写作应用 Spiral 的 MCP,用的是团队审过的写作风格,还回看了过往邮件里哪封驱动了打开、哪封驱动了点击,并沿用了一张之前带来点击的社交分享图,最后排进第二天早上发送。Austin 说他只做了十分钟的轻微修改(一半是觉得自己能写个更好的标题,一半是「还改不掉的控制欲」),次日早上这批邮件单独带来了两万五千多美元收入。",
+        "他们把这套工作方式概括成一个说法:你站在「AI 三明治」的最上层和最下层——你定义问题、框定想法,再审校产出,中间那层交给 agent。这不是一夜之间搭起来的:Austin 说他们是一点点做出来的,「几个月来一直在试着自动化这些营销邮件,靠 compound engineering 让结果不断复利」。另一个被他点到的关键是模型本身——从 5.5 到 5.6 的那次提升,让模型明显更会自己去找到干活需要的上下文、并在长任务反复压缩时把它保住。",
+        "要打的折很明确:这是 Every 在为自家 All Access / Builder Pack 订阅做的一期节目,通篇在推它们用的工具栈,「效果惊人」是卖点。两万五千美元是单次结果,他们自己也说「不是每次跑 /LFG 都这样」。但真正值得迁移的是那条结构——把一个有明确目标和验收标准的运营任务(谁该收到、参考哪些历史数据、什么风格),连同判断一起交给一个你信得过的 harness,人只保留定义问题和最后把关两头。对做增长、营销、运营的人,这比「agent 能写代码」更贴近日常——可以挑一个你每周都要手动重复的发送 / 分群任务先试。"
+      ],
+      "creator": "Dan Shipper 等(Every 团队)",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "AI & I 播客 · Every 团队",
+          "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-07-22-karpathy-voice-ramble-pattern",
+          "note": "同讲人定义、模型执行"
+        },
+        {
+          "slug": "2026-07-19-sottiaux-chatgpt-work-delegation",
+          "note": "同讲把定结构的活也交给 agent"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "Claude Code 的 Claude Security 插件现在进入 beta。在提交前扫描你的改动有没有漏洞,或者对整个代码库跑一次完整扫描,全部在你已经在用的那份 Claude 推理上、从终端里完成。",
+      "creator": "Anthropic",
+      "handle": "claudeai",
+      "sourceType": "x",
+      "url": "https://x.com/claudeai/status/2079990597973057691"
+    },
+    {
+      "quote": "用一个中国训练的 LLM,并不意味着他们能拿到你的数据。一个 LLM 本质上就是一个装满数字的巨大文件——智能就编码在这些数字里。有些模型允许你把这个文件下载下来(「开放权重」),在你自己的云环境里运行。这时训练这个模型的一方已经不在链路里了,你的数据留在你运行它的地方。",
+      "creator": "Madhu Guru",
+      "handle": "realmadhuguru",
+      "sourceType": "x",
+      "url": "https://x.com/realmadhuguru/status/2080150245011509593"
+    },
+    {
+      "quote": "有时我只描述我的问题,不指定具体的解法 / 规格。模型常常会给我一个比我自己能想到的更好的方案,让我惊喜。厚上下文,薄 prompt。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2080103288834510939"
+    },
+    {
+      "quote": "如果你有动机去推某些特定的模型,那你的路由器不过是个幌子。",
+      "creator": "Amjad Masad",
+      "handle": "amasad",
+      "sourceType": "x",
+      "url": "https://x.com/amasad/status/2080126960202903575"
+    },
+    {
+      "quote": "我那个 /no-ai-slop skill 一天涨了 1000 个 star——看来大家是真的受够 AI slop 了。",
+      "creator": "Peter Yang",
+      "handle": "petergyang",
+      "sourceType": "x",
+      "url": "https://x.com/petergyang/status/2080132334138151410"
+    }
+  ]
+}
