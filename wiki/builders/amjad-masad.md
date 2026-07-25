@@ -15,3 +15,4 @@
 - 2026-04-26 [2026-04-26-amasad-cybersecurity] 断言 2025 年起每家公司都是网络安全公司
 - 2026-04-29 [2026-04-29-micropayments-for-git-push] bot 达人类水平后免费服务难以为继，值得探索按 git push 收微支付
 - 2026-06-13 [2026-06-13-fable-restriction-ai-regulation] 反应政府限制 Fable：听起来 Replit 得关掉 Fable 访问（平台侧直接后果）
+- 2026-07-25 [2026-07-25-open-weights-letter-positions] 追问 Anthropic 签不签开放权重公开信，把「不表态」直接推成「是否支持禁止开放权重模型」

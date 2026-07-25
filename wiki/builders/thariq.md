@@ -11,6 +11,8 @@ Anthropic Claude Code 团队成员，刊中言论密集于工程实操：prompti
 - **遗留代码库是「蒸馏」原料**：看完 Bun 重写后判断遗留代码的价值在被模型转写成新形态（游戏跨平台、遗留软件上 web、不再需要 COBOL）。注意他的明确对冲：模型现在还没到这一步，Bun 极易验证、测试覆盖极好是特例；这是趋势判断而非现状描述（2026-05-25-thariq-legacy-codebases-distillation）
 - **非技术任务的套路是「文件进、脚本/HTML 出」**：把文件丢进文件夹、让 Claude Code 写脚本和生成 HTML，按任务类型有具体映射；他认为人们低估了自己本地文件里已有的上下文，不必急着接 connector（2026-05-27-thariq-claude-code-nontechnical）
 
+- **给新模型做减法**：Claude Code 团队为 Opus 5 / Fable 5 这代模型删掉了约 80% 的系统提示词，据文章说没测到性能损失；配套六条规则——规则改判断、示例改接口设计、前置信息改渐进披露、重复改单一权威来源、手动 CLAUDE.md 改自动记忆、简单 spec 改高保真引用（HTML artifact / 代码化 spec / 测试 / rubric）。理由是旧模型缺少在冲突指引间取舍的判断力才需要重护栏。文章明确限定只对 Claude 5 这代成立（2026-07-25-thariq-context-engineering-claude5）。与他「prompting 高杠杆」的老立场不冲突：杠杆从写死约束移到了描述目标和设计接口。
+
 立场无反转，整体一致：核心母题是「人与 agent 的带宽」——prompting、上下文卫生、决策日志、文件夹工作流都是这一母题的具体化。
 
 ## 言论时间线
@@ -23,3 +25,4 @@ Anthropic Claude Code 团队成员，刊中言论密集于工程实操：prompti
 - 2026-05-25 [2026-05-25-thariq-legacy-codebases-distillation] 从 Bun 重写得出：遗留代码库会成为「蒸馏」成新形态代码的原料（带能力对冲）
 - 2026-05-27 [2026-05-27-thariq-claude-code-nontechnical] 非技术任务基本套路：文件夹放文件 + 写脚本 + 输出 HTML
 - 2026-07-01 [2026-07-01-thariq-fable-classifier-fallback] 回应社区：Fable 5 安全分类器更新后，常规编程/调试任务被降级到 Opus 是误报、非能力限制，改进方向是更准确区分合法请求与滥用
+- 2026-07-25 [2026-07-25-thariq-context-engineering-claude5] 公布 Claude Code 删掉约 80% 系统提示词，给出 Claude 5 这代的六条上下文工程规则

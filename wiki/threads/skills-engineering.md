@@ -10,6 +10,8 @@ skill 正在从「给 agent 的提示词片段」变成有完整工程生命周�
 - **Nikunj Kothari（FPV Ventures）**：个人判断沉淀的样板案例。用 Claude Code 从 200 多份 Granola 会议记录筛出约 53 场高信号 pitch 对话，加上自己写过的文章，搭出模拟他本人评 deck 的 Nock skill；关键是拿 5-10 份真实 deck 和对话做对照式迭代，把「像不像我」做成可比对的 eval 而不是凭感觉调（[2026-06-05-nikunj-nock-skill-from-meeting-notes]）。
 - **Peter Yang（Roblox）**：把上述实践整合成可照搬的五步法——好坏样例进上下文、固定句式写触发描述、10 条通过/不通过的 evals、记一句话经验的 memory 文件，以及元层面的「清理 skill 的 skill」，专删其他 skill 里重复过时的指令和 AI 套话；含义是把 skill 库当成需要持续维护的代码来管（[2026-06-06-peter-yang-self-improving-skills]）。
 
+- **Anthropic（Thariq / Claude Code 团队）**：把这条线索翻到了反面——之前各家讨论的是 skill 怎么写得更细更好，他们给 Claude 5 这代模型做的是减法：Claude Code 系统提示词删掉约 80%（据文章说没测到性能损失），硬规则换成判断描述、示例换成工具接口设计、细节下沉到 skill 与工具描述按需加载、重复只留单一权威来源；CLAUDE.md 保持轻，token 花在坑和不显然的实现细节上，长 skill 拆多文件（[2026-07-25-thariq-context-engineering-claude5]）。与 Steipete、Tan 的 context 成本纪律同向，但理由换了——不是省 token，是模型判断力上来后过度约束会反过来限制它。厂商自家口径，且明确限定只对 Claude 5 这代成立。用户侧的独立佐证是同日 Dan Shipper 删光旧 skill 后 Opus 5 明显变好（[2026-07-25-shipper-opus5-day0-vibe-check]）。
+
 ## 时间线
 
 - 2026-04-08 [2026-04-08-prism-paper-review] Kevin Weil：Prism 的 Paper Review 功能是几小时写出的一个 skill，底层是 Codex
@@ -19,3 +21,5 @@ skill 正在从「给 agent 的提示词片段」变成有完整工程生命周�
 - 2026-05-26 [2026-05-26-steipete-token-efficient-skills] Steipete 提醒 skill 描述每次都进 context：让 agent 压缩描述、放松语法，并放出臃肿检测工具
 - 2026-06-05 [2026-06-05-nikunj-nock-skill-from-meeting-notes] Nikunj 用 200 多份会议记录搭 Nock skill，拿 5-10 场真实对话对照打磨到「像他本人」
 - 2026-06-06 [2026-06-06-peter-yang-self-improving-skills] Peter Yang 五步法：样例、触发描述、10 条 evals、一句话 memory、清理 skill 的 skill
+- 2026-07-25 [2026-07-25-thariq-context-engineering-claude5] Anthropic 反向操作：删掉约 80% 系统提示词，给出 Claude 5 这代的六条改写规则与分文件建议
+- 2026-07-25 [2026-07-25-shipper-opus5-day0-vibe-check] 用户侧同日印证：Every 删光为旧模型写的 skill 后，Opus 5 表现明显变好

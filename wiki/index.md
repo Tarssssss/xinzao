@@ -37,6 +37,8 @@
 - [dax-raad](builders/dax-raad.md) — OpenCode 作者：一手运营数据显示 Fable 用量占比小但成本占比高，隐含单位成本差距悬殊
 - [thibault-sottiaux](builders/thibault-sottiaux.md) — OpenAI Codex 工程负责人：公布 GPT-5.6 Sol 接入 Claude Code 的方法，用量逼近 900 万时公开纠结重置节奏
 - [sachin-katti](builders/sachin-katti.md) — OpenAI 工业算力负责人：需求一直跑赢供给，Jalapeno 芯片九个月流片，判断 AI 设计自身系统的「递归」不远
+- [andy-fang](builders/andy-fang.md) — DoorDash 联合创始人：万人公司的 AI 内部账，先建 DashBench 再算 ROI，模型在真实企业数据上有落差
+- [stanley-tang](builders/stanley-tang.md) — DoorDash 联合创始人：自动配送用例倒推，卡点已从自动驾驶挪到运营与硬件，独占资源是投递点数据
 
 ## Threads
 
@@ -55,3 +57,4 @@
 - [可验证性与锯齿状能力](threads/verifiability-jaggedness.md) — 能力跃升集中在可验证领域吗？研究者对边界的反复修正
 - [人人写代码与一人公司](threads/everyone-codes-solo-builders.md) — 非工程师 vibe coding、CEO 重新上手、solo founder 拿 agent 当团队
 - [前沿模型访问受限：监管与门槛](threads/frontier-model-access-restriction.md) — 政府/政策与算力双向收窄最强模型的访问，builder 担心扼杀创新
+- [开放权重之争](threads/open-weights-debate.md) — 开放权重是被经济账挤退的过渡形态，还是要靠政策与大公司保护的一层

@@ -27,3 +27,5 @@
 - 2026-06-01 [2026-06-01-garrytan-own-your-memory-harness-wars] Garry Tan 把战线推到数据主权：memory 要自己托管，2027 年「harness 之战」的决定性战场
 - 2026-06-04 [2026-06-04-satya-nadella-private-evals-harness-moat] Nadella 给出护城河判据：企业 IP 是私有 eval，检验标准是换模型后还能不能继续 hill-climb
 - 2026-07-15 [2026-07-15-anthropic-platform-ecosystem-not-walled-garden] Anthropic 平台团队把绑定单位再叠一层：知识/执行/协调三层抽象，协调层给 token 分饰不同角色；执行层基础设施反而主张不锁定自家硬件
+- 2026-07-25 [2026-07-25-thariq-context-engineering-claude5] 「harness 随模型变薄」拿到最具体的一次量化：Claude Code 系统提示词删掉约 80%，规则改判断、细节按需加载
+- 2026-07-25 [2026-07-25-cherny-opus5-prompt-injection] 反向一面：Cherny 称 PI 成功率约 0 靠模型对齐 + 探针 + Auto Mode 三层叠加，harness 那层暂时还减不掉

@@ -28,3 +28,4 @@
 - 2026-05-29 [2026-05-29-levie-diffusion-bottleneck-internal-fde] Levie 解释模型进步反而拖慢落地（新突破作废旧架构），列出编码之外知识工作的五六个劣势，判断内部 FDE 是长期岗位。
 - 2026-06-06 [2026-06-06-madhu-guru-build-for-the-slope] Madhu Guru 给企业 AI 团队方法论：「为斜率而建」，围绕当下模型弱点搭有保质期的脚手架，识别并填补缺口的能力本身是护城河。
 - 2026-07-12 [2026-07-12-fogel-booking-penny-agent-economics] Fogel：Penny 采用率据称连续翻倍、具体案例体验已经能打，但公司自己也算不清每次调用的成本和长期价值，规模相对总交易额仍小
+- 2026-07-25 [2026-07-25-doordash-ai-spend-dashbench] DoorDash 给出这条线索上少见的完整内部账：支出半年 20 倍后摁平、自建 DashBench 算 ROI、开放权重分流降本；并指出模型在洗干净的数据上碾压、在真实企业数据上只剩「还行」，落差归因于 harness 还是模型分布仍未定

@@ -107,3 +107,11 @@ tars-writing 9:3 胜 baseline（4 素材 × 3 评委：扫描/编辑/事实核�
 | # | 决策 | 选择 | 理由 |
 |---|------|------|------|
 | 38 | 记录事实，非决策 | 本地仓库 git log 最近一期是 2026-07-12；`git stash list` 里翻出 7-14 和 7-13 各留了一份未提交的 sync 残留（本次全部 `git stash` 保留未丢弃，未来如需要可以 `git stash show -p` 找回当天的 `data/raw/latest.json`），说明两天的 routine 都正常跑了 `sync:feeds`（7-13 拉到 15 builders / 30 tweets，7-14 拉到 16 builders / 38 tweets），只是都判断素材不值得收，按硬规则没写 issue、没 push——**不是 scheduled task 漏触发，是正常走了「不发刊」分支但没留痕**。唯一的缺口是「不发刊」这个判断本身没有任何记录（既没进 decision-log 也没进 wiki/log），下次翻旧账时才需要重新用 stash/commit 考古 | 撤回 6-07-15 当天更早版本里「7-13 是否漏跑待核实」的说法；建议（留给人定，非本次改动）：以后「不发刊」也在 `wiki/log.md` 追加一行，避免下次又要考古 |
+
+### 2026-07-25 routine 发现：同一仓库有第二个会话并发写稿（留给人定）
+
+| # | 决策 | 选择 | 理由 |
+|---|------|------|------|
+| 39 | 并发写入的处理 | 本次只 `git add` 自己产出的文件（`src/data/issues/2026-07-25.json`、当天的 `data/raw` 快照、本次改动的 `wiki/`、`docs/`），不用 `git add src/data/issues` 整目录 | 跑到一半发现工作区多出未跟踪的 `src/data/issues/2026-07-20.json`、`2026-07-21.json`（文件 mtime 在本次会话开始之后），另有一个 Claude 进程正在同一仓库里回填这两期。按 daily-run 第 8 步整目录 add 会把别人未完成的产出一并提交推上线，因此改成逐个文件 add。**待人定**：daily-run 第 8 步是否固定改成显式列文件；以及是否需要一把锁（或约定回填只在独立 worktree 里做），避免日更与回填互相踩 `wiki/` 同一批页面 |
+| — | 记录事实 | `data/raw/days/2026-07-16` 至 `2026-07-25` 十个快照一直是未跟踪状态，本次未提交 | 这些是 backfill 脚本留下的产物，历史上没进过版本库；日更只提交 `data/raw/latest*.json` 和当天快照，保持既有口径，不在 routine 里改动 |
+| — | 记录事实 | 今日 feed 的 blogs 段第四次冒出旧文（`engineering/how-we-contain-claude`，已收录于 2026-05-27），按主链接全量 grep 去重跳过 | 决策 #36「blogs 去重是否显式扩成全量 grep」仍待人定，这里补一个复现样本：旧文重现的间隔已经远超「最近 3 期」 |

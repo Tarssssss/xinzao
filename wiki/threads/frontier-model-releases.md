@@ -15,6 +15,7 @@
 - **Swyx（独立）**：格局观察者视角，把 Meta 上线「接近 Opus 级」模型放进 Llama 4 翻车后的回转叙事；该评级无 API、不开源、暂无法外部核验（[2026-04-16-swyx-meta-turn]）。
 - **Thibault Sottiaux（OpenAI，Codex 工程负责人）**：GPT-5.6 Sol 发布几天后（发布于 7 月 9 日，刊中未在发布当天覆盖）给出的不是评测数字，而是具体操作——用 CLIProxyAPI 把 Claude Code 默认子模型换成 Sol 的完整配置，并自曝这是非官方方法、随时可能被封；功能清单部分（快、省 token、前端好）是产品宣传，缺具体数字（[2026-07-12-sottiaux-gpt56-sol-claude-code-hack]）。
 - **Zara Zhang（独立 builder）**：「用脚投票」式的独立验证——7 月 8 日刚抱怨 Codex 前端设计是唯一让她不想更频繁用的短板，7 月 12 日确认这一点在 GPT-5.6 Sol 上有改善，同一痛点四天前后对照（[2026-07-12-sottiaux-gpt56-sol-claude-code-hack]）。
+- **Dan Shipper（Every）**：Opus 5 起成为「独立重度用户」这一档信号的主要供给方，且是唯一一条带明确负面的首评——旧 skills 和插件会让 Opus 5 提前收工、漏指令，删光重来才好，低 effort 反而更稳；定位「穷人版 Fable」，卡在天才模型与快通才之间（[2026-07-25-shipper-opus5-day0-vibe-check]）。他家工作流最重，这条对轻配置用户可能过度悲观。
 - **Dax Raad（OpenCode 作者）**：发布后一周的一手用量数据——团队接入 Sol 后，Fable-5 只占约 5% 用量却吃掉 30% 成本，隐含单位成本差距悬殊；Altman 转发放大这条对自家不算有利的数据（[2026-07-12-dax-altman-fable-cost-share]）。
 
 ## 时间线
@@ -35,3 +36,8 @@
 - 2026-07-12 [2026-07-12-sottiaux-gpt56-sol-claude-code-hack] Sottiaux 公布把 Sol 接入 Claude Code 当子模型运行的配置；Zara Zhang 独立确认前端短板有改善
 - 2026-07-12 [2026-07-12-dax-altman-fable-cost-share] Dax Raad：接入 Sol 首周 Fable 只占约 5% 用量却吃掉 30% 成本；Altman 转发放大
 - 2026-07-19 [2026-07-19-rauch-cyber-evals-kimi-sol-fable] Rauch 内部隐藏评测比网络安全能力：开源 Kimi K3 顶尖、Sol 领先但贵、Fable 全程拒答连防御性加固都不做（Vercel 立场、方法未公开，可核验的是各家的拒答行为差异）
+- 2026-07-24 Claude Opus 5 发布：全付费档可用、与 Opus 4.8 同价，Max 默认模型，Fast 模式约 2.5× 速度（官方账号口径，刊中当日只作背景）
+- 2026-07-25 [2026-07-25-shipper-opus5-day0-vibe-check] Every 的 Day 0 实测：旧 skills 拖累、删光重来才好、低 effort 更稳；本线索里第一条以负面开场的首评
+- 2026-07-25 [2026-07-25-levie-box-opus5-enterprise-eval] Levie 用同一套 Box 评测给 Opus 5 分行业读数：尽调 +17%、生命科学 +30%，只给涨幅未给绝对分
+- 2026-07-25 [2026-07-25-cherny-opus5-prompt-injection] Boris Cherny 换了个评价维度：最难被 prompt injection，叠三层防御后攻击成功率约 0
+- 2026-07-25 内部人反向排序（速览两条）：Alex Albert 称不少编码任务上更愿用 Opus 5 而非 Fable 5，Thariq 建议 Opus 5 当日常主力、规划与最难的 bug 配 Fable——与 Shipper 的排序正相反

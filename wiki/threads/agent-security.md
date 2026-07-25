@@ -34,3 +34,4 @@ AI 同时在加速攻和防：模型能批量找漏洞、把补丁逆向成 expl
 - 2026-05-27 [2026-05-27-anthropic-contain-claude-blast-radius] Anthropic 复盘三款产品隔离设计与三起事故：环境层硬边界优先，自建组件最容易出事
 - 2026-05-30 [2026-05-30-onyx-security-maxim-agent-oversight] Onyx CEO：用只判断「要不要升级审查」的小模型监督 agent，给每个 agent 配 agent 成本扛不住
 - 2026-07-24 [2026-07-24-madhu-guru-agent-identity-security] Madhu Guru：为有限员工设计的 IAM 接不住会自我繁殖的几百个 agent，权限继承/生命周期/审计全无定解（GPT Sol 事件后的开放问题，二手转述）
+- 2026-07-25 [2026-07-25-cherny-opus5-prompt-injection] Boris Cherny 称 Opus 5 是至今最难被注入的模型，模型对齐 + 注入探针 + Claude Code Auto Mode 三层叠加后攻击成功率约 0；同日官方称其为对齐最好的一版、网络安全强于 4.8 但开发 exploit 仍落后 Mythos 5（全为内部口径，方法未公开）

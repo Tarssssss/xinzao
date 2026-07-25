@@ -1,0 +1,295 @@
+{
+  "date": "2026-07-25",
+  "generatedAt": "2026-07-25T07:04:19.980Z",
+  "stories": [
+    {
+      "slug": "2026-07-25-shipper-opus5-day0-vibe-check",
+      "title": "Dan Shipper 实测 Opus 5 一周：套着旧 skills 用会中途停工、漏指令，删掉重来才明显变好，低 effort 反而更稳",
+      "summary": "Every 拿 Opus 5 跑了一周编码、写作和自家内部 agent，结论是「一个不好爱的模型」：配着为旧模型攒的 skills 和插件用，它会提前收工、漏指令；把这些删掉从零开始，效果明显变好。另一条反直觉的是 effort 越低越稳，想得越久越容易冒出烦人的行为。这是重度定制工作流的用户视角，他同时在推自家方法论；攒了一堆 skill、又打算换主力模型的人值得先看这条。",
+      "content": [
+        "他们的第一反应是「他们把我家孩子弄成什么样了」——模型看上去退步了。真正的变量在他们为上一代模型攒下的那套 skills 和插件：Kieran Klaassen 试着把这些全删掉、从零开始，同一个 Opus 5 立刻好得多，还闪出一些天才的时刻。同一天 Anthropic 自己的做法指向同一个方向——他们把 Claude Code 的系统提示词删掉了约 80%（见下一条）。顺着这个逻辑，旧配置在这一代模型上更可能是拖累，而且配置越重的团队越容易撞上。",
+        "他给的 Day 0 清单有四条，最值得注意的是兼容性和 effort 这两条。一是它打破向后兼容：套着现有的 skill 和工作流用，它经常提前停下或者漏掉你的指令。二是中低 effort 反而效果更好——按 Kieran 的观察，给它的思考时间越长，越容易冒出那些烦人的行为，所以他专门提醒「别一想到要快就切 Sonnet，先试试把思考档位调低」。另外两条是定性：Opus 5 像「一个穷人版的 Fable」，有 Fable 的很多性格怪癖，却没有 Fable 的天才；从零重建工作流要花时间，但他说做完之后有回报在等着。",
+        "这条评价的立场要标注两层。Every 是把工作流做得很重的一方，compound engineering 是他们自家的方法论和插件，所以「打破向后兼容」这条对配置轻的人可能没那么成立。他给的最终排序也是他个人工作流下的排序：他有两个位置，最难的任务给天才模型（现在是 Fable）、其余给又快又聪明的通才（现在是 GPT-5.6），Opus 5 有天才的性格但没有天才的上限，于是卡在中间，他说自己大概只会在 Fable 额度用完时用它。Anthropic 内部人给的排序正好相反，见今天的两条速览。可以自己复现的是那两个实验：把为旧模型写的 skill 全部停掉跑一遍，再把 effort 从高调到中低跑一遍。"
+      ],
+      "creator": "Dan Shipper",
+      "role": "CEO, Every",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @danshipper（Day 0 vibe check）",
+          "url": "https://x.com/danshipper/status/2080700057892815114"
+        },
+        {
+          "label": "原推 @danshipper（完整 vibe check 入口）",
+          "url": "https://x.com/danshipper/status/2080709090909503775"
+        }
+      ],
+      "engagement": "2221 likes",
+      "related": [
+        {
+          "slug": "2026-04-23-ai-sandwich",
+          "note": "他自家方法论的出处"
+        },
+        {
+          "slug": "2026-06-10-alex-albert-fable5-four-tips",
+          "note": "上次发版也提旧配置"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-25-thariq-context-engineering-claude5",
+      "title": "Anthropic 把 Claude Code 的系统提示词删掉约 80%，并给出 Claude 5 这代模型的六条改写规则：从写死规则改成交出判断",
+      "summary": "Thariq 公布 Claude Code 团队的做法：给 Opus 5、Fable 5 这代模型，他们把系统提示词删掉了约 80%，据文章说没测到性能损失。六条规则里最要紧的两条——硬规则换成判断描述（「绝不写多段注释」改成「写得像周围的代码」）；细节下沉到 skill 和工具描述、按需加载。文章限定只对 Claude 5 这代成立，属厂商口径。手上有 CLAUDE.md 和一堆 skill 的人值得照着过一遍。",
+      "content": [
+        "文章给的理由是一句能力判断：旧模型缺少在相互冲突的指引之间做取舍的判断力，所以要靠重护栏兜底；判断力上来之后，这些约束反而在替模型做本该看情况决定的事。最直白的例子是注释——原来写的是「绝不写多段 docstring 或多行注释块，最多一行」，现在改成「写得像周围的代码：注释密度、命名、习惯都跟着它」。前一种写法在注释密集的代码库里会逼出不合群的代码，后一种把标准交回给上下文。",
+        "六条改动可以分三组看。改写法的两条：规则改成判断；不再堆使用示例，改成把工具接口设计得够表达——比如把状态值枚举成 pending / in_progress / completed，模型自己就知道该怎么用，而示例反而会框住它的探索。改结构的两条：前置信息改成渐进披露，细节放进模型需要时才调用的 skill，工具定义也延迟加载；重复改成单一权威来源，工具的用法只写在工具描述里，不在系统提示词里再说一遍。改资产的两条：手动往 CLAUDE.md 里存上下文改成模型自动留存记忆；简单的 markdown 计划升级成 HTML artifact、代码化的 spec、测试套件或 rubric 这类高保真引用。",
+        "分文件的建议也很具体：系统提示词只讲产品语境和核心运行方式；CLAUDE.md 保持轻，仓库介绍一句带过，token 花在坑和不显然的实现细节上，模型自己能从文件系统里发现的事实不必写；skill 用来编码具体的主张和最佳实践，除关键处外别过度约束，长 skill 拆成多个文件；引用优先给代码而不是描述。文章还提到可以用 `/doctor` 帮忙给现有的 skill、CLAUDE.md 和系统提示词做减法。",
+        "要打的折：这是 Anthropic 讲自家产品的经验，样本是 Claude Code 这一个 harness，「删掉 80% 没有可测的性能损失」是他们自己的测法，方法和数字都没有公开；文章也写明这套只对 Claude 5 这代成立，旧模型仍然需要重护栏。可核验的部分是自己那份配置：把硬规则改成判断类描述、把系统提示词里重复的工具说明删掉、把长 skill 拆开按需加载，再跑一轮自己的任务对比。Dan Shipper 那条是同一天的独立佐证——他们从用户侧删光旧 skill，得到的是同一个方向的结论。"
+      ],
+      "creator": "Thariq",
+      "role": "Claude Code 团队, Anthropic",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @trq212",
+          "url": "https://x.com/trq212/status/2080710971228918066"
+        },
+        {
+          "label": "Claude Blog · Claude 5 这代模型的上下文工程新规则",
+          "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
+        }
+      ],
+      "engagement": "10199 likes",
+      "related": [
+        {
+          "slug": "2026-06-10-alex-albert-fable5-four-tips",
+          "note": "上次发版就说要重写旧配置"
+        },
+        {
+          "slug": "2026-04-11-harness-dead-weight",
+          "note": "同一套删死重的方法论"
+        },
+        {
+          "slug": "2026-04-10-thariq-prompting-leverage",
+          "note": "他此前主张 prompting 高杠杆"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-25-levie-box-opus5-enterprise-eval",
+      "title": "Box 用自家企业评测给 Opus 5 读数：尽调 +17%、生命科学 +30%，差距集中在清单变长之后还能不能保持完整",
+      "summary": "Levie 公布 Box Complex Work Eval 上 Opus 5 相对 Opus 4.8 的读数：尽调 +17%、生命科学 +30%，另外三个行业在 +12% 到 +19%。比数字更有用的是他描述的两种错法——4.8 会抓住明显项就停，也会把部分匹配算进来、同时漏掉真正符合的。照例自测自报、方法未公开，他同时在给 Box AI Studio 预热。做清单核对、交叉比对的人可以照这两种错法设计抽查。",
+      "content": [
+        "他这次给的增量在失败模式，不在涨幅。尽调那条的描述是：随着要核对的清单变长，Opus 5 仍然把整份必查项走完，而 4.8 在抓住明显的几项之后就停了——也就是说，这里量的是任务变长之后完成度掉得有多快。生命科学那条是另一种错法：要在几个排序数据集之间按严格匹配规则取交集，4.8 把部分匹配也算了进来，同时漏掉了真正符合的项。这两种错法凑在一起，正好是清单类工作最常见的两个失分点。",
+        "其余几条读数：法务 +12%，做逐条条款对照政策的审查，Opus 5 给每一项都打了分，并且正确放行了按例外条款可以接受的条款，而 4.8 既漏项、又把那个例外判错了；科技 +19%、医疗 +13%，他说是同一个模式——在杂乱的源材料上做完整、精确的多步分析。他给的总结是 Opus 5 在推理、分析和数据处理上对 4.8 有明显优势，Box AI Studio 很快会开放用 Opus 5 搭 agent。",
+        "要打的折和他前几次一样：这是 Box 自己的 agentic 评测，跑的是企业文档端到端的真实任务，方法没有公开，读数由他本人发布，同时在给自家平台预热；这次只给了各行业的提升幅度，没有绝对分数。可参考的是涨幅在行业间的分布，以及那两种错法本身。做企业文档、清单核对或交叉比对的人，可以照着设计两组抽查：一组把清单加长，看完成度什么时候开始掉；一组构造只有部分匹配的干扰项，看模型会不会顺手收进来。"
+      ],
+      "creator": "Aaron Levie",
+      "role": "CEO, Box",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @levie",
+          "url": "https://x.com/levie/status/2080704871934931221"
+        }
+      ],
+      "engagement": "281 likes",
+      "related": [
+        {
+          "slug": "2026-04-24-levie-gpt55-box-evals",
+          "note": "同一套 Box 评测"
+        },
+        {
+          "slug": "2026-05-20-levie-box-eval-gemini-3-5-flash",
+          "note": "上次是 Gemini 的读数"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-25-cherny-opus5-prompt-injection",
+      "title": "Boris Cherny：Opus 5 是 Anthropic 至今最难被 prompt injection 的模型，叠上探针和 Claude Code 的 Auto Mode 后攻击成功率降到接近 0",
+      "summary": "Claude Code 作者说，比跑分更让他兴奋的是埋在 system card 里的这条：PI 评测和红队测试里 Opus 5 很难被成功注入；再叠上模型对齐、注入探针和 Claude Code 的 Auto Mode 三层防御，攻击成功率降到接近 0。注意接近 0 是三层叠加的成绩，不能读成模型本身免疫，方法和数字他只说「很快会讲更多」。在犹豫要不要放开 agent 权限的人值得盯后续。",
+      "content": [
+        "这条的分量在于它动的是哪个瓶颈。prompt injection 一直是 agent 敢不敢放开权限的主要拦路石——只要外部内容能把指令塞进模型，读网页、读邮件、跑工具这些能力就都得配人盯着。他自己的措辞是，比起那些评测分数，更让他兴奋的是这个「有点埋在 system card 里」的结果：跨 PI 评测和红队测试，Opus 5 都很难被成功注入。",
+        "接近 0 这个数字要看清它的构成：强模型对齐、prompt injection 探针，加上 Claude Code 里的 Auto Mode，三层叠起来之后攻击成功率才降到约 0。同一天 Anthropic 官方账号给的两条口径可以并读：按他们的自动化行为审计，Opus 5 是至今对齐最好的一版，鲁莽和欺骗性行为的比例最低、对 Claude 宪法的遵守最强；网络安全任务上强于 4.8，但开发 exploit 的能力仍明显落后 Mythos 5，安全策略的设计是放行找漏洞和修漏洞、拦住高风险用途。",
+        "这些全部来自 Anthropic 内部，PI 评测和红队的方法、样本、绝对数字都没有公开，他本人也只说「很快会讲更多」，所以现在只能当成一个待验证的强主张。可以对照的是他 5 月给过的预测：模型对齐会好到让 prompt injection 防护、permission 模式、human in the loop 这些机制变得不那么必要。今天这条算是那个方向的第一批证据，但它同时说明现在还减不掉——接近 0 的成绩依赖 harness 那一层的探针和 Auto Mode，模型单独扛还不够。"
+      ],
+      "creator": "Boris Cherny",
+      "role": "Claude Code 作者, Anthropic",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @bcherny",
+          "url": "https://x.com/bcherny/status/2080713091688583312"
+        },
+        {
+          "label": "原推 @claudeai（自动化行为审计口径）",
+          "url": "https://x.com/claudeai/status/2080699508401328462"
+        },
+        {
+          "label": "原推 @claudeai（网络安全能力与边界）",
+          "url": "https://x.com/claudeai/status/2080699512205537648"
+        }
+      ],
+      "engagement": "5042 likes",
+      "related": [
+        {
+          "slug": "2026-05-07-boris-cherny-sequoia",
+          "note": "他 5 月的预测"
+        },
+        {
+          "slug": "2026-05-08-zico-kolter-agent-security",
+          "note": "PI 是 agent 新攻击面"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-25-open-weights-letter-positions",
+      "title": "一封支持开放权重的公开信引出三种表态：Box 签了并列出四条理由，Altman 表示乐见，Amjad Masad 追问 Anthropic 签不签",
+      "summary": "同一天三位 builder 围绕一封支持开放权重的公开信表态。Levie 说 Box 签了，并给出四条理由，落点是开源和闭源不构成零和；Altman 说希望美国在开源和闭源两条路上都赢；Amjad Masad 把问题推给 Anthropic——建议在那里工作的人去问领导层签不签、是否支持禁止开放权重模型。素材里没有这封信的正文。关心开源政策走向的人可以盯 Anthropic 会不会回应。",
+      "content": [
+        "Levie 那条的价值在于他没停在表态，而是列了四条机制。一是栈上会长出专门给垂直领域做后训练的层：不必等少数几家去深耕金融、生命科学、法律、医疗，这些方向会各自有几十上百次尝试。二是安全和网络风险的处理方式出现多样性，能看到高能力被用来构建更强的防御。三是训练路线的替代方案——算力受限的环境里会逼出更新颖、更省的训练方法，别的实验室都能学。四是成本结构分层：高端和编排交给闭源前沿模型，特定的重复性任务可以更便宜地跑。他的结论句是「开源和闭源不是一场零和之争」。",
+        "另外两位的表态方向不同。Altman 的措辞是希望美国在开源和专有两边都赢，并说乐见其成——一句背书，没有交代 OpenAI 会不会签。Amjad Masad 走得更远：他直接建议在 Anthropic 工作的人去问自家领导层，要么签，要么把立场说明白，问法是「他们是不是支持禁止开放权重模型」。这一步把「没表态」和「支持禁止」放进了同一个问句，属于他的框定，不是 Anthropic 说过的话。",
+        "能核到的边界要说清楚：素材里没有这封信的正文，Levie 和 Altman 引用的是同一条帖子（黄仁勋 7 月 24 日发的那条），Levie 称它为一封 Box 已经签署的信。三个人的立场也各有来处——Levie 是企业软件的买方，按工作负载分层降本对 Box 直接有利，他另一条还补了一句，美国应该继续推动开放权重创新，这对整个市场包括前沿实验室都是好事。接下来值得跟的一件事，是 Anthropic 会不会给出明确立场。"
+      ],
+      "creator": "Aaron Levie、Sam Altman、Amjad Masad",
+      "role": "CEO, Box / CEO, OpenAI / CEO, Replit",
+      "sourceType": "x",
+      "sourceLinks": [
+        {
+          "label": "原推 @levie（Box 签署与四条理由）",
+          "url": "https://x.com/levie/status/2080675210991443982"
+        },
+        {
+          "label": "原推 @levie（美国应继续推动开放权重）",
+          "url": "https://x.com/levie/status/2080761484305654091"
+        },
+        {
+          "label": "原推 @sama",
+          "url": "https://x.com/sama/status/2080683363174945065"
+        },
+        {
+          "label": "原推 @amasad（追问 Anthropic）",
+          "url": "https://x.com/amasad/status/2080850075358826871"
+        }
+      ],
+      "engagement": "11498 likes（Altman 那条）",
+      "related": [
+        {
+          "slug": "2026-06-13-open-weight-ai-decline",
+          "note": "反向判断：开源在退"
+        },
+        {
+          "slug": "2026-07-19-schmidhuber-bearish-model-companies",
+          "note": "开源紧追压低定价"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-25-doordash-ai-spend-dashbench",
+      "title": "DoorDash 联创 Andy Fang：AI 花费半年涨到 20 倍后被摁平，靠的是先建自家 benchmark 算 ROI、再把便宜任务分流给开放权重模型",
+      "summary": "DoorDash 6 月的 AI 花费大约是 1 月的 20 倍，之后被摁平：先用自家 benchmark（DashBench）量各家模型加 harness 的表现、再算 ROI，并把便宜任务分流给开放权重模型。更有信息量的是那道落差：同样的任务，数据洗干净、搭进 RL 环境交给实验室，模型就碾压；换回真实企业数据只剩「还行」。他把原因拆成 harness 欠账和模型缺这类分布两种可能。在企业里推 AI 采用的人可直接对照。",
+      "content": [
+        "最值得看的是那道落差，因为它决定了钱该往哪投。他们问业务团队模型在你的任务上表现如何，得到的回答是「还行」；把同样的数据做脱敏清洗、搭成 RL 环境送到前沿实验室那边，模型的表现就变成碾压；再换回带着全部真实企业数据的场景，又回到不太行。他自己把这道落差拆成两种可能：要么是 harness 那一层还有事情没做，要么是模型的数据分布里本来就缺这类东西，所以在会计、分析、财务这些职能上出不来阶跃式的提升。这两种可能对应完全不同的投入方向。",
+        "花费是另一组一手数字。6 月的 AI 支出大约是 1 月的 20 倍，之后被摁成平的，他把这归给几件有意为之的事：先掐掉明显浪费的用法，再真正开始算 ROI——为此他们几周前放出了 DashBench，量的是各家模型加 harness 在编码任务上的表现。省钱的具体路子是分流：在保住 Fable 级智能的前提下，把便宜的任务交给开放权重模型，比全用闭源模型付得少。结构上，绝大部分支出仍在工程侧，但席位增长最快的是非技术部门——分析师、运营，以及要做 QBR 的客户经理。",
+        "这是一家一万多人公司的内部账，不是普适结论；Fang 同时在讲自家去年收购 Metis「注入 AI 原生思维」的成效，他也提到公司里很多人因为习惯了旧做法而看不到可能性。可以照搬的是顺序：先有一套自己的任务基准，再谈 ROI 和降本，否则「还行」这种回答没法转换成决策。另一条可直接照做的是评估纪律——同一个任务分别用洗干净的样本和真实脏数据各跑一遍，两组的差值大概率就是 harness 和数据工程那一层欠的账。"
+      ],
+      "creator": "Andy Fang",
+      "role": "联合创始人, DoorDash",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "No Priors · DoorDash 联合创始人 Andy Fang、Stanley Tang",
+          "url": "https://www.youtube.com/watch?v=vNpcg_Ma-FA"
+        }
+      ],
+      "related": [
+        {
+          "slug": "2026-07-18-madhu-guru-enterprise-moat-evals-harness",
+          "note": "同指 evals 与 harness"
+        },
+        {
+          "slug": "2026-06-04-satya-nadella-private-evals-harness-moat",
+          "note": "私有 eval 是企业 IP"
+        }
+      ]
+    },
+    {
+      "slug": "2026-07-25-doordash-autonomy-use-case-first",
+      "title": "DoorDash 联创 Stanley Tang：自动配送的卡点已从自动驾驶挪到运营和硬件，他强调的独占资源是 100 亿单积累的投递点数据",
+      "summary": "DoorDash 从 2018 年做自动配送，先和从人行道机器人到 robotaxi 的各家合作了几年，结论是现成形态都不匹配自己的用例，于是自研了 Dot：300 磅、时速 20 英里，人行道、自行车道和马路都能上，在凤凰城跑了近两年、去年做到 L4。他的判断是卡点已经从自动驾驶挪到运营、商业化和硬件制造——「五年前所有人都以为硬件是商品」。做垂直 AI 的人可以对照他用例倒推的方法。",
+      "content": [
+        "他给的最反直觉的一条是卡点的排序变了。五年前的问题是自动驾驶到底行不行、会不会只是科幻；现在自动驾驶越来越不是那个卡点，卡住规模化的是运营、商业化和硬件——他的原话是五年前所有人都以为硬件是商品，现在硬件反而快成瓶颈了。头 100 台机器人是他们手工搭的，再往上到一千台、一万台，供应链、元器件可靠性、维修保养、充电场站才是问题；为此他们和从 Rivian 拆出来的微出行公司 Also 合作，理由是找真会规模化造车的人来做。",
+        "自研的理由是用例倒推。他们先和这个领域几乎所有人合作过一轮，从人行道机器人到 robotaxi，学到最重要的一条是这些公司多半先造技术、再回头找问题，他说这和 YC 教的先从客户出发正好相反。具体到匹配：人行道机器人时速两三英里，而 DoorDash 平均一单三到五英里、除去出餐时间约十五分钟送达，速度和距离都不够；robotaxi 是四千磅的载人车，为送几个卷饼配上座椅和空调并不合适，取货和送达的问题也完全不同。他们要的形态介于两者之间，接近一辆自动驾驶的摩托或自行车。真正吃掉时间的是跑到规模之后冒出来的边缘情况：镜头被泥挡住、右侧两个轮子压在落叶上导致扭矩要分开处理、急刹时回充把电池顶出电冲击，还有一个每天早上给几百台机器人开机的 Jenkins 脚本，跑一次三四十分钟、一半概率崩掉。",
+        "他反复强调的独占资源是数据，指向也很具体：机器人开到一个 GPS 定位点之后，哪个门、哪个店面、哪道院门才是对的——这个「最前和最后 100 英尺」的问题，答案藏在 DoorDash 历史上人类 dasher 到底把包裹放在了哪里的记录里，100 亿单的积累，Google 地图里没有。立场上这是自家产品的宣传场合，凤凰城两年、L4、Dot 的参数都是他的口径。他还给了一个预测：十年后 DoorDash 的 dasher 会比现在更多，理由是现在已经有超过 900 万 dasher、业务每年还在以 25% 增长，多模态车队补的是这个缺口。对做垂直 AI 的人，可迁移的是同一道题——先问用例、再定形态，以及想清楚哪一类数据只有自己手上有。"
+      ],
+      "creator": "Stanley Tang",
+      "role": "联合创始人, DoorDash",
+      "sourceType": "podcast",
+      "sourceLinks": [
+        {
+          "label": "No Priors · DoorDash 联合创始人 Andy Fang、Stanley Tang",
+          "url": "https://www.youtube.com/watch?v=vNpcg_Ma-FA"
+        }
+      ]
+    }
+  ],
+  "quickTakes": [
+    {
+      "quote": "Opus 5 发布里我最喜欢的几张图。我们花了大量工夫让这个模型在各个领域都更省 token，同时继续把智能的上限往上抬。用起来非常顺，不少编码任务上我更愿意用它，而不是 Fable 5。",
+      "creator": "Alex Albert",
+      "handle": "alexalbert__",
+      "sourceType": "x",
+      "url": "https://x.com/alexalbert__/status/2080703118086693121"
+    },
+    {
+      "quote": "Opus 5 把 Claude 5 这一家子补齐了。我觉得它是非常好的日常主力，规划、头脑风暴或者啃最难的 bug 时配上 Fable。",
+      "creator": "Thariq",
+      "handle": "trq212",
+      "sourceType": "x",
+      "url": "https://x.com/trq212/status/2080703339306913985"
+    },
+    {
+      "quote": "我现在最想从任何模型那里得到的东西是速度。智能已经够用了。但每个任务等 1 到 5 分钟是最糟糕的一段窗口：短到没法做深度工作，长到又不能干等着，结果我就去刷 X 了。agent 正在把我们所有人变得更 ADHD。",
+      "creator": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "sourceType": "x",
+      "url": "https://x.com/zarazhangrui/status/2080829737044439444"
+    },
+    {
+      "quote": "要拿到宏观层面的生产率提升，管理者和 CEO 得批准和现在完全不同的人员配置与工作流方案。到目前为止我认为他们还没有这么做。做好准备，这件事要花十年，不是两年。",
+      "creator": "Garry Tan",
+      "handle": "garrytan",
+      "sourceType": "x",
+      "url": "https://x.com/garrytan/status/2080699367883980924"
+    },
+    {
+      "quote": "模型路由的大周：传闻 Stripe 要以 100 亿美元收购 OpenRouter；Cursor Router 周三发布；Runway Router 昨天发布。另外 Databricks、Vercel、Cloudflare、Dataiku、AWS、Google 也都有路由（是的，同一个词底下差别很大）。",
+      "creator": "Matt Turck",
+      "handle": "mattturck",
+      "sourceType": "x",
+      "url": "https://x.com/mattturck/status/2080645582209663049"
+    },
+    {
+      "quote": "未来几年，会有一个巨大的机会属于那些懂得把杂乱的真实工作流和基础模型对接起来的人。做这件事需要理解工作是怎么完成的、设计 evals、用后训练改进模型，以及搭出能持续改进模型的反馈闭环。通用模型就是这样变成某个特定领域里的顶尖模型的。今天这套技能还集中在少数几家实验室手里。",
+      "creator": "Madhu Guru",
+      "handle": "realmadhuguru",
+      "sourceType": "x",
+      "url": "https://x.com/realmadhuguru/status/2080707454422413487"
+    },
+    {
+      "quote": "我们的 autoreview skill 创了新纪录：一次难搞的重构跑了 66 轮。",
+      "creator": "Peter Steinberger",
+      "handle": "steipete",
+      "sourceType": "x",
+      "url": "https://x.com/steipete/status/2080899298838098034"
+    },
+    {
+      "quote": "ChatGPT Work 现在对所有付费计划全球开放，移动端、网页、桌面端都有。大概率已经在你手机上了。相当于给你的 ChatGPT 装了个喷气背包。",
+      "creator": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "sourceType": "x",
+      "url": "https://x.com/thsottiaux/status/2080876712439747052"
+    }
+  ]
+}

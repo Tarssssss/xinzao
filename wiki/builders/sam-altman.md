@@ -22,3 +22,4 @@ OpenAI CEO，刊中言论集中在 Codex 增长与产品升级、算力供给判
 - 2026-07-12 [2026-07-12-altman-levie-swyx-ai-job-creation] 承认目前看 AI 净创造就业，与自己此前预期相反，明确保留「方向可能继续」而非下定论
 - 2026-07-12 [2026-07-12-dax-altman-fable-cost-share] 转发 Dax Raad 的用量截图并追问「30% 成本花在 Fable 上」，未反驳、放大了这条对自家不利的数据
 - 2026-07-15 [2026-07-15-codex-chatgpt-work-9m-reset] 承认 GPT-5.6 Sol 增长快到离谱，推理团队硬扛需求，接下来可能会出点小状况
+- 2026-07-25 [2026-07-25-open-weights-letter-positions] 就开放权重表态：希望美国在开源和专有两条路上都赢，未说 OpenAI 是否签署那封信
